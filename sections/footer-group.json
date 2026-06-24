@@ -1,0 +1,48 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "text_nykDzJ": {
+          "type": "text",
+          "settings": {
+            "heading": "Vita Nura Lab",
+            "subtext": "<p>Líderes en productos de belleza y salud</p>",
+            "width_desktop": 3,
+            "width_mobile": "2"
+          }
+        }
+      },
+      "block_order": [
+        "text_nykDzJ"
+      ],
+      "settings": {
+        "color_scheme": "accent-1",
+        "enable_follow_on_shop": false,
+        "show_social": false,
+        "enable_country_selector": false,
+        "enable_language_selector": false,
+        "payment_enable": false,
+        "show_policy": false,
+        "branding_text": "VitaNuraLab 2026",
+        "margin_top": 0,
+        "padding_top": 32,
+        "padding_bottom": 20
+      }
+    }
+  },
+  "order": [
+    "footer"
+  ]
+}

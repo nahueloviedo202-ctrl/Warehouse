@@ -1,0 +1,212 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "e6750b05-7703-4f69-ab7c-9ffb0acf18fb": {
+      "type": "slideshow",
+      "blocks": {
+        "template--18472095940937__e6750b05-7703-4f69-ab7c-9ffb0acf18fb-16798645128eb8005e-0": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Tienda_VitanuraLab_y_productos_de_cuidado.png",
+            "heading": "VitaNuraLab",
+            "heading_size": "h1",
+            "subheading": "Tienda de Suplementacion y cosmetica",
+            "button_label": "Ver productos",
+            "link": "",
+            "button_style_secondary": true,
+            "box_align": "middle-center",
+            "show_text_box": true,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "background-1",
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "template--18472095940937__e6750b05-7703-4f69-ab7c-9ffb0acf18fb-16798645128eb8005e-0"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "adapt_image",
+        "slider_visual": "counter",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "eab98bdb-f257-46ac-a548-66c24089d95a": {
+      "type": "comparison-table",
+      "blocks": {
+        "template--18472095940937__eab98bdb-f257-46ac-a548-66c24089d95a-167986455514a8e470-0": {
+          "type": "row",
+          "settings": {
+            "benefit": "Productos Naturales",
+            "us": true,
+            "others": false
+          }
+        },
+        "template--18472095940937__eab98bdb-f257-46ac-a548-66c24089d95a-167986455514a8e470-1": {
+          "type": "row",
+          "settings": {
+            "benefit": "Certificación ISO 22716",
+            "us": true,
+            "others": false
+          }
+        },
+        "template--18472095940937__eab98bdb-f257-46ac-a548-66c24089d95a-167986455514a8e470-2": {
+          "type": "row",
+          "settings": {
+            "benefit": "Fabricación Europea",
+            "us": true,
+            "others": false
+          }
+        },
+        "d4c65361-b69b-4224-8ea3-3f8565f6b66a": {
+          "type": "row",
+          "settings": {
+            "benefit": "Precios Asequibles",
+            "us": true,
+            "others": false
+          }
+        }
+      },
+      "block_order": [
+        "template--18472095940937__eab98bdb-f257-46ac-a548-66c24089d95a-167986455514a8e470-0",
+        "template--18472095940937__eab98bdb-f257-46ac-a548-66c24089d95a-167986455514a8e470-1",
+        "template--18472095940937__eab98bdb-f257-46ac-a548-66c24089d95a-167986455514a8e470-2",
+        "d4c65361-b69b-4224-8ea3-3f8565f6b66a"
+      ],
+      "settings": {
+        "title": "Nº1 en Salud",
+        "heading_size": "h1",
+        "text": "<p>Por qué elegir Vita Nura Lab frente a otros.</p>",
+        "button_label": "",
+        "link": "",
+        "button_style_secondary": false,
+        "layout": "table_second",
+        "color_scheme": "background-2",
+        "logo": "shopify://shop_images/Logo_de_VitanuraLab_con_emblematica_natural.png",
+        "logo_width": 80,
+        "us_label": "",
+        "others_label": "Otras marcas",
+        "benefit_color_scheme": "accent-2",
+        "checkmark_color": "#53af01",
+        "icon_cells_color_scheme": "background-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "bb0df407-4b1e-45f0-a6fa-a64b51c078eb": {
+      "type": "icon-bar",
+      "blocks": {
+        "template--18472095940937__bb0df407-4b1e-45f0-a6fa-a64b51c078eb-16798645704e6a2246-0": {
+          "type": "column",
+          "settings": {
+            "icon": "lightning_bolt",
+            "title": "Resultados Instantaneos",
+            "text": "<p>Usando nuestros productos obtendrás resultados desde las primera semana de uso.</p><p></p>"
+          }
+        },
+        "template--18472095940937__bb0df407-4b1e-45f0-a6fa-a64b51c078eb-16798645704e6a2246-1": {
+          "type": "column",
+          "settings": {
+            "icon": "plant",
+            "title": "Eco-Friendly",
+            "text": "<p>VitaNuraLab es de las únicas empresas que contribuyen al medio ambiente.</p><p></p>"
+          }
+        },
+        "template--18472095940937__bb0df407-4b1e-45f0-a6fa-a64b51c078eb-16798645704e6a2246-2": {
+          "type": "column",
+          "settings": {
+            "icon": "heart",
+            "title": "Cuidados Especiales",
+            "text": "<p>Tenemos todo tipo de productos especializados para cualquier persona con prolemas de salud.</p><p></p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--18472095940937__bb0df407-4b1e-45f0-a6fa-a64b51c078eb-16798645704e6a2246-0",
+        "template--18472095940937__bb0df407-4b1e-45f0-a6fa-a64b51c078eb-16798645704e6a2246-1",
+        "template--18472095940937__bb0df407-4b1e-45f0-a6fa-a64b51c078eb-16798645704e6a2246-2"
+      ],
+      "settings": {
+        "title": "Beneficios",
+        "heading_size": "h1",
+        "text": "",
+        "icon_size": "medium",
+        "columns_desktop": 4,
+        "icon_color": "accent-2",
+        "background_style": "none",
+        "color_scheme": "background-2",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "33217d57-e749-436e-bb7a-44a340facaa4": {
+      "type": "results",
+      "blocks": {
+        "template--18472095940937__33217d57-e749-436e-bb7a-44a340facaa4-16798646483bf89b52-0": {
+          "type": "row",
+          "settings": {
+            "percentage": 90,
+            "row_text": "<p>Noticed that this product has significantly improved their life.</p>"
+          }
+        },
+        "template--18472095940937__33217d57-e749-436e-bb7a-44a340facaa4-16798646483bf89b52-1": {
+          "type": "row",
+          "settings": {
+            "percentage": 90,
+            "row_text": "<p>Noticed that this product has significantly improved their life.</p>"
+          }
+        },
+        "template--18472095940937__33217d57-e749-436e-bb7a-44a340facaa4-16798646483bf89b52-2": {
+          "type": "row",
+          "settings": {
+            "percentage": 90,
+            "row_text": "<p>Noticed that this product has significantly improved their life.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--18472095940937__33217d57-e749-436e-bb7a-44a340facaa4-16798646483bf89b52-0",
+        "template--18472095940937__33217d57-e749-436e-bb7a-44a340facaa4-16798646483bf89b52-1",
+        "template--18472095940937__33217d57-e749-436e-bb7a-44a340facaa4-16798646483bf89b52-2"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "Results",
+        "heading_size": "h1",
+        "text": "<p>Talk about results of your customers and how your product improved their life.</p>",
+        "color_scheme": "background-1",
+        "layout": "results_second",
+        "results_headline": "Results heading",
+        "results_headline_size": "h2",
+        "results_headline_alignment": "left",
+        "caption": "<p>Caption about the results and/or link for their proof.</p>",
+        "button_label": "",
+        "link": "",
+        "button_style_secondary": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "e6750b05-7703-4f69-ab7c-9ffb0acf18fb",
+    "eab98bdb-f257-46ac-a548-66c24089d95a",
+    "bb0df407-4b1e-45f0-a6fa-a64b51c078eb",
+    "33217d57-e749-436e-bb7a-44a340facaa4"
+  ]
+}
