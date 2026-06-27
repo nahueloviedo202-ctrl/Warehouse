@@ -30,29 +30,42 @@
       "disabled": true,
       "settings": {}
     },
-    "2c2ec774-3430-481f-b927-e9c035b9d24e": {
-      "type": "horizontal-ticker",
+    "custom_announcement_bar_6FeEbY": {
+      "type": "custom-announcement-bar",
       "blocks": {
-        "sections--18060430639399__2c2ec774-3430-481f-b927-e9c035b9d24e-1679250655d32e639c-0": {
-          "type": "text",
+        "message_GiPp48": {
+          "type": "message",
           "settings": {
-            "title": "Envio Gratuito / Pago Contrareembolso"
+            "text": "ENVÍO GRATUITO | © VITA NURA GLOW BARCELONA, 2026",
+            "separator": "·"
           }
         }
       },
       "block_order": [
-        "sections--18060430639399__2c2ec774-3430-481f-b927-e9c035b9d24e-1679250655d32e639c-0"
+        "message_GiPp48"
       ],
+      "name": "Custom Announcement Bar",
       "settings": {
-        "speed": 3,
-        "text_spacing": 3,
-        "text_size": "1.75",
-        "italic_text": false,
-        "uppercase_text": false,
+        "text_color": "#000000",
+        "font_size_desktop": 12,
+        "font_size_mobile": 10,
+        "uppercase_text": true,
         "bold_text": false,
-        "color_scheme": "accent-1",
-        "padding_top": 16,
-        "padding_bottom": 16
+        "italic_text": false,
+        "background_color": "#000000",
+        "background_opacity": 0,
+        "border_color": "#140a0a",
+        "border_width": 1,
+        "border_radius": 100,
+        "padding_v_desktop": 7,
+        "padding_v_mobile": 5,
+        "speed": 2,
+        "pause_on_hover": true,
+        "aria_label": "Announcement bar",
+        "section_padding_top": 12,
+        "section_padding_bottom": 0,
+        "section_padding_top_mobile": 0,
+        "section_padding_bottom_mobile": 0
       }
     },
     "header": {
@@ -71,13 +84,15 @@
         "mobile_logo_position": "center",
         "margin_bottom": 0,
         "padding_top": 8,
-        "padding_bottom": 8
+        "padding_bottom": 8,
+        "padding_top_mobile": 8,
+        "padding_bottom_mobile": 8
       }
     }
   },
   "order": [
     "announcement-bar",
-    "2c2ec774-3430-481f-b927-e9c035b9d24e",
+    "custom_announcement_bar_6FeEbY",
     "header"
   ]
 }

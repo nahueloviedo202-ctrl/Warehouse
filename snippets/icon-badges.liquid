@@ -1,0 +1,63 @@
+{%- comment -%}
+  Renders a responsive row of circular icon badges with an editable colored background.
+
+  Accepts:
+  - block: {Object} block of type 'icon_badges'
+{%- endcomment -%}
+{{ 'component-icon-badges.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign custom_icons = 'dermatologist,shield,skin_layers' | split: ','
+  assign has_badges = false
+  if block.settings.badge_1_label != blank or block.settings.badge_2_label != blank or block.settings.badge_3_label != blank or block.settings.badge_4_label != blank
+    assign has_badges = true
+  endif
+-%}
+{%- if has_badges -%}
+<div
+  class="icon-badges"
+  style="
+    --icon-badges-bg: {{ block.settings.circle_background_color }};
+    --icon-badges-icon-color: {{ block.settings.icon_color }};
+    --icon-badges-label-color: {{ block.settings.label_color }};
+    --icon-badges-size-mobile: {{ block.settings.circle_size_mobile }}px;
+    --icon-badges-size-desktop: {{ block.settings.circle_size_desktop }}px;
+  "
+  {{ block.shopify_attributes }}
+>
+  <ul class="icon-badges__list list-unstyled" role="list">
+    {%- for i in (1..4) -%}
+      {%- assign label_key = 'badge_' | append: i | append: '_label' -%}
+      {%- assign icon_key = 'badge_' | append: i | append: '_icon' -%}
+      {%- assign image_key = 'badge_' | append: i | append: '_image' -%}
+      {%- assign label = block.settings[label_key] -%}
+      {%- if label != blank -%}
+        {%- assign icon = block.settings[icon_key] -%}
+        {%- assign image = block.settings[image_key] -%}
+        <li class="icon-badges__item">
+          <div class="icon-badges__circle">
+            {%- if image != blank -%}
+              <img
+                src="{{ image | image_url: width: 200 }}"
+                {%- if image.alt != blank %}
+                  alt="{{ image.alt | escape }}"
+                {%- else %}
+                  role="presentation"
+                {%- endif %}
+                loading="lazy"
+                width="100"
+                height="100"
+              >
+            {%- elsif custom_icons contains icon -%}
+              {%- render 'icon-badges-icon', icon: icon -%}
+            {%- elsif icon != 'none' -%}
+              {%- render 'icon-accordion', icon: icon -%}
+            {%- endif -%}
+          </div>
+          <p class="icon-badges__label caption">{{ label | escape }}</p>
+        </li>
+      {%- endif -%}
+    {%- endfor -%}
+  </ul>
+</div>
+{%- endif -%}

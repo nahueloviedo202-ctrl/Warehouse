@@ -397,8 +397,12 @@
     "all": {
       "padding": {
         "section_padding_heading": "Vùng đệm mục",
+        "section_padding_heading_desktop": "Section padding (desktop)",
+        "section_padding_heading_mobile": "Section padding (mobile)",
         "padding_top": "Vùng đệm trên cùng",
-        "padding_bottom": "Vùng đệm dưới cùng"
+        "padding_bottom": "Vùng đệm dưới cùng",
+        "padding_top_mobile": "Top padding (mobile)",
+        "padding_bottom_mobile": "Bottom padding (mobile)"
       },
       "spacing": "Khoảng cách",
       "colors": {

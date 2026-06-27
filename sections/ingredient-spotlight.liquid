@@ -1,0 +1,862 @@
+{{ 'section-ingredient-spotlight.css' | asset_url | stylesheet_tag }}
+{{ 'component-rte.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top_mobile }}px;
+    padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+  }
+
+  #shopify-section-{{ section.id }} {
+    --ingredient-spotlight-circle-desktop: {{ section.settings.circle_size_desktop }}px;
+    --ingredient-spotlight-circle-mobile: {{ section.settings.circle_size_mobile }}px;
+    {%- if section.settings.line_color != blank %}
+      --ingredient-spotlight-line-color: {{ section.settings.line_color }};
+    {%- endif %}
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  .section-{{ section.id }}-heading {
+    font-size: {{ section.settings.heading_font_size_mobile }}px;
+  }
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-heading {
+      font-size: {{ section.settings.heading_font_size_desktop }}px;
+    }
+  }
+{%- endstyle -%}
+
+{%- liquid
+  assign accent_class = 'color-foreground-' | append: section.settings.accent_color_scheme
+  assign ingredient_blocks = section.blocks | where: 'type', 'ingredient'
+  assign benefit_blocks = section.blocks | where: 'type', 'benefit'
+  assign badge_blocks = section.blocks | where: 'type', 'badge'
+  assign custom_icons = 'dermatologist,shield,skin_layers,hyaluronic_acid,vitamin_e,collagen,spf,color_adapt,anti_aging' | split: ','
+-%}
+
+<div class="color-{{ section.settings.color_scheme }} gradient"{% if section.settings.background_color != blank %} style="background-color: {{ section.settings.background_color }};"{% endif %}>
+  <div class="ingredient-spotlight page-width section-{{ section.id }}-padding">
+    <div class="ingredient-spotlight__grid ingredient-spotlight__grid--{{ section.settings.layout }}">
+      <div class="ingredient-spotlight__media">
+        <div class="ingredient-spotlight__visual">
+          <div class="ingredient-spotlight__backdrop">
+            {%- if section.settings.backdrop_image != blank -%}
+              {{
+                section.settings.backdrop_image
+                | image_url: width: 1000
+                | image_tag: loading: 'lazy', sizes: '(min-width: 750px) 500px, 320px', widths: '320, 460, 600, 760, 1000'
+              }}
+            {%- endif -%}
+          </div>
+
+          {%- if section.settings.show_connector_lines -%}
+            <svg class="ingredient-spotlight__lines" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+              <line x1="19" y1="17" x2="50" y2="49" class="ingredient-spotlight__line"></line>
+              <line x1="81" y1="17" x2="50" y2="49" class="ingredient-spotlight__line"></line>
+              <line x1="19" y1="81" x2="50" y2="51" class="ingredient-spotlight__line"></line>
+              <line x1="81" y1="81" x2="50" y2="51" class="ingredient-spotlight__line"></line>
+            </svg>
+          {%- endif -%}
+
+          {%- for block in ingredient_blocks -%}
+            {%- style -%}
+              .block-{{ block.id }}-title { font-size: {{ block.settings.title_font_size_mobile }}px; }
+              .block-{{ block.id }}-text { font-size: {{ block.settings.text_font_size_mobile }}px; }
+              {%- if block.settings.circle_bg_color != blank -%}
+              .block-{{ block.id }}-circle { background-color: {{ block.settings.circle_bg_color }}; }
+              {%- endif -%}
+              {%- if block.settings.icon_color != blank -%}
+              .block-{{ block.id }}-circle svg { fill: {{ block.settings.icon_color }}; }
+              {%- endif -%}
+              @media screen and (min-width: 750px) {
+                .block-{{ block.id }}-title { font-size: {{ block.settings.title_font_size_desktop }}px; }
+                .block-{{ block.id }}-text { font-size: {{ block.settings.text_font_size_desktop }}px; }
+              }
+            {%- endstyle -%}
+            <div class="ingredient-spotlight__node ingredient-spotlight__node--{{ block.settings.position }}" {{ block.shopify_attributes }}>
+              <div class="ingredient-spotlight__circle {{ accent_class }} block-{{ block.id }}-circle">
+                {%- if block.settings.image != blank -%}
+                  <img
+                    src="{{ block.settings.image | image_url: width: 160 }}"
+                    {% if block.settings.image.alt != blank %}
+                      alt="{{ block.settings.image.alt | escape }}"
+                    {% else %}
+                      role="presentation"
+                    {% endif %}
+                    loading="lazy"
+                    width="64"
+                    height="64"
+                  >
+                {%- elsif custom_icons contains block.settings.icon -%}
+                  {%- render 'icon-badges-icon', icon: block.settings.icon -%}
+                {%- elsif block.settings.icon != 'none' -%}
+                  {%- render 'icon-accordion', icon: block.settings.icon -%}
+                {%- endif -%}
+              </div>
+              {%- if block.settings.title != blank -%}
+                <p class="ingredient-spotlight__node-title block-{{ block.id }}-title" style="{% if block.settings.title_color != blank %}color: {{ block.settings.title_color }};{% endif %}{% if block.settings.title_font_weight != blank %}font-weight: {{ block.settings.title_font_weight }};{% endif %}">{{ block.settings.title | escape }}</p>
+              {%- endif -%}
+              {%- if block.settings.text != blank -%}
+                <p class="ingredient-spotlight__node-text block-{{ block.id }}-text" style="{% if block.settings.text_color != blank %}color: {{ block.settings.text_color }};{% endif %}{% if block.settings.text_font_weight != blank %}font-weight: {{ block.settings.text_font_weight }};{% endif %}">{{ block.settings.text | escape }}</p>
+              {%- endif -%}
+            </div>
+          {%- endfor -%}
+
+          {%- if section.settings.show_sparkle -%}
+            <span class="ingredient-spotlight__sparkle {{ accent_class }}">
+              {%- render 'icon-accordion', icon: 'star' -%}
+            </span>
+          {%- endif -%}
+        </div>
+      </div>
+
+      <div class="ingredient-spotlight__content">
+        {%- if section.settings.heading != blank -%}
+          <h2
+            class="ingredient-spotlight__heading {{ section.settings.heading_size }} {{ accent_class }}{% if section.settings.heading_italic %} ingredient-spotlight__heading--italic{% endif %} section-{{ section.id }}-heading"
+            style="{% if section.settings.heading_color != blank %}color: {{ section.settings.heading_color }};{% endif %}{% if section.settings.heading_font_weight != blank %}font-weight: {{ section.settings.heading_font_weight }};{% endif %}"
+          >
+            {{ section.settings.heading | escape }}
+          </h2>
+        {%- endif -%}
+
+        {%- for block in benefit_blocks -%}
+          {%- style -%}
+            .block-{{ block.id }}-heading { font-size: {{ block.settings.heading_font_size_mobile }}px; }
+            .block-{{ block.id }}-text { font-size: {{ block.settings.text_font_size_mobile }}px; }
+            @media screen and (min-width: 750px) {
+              .block-{{ block.id }}-heading { font-size: {{ block.settings.heading_font_size_desktop }}px; }
+              .block-{{ block.id }}-text { font-size: {{ block.settings.text_font_size_desktop }}px; }
+            }
+          {%- endstyle -%}
+          <div class="ingredient-spotlight__benefit" {{ block.shopify_attributes }}>
+            {%- if block.settings.heading != blank -%}
+              <h3 class="ingredient-spotlight__benefit-heading h4{% if section.settings.heading_italic %} ingredient-spotlight__benefit-heading--italic{% endif %} block-{{ block.id }}-heading" style="{% if block.settings.heading_color != blank %}color: {{ block.settings.heading_color }};{% endif %}{% if block.settings.heading_font_weight != blank %}font-weight: {{ block.settings.heading_font_weight }};{% endif %}">
+                {{ block.settings.heading | escape }}
+              </h3>
+            {%- endif -%}
+            {%- if block.settings.text != blank -%}
+              <div class="ingredient-spotlight__benefit-text rte block-{{ block.id }}-text" style="{% if block.settings.text_color != blank %}color: {{ block.settings.text_color }};{% endif %}{% if block.settings.text_font_weight != blank %}font-weight: {{ block.settings.text_font_weight }};{% endif %}">{{ block.settings.text }}</div>
+            {%- endif -%}
+          </div>
+        {%- endfor -%}
+
+        {%- if badge_blocks.size > 0 -%}
+          <ul class="ingredient-spotlight__badges list-unstyled" role="list">
+            {%- for block in badge_blocks -%}
+              {%- style -%}
+                .block-{{ block.id }}-label { font-size: {{ block.settings.label_font_size_mobile }}px; }
+                {%- if block.settings.icon_bg_color != blank -%}
+                .block-{{ block.id }}-badge-icon { background-color: {{ block.settings.icon_bg_color }}; }
+                {%- endif -%}
+                {%- if block.settings.icon_color != blank -%}
+                .block-{{ block.id }}-badge-icon svg { fill: {{ block.settings.icon_color }}; }
+                {%- endif -%}
+                @media screen and (min-width: 750px) {
+                  .block-{{ block.id }}-label { font-size: {{ block.settings.label_font_size_desktop }}px; }
+                }
+              {%- endstyle -%}
+              <li class="ingredient-spotlight__badge" {{ block.shopify_attributes }}>
+                <div class="ingredient-spotlight__badge-icon {{ accent_class }} block-{{ block.id }}-badge-icon">
+                  {%- if block.settings.image != blank -%}
+                    <img
+                      src="{{ block.settings.image | image_url: width: 160 }}"
+                      {% if block.settings.image.alt != blank %}
+                        alt="{{ block.settings.image.alt | escape }}"
+                      {% else %}
+                        role="presentation"
+                      {% endif %}
+                      loading="lazy"
+                      width="64"
+                      height="64"
+                    >
+                  {%- elsif custom_icons contains block.settings.icon -%}
+                    {%- render 'icon-badges-icon', icon: block.settings.icon -%}
+                  {%- else -%}
+                    {%- render 'icon-accordion', icon: block.settings.icon -%}
+                  {%- endif -%}
+                </div>
+                {%- if block.settings.label != blank -%}
+                  <p class="ingredient-spotlight__badge-label caption block-{{ block.id }}-label" style="{% if block.settings.label_color != blank %}color: {{ block.settings.label_color }};{% endif %}{% if block.settings.label_font_weight != blank %}font-weight: {{ block.settings.label_font_weight }};{% endif %}">{{ block.settings.label | escape }}</p>
+                {%- endif -%}
+              </li>
+            {%- endfor -%}
+          </ul>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Ingredientes destacados",
+  "class": "section",
+  "tag": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "default": "Hasta 12 horas de uso cómodo",
+      "label": "Encabezado"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        { "value": "h2", "label": "Pequeño" },
+        { "value": "h1", "label": "Mediano" },
+        { "value": "h0", "label": "Grande" }
+      ],
+      "default": "h1",
+      "label": "Tamaño del encabezado"
+    },
+    {
+      "type": "checkbox",
+      "id": "heading_italic",
+      "default": true,
+      "label": "Usar estilo cursiva en encabezados",
+      "info": "Aplica cursiva al título principal y a los subtítulos de cada beneficio."
+    },
+    {
+      "type": "header",
+      "content": "Tipografía — Encabezado"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Color"
+    },
+    {
+      "type": "range",
+      "id": "heading_font_size_desktop",
+      "min": 10,
+      "max": 64,
+      "step": 1,
+      "unit": "px",
+      "label": "Tamaño escritorio (px)",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "heading_font_size_mobile",
+      "min": 10,
+      "max": 60,
+      "step": 1,
+      "unit": "px",
+      "label": "Tamaño móvil (px)",
+      "default": 26
+    },
+    {
+      "type": "select",
+      "id": "heading_font_weight",
+      "label": "Peso",
+      "options": [
+        { "value": "300", "label": "Light" },
+        { "value": "400", "label": "Regular" },
+        { "value": "500", "label": "Medium" },
+        { "value": "600", "label": "Semibold" },
+        { "value": "700", "label": "Bold" },
+        { "value": "800", "label": "Extrabold" }
+      ],
+      "default": "700"
+    },
+    {
+      "type": "header",
+      "content": "Imagen"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Imagen del producto"
+    },
+    {
+      "type": "image_picker",
+      "id": "backdrop_image",
+      "label": "Imagen de fondo decorativa",
+      "info": "Opcional. Si se deja en blanco se usará un fondo degradado con los colores del tema."
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "options": [
+        { "value": "image_first", "label": "Imagen a la izquierda" },
+        { "value": "text_first", "label": "Imagen a la derecha" }
+      ],
+      "default": "image_first",
+      "label": "Posición de la imagen (escritorio)"
+    },
+    {
+      "type": "header",
+      "content": "Diagrama de ingredientes"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_connector_lines",
+      "default": true,
+      "label": "Mostrar líneas conectoras"
+    },
+    {
+      "type": "color",
+      "id": "line_color",
+      "label": "Color de las líneas",
+      "info": "Déjalo en blanco para usar el color de texto del esquema con transparencia."
+    },
+    {
+      "type": "checkbox",
+      "id": "show_sparkle",
+      "default": true,
+      "label": "Mostrar icono decorativo"
+    },
+    {
+      "type": "range",
+      "id": "circle_size_desktop",
+      "min": 60,
+      "max": 140,
+      "step": 5,
+      "unit": "px",
+      "default": 90,
+      "label": "Tamaño de los círculos (escritorio)"
+    },
+    {
+      "type": "range",
+      "id": "circle_size_mobile",
+      "min": 40,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 65,
+      "label": "Tamaño de los círculos (móvil)"
+    },
+    {
+      "type": "header",
+      "content": "Colores"
+    },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "options": [
+        { "value": "accent-1", "label": "t:sections.all.colors.accent_1.label" },
+        { "value": "accent-2", "label": "t:sections.all.colors.accent_2.label" },
+        { "value": "background-1", "label": "t:sections.all.colors.background_1.label" },
+        { "value": "background-2", "label": "t:sections.all.colors.background_2.label" },
+        { "value": "inverse", "label": "t:sections.all.colors.inverse.label" }
+      ],
+      "default": "background-1",
+      "label": "Esquema de color de la sección"
+    },
+    {
+      "type": "select",
+      "id": "accent_color_scheme",
+      "options": [
+        { "value": "accent-1", "label": "t:sections.all.colors.accent_1.label" },
+        { "value": "accent-2", "label": "t:sections.all.colors.accent_2.label" },
+        { "value": "text", "label": "Color de texto" }
+      ],
+      "default": "accent-2",
+      "label": "Color de acento",
+      "info": "Color del encabezado, los iconos y el icono decorativo."
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Color de fondo personalizado",
+      "info": "Sobrescribe el esquema de color de la sección."
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading_desktop"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 64
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 64
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading_mobile"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top_mobile",
+      "default": 28
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom_mobile",
+      "default": 28
+    }
+  ],
+  "blocks": [
+    {
+      "type": "ingredient",
+      "name": "Ingrediente",
+      "settings": [
+        {
+          "type": "select",
+          "id": "position",
+          "options": [
+            { "value": "top_left", "label": "Superior izquierda" },
+            { "value": "top_right", "label": "Superior derecha" },
+            { "value": "bottom_left", "label": "Inferior izquierda" },
+            { "value": "bottom_right", "label": "Inferior derecha" }
+          ],
+          "default": "top_left",
+          "label": "Posición"
+        },
+        {
+          "type": "select",
+          "id": "icon",
+          "options": [
+            { "value": "none", "label": "Ninguno" },
+            { "value": "hyaluronic_acid", "label": "Ácido hialurónico" },
+            { "value": "vitamin_e", "label": "Vitamina E" },
+            { "value": "collagen", "label": "Colágeno" },
+            { "value": "spf", "label": "SPF / Sol" },
+            { "value": "dermatologist", "label": "Dermatólogo" },
+            { "value": "shield", "label": "Escudo" },
+            { "value": "skin_layers", "label": "Capas de piel" },
+            { "value": "leaf", "label": "Hoja" },
+            { "value": "heart", "label": "Corazón" },
+            { "value": "check_mark", "label": "Marca de verificación" },
+            { "value": "lock", "label": "Candado" },
+            { "value": "star", "label": "Estrella" },
+            { "value": "fire", "label": "Fuego" },
+            { "value": "snowflake", "label": "Copo de nieve" }
+          ],
+          "default": "hyaluronic_acid",
+          "label": "Icono"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Icono personalizado",
+          "info": "Sustituye al icono seleccionado arriba si se sube una imagen."
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "default": "Ingrediente",
+          "label": "Título"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "default": "Describe brevemente este ingrediente.",
+          "label": "Texto"
+        },
+        {
+          "type": "header",
+          "content": "Colores del ícono"
+        },
+        {
+          "type": "color",
+          "id": "circle_bg_color",
+          "label": "Fondo del ícono"
+        },
+        {
+          "type": "color",
+          "id": "icon_color",
+          "label": "Color del ícono"
+        },
+        {
+          "type": "header",
+          "content": "Tipografía — Título del ingrediente"
+        },
+        {
+          "type": "color",
+          "id": "title_color",
+          "label": "Color"
+        },
+        {
+          "type": "range",
+          "id": "title_font_size_desktop",
+          "min": 10,
+          "max": 40,
+          "step": 1,
+          "unit": "px",
+          "label": "Tamaño escritorio (px)",
+          "default": 13
+        },
+        {
+          "type": "range",
+          "id": "title_font_size_mobile",
+          "min": 10,
+          "max": 36,
+          "step": 1,
+          "unit": "px",
+          "label": "Tamaño móvil (px)",
+          "default": 12
+        },
+        {
+          "type": "select",
+          "id": "title_font_weight",
+          "label": "Peso",
+          "options": [
+            { "value": "300", "label": "Light" },
+            { "value": "400", "label": "Regular" },
+            { "value": "500", "label": "Medium" },
+            { "value": "600", "label": "Semibold" },
+            { "value": "700", "label": "Bold" },
+            { "value": "800", "label": "Extrabold" }
+          ],
+          "default": "700"
+        },
+        {
+          "type": "header",
+          "content": "Tipografía — Texto del ingrediente"
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "label": "Color"
+        },
+        {
+          "type": "range",
+          "id": "text_font_size_desktop",
+          "min": 10,
+          "max": 40,
+          "step": 1,
+          "unit": "px",
+          "label": "Tamaño escritorio (px)",
+          "default": 11
+        },
+        {
+          "type": "range",
+          "id": "text_font_size_mobile",
+          "min": 10,
+          "max": 36,
+          "step": 1,
+          "unit": "px",
+          "label": "Tamaño móvil (px)",
+          "default": 11
+        },
+        {
+          "type": "select",
+          "id": "text_font_weight",
+          "label": "Peso",
+          "options": [
+            { "value": "300", "label": "Light" },
+            { "value": "400", "label": "Regular" },
+            { "value": "500", "label": "Medium" },
+            { "value": "600", "label": "Semibold" },
+            { "value": "700", "label": "Bold" },
+            { "value": "800", "label": "Extrabold" }
+          ],
+          "default": "400"
+        }
+      ]
+    },
+    {
+      "type": "benefit",
+      "name": "Beneficio",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Beneficio",
+          "label": "Subtítulo"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "default": "<p>Describe este beneficio del producto.</p>",
+          "label": "Texto"
+        },
+        {
+          "type": "header",
+          "content": "Tipografía — Subtítulo del beneficio"
+        },
+        {
+          "type": "color",
+          "id": "heading_color",
+          "label": "Color"
+        },
+        {
+          "type": "range",
+          "id": "heading_font_size_desktop",
+          "min": 10,
+          "max": 64,
+          "step": 1,
+          "unit": "px",
+          "label": "Tamaño escritorio (px)",
+          "default": 20
+        },
+        {
+          "type": "range",
+          "id": "heading_font_size_mobile",
+          "min": 10,
+          "max": 60,
+          "step": 1,
+          "unit": "px",
+          "label": "Tamaño móvil (px)",
+          "default": 17
+        },
+        {
+          "type": "select",
+          "id": "heading_font_weight",
+          "label": "Peso",
+          "options": [
+            { "value": "300", "label": "Light" },
+            { "value": "400", "label": "Regular" },
+            { "value": "500", "label": "Medium" },
+            { "value": "600", "label": "Semibold" },
+            { "value": "700", "label": "Bold" },
+            { "value": "800", "label": "Extrabold" }
+          ],
+          "default": "700"
+        },
+        {
+          "type": "header",
+          "content": "Tipografía — Texto del beneficio"
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "label": "Color"
+        },
+        {
+          "type": "range",
+          "id": "text_font_size_desktop",
+          "min": 10,
+          "max": 64,
+          "step": 1,
+          "unit": "px",
+          "label": "Tamaño escritorio (px)",
+          "default": 15
+        },
+        {
+          "type": "range",
+          "id": "text_font_size_mobile",
+          "min": 10,
+          "max": 60,
+          "step": 1,
+          "unit": "px",
+          "label": "Tamaño móvil (px)",
+          "default": 14
+        },
+        {
+          "type": "select",
+          "id": "text_font_weight",
+          "label": "Peso",
+          "options": [
+            { "value": "300", "label": "Light" },
+            { "value": "400", "label": "Regular" },
+            { "value": "500", "label": "Medium" },
+            { "value": "600", "label": "Semibold" },
+            { "value": "700", "label": "Bold" },
+            { "value": "800", "label": "Extrabold" }
+          ],
+          "default": "400"
+        }
+      ]
+    },
+    {
+      "type": "badge",
+      "name": "Insignia",
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon",
+          "options": [
+            { "value": "color_adapt", "label": "Adaptación de color" },
+            { "value": "anti_aging", "label": "Complejo antienvejecimiento" },
+            { "value": "dermatologist", "label": "Dermatólogo" },
+            { "value": "shield", "label": "Escudo" },
+            { "value": "skin_layers", "label": "Capas de piel" },
+            { "value": "check_mark", "label": "Marca de verificación" },
+            { "value": "leaf", "label": "Hoja" },
+            { "value": "heart", "label": "Corazón" },
+            { "value": "lock", "label": "Candado" },
+            { "value": "paw_print", "label": "Huella de pata" },
+            { "value": "star", "label": "Estrella" }
+          ],
+          "default": "color_adapt",
+          "label": "Icono"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Icono personalizado",
+          "info": "Sustituye al icono seleccionado arriba si se sube una imagen."
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "default": "Insignia",
+          "label": "Texto"
+        },
+        {
+          "type": "header",
+          "content": "Colores del ícono"
+        },
+        {
+          "type": "color",
+          "id": "icon_bg_color",
+          "label": "Fondo del ícono"
+        },
+        {
+          "type": "color",
+          "id": "icon_color",
+          "label": "Color del ícono"
+        },
+        {
+          "type": "header",
+          "content": "Tipografía — Texto de la insignia"
+        },
+        {
+          "type": "color",
+          "id": "label_color",
+          "label": "Color"
+        },
+        {
+          "type": "range",
+          "id": "label_font_size_desktop",
+          "min": 8,
+          "max": 40,
+          "step": 1,
+          "unit": "px",
+          "label": "Tamaño escritorio (px)",
+          "default": 12
+        },
+        {
+          "type": "range",
+          "id": "label_font_size_mobile",
+          "min": 8,
+          "max": 36,
+          "step": 1,
+          "unit": "px",
+          "label": "Tamaño móvil (px)",
+          "default": 11
+        },
+        {
+          "type": "select",
+          "id": "label_font_weight",
+          "label": "Peso",
+          "options": [
+            { "value": "300", "label": "Light" },
+            { "value": "400", "label": "Regular" },
+            { "value": "500", "label": "Medium" },
+            { "value": "600", "label": "Semibold" },
+            { "value": "700", "label": "Bold" },
+            { "value": "800", "label": "Extrabold" }
+          ],
+          "default": "400"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Ingredientes destacados",
+      "blocks": [
+        {
+          "type": "ingredient",
+          "settings": {
+            "position": "top_left",
+            "icon": "hyaluronic_acid",
+            "title": "Ácido Hialurónico",
+            "text": "Hidratación profunda y rellena la piel"
+          }
+        },
+        {
+          "type": "ingredient",
+          "settings": {
+            "position": "top_right",
+            "icon": "vitamin_e",
+            "title": "Vitamina E",
+            "text": "Nutre y protege contra el daño ambiental"
+          }
+        },
+        {
+          "type": "ingredient",
+          "settings": {
+            "position": "bottom_left",
+            "icon": "collagen",
+            "title": "Colágeno",
+            "text": "Mejora la elasticidad y firmeza"
+          }
+        },
+        {
+          "type": "ingredient",
+          "settings": {
+            "position": "bottom_right",
+            "icon": "spf",
+            "title": "SPF 50",
+            "text": "Protección solar de amplio espectro contra UVA y UVB"
+          }
+        },
+        {
+          "type": "benefit",
+          "settings": {
+            "heading": "Complejo antienvejecimiento avanzado de InfiniteLove",
+            "text": "<p>Una potente mezcla de 4 ingredientes clínicamente probados que trabajan en armonía para hidratar profundamente, restaurar la firmeza juvenil, proteger contra el envejecimiento y revelar la luminosidad natural de la piel.</p>"
+          }
+        },
+        {
+          "type": "benefit",
+          "settings": {
+            "heading": "Ácido hialurónico + colágeno",
+            "text": "<p>Este dúo dinámico penetra profundamente para dar volumen y suavizar la piel arrugada, mejorando notablemente la elasticidad y reduciendo al mismo tiempo la aparición de líneas finas y arrugas.</p>"
+          }
+        },
+        {
+          "type": "benefit",
+          "settings": {
+            "heading": "Vitamina E",
+            "text": "<p>Un potente antioxidante que nutre la piel madura mientras la defiende contra el daño ambiental y los radicales libres que aceleran el envejecimiento.</p>"
+          }
+        },
+        {
+          "type": "badge",
+          "settings": {
+            "icon": "color_adapt",
+            "label": "Tecnología de adaptación de color"
+          }
+        },
+        {
+          "type": "badge",
+          "settings": {
+            "icon": "anti_aging",
+            "label": "Complejo antienvejecimiento"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

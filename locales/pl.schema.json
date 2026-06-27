@@ -397,8 +397,12 @@
     "all": {
       "padding": {
         "section_padding_heading": "Dopełnienie sekcji",
+        "section_padding_heading_desktop": "Section padding (desktop)",
+        "section_padding_heading_mobile": "Section padding (mobile)",
         "padding_top": "Dopełnienie na górze",
-        "padding_bottom": "Dopełnienie na dole"
+        "padding_bottom": "Dopełnienie na dole",
+        "padding_top_mobile": "Top padding (mobile)",
+        "padding_bottom_mobile": "Bottom padding (mobile)"
       },
       "spacing": "Odstępy",
       "colors": {

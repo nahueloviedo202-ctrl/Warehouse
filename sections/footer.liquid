@@ -24,8 +24,8 @@
   }
 
   .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    padding-top: {{ section.settings.padding_top_mobile }}px;
+    padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
   }
 
   @media screen and (min-width: 750px) {
@@ -151,9 +151,34 @@
                             width="{{ block.settings.image.width }}"
                             height="{{ block.settings.image.height }}"
                           >
+                          {%- if block.settings.overlay_opacity > 0 -%}
+                            <div class="footer-block__image-overlay" style="background-color: {{ block.settings.overlay_color }}; opacity: {{ block.settings.overlay_opacity | divided_by: 100.0 }};"></div>
+                          {%- endif -%}
                         </div>
                       {%- else -%}
                         {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+                      {%- endif -%}
+                      {%- assign has_custom_links = false -%}
+                      {%- for i in (1..5) -%}
+                        {%- assign lbl = 'link_' | append: i | append: '_label' -%}
+                        {%- if block.settings[lbl] != blank -%}
+                          {%- assign has_custom_links = true -%}
+                        {%- endif -%}
+                      {%- endfor -%}
+                      {%- if has_custom_links -%}
+                        <ul class="footer-block__custom-links list-unstyled">
+                          {%- for i in (1..5) -%}
+                            {%- assign lbl = 'link_' | append: i | append: '_label' -%}
+                            {%- assign lurl = 'link_' | append: i | append: '_url' -%}
+                            {%- if block.settings[lbl] != blank -%}
+                              <li>
+                                <a href="{{ block.settings[lurl] | default: '#' }}" class="link link--text list-menu__item list-menu__item--link">
+                                  {{ block.settings[lbl] }}
+                                </a>
+                              </li>
+                            {%- endif -%}
+                          {%- endfor -%}
+                        </ul>
                       {%- endif -%}
                     </div>
                   {%- when 'featured_product' -%}
@@ -425,25 +450,13 @@
           </localization-form>
         {%- endif -%}
       </div>
-      <div class="footer__column footer__column--info">
-        {%- if section.settings.payment_enable -%}
-          <div class="footer__payment">
-            <span class="visually-hidden">{{ 'sections.footer.payment' | t }}</span>
-            <ul class="list list-payment" role="list">
-              {%- for type in shop.enabled_payment_types -%}
-                <li class="list-payment__item">
-                  {{ type | payment_type_svg_tag: class: 'icon icon--full-color' }}
-                </li>
-              {%- endfor -%}
-            </ul>
-          </div>
-        {%- endif -%}
-      </div>
+      <div class="footer__column footer__column--info"></div>
     </div>
-    <div class="footer__content-bottom-wrapper page-width{% if section.settings.enable_country_selector == false and section.settings.enable_language_selector == false %} footer__content-bottom-wrapper--center{% endif %}">
+    <div class="footer__content-bottom-wrapper page-width footer__bottom-row">
       <div class="footer__copyright caption">
         <small class="copyright__content"
-          >&copy; {{ 'now' | date: '%Y' }}, {{ shop.name | link_to: routes.root_url -}}
+          >&copy; {{ 'now' | date: '%Y' }}, {{ shop.name | link_to: routes.root_url -}}</small
+        >
         {%- if section.settings.show_policy -%}
           <ul class="policies list-unstyled">
             {%- for policy in shop.policies -%}
@@ -458,6 +471,55 @@
           </ul>
         {%- endif -%}
       </div>
+      {%- if section.settings.payment_enable -%}
+        {%- assign has_payment_icons = false -%}
+        {%- if section.settings.payment_visa or section.settings.payment_master or section.settings.payment_american_express or section.settings.payment_paypal or section.settings.payment_apple_pay or section.settings.payment_google_pay or section.settings.payment_shopify_pay or section.settings.payment_discover or section.settings.payment_diners_club or section.settings.payment_maestro or section.settings.payment_jcb or section.settings.payment_klarna -%}
+          {%- assign has_payment_icons = true -%}
+        {%- endif -%}
+        {%- if has_payment_icons -%}
+          <div class="footer__payment">
+            <span class="visually-hidden">{{ 'sections.footer.payment' | t }}</span>
+            <ul class="list list-payment" role="list">
+              {%- if section.settings.payment_visa -%}
+                <li class="list-payment__item">{{ 'visa' | payment_type_svg_tag: class: 'icon icon--full-color' }}</li>
+              {%- endif -%}
+              {%- if section.settings.payment_master -%}
+                <li class="list-payment__item">{{ 'master' | payment_type_svg_tag: class: 'icon icon--full-color' }}</li>
+              {%- endif -%}
+              {%- if section.settings.payment_american_express -%}
+                <li class="list-payment__item">{{ 'american_express' | payment_type_svg_tag: class: 'icon icon--full-color' }}</li>
+              {%- endif -%}
+              {%- if section.settings.payment_paypal -%}
+                <li class="list-payment__item">{{ 'paypal' | payment_type_svg_tag: class: 'icon icon--full-color' }}</li>
+              {%- endif -%}
+              {%- if section.settings.payment_apple_pay -%}
+                <li class="list-payment__item">{{ 'apple_pay' | payment_type_svg_tag: class: 'icon icon--full-color' }}</li>
+              {%- endif -%}
+              {%- if section.settings.payment_google_pay -%}
+                <li class="list-payment__item">{{ 'google_pay' | payment_type_svg_tag: class: 'icon icon--full-color' }}</li>
+              {%- endif -%}
+              {%- if section.settings.payment_shopify_pay -%}
+                <li class="list-payment__item">{{ 'shopify_pay' | payment_type_svg_tag: class: 'icon icon--full-color' }}</li>
+              {%- endif -%}
+              {%- if section.settings.payment_discover -%}
+                <li class="list-payment__item">{{ 'discover' | payment_type_svg_tag: class: 'icon icon--full-color' }}</li>
+              {%- endif -%}
+              {%- if section.settings.payment_diners_club -%}
+                <li class="list-payment__item">{{ 'diners_club' | payment_type_svg_tag: class: 'icon icon--full-color' }}</li>
+              {%- endif -%}
+              {%- if section.settings.payment_maestro -%}
+                <li class="list-payment__item">{{ 'maestro' | payment_type_svg_tag: class: 'icon icon--full-color' }}</li>
+              {%- endif -%}
+              {%- if section.settings.payment_jcb -%}
+                <li class="list-payment__item">{{ 'jcb' | payment_type_svg_tag: class: 'icon icon--full-color' }}</li>
+              {%- endif -%}
+              {%- if section.settings.payment_klarna -%}
+                <li class="list-payment__item">{{ 'klarna' | payment_type_svg_tag: class: 'icon icon--full-color' }}</li>
+              {%- endif -%}
+            </ul>
+          </div>
+        {%- endif -%}
+      {%- endif -%}
     </div>
   </div>
 </footer>
@@ -704,6 +766,80 @@
             }
           ],
           "default": "center"
+        },
+        {
+          "type": "header",
+          "content": "Overlay"
+        },
+        {
+          "type": "color",
+          "id": "overlay_color",
+          "label": "Overlay color",
+          "default": "#000000"
+        },
+        {
+          "type": "range",
+          "id": "overlay_opacity",
+          "min": 0,
+          "max": 100,
+          "step": 5,
+          "unit": "%",
+          "label": "Overlay opacity",
+          "default": 0
+        },
+        {
+          "type": "header",
+          "content": "Links"
+        },
+        {
+          "type": "text",
+          "id": "link_1_label",
+          "label": "Link 1 text"
+        },
+        {
+          "type": "url",
+          "id": "link_1_url",
+          "label": "Link 1 URL"
+        },
+        {
+          "type": "text",
+          "id": "link_2_label",
+          "label": "Link 2 text"
+        },
+        {
+          "type": "url",
+          "id": "link_2_url",
+          "label": "Link 2 URL"
+        },
+        {
+          "type": "text",
+          "id": "link_3_label",
+          "label": "Link 3 text"
+        },
+        {
+          "type": "url",
+          "id": "link_3_url",
+          "label": "Link 3 URL"
+        },
+        {
+          "type": "text",
+          "id": "link_4_label",
+          "label": "Link 4 text"
+        },
+        {
+          "type": "url",
+          "id": "link_4_url",
+          "label": "Link 4 URL"
+        },
+        {
+          "type": "text",
+          "id": "link_5_label",
+          "label": "Link 5 text"
+        },
+        {
+          "type": "url",
+          "id": "link_5_url",
+          "label": "Link 5 URL"
         },
         {
           "type": "header",
@@ -1098,13 +1234,85 @@
     },
     {
       "type": "header",
-      "content": "t:sections.footer.settings.header__7.content"
+      "content": "Métodos de pago"
     },
     {
       "type": "checkbox",
       "id": "payment_enable",
       "default": true,
-      "label": "t:sections.footer.settings.payment_enable.label"
+      "label": "Mostrar íconos de pago"
+    },
+    {
+      "type": "checkbox",
+      "id": "payment_visa",
+      "default": false,
+      "label": "Visa"
+    },
+    {
+      "type": "checkbox",
+      "id": "payment_master",
+      "default": false,
+      "label": "Mastercard"
+    },
+    {
+      "type": "checkbox",
+      "id": "payment_american_express",
+      "default": false,
+      "label": "American Express"
+    },
+    {
+      "type": "checkbox",
+      "id": "payment_paypal",
+      "default": false,
+      "label": "PayPal"
+    },
+    {
+      "type": "checkbox",
+      "id": "payment_apple_pay",
+      "default": false,
+      "label": "Apple Pay"
+    },
+    {
+      "type": "checkbox",
+      "id": "payment_google_pay",
+      "default": false,
+      "label": "Google Pay"
+    },
+    {
+      "type": "checkbox",
+      "id": "payment_shopify_pay",
+      "default": false,
+      "label": "Shop Pay"
+    },
+    {
+      "type": "checkbox",
+      "id": "payment_discover",
+      "default": false,
+      "label": "Discover"
+    },
+    {
+      "type": "checkbox",
+      "id": "payment_diners_club",
+      "default": false,
+      "label": "Diners Club"
+    },
+    {
+      "type": "checkbox",
+      "id": "payment_maestro",
+      "default": false,
+      "label": "Maestro"
+    },
+    {
+      "type": "checkbox",
+      "id": "payment_jcb",
+      "default": false,
+      "label": "JCB"
+    },
+    {
+      "type": "checkbox",
+      "id": "payment_klarna",
+      "default": false,
+      "label": "Klarna"
     },
     {
       "type": "header",
@@ -1143,7 +1351,7 @@
     },
     {
       "type": "header",
-      "content": "t:sections.all.padding.section_padding_heading"
+      "content": "t:sections.all.padding.section_padding_heading_desktop"
     },
     {
       "type": "range",
@@ -1164,6 +1372,30 @@
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
       "default": 36
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading_mobile"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top_mobile",
+      "default": 28
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom_mobile",
+      "default": 28
     }
   ],
   "default": {

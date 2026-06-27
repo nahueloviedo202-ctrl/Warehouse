@@ -1,0 +1,31 @@
+{%- liquid
+  if block
+    assign quote_text = block.settings.text
+    assign avatar_image = block.settings.avatar
+    assign author_name = block.settings.author
+  else
+    assign quote_text = 'Comparte la opinión de tu cliente aquí.'
+    assign author_name = 'Nombre del cliente'
+  endif
+-%}
+{%- if quote_text != blank -%}
+  <p class="featured-quote__text{% if section.settings.quote_italic %} featured-quote__text--italic{% endif %}" style="{% if section.settings.quote_font_weight != blank %}font-weight: {{ section.settings.quote_font_weight }};{% endif %}">
+    {{ quote_text }}
+  </p>
+{%- endif -%}
+{%- if avatar_image != blank or author_name != blank -%}
+  <div class="featured-quote__author-row">
+    {%- if avatar_image != blank -%}
+      <div class="featured-quote__avatar">
+        {{
+          avatar_image
+          | image_url: width: 400
+          | image_tag: loading: 'lazy', width: 140, height: 140, widths: '80, 120, 160, 200, 280, 400', sizes: '(min-resolution: 2dppx) 280px, 140px'
+        }}
+      </div>
+    {%- endif -%}
+    {%- if author_name != blank -%}
+      <p class="featured-quote__author" style="{% if section.settings.author_font_size > 0 %}font-size: {{ section.settings.author_font_size }}px;{% endif %}{% if section.settings.author_font_weight != blank %}font-weight: {{ section.settings.author_font_weight }};{% endif %}">{{ author_name }}</p>
+    {%- endif -%}
+  </div>
+{%- endif -%}

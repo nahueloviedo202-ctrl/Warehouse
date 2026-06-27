@@ -1,0 +1,51 @@
+{%- comment -%}
+  Renders one UGC-style card for the community-feed section.
+  Accepts:
+  - block: {Object} section block of type 'post'
+{%- endcomment -%}
+{%- liquid
+  assign has_link = false
+  if block.settings.link != blank
+    assign has_link = true
+  endif
+-%}
+<article class="community-feed__card" tabindex="0" {{ block.shopify_attributes }}>
+  {%- if has_link -%}
+    <a href="{{ block.settings.link }}" class="community-feed__card-link" aria-label="{{ block.settings.username | escape }}">
+  {%- endif -%}
+
+  <div class="community-feed__media">
+    {%- if block.settings.image != blank -%}
+      {{
+        block.settings.image
+        | image_url: width: 1200
+        | image_tag:
+          loading: 'lazy',
+          sizes: '(min-width: 990px) 420px, (min-width: 750px) 45vw, 75vw',
+          widths: '300, 450, 600, 900, 1200'
+      }}
+    {%- else -%}
+      {{ 'image' | placeholder_svg_tag: 'placeholder-svg community-feed__placeholder' }}
+    {%- endif -%}
+  </div>
+
+  <div class="community-feed__meta">
+    {%- if block.settings.username != blank or block.settings.show_verified -%}
+      <div class="community-feed__userline">
+        {%- if block.settings.username != blank -%}
+          <span class="community-feed__username">{{ block.settings.username | escape }}</span>
+        {%- endif -%}
+        {%- if block.settings.show_verified -%}
+          {%- render 'icon-verified-badge' -%}
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+    {%- if block.settings.caption != blank -%}
+      <p class="community-feed__caption">{{ block.settings.caption | escape }}</p>
+    {%- endif -%}
+  </div>
+
+  {%- if has_link -%}
+    </a>
+  {%- endif -%}
+</article>

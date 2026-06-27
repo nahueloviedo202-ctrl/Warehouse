@@ -397,8 +397,12 @@
     "all": {
       "padding": {
         "section_padding_heading": "섹션 패딩",
+        "section_padding_heading_desktop": "Section padding (desktop)",
+        "section_padding_heading_mobile": "Section padding (mobile)",
         "padding_top": "상단 패딩",
-        "padding_bottom": "하단 패딩"
+        "padding_bottom": "하단 패딩",
+        "padding_top_mobile": "Top padding (mobile)",
+        "padding_bottom_mobile": "Bottom padding (mobile)"
       },
       "spacing": "간격",
       "colors": {

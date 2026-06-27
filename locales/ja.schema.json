@@ -397,8 +397,12 @@
     "all": {
       "padding": {
         "section_padding_heading": "セクションの余白",
+        "section_padding_heading_desktop": "Section padding (desktop)",
+        "section_padding_heading_mobile": "Section padding (mobile)",
         "padding_top": "上部の余白",
-        "padding_bottom": "下部の余白"
+        "padding_bottom": "下部の余白",
+        "padding_top_mobile": "Top padding (mobile)",
+        "padding_bottom_mobile": "Bottom padding (mobile)"
       },
       "spacing": "間隔",
       "colors": {

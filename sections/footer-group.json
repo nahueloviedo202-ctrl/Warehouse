@@ -11,38 +11,70 @@
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
-    "footer": {
-      "type": "footer",
+    "custom-image-footer": {
+      "type": "custom-image-footer",
       "blocks": {
-        "text_nykDzJ": {
-          "type": "text",
+        "link_list_JM3bmc": {
+          "type": "link_list",
           "settings": {
-            "heading": "Vita Nura Lab",
-            "subtext": "<p>Líderes en productos de belleza y salud</p>",
-            "width_desktop": 3,
-            "width_mobile": "2"
+            "heading": "Políticas",
+            "menu": "politicas"
+          }
+        },
+        "col_nosotras": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Nosotras",
+            "menu": "nosotras"
           }
         }
       },
       "block_order": [
-        "text_nykDzJ"
+        "link_list_JM3bmc",
+        "col_nosotras"
       ],
       "settings": {
-        "color_scheme": "accent-1",
-        "enable_follow_on_shop": false,
-        "show_social": false,
-        "enable_country_selector": false,
-        "enable_language_selector": false,
-        "payment_enable": false,
-        "show_policy": false,
-        "branding_text": "VitaNuraLab 2026",
-        "margin_top": 0,
-        "padding_top": 32,
-        "padding_bottom": 20
+        "background_image": "shopify://shop_images/infinte.webp",
+        "overlay_color": "#000000",
+        "overlay_opacity": 50,
+        "logo_image": "shopify://shop_images/logo_84781f12-19ba-433f-b657-489316a46b1d.png",
+        "logo_width": 100,
+        "logo_width_mobile": 70,
+        "brand_name": "",
+        "copyright_text": "VitaNura Lab",
+        "show_payment": false,
+        "pay_visa": false,
+        "pay_master": false,
+        "pay_amex": false,
+        "pay_paypal": false,
+        "pay_apple": false,
+        "pay_google": false,
+        "pay_shop": false,
+        "pay_discover": false,
+        "pay_diners": false,
+        "pay_maestro": false,
+        "pay_jcb": false,
+        "pay_klarna": false,
+        "brand_size": 20,
+        "heading_size": 16,
+        "link_size": 13,
+        "copyright_size": 12,
+        "brand_size_mobile": 16,
+        "heading_size_mobile": 14,
+        "link_size_mobile": 12,
+        "copyright_size_mobile": 11,
+        "min_height": 520,
+        "top_radius": 24,
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "padding_horizontal": 160,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 32,
+        "padding_horizontal_mobile": 20
       }
     }
   },
   "order": [
-    "footer"
+    "custom-image-footer"
   ]
 }
