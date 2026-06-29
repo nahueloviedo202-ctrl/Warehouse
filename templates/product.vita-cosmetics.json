@@ -286,7 +286,7 @@
             "item_body_size_desktop": 14,
             "item_body_size_mobile": 13,
             "item_1_title": "Descripción",
-            "item_1_body": "<p>{{ product.metafields.custom.descripcion | metafield_tag }}</p>",
+            "item_1_body": "<p>Vita Cosmetics es una base que combina en un solo paso hidratación, protección solar, unificación del tono y cobertura ligera. Su fórmula respetuosa con la piel se adapta al tono natural, evitando efecto máscara, oxidación o sensación pesada. El resultado: un acabado radiante que dura todo el día.</p><p></p>",
             "item_2_title": "Beneficios",
             "item_2_body": "<p>{{ product.metafields.custom.beneficios | metafield_tag }}</p>",
             "item_3_title": "Envió y devoluciones",
