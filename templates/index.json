@@ -9,6 +9,54 @@
  */
 {
   "sections": {
+    "image_banner_ktLqkL": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_hEr9Md": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "h1"
+          }
+        },
+        "text_nPMHtm": {
+          "type": "text",
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        },
+        "buttons_imzfxE": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "VER PRODUCTOS",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_hEr9Md",
+        "text_nPMHtm",
+        "buttons_imzfxE"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Tienda_VitanuraLab_y_productos_de_cuidado.png",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": false
+      }
+    },
     "e6750b05-7703-4f69-ab7c-9ffb0acf18fb": {
       "type": "slideshow",
       "blocks": {
@@ -42,6 +90,7 @@
       "block_order": [
         "template--18472095940937__e6750b05-7703-4f69-ab7c-9ffb0acf18fb-16798645128eb8005e-0"
       ],
+      "disabled": true,
       "settings": {
         "layout": "full_bleed",
         "slide_height": "adapt_image",
@@ -94,6 +143,7 @@
         "template--18472095940937__eab98bdb-f257-46ac-a548-66c24089d95a-167986455514a8e470-2",
         "d4c65361-b69b-4224-8ea3-3f8565f6b66a"
       ],
+      "disabled": true,
       "settings": {
         "title": "Nº1 en Salud",
         "heading_size": "h1",
@@ -114,6 +164,85 @@
         "padding_bottom": 36,
         "padding_top_mobile": 28,
         "padding_bottom_mobile": 28
+      }
+    },
+    "press_ticker_KNfPWx": {
+      "type": "press-ticker",
+      "blocks": {
+        "item_fBcjGV": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Revista_InStyle_idQQukCzRJ_0.svg",
+            "text": "",
+            "link": "",
+            "target_blank": false
+          }
+        },
+        "item_eCKYWx": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/vogue-logo.svg",
+            "text": "VOGUE",
+            "link": "",
+            "target_blank": false
+          }
+        },
+        "item_FjYRHp": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/pngkey.com-rolling-stones-logo-png-1512812.png",
+            "text": "RUSSH",
+            "link": "",
+            "target_blank": false
+          }
+        },
+        "item_rgtxje": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/960px-Marie_Claire_Magazine_logo_svg.png",
+            "text": "marie claire",
+            "link": "",
+            "target_blank": false
+          }
+        },
+        "item_awNRLb": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/harpers-bazaar-logo.svg",
+            "text": "BAZAAR",
+            "link": "",
+            "target_blank": false
+          }
+        }
+      },
+      "block_order": [
+        "item_fBcjGV",
+        "item_eCKYWx",
+        "item_FjYRHp",
+        "item_rgtxje",
+        "item_awNRLb"
+      ],
+      "name": "Press Ticker",
+      "settings": {
+        "speed": 1,
+        "direction": "left",
+        "pause_on_hover": true,
+        "separator_char": "•",
+        "separator_spacing": 24,
+        "separator_size": 1,
+        "desktop_logo_height": 30,
+        "mobile_logo_height": 24,
+        "text_size": "2",
+        "text_bold": false,
+        "text_italic": true,
+        "text_uppercase": true,
+        "color_scheme": "background-1",
+        "custom_background_color": "#e3d0c9",
+        "custom_text_color": "#000000",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "padding_top_mobile": 16,
+        "padding_bottom_mobile": 16
       }
     },
     "bb0df407-4b1e-45f0-a6fa-a64b51c078eb": {
@@ -337,8 +466,10 @@
     }
   },
   "order": [
+    "image_banner_ktLqkL",
     "e6750b05-7703-4f69-ab7c-9ffb0acf18fb",
     "eab98bdb-f257-46ac-a548-66c24089d95a",
+    "press_ticker_KNfPWx",
     "bb0df407-4b1e-45f0-a6fa-a64b51c078eb",
     "33217d57-e749-436e-bb7a-44a340facaa4",
     "community_feed_YYXLaf"
