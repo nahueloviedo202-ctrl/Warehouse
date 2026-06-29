@@ -80,9 +80,9 @@
           "type": "price",
           "settings": {
             "sale_price_size_desktop": 19,
-            "sale_price_size_mobile": 19,
+            "sale_price_size_mobile": 23,
             "compare_price_size_desktop": 19,
-            "compare_price_size_mobile": 13,
+            "compare_price_size_mobile": 18,
             "price_gap": 10,
             "price_side_text": "0.67FL OZ / 30ml",
             "side_text_size_desktop": 16,
