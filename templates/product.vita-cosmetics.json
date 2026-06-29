@@ -171,6 +171,12 @@
             "option_4_fixed_amount_off": "0"
           }
         },
+        "releasit_cod_form_button_app_block_EGrtAx": {
+          "type": "shopify://apps/releasit-cod-form/blocks/button-app-block/72faf214-4174-4fec-886b-0d0e8d3af9a2",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "disabled": true,
@@ -345,6 +351,7 @@
         "de244682-4323-4802-b4ba-b79b08e0c71d",
         "44f9cdc2-f4bf-466e-87d5-fb765ad4864a",
         "074f248d-8d73-4c8f-a97e-d8e82c5be5fc",
+        "releasit_cod_form_button_app_block_EGrtAx",
         "buy_buttons",
         "pdp_stock_pulse_Y3WqH7",
         "2edbf491-d07c-4718-b71e-18ffe22ab7dc",
