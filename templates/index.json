@@ -295,6 +295,42 @@
         "padding_bottom_mobile": 28
       }
     },
+    "image_banner_gBR9jA": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_pQDiAJ": {
+          "type": "heading",
+          "settings": {
+            "heading": "",
+            "heading_size": "h1"
+          }
+        },
+        "text_rFJmzg": {
+          "type": "text",
+          "settings": {
+            "text": "Nuestro equipo de expertos siempre te ayudará en lo que necesites.",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_pQDiAJ",
+        "text_rFJmzg"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Foto_grupal_en_VitanuraLab.png",
+        "image_overlay_opacity": 30,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": false
+      }
+    },
     "33217d57-e749-436e-bb7a-44a340facaa4": {
       "type": "results",
       "blocks": {
@@ -471,6 +507,7 @@
     "eab98bdb-f257-46ac-a548-66c24089d95a",
     "press_ticker_KNfPWx",
     "bb0df407-4b1e-45f0-a6fa-a64b51c078eb",
+    "image_banner_gBR9jA",
     "33217d57-e749-436e-bb7a-44a340facaa4",
     "community_feed_YYXLaf"
   ]
