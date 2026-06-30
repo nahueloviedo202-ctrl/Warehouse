@@ -12,34 +12,6 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "kaching_bundles_app_block_BiXUaA": {
-          "type": "shopify://apps/kaching-bundles/blocks/app-block/6c637362-a106-4a32-94ac-94dcfd68cdb8",
-          "settings": {
-            "product": "{{product}}",
-            "manual_deal_block_id": ""
-          }
-        },
-        "trustpilot_bar_W4kVKz": {
-          "type": "trustpilot_bar",
-          "settings": {
-            "rating": "4.8",
-            "max_rating": "5",
-            "pre_text": "Valorado",
-            "separator_text": "de",
-            "customer_count": "+500.000",
-            "suffix_text": "clientes",
-            "star_color": "#00b67a",
-            "empty_star_color": "#dcdce6",
-            "star_size": 24,
-            "star_size_mobile": 14,
-            "text_color": "",
-            "text_size": 14,
-            "text_size_mobile": 12,
-            "alignment": "flex-start",
-            "gap": 8,
-            "gap_mobile": 6
-          }
-        },
         "press_logos_LWbnV8": {
           "type": "press_logos",
           "settings": {
@@ -118,6 +90,19 @@
             "text_align": "left",
             "item_spacing_desktop": 12,
             "item_spacing_mobile": 10
+          }
+        },
+        "kaching_bundles_app_block_dTDDeg": {
+          "type": "shopify://apps/kaching-bundles/blocks/app-block/6c637362-a106-4a32-94ac-94dcfd68cdb8",
+          "settings": {
+            "product": "{{product}}",
+            "manual_deal_block_id": ""
+          }
+        },
+        "releasit_cod_form_form_app_block_UNj67e": {
+          "type": "shopify://apps/releasit-cod-form/blocks/form-app-block/72faf214-4174-4fec-886b-0d0e8d3af9a2",
+          "settings": {
+            "product": "{{product}}"
           }
         },
         "44f9cdc2-f4bf-466e-87d5-fb765ad4864a": {
@@ -417,13 +402,13 @@
         }
       },
       "block_order": [
-        "kaching_bundles_app_block_BiXUaA",
-        "trustpilot_bar_W4kVKz",
         "press_logos_LWbnV8",
         "title",
         "description_yT64Wm",
         "price",
         "de244682-4323-4802-b4ba-b79b08e0c71d",
+        "kaching_bundles_app_block_dTDDeg",
+        "releasit_cod_form_form_app_block_UNj67e",
         "44f9cdc2-f4bf-466e-87d5-fb765ad4864a",
         "074f248d-8d73-4c8f-a97e-d8e82c5be5fc",
         "buy_buttons",
