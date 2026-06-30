@@ -122,8 +122,22 @@
             "enable_swatches_custom_colors": false
           }
         },
+        "kaching_bundles_app_block_nKTVda": {
+          "type": "shopify://apps/kaching-bundles/blocks/app-block/6c637362-a106-4a32-94ac-94dcfd68cdb8",
+          "settings": {
+            "product": "{{product}}",
+            "manual_deal_block_id": ""
+          }
+        },
+        "releasit_cod_form_form_app_block_cVMreK": {
+          "type": "shopify://apps/releasit-cod-form/blocks/form-app-block/72faf214-4174-4fec-886b-0d0e8d3af9a2",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
         "074f248d-8d73-4c8f-a97e-d8e82c5be5fc": {
           "type": "quantity_selector",
+          "disabled": true,
           "settings": {
             "enable_quantity_discounts": true,
             "headline": "PACKS AHORRO",
@@ -344,6 +358,8 @@
         "price",
         "de244682-4323-4802-b4ba-b79b08e0c71d",
         "44f9cdc2-f4bf-466e-87d5-fb765ad4864a",
+        "kaching_bundles_app_block_nKTVda",
+        "releasit_cod_form_form_app_block_cVMreK",
         "074f248d-8d73-4c8f-a97e-d8e82c5be5fc",
         "buy_buttons",
         "pdp_stock_pulse_Y3WqH7",
@@ -581,7 +597,13 @@
         "auto_rotate": false,
         "change_slides_speed": 5,
         "show_text_below": true,
-        "accessibility_info": "Slideshow about our brand"
+        "accessibility_info": "Slideshow about our brand",
+        "image_border_radius_desktop": 0,
+        "image_border_radius_mobile": 0,
+        "padding_top_desktop": 0,
+        "padding_bottom_desktop": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
       }
     },
     "press_ticker_gTJiLE": {
