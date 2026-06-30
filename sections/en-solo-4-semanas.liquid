@@ -1,0 +1,459 @@
+{{ 'section-en-solo-4-semanas.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top_mobile }}px;
+    padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+  }
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  #shopify-section-{{ section.id }} {
+    --ens-heading-color: {{ section.settings.heading_color }};
+    --ens-stat-number-color: {{ section.settings.stat_number_color }};
+    --ens-stat-text-color: {{ section.settings.stat_text_color }};
+    --ens-btn-bg: {{ section.settings.button_bg_color }};
+    --ens-btn-text: {{ section.settings.button_text_color }};
+  }
+
+  .section-{{ section.id }}-heading {
+    font-size: {{ section.settings.heading_size_mobile }}px;
+    font-weight: {{ section.settings.heading_weight }};
+  }
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-heading {
+      font-size: {{ section.settings.heading_size_desktop }}px;
+    }
+  }
+
+  .section-{{ section.id }}-stat-number {
+    font-size: {{ section.settings.stat_number_size_mobile }}px;
+  }
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-stat-number {
+      font-size: {{ section.settings.stat_number_size_desktop }}px;
+    }
+  }
+
+  .section-{{ section.id }}-stat-text {
+    font-size: {{ section.settings.stat_text_size_mobile }}px;
+  }
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-stat-text {
+      font-size: {{ section.settings.stat_text_size_desktop }}px;
+    }
+  }
+
+  .section-{{ section.id }}-btn {
+    font-size: {{ section.settings.button_text_size_mobile }}px;
+  }
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-btn {
+      font-size: {{ section.settings.button_text_size_desktop }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div
+  class="color-{{ section.settings.color_scheme }}"
+  {% if section.settings.bg_color != blank %}style="background-color: {{ section.settings.bg_color }};"{% endif %}
+>
+  <div class="en-solo page-width section-{{ section.id }}-padding">
+
+    {%- unless section.settings.heading == blank -%}
+      <{{ section.settings.heading_tag }} class="en-solo__heading section-{{ section.id }}-heading">
+        {{ section.settings.heading | escape }}
+      </{{ section.settings.heading_tag }}>
+    {%- endunless -%}
+
+    {%- if section.blocks.size > 0 -%}
+      <div class="en-solo__stats">
+        {%- for block in section.blocks -%}
+          <div class="en-solo__stat" {{ block.shopify_attributes }}>
+            {%- unless block.settings.number == blank -%}
+              <p class="en-solo__stat-number section-{{ section.id }}-stat-number">
+                {{ block.settings.number | escape }}
+              </p>
+            {%- endunless -%}
+            {%- unless block.settings.description == blank -%}
+              <p class="en-solo__stat-text section-{{ section.id }}-stat-text">
+                {{ block.settings.description | escape }}
+              </p>
+            {%- endunless -%}
+          </div>
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+
+    {%- if section.settings.show_button and section.settings.button_label != blank -%}
+      {%- assign _btn_href = section.settings.button_url | default: '#' -%}
+      {%- unless section.settings.button_anchor == blank -%}
+        {%- assign _btn_href = '#' | append: section.settings.button_anchor -%}
+      {%- endunless -%}
+      <div class="en-solo__btn-wrapper">
+        <a
+          href="{{ _btn_href }}"
+          class="en-solo__btn section-{{ section.id }}-btn"
+          {% if section.settings.button_url == blank and section.settings.button_anchor == blank %}aria-disabled="true"{% endif %}
+        >
+          {{ section.settings.button_label | escape }}
+        </a>
+      </div>
+    {%- endif -%}
+
+  </div>
+</div>
+
+<script>
+(function () {
+  var btn = document.querySelector('#shopify-section-{{ section.id }} .en-solo__btn');
+  if (!btn) return;
+
+  btn.addEventListener('click', function (e) {
+    var href = btn.getAttribute('href');
+    if (!href || !href.startsWith('#')) return;
+
+    var target = document.querySelector(href);
+    if (!target) return;
+
+    e.preventDefault();
+
+    var startY = window.scrollY;
+    var endY = target.getBoundingClientRect().top + window.scrollY;
+    var duration = 750;
+    var startTime = null;
+
+    function easeInOutQuart(t) {
+      return t < 0.5 ? 8 * t * t * t * t : 1 - Math.pow(-2 * t + 2, 4) / 2;
+    }
+
+    function step(ts) {
+      if (!startTime) startTime = ts;
+      var elapsed = ts - startTime;
+      var progress = Math.min(elapsed / duration, 1);
+      window.scrollTo(0, startY + (endY - startY) * easeInOutQuart(progress));
+      if (progress < 1) requestAnimationFrame(step);
+    }
+
+    requestAnimationFrame(step);
+  });
+})();
+</script>
+
+{% schema %}
+{
+  "name": "En solo 4 semanas",
+  "class": "section",
+  "tag": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Encabezado"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "default": "En solo 4 semanas:",
+      "label": "Título"
+    },
+    {
+      "type": "select",
+      "id": "heading_tag",
+      "label": "Etiqueta HTML del título",
+      "options": [
+        { "value": "h1", "label": "H1" },
+        { "value": "h2", "label": "H2" },
+        { "value": "h3", "label": "H3" },
+        { "value": "p", "label": "Párrafo" }
+      ],
+      "default": "h2"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Color del título",
+      "default": "#000000"
+    },
+    {
+      "type": "select",
+      "id": "heading_weight",
+      "label": "Peso de fuente del título",
+      "options": [
+        { "value": "400", "label": "Regular" },
+        { "value": "500", "label": "Medium" },
+        { "value": "600", "label": "Semibold" },
+        { "value": "700", "label": "Bold" }
+      ],
+      "default": "600"
+    },
+    {
+      "type": "range",
+      "id": "heading_size_desktop",
+      "min": 16,
+      "max": 72,
+      "step": 1,
+      "unit": "px",
+      "label": "Tamaño título escritorio",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "heading_size_mobile",
+      "min": 14,
+      "max": 48,
+      "step": 1,
+      "unit": "px",
+      "label": "Tamaño título móvil",
+      "default": 24
+    },
+    {
+      "type": "header",
+      "content": "Estadísticas"
+    },
+    {
+      "type": "color",
+      "id": "stat_number_color",
+      "label": "Color del porcentaje",
+      "default": "#434343"
+    },
+    {
+      "type": "range",
+      "id": "stat_number_size_desktop",
+      "min": 20,
+      "max": 72,
+      "step": 1,
+      "unit": "px",
+      "label": "Tamaño porcentaje escritorio",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "stat_number_size_mobile",
+      "min": 16,
+      "max": 48,
+      "step": 1,
+      "unit": "px",
+      "label": "Tamaño porcentaje móvil",
+      "default": 28
+    },
+    {
+      "type": "color",
+      "id": "stat_text_color",
+      "label": "Color del texto descriptivo",
+      "default": "#434343"
+    },
+    {
+      "type": "range",
+      "id": "stat_text_size_desktop",
+      "min": 10,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Tamaño texto descriptivo escritorio",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "stat_text_size_mobile",
+      "min": 10,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Tamaño texto descriptivo móvil",
+      "default": 12
+    },
+    {
+      "type": "header",
+      "content": "Botón"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_button",
+      "default": true,
+      "label": "Mostrar botón"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "default": "QUIERO MI BASE",
+      "label": "Texto del botón"
+    },
+    {
+      "type": "text",
+      "id": "button_anchor",
+      "label": "ID de sección destino (scroll suave)",
+      "info": "Escribe el ID de la sección a la que quieres ir. Ej: shopify-section-template--hero. Si está vacío, usa el enlace de abajo."
+    },
+    {
+      "type": "url",
+      "id": "button_url",
+      "label": "Enlace del botón (si no usas scroll suave)"
+    },
+    {
+      "type": "color",
+      "id": "button_bg_color",
+      "label": "Color de fondo del botón",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Color de texto del botón",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "button_text_size_desktop",
+      "min": 10,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Tamaño texto botón escritorio",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "button_text_size_mobile",
+      "min": 10,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Tamaño texto botón móvil",
+      "default": 14
+    },
+    {
+      "type": "header",
+      "content": "Colores de sección"
+    },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "options": [
+        { "value": "accent-1", "label": "t:sections.all.colors.accent_1.label" },
+        { "value": "accent-2", "label": "t:sections.all.colors.accent_2.label" },
+        { "value": "background-1", "label": "t:sections.all.colors.background_1.label" },
+        { "value": "background-2", "label": "t:sections.all.colors.background_2.label" },
+        { "value": "inverse", "label": "t:sections.all.colors.inverse.label" }
+      ],
+      "default": "background-1",
+      "label": "Esquema de color"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Color de fondo personalizado",
+      "info": "Sobrescribe el esquema de color de sección"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading_desktop"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 40
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading_mobile"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top_mobile",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom_mobile",
+      "default": 24
+    }
+  ],
+  "blocks": [
+    {
+      "type": "stat",
+      "name": "Estadística",
+      "settings": [
+        {
+          "type": "text",
+          "id": "number",
+          "default": "99%",
+          "label": "Porcentaje o número"
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "default": "quedó satisfecho con la calidad del producto",
+          "label": "Descripción"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "En solo 4 semanas",
+      "blocks": [
+        {
+          "type": "stat",
+          "settings": {
+            "number": "99%",
+            "description": "quedó satisfecho con la calidad del producto"
+          }
+        },
+        {
+          "type": "stat",
+          "settings": {
+            "number": "96%",
+            "description": "notó una piel con un tono más uniforme."
+          }
+        },
+        {
+          "type": "stat",
+          "settings": {
+            "number": "97%",
+            "description": "se sintió con mayor confianza al usarla."
+          }
+        },
+        {
+          "type": "stat",
+          "settings": {
+            "number": "95%",
+            "description": "logró cubrir imperfecciones sin efecto pesado."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,117 @@
+{%- comment -%}
+  Renders the product review card slider inside main-product.liquid.
+  Accepts:
+    - blocks : section.blocks filtered by type 'product_review_card'
+    - section : the section object
+{%- endcomment -%}
+
+{%- assign prc_first = blocks | first -%}
+
+{%- if prc_first != blank -%}
+
+  {%- comment -%} Resolve visibility logic upfront {%- endcomment -%}
+  {%- if prc_first.settings.show_arrows == true and blocks.size > 1 -%}
+    {%- assign _prc_show_arrows = true -%}
+  {%- else -%}
+    {%- assign _prc_show_arrows = false -%}
+  {%- endif -%}
+
+  {%- style -%}
+    #prc-{{ section.id }} {
+      --prc-card-bg: {{ prc_first.settings.card_bg }};
+      --prc-border-color: {{ prc_first.settings.card_border_color }};
+      --prc-border-width: {{ prc_first.settings.card_border_width }}px;
+      --prc-radius: {{ prc_first.settings.card_radius }}px;
+      --prc-text-color: {{ prc_first.settings.text_color }};
+      --prc-text-size: {{ prc_first.settings.text_size }}px;
+      --prc-text-size-mobile: {{ prc_first.settings.text_size_mobile }}px;
+      --prc-author-color: {{ prc_first.settings.author_color }};
+      --prc-star-color: {{ prc_first.settings.star_color }};
+      --prc-arrow-color: {{ prc_first.settings.arrow_color }};
+      --prc-arrow-bg: {{ prc_first.settings.arrow_bg }};
+      --prc-avatar-size: {{ prc_first.settings.avatar_size }}px;
+      --prc-avatar-size-mobile: {{ prc_first.settings.avatar_size_mobile }}px;
+    }
+  {%- endstyle -%}
+
+  <div id="prc-{{ section.id }}" class="prc-block">
+    <slider-component class="prc-block__slider">
+
+      <button
+        type="button"
+        name="previous"
+        class="prc-block__btn prc-block__btn--prev slider-button slider-button--prev{% unless _prc_show_arrows %} prc-block__btn--hidden{% endunless %}"
+        aria-label="{{ 'general.slider.previous_slide' | t }}"
+      >
+        {%- render 'icon-caret' -%}
+      </button>
+
+      <ul
+        id="Slider-PRC-{{ section.id }}"
+        class="prc-block__list slider slider--everywhere"
+        role="list"
+      >
+        {%- for block in blocks -%}
+          <li
+            id="Slide-PRC-{{ section.id }}-{{ forloop.index }}"
+            class="prc-block__item slider__slide"
+            {{ block.shopify_attributes }}
+          >
+            <div class="prc-block__card">
+
+              <div class="prc-block__avatar">
+                {%- if block.settings.avatar != blank -%}
+                  {{
+                    block.settings.avatar
+                    | image_url: width: 240
+                    | image_tag:
+                      loading: 'lazy',
+                      width: 120,
+                      height: 120,
+                      sizes: '90px',
+                      alt: block.settings.author | default: ''
+                  }}
+                {%- else -%}
+                  {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg prc-block__avatar-placeholder' }}
+                {%- endif -%}
+              </div>
+
+              {%- if block.settings.text != blank -%}
+                <p class="prc-block__text">&ldquo;{{ block.settings.text | escape }}&rdquo;</p>
+              {%- endif -%}
+
+              <div class="prc-block__footer">
+                {%- if block.settings.author != blank -%}
+                  <span class="prc-block__author">{{ block.settings.author | escape }}</span>
+                {%- endif -%}
+                <div
+                  class="prc-block__stars"
+                  aria-label="{{ block.settings.rating }} de 5 estrellas"
+                >
+                  {%- for i in (1..5) -%}
+                    <span
+                      class="prc-block__star{% if i <= block.settings.rating %} prc-block__star--filled{% endif %}"
+                      aria-hidden="true"
+                    >&#9733;</span>
+                  {%- endfor -%}
+                </div>
+              </div>
+
+            </div>
+          </li>
+        {%- endfor -%}
+      </ul>
+
+      <button
+        type="button"
+        name="next"
+        class="prc-block__btn prc-block__btn--next slider-button slider-button--next{% unless _prc_show_arrows %} prc-block__btn--hidden{% endunless %}"
+        aria-label="{{ 'general.slider.next_slide' | t }}"
+      >
+        {%- render 'icon-caret' -%}
+      </button>
+
+    </slider-component>
+  </div>
+
+{%- endif -%}

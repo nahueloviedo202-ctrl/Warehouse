@@ -9,96 +9,95 @@
  */
 {
   "sections": {
-    "image_banner_ktLqkL": {
-      "type": "image-banner",
+    "convertlab_hero_enjii9": {
+      "type": "convertlab-hero",
       "blocks": {
-        "heading_hEr9Md": {
-          "type": "heading",
-          "settings": {
-            "heading": "Cosmetica y suplementación",
-            "heading_size": "h2"
-          }
-        },
-        "text_nPMHtm": {
-          "type": "text",
-          "settings": {
-            "text": "Dedicación exclusiva a la salud de nuestros clientes",
-            "text_style": "body"
-          }
-        },
-        "buttons_imzfxE": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "VER PRODUCTOS",
-            "button_link_1": "shopify://collections/all",
-            "button_style_secondary_1": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_hEr9Md",
-        "text_nPMHtm",
-        "buttons_imzfxE"
-      ],
-      "name": "t:sections.image-banner.presets.name",
-      "settings": {
-        "image": "shopify://shop_images/Tienda_VitanuraLab_y_productos_de_cuidado.png",
-        "image_overlay_opacity": 40,
-        "image_height": "large",
-        "desktop_content_position": "middle-center",
-        "show_text_box": true,
-        "desktop_content_alignment": "center",
-        "color_scheme": "inverse",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": true,
-        "show_text_below": false
-      }
-    },
-    "e6750b05-7703-4f69-ab7c-9ffb0acf18fb": {
-      "type": "slideshow",
-      "blocks": {
-        "template--18472095940937__e6750b05-7703-4f69-ab7c-9ffb0acf18fb-16798645128eb8005e-0": {
+        "slide_gpdUTy": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/Tienda_VitanuraLab_y_productos_de_cuidado.png",
-            "heading": "VitaNuraLab",
+            "image": "shopify://shop_images/banner.webp",
+            "heading": "Fórmulas que transforman tu piel",
             "heading_size": "h1",
-            "subheading": "Tienda de Suplementacion y cosmetica",
-            "button_label": "Ver productos",
-            "link": "",
-            "button_style_secondary": true,
-            "box_align": "middle-center",
-            "show_text_box": true,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "background-1",
-            "text_alignment_mobile": "center",
             "heading_color": "",
-            "heading_font_size_desktop": 36,
-            "heading_font_size_mobile": 26,
+            "heading_font_size_desktop": 48,
+            "heading_font_size_mobile": 32,
             "heading_font_weight": "700",
+            "subheading": "Cremas diseñadas para realzar la piel y aportar resultados visibles día tras día.",
             "subheading_color": "",
             "subheading_font_size_desktop": 18,
             "subheading_font_size_mobile": 15,
-            "subheading_font_weight": "400"
+            "subheading_font_weight": "400",
+            "button_label": "COMPRAR AHORA",
+            "link": "",
+            "button_style_secondary": false,
+            "button_border_radius": 0,
+            "button_bg_color": "",
+            "button_text_color": "",
+            "button_border_color": "",
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "background-1"
           }
         }
       },
       "block_order": [
-        "template--18472095940937__e6750b05-7703-4f69-ab7c-9ffb0acf18fb-16798645128eb8005e-0"
+        "slide_gpdUTy"
       ],
       "disabled": true,
+      "name": "Hero slideshow",
       "settings": {
         "layout": "full_bleed",
-        "slide_height": "adapt_image",
-        "slider_visual": "counter",
+        "slide_height": "medium",
+        "slider_visual": "dots",
         "auto_rotate": false,
         "change_slides_speed": 5,
-        "show_text_below": true,
-        "accessibility_info": "Slideshow about our brand"
+        "show_text_below": false,
+        "accessibility_info": "Hero slideshow"
+      }
+    },
+    "collection_slider_QQnXP3": {
+      "type": "collection-slider",
+      "disabled": true,
+      "name": "Slider de colección",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "heading_color": "#111111",
+        "heading_font_size_desktop": 36,
+        "heading_font_size_mobile": 26,
+        "heading_font_weight": "700",
+        "subheading": "",
+        "subheading_color": "#666666",
+        "subheading_font_size_desktop": 16,
+        "subheading_font_size_mobile": 14,
+        "subheading_font_weight": "400",
+        "collection": "frontpage",
+        "products_to_show": 8,
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_desktop": 4,
+        "columns_mobile": "2",
+        "show_arrows": false,
+        "arrows_color": "#111111",
+        "show_counter": false,
+        "counter_color": "#111111",
+        "autoplay": false,
+        "autoplay_speed": 5,
+        "full_width": true,
+        "show_view_all": true,
+        "view_all_style": "link",
+        "color_scheme": "background-1",
+        "background_color": "",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 28,
+        "padding_bottom_mobile": 28
       }
     },
     "eab98bdb-f257-46ac-a548-66c24089d95a": {
@@ -143,7 +142,6 @@
         "template--18472095940937__eab98bdb-f257-46ac-a548-66c24089d95a-167986455514a8e470-2",
         "d4c65361-b69b-4224-8ea3-3f8565f6b66a"
       ],
-      "disabled": true,
       "settings": {
         "title": "Nº1 en Salud",
         "heading_size": "h1",
@@ -164,85 +162,6 @@
         "padding_bottom": 36,
         "padding_top_mobile": 28,
         "padding_bottom_mobile": 28
-      }
-    },
-    "press_ticker_KNfPWx": {
-      "type": "press-ticker",
-      "blocks": {
-        "item_fBcjGV": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/Revista_InStyle_idQQukCzRJ_0.svg",
-            "text": "",
-            "link": "",
-            "target_blank": false
-          }
-        },
-        "item_eCKYWx": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/vogue-logo.svg",
-            "text": "VOGUE",
-            "link": "",
-            "target_blank": false
-          }
-        },
-        "item_FjYRHp": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/pngkey.com-rolling-stones-logo-png-1512812.png",
-            "text": "RUSSH",
-            "link": "",
-            "target_blank": false
-          }
-        },
-        "item_rgtxje": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/960px-Marie_Claire_Magazine_logo_svg.png",
-            "text": "marie claire",
-            "link": "",
-            "target_blank": false
-          }
-        },
-        "item_awNRLb": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/harpers-bazaar-logo.svg",
-            "text": "BAZAAR",
-            "link": "",
-            "target_blank": false
-          }
-        }
-      },
-      "block_order": [
-        "item_fBcjGV",
-        "item_eCKYWx",
-        "item_FjYRHp",
-        "item_rgtxje",
-        "item_awNRLb"
-      ],
-      "name": "Press Ticker",
-      "settings": {
-        "speed": 1,
-        "direction": "left",
-        "pause_on_hover": true,
-        "separator_char": "•",
-        "separator_spacing": 24,
-        "separator_size": 1,
-        "desktop_logo_height": 30,
-        "mobile_logo_height": 24,
-        "text_size": "2",
-        "text_bold": false,
-        "text_italic": true,
-        "text_uppercase": true,
-        "color_scheme": "background-1",
-        "custom_background_color": "#e3d0c9",
-        "custom_text_color": "#000000",
-        "padding_top": 20,
-        "padding_bottom": 20,
-        "padding_top_mobile": 16,
-        "padding_bottom_mobile": 16
       }
     },
     "bb0df407-4b1e-45f0-a6fa-a64b51c078eb": {
@@ -293,42 +212,6 @@
         "padding_bottom": 36,
         "padding_top_mobile": 28,
         "padding_bottom_mobile": 28
-      }
-    },
-    "image_banner_gBR9jA": {
-      "type": "image-banner",
-      "blocks": {
-        "heading_pQDiAJ": {
-          "type": "heading",
-          "settings": {
-            "heading": "",
-            "heading_size": "h1"
-          }
-        },
-        "text_rFJmzg": {
-          "type": "text",
-          "settings": {
-            "text": "Nuestro equipo de expertos siempre te ayudará en lo que necesites.",
-            "text_style": "body"
-          }
-        }
-      },
-      "block_order": [
-        "heading_pQDiAJ",
-        "text_rFJmzg"
-      ],
-      "name": "t:sections.image-banner.presets.name",
-      "settings": {
-        "image": "shopify://shop_images/Foto_grupal_en_VitanuraLab.png",
-        "image_overlay_opacity": 30,
-        "image_height": "medium",
-        "desktop_content_position": "middle-center",
-        "show_text_box": true,
-        "desktop_content_alignment": "center",
-        "color_scheme": "background-1",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": true,
-        "show_text_below": false
       }
     },
     "33217d57-e749-436e-bb7a-44a340facaa4": {
@@ -405,110 +288,111 @@
         "padding_bottom_mobile": 28
       }
     },
-    "community_feed_YYXLaf": {
-      "type": "community-feed",
+    "convertlab_hero_t7YDft": {
+      "type": "convertlab-hero",
       "blocks": {
-        "post_wqEJFg": {
-          "type": "post",
+        "slide_pPDxgU": {
+          "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/Piel_feliz_piel_bonita_Cuando_cuidas_tu_piel_ella_lo_refleja_en_cada_sonrisa._Hidratacion_1.webp",
-            "username": "@laura.m",
-            "show_verified": true,
-            "caption": "Ahora entiendo por qué es tan recomendado",
-            "link": ""
-          }
-        },
-        "post_RBLnFr": {
-          "type": "post",
-          "settings": {
-            "image": "shopify://shop_images/Un_gesto_simple_un_gran_regalo_para_tu_piel.El_cuidado_diario_no_tiene_edad_tiene_amor_prop.webp",
-            "username": "@clara.r",
-            "show_verified": true,
-            "caption": "Piel más suave desde la primera aplicación",
-            "link": ""
-          }
-        },
-        "post_EizYaT": {
-          "type": "post",
-          "settings": {
-            "image": "shopify://shop_images/La_edad_no_define_tu_belleza_tu_luz_interior_si.Cada_gota_de_cuidado_es_un_regalo_para_tu_pie.webp",
-            "username": "@vane.o",
-            "show_verified": true,
-            "caption": "Lo mejor que he probado en mucho tiempo",
-            "link": ""
-          }
-        },
-        "post_VzBJWy": {
-          "type": "post",
-          "settings": {
-            "image": "shopify://shop_images/Tu_piel_tu_tono_tu_luz_realzada_por_InfiniteGlow.webp",
-            "username": "@miriam.l",
-            "show_verified": true,
-            "caption": "Excelente para ayudar a mantener la hidratación",
-            "link": ""
-          }
-        },
-        "post_UPmCn8": {
-          "type": "post",
-          "settings": {
-            "image": "shopify://shop_images/Tu_piel_tambien_merece_sentir_el_calor_del_sol_sin_perder_su_frescura.Un_toque_de_hidratacion.webp",
-            "username": "@sandra.v",
-            "show_verified": true,
-            "caption": "Por fin un producto que sí cumple lo que promete",
-            "link": ""
+            "image": "shopify://shop_images/Gemini_Generated_Image_nwfk87nwfk87nwfk.webp",
+            "heading": "Tu piel, en su mejor versión",
+            "heading_size": "h1",
+            "heading_color": "",
+            "heading_font_size_desktop": 48,
+            "heading_font_size_mobile": 32,
+            "heading_font_weight": "700",
+            "subheading": "Porque cuando tu piel se ve bien, todo se siente más fácil. Ligera, auténtica y luminosa, como tú.",
+            "subheading_color": "",
+            "subheading_font_size_desktop": 18,
+            "subheading_font_size_mobile": 15,
+            "subheading_font_weight": "400",
+            "button_label": "COMPRAR AHORA",
+            "link": "",
+            "button_style_secondary": false,
+            "button_border_radius": 0,
+            "button_bg_color": "",
+            "button_text_color": "",
+            "button_border_color": "",
+            "box_align": "bottom-left",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "image_overlay_opacity": 20,
+            "color_scheme": "background-1"
           }
         }
       },
       "block_order": [
-        "post_wqEJFg",
-        "post_RBLnFr",
-        "post_EizYaT",
-        "post_VzBJWy",
-        "post_UPmCn8"
+        "slide_pPDxgU"
       ],
-      "custom_css": [
-        "@media screen and (max-width: 749px) {.h2 {font-size: calc(var(--font-heading-scale) * 1.7rem); }}",
-        "@media screen and (max-width: 749px) {.section-community_feed_dJB7VX-padding {padding-top: 32px !important; padding-bottom: 32px !important; }}"
-      ],
-      "name": "Comunidad / Feed UGC",
+      "disabled": true,
+      "name": "Hero slideshow",
       "settings": {
-        "heading": "Únete a la comunidad @VitaNuraLab",
-        "heading_size": "h2",
-        "heading_color": "",
-        "heading_font_size_desktop": 32,
-        "heading_font_size_mobile": 24,
-        "heading_font_weight": "600",
+        "layout": "grid",
+        "slide_height": "medium",
+        "slider_visual": "dots",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "show_text_below": false,
+        "accessibility_info": "Hero slideshow"
+      }
+    },
+    "image_banner_UiqMxR": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_LiKfkh": {
+          "type": "heading",
+          "settings": {
+            "heading": "Cosmetica y suplementación",
+            "heading_size": "h2"
+          }
+        },
+        "text_xMK7j8": {
+          "type": "text",
+          "settings": {
+            "text": "Dedicación exclusiva a la salud de nuestros clientes",
+            "text_style": "body"
+          }
+        },
+        "buttons_tFkncD": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Ver productos",
+            "button_link_1": "shopify://collections/all",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_LiKfkh",
+        "text_xMK7j8",
+        "buttons_tFkncD"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Tienda_VitanuraLab_y_productos_de_cuidado.png",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
         "color_scheme": "background-1",
-        "verified_color": "#bc6161",
-        "background_color": "",
-        "media_radius": 18,
-        "enable_center_mode": true,
-        "enable_loop": true,
-        "autoplay": false,
-        "autoplay_speed": 3,
-        "show_dots": true,
-        "show_arrows": false,
-        "slides_desktop": 3.4,
-        "space_desktop": 20,
-        "slides_tablet": 2,
-        "space_tablet": 16,
-        "slides_mobile": 1.4,
-        "space_mobile": 12,
-        "padding_top": 60,
-        "padding_bottom": 40,
-        "padding_top_mobile": 40,
-        "padding_bottom_mobile": 40
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
       }
     }
   },
   "order": [
-    "image_banner_ktLqkL",
-    "e6750b05-7703-4f69-ab7c-9ffb0acf18fb",
+    "image_banner_UiqMxR",
+    "convertlab_hero_enjii9",
+    "collection_slider_QQnXP3",
     "eab98bdb-f257-46ac-a548-66c24089d95a",
-    "press_ticker_KNfPWx",
     "bb0df407-4b1e-45f0-a6fa-a64b51c078eb",
-    "image_banner_gBR9jA",
     "33217d57-e749-436e-bb7a-44a340facaa4",
-    "community_feed_YYXLaf"
+    "convertlab_hero_t7YDft"
   ]
 }

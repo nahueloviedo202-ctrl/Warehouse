@@ -1,0 +1,614 @@
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+{{ 'component-price.css' | asset_url | stylesheet_tag }}
+{{ 'section-convertlab-left-plus-slider.css' | asset_url | stylesheet_tag }}
+<link rel="stylesheet" href="{{ 'component-slider.css' | asset_url }}" media="print" onload="this.media='all'">
+<noscript>{{ 'component-slider.css' | asset_url | stylesheet_tag }}</noscript>
+{%- if section.settings.enable_quick_add -%}
+  <link rel="stylesheet" href="{{ 'quick-add.css' | asset_url }}" media="print" onload="this.media='all'">
+  <script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
+  <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+{%- endif -%}
+
+{%- liquid
+  assign products_count = 0
+  if section.settings.collection != blank
+    assign products_count = section.settings.collection.all_products_count
+  endif
+-%}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top:    {{ section.settings.padding_top_mobile }}px;
+    padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top:    {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  #shopify-section-{{ section.id }} {
+    --clps-left-width:  {{ section.settings.left_image_width_mobile }}px;
+    --clps-card-width:  {{ section.settings.card_width_mobile }}px;
+    --clps-card-gap:    {{ section.settings.card_gap }}px;
+    --clps-image-radius:{{ section.settings.card_radius }}px;
+    --clps-header-mb:   {{ section.settings.header_mb_mobile }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    #shopify-section-{{ section.id }} {
+      --clps-left-width: {{ section.settings.left_image_width_tablet }}px;
+      --clps-card-width: {{ section.settings.card_width_tablet }}px;
+      --clps-header-mb:  {{ section.settings.header_mb }}px;
+    }
+  }
+
+  @media screen and (min-width: 990px) {
+    #shopify-section-{{ section.id }} {
+      --clps-left-width: {{ section.settings.left_image_width_desktop }}px;
+      --clps-card-width: {{ section.settings.card_width_desktop }}px;
+    }
+  }
+
+  .section-{{ section.id }}-heading {
+    font-size: {{ section.settings.heading_font_size_mobile }}px;
+  }
+
+  .section-{{ section.id }}-view-all {
+    font-size: {{ section.settings.view_all_font_size_mobile }}px;
+  }
+
+  @media screen and (min-width: 990px) {
+    .section-{{ section.id }}-heading {
+      font-size: {{ section.settings.heading_font_size_desktop }}px;
+    }
+
+    .section-{{ section.id }}-view-all {
+      font-size: {{ section.settings.view_all_font_size_desktop }}px;
+    }
+  }
+
+  #shopify-section-{{ section.id }} .slider__slide {
+    scroll-snap-align: start;
+  }
+{%- endstyle -%}
+
+<div class="clps-section color-{{ section.settings.color_scheme }} gradient">
+  <div class="page-width section-{{ section.id }}-padding">
+
+    {%- comment -%} ── Header ── {%- endcomment -%}
+    {%- liquid
+      assign show_header = false
+      if section.settings.title != blank
+        assign show_header = true
+      endif
+      if section.settings.show_view_all and section.settings.collection != blank
+        assign show_header = true
+      endif
+    -%}
+    {%- if show_header -%}
+      <div class="clps-header">
+        {%- if section.settings.title != blank -%}
+          <h2
+            class="clps-title {{ section.settings.heading_size }} section-{{ section.id }}-heading"
+          >
+            {{- section.settings.title | escape -}}
+            {%- if section.settings.show_count and products_count > 0 -%}
+              <sup class="clps-title-count">{{ products_count }}</sup>
+            {%- endif -%}
+          </h2>
+        {%- endif -%}
+
+        {%- if section.settings.show_view_all and section.settings.collection != blank -%}
+          <a
+            href="{{ section.settings.collection.url }}"
+            class="clps-view-all section-{{ section.id }}-view-all"
+            aria-label="{{ 'sections.featured_collection.view_all_label' | t: collection_name: section.settings.collection.title }}"
+          >
+            {{- section.settings.view_all_label | escape -}}
+            <svg
+              width="7"
+              height="11"
+              viewBox="0 0 7 11"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path
+                d="M1 1L5.5 5.5L1 10"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+
+    {%- comment -%} ── Body ── {%- endcomment -%}
+    <div class="clps-body">
+
+      {%- comment -%} ── Left image ── {%- endcomment -%}
+      {%- if section.settings.left_image != blank -%}
+        {%- assign left_mobile_class = '' -%}
+        {%- unless section.settings.show_left_image_mobile -%}
+          {%- assign left_mobile_class = 'clps-left-image--hidden-mobile' -%}
+        {%- endunless -%}
+
+        <div class="clps-left-image {{ left_mobile_class }}">
+          {%- liquid
+            assign left_img_sizes = '(min-width: 990px) '
+            assign left_img_sizes = left_img_sizes | append: section.settings.left_image_width_desktop
+            assign left_img_sizes = left_img_sizes | append: 'px, (min-width: 750px) '
+            assign left_img_sizes = left_img_sizes | append: section.settings.left_image_width_tablet
+            assign left_img_sizes = left_img_sizes | append: 'px, 100vw'
+          -%}
+
+          {%- if section.settings.left_image_link != blank -%}
+            <a href="{{ section.settings.left_image_link }}" class="clps-left-image__link">
+          {%- else -%}
+            <div class="clps-left-image__wrap">
+          {%- endif -%}
+
+          {{
+            section.settings.left_image
+            | image_url: width: 600
+            | image_tag:
+              class: 'clps-left-image__img',
+              loading: 'lazy',
+              widths: '300, 400, 500, 600',
+              sizes: left_img_sizes,
+              alt: section.settings.left_image.alt | escape
+          }}
+
+          {%- if section.settings.left_image_link != blank -%}
+            </a>
+          {%- else -%}
+            </div>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+
+      {%- comment -%} ── Slider area ── {%- endcomment -%}
+      <div class="clps-slider-area">
+        <slider-component
+          id="clps-component-{{ section.id }}"
+          class="clps-slider-component"
+        >
+          <ul
+            id="Slider-{{ section.id }}"
+            class="clps-product-list slider slider--everywhere"
+            role="list"
+            aria-label="{{ section.settings.title | default: 'Productos' | escape }}"
+          >
+            {%- if section.settings.collection != blank -%}
+              {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
+                <li
+                  id="Slide-{{ section.id }}-{{ forloop.index }}"
+                  class="clps-product-item slider__slide"
+                  role="group"
+                  aria-roledescription="{{ 'sections.slideshow.slide' | t }}"
+                  aria-label="{{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
+                >
+                  {%- render 'card-product',
+                    card_product: product,
+                    media_aspect_ratio: section.settings.image_ratio,
+                    show_secondary_image: false,
+                    show_vendor: section.settings.show_vendor,
+                    show_rating: section.settings.show_rating,
+                    show_quick_add: section.settings.enable_quick_add,
+                    section_id: section.id,
+                    lazy_load: true
+                  -%}
+                </li>
+              {%- endfor -%}
+            {%- else -%}
+              {%- for i in (1..4) -%}
+                <li class="clps-product-item slider__slide">
+                  {%- render 'card-product', section_id: section.id -%}
+                </li>
+              {%- endfor -%}
+            {%- endif -%}
+          </ul>
+        </slider-component>
+
+        {%- if section.settings.show_progress_bar -%}
+          <div
+            class="clps-progress"
+            id="clps-progress-wrap-{{ section.id }}"
+            aria-hidden="true"
+          >
+            <div
+              class="clps-progress__fill"
+              id="clps-progress-fill-{{ section.id }}"
+            ></div>
+          </div>
+        {%- endif -%}
+      </div>
+
+    </div>
+  </div>
+</div>
+
+{%- if section.settings.show_progress_bar -%}
+  <script>
+    (function () {
+      var slider = document.getElementById('Slider-{{ section.id }}');
+      var fill   = document.getElementById('clps-progress-fill-{{ section.id }}');
+      if (!slider || !fill) return;
+
+      function update() {
+        var max = slider.scrollWidth - slider.clientWidth;
+        if (max <= 0) { fill.style.width = '100%'; return; }
+        fill.style.width = (slider.scrollLeft / max * 100).toFixed(2) + '%';
+      }
+
+      update();
+      slider.addEventListener('scroll', update, { passive: true });
+      window.addEventListener('resize', update, { passive: true });
+    })();
+  </script>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Imagen + Slider Productos",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Encabezado"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Título",
+      "default": "Más vendidos"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "label": "Tamaño del título",
+      "options": [
+        { "value": "h2", "label": "t:sections.all.heading_size.options__1.label" },
+        { "value": "h1", "label": "t:sections.all.heading_size.options__2.label" },
+        { "value": "h0", "label": "t:sections.all.heading_size.options__3.label" }
+      ],
+      "default": "h1"
+    },
+    {
+      "type": "range",
+      "id": "heading_font_size_desktop",
+      "min": 18,
+      "max": 60,
+      "step": 1,
+      "unit": "px",
+      "label": "Tamaño título (escritorio)",
+      "default": 34
+    },
+    {
+      "type": "range",
+      "id": "heading_font_size_mobile",
+      "min": 16,
+      "max": 48,
+      "step": 1,
+      "unit": "px",
+      "label": "Tamaño título (móvil)",
+      "default": 26
+    },
+    {
+      "type": "checkbox",
+      "id": "show_count",
+      "label": "Mostrar conteo de productos como superíndice",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_view_all",
+      "label": "Mostrar enlace 'Ver todo'",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "view_all_label",
+      "label": "Texto del enlace",
+      "default": "Ver todo"
+    },
+    {
+      "type": "range",
+      "id": "view_all_font_size_desktop",
+      "min": 11,
+      "max": 22,
+      "step": 1,
+      "unit": "px",
+      "label": "Tamaño 'Ver todo' (escritorio)",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "view_all_font_size_mobile",
+      "min": 11,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Tamaño 'Ver todo' (móvil)",
+      "default": 13
+    },
+    {
+      "type": "range",
+      "id": "header_mb",
+      "min": 8,
+      "max": 64,
+      "step": 4,
+      "unit": "px",
+      "label": "Espacio debajo del encabezado (escritorio/tablet)",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "header_mb_mobile",
+      "min": 8,
+      "max": 48,
+      "step": 4,
+      "unit": "px",
+      "label": "Espacio debajo del encabezado (móvil)",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "Colección de productos"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Colección"
+    },
+    {
+      "type": "range",
+      "id": "products_to_show",
+      "min": 2,
+      "max": 25,
+      "step": 1,
+      "label": "Cantidad de productos",
+      "default": 8
+    },
+    {
+      "type": "header",
+      "content": "Imagen izquierda"
+    },
+    {
+      "type": "image_picker",
+      "id": "left_image",
+      "label": "Imagen"
+    },
+    {
+      "type": "url",
+      "id": "left_image_link",
+      "label": "Enlace de la imagen"
+    },
+    {
+      "type": "range",
+      "id": "left_image_width_desktop",
+      "min": 150,
+      "max": 400,
+      "step": 10,
+      "unit": "px",
+      "label": "Ancho imagen (escritorio)",
+      "default": 260
+    },
+    {
+      "type": "range",
+      "id": "left_image_width_tablet",
+      "min": 120,
+      "max": 320,
+      "step": 10,
+      "unit": "px",
+      "label": "Ancho imagen (tablet)",
+      "default": 200
+    },
+    {
+      "type": "range",
+      "id": "left_image_width_mobile",
+      "min": 100,
+      "max": 280,
+      "step": 10,
+      "unit": "px",
+      "label": "Ancho imagen (móvil – solo si 'mostrar en móvil' está activo)",
+      "default": 160
+    },
+    {
+      "type": "checkbox",
+      "id": "show_left_image_mobile",
+      "label": "Mostrar imagen en móvil (ancho completo encima del slider)",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Tarjetas de producto"
+    },
+    {
+      "type": "select",
+      "id": "image_ratio",
+      "label": "Proporción de imagen",
+      "options": [
+        { "value": "adapt",    "label": "t:sections.featured-collection.settings.image_ratio.options__1.label" },
+        { "value": "portrait", "label": "t:sections.featured-collection.settings.image_ratio.options__2.label" },
+        { "value": "square",   "label": "t:sections.featured-collection.settings.image_ratio.options__3.label" }
+      ],
+      "default": "portrait"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_vendor",
+      "label": "t:sections.featured-collection.settings.show_vendor.label",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_rating",
+      "label": "t:sections.featured-collection.settings.show_rating.label",
+      "info": "t:sections.featured-collection.settings.show_rating.info",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_quick_add",
+      "label": "t:sections.featured-collection.settings.enable_quick_buy.label",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "card_width_desktop",
+      "min": 150,
+      "max": 380,
+      "step": 10,
+      "unit": "px",
+      "label": "Ancho de tarjeta (escritorio)",
+      "default": 220
+    },
+    {
+      "type": "range",
+      "id": "card_width_tablet",
+      "min": 140,
+      "max": 320,
+      "step": 10,
+      "unit": "px",
+      "label": "Ancho de tarjeta (tablet)",
+      "default": 200
+    },
+    {
+      "type": "range",
+      "id": "card_width_mobile",
+      "min": 130,
+      "max": 280,
+      "step": 10,
+      "unit": "px",
+      "label": "Ancho de tarjeta (móvil)",
+      "default": 160
+    },
+    {
+      "type": "range",
+      "id": "card_gap",
+      "min": 0,
+      "max": 40,
+      "step": 4,
+      "unit": "px",
+      "label": "Espacio entre tarjetas y entre imagen y slider",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "card_radius",
+      "min": 0,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "label": "Radio de esquinas (imagen y tarjeta izquierda)",
+      "default": 12
+    },
+    {
+      "type": "header",
+      "content": "Barra de progreso"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_progress_bar",
+      "label": "Mostrar barra de progreso del scroll",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.colors.label"
+    },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "options": [
+        { "value": "accent-1",     "label": "t:sections.all.colors.accent_1.label" },
+        { "value": "accent-2",     "label": "t:sections.all.colors.accent_2.label" },
+        { "value": "background-1", "label": "t:sections.all.colors.background_1.label" },
+        { "value": "background-2", "label": "t:sections.all.colors.background_2.label" },
+        { "value": "inverse",      "label": "t:sections.all.colors.inverse.label" }
+      ],
+      "default": "background-1"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading_desktop"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 48
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading_mobile"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top_mobile",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom_mobile",
+      "default": 32
+    }
+  ],
+  "presets": [
+    {
+      "name": "Imagen + Slider Productos",
+      "settings": {
+        "title": "Más vendidos",
+        "show_count": true,
+        "show_view_all": true,
+        "view_all_label": "Ver todo",
+        "show_vendor": true,
+        "image_ratio": "portrait",
+        "card_width_desktop": 220,
+        "card_width_tablet": 200,
+        "card_width_mobile": 160,
+        "left_image_width_desktop": 260,
+        "left_image_width_tablet": 200,
+        "show_progress_bar": true
+      }
+    }
+  ]
+}
+{% endschema %}

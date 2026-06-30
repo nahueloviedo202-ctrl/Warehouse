@@ -1,0 +1,489 @@
+{{ 'section-confia-en-vita.css' | asset_url | stylesheet_tag }}
+<link rel="stylesheet" href="{{ 'component-slider.css' | asset_url }}" media="print" onload="this.media='all'">
+<noscript>{{ 'component-slider.css' | asset_url | stylesheet_tag }}</noscript>
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top_mobile }}px;
+    padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+  }
+
+  #shopify-section-{{ section.id }} {
+    --cev-heading-color: {{ section.settings.heading_color }};
+    --cev-arrow-color: {{ section.settings.arrows_color }};
+    --cev-card-radius: {{ section.settings.card_corner_radius }}px;
+    --cev-gap: {{ section.settings.card_gap }}px;
+    --cev-cards-desktop: {{ section.settings.cards_per_row_desktop }};
+    --cev-cards-tablet: {{ section.settings.cards_per_row_tablet }};
+    --cev-cards-mobile: {{ section.settings.cards_per_row_mobile }};
+    --cev-aspect-ratio: {{ section.settings.aspect_ratio | default: '9/16' }};
+  }
+
+  .section-{{ section.id }}-badge {
+    font-size: {{ section.settings.badge_font_size_mobile }}px;
+  }
+
+  .section-{{ section.id }}-heading {
+    font-size: {{ section.settings.heading_font_size_mobile }}px;
+    font-weight: {{ section.settings.heading_font_weight_mobile | default: '600' }};
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+
+    .section-{{ section.id }}-badge {
+      font-size: {{ section.settings.badge_font_size_desktop }}px;
+    }
+
+    .section-{{ section.id }}-heading {
+      font-size: {{ section.settings.heading_font_size_desktop }}px;
+      font-weight: {{ section.settings.heading_font_weight }};
+    }
+  }
+{%- endstyle -%}
+
+<div
+  class="confia-en-vita section-{{ section.id }}-padding"
+  style="background-color: {{ section.settings.background_color }};"
+>
+  <div class="page-width">
+
+    <div class="confia-en-vita__header">
+      {%- if section.settings.badge_text != blank -%}
+        <div
+          class="confia-en-vita__badge section-{{ section.id }}-badge"
+          style="background-image: linear-gradient({{ section.settings.badge_gradient_angle }}deg, {{ section.settings.badge_gradient_start }} 0%, {{ section.settings.badge_gradient_end }} 100%); color: {{ section.settings.badge_text_color }};"
+        >
+          {{ section.settings.badge_text | escape }}
+        </div>
+      {%- endif -%}
+
+      {%- if section.settings.heading != blank -%}
+        <h2
+          class="confia-en-vita__heading section-{{ section.id }}-heading"
+          style="color: {{ section.settings.heading_color }};"
+        >
+          {{ section.settings.heading | escape }}
+        </h2>
+      {%- endif -%}
+    </div>
+
+    <slider-component class="confia-en-vita__wrapper">
+
+      {%- if section.settings.show_arrows -%}
+        <button
+          type="button"
+          class="confia-en-vita__arrow confia-en-vita__arrow--prev slider-button slider-button--prev"
+          name="previous"
+          aria-label="{{ 'general.slider.previous_slide' | t }}"
+        >
+          <svg viewBox="0 0 8 14" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+            <path d="M7 1L1 7L7 13" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      {%- endif -%}
+
+      <ul
+        id="Slider-{{ section.id }}"
+        class="confia-en-vita__list slider slider--everywhere"
+        role="list"
+      >
+        {%- for block in section.blocks -%}
+          <li
+            id="Slide-{{ section.id }}-{{ forloop.index }}"
+            class="confia-en-vita__item slider__slide"
+            {{ block.shopify_attributes }}
+          >
+            <div class="confia-en-vita__card">
+              {%- if block.settings.video != blank -%}
+                <div class="confia-en-vita__video-wrap">
+                  {{
+                    block.settings.video
+                    | video_tag:
+                      image_size: '800x',
+                      autoplay: block.settings.autoplay,
+                      loop: block.settings.loop,
+                      muted: block.settings.muted,
+                      controls: block.settings.controls,
+                      preload: block.settings.preload,
+                      class: 'confia-en-vita__poster-img'
+                  }}
+                </div>
+              {%- else -%}
+                <div class="confia-en-vita__image-placeholder">
+                  {{ 'collection-2' | placeholder_svg_tag: 'placeholder-svg' }}
+                </div>
+              {%- endif -%}
+            </div>
+          </li>
+        {%- else -%}
+          {%- for i in (1..3) -%}
+            <li class="confia-en-vita__item slider__slide">
+              <div class="confia-en-vita__card">
+                <div class="confia-en-vita__image-placeholder">
+                  {{ 'collection-2' | placeholder_svg_tag: 'placeholder-svg' }}
+                </div>
+              </div>
+            </li>
+          {%- endfor -%}
+        {%- endfor -%}
+
+      </ul>
+
+      {%- if section.settings.show_arrows -%}
+        <button
+          type="button"
+          class="confia-en-vita__arrow confia-en-vita__arrow--next slider-button slider-button--next"
+          name="next"
+          aria-label="{{ 'general.slider.next_slide' | t }}"
+        >
+          <svg viewBox="0 0 8 14" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+            <path d="M1 1L7 7L1 13" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      {%- endif -%}
+
+    </slider-component>
+
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Confia en Vita",
+  "class": "section",
+  "tag": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Badge"
+    },
+    {
+      "type": "text",
+      "id": "badge_text",
+      "default": "Miles de personas ya confían en Vita Cosmetics",
+      "label": "Texto del badge"
+    },
+    {
+      "type": "color",
+      "id": "badge_gradient_start",
+      "label": "Color inicial del gradiente",
+      "default": "#705239"
+    },
+    {
+      "type": "color",
+      "id": "badge_gradient_end",
+      "label": "Color final del gradiente",
+      "default": "#BC8A60"
+    },
+    {
+      "type": "range",
+      "id": "badge_gradient_angle",
+      "min": 0,
+      "max": 360,
+      "step": 4,
+      "unit": "°",
+      "label": "Ángulo del gradiente",
+      "default": 92
+    },
+    {
+      "type": "color",
+      "id": "badge_text_color",
+      "label": "Color del texto del badge",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "badge_font_size_desktop",
+      "min": 10,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Tamaño del texto badge escritorio",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "badge_font_size_mobile",
+      "min": 10,
+      "max": 18,
+      "step": 1,
+      "unit": "px",
+      "label": "Tamaño del texto badge móvil",
+      "default": 10
+    },
+    {
+      "type": "header",
+      "content": "Título"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "default": "Descubre por qué tantas personas la recomiendan",
+      "label": "Título"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Color del título",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "heading_font_size_desktop",
+      "min": 16,
+      "max": 72,
+      "step": 1,
+      "unit": "px",
+      "label": "Tamaño del título escritorio",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "heading_font_size_mobile",
+      "min": 14,
+      "max": 48,
+      "step": 1,
+      "unit": "px",
+      "label": "Tamaño del título móvil",
+      "default": 28
+    },
+    {
+      "type": "select",
+      "id": "heading_font_weight",
+      "label": "Peso del título escritorio",
+      "options": [
+        { "value": "400", "label": "Regular" },
+        { "value": "500", "label": "Medium" },
+        { "value": "600", "label": "Semibold" },
+        { "value": "700", "label": "Bold" }
+      ],
+      "default": "500"
+    },
+    {
+      "type": "select",
+      "id": "heading_font_weight_mobile",
+      "label": "Peso del título móvil",
+      "options": [
+        { "value": "400", "label": "Regular" },
+        { "value": "500", "label": "Medium" },
+        { "value": "600", "label": "Semibold" },
+        { "value": "700", "label": "Bold" }
+      ],
+      "default": "600"
+    },
+    {
+      "type": "header",
+      "content": "Tarjetas de video"
+    },
+    {
+      "type": "select",
+      "id": "aspect_ratio",
+      "label": "Relación de aspecto",
+      "options": [
+        { "value": "9/16", "label": "9:16 — Vertical (Reels, TikTok)" },
+        { "value": "3/4",  "label": "3:4 — Retrato" },
+        { "value": "1/1",  "label": "1:1 — Cuadrado" },
+        { "value": "16/9", "label": "16:9 — Horizontal" }
+      ],
+      "default": "9/16"
+    },
+    {
+      "type": "range",
+      "id": "card_corner_radius",
+      "min": 0,
+      "max": 30,
+      "step": 1,
+      "unit": "px",
+      "label": "Redondeo de esquinas",
+      "default": 5
+    },
+    {
+      "type": "header",
+      "content": "Diseño del carrusel"
+    },
+    {
+      "type": "range",
+      "id": "cards_per_row_desktop",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "default": 3,
+      "label": "Tarjetas visibles escritorio"
+    },
+    {
+      "type": "range",
+      "id": "cards_per_row_tablet",
+      "min": 1,
+      "max": 3,
+      "step": 1,
+      "default": 2,
+      "label": "Tarjetas visibles tablet"
+    },
+    {
+      "type": "range",
+      "id": "cards_per_row_mobile",
+      "min": 1,
+      "max": 3,
+      "step": 1,
+      "default": 1,
+      "label": "Tarjetas visibles móvil"
+    },
+    {
+      "type": "range",
+      "id": "card_gap",
+      "min": 0,
+      "max": 40,
+      "step": 1,
+      "unit": "px",
+      "default": 15,
+      "label": "Espacio entre tarjetas"
+    },
+    {
+      "type": "header",
+      "content": "Flechas de navegación"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_arrows",
+      "default": true,
+      "label": "Mostrar flechas"
+    },
+    {
+      "type": "color",
+      "id": "arrows_color",
+      "label": "Color de las flechas",
+      "default": "#705239"
+    },
+    {
+      "type": "header",
+      "content": "Fondo de la sección"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Color de fondo",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Espaciado escritorio"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding superior",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding inferior",
+      "default": 40
+    },
+    {
+      "type": "header",
+      "content": "Espaciado móvil"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding superior",
+      "default": 28
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding inferior",
+      "default": 28
+    }
+  ],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "Video",
+      "settings": [
+        {
+          "type": "video",
+          "id": "video",
+          "label": "Video"
+        },
+        {
+          "type": "header",
+          "content": "Reproducción"
+        },
+        {
+          "type": "checkbox",
+          "id": "autoplay",
+          "label": "Reproducción automática",
+          "info": "Requiere 'Silenciar' activado para funcionar en la mayoría de los navegadores.",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "muted",
+          "label": "Silenciar",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "loop",
+          "label": "Repetir en bucle",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "controls",
+          "label": "Mostrar controles del reproductor",
+          "default": false
+        },
+        {
+          "type": "select",
+          "id": "preload",
+          "label": "Precarga",
+          "info": "Controla cuánto del video se carga antes de que el usuario lo reproduzca.",
+          "options": [
+            { "value": "none",     "label": "Ninguna — carga solo al reproducir" },
+            { "value": "metadata", "label": "Metadatos — carga duración y dimensiones" },
+            { "value": "auto",     "label": "Automática — carga el video completo" }
+          ],
+          "default": "metadata"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 20,
+  "presets": [
+    {
+      "name": "Confia en Vita",
+      "blocks": [
+        { "type": "slide" },
+        { "type": "slide" },
+        { "type": "slide" },
+        { "type": "slide" }
+      ]
+    }
+  ]
+}
+{% endschema %}

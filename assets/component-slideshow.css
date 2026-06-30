@@ -211,3 +211,14 @@ slideshow-component:not(.page-width) .slider-buttons {
 .slideshow.banner {
   align-items: stretch;
 }
+
+.slideshow__media {
+  overflow: hidden;
+}
+
+.slideshow__media img {
+  max-width: none;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

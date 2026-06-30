@@ -122,22 +122,8 @@
             "enable_swatches_custom_colors": false
           }
         },
-        "kaching_bundles_app_block_7bVnEW": {
-          "type": "shopify://apps/kaching-bundles/blocks/app-block/6c637362-a106-4a32-94ac-94dcfd68cdb8",
-          "settings": {
-            "product": "{{product}}",
-            "manual_deal_block_id": ""
-          }
-        },
-        "releasit_cod_form_form_app_block_TBtqgk": {
-          "type": "shopify://apps/releasit-cod-form/blocks/form-app-block/72faf214-4174-4fec-886b-0d0e8d3af9a2",
-          "settings": {
-            "product": "{{product}}"
-          }
-        },
         "074f248d-8d73-4c8f-a97e-d8e82c5be5fc": {
           "type": "quantity_selector",
-          "disabled": true,
           "settings": {
             "enable_quantity_discounts": true,
             "headline": "PACKS AHORRO",
@@ -358,8 +344,6 @@
         "price",
         "de244682-4323-4802-b4ba-b79b08e0c71d",
         "44f9cdc2-f4bf-466e-87d5-fb765ad4864a",
-        "kaching_bundles_app_block_7bVnEW",
-        "releasit_cod_form_form_app_block_TBtqgk",
         "074f248d-8d73-4c8f-a97e-d8e82c5be5fc",
         "buy_buttons",
         "pdp_stock_pulse_Y3WqH7",
@@ -1526,27 +1510,6 @@
         "padding_top_mobile": 40,
         "padding_bottom_mobile": 40
       }
-    },
-    "17827765414cde45a1": {
-      "type": "apps",
-      "blocks": {
-        "judge_me_reviews_review_widget_DCVeBM": {
-          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {
-            "review_data": "sample_data",
-            "max_width": 1200,
-            "show_shop_reviews": false,
-            "empty_state": "empty_widget"
-          }
-        }
-      },
-      "block_order": [
-        "judge_me_reviews_review_widget_DCVeBM"
-      ],
-      "disabled": true,
-      "settings": {
-        "include_margins": true
-      }
     }
   },
   "order": [
@@ -1564,7 +1527,6 @@
     "ingredient_spotlight_wmhrkr",
     "featured_quote_Y4GLCm",
     "faq_accordion_m3GjeY",
-    "community_feed_dJB7VX",
-    "17827765414cde45a1"
+    "community_feed_dJB7VX"
   ]
 }

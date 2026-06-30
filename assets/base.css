@@ -673,7 +673,7 @@ h6:empty {
 .link-with-icon {
   display: inline-flex;
   font-size: 1.4rem;
-  font-weight: 600;
+  font-weight: var(--font-body-weight-bold);
   letter-spacing: 0.1rem;
   text-decoration: none;
   margin-bottom: 4.5rem;
@@ -3045,7 +3045,7 @@ details[open] > .header__menu-item .icon-caret {
 }
 
 .header__active-menu-item-v2 {
-  font-weight: 700;
+  font-weight: var(--font-heading-weight);
   padding: 0 0.7em;
   position: relative;
   z-index: 0;
@@ -3160,7 +3160,7 @@ details-disclosure > details {
   border-color: rgba(var(--color-badge-border), var(--alpha-badge-border));
   color: rgb(var(--color-foreground));
   word-break: break-word;
-  font-weight: 700;
+  font-weight: var(--font-body-weight-bold);
   line-height: 1.75em;
   padding: 0 0.5em;
   display: inline-flex;
@@ -3366,6 +3366,7 @@ details-disclosure > details {
   }
 }
 
+html,
 body {
   overflow-x: hidden !important;
 }

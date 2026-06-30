@@ -1,0 +1,503 @@
+{{ 'section-por-que-elegir.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top_mobile }}px;
+    padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+  }
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  #shopify-section-{{ section.id }} {
+    --pqe-vita-bg: {{ section.settings.vita_bg_color }};
+    --pqe-divider: {{ section.settings.divider_color }};
+    --pqe-icon-color: {{ section.settings.icon_color }};
+    --pqe-table-max-w: {{ section.settings.table_max_width }}px;
+  }
+
+  .section-{{ section.id }}-title {
+    font-size: {{ section.settings.title_size_mobile }}px;
+    font-weight: {{ section.settings.title_weight }};
+    color: {{ section.settings.title_color }};
+    text-transform: {{ section.settings.title_transform }};
+  }
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-title {
+      font-size: {{ section.settings.title_size_desktop }}px;
+    }
+  }
+
+  .section-{{ section.id }}-row-text {
+    font-size: {{ section.settings.row_size_mobile }}px;
+    {% if section.settings.row_color != blank %}color: {{ section.settings.row_color }};{% endif %}
+  }
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-row-text {
+      font-size: {{ section.settings.row_size_desktop }}px;
+    }
+  }
+
+  .section-{{ section.id }}-icon {
+    width: {{ section.settings.icon_size_mobile }}px;
+    height: {{ section.settings.icon_size_mobile }}px;
+  }
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-icon {
+      width: {{ section.settings.icon_size_desktop }}px;
+      height: {{ section.settings.icon_size_desktop }}px;
+    }
+  }
+
+  .section-{{ section.id }}-product-img {
+    width: {{ section.settings.product_img_size_mobile }}px;
+    height: {{ section.settings.product_img_size_mobile }}px;
+  }
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-product-img {
+      width: {{ section.settings.product_img_size_desktop }}px;
+      height: {{ section.settings.product_img_size_desktop }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div
+  class="color-{{ section.settings.color_scheme }}"
+  {% if section.settings.bg_color != blank %}style="background-color: {{ section.settings.bg_color }};"{% endif %}
+>
+  <div class="pqe page-width section-{{ section.id }}-padding">
+
+    {%- unless section.settings.title == blank -%}
+      <h2 class="pqe__title section-{{ section.id }}-title">
+        {{ section.settings.title | escape }}
+      </h2>
+    {%- endunless -%}
+
+    {%- if section.blocks.size > 0 -%}
+      <div class="pqe__table-wrapper">
+        <div class="pqe__table">
+
+          <div class="pqe__header">
+            <div class="pqe__header-vita">
+              {%- if section.settings.product_image != blank -%}
+                {%- assign _img_class = 'pqe__product-img section-' | append: section.id | append: '-product-img' -%}
+                {{
+                  section.settings.product_image
+                  | image_url: width: 120
+                  | image_tag:
+                    class: _img_class,
+                    loading: 'lazy',
+                    widths: '56, 80, 112',
+                    alt: shop.name
+                }}
+              {%- endif -%}
+              {%- unless section.settings.vita_label == blank -%}
+                <span class="pqe__col-label">{{ section.settings.vita_label | escape }}</span>
+              {%- endunless -%}
+            </div>
+
+            <div class="pqe__header-otros">
+              {%- unless section.settings.others_label == blank -%}
+                <span class="pqe__col-label">{{ section.settings.others_label | escape }}</span>
+              {%- endunless -%}
+            </div>
+          </div>
+
+          {%- for block in section.blocks -%}
+            <div
+              class="pqe__row{% unless forloop.last %} pqe__row--bordered{% endunless %}"
+              {{ block.shopify_attributes }}
+            >
+              <div class="pqe__row-feature">
+                <p class="section-{{ section.id }}-row-text">{{ block.settings.feature | escape }}</p>
+              </div>
+
+              <div class="pqe__vita-cell{% if forloop.first %} pqe__vita-cell--first{% endif %}{% if forloop.last %} pqe__vita-cell--last{% endif %}">
+                {%- if block.settings.vita_has -%}
+                  <svg class="pqe__icon section-{{ section.id }}-icon" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                    <circle cx="17.5" cy="17.5" r="16" stroke="currentColor" stroke-width="1.5"/>
+                    <polyline points="9,18.5 14.5,24.5 26,12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                {%- else -%}
+                  <svg class="pqe__icon section-{{ section.id }}-icon" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                    <circle cx="17.5" cy="17.5" r="16" stroke="currentColor" stroke-width="1.5"/>
+                    <line x1="11.5" y1="11.5" x2="23.5" y2="23.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="23.5" y1="11.5" x2="11.5" y2="23.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  </svg>
+                {%- endif -%}
+              </div>
+
+              <div class="pqe__otros-cell">
+                {%- if block.settings.others_has -%}
+                  <svg class="pqe__icon section-{{ section.id }}-icon" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                    <circle cx="17.5" cy="17.5" r="16" stroke="currentColor" stroke-width="1.5"/>
+                    <polyline points="9,18.5 14.5,24.5 26,12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                {%- else -%}
+                  <svg class="pqe__icon section-{{ section.id }}-icon" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                    <circle cx="17.5" cy="17.5" r="16" stroke="currentColor" stroke-width="1.5"/>
+                    <line x1="11.5" y1="11.5" x2="23.5" y2="23.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="23.5" y1="11.5" x2="11.5" y2="23.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  </svg>
+                {%- endif -%}
+              </div>
+            </div>
+          {%- endfor -%}
+
+        </div>
+      </div>
+    {%- endif -%}
+
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "¿Por qué elegir?",
+  "class": "section",
+  "tag": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Título"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "default": "¿POR QUÉ ELEGIR Vita Cosmetics Base Corporal y Facial?",
+      "label": "Título"
+    },
+    {
+      "type": "select",
+      "id": "title_transform",
+      "label": "Transformación de texto",
+      "options": [
+        { "value": "uppercase", "label": "MAYÚSCULAS" },
+        { "value": "capitalize", "label": "Primera en mayúscula" },
+        { "value": "none", "label": "Sin cambios" }
+      ],
+      "default": "uppercase"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Color del título",
+      "default": "#000000"
+    },
+    {
+      "type": "select",
+      "id": "title_weight",
+      "label": "Peso de fuente",
+      "options": [
+        { "value": "300", "label": "Light" },
+        { "value": "400", "label": "Regular" },
+        { "value": "500", "label": "Medium" },
+        { "value": "600", "label": "Semibold" },
+        { "value": "700", "label": "Bold" },
+        { "value": "800", "label": "Extrabold" }
+      ],
+      "default": "600"
+    },
+    {
+      "type": "range",
+      "id": "title_size_desktop",
+      "min": 16,
+      "max": 72,
+      "step": 1,
+      "unit": "px",
+      "label": "Tamaño título escritorio",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "title_size_mobile",
+      "min": 14,
+      "max": 48,
+      "step": 1,
+      "unit": "px",
+      "label": "Tamaño título móvil",
+      "default": 24
+    },
+    {
+      "type": "header",
+      "content": "Encabezado de tabla"
+    },
+    {
+      "type": "image_picker",
+      "id": "product_image",
+      "label": "Imagen de producto (columna Vita)"
+    },
+    {
+      "type": "range",
+      "id": "product_img_size_desktop",
+      "min": 30,
+      "max": 80,
+      "step": 2,
+      "unit": "px",
+      "label": "Tamaño imagen escritorio",
+      "default": 56
+    },
+    {
+      "type": "range",
+      "id": "product_img_size_mobile",
+      "min": 24,
+      "max": 64,
+      "step": 2,
+      "unit": "px",
+      "label": "Tamaño imagen móvil",
+      "default": 44
+    },
+    {
+      "type": "text",
+      "id": "vita_label",
+      "label": "Etiqueta columna Vita",
+      "info": "Texto opcional debajo de la imagen del producto"
+    },
+    {
+      "type": "text",
+      "id": "others_label",
+      "default": "Otros",
+      "label": "Etiqueta columna Otros"
+    },
+    {
+      "type": "header",
+      "content": "Tabla de comparación"
+    },
+    {
+      "type": "range",
+      "id": "table_max_width",
+      "min": 300,
+      "max": 700,
+      "step": 10,
+      "unit": "px",
+      "label": "Ancho máximo de la tabla",
+      "default": 500
+    },
+    {
+      "type": "color",
+      "id": "vita_bg_color",
+      "label": "Color de fondo columna Vita",
+      "default": "#f1e9e3"
+    },
+    {
+      "type": "color",
+      "id": "divider_color",
+      "label": "Color de separador de filas",
+      "default": "#444444"
+    },
+    {
+      "type": "color",
+      "id": "icon_color",
+      "label": "Color de íconos",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "range",
+      "id": "icon_size_desktop",
+      "min": 20,
+      "max": 50,
+      "step": 1,
+      "unit": "px",
+      "label": "Tamaño íconos escritorio",
+      "default": 35
+    },
+    {
+      "type": "range",
+      "id": "icon_size_mobile",
+      "min": 16,
+      "max": 40,
+      "step": 1,
+      "unit": "px",
+      "label": "Tamaño íconos móvil",
+      "default": 28
+    },
+    {
+      "type": "header",
+      "content": "Texto de filas"
+    },
+    {
+      "type": "color",
+      "id": "row_color",
+      "label": "Color de texto de filas"
+    },
+    {
+      "type": "range",
+      "id": "row_size_desktop",
+      "min": 10,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Tamaño texto filas escritorio",
+      "default": 13
+    },
+    {
+      "type": "range",
+      "id": "row_size_mobile",
+      "min": 10,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Tamaño texto filas móvil",
+      "default": 12
+    },
+    {
+      "type": "header",
+      "content": "Colores de sección"
+    },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "options": [
+        { "value": "accent-1", "label": "t:sections.all.colors.accent_1.label" },
+        { "value": "accent-2", "label": "t:sections.all.colors.accent_2.label" },
+        { "value": "background-1", "label": "t:sections.all.colors.background_1.label" },
+        { "value": "background-2", "label": "t:sections.all.colors.background_2.label" },
+        { "value": "inverse", "label": "t:sections.all.colors.inverse.label" }
+      ],
+      "default": "background-1",
+      "label": "Esquema de color"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Color de fondo personalizado",
+      "info": "Sobrescribe el esquema de color de sección"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading_desktop"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 40
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading_mobile"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top_mobile",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom_mobile",
+      "default": 20
+    }
+  ],
+  "blocks": [
+    {
+      "type": "row",
+      "name": "Fila de comparación",
+      "settings": [
+        {
+          "type": "text",
+          "id": "feature",
+          "default": "Característica del producto",
+          "label": "Texto de característica"
+        },
+        {
+          "type": "checkbox",
+          "id": "vita_has",
+          "default": true,
+          "label": "Vita Cosmetics tiene esta característica"
+        },
+        {
+          "type": "checkbox",
+          "id": "others_has",
+          "default": false,
+          "label": "Otros tienen esta característica"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "¿Por qué elegir?",
+      "blocks": [
+        {
+          "type": "row",
+          "settings": {
+            "feature": "Cobertura extrema desde la primera aplicación",
+            "vita_has": true,
+            "others_has": false
+          }
+        },
+        {
+          "type": "row",
+          "settings": {
+            "feature": "Unifica el tono de la piel",
+            "vita_has": true,
+            "others_has": false
+          }
+        },
+        {
+          "type": "row",
+          "settings": {
+            "feature": "Cubre vitiligo, cicatrices y tatuajes",
+            "vita_has": true,
+            "others_has": false
+          }
+        },
+        {
+          "type": "row",
+          "settings": {
+            "feature": "No marca líneas de expresión",
+            "vita_has": true,
+            "others_has": false
+          }
+        },
+        {
+          "type": "row",
+          "settings": {
+            "feature": "Resistente al agua y al roce",
+            "vita_has": true,
+            "others_has": false
+          }
+        },
+        {
+          "type": "row",
+          "settings": {
+            "feature": "Larga duración durante todo el día",
+            "vita_has": true,
+            "others_has": false
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

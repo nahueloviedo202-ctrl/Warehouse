@@ -1,0 +1,489 @@
+{{ 'section-product-highlight.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top_mobile }}px;
+    padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+  }
+
+  #shopify-section-{{ section.id }} .product-highlight__image-wrap {
+    border-radius: {{ section.settings.border_radius_mobile }}px {{ section.settings.border_radius_mobile }}px 0 0;
+  }
+
+  #shopify-section-{{ section.id }} .product-highlight__content {
+    background-color: {{ section.settings.content_bg_color }};
+    border-radius: 0 0 {{ section.settings.border_radius_mobile }}px {{ section.settings.border_radius_mobile }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+    #shopify-section-{{ section.id }} .product-highlight__card:not(.product-highlight__card--reversed) .product-highlight__image-wrap {
+      border-radius: {{ section.settings.border_radius }}px 0 0 {{ section.settings.border_radius }}px;
+    }
+    #shopify-section-{{ section.id }} .product-highlight__card:not(.product-highlight__card--reversed) .product-highlight__content {
+      border-radius: 0 {{ section.settings.border_radius }}px {{ section.settings.border_radius }}px 0;
+    }
+    #shopify-section-{{ section.id }} .product-highlight__card--reversed .product-highlight__image-wrap {
+      border-radius: 0 {{ section.settings.border_radius }}px {{ section.settings.border_radius }}px 0;
+    }
+    #shopify-section-{{ section.id }} .product-highlight__card--reversed .product-highlight__content {
+      border-radius: {{ section.settings.border_radius }}px 0 0 {{ section.settings.border_radius }}px;
+    }
+  }
+{%- endstyle -%}
+
+{%- assign bullet_blocks = section.blocks | where: 'type', 'bullet' -%}
+{%- assign has_rendered_bullets = false -%}
+
+<div class="color-{{ section.settings.color_scheme }} gradient">
+  <div class="product-highlight section-{{ section.id }}-padding page-width">
+    <div class="product-highlight__card{% if section.settings.layout == 'text_first' %} product-highlight__card--reversed{% endif %}">
+
+      <div class="product-highlight__image-wrap">
+        {%- if section.settings.image != blank -%}
+          {%- capture sizes -%}(min-width: 750px) 50vw, 100vw{%- endcapture -%}
+          {{
+            section.settings.image
+            | image_url: width: 1400
+            | image_tag:
+              class: 'product-highlight__image',
+              loading: 'lazy',
+              sizes: sizes,
+              widths: '375, 550, 750, 900, 1100, 1400'
+          }}
+        {%- else -%}
+          <div class="product-highlight__image-placeholder">
+            {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+          </div>
+        {%- endif -%}
+      </div>
+
+      <div class="product-highlight__content">
+        <div class="product-highlight__content-inner">
+
+          {%- for block in section.blocks -%}
+            {%- case block.type -%}
+
+              {%- when 'heading' -%}
+                {%- style -%}
+                  .block-{{ block.id }}-heading {
+                    font-size: {{ block.settings.font_size_mobile }}px;
+                    {% if block.settings.color != blank %}color: {{ block.settings.color }};{% endif %}
+                  }
+                  @media screen and (min-width: 750px) {
+                    .block-{{ block.id }}-heading { font-size: {{ block.settings.font_size_desktop }}px; }
+                  }
+                {%- endstyle -%}
+                <h2 class="product-highlight__heading block-{{ block.id }}-heading" {{ block.shopify_attributes }}>
+                  {%- if block.settings.heading_italic != blank -%}<em>{{ block.settings.heading_italic | escape }}</em>{%- endif -%}
+                  {%- if block.settings.heading_normal != blank -%}{{ ' ' }}<span>{{ block.settings.heading_normal | escape }}</span>{%- endif -%}
+                </h2>
+
+              {%- when 'text' -%}
+                {%- style -%}
+                  .block-{{ block.id }}-text {
+                    font-size: {{ block.settings.font_size_mobile }}px;
+                    {% if block.settings.color != blank %}color: {{ block.settings.color }};{% endif %}
+                    {% if block.settings.font_weight != blank %}font-weight: {{ block.settings.font_weight }};{% endif %}
+                  }
+                  @media screen and (min-width: 750px) {
+                    .block-{{ block.id }}-text { font-size: {{ block.settings.font_size_desktop }}px; }
+                  }
+                {%- endstyle -%}
+                <div class="product-highlight__desc rte block-{{ block.id }}-text" {{ block.shopify_attributes }}>
+                  {{ block.settings.text }}
+                </div>
+
+              {%- when 'bullet' -%}
+                {%- unless has_rendered_bullets -%}
+                  {%- assign has_rendered_bullets = true -%}
+                  <ul class="product-highlight__bullets list-unstyled" role="list">
+                    {%- for bullet in bullet_blocks -%}
+                      {%- style -%}
+                        .block-{{ bullet.id }}-bullet {
+                          font-size: {{ bullet.settings.font_size_mobile }}px;
+                          {% if bullet.settings.color != blank %}color: {{ bullet.settings.color }};{% endif %}
+                          {% if bullet.settings.font_weight != blank %}font-weight: {{ bullet.settings.font_weight }};{% endif %}
+                        }
+                        @media screen and (min-width: 750px) {
+                          .block-{{ bullet.id }}-bullet { font-size: {{ bullet.settings.font_size_desktop }}px; }
+                        }
+                      {%- endstyle -%}
+                      <li class="product-highlight__bullet block-{{ bullet.id }}-bullet" {{ bullet.shopify_attributes }}>
+                        {%- if bullet.settings.bullet_icon != blank -%}
+                          <span class="product-highlight__bullet-icon" aria-hidden="true">{{ bullet.settings.bullet_icon }}</span>
+                        {%- endif -%}
+                        <span>{{ bullet.settings.text | escape }}</span>
+                      </li>
+                    {%- endfor -%}
+                  </ul>
+                {%- endunless -%}
+
+              {%- when 'button' -%}
+                {%- if block.settings.button_label != blank -%}
+                  <div class="product-highlight__button-wrap" {{ block.shopify_attributes }}>
+                    <a
+                      {% if block.settings.button_link != blank %}href="{{ block.settings.button_link }}"{% else %}role="link" aria-disabled="true"{% endif %}
+                      class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
+                    >
+                      {{ block.settings.button_label | escape }}
+                    </a>
+                  </div>
+                {%- endif -%}
+
+            {%- endcase -%}
+          {%- endfor -%}
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Producto destacado",
+  "class": "section",
+  "tag": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Imagen"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Imagen del producto"
+    },
+    {
+      "type": "header",
+      "content": "Diseño"
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "Posición de la imagen",
+      "options": [
+        { "value": "image_first", "label": "Imagen a la izquierda" },
+        { "value": "text_first", "label": "Imagen a la derecha" }
+      ],
+      "default": "image_first"
+    },
+    {
+      "type": "color",
+      "id": "content_bg_color",
+      "label": "Color de fondo del contenido",
+      "default": "#f1e9e3"
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "min": 0,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Radio de esquinas (escritorio)",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "border_radius_mobile",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Radio de esquinas (móvil)",
+      "default": 20
+    },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "options": [
+        { "value": "accent-1", "label": "t:sections.all.colors.accent_1.label" },
+        { "value": "accent-2", "label": "t:sections.all.colors.accent_2.label" },
+        { "value": "background-1", "label": "t:sections.all.colors.background_1.label" },
+        { "value": "background-2", "label": "t:sections.all.colors.background_2.label" },
+        { "value": "inverse", "label": "t:sections.all.colors.inverse.label" }
+      ],
+      "default": "background-1",
+      "label": "Esquema de color de la sección"
+    },
+    {
+      "type": "header",
+      "content": "Espaciado — Escritorio"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Espaciado superior",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Espaciado inferior",
+      "default": 40
+    },
+    {
+      "type": "header",
+      "content": "Espaciado — Móvil"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Espaciado superior",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Espaciado inferior",
+      "default": 28
+    }
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "name": "Encabezado",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading_italic",
+          "default": "Siéntete segura",
+          "label": "Texto en cursiva (subrayado)"
+        },
+        {
+          "type": "text",
+          "id": "heading_normal",
+          "default": "en tu propia piel",
+          "label": "Texto normal"
+        },
+        {
+          "type": "color",
+          "id": "color",
+          "label": "Color del encabezado"
+        },
+        {
+          "type": "range",
+          "id": "font_size_desktop",
+          "min": 16,
+          "max": 72,
+          "step": 1,
+          "unit": "px",
+          "label": "Tamaño escritorio (px)",
+          "default": 32
+        },
+        {
+          "type": "range",
+          "id": "font_size_mobile",
+          "min": 14,
+          "max": 52,
+          "step": 1,
+          "unit": "px",
+          "label": "Tamaño móvil (px)",
+          "default": 20
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "Descripción",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "text",
+          "default": "<p>\"La Base Vita Cosmetics ofrece alta cobertura para disimular manchas, ojeras, acné, vitíligo, tatuajes y otras imperfecciones, con un acabado mate natural para rostro y cuerpo.\"</p>",
+          "label": "Texto"
+        },
+        {
+          "type": "color",
+          "id": "color",
+          "label": "Color",
+          "default": "#434343"
+        },
+        {
+          "type": "select",
+          "id": "font_weight",
+          "label": "Peso de fuente",
+          "options": [
+            { "value": "300", "label": "Light" },
+            { "value": "400", "label": "Regular" },
+            { "value": "500", "label": "Medium" },
+            { "value": "600", "label": "Semibold" },
+            { "value": "700", "label": "Bold" }
+          ],
+          "default": "400"
+        },
+        {
+          "type": "range",
+          "id": "font_size_desktop",
+          "min": 12,
+          "max": 32,
+          "step": 1,
+          "unit": "px",
+          "label": "Tamaño escritorio (px)",
+          "default": 16
+        },
+        {
+          "type": "range",
+          "id": "font_size_mobile",
+          "min": 12,
+          "max": 28,
+          "step": 1,
+          "unit": "px",
+          "label": "Tamaño móvil (px)",
+          "default": 14
+        }
+      ]
+    },
+    {
+      "type": "bullet",
+      "name": "Punto de beneficio",
+      "settings": [
+        {
+          "type": "text",
+          "id": "bullet_icon",
+          "default": "✓",
+          "label": "Ícono o prefijo"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "default": "Beneficio del producto.",
+          "label": "Texto"
+        },
+        {
+          "type": "color",
+          "id": "color",
+          "label": "Color",
+          "default": "#434343"
+        },
+        {
+          "type": "select",
+          "id": "font_weight",
+          "label": "Peso de fuente",
+          "options": [
+            { "value": "300", "label": "Light" },
+            { "value": "400", "label": "Regular" },
+            { "value": "500", "label": "Medium" },
+            { "value": "600", "label": "Semibold" },
+            { "value": "700", "label": "Bold" }
+          ],
+          "default": "400"
+        },
+        {
+          "type": "range",
+          "id": "font_size_desktop",
+          "min": 12,
+          "max": 32,
+          "step": 1,
+          "unit": "px",
+          "label": "Tamaño escritorio (px)",
+          "default": 16
+        },
+        {
+          "type": "range",
+          "id": "font_size_mobile",
+          "min": 12,
+          "max": 28,
+          "step": 1,
+          "unit": "px",
+          "label": "Tamaño móvil (px)",
+          "default": 15
+        }
+      ]
+    },
+    {
+      "type": "button",
+      "name": "Botón",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "button_label",
+          "default": "Comprar ahora",
+          "label": "Texto del botón",
+          "info": "Dejar vacío para ocultar el botón."
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Enlace del botón"
+        },
+        {
+          "type": "checkbox",
+          "id": "button_style_secondary",
+          "default": false,
+          "label": "Estilo secundario (contorno)"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Producto destacado",
+      "blocks": [
+        {
+          "type": "heading",
+          "settings": {
+            "heading_italic": "Siéntete segura",
+            "heading_normal": "en tu propia piel"
+          }
+        },
+        {
+          "type": "text",
+          "settings": {
+            "text": "<p>\"La Base Vita Cosmetics ofrece alta cobertura para disimular manchas, ojeras, acné, vitíligo, tatuajes y otras imperfecciones, con un acabado mate natural para rostro y cuerpo.\"</p>"
+          }
+        },
+        {
+          "type": "bullet",
+          "settings": {
+            "bullet_icon": "✓",
+            "text": "Alta cobertura profesional."
+          }
+        },
+        {
+          "type": "bullet",
+          "settings": {
+            "bullet_icon": "✓",
+            "text": "Acabado mate de aspecto natural."
+          }
+        },
+        {
+          "type": "bullet",
+          "settings": {
+            "bullet_icon": "✓",
+            "text": "Fórmula para rostro y cuerpo."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
