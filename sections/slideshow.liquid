@@ -26,6 +26,25 @@
   {%- endstyle -%}
 {%- endif -%}
 
+<style>
+  #shopify-section-{{ section.id }} {
+    padding-top: {{ section.settings.padding_top_mobile }}px;
+    padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+  }
+  #Slider-{{ section.id }} .slideshow__media {
+    border-radius: {{ section.settings.image_border_radius_mobile }}px;
+  }
+  @media screen and (min-width: 750px) {
+    #shopify-section-{{ section.id }} {
+      padding-top: {{ section.settings.padding_top_desktop }}px;
+      padding-bottom: {{ section.settings.padding_bottom_desktop }}px;
+    }
+    #Slider-{{ section.id }} .slideshow__media {
+      border-radius: {{ section.settings.image_border_radius_desktop }}px;
+    }
+  }
+</style>
+
 <slideshow-component class="slider-mobile-gutter{% if section.settings.layout == 'grid' %} page-width{% endif %}{% if section.settings.show_text_below %} mobile-text-below{% endif %}" role="region" aria-roledescription="{{ 'sections.slideshow.carousel' | t }}" aria-label="{{ section.settings.accessibility_info | escape }}">
   {%- if section.settings.auto_rotate and section.blocks.size > 1 -%}
     <div class="slideshow__controls slideshow__controls--top slider-buttons no-js-hidden{% if section.settings.show_text_below %} slideshow__controls--border-radius-mobile{% endif %}">
@@ -80,6 +99,12 @@
         #Slide-{{ section.id }}-{{ forloop.index }} .banner__media::after {
           opacity: {{ block.settings.image_overlay_opacity | divided_by: 100.0 }};
         }
+        .block-{{ block.id }}-heading { font-size: {{ block.settings.heading_font_size_mobile }}px; }
+        .block-{{ block.id }}-subheading { font-size: {{ block.settings.subheading_font_size_mobile }}px; }
+        @media screen and (min-width: 750px) {
+          .block-{{ block.id }}-heading { font-size: {{ block.settings.heading_font_size_desktop }}px; }
+          .block-{{ block.id }}-subheading { font-size: {{ block.settings.subheading_font_size_desktop }}px; }
+        }
       </style>
       <div class="slideshow__slide grid__item grid--1-col slider__slide"
         id="Slide-{{ section.id }}-{{ forloop.index }}"
@@ -105,11 +130,11 @@
         <div class="slideshow__text-wrapper banner__content banner__content--{{ block.settings.box_align }} page-width{% if block.settings.show_text_box == false %} banner--desktop-transparent{% endif %}">
           <div class="slideshow__text banner__box content-container content-container--full-width-mobile color-{{ block.settings.color_scheme }} gradient slideshow__text--{{ block.settings.text_alignment }} slideshow__text-mobile--{{ block.settings.text_alignment_mobile }}">
             {%- if block.settings.heading != blank -%}
-              <h2 class="banner__heading {{ block.settings.heading_size }}">{{ block.settings.heading | escape }}</h2>
+              <h2 class="banner__heading {{ block.settings.heading_size }} block-{{ block.id }}-heading" style="{% if block.settings.heading_color != blank %}color: {{ block.settings.heading_color }};{% endif %}{% if block.settings.heading_font_weight != blank %}font-weight: {{ block.settings.heading_font_weight }};{% endif %}">{{ block.settings.heading | escape }}</h2>
             {%- endif -%}
             {%- if block.settings.subheading != blank -%}
               <div class="banner__text" {{ block.shopify_attributes }}>
-                <span>{{ block.settings.subheading | escape }}</span>
+                <span class="block-{{ block.id }}-subheading" style="{% if block.settings.subheading_color != blank %}color: {{ block.settings.subheading_color }};{% endif %}{% if block.settings.subheading_font_weight != blank %}font-weight: {{ block.settings.subheading_font_weight }};{% endif %}">{{ block.settings.subheading | escape }}</span>
               </div>
             {%- endif -%}
             {%- if block.settings.button_label != blank -%}
@@ -274,6 +299,78 @@
       "label": "t:sections.slideshow.settings.accessibility.label",
       "info": "t:sections.slideshow.settings.accessibility.info",
       "default": "Slideshow about our brand"
+    },
+    {
+      "type": "header",
+      "content": "Imagen — Radio de borde"
+    },
+    {
+      "type": "range",
+      "id": "image_border_radius_desktop",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "unit": "px",
+      "label": "Radio de borde escritorio",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "image_border_radius_mobile",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "unit": "px",
+      "label": "Radio de borde móvil",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Espaciado — Escritorio"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_desktop",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding superior escritorio",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_desktop",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding inferior escritorio",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Espaciado — Móvil"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding superior móvil",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding inferior móvil",
+      "default": 0
     }
   ],
   "blocks": [
@@ -470,6 +567,92 @@
           ],
           "default": "center",
           "label": "t:sections.slideshow.blocks.slide.settings.text_alignment_mobile.label"
+        },
+        {
+          "type": "header",
+          "content": "Tipografía — Encabezado"
+        },
+        {
+          "type": "color",
+          "id": "heading_color",
+          "label": "Color"
+        },
+        {
+          "type": "range",
+          "id": "heading_font_size_desktop",
+          "min": 10,
+          "max": 64,
+          "step": 1,
+          "unit": "px",
+          "label": "Tamaño escritorio (px)",
+          "default": 36
+        },
+        {
+          "type": "range",
+          "id": "heading_font_size_mobile",
+          "min": 10,
+          "max": 60,
+          "step": 1,
+          "unit": "px",
+          "label": "Tamaño móvil (px)",
+          "default": 26
+        },
+        {
+          "type": "select",
+          "id": "heading_font_weight",
+          "label": "Peso",
+          "options": [
+            { "value": "300", "label": "Light" },
+            { "value": "400", "label": "Regular" },
+            { "value": "500", "label": "Medium" },
+            { "value": "600", "label": "Semibold" },
+            { "value": "700", "label": "Bold" },
+            { "value": "800", "label": "Extrabold" }
+          ],
+          "default": "700"
+        },
+        {
+          "type": "header",
+          "content": "Tipografía — Subtítulo"
+        },
+        {
+          "type": "color",
+          "id": "subheading_color",
+          "label": "Color"
+        },
+        {
+          "type": "range",
+          "id": "subheading_font_size_desktop",
+          "min": 10,
+          "max": 64,
+          "step": 1,
+          "unit": "px",
+          "label": "Tamaño escritorio (px)",
+          "default": 18
+        },
+        {
+          "type": "range",
+          "id": "subheading_font_size_mobile",
+          "min": 10,
+          "max": 60,
+          "step": 1,
+          "unit": "px",
+          "label": "Tamaño móvil (px)",
+          "default": 15
+        },
+        {
+          "type": "select",
+          "id": "subheading_font_weight",
+          "label": "Peso",
+          "options": [
+            { "value": "300", "label": "Light" },
+            { "value": "400", "label": "Regular" },
+            { "value": "500", "label": "Medium" },
+            { "value": "600", "label": "Semibold" },
+            { "value": "700", "label": "Bold" },
+            { "value": "800", "label": "Extrabold" }
+          ],
+          "default": "400"
         }
       ]
     }

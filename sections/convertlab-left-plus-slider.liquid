@@ -33,15 +33,17 @@
     --clps-left-width:  {{ section.settings.left_image_width_mobile }}px;
     --clps-card-width:  {{ section.settings.card_width_mobile }}px;
     --clps-card-gap:    {{ section.settings.card_gap }}px;
+    --clps-product-gap: {{ section.settings.product_card_gap_mobile }}px;
     --clps-image-radius:{{ section.settings.card_radius }}px;
     --clps-header-mb:   {{ section.settings.header_mb_mobile }}px;
   }
 
   @media screen and (min-width: 750px) {
     #shopify-section-{{ section.id }} {
-      --clps-left-width: {{ section.settings.left_image_width_tablet }}px;
-      --clps-card-width: {{ section.settings.card_width_tablet }}px;
-      --clps-header-mb:  {{ section.settings.header_mb }}px;
+      --clps-left-width:  {{ section.settings.left_image_width_tablet }}px;
+      --clps-card-width:  {{ section.settings.card_width_tablet }}px;
+      --clps-product-gap: {{ section.settings.product_card_gap_desktop }}px;
+      --clps-header-mb:   {{ section.settings.header_mb }}px;
     }
   }
 
@@ -135,12 +137,7 @@
 
       {%- comment -%} ── Left image ── {%- endcomment -%}
       {%- if section.settings.left_image != blank -%}
-        {%- assign left_mobile_class = '' -%}
-        {%- unless section.settings.show_left_image_mobile -%}
-          {%- assign left_mobile_class = 'clps-left-image--hidden-mobile' -%}
-        {%- endunless -%}
-
-        <div class="clps-left-image {{ left_mobile_class }}">
+        <div class="clps-left-image">
           {%- liquid
             assign left_img_sizes = '(min-width: 990px) '
             assign left_img_sizes = left_img_sizes | append: section.settings.left_image_width_desktop
@@ -502,8 +499,28 @@
       "max": 40,
       "step": 4,
       "unit": "px",
-      "label": "Espacio entre tarjetas y entre imagen y slider",
+      "label": "Espacio entre imagen y slider",
       "default": 16
+    },
+    {
+      "type": "range",
+      "id": "product_card_gap_desktop",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Espacio entre tarjetas de producto (escritorio/tablet)",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "product_card_gap_mobile",
+      "min": 0,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "label": "Espacio entre tarjetas de producto (móvil)",
+      "default": 10
     },
     {
       "type": "range",

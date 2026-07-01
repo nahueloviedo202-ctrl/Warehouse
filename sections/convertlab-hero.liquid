@@ -1,14 +1,25 @@
 {{ 'section-image-banner.css' | asset_url | stylesheet_tag }}
 {{ 'component-slider.css' | asset_url | stylesheet_tag }}
 {{ 'component-slideshow.css' | asset_url | stylesheet_tag }}
+{{ 'component-hero-bubbles.css' | asset_url | stylesheet_tag }}
 
-{%- if section.settings.slide_height == 'adapt_image' and section.blocks.first.settings.image != blank -%}
+{%- assign slide_blocks = section.blocks | where: 'type', 'slide' -%}
+{%- assign bubble_blocks = section.blocks | where: 'type', 'bubble' -%}
+
+{%- comment -%} Espacio reservado para que el texto del slide nunca se superponga con la franja de burbujas {%- endcomment -%}
+{%- assign bubble_label_line_mobile = section.settings.bubbles_label_font_size_mobile | times: 1.3 | round -%}
+{%- assign bubble_zone_mobile = section.settings.bubbles_diameter_mobile | plus: bubble_label_line_mobile | plus: 10 | plus: section.settings.bubbles_padding_top_mobile | plus: section.settings.bubbles_padding_bottom_mobile -%}
+{%- assign bubble_label_line_desktop = section.settings.bubbles_label_font_size_desktop | times: 1.3 | round -%}
+{%- assign bubble_zone_desktop = section.settings.bubbles_diameter_desktop | plus: bubble_label_line_desktop | plus: 10 | plus: section.settings.bubbles_padding_top_desktop | plus: section.settings.bubbles_padding_bottom_desktop -%}
+
+{%- if section.settings.slide_height == 'adapt_image' and slide_blocks.first.settings.image != blank -%}
+  {%- assign mobile_aspect_image = slide_blocks.first.settings.image_mobile | default: slide_blocks.first.settings.image -%}
   {%- style -%}
     @media screen and (max-width: 749px) {
       #Slider-{{ section.id }}::before,
       #Slider-{{ section.id }} .media::before,
       #Slider-{{ section.id }}:not(.banner--mobile-bottom) .banner__content::before {
-        padding-bottom: {{ 1 | divided_by: section.blocks.first.settings.image.aspect_ratio | times: 100 }}%;
+        padding-bottom: {{ 1 | divided_by: mobile_aspect_image.aspect_ratio | times: 100 }}%;
         content: '';
         display: block;
       }
@@ -16,7 +27,7 @@
     @media screen and (min-width: 750px) {
       #Slider-{{ section.id }}::before,
       #Slider-{{ section.id }} .media::before {
-        padding-bottom: {{ 1 | divided_by: section.blocks.first.settings.image.aspect_ratio | times: 100 }}%;
+        padding-bottom: {{ 1 | divided_by: slide_blocks.first.settings.image.aspect_ratio | times: 100 }}%;
         content: '';
         display: block;
       }
@@ -24,13 +35,109 @@
   {%- endstyle -%}
 {%- endif -%}
 
+<style>
+  #shopify-section-{{ section.id }} {
+    padding-top: {{ section.settings.padding_top_mobile }}px;
+    padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+  }
+  #Slider-{{ section.id }} .slideshow__media {
+    border-radius: {{ section.settings.image_border_radius_mobile }}px;
+  }
+  {%- if bubble_blocks.size > 0 -%}
+    #Slider-{{ section.id }} .slideshow__text-wrapper {
+      {% if section.settings.bubbles_position == 'top' %}
+        padding-top: {{ bubble_zone_mobile }}px;
+      {% else %}
+        padding-bottom: {{ bubble_zone_mobile }}px;
+      {% endif %}
+    }
+  {%- endif -%}
+  @media screen and (max-width: 749px) {
+    #Slider-{{ section.id }} .banner__content.banner__content-mobile--top-left {
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+    #Slider-{{ section.id }} .banner__content.banner__content-mobile--top-center {
+      align-items: flex-start;
+      justify-content: center;
+    }
+    #Slider-{{ section.id }} .banner__content.banner__content-mobile--top-right {
+      align-items: flex-start;
+      justify-content: flex-end;
+    }
+    #Slider-{{ section.id }} .banner__content.banner__content-mobile--middle-left {
+      align-items: center;
+      justify-content: flex-start;
+    }
+    #Slider-{{ section.id }} .banner__content.banner__content-mobile--middle-center {
+      align-items: center;
+      justify-content: center;
+    }
+    #Slider-{{ section.id }} .banner__content.banner__content-mobile--middle-right {
+      align-items: center;
+      justify-content: flex-end;
+    }
+    #Slider-{{ section.id }} .banner__content.banner__content-mobile--bottom-left {
+      align-items: flex-end;
+      justify-content: flex-start;
+    }
+    #Slider-{{ section.id }} .banner__content.banner__content-mobile--bottom-center {
+      align-items: flex-end;
+      justify-content: center;
+    }
+    #Slider-{{ section.id }} .banner__content.banner__content-mobile--bottom-right {
+      align-items: flex-end;
+      justify-content: flex-end;
+    }
+  }
+  @media screen and (min-width: 750px) {
+    #shopify-section-{{ section.id }} {
+      padding-top: {{ section.settings.padding_top_desktop }}px;
+      padding-bottom: {{ section.settings.padding_bottom_desktop }}px;
+    }
+    #Slider-{{ section.id }} .slideshow__media {
+      border-radius: {{ section.settings.image_border_radius_desktop }}px;
+    }
+    {%- if section.settings.layout == 'full_bleed' -%}
+      #Slider-{{ section.id }} .slideshow__text-wrapper.page-width {
+        max-width: none;
+      }
+    {%- endif -%}
+    {%- if bubble_blocks.size > 0 -%}
+      #Slider-{{ section.id }} .slideshow__text-wrapper {
+        {% if section.settings.bubbles_position == 'top' %}
+          padding-top: {{ bubble_zone_desktop }}px;
+        {% else %}
+          padding-bottom: {{ bubble_zone_desktop }}px;
+        {% endif %}
+      }
+    {%- endif -%}
+  }
+  #Hero-Bubbles-{{ section.id }} {
+    --hero-bubbles-diameter-mobile: {{ section.settings.bubbles_diameter_mobile }}px;
+    --hero-bubbles-diameter-desktop: {{ section.settings.bubbles_diameter_desktop }}px;
+    --hero-bubbles-gap-mobile: {{ section.settings.bubbles_gap_mobile }}px;
+    --hero-bubbles-gap-desktop: {{ section.settings.bubbles_gap_desktop }}px;
+    --hero-bubbles-border-width: {{ section.settings.bubbles_border_width }}px;
+    --hero-bubbles-border-color: {{ section.settings.bubbles_border_color }};
+    --hero-bubbles-label-color: {{ section.settings.bubbles_label_color }};
+    --hero-bubbles-label-size-mobile: {{ section.settings.bubbles_label_font_size_mobile }}px;
+    --hero-bubbles-label-size-desktop: {{ section.settings.bubbles_label_font_size_desktop }}px;
+    --hero-bubbles-padding-top-mobile: {{ section.settings.bubbles_padding_top_mobile }}px;
+    --hero-bubbles-padding-bottom-mobile: {{ section.settings.bubbles_padding_bottom_mobile }}px;
+    --hero-bubbles-padding-top-desktop: {{ section.settings.bubbles_padding_top_desktop }}px;
+    --hero-bubbles-padding-bottom-desktop: {{ section.settings.bubbles_padding_bottom_desktop }}px;
+    background: {{ section.settings.bubbles_background }};
+  }
+</style>
+
 <slideshow-component
   class="slider-mobile-gutter{% if section.settings.layout == 'grid' %} page-width{% endif %}{% if section.settings.show_text_below %} mobile-text-below{% endif %}"
   role="region"
   aria-roledescription="{{ 'sections.slideshow.carousel' | t }}"
   aria-label="{{ section.settings.accessibility_info | escape }}"
 >
-  {%- if section.settings.auto_rotate and section.blocks.size > 1 -%}
+  {%- if section.settings.auto_rotate and slide_blocks.size > 1 -%}
     <div class="slideshow__controls slideshow__controls--top slider-buttons no-js-hidden{% if section.settings.show_text_below %} slideshow__controls--border-radius-mobile{% endif %}">
       <button
         type="button"
@@ -47,10 +154,10 @@
           <span class="slider-counter--current">1</span>
           <span aria-hidden="true"> / </span>
           <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
-          <span class="slider-counter--total">{{ section.blocks.size }}</span>
+          <span class="slider-counter--total">{{ slide_blocks.size }}</span>
         {%- else -%}
           <div class="slideshow__control-wrapper">
-            {%- for block in section.blocks -%}
+            {%- for block in slide_blocks -%}
               <button
                 class="slider-counter__link slider-counter__link--{{ section.settings.slider_visual }} link"
                 aria-label="{{ 'sections.slideshow.load_slide' | t }} {{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
@@ -90,7 +197,7 @@
     <noscript>
       <div class="slider-buttons">
         <div class="slider-counter">
-          {%- for block in section.blocks -%}
+          {%- for block in slide_blocks -%}
             <a
               href="#Slide-{{ section.id }}-{{ forloop.index }}"
               class="slider-counter__link link"
@@ -103,14 +210,14 @@
   {%- endif -%}
 
   <div
-    class="slideshow banner banner--{{ section.settings.slide_height }} grid grid--1-col slider slider--everywhere{% if section.settings.show_text_below %} banner--mobile-bottom{% endif %}{% if section.blocks.first.settings.image == blank %} slideshow--placeholder{% endif %}"
+    class="slideshow banner banner--{{ section.settings.slide_height }} grid grid--1-col slider slider--everywhere{% if section.settings.show_text_below %} banner--mobile-bottom{% endif %}{% if slide_blocks.first.settings.image == blank %} slideshow--placeholder{% endif %}"
     id="Slider-{{ section.id }}"
     aria-live="polite"
     aria-atomic="true"
     data-autoplay="{{ section.settings.auto_rotate }}"
     data-speed="{{ section.settings.change_slides_speed }}"
   >
-    {%- for block in section.blocks -%}
+    {%- for block in slide_blocks -%}
       <style>
         #Slide-{{ section.id }}-{{ forloop.index }} .banner__media::after {
           opacity: {{ block.settings.image_overlay_opacity | divided_by: 100.0 }};
@@ -134,6 +241,22 @@
           {% if block.settings.button_bg_color != blank %}background: {{ block.settings.button_bg_color }};{% endif %}
           {% if block.settings.button_text_color != blank %}color: {{ block.settings.button_text_color }};{% endif %}
           {% if block.settings.button_border_color != blank %}border-color: {{ block.settings.button_border_color }};{% endif %}
+        }
+        .block-{{ block.id }}-btn.button:before {
+          border-radius: {{ block.settings.button_border_radius | plus: settings.buttons_border_thickness }}px;
+        }
+        .block-{{ block.id }}-btn.button:after {
+          border-radius: {{ block.settings.button_border_radius }}px;
+        }
+        #Slide-{{ section.id }}-{{ forloop.index }} .slideshow__text-wrapper {
+          padding-left: {{ block.settings.content_padding_horizontal_mobile }}px;
+          padding-right: {{ block.settings.content_padding_horizontal_mobile }}px;
+        }
+        @media screen and (min-width: 750px) {
+          #Slide-{{ section.id }}-{{ forloop.index }} .slideshow__text-wrapper {
+            padding-left: {{ block.settings.content_padding_horizontal_desktop }}px;
+            padding-right: {{ block.settings.content_padding_horizontal_desktop }}px;
+          }
         }
       </style>
 
@@ -172,7 +295,7 @@
           {%- endif -%}
         </div>
 
-        <div class="slideshow__text-wrapper banner__content banner__content--{{ block.settings.box_align }} page-width{% if block.settings.show_text_box == false %} banner--desktop-transparent{% endif %}">
+        <div class="slideshow__text-wrapper banner__content banner__content--{{ block.settings.box_align }} banner__content-mobile--{{ block.settings.box_align_mobile }} page-width{% if block.settings.show_text_box == false %} banner--desktop-transparent{% endif %}">
           <div class="slideshow__text banner__box content-container content-container--full-width-mobile color-{{ block.settings.color_scheme }} gradient slideshow__text--{{ block.settings.text_alignment }} slideshow__text-mobile--{{ block.settings.text_alignment_mobile }}">
             {%- if block.settings.heading != blank -%}
               <h2
@@ -204,7 +327,43 @@
     {%- endfor -%}
   </div>
 
-  {%- if section.blocks.size > 1 and section.settings.auto_rotate == false -%}
+  {%- if bubble_blocks.size > 0 -%}
+    <div id="Hero-Bubbles-{{ section.id }}" class="hero-bubbles hero-bubbles--{{ section.settings.bubbles_position }}">
+      <ul class="hero-bubbles__list" role="list" aria-label="{{ section.settings.bubbles_aria_label | escape }}">
+        {%- for block in bubble_blocks -%}
+          {%- assign bubble_image = block.settings.image | default: block.settings.collection.featured_image -%}
+          {%- assign bubble_label = block.settings.label | default: block.settings.collection.title -%}
+          <li class="hero-bubbles__item-wrapper" {{ block.shopify_attributes }}>
+            <a
+              class="hero-bubbles__item"
+              {% if block.settings.collection != blank %}
+                href="{{ block.settings.collection.url }}"
+              {% else %}
+                role="link" aria-disabled="true"
+              {% endif %}
+            >
+              <span class="hero-bubbles__media-wrap">
+                {%- if bubble_image -%}
+                  {{
+                    bubble_image
+                    | image_url: width: 300
+                    | image_tag: loading: 'lazy', sizes: '160px', widths: '80, 110, 160, 220, 300', class: 'hero-bubbles__media', alt: bubble_label
+                  }}
+                {%- else -%}
+                  <span class="hero-bubbles__media hero-bubbles__media--ghost"></span>
+                {%- endif -%}
+              </span>
+              {%- if bubble_label != blank -%}
+                <span class="hero-bubbles__label">{{ bubble_label }}</span>
+              {%- endif -%}
+            </a>
+          </li>
+        {%- endfor -%}
+      </ul>
+    </div>
+  {%- endif -%}
+
+  {%- if slide_blocks.size > 1 and section.settings.auto_rotate == false -%}
     <div class="slideshow__controls slider-buttons no-js-hidden{% if section.settings.show_text_below %} slideshow__controls--border-radius-mobile{% endif %}">
       <button
         type="button"
@@ -221,10 +380,10 @@
           <span class="slider-counter--current">1</span>
           <span aria-hidden="true"> / </span>
           <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
-          <span class="slider-counter--total">{{ section.blocks.size }}</span>
+          <span class="slider-counter--total">{{ slide_blocks.size }}</span>
         {%- else -%}
           <div class="slideshow__control-wrapper">
-            {%- for block in section.blocks -%}
+            {%- for block in slide_blocks -%}
               <button
                 class="slider-counter__link slider-counter__link--{{ section.settings.slider_visual }} link"
                 aria-label="{{ 'sections.slideshow.load_slide' | t }} {{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
@@ -266,7 +425,7 @@
     <noscript>
       <div class="slider-buttons">
         <div class="slider-counter">
-          {%- for block in section.blocks -%}
+          {%- for block in slide_blocks -%}
             <a
               href="#Slide-{{ section.id }}-{{ forloop.index }}"
               class="slider-counter__link link"
@@ -367,6 +526,238 @@
       "label": "Descripción del slideshow",
       "info": "Texto descriptivo para lectores de pantalla.",
       "default": "Hero slideshow"
+    },
+    {
+      "type": "header",
+      "content": "Imagen — Radio de borde"
+    },
+    {
+      "type": "range",
+      "id": "image_border_radius_desktop",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "unit": "px",
+      "label": "Radio de borde escritorio",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "image_border_radius_mobile",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "unit": "px",
+      "label": "Radio de borde móvil",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Burbujas de colecciones"
+    },
+    {
+      "type": "paragraph",
+      "content": "Añade bloques de tipo \"Burbuja de colección\" para mostrar un círculo enlazado a una colección, superpuesto sobre el slideshow."
+    },
+    {
+      "type": "select",
+      "id": "bubbles_position",
+      "options": [
+        { "value": "top", "label": "Arriba" },
+        { "value": "bottom", "label": "Abajo" }
+      ],
+      "default": "bottom",
+      "label": "Posición vertical"
+    },
+    {
+      "type": "text",
+      "id": "bubbles_aria_label",
+      "label": "Texto accesible (lector de pantalla)",
+      "default": "Categorías"
+    },
+    {
+      "type": "color",
+      "id": "bubbles_background",
+      "label": "Color de fondo de la franja",
+      "default": "rgba(0,0,0,0)"
+    },
+    {
+      "type": "color",
+      "id": "bubbles_border_color",
+      "label": "Color de borde del círculo",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "range",
+      "id": "bubbles_border_width",
+      "min": 0,
+      "max": 6,
+      "step": 1,
+      "unit": "px",
+      "label": "Grosor de borde del círculo",
+      "default": 2
+    },
+    {
+      "type": "color",
+      "id": "bubbles_label_color",
+      "label": "Color del texto",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "header",
+      "content": "Burbujas — Tamaño escritorio"
+    },
+    {
+      "type": "range",
+      "id": "bubbles_diameter_desktop",
+      "min": 40,
+      "max": 160,
+      "step": 2,
+      "unit": "px",
+      "label": "Diámetro del círculo",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "bubbles_gap_desktop",
+      "min": 0,
+      "max": 60,
+      "step": 1,
+      "unit": "px",
+      "label": "Separación entre círculos",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "bubbles_label_font_size_desktop",
+      "min": 8,
+      "max": 30,
+      "step": 1,
+      "unit": "px",
+      "label": "Tamaño de texto",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "bubbles_padding_top_desktop",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding superior de la franja",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "bubbles_padding_bottom_desktop",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding inferior de la franja",
+      "default": 32
+    },
+    {
+      "type": "header",
+      "content": "Burbujas — Tamaño móvil"
+    },
+    {
+      "type": "range",
+      "id": "bubbles_diameter_mobile",
+      "min": 30,
+      "max": 120,
+      "step": 2,
+      "unit": "px",
+      "label": "Diámetro del círculo",
+      "default": 56
+    },
+    {
+      "type": "range",
+      "id": "bubbles_gap_mobile",
+      "min": 0,
+      "max": 40,
+      "step": 1,
+      "unit": "px",
+      "label": "Separación entre círculos",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "bubbles_label_font_size_mobile",
+      "min": 8,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Tamaño de texto",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "bubbles_padding_top_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding superior de la franja",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "bubbles_padding_bottom_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding inferior de la franja",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "Espaciado — Escritorio"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_desktop",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding superior escritorio",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_desktop",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding inferior escritorio",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Espaciado — Móvil"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding superior móvil",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding inferior móvil",
+      "default": 0
     }
   ],
   "blocks": [
@@ -571,6 +962,44 @@
           "label": "Posición del contenido (escritorio)"
         },
         {
+          "type": "select",
+          "id": "box_align_mobile",
+          "options": [
+            { "value": "top-left", "label": "Arriba — Izquierda" },
+            { "value": "top-center", "label": "Arriba — Centro" },
+            { "value": "top-right", "label": "Arriba — Derecha" },
+            { "value": "middle-left", "label": "Centro — Izquierda" },
+            { "value": "middle-center", "label": "Centro" },
+            { "value": "middle-right", "label": "Centro — Derecha" },
+            { "value": "bottom-left", "label": "Abajo — Izquierda" },
+            { "value": "bottom-center", "label": "Abajo — Centro" },
+            { "value": "bottom-right", "label": "Abajo — Derecha" }
+          ],
+          "default": "middle-center",
+          "label": "Posición del contenido (móvil)"
+        },
+        {
+          "type": "range",
+          "id": "content_padding_horizontal_desktop",
+          "min": 0,
+          "max": 200,
+          "step": 4,
+          "unit": "px",
+          "label": "Relleno horizontal del contenido — escritorio",
+          "info": "Espacio entre el borde de la imagen y el texto. Bajalo para acercar el texto al borde.",
+          "default": 80
+        },
+        {
+          "type": "range",
+          "id": "content_padding_horizontal_mobile",
+          "min": 0,
+          "max": 100,
+          "step": 2,
+          "unit": "px",
+          "label": "Relleno horizontal del contenido — móvil",
+          "default": 20
+        },
+        {
           "type": "checkbox",
           "id": "show_text_box",
           "label": "Mostrar caja de fondo detrás del texto",
@@ -628,6 +1057,30 @@
           "info": "Solo aplica cuando la caja de fondo está activa."
         }
       ]
+    },
+    {
+      "type": "bubble",
+      "name": "Burbuja de colección",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Colección",
+          "info": "El círculo enlazará a esta colección."
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Imagen personalizada (opcional)",
+          "info": "Si se deja vacío, se usará la imagen destacada de la colección."
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Texto personalizado (opcional)",
+          "info": "Si se deja vacío, se usará el nombre de la colección."
+        }
+      ]
     }
   ],
   "presets": [
@@ -642,6 +1095,9 @@
             "button_label": "COMPRAR AHORA",
             "show_text_box": false,
             "box_align": "middle-center",
+            "box_align_mobile": "middle-center",
+            "content_padding_horizontal_desktop": 80,
+            "content_padding_horizontal_mobile": 20,
             "text_alignment": "center",
             "text_alignment_mobile": "center",
             "heading_font_size_desktop": 48,

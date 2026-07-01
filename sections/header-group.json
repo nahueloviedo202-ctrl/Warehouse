@@ -30,51 +30,41 @@
       "disabled": true,
       "settings": {}
     },
-    "custom_announcement_bar_6FeEbY": {
-      "type": "custom-announcement-bar",
+    "header": {
+      "type": "header",
       "blocks": {
-        "message_GiPp48": {
-          "type": "message",
+        "announcement_bar_AcyXA9": {
+          "type": "announcement_bar",
           "settings": {
-            "text": "ENVÍO GRATUITO | © VITA NURA GLOW BARCELONA, 2026",
-            "separator": "·"
+            "text": "ENVÍO GRATUITO | © YOUR STORE, 2026",
+            "separator": "|",
+            "text_color": "#ffffff",
+            "border_color": "#ffffff",
+            "border_width": 1,
+            "border_radius": 100,
+            "speed": 3,
+            "font_size_desktop": 12,
+            "font_size_mobile": 10,
+            "padding_v_desktop": 7,
+            "padding_v_mobile": 5,
+            "gap_desktop": 0,
+            "gap_mobile": 0
           }
         }
       },
       "block_order": [
-        "message_GiPp48"
+        "announcement_bar_AcyXA9"
       ],
-      "name": "Custom Announcement Bar",
-      "settings": {
-        "text_color": "#000000",
-        "font_size_desktop": 12,
-        "font_size_mobile": 10,
-        "uppercase_text": true,
-        "bold_text": false,
-        "italic_text": false,
-        "background_color": "#000000",
-        "background_opacity": 0,
-        "border_color": "#140a0a",
-        "border_width": 1,
-        "border_radius": 100,
-        "padding_v_desktop": 7,
-        "padding_v_mobile": 5,
-        "speed": 2,
-        "pause_on_hover": true,
-        "aria_label": "Announcement bar",
-        "section_padding_top": 12,
-        "section_padding_bottom": 0,
-        "section_padding_top_mobile": 0,
-        "section_padding_bottom_mobile": 0
-      }
-    },
-    "header": {
-      "type": "header",
       "settings": {
         "sticky_header_type": "on-scroll-up",
         "show_line_separator": true,
         "color_scheme": "background-1",
+        "white_text": true,
         "logo_position": "middle-center",
+        "logo_max_height_desktop": 120,
+        "logo_max_height_mobile": 100,
+        "logo_max_width_desktop": 200,
+        "logo_max_width_mobile": 110,
         "menu": "main-menu",
         "highlight_active_link": true,
         "highlighted_link_color_scheme": "accent-1",
@@ -83,16 +73,15 @@
         "menu_color_scheme": "background-1",
         "mobile_logo_position": "center",
         "margin_bottom": 0,
-        "padding_top": 8,
-        "padding_bottom": 8,
+        "padding_top": 20,
+        "padding_bottom": 0,
         "padding_top_mobile": 8,
-        "padding_bottom_mobile": 8
+        "padding_bottom_mobile": 0
       }
     }
   },
   "order": [
     "announcement-bar",
-    "custom_announcement_bar_6FeEbY",
     "header"
   ]
 }

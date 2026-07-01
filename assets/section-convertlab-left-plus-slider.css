@@ -1,0 +1,168 @@
+/* ===== Convertlab – Left Image + Product Slider ===== */
+
+/* ── Header ── */
+
+.clps-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1.6rem;
+  margin-bottom: var(--clps-header-mb, 2.4rem);
+}
+
+.clps-title {
+  margin: 0;
+  line-height: 1.2;
+}
+
+.clps-title-count {
+  font-size: 0.5em;
+  vertical-align: super;
+  font-weight: 400;
+  margin-left: 0.18em;
+  opacity: 0.55;
+}
+
+.clps-view-all {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+  white-space: nowrap;
+  color: inherit;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.clps-view-all:hover {
+  opacity: 0.65;
+}
+
+/* ── Body ── */
+
+.clps-body {
+  display: flex;
+  align-items: stretch;
+  gap: var(--clps-card-gap, 1.6rem);
+  min-width: 0;
+}
+
+/* ── Left image ── */
+
+.clps-left-image {
+  flex: 0 0 var(--clps-left-width, 26rem);
+  border-radius: var(--clps-image-radius, 1.2rem);
+  overflow: hidden;
+  position: relative;
+  background: rgba(var(--color-foreground), 0.04);
+}
+
+.clps-left-image__link,
+.clps-left-image__wrap {
+  display: block;
+  height: 100%;
+}
+
+.clps-left-image__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ── Slider area ── */
+
+.clps-slider-area {
+  flex: 1 1 0;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.clps-slider-component {
+  display: block;
+}
+
+/* ── Product list ── */
+
+.clps-product-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: var(--clps-product-gap, 1.6rem);
+}
+
+.clps-product-list.slider {
+  margin-bottom: 0;
+}
+
+.clps-product-item {
+  flex: 0 0 var(--clps-card-width, 22rem);
+  min-width: 0;
+  align-self: flex-start;
+}
+
+/* ── Progress bar ── */
+
+.clps-progress {
+  margin-top: 1.6rem;
+  height: 0.2rem;
+  background: rgba(var(--color-foreground), 0.15);
+  border-radius: 0.2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.clps-progress__fill {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 0%;
+  background: rgb(var(--color-foreground));
+  border-radius: 0.2rem;
+  transition: width 0.1s linear;
+  will-change: width;
+}
+
+/* ── Responsive: mobile ── */
+
+@media screen and (max-width: 749px) {
+  .clps-left-image {
+    flex: 0 0 46%;
+    width: 46%;
+    aspect-ratio: 3 / 4;
+  }
+
+  .clps-left-image__img {
+    height: 100%;
+  }
+
+  /* Tighten product card text so everything fits the smaller mobile card width */
+  .clps-product-item .card__content {
+    padding: 0.8rem;
+  }
+
+  .clps-product-item .card__information {
+    padding: 0;
+  }
+
+  .clps-product-item .card__heading {
+    font-size: 1.1rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .clps-product-item .caption-with-letter-spacing {
+    font-size: 0.85rem;
+    letter-spacing: 0.06rem;
+  }
+
+  .clps-product-item .caption-large {
+    font-size: 1rem;
+  }
+
+  .clps-product-item .price {
+    font-size: 1.2rem;
+    margin-bottom: 0.2rem;
+    column-gap: 0.6rem;
+  }
+}
