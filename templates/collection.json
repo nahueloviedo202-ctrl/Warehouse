@@ -98,7 +98,7 @@
         "layout": "full_bleed",
         "slide_height": "large",
         "max_height_desktop_vh": 100,
-        "max_height_mobile_vh": 65,
+        "max_height_mobile_vh": 55,
         "slider_visual": "dots",
         "auto_rotate": false,
         "change_slides_speed": 5,
@@ -187,6 +187,7 @@
         "product",
         "collection"
       ],
+      "disabled": true,
       "settings": {
         "heading": "Discover more of our favorites",
         "heading_size": "h2",
@@ -226,6 +227,7 @@
         "paragraph",
         "email-form"
       ],
+      "disabled": true,
       "settings": {
         "button_type": "solid",
         "button_label": "Sign up",
