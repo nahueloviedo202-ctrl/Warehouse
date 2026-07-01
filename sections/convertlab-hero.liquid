@@ -6,11 +6,73 @@
 {%- assign slide_blocks = section.blocks | where: 'type', 'slide' -%}
 {%- assign bubble_blocks = section.blocks | where: 'type', 'bubble' -%}
 
-{%- comment -%} Espacio reservado para que el texto del slide nunca se superponga con la franja de burbujas {%- endcomment -%}
+{%- comment -%} Espacio reservado para que el texto nunca se superponga con la franja de burbujas {%- endcomment -%}
 {%- assign bubble_label_line_mobile = section.settings.bubbles_label_font_size_mobile | times: 1.3 | round -%}
 {%- assign bubble_zone_mobile = section.settings.bubbles_diameter_mobile | plus: bubble_label_line_mobile | plus: 10 | plus: section.settings.bubbles_padding_top_mobile | plus: section.settings.bubbles_padding_bottom_mobile -%}
 {%- assign bubble_label_line_desktop = section.settings.bubbles_label_font_size_desktop | times: 1.3 | round -%}
 {%- assign bubble_zone_desktop = section.settings.bubbles_diameter_desktop | plus: bubble_label_line_desktop | plus: 10 | plus: section.settings.bubbles_padding_top_desktop | plus: section.settings.bubbles_padding_bottom_desktop -%}
+
+{%- style -%}
+  #shopify-section-{{ section.id }} {
+    position: relative;
+    padding-top: {{ section.settings.padding_top_mobile }}px;
+    padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+  }
+  @media screen and (min-width: 750px) {
+    #shopify-section-{{ section.id }} {
+      padding-top: {{ section.settings.padding_top_desktop }}px;
+      padding-bottom: {{ section.settings.padding_bottom_desktop }}px;
+    }
+  }
+  #Slider-{{ section.id }} {
+    max-height: {{ section.settings.max_height_mobile_vh }}vh;
+  }
+  #Slider-{{ section.id }} .banner__media {
+    max-height: {{ section.settings.max_height_mobile_vh }}vh;
+    border-radius: {{ section.settings.image_border_radius_mobile }}px;
+    overflow: hidden;
+  }
+  @media screen and (min-width: 750px) {
+    #Slider-{{ section.id }} {
+      max-height: {{ section.settings.max_height_desktop_vh }}vh;
+    }
+    #Slider-{{ section.id }} .banner__media {
+      max-height: {{ section.settings.max_height_desktop_vh }}vh;
+      border-radius: {{ section.settings.image_border_radius_desktop }}px;
+    }
+  }
+  @media screen and (max-width: 749px) {
+    #Slider-{{ section.id }} {
+      height: {{ section.settings.max_height_mobile_vh }}vh;
+      max-height: {{ section.settings.max_height_mobile_vh }}vh;
+      overflow: hidden;
+    }
+    #Slider-{{ section.id }} .slideshow__slide {
+      height: 100%;
+      max-height: {{ section.settings.max_height_mobile_vh }}vh;
+    }
+    #Slider-{{ section.id }} .banner__content {
+      min-height: 0;
+      height: 100%;
+      max-height: 100%;
+    }
+    #Slider-{{ section.id }} .banner__media {
+      height: 100%;
+      max-height: 100%;
+    }
+  }
+  @media screen and (max-width: 749px) {
+    #Slider-{{ section.id }} .banner__content.banner__content-mobile--top-left { align-items: flex-start; justify-content: flex-start; }
+    #Slider-{{ section.id }} .banner__content.banner__content-mobile--top-center { align-items: flex-start; justify-content: center; }
+    #Slider-{{ section.id }} .banner__content.banner__content-mobile--top-right { align-items: flex-start; justify-content: flex-end; }
+    #Slider-{{ section.id }} .banner__content.banner__content-mobile--middle-left { align-items: center; justify-content: flex-start; }
+    #Slider-{{ section.id }} .banner__content.banner__content-mobile--middle-center { align-items: center; justify-content: center; }
+    #Slider-{{ section.id }} .banner__content.banner__content-mobile--middle-right { align-items: center; justify-content: flex-end; }
+    #Slider-{{ section.id }} .banner__content.banner__content-mobile--bottom-left { align-items: flex-end; justify-content: flex-start; }
+    #Slider-{{ section.id }} .banner__content.banner__content-mobile--bottom-center { align-items: flex-end; justify-content: center; }
+    #Slider-{{ section.id }} .banner__content.banner__content-mobile--bottom-right { align-items: flex-end; justify-content: flex-end; }
+  }
+{%- endstyle -%}
 
 {%- if section.settings.slide_height == 'adapt_image' and slide_blocks.first.settings.image != blank -%}
   {%- assign mobile_aspect_image = slide_blocks.first.settings.image_mobile | default: slide_blocks.first.settings.image -%}
@@ -35,15 +97,8 @@
   {%- endstyle -%}
 {%- endif -%}
 
-<style>
-  #shopify-section-{{ section.id }} {
-    padding-top: {{ section.settings.padding_top_mobile }}px;
-    padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
-  }
-  #Slider-{{ section.id }} .slideshow__media {
-    border-radius: {{ section.settings.image_border_radius_mobile }}px;
-  }
-  {%- if bubble_blocks.size > 0 -%}
+{%- if bubble_blocks.size > 0 -%}
+  <style>
     #Slider-{{ section.id }} .slideshow__text-wrapper {
       {% if section.settings.bubbles_position == 'top' %}
         padding-top: {{ bubble_zone_mobile }}px;
@@ -51,59 +106,7 @@
         padding-bottom: {{ bubble_zone_mobile }}px;
       {% endif %}
     }
-  {%- endif -%}
-  @media screen and (max-width: 749px) {
-    #Slider-{{ section.id }} .banner__content.banner__content-mobile--top-left {
-      align-items: flex-start;
-      justify-content: flex-start;
-    }
-    #Slider-{{ section.id }} .banner__content.banner__content-mobile--top-center {
-      align-items: flex-start;
-      justify-content: center;
-    }
-    #Slider-{{ section.id }} .banner__content.banner__content-mobile--top-right {
-      align-items: flex-start;
-      justify-content: flex-end;
-    }
-    #Slider-{{ section.id }} .banner__content.banner__content-mobile--middle-left {
-      align-items: center;
-      justify-content: flex-start;
-    }
-    #Slider-{{ section.id }} .banner__content.banner__content-mobile--middle-center {
-      align-items: center;
-      justify-content: center;
-    }
-    #Slider-{{ section.id }} .banner__content.banner__content-mobile--middle-right {
-      align-items: center;
-      justify-content: flex-end;
-    }
-    #Slider-{{ section.id }} .banner__content.banner__content-mobile--bottom-left {
-      align-items: flex-end;
-      justify-content: flex-start;
-    }
-    #Slider-{{ section.id }} .banner__content.banner__content-mobile--bottom-center {
-      align-items: flex-end;
-      justify-content: center;
-    }
-    #Slider-{{ section.id }} .banner__content.banner__content-mobile--bottom-right {
-      align-items: flex-end;
-      justify-content: flex-end;
-    }
-  }
-  @media screen and (min-width: 750px) {
-    #shopify-section-{{ section.id }} {
-      padding-top: {{ section.settings.padding_top_desktop }}px;
-      padding-bottom: {{ section.settings.padding_bottom_desktop }}px;
-    }
-    #Slider-{{ section.id }} .slideshow__media {
-      border-radius: {{ section.settings.image_border_radius_desktop }}px;
-    }
-    {%- if section.settings.layout == 'full_bleed' -%}
-      #Slider-{{ section.id }} .slideshow__text-wrapper.page-width {
-        max-width: none;
-      }
-    {%- endif -%}
-    {%- if bubble_blocks.size > 0 -%}
+    @media screen and (min-width: 750px) {
       #Slider-{{ section.id }} .slideshow__text-wrapper {
         {% if section.settings.bubbles_position == 'top' %}
           padding-top: {{ bubble_zone_desktop }}px;
@@ -111,25 +114,70 @@
           padding-bottom: {{ bubble_zone_desktop }}px;
         {% endif %}
       }
-    {%- endif -%}
-  }
-  #Hero-Bubbles-{{ section.id }} {
-    --hero-bubbles-diameter-mobile: {{ section.settings.bubbles_diameter_mobile }}px;
-    --hero-bubbles-diameter-desktop: {{ section.settings.bubbles_diameter_desktop }}px;
-    --hero-bubbles-gap-mobile: {{ section.settings.bubbles_gap_mobile }}px;
-    --hero-bubbles-gap-desktop: {{ section.settings.bubbles_gap_desktop }}px;
-    --hero-bubbles-border-width: {{ section.settings.bubbles_border_width }}px;
-    --hero-bubbles-border-color: {{ section.settings.bubbles_border_color }};
-    --hero-bubbles-label-color: {{ section.settings.bubbles_label_color }};
-    --hero-bubbles-label-size-mobile: {{ section.settings.bubbles_label_font_size_mobile }}px;
-    --hero-bubbles-label-size-desktop: {{ section.settings.bubbles_label_font_size_desktop }}px;
-    --hero-bubbles-padding-top-mobile: {{ section.settings.bubbles_padding_top_mobile }}px;
-    --hero-bubbles-padding-bottom-mobile: {{ section.settings.bubbles_padding_bottom_mobile }}px;
-    --hero-bubbles-padding-top-desktop: {{ section.settings.bubbles_padding_top_desktop }}px;
-    --hero-bubbles-padding-bottom-desktop: {{ section.settings.bubbles_padding_bottom_desktop }}px;
-    background: {{ section.settings.bubbles_background }};
-  }
-</style>
+    }
+    #shopify-section-{{ section.id }} slideshow-component {
+      display: block;
+    }
+    #Hero-Bubbles-{{ section.id }} {
+      position: absolute;
+      left: 0;
+      right: 0;
+      z-index: 2;
+      box-sizing: border-box;
+      padding-left: {{ section.settings.bubbles_outer_padding_mobile }}px;
+    
+      {% if section.settings.bubbles_position == 'bottom' %}
+        bottom: {{ section.settings.padding_bottom_mobile }}px;
+      {% else %}
+        top: {{ section.settings.padding_top_mobile }}px;
+      {% endif %}
+      --hero-bubbles-diameter-mobile: {{ section.settings.bubbles_diameter_mobile }}px;
+      --hero-bubbles-diameter-desktop: {{ section.settings.bubbles_diameter_desktop }}px;
+      --hero-bubbles-gap-mobile: {{ section.settings.bubbles_gap_mobile }}px;
+      --hero-bubbles-gap-desktop: {{ section.settings.bubbles_gap_desktop }}px;
+      --hero-bubbles-border-width: {{ section.settings.bubbles_border_width }}px;
+      --hero-bubbles-border-color: {{ section.settings.bubbles_border_color }};
+      --hero-bubbles-label-color: {{ section.settings.bubbles_label_color }};
+      --hero-bubbles-label-size-mobile: {{ section.settings.bubbles_label_font_size_mobile }}px;
+      --hero-bubbles-label-size-desktop: {{ section.settings.bubbles_label_font_size_desktop }}px;
+      --hero-bubbles-padding-top-mobile: {{ section.settings.bubbles_padding_top_mobile }}px;
+      --hero-bubbles-padding-bottom-mobile: {{ section.settings.bubbles_padding_bottom_mobile }}px;
+      --hero-bubbles-padding-top-desktop: {{ section.settings.bubbles_padding_top_desktop }}px;
+      --hero-bubbles-padding-bottom-desktop: {{ section.settings.bubbles_padding_bottom_desktop }}px;
+      background: {{ section.settings.bubbles_background }};
+    }
+    @media screen and (min-width: 750px) {
+      #Hero-Bubbles-{{ section.id }} {
+        padding-left: {{ section.settings.bubbles_outer_padding_desktop }}px;
+        {% if section.settings.bubbles_position == 'bottom' %}
+          bottom: {{ section.settings.padding_bottom_desktop }}px;
+        {% else %}
+          top: {{ section.settings.padding_top_desktop }}px;
+        {% endif %}
+      }
+    }
+    @media screen and (max-width: 749px) {
+      #Hero-Bubbles-{{ section.id }} .hero-bubbles__list {
+        width: {{ section.settings.bubbles_list_width_mobile }}px;
+        margin-inline: auto;
+        padding-left: {{ section.settings.bubbles_padding_horizontal_mobile }}px;
+        padding-right: 0;
+        justify-content: flex-start;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+      #Hero-Bubbles-{{ section.id }} .hero-bubbles__item-wrapper:first-child {
+        margin-left: 0;
+      }
+      #Hero-Bubbles-{{ section.id }} .hero-bubbles__list::after {
+        content: '';
+        display: block;
+        flex: 0 0 {{ section.settings.bubbles_padding_horizontal_mobile }}px;
+        min-width: {{ section.settings.bubbles_padding_horizontal_mobile }}px;
+      }
+    }
+  </style>
+{%- endif -%}
 
 <slideshow-component
   class="slider-mobile-gutter{% if section.settings.layout == 'grid' %} page-width{% endif %}{% if section.settings.show_text_below %} mobile-text-below{% endif %}"
@@ -242,21 +290,11 @@
           {% if block.settings.button_text_color != blank %}color: {{ block.settings.button_text_color }};{% endif %}
           {% if block.settings.button_border_color != blank %}border-color: {{ block.settings.button_border_color }};{% endif %}
         }
-        .block-{{ block.id }}-btn.button:before {
-          border-radius: {{ block.settings.button_border_radius | plus: settings.buttons_border_thickness }}px;
+        .block-{{ block.id }}-btn.button::before {
+          border-radius: calc({{ block.settings.button_border_radius }}px + var(--buttons-border-thickness));
         }
-        .block-{{ block.id }}-btn.button:after {
+        .block-{{ block.id }}-btn.button::after {
           border-radius: {{ block.settings.button_border_radius }}px;
-        }
-        #Slide-{{ section.id }}-{{ forloop.index }} .slideshow__text-wrapper {
-          padding-left: {{ block.settings.content_padding_horizontal_mobile }}px;
-          padding-right: {{ block.settings.content_padding_horizontal_mobile }}px;
-        }
-        @media screen and (min-width: 750px) {
-          #Slide-{{ section.id }}-{{ forloop.index }} .slideshow__text-wrapper {
-            padding-left: {{ block.settings.content_padding_horizontal_desktop }}px;
-            padding-right: {{ block.settings.content_padding_horizontal_desktop }}px;
-          }
         }
       </style>
 
@@ -326,42 +364,6 @@
       </div>
     {%- endfor -%}
   </div>
-
-  {%- if bubble_blocks.size > 0 -%}
-    <div id="Hero-Bubbles-{{ section.id }}" class="hero-bubbles hero-bubbles--{{ section.settings.bubbles_position }}">
-      <ul class="hero-bubbles__list" role="list" aria-label="{{ section.settings.bubbles_aria_label | escape }}">
-        {%- for block in bubble_blocks -%}
-          {%- assign bubble_image = block.settings.image | default: block.settings.collection.featured_image -%}
-          {%- assign bubble_label = block.settings.label | default: block.settings.collection.title -%}
-          <li class="hero-bubbles__item-wrapper" {{ block.shopify_attributes }}>
-            <a
-              class="hero-bubbles__item"
-              {% if block.settings.collection != blank %}
-                href="{{ block.settings.collection.url }}"
-              {% else %}
-                role="link" aria-disabled="true"
-              {% endif %}
-            >
-              <span class="hero-bubbles__media-wrap">
-                {%- if bubble_image -%}
-                  {{
-                    bubble_image
-                    | image_url: width: 300
-                    | image_tag: loading: 'lazy', sizes: '160px', widths: '80, 110, 160, 220, 300', class: 'hero-bubbles__media', alt: bubble_label
-                  }}
-                {%- else -%}
-                  <span class="hero-bubbles__media hero-bubbles__media--ghost"></span>
-                {%- endif -%}
-              </span>
-              {%- if bubble_label != blank -%}
-                <span class="hero-bubbles__label">{{ bubble_label }}</span>
-              {%- endif -%}
-            </a>
-          </li>
-        {%- endfor -%}
-      </ul>
-    </div>
-  {%- endif -%}
 
   {%- if slide_blocks.size > 1 and section.settings.auto_rotate == false -%}
     <div class="slideshow__controls slider-buttons no-js-hidden{% if section.settings.show_text_below %} slideshow__controls--border-radius-mobile{% endif %}">
@@ -438,6 +440,42 @@
   {%- endif -%}
 </slideshow-component>
 
+{%- if bubble_blocks.size > 0 -%}
+  <div id="Hero-Bubbles-{{ section.id }}" class="hero-bubbles hero-bubbles--{{ section.settings.bubbles_position }}">
+    <ul class="hero-bubbles__list" role="list" aria-label="{{ section.settings.bubbles_aria_label | escape }}">
+      {%- for block in bubble_blocks -%}
+        {%- assign bubble_image = block.settings.image | default: block.settings.collection.featured_image -%}
+        {%- assign bubble_label = block.settings.label | default: block.settings.collection.title -%}
+        <li class="hero-bubbles__item-wrapper" {{ block.shopify_attributes }}>
+          <a
+            class="hero-bubbles__item"
+            {% if block.settings.collection != blank %}
+              href="{{ block.settings.collection.url }}"
+            {% else %}
+              role="link" aria-disabled="true"
+            {% endif %}
+          >
+            <span class="hero-bubbles__media-wrap">
+              {%- if bubble_image -%}
+                {{
+                  bubble_image
+                  | image_url: width: 300
+                  | image_tag: loading: 'lazy', sizes: '160px', widths: '80, 110, 160, 220, 300', class: 'hero-bubbles__media', alt: bubble_label
+                }}
+              {%- else -%}
+                <span class="hero-bubbles__media hero-bubbles__media--ghost"></span>
+              {%- endif -%}
+            </span>
+            {%- if bubble_label != blank -%}
+              <span class="hero-bubbles__label">{{ bubble_label }}</span>
+            {%- endif -%}
+          </a>
+        </li>
+      {%- endfor -%}
+    </ul>
+  </div>
+{%- endif -%}
+
 {%- if request.design_mode -%}
   <script src="{{ 'theme-editor.js' | asset_url }}" defer="defer"></script>
 {%- endif -%}
@@ -473,6 +511,32 @@
       "default": "medium",
       "label": "Altura del slide",
       "info": "Adaptar a la imagen usa las proporciones de la imagen del primer slide."
+    },
+    {
+      "type": "header",
+      "content": "Altura máxima"
+    },
+    {
+      "type": "range",
+      "id": "max_height_desktop_vh",
+      "min": 40,
+      "max": 100,
+      "step": 5,
+      "unit": "vh",
+      "label": "Alto máximo escritorio",
+      "info": "Limita la altura del slideshow a este porcentaje del alto visible de la pantalla.",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "max_height_mobile_vh",
+      "min": 40,
+      "max": 100,
+      "step": 5,
+      "unit": "vh",
+      "label": "Alto máximo móvil",
+      "info": "Limita la altura del slideshow a este porcentaje del alto visible de la pantalla.",
+      "default": 100
     },
     {
       "type": "header",
@@ -529,6 +593,54 @@
     },
     {
       "type": "header",
+      "content": "Espaciado — Escritorio"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_desktop",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding superior",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_desktop",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding inferior",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Espaciado — Móvil"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding superior",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding inferior",
+      "default": 0
+    },
+    {
+      "type": "header",
       "content": "Imagen — Radio de borde"
     },
     {
@@ -538,7 +650,7 @@
       "max": 50,
       "step": 1,
       "unit": "px",
-      "label": "Radio de borde escritorio",
+      "label": "Radio escritorio",
       "default": 0
     },
     {
@@ -548,7 +660,7 @@
       "max": 50,
       "step": 1,
       "unit": "px",
-      "label": "Radio de borde móvil",
+      "label": "Radio móvil",
       "default": 0
     },
     {
@@ -557,7 +669,7 @@
     },
     {
       "type": "paragraph",
-      "content": "Añade bloques de tipo \"Burbuja de colección\" para mostrar un círculo enlazado a una colección, superpuesto sobre el slideshow."
+      "content": "Añade bloques de tipo \"Burbuja de colección\" para mostrar círculos enlazados a colecciones, superpuestos sobre el slideshow."
     },
     {
       "type": "select",
@@ -567,7 +679,7 @@
         { "value": "bottom", "label": "Abajo" }
       ],
       "default": "bottom",
-      "label": "Posición vertical"
+      "label": "Posición vertical de la franja"
     },
     {
       "type": "text",
@@ -594,18 +706,18 @@
       "max": 6,
       "step": 1,
       "unit": "px",
-      "label": "Grosor de borde del círculo",
+      "label": "Grosor del borde del círculo",
       "default": 2
     },
     {
       "type": "color",
       "id": "bubbles_label_color",
-      "label": "Color del texto",
+      "label": "Color del texto de la burbuja",
       "default": "#FFFFFF"
     },
     {
       "type": "header",
-      "content": "Burbujas — Tamaño escritorio"
+      "content": "Burbujas — Escritorio"
     },
     {
       "type": "range",
@@ -634,7 +746,7 @@
       "max": 30,
       "step": 1,
       "unit": "px",
-      "label": "Tamaño de texto",
+      "label": "Tamaño del texto",
       "default": 14
     },
     {
@@ -644,7 +756,7 @@
       "max": 100,
       "step": 2,
       "unit": "px",
-      "label": "Padding superior de la franja",
+      "label": "Espaciado superior de la franja",
       "default": 24
     },
     {
@@ -654,12 +766,23 @@
       "max": 100,
       "step": 2,
       "unit": "px",
-      "label": "Padding inferior de la franja",
+      "label": "Espaciado inferior de la franja",
       "default": 32
     },
     {
+      "type": "range",
+      "id": "bubbles_outer_padding_desktop",
+      "min": 0,
+      "max": 160,
+      "step": 4,
+      "unit": "px",
+      "label": "Espaciado exterior lateral (escritorio)",
+      "info": "Separación entre el contenedor de burbujas y los bordes de la pantalla.",
+      "default": 80
+    },
+    {
       "type": "header",
-      "content": "Burbujas — Tamaño móvil"
+      "content": "Burbujas — Móvil"
     },
     {
       "type": "range",
@@ -688,7 +811,7 @@
       "max": 24,
       "step": 1,
       "unit": "px",
-      "label": "Tamaño de texto",
+      "label": "Tamaño del texto",
       "default": 12
     },
     {
@@ -698,7 +821,7 @@
       "max": 100,
       "step": 2,
       "unit": "px",
-      "label": "Padding superior de la franja",
+      "label": "Espaciado superior de la franja",
       "default": 16
     },
     {
@@ -708,56 +831,40 @@
       "max": 100,
       "step": 2,
       "unit": "px",
-      "label": "Padding inferior de la franja",
+      "label": "Espaciado inferior de la franja",
       "default": 16
     },
     {
-      "type": "header",
-      "content": "Espaciado — Escritorio"
+      "type": "range",
+      "id": "bubbles_outer_padding_mobile",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Espaciado exterior lateral (móvil)",
+      "info": "Separación entre el contenedor de burbujas y los bordes de la pantalla.",
+      "default": 16
     },
     {
       "type": "range",
-      "id": "padding_top_desktop",
-      "min": 0,
-      "max": 100,
-      "step": 2,
+      "id": "bubbles_list_width_mobile",
+      "min": 200,
+      "max": 600,
+      "step": 10,
       "unit": "px",
-      "label": "Padding superior escritorio",
-      "default": 0
+      "label": "Ancho del contenedor (móvil)",
+      "info": "En pantallas más pequeñas que este ancho, las burbujas se pueden deslizar.",
+      "default": 360
     },
     {
       "type": "range",
-      "id": "padding_bottom_desktop",
+      "id": "bubbles_padding_horizontal_mobile",
       "min": 0,
-      "max": 100,
+      "max": 60,
       "step": 2,
       "unit": "px",
-      "label": "Padding inferior escritorio",
-      "default": 0
-    },
-    {
-      "type": "header",
-      "content": "Espaciado — Móvil"
-    },
-    {
-      "type": "range",
-      "id": "padding_top_mobile",
-      "min": 0,
-      "max": 100,
-      "step": 2,
-      "unit": "px",
-      "label": "Padding superior móvil",
-      "default": 0
-    },
-    {
-      "type": "range",
-      "id": "padding_bottom_mobile",
-      "min": 0,
-      "max": 100,
-      "step": 2,
-      "unit": "px",
-      "label": "Padding inferior móvil",
-      "default": 0
+      "label": "Espaciado lateral (móvil)",
+      "default": 16
     }
   ],
   "blocks": [
@@ -979,27 +1086,6 @@
           "label": "Posición del contenido (móvil)"
         },
         {
-          "type": "range",
-          "id": "content_padding_horizontal_desktop",
-          "min": 0,
-          "max": 200,
-          "step": 4,
-          "unit": "px",
-          "label": "Relleno horizontal del contenido — escritorio",
-          "info": "Espacio entre el borde de la imagen y el texto. Bajalo para acercar el texto al borde.",
-          "default": 80
-        },
-        {
-          "type": "range",
-          "id": "content_padding_horizontal_mobile",
-          "min": 0,
-          "max": 100,
-          "step": 2,
-          "unit": "px",
-          "label": "Relleno horizontal del contenido — móvil",
-          "default": 20
-        },
-        {
           "type": "checkbox",
           "id": "show_text_box",
           "label": "Mostrar caja de fondo detrás del texto",
@@ -1066,19 +1152,19 @@
           "type": "collection",
           "id": "collection",
           "label": "Colección",
-          "info": "El círculo enlazará a esta colección."
+          "info": "El círculo enlazará a esta colección y usará su imagen destacada."
         },
         {
           "type": "image_picker",
           "id": "image",
           "label": "Imagen personalizada (opcional)",
-          "info": "Si se deja vacío, se usará la imagen destacada de la colección."
+          "info": "Si se deja vacío, se usa la imagen destacada de la colección."
         },
         {
           "type": "text",
           "id": "label",
           "label": "Texto personalizado (opcional)",
-          "info": "Si se deja vacío, se usará el nombre de la colección."
+          "info": "Si se deja vacío, se usa el nombre de la colección."
         }
       ]
     }
@@ -1095,9 +1181,6 @@
             "button_label": "COMPRAR AHORA",
             "show_text_box": false,
             "box_align": "middle-center",
-            "box_align_mobile": "middle-center",
-            "content_padding_horizontal_desktop": 80,
-            "content_padding_horizontal_mobile": 20,
             "text_alignment": "center",
             "text_alignment_mobile": "center",
             "heading_font_size_desktop": 48,

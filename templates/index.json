@@ -29,7 +29,7 @@
             "subheading_font_size_mobile": 15,
             "subheading_font_weight": "400",
             "button_label": "COMPRAR AHORA",
-            "link": "shopify://collections",
+            "link": "shopify://collections/mas-vendidos",
             "button_style_secondary": false,
             "button_border_radius": 50,
             "button_bg_color": "#ffffff",
@@ -37,8 +37,6 @@
             "button_border_color": "",
             "box_align": "bottom-left",
             "box_align_mobile": "bottom-center",
-            "content_padding_horizontal_desktop": 160,
-            "content_padding_horizontal_mobile": 0,
             "show_text_box": false,
             "text_alignment": "left",
             "text_alignment_mobile": "center",
@@ -54,11 +52,17 @@
       "settings": {
         "layout": "full_bleed",
         "slide_height": "adapt_image",
+        "max_height_desktop_vh": 100,
+        "max_height_mobile_vh": 100,
         "slider_visual": "dots",
         "auto_rotate": false,
         "change_slides_speed": 5,
         "show_text_below": false,
         "accessibility_info": "Hero slideshow",
+        "padding_top_desktop": 0,
+        "padding_bottom_desktop": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0,
         "image_border_radius_desktop": 0,
         "image_border_radius_mobile": 0,
         "bubbles_position": "bottom",
@@ -72,15 +76,43 @@
         "bubbles_label_font_size_desktop": 14,
         "bubbles_padding_top_desktop": 24,
         "bubbles_padding_bottom_desktop": 32,
+        "bubbles_outer_padding_desktop": 80,
         "bubbles_diameter_mobile": 56,
         "bubbles_gap_mobile": 8,
         "bubbles_label_font_size_mobile": 12,
         "bubbles_padding_top_mobile": 16,
         "bubbles_padding_bottom_mobile": 16,
-        "padding_top_desktop": 0,
-        "padding_bottom_desktop": 0,
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 0
+        "bubbles_outer_padding_mobile": 16,
+        "bubbles_list_width_mobile": 360,
+        "bubbles_padding_horizontal_mobile": 16
+      }
+    },
+    "press_logos_GVXWyA": {
+      "type": "press-logos",
+      "name": "Press Logos",
+      "settings": {
+        "heading": "",
+        "img_height": 50,
+        "text_size": 17,
+        "logos_gap": 60,
+        "logo_opacity": 100,
+        "grayscale": 0,
+        "text_color": "#000000",
+        "border_color": "#ffffff",
+        "logo_1_image": "shopify://shop_images/vogue.webp",
+        "logo_1_text": "MUJERHOY",
+        "logo_2_image": "shopify://shop_images/ELLE.webp",
+        "logo_2_text": "ELLE",
+        "logo_3_image": "shopify://shop_images/image.webp",
+        "logo_3_text": "VOGUE",
+        "logo_4_image": "shopify://shop_images/woma.webp",
+        "logo_4_text": "Women's Health",
+        "logo_5_text": "",
+        "logo_6_text": "",
+        "padding_top": 12,
+        "padding_bottom": 0,
+        "padding_top_mobile": 28,
+        "padding_bottom_mobile": 28
       }
     },
     "collection_slider_QQnXP3": {
@@ -100,15 +132,15 @@
         "subheading_font_weight": "400",
         "overlay_color": "#000000",
         "overlay_opacity": 15,
-        "card_aspect_ratio": "3 / 4",
+        "card_aspect_ratio": "1 / 1",
         "card_border_radius": 16,
         "card_title_color": "#ffffff",
         "card_title_size_desktop": 20,
         "card_title_size_mobile": 16,
         "card_title_weight": "500",
         "button_label": "Comprar ahora",
-        "button_bg_color": "#ffffffd1",
-        "button_text_color": "#3a3a3a",
+        "button_bg_color": "#FFFFFF",
+        "button_text_color": "#000000",
         "button_font_size_desktop": 13,
         "button_font_size_mobile": 11,
         "columns_desktop": 4,
@@ -127,79 +159,6 @@
         "padding_bottom": 36,
         "padding_top_mobile": 28,
         "padding_bottom_mobile": 28
-      }
-    },
-    "convertlab_hero_t7YDft": {
-      "type": "convertlab-hero",
-      "blocks": {
-        "slide_pPDxgU": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/Gemini_Generated_Image_nwfk87nwfk87nwfk.webp",
-            "heading": "Tu piel, en su mejor versión",
-            "heading_size": "h1",
-            "heading_color": "",
-            "heading_font_size_desktop": 48,
-            "heading_font_size_mobile": 32,
-            "heading_font_weight": "600",
-            "subheading": "Porque cuando tu piel se ve bien, todo se siente más fácil. Ligera, auténtica y luminosa, como tú.",
-            "subheading_color": "",
-            "subheading_font_size_desktop": 18,
-            "subheading_font_size_mobile": 15,
-            "subheading_font_weight": "400",
-            "button_label": "COMPRAR AHORA",
-            "link": "shopify://collections",
-            "button_style_secondary": false,
-            "button_border_radius": 50,
-            "button_bg_color": "",
-            "button_text_color": "",
-            "button_border_color": "",
-            "box_align": "bottom-left",
-            "box_align_mobile": "middle-center",
-            "content_padding_horizontal_desktop": 80,
-            "content_padding_horizontal_mobile": 20,
-            "show_text_box": false,
-            "text_alignment": "left",
-            "text_alignment_mobile": "center",
-            "image_overlay_opacity": 20,
-            "color_scheme": "background-1"
-          }
-        }
-      },
-      "block_order": [
-        "slide_pPDxgU"
-      ],
-      "name": "Hero slideshow",
-      "settings": {
-        "layout": "grid",
-        "slide_height": "adapt_image",
-        "slider_visual": "dots",
-        "auto_rotate": false,
-        "change_slides_speed": 5,
-        "show_text_below": false,
-        "accessibility_info": "Hero slideshow",
-        "image_border_radius_desktop": 30,
-        "image_border_radius_mobile": 30,
-        "bubbles_position": "bottom",
-        "bubbles_aria_label": "Categorías",
-        "bubbles_background": "rgba(0,0,0,0)",
-        "bubbles_border_color": "#ffffff",
-        "bubbles_border_width": 2,
-        "bubbles_label_color": "#ffffff",
-        "bubbles_diameter_desktop": 80,
-        "bubbles_gap_desktop": 16,
-        "bubbles_label_font_size_desktop": 14,
-        "bubbles_padding_top_desktop": 24,
-        "bubbles_padding_bottom_desktop": 32,
-        "bubbles_diameter_mobile": 56,
-        "bubbles_gap_mobile": 8,
-        "bubbles_label_font_size_mobile": 12,
-        "bubbles_padding_top_mobile": 16,
-        "bubbles_padding_bottom_mobile": 16,
-        "padding_top_desktop": 60,
-        "padding_bottom_desktop": 60,
-        "padding_top_mobile": 40,
-        "padding_bottom_mobile": 40
       }
     },
     "convertlab_left_plus_slider_dgKyzT": {
@@ -242,6 +201,162 @@
         "padding_bottom": 48,
         "padding_top_mobile": 32,
         "padding_bottom_mobile": 32
+      }
+    },
+    "press_ticker_xcW46X": {
+      "type": "press-ticker",
+      "blocks": {
+        "item_DBBp8d": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/vogue-logo.svg",
+            "text": "VOGUE",
+            "link": "",
+            "target_blank": false
+          }
+        },
+        "item_kHKhwk": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/pngkey.com-rolling-stones-logo-png-1512812.png",
+            "text": "RUSSH",
+            "link": "",
+            "target_blank": false
+          }
+        },
+        "item_rberk6": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/960px-Marie_Claire_Magazine_logo_svg.png",
+            "text": "marie claire",
+            "link": "",
+            "target_blank": false
+          }
+        },
+        "item_qncrzD": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/harpers-bazaar-logo.svg",
+            "text": "BAZAAR",
+            "link": "",
+            "target_blank": false
+          }
+        },
+        "item_k9rGwi": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Revista_InStyle_idQQukCzRJ_0.svg",
+            "text": "InStyle",
+            "link": "",
+            "target_blank": false
+          }
+        }
+      },
+      "block_order": [
+        "item_DBBp8d",
+        "item_kHKhwk",
+        "item_rberk6",
+        "item_qncrzD",
+        "item_k9rGwi"
+      ],
+      "name": "Press Ticker",
+      "settings": {
+        "speed": 2,
+        "direction": "left",
+        "pause_on_hover": true,
+        "separator_char": "•",
+        "separator_spacing": 24,
+        "separator_size": 1,
+        "desktop_logo_height": 36,
+        "mobile_logo_height": 24,
+        "text_size": "1.25",
+        "text_bold": false,
+        "text_italic": false,
+        "text_uppercase": false,
+        "color_scheme": "background-2",
+        "custom_background_color": "#ffffff",
+        "custom_text_color": "",
+        "padding_top": 12,
+        "padding_bottom": 12,
+        "padding_top_mobile": 8,
+        "padding_bottom_mobile": 8
+      }
+    },
+    "convertlab_hero_t7YDft": {
+      "type": "convertlab-hero",
+      "blocks": {
+        "slide_pPDxgU": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Gemini_Generated_Image_nwfk87nwfk87nwfk.webp",
+            "heading": "Tu piel, en su mejor versión",
+            "heading_size": "h1",
+            "heading_color": "",
+            "heading_font_size_desktop": 48,
+            "heading_font_size_mobile": 32,
+            "heading_font_weight": "700",
+            "subheading": "Porque cuando tu piel se ve bien, todo se siente más fácil. Ligera, auténtica y luminosa, como tú.",
+            "subheading_color": "",
+            "subheading_font_size_desktop": 18,
+            "subheading_font_size_mobile": 15,
+            "subheading_font_weight": "400",
+            "button_label": "COMPRAR AHORA",
+            "link": "shopify://collections/mas-vendidos",
+            "button_style_secondary": false,
+            "button_border_radius": 50,
+            "button_bg_color": "#FFFFFF",
+            "button_text_color": "#000000",
+            "button_border_color": "#FFFFFF",
+            "box_align": "bottom-left",
+            "box_align_mobile": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "left",
+            "text_alignment_mobile": "center",
+            "image_overlay_opacity": 20,
+            "color_scheme": "background-1"
+          }
+        }
+      },
+      "block_order": [
+        "slide_pPDxgU"
+      ],
+      "name": "Hero slideshow",
+      "settings": {
+        "layout": "grid",
+        "slide_height": "adapt_image",
+        "max_height_desktop_vh": 100,
+        "max_height_mobile_vh": 50,
+        "slider_visual": "dots",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "show_text_below": false,
+        "accessibility_info": "Hero slideshow",
+        "padding_top_desktop": 60,
+        "padding_bottom_desktop": 60,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40,
+        "image_border_radius_desktop": 30,
+        "image_border_radius_mobile": 30,
+        "bubbles_position": "bottom",
+        "bubbles_aria_label": "Categorías",
+        "bubbles_background": "rgba(0,0,0,0)",
+        "bubbles_border_color": "#ffffff",
+        "bubbles_border_width": 2,
+        "bubbles_label_color": "#ffffff",
+        "bubbles_diameter_desktop": 80,
+        "bubbles_gap_desktop": 16,
+        "bubbles_label_font_size_desktop": 14,
+        "bubbles_padding_top_desktop": 24,
+        "bubbles_padding_bottom_desktop": 32,
+        "bubbles_outer_padding_desktop": 80,
+        "bubbles_diameter_mobile": 56,
+        "bubbles_gap_mobile": 8,
+        "bubbles_label_font_size_mobile": 12,
+        "bubbles_padding_top_mobile": 16,
+        "bubbles_padding_bottom_mobile": 16,
+        "bubbles_outer_padding_mobile": 16,
+        "bubbles_list_width_mobile": 360,
+        "bubbles_padding_horizontal_mobile": 16
       }
     },
     "community_feed_6VJENe": {
@@ -338,9 +453,11 @@
   },
   "order": [
     "convertlab_hero_enjii9",
+    "press_logos_GVXWyA",
     "collection_slider_QQnXP3",
-    "convertlab_hero_t7YDft",
     "convertlab_left_plus_slider_dgKyzT",
+    "press_ticker_xcW46X",
+    "convertlab_hero_t7YDft",
     "community_feed_6VJENe"
   ]
 }
