@@ -123,6 +123,10 @@
     if request.page_type == 'index' or request.page_type == 'collection'
       assign header_overlay_eligible = true
     endif
+    assign show_announcement_bar = header_overlay_eligible
+    if request.page_type == 'product'
+      assign show_announcement_bar = true
+    endif
   -%}
   {%- if section.settings.white_text and header_overlay_eligible -%}
     #shopify-section-{{ section.id }} .header__menu-item,
@@ -140,10 +144,16 @@
     }
   {%- endif -%}
 
-  {%- if header_overlay_eligible -%}
+  {%- if show_announcement_bar -%}
     {%- for block in section.blocks -%}
       {%- if block.type == 'announcement_bar' -%}
         {%- assign ann_scroll_duration = 60 | divided_by: block.settings.speed -%}
+        {%- assign ann_text_color = block.settings.text_color -%}
+        {%- assign ann_border_color = block.settings.border_color -%}
+        {%- if request.page_type == 'product' -%}
+          {%- assign ann_text_color = '#000000' -%}
+          {%- assign ann_border_color = '#000000' -%}
+        {%- endif -%}
         #shopify-section-{{ section.id }} .header-ann-bar-wrapper {
           --custom-ann-bar-font-size-desktop: {{ block.settings.font_size_desktop }}px;
           --custom-ann-bar-font-size-mobile: {{ block.settings.font_size_mobile }}px;
@@ -152,12 +162,12 @@
         }
         #shopify-section-{{ section.id }} .header-ann-bar-wrapper .custom-ann-bar__pill {
           background-color: transparent;
-          border: {{ block.settings.border_width }}px solid {{ block.settings.border_color }};
+          border: {{ block.settings.border_width }}px solid {{ ann_border_color }};
           border-radius: {{ block.settings.border_radius }}px;
         }
         #shopify-section-{{ section.id }} .header-ann-bar-wrapper .custom-ann-bar__text,
         #shopify-section-{{ section.id }} .header-ann-bar-wrapper .custom-ann-bar__separator {
-          color: {{ block.settings.text_color }};
+          color: {{ ann_text_color }};
         }
         #shopify-section-{{ section.id }} .header-ann-bar-wrapper .custom-ann-bar__track {
           animation: customAnnBarScroll {{ ann_scroll_duration }}s linear infinite;
@@ -238,7 +248,7 @@
 </svg>
 <{% if section.settings.sticky_header_type != 'none' %}sticky-header data-sticky-type="{{ section.settings.sticky_header_type }}"{% else %}div{% endif %} class="header-wrapper color-{{ section.settings.color_scheme }} gradient{% if section.settings.show_line_separator %} header-wrapper--border-bottom{% endif %}">
 
-  {%- if header_overlay_eligible -%}
+  {%- if show_announcement_bar -%}
     {%- for block in section.blocks -%}
       {%- if block.type == 'announcement_bar' -%}
         <div class="header-ann-bar-wrapper custom-ann-bar-section" {{ block.shopify_attributes }}>
