@@ -759,7 +759,7 @@
         "border_radius_mobile": 20,
         "color_scheme": "background-1",
         "padding_top": 60,
-        "padding_bottom": 40,
+        "padding_bottom": 60,
         "padding_top_mobile": 40,
         "padding_bottom_mobile": 40
       }
@@ -853,8 +853,8 @@
         "columns_desktop": 3,
         "columns_mobile": "1",
         "swipe_on_mobile": true,
-        "padding_top": 40,
-        "padding_bottom": 40,
+        "padding_top": 0,
+        "padding_bottom": 60,
         "padding_top_mobile": 0,
         "padding_bottom_mobile": 0
       }
@@ -943,8 +943,8 @@
         "row_size_mobile": 12,
         "color_scheme": "background-1",
         "bg_color": "",
-        "padding_top": 40,
-        "padding_bottom": 40,
+        "padding_top": 60,
+        "padding_bottom": 60,
         "padding_top_mobile": 40,
         "padding_bottom_mobile": 40
       }
@@ -1017,8 +1017,8 @@
         "layout_gap_desktop": 60,
         "layout_gap_mobile": 8,
         "bg_color": "#eaddd4",
-        "padding_top": 40,
-        "padding_bottom": 40,
+        "padding_top": 60,
+        "padding_bottom": 60,
         "padding_top_mobile": 40,
         "padding_bottom_mobile": 40
       }
@@ -1090,7 +1090,7 @@
         "padding_top": 40,
         "padding_bottom": 40,
         "padding_top_mobile": 40,
-        "padding_bottom_mobile": 40
+        "padding_bottom_mobile": 0
       }
     },
     "faq_accordion_m3GjeY": {
@@ -1206,7 +1206,7 @@
         "open_first_question": false,
         "padding_top": 40,
         "padding_bottom": 40,
-        "padding_top_mobile": 0,
+        "padding_top_mobile": 40,
         "padding_bottom_mobile": 40
       }
     },
