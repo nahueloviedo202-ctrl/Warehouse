@@ -854,7 +854,7 @@
         "columns_mobile": "1",
         "swipe_on_mobile": true,
         "padding_top": 0,
-        "padding_bottom": 0,
+        "padding_bottom": 60,
         "padding_top_mobile": 0,
         "padding_bottom_mobile": 0
       }
