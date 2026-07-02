@@ -862,7 +862,7 @@
         "row_size_mobile": 12,
         "color_scheme": "background-1",
         "bg_color": "",
-        "padding_top": 60,
+        "padding_top": 40,
         "padding_bottom": 40,
         "padding_top_mobile": 20,
         "padding_bottom_mobile": 20
@@ -936,7 +936,7 @@
         "layout_gap_desktop": 60,
         "layout_gap_mobile": 8,
         "bg_color": "#FFFFFF",
-        "padding_top": 60,
+        "padding_top": 40,
         "padding_bottom": 40,
         "padding_top_mobile": 24,
         "padding_bottom_mobile": 24
@@ -1103,7 +1103,7 @@
         "color_scheme": "background-1",
         "accent_color_scheme": "accent-2",
         "background_color": "",
-        "padding_top": 60,
+        "padding_top": 40,
         "padding_bottom": 40,
         "padding_top_mobile": 40,
         "padding_bottom_mobile": 40
@@ -1171,7 +1171,7 @@
         "button_text_size_mobile": 14,
         "color_scheme": "background-1",
         "bg_color": "#FFFFFF",
-        "padding_top": 60,
+        "padding_top": 40,
         "padding_bottom": 40,
         "padding_top_mobile": 24,
         "padding_bottom_mobile": 24
@@ -1241,7 +1241,7 @@
         "arrows_color": "#2A1F3D",
         "color_scheme": "background-1",
         "background_color": "#FFFFFF",
-        "padding_top": 60,
+        "padding_top": 40,
         "padding_bottom": 40,
         "padding_top_mobile": 0,
         "padding_bottom_mobile": 40
@@ -1358,7 +1358,7 @@
         "item_radius": 12,
         "item_spacing": 12,
         "open_first_question": false,
-        "padding_top": 60,
+        "padding_top": 40,
         "padding_bottom": 40,
         "padding_top_mobile": 40,
         "padding_bottom_mobile": 40
@@ -1453,7 +1453,7 @@
         "space_tablet": 16,
         "slides_mobile": 1.4,
         "space_mobile": 12,
-        "padding_top": 60,
+        "padding_top": 40,
         "padding_bottom": 40,
         "padding_top_mobile": 40,
         "padding_bottom_mobile": 40
