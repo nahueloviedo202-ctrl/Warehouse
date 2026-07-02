@@ -1,0 +1,72 @@
+.icon-badges__list {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.icon-badges__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.icon-badges__circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: var(--icon-badges-size-mobile, 7rem);
+  height: var(--icon-badges-size-mobile, 7rem);
+  border-radius: 50%;
+  background-color: var(--icon-badges-bg, rgba(var(--color-foreground), 0.1));
+  margin-bottom: 1rem;
+}
+
+.icon-badges__circle img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.icon-badges__circle svg {
+  width: 44%;
+  height: 44%;
+  fill: var(--icon-badges-icon-color, currentColor);
+}
+
+.icon-badges__label {
+  margin: 0;
+  font-size: 1.3rem;
+  line-height: 1.35;
+  color: var(--icon-badges-label-color, currentColor);
+}
+
+@media screen and (min-width: 750px) {
+  .icon-badges__list {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.4rem 3.2rem;
+  }
+
+  .icon-badges__item {
+    flex: 0 0 auto;
+    width: max(calc(var(--icon-badges-size-desktop, 9rem) + 2.4rem), 13rem);
+  }
+
+  .icon-badges__circle {
+    width: var(--icon-badges-size-desktop, 9rem);
+    height: var(--icon-badges-size-desktop, 9rem);
+  }
+
+  .icon-badges__label {
+    font-size: 1.4rem;
+  }
+}

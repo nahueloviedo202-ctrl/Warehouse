@@ -397,8 +397,12 @@
     "all": {
       "padding": {
         "section_padding_heading": "Relleno de sección",
+        "section_padding_heading_desktop": "Relleno de sección (desktop)",
+        "section_padding_heading_mobile": "Relleno de sección (mobile)",
         "padding_top": "Relleno superior",
-        "padding_bottom": "Relleno inferior"
+        "padding_bottom": "Relleno inferior",
+        "padding_top_mobile": "Relleno superior (mobile)",
+        "padding_bottom_mobile": "Relleno inferior (mobile)"
       },
       "spacing": "Espaciado",
       "colors": {

@@ -397,8 +397,12 @@
     "all": {
       "padding": {
         "section_padding_heading": "Abschnitts-Padding",
+        "section_padding_heading_desktop": "Section padding (desktop)",
+        "section_padding_heading_mobile": "Section padding (mobile)",
         "padding_top": "Oberes Padding",
-        "padding_bottom": "Unteres Padding"
+        "padding_bottom": "Unteres Padding",
+        "padding_top_mobile": "Top padding (mobile)",
+        "padding_bottom_mobile": "Bottom padding (mobile)"
       },
       "spacing": "Abstand",
       "colors": {

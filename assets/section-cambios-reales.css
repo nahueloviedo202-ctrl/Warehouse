@@ -1,0 +1,294 @@
+.cambios-reales {
+  position: relative;
+}
+
+.cambios-reales__heading-wrapper {
+  text-align: center;
+  margin: 0 auto 20px;
+}
+
+.cambios-reales__heading {
+  margin: 0 0 0.4rem;
+  color: var(--cr-heading-color, #070809);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.cambios-reales__subheading {
+  margin: 0;
+  color: var(--cr-subheading-color, rgba(43, 27, 23, 0.7));
+  font-weight: 400;
+}
+
+/* ── Wrapper con flechas ── */
+.cambios-reales__wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* ── Lista / slider ── */
+.cambios-reales__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: var(--cr-gap, 10px);
+  flex: 1;
+  min-width: 0;
+}
+
+.cambios-reales__item {
+  flex: 0 0 auto;
+  width: calc(
+    (100% - (var(--cr-cards-mobile, 1) - 1) * var(--cr-gap, 10px)) /
+      var(--cr-cards-mobile, 1)
+  );
+}
+
+@media screen and (min-width: 750px) {
+  .cambios-reales__item {
+    width: calc(
+      (100% - (var(--cr-cards-tablet, 2) - 1) * var(--cr-gap, 10px)) /
+        var(--cr-cards-tablet, 2)
+    );
+  }
+
+  .cambios-reales__arrow {
+    align-self: flex-start;
+    margin-top: calc(20px + var(--cr-image-height-desktop, 350px) / 2 - 2rem);
+  }
+
+  /* Especificidad mayor que .slider-button (0,1,0) y :not([disabled]):hover (0,3,0) de component-slider.css */
+  .cambios-reales .cambios-reales__arrow,
+  .cambios-reales .cambios-reales__arrow:not([disabled]):hover {
+    color: var(--cr-arrow-color-desktop, #854700);
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .cambios-reales__item {
+    width: calc(
+      (100% - (var(--cr-cards-desktop, 3) - 1) * var(--cr-gap, 10px)) /
+        var(--cr-cards-desktop, 3)
+    );
+  }
+}
+
+/* ── Tarjeta ── */
+.cambios-reales__card {
+  height: 100%;
+  width: 100%;
+  background-color: var(--cr-card-bg, #ffffff);
+  border: var(--cr-border-width, 1px) solid color-mix(in srgb, var(--cr-border-color, #854700) 50%, transparent);
+  border-radius: var(--cr-radius, 5px);
+  padding: 20px 12px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  box-sizing: border-box;
+}
+
+/* ── Bloque de imagen ── */
+.cambios-reales__image-block {
+  position: relative;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.cambios-reales__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: top center;
+  pointer-events: none;
+  display: block;
+}
+
+.cambios-reales__image-placeholder {
+  width: 100%;
+  background-color: rgba(133, 71, 0, 0.08);
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+/* ── Texto de reseña ── */
+.cambios-reales__text {
+  margin: 0;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  color: var(--cr-text-color, #000000);
+  flex-grow: 1;
+}
+
+/* ── Footer ── */
+.cambios-reales__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+}
+
+.cambios-reales__author {
+  margin: 0;
+  font-size: 1.4rem;
+  color: var(--cr-author-color, #000000);
+  white-space: nowrap;
+}
+
+/* ── Estrellas ── */
+.cambios-reales__stars {
+  display: flex;
+  gap: 1px;
+  flex-shrink: 0;
+}
+
+.cambios-reales__star {
+  display: inline-flex;
+  width: 14px;
+  height: 14px;
+  color: rgba(0, 0, 0, 0.15);
+}
+
+.cambios-reales__star--filled {
+  color: var(--cr-star-color, #f5a623);
+}
+
+.cambios-reales__star svg {
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+}
+
+/* ── Flechas ── */
+.cambios-reales__arrow {
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  background: var(--cr-arrow-bg-desktop, transparent);
+  border: 1.5px solid #85470080;
+  cursor: pointer;
+  padding: 0;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.cambios-reales__arrow:hover {
+  opacity: 1;
+}
+
+.cambios-reales__arrow[disabled] {
+  opacity: 0.25;
+  cursor: default;
+}
+
+/* SVG con viewBox 16x16 — paths ya apuntan en dirección correcta, sin rotación */
+.cambios-reales__arrow svg {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+}
+
+/* ── Responsive ajustes ── */
+@media screen and (max-width: 749px) {
+  .cambios-reales__heading-wrapper {
+    margin-bottom: 20px;
+  }
+
+  .cambios-reales__wrapper {
+    gap: 0;
+  }
+
+  .cambios-reales__arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    border: 1.5px solid #85470080;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    opacity: 1;
+  }
+
+  /* Especificidad (0,2,0) > .slider-button (0,1,0) de component-slider.css
+     que se carga después y sobreescribiría el tamaño con 44px. */
+  .cambios-reales .cambios-reales__arrow {
+    background-color: var(--cr-arrow-bg-mobile, #ffffff);
+    color: var(--cr-arrow-color-mobile, #854700);
+    width: 28px;
+    height: 28px;
+    border: 1px solid #85470080;
+  }
+
+  .cambios-reales__arrow--prev {
+    left: 0px;
+    border: 1px solid #85470080;
+  }
+
+  .cambios-reales__arrow--next {
+    right: 0px;
+    border: 1px solid #85470080;
+  }
+
+  .cambios-reales__arrow svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .cambios-reales__card {
+    gap: 10px;
+  }
+
+  .cambios-reales__text {
+    font-size: 1.3rem;
+  }
+
+  .cambios-reales__image-placeholder {
+    aspect-ratio: 4 / 3;
+  }
+
+  .cambios-reales__image-block {
+  position: relative;
+  width: 100%;
+  height: 280px !important;
+  border-radius: 10px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.cambios-reales__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: top center;
+  pointer-events: none;
+  display: block;
+}
+
+.cambios-reales__card {
+  height: fit-content;
+  width: 100%;
+  background-color: var(--cr-card-bg, #ffffff);
+  border: var(--cr-border-width, 1px) solid color-mix(in srgb, var(--cr-border-color, #854700) 50%, transparent);
+  border-radius: var(--cr-radius, 5px);
+  padding: 20px 12px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-sizing: border-box;
+}
+}

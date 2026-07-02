@@ -1,0 +1,479 @@
+{{ 'section-review-slider.css' | asset_url | stylesheet_tag }}
+
+<link rel="stylesheet" href="{{ 'component-slider.css' | asset_url }}" media="print" onload="this.media='all'">
+<noscript>{{ 'component-slider.css' | asset_url | stylesheet_tag }}</noscript>
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top_mobile }}px;
+    padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+  }
+
+  #shopify-section-{{ section.id }} {
+    --review-slider-heading-color: {{ section.settings.heading_color }};
+    --review-slider-subheading-color: {{ section.settings.subheading_color }};
+    --review-slider-card-bg: {{ section.settings.card_background_color }};
+    --review-slider-border-color: {{ section.settings.card_border_color }};
+    --review-slider-border-width: {{ section.settings.card_border_width }}px;
+    --review-slider-radius: {{ section.settings.card_corner_radius }}px;
+    --review-slider-text-color: {{ section.settings.text_color }};
+    --review-slider-author-color: {{ section.settings.author_color }};
+    --review-slider-star-color: {{ section.settings.star_color }};
+    --review-slider-arrow-color: {{ section.settings.arrows_color }};
+    --review-slider-gap: {{ section.settings.card_gap }}px;
+    --review-slider-cards-desktop: {{ section.settings.cards_per_row_desktop }};
+    --review-slider-cards-tablet: {{ section.settings.cards_per_row_tablet }};
+    --review-slider-cards-mobile: {{ section.settings.cards_per_row_mobile }};
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  .section-{{ section.id }}-heading {
+    font-size: {{ section.settings.heading_font_size_mobile }}px;
+  }
+  .section-{{ section.id }}-subheading {
+    font-size: {{ section.settings.subheading_font_size_mobile }}px;
+  }
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-heading {
+      font-size: {{ section.settings.heading_font_size_desktop }}px;
+    }
+    .section-{{ section.id }}-subheading {
+      font-size: {{ section.settings.subheading_font_size_desktop }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="review-slider color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding"{% if section.settings.background_color != blank %} style="background-color: {{ section.settings.background_color }};"{% endif %}>
+  <div class="page-width">
+    {%- if section.settings.heading != blank or section.settings.subheading != blank -%}
+      <div class="review-slider__heading-wrapper">
+        {%- if section.settings.heading != blank -%}
+          <h2 class="review-slider__heading {{ section.settings.heading_size }} section-{{ section.id }}-heading" style="{% if section.settings.heading_color != blank %}color: {{ section.settings.heading_color }};{% endif %}{% if section.settings.heading_font_weight != blank %}font-weight: {{ section.settings.heading_font_weight }};{% endif %}">
+            {{ section.settings.heading | escape }}
+          </h2>
+        {%- endif -%}
+        {%- if section.settings.subheading != blank -%}
+          <p class="review-slider__subheading section-{{ section.id }}-subheading" style="{% if section.settings.subheading_color != blank %}color: {{ section.settings.subheading_color }};{% endif %}{% if section.settings.subheading_font_weight != blank %}font-weight: {{ section.settings.subheading_font_weight }};{% endif %}">{{ section.settings.subheading | escape }}</p>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+
+    <slider-component class="review-slider__wrapper">
+      {%- if section.settings.show_arrows -%}
+        <button
+          type="button"
+          class="review-slider__arrows slider-button slider-button--prev"
+          name="previous"
+          aria-label="{{ 'general.slider.previous_slide' | t }}"
+        >
+          {%- render 'icon-caret' -%}
+        </button>
+      {%- endif -%}
+
+      <ul
+        id="Slider-{{ section.id }}"
+        class="review-slider__list slider slider--everywhere"
+        role="list"
+      >
+        {%- for block in section.blocks -%}
+          <li
+            id="Slide-{{ section.id }}-{{ forloop.index }}"
+            class="review-slider__item slider__slide"
+            {{ block.shopify_attributes }}
+          >
+            {%- render 'review-slider-item', block: block -%}
+          </li>
+        {%- else -%}
+          <li class="review-slider__item slider__slide">
+            {%- render 'review-slider-item', block: nil -%}
+          </li>
+        {%- endfor -%}
+      </ul>
+
+      {%- if section.settings.show_arrows -%}
+        <button
+          type="button"
+          class="review-slider__arrows slider-button slider-button--next"
+          name="next"
+          aria-label="{{ 'general.slider.next_slide' | t }}"
+        >
+          {%- render 'icon-caret' -%}
+        </button>
+      {%- endif -%}
+    </slider-component>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Slider de reseñas",
+  "class": "section",
+  "tag": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Encabezado"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "default": "Cambios reales",
+      "label": "Título"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        { "value": "h2", "label": "Pequeño" },
+        { "value": "h1", "label": "Mediano" },
+        { "value": "h0", "label": "Grande" }
+      ],
+      "default": "h1",
+      "label": "Tamaño del título"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Color del título",
+      "default": "#111111"
+    },
+    {
+      "type": "range",
+      "id": "heading_font_size_desktop",
+      "min": 10,
+      "max": 64,
+      "step": 1,
+      "unit": "px",
+      "label": "Tamaño del título escritorio (px)",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "heading_font_size_mobile",
+      "min": 10,
+      "max": 60,
+      "step": 1,
+      "unit": "px",
+      "label": "Tamaño del título móvil (px)",
+      "default": 26
+    },
+    {
+      "type": "select",
+      "id": "heading_font_weight",
+      "label": "Peso del título",
+      "options": [
+        { "value": "300", "label": "Light" },
+        { "value": "400", "label": "Regular" },
+        { "value": "500", "label": "Medium" },
+        { "value": "600", "label": "Semibold" },
+        { "value": "700", "label": "Bold" },
+        { "value": "800", "label": "Extrabold" }
+      ],
+      "default": "700"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "default": "Opiniones de quienes ya eligieron Nutri Infusión",
+      "label": "Subtítulo"
+    },
+    {
+      "type": "color",
+      "id": "subheading_color",
+      "label": "Color del subtítulo",
+      "default": "#B5651D"
+    },
+    {
+      "type": "range",
+      "id": "subheading_font_size_desktop",
+      "min": 10,
+      "max": 64,
+      "step": 1,
+      "unit": "px",
+      "label": "Tamaño del subtítulo escritorio (px)",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "subheading_font_size_mobile",
+      "min": 10,
+      "max": 60,
+      "step": 1,
+      "unit": "px",
+      "label": "Tamaño del subtítulo móvil (px)",
+      "default": 15
+    },
+    {
+      "type": "select",
+      "id": "subheading_font_weight",
+      "label": "Peso del subtítulo",
+      "options": [
+        { "value": "300", "label": "Light" },
+        { "value": "400", "label": "Regular" },
+        { "value": "500", "label": "Medium" },
+        { "value": "600", "label": "Semibold" },
+        { "value": "700", "label": "Bold" },
+        { "value": "800", "label": "Extrabold" }
+      ],
+      "default": "400"
+    },
+    {
+      "type": "header",
+      "content": "Tarjetas de reseña"
+    },
+    {
+      "type": "color",
+      "id": "card_background_color",
+      "label": "Color de fondo de la tarjeta",
+      "default": "#FAF2EA"
+    },
+    {
+      "type": "color",
+      "id": "card_border_color",
+      "label": "Color del borde",
+      "default": "#E8C9A0"
+    },
+    {
+      "type": "range",
+      "id": "card_border_width",
+      "min": 0,
+      "max": 6,
+      "step": 1,
+      "unit": "px",
+      "default": 1,
+      "label": "Grosor del borde"
+    },
+    {
+      "type": "range",
+      "id": "card_corner_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 16,
+      "label": "Redondeo de esquinas"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Color del texto de la reseña",
+      "default": "#2B2B2B"
+    },
+    {
+      "type": "color",
+      "id": "author_color",
+      "label": "Color del nombre",
+      "default": "#1A1A1A"
+    },
+    {
+      "type": "color",
+      "id": "star_color",
+      "label": "Color de las estrellas",
+      "default": "#F5A623"
+    },
+    {
+      "type": "header",
+      "content": "Diseño"
+    },
+    {
+      "type": "range",
+      "id": "cards_per_row_desktop",
+      "min": 1,
+      "max": 4,
+      "step": 1,
+      "default": 3,
+      "label": "Reseñas visibles en escritorio"
+    },
+    {
+      "type": "range",
+      "id": "cards_per_row_tablet",
+      "min": 1,
+      "max": 3,
+      "step": 1,
+      "default": 2,
+      "label": "Reseñas visibles en tablet"
+    },
+    {
+      "type": "range",
+      "id": "cards_per_row_mobile",
+      "min": 1,
+      "max": 3,
+      "step": 1,
+      "default": 1,
+      "label": "Reseñas visibles en móvil"
+    },
+    {
+      "type": "range",
+      "id": "card_gap",
+      "min": 0,
+      "max": 60,
+      "step": 4,
+      "unit": "px",
+      "default": 24,
+      "label": "Espacio entre tarjetas"
+    },
+    {
+      "type": "header",
+      "content": "Flechas de navegación"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_arrows",
+      "default": true,
+      "label": "Mostrar flechas"
+    },
+    {
+      "type": "color",
+      "id": "arrows_color",
+      "label": "Color de las flechas",
+      "default": "#B5651D"
+    },
+    {
+      "type": "header",
+      "content": "Colores de la sección"
+    },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "options": [
+        { "value": "accent-1", "label": "t:sections.all.colors.accent_1.label" },
+        { "value": "accent-2", "label": "t:sections.all.colors.accent_2.label" },
+        { "value": "background-1", "label": "t:sections.all.colors.background_1.label" },
+        { "value": "background-2", "label": "t:sections.all.colors.background_2.label" },
+        { "value": "inverse", "label": "t:sections.all.colors.inverse.label" }
+      ],
+      "default": "background-1",
+      "label": "t:sections.all.colors.label"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Color de fondo personalizado",
+      "info": "Sobrescribe el esquema de color de la sección."
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading_desktop"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 48
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading_mobile"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top_mobile",
+      "default": 28
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom_mobile",
+      "default": 28
+    }
+  ],
+  "blocks": [
+    {
+      "type": "review",
+      "name": "Reseña",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "text",
+          "default": "Me sorprendió la calidad. La pulsera es hermosa y los pendientes son incluso más lindos en persona.",
+          "label": "Texto de la reseña"
+        },
+        {
+          "type": "image_picker",
+          "id": "avatar",
+          "label": "Foto del cliente"
+        },
+        {
+          "type": "text",
+          "id": "author",
+          "default": "Cliente",
+          "label": "Nombre del cliente"
+        },
+        {
+          "type": "range",
+          "id": "rating",
+          "min": 1,
+          "max": 5,
+          "step": 1,
+          "default": 5,
+          "label": "Calificación (estrellas)"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 12,
+  "presets": [
+    {
+      "name": "Slider de reseñas",
+      "blocks": [
+        {
+          "type": "review",
+          "settings": {
+            "text": "Me sorprendió la calidad. La pulsera es hermosa y los pendientes son incluso más lindos en persona.",
+            "author": "María D.",
+            "rating": 5
+          }
+        },
+        {
+          "type": "review",
+          "settings": {
+            "text": "Me sorprendió la calidad. La pulsera es hermosa y los pendientes son incluso más lindos en persona.",
+            "author": "Sofía P.",
+            "rating": 5
+          }
+        },
+        {
+          "type": "review",
+          "settings": {
+            "text": "Me sorprendió la calidad. La pulsera es hermosa y los pendientes son incluso más lindos en persona.",
+            "author": "Camila M.",
+            "rating": 5
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

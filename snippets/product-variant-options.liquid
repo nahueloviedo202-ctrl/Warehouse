@@ -71,9 +71,9 @@
           {% if variant_option_val == value %}
             {% if block.settings.enable_swatches_custom_colors == false %}
               {% if variant.image %}
-                <img src="{{ variant.image | img_url: '60x' }}" alt="{{ variant_option_val }}">
+                <img src="{{ variant.image | image_url: width: 60 }}" alt="{{ variant_option_val }}" width="60" height="60">
               {% else %}
-                <img src="{{ 'empty-swatch.svg' | asset_url }}" alt="{{ variant_option_val }}">
+                <img src="{{ 'empty-swatch.svg' | asset_url }}" alt="{{ variant_option_val }}" width="60" height="60">
               {% endif %}
             {% else %}
               <div class="color-swatch__custom-color" style="--bg-color: {{ variant.image.alt }}">&nbsp</div>

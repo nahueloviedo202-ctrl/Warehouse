@@ -1,0 +1,159 @@
+/* ============================================
+   Tarjetas de beneficios
+   ============================================ */
+
+.tben {
+  width: 100%;
+}
+
+/* ── Layout principal (mobile: columna) ── */
+.tben__layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--tben-layout-gap-mobile, 15px);
+}
+
+/* ── Desktop: grid con texto+botón a la izquierda, cards a la derecha ── */
+@media screen and (min-width: 750px) {
+  .tben__layout {
+    display: grid;
+    grid-template-columns: minmax(0, 438px) minmax(0, 416px);
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "text  cards"
+      "btn   cards";
+    column-gap: var(--tben-layout-gap, 60px);
+    row-gap: 15px;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* ── Columna de texto ── */
+.tben__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 438px;
+  text-align: center;
+}
+
+@media screen and (min-width: 750px) {
+  .tben__text {
+    grid-area: text;
+    max-width: none;
+  }
+}
+
+.tben__subtitle {
+  margin: 0;
+  color: var(--tben-subtitle-color, #2b1b17);
+  opacity: 0.7;
+}
+
+.tben__heading {
+  margin: 0;
+  color: var(--tben-heading-color, #2b1b17);
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+/* ── Wrapper del botón: al final en mobile, bajo el texto en desktop ── */
+.tben__btn-wrapper {
+  width: 100%;
+  max-width: 438px;
+}
+
+@media screen and (min-width: 750px) {
+  .tben__btn-wrapper {
+    grid-area: btn;
+    max-width: none;
+  }
+}
+
+.tben__button {
+  display: block;
+  width: 100%;
+  padding: 10px 15px;
+  background-color: var(--tben-button-bg, #000000);
+  color: var(--tben-button-color, #ffffff);
+  border-radius: var(--tben-button-radius, 100px);
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-heading-family);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  transition: opacity 0.2s ease;
+}
+
+.tben__button:hover {
+  opacity: 0.85;
+  color: var(--tben-button-color, #ffffff);
+  text-decoration: none;
+}
+
+/* ── Grilla de tarjetas ── */
+.tben__cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--tben-card-gap, 10px);
+  width: 100%;
+  max-width: 416px;
+}
+
+@media screen and (min-width: 750px) {
+  .tben__cards {
+    grid-area: cards;
+    max-width: none;
+    align-self: center;
+  }
+}
+
+.tben__card {
+  background-color: var(--tben-card-bg, #ffffff);
+  border-radius: var(--tben-card-radius, 5px);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-align: center;
+}
+
+/* ── Ícono ── */
+.tben__card-icon {
+  display: block;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.tben__card-icon--placeholder {
+  color: var(--tben-card-text-color, #2b1b17);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tben__card-icon--placeholder svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* ── Texto de la tarjeta ── */
+.tben__card-text {
+  margin: 0;
+  color: var(--tben-card-text-color, #2b1b17);
+  line-height: 1.4;
+  gap: 15px;
+}
+
+/* ── Estado vacío en el editor ── */
+.tben__card--placeholder .tben__card-text {
+  opacity: 0.4;
+}

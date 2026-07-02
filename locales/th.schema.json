@@ -397,8 +397,12 @@
     "all": {
       "padding": {
         "section_padding_heading": "พื้นที่ว่างของส่วน",
+        "section_padding_heading_desktop": "Section padding (desktop)",
+        "section_padding_heading_mobile": "Section padding (mobile)",
         "padding_top": "พื้นที่ว่างด้านบน",
-        "padding_bottom": "พื้นที่ว่างด้านล่าง"
+        "padding_bottom": "พื้นที่ว่างด้านล่าง",
+        "padding_top_mobile": "Top padding (mobile)",
+        "padding_bottom_mobile": "Bottom padding (mobile)"
       },
       "spacing": "การเว้นระยะห่าง",
       "colors": {

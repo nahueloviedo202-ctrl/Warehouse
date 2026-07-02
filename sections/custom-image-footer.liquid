@@ -1,0 +1,562 @@
+{{ 'section-custom-image-footer.css' | asset_url | stylesheet_tag }}
+
+{%- assign overlay_r = section.settings.overlay_color | color_extract: 'red' -%}
+{%- assign overlay_g = section.settings.overlay_color | color_extract: 'green' -%}
+{%- assign overlay_b = section.settings.overlay_color | color_extract: 'blue' -%}
+{%- assign overlay_a = section.settings.overlay_opacity | divided_by: 100.0 -%}
+
+{%- style -%}
+  .cif-footer--{{ section.id }} {
+    min-height: {{ section.settings.min_height | times: 0.7 | round: 0 }}px;
+    border-radius: {{ section.settings.top_radius }}px {{ section.settings.top_radius }}px 0 0;
+  }
+
+  .cif-footer--{{ section.id }} .cif-footer__inner {
+    padding-top: {{ section.settings.padding_top_mobile }}px;
+    padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+    padding-left: {{ section.settings.padding_horizontal_mobile }}px;
+    padding-right: {{ section.settings.padding_horizontal_mobile }}px;
+  }
+
+  .cif-footer--{{ section.id }} .cif-footer__logo {
+    width: {{ section.settings.logo_width_mobile }}px;
+    max-width: 60%;
+  }
+
+  .cif-footer--{{ section.id }} .cif-footer__brand {
+    font-size: {{ section.settings.brand_size_mobile }}px;
+  }
+
+  .cif-footer--{{ section.id }} .cif-footer__col-heading {
+    font-size: {{ section.settings.heading_size_mobile }}px;
+  }
+
+  .cif-footer--{{ section.id }} .cif-footer__link {
+    font-size: {{ section.settings.link_size_mobile }}px;
+  }
+
+  .cif-footer--{{ section.id }} .cif-footer__copyright,
+  .cif-footer--{{ section.id }} .cif-footer__copyright small {
+    font-size: {{ section.settings.copyright_size_mobile }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .cif-footer--{{ section.id }} {
+      min-height: {{ section.settings.min_height }}px;
+    }
+
+    .cif-footer--{{ section.id }} .cif-footer__inner {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+      padding-left: {{ section.settings.padding_horizontal }}px;
+      padding-right: {{ section.settings.padding_horizontal }}px;
+    }
+
+    .cif-footer--{{ section.id }} .cif-footer__logo {
+      width: {{ section.settings.logo_width }}px;
+      max-width: 40%;
+    }
+
+    .cif-footer--{{ section.id }} .cif-footer__brand {
+      font-size: {{ section.settings.brand_size }}px;
+    }
+
+    .cif-footer--{{ section.id }} .cif-footer__col-heading {
+      font-size: {{ section.settings.heading_size }}px;
+    }
+
+    .cif-footer--{{ section.id }} .cif-footer__link {
+      font-size: {{ section.settings.link_size }}px;
+    }
+
+    .cif-footer--{{ section.id }} .cif-footer__copyright,
+    .cif-footer--{{ section.id }} .cif-footer__copyright small {
+      font-size: {{ section.settings.copyright_size }}px;
+    }
+  }
+{%- endstyle -%}
+
+<footer class="cif-footer cif-footer--{{ section.id }}" style="--cif-overlay-color: rgba({{ overlay_r }}, {{ overlay_g }}, {{ overlay_b }}, {{ overlay_a }});">
+
+  <div class="cif-footer__bg">
+    {%- if section.settings.background_image != blank -%}
+      {{
+        section.settings.background_image
+        | image_url: width: 2400
+        | image_tag:
+          loading: 'lazy',
+          widths: '750, 1100, 1500, 1780, 2000, 2400',
+          class: 'cif-footer__bg-img',
+          alt: section.settings.background_image.alt | escape
+      }}
+    {%- else -%}
+      {{ 'lifestyle-1' | placeholder_svg_tag: 'cif-footer__bg-img placeholder-svg' }}
+    {%- endif -%}
+  </div>
+
+  <div class="cif-footer__inner">
+
+    <div class="cif-footer__header">
+      {%- if section.settings.logo_image != blank -%}
+        <div class="cif-footer__logo">
+          {{
+            section.settings.logo_image
+            | image_url: width: section.settings.logo_width
+            | image_tag:
+              loading: 'lazy',
+              widths: '80, 120, 150, 200, 250, 300, 400',
+              alt: section.settings.logo_image.alt | default: shop.name | escape
+          }}
+        </div>
+      {%- elsif section.settings.brand_name != blank -%}
+        <span class="cif-footer__brand">{{ section.settings.brand_name }}</span>
+      {%- endif -%}
+    </div>
+
+    {%- if section.blocks.size > 0 -%}
+      <nav class="cif-footer__nav" aria-label="{{ 'general.footer.footer_menu_label' | t | default: 'Footer' }}">
+        {%- for block in section.blocks -%}
+          {%- if block.type == 'link_list' -%}
+            <div class="cif-footer__col" {{ block.shopify_attributes }}>
+              {%- if block.settings.heading != blank -%}
+                <h3 class="cif-footer__col-heading">{{ block.settings.heading | escape }}</h3>
+              {%- endif -%}
+              {%- if block.settings.menu != blank -%}
+                <ul class="cif-footer__col-links">
+                  {%- for link in block.settings.menu.links -%}
+                    <li>
+                      <a
+                        href="{{ link.url }}"
+                        class="cif-footer__link{% if link.active %} cif-footer__link--active{% endif %}"
+                        {% if link.active %}aria-current="page"{% endif %}
+                      >
+                        {{ link.title }}
+                      </a>
+                    </li>
+                  {%- endfor -%}
+                </ul>
+              {%- endif -%}
+            </div>
+          {%- endif -%}
+        {%- endfor -%}
+      </nav>
+    {%- else -%}
+      <div class="cif-footer__nav"></div>
+    {%- endif -%}
+
+    <div class="cif-footer__bottom">
+      <div class="cif-footer__copyright">
+        {%- if section.settings.copyright_text != blank -%}
+          <small>&copy; {{ 'now' | date: '%Y' }}, {{ section.settings.copyright_text }}</small>
+        {%- else -%}
+          <small>&copy; {{ 'now' | date: '%Y' }}, {{ shop.name | link_to: routes.root_url }}</small>
+        {%- endif -%}
+      </div>
+
+      {%- if section.settings.show_payment -%}
+        {%- assign has_icons = false -%}
+        {%- if section.settings.pay_visa or section.settings.pay_master or section.settings.pay_amex or section.settings.pay_paypal or section.settings.pay_apple or section.settings.pay_google or section.settings.pay_shop or section.settings.pay_discover or section.settings.pay_diners or section.settings.pay_maestro or section.settings.pay_jcb or section.settings.pay_klarna -%}
+          {%- assign has_icons = true -%}
+        {%- endif -%}
+        {%- if has_icons -%}
+          <div class="cif-footer__payment">
+            <ul class="cif-footer__payment-list" role="list">
+              {%- if section.settings.pay_visa -%}<li>{{ 'visa' | payment_type_svg_tag: class: 'icon icon--full-color' }}</li>{%- endif -%}
+              {%- if section.settings.pay_master -%}<li>{{ 'master' | payment_type_svg_tag: class: 'icon icon--full-color' }}</li>{%- endif -%}
+              {%- if section.settings.pay_amex -%}<li>{{ 'american_express' | payment_type_svg_tag: class: 'icon icon--full-color' }}</li>{%- endif -%}
+              {%- if section.settings.pay_paypal -%}<li>{{ 'paypal' | payment_type_svg_tag: class: 'icon icon--full-color' }}</li>{%- endif -%}
+              {%- if section.settings.pay_apple -%}<li>{{ 'apple_pay' | payment_type_svg_tag: class: 'icon icon--full-color' }}</li>{%- endif -%}
+              {%- if section.settings.pay_google -%}<li>{{ 'google_pay' | payment_type_svg_tag: class: 'icon icon--full-color' }}</li>{%- endif -%}
+              {%- if section.settings.pay_shop -%}<li>{{ 'shopify_pay' | payment_type_svg_tag: class: 'icon icon--full-color' }}</li>{%- endif -%}
+              {%- if section.settings.pay_discover -%}<li>{{ 'discover' | payment_type_svg_tag: class: 'icon icon--full-color' }}</li>{%- endif -%}
+              {%- if section.settings.pay_diners -%}<li>{{ 'diners_club' | payment_type_svg_tag: class: 'icon icon--full-color' }}</li>{%- endif -%}
+              {%- if section.settings.pay_maestro -%}<li>{{ 'maestro' | payment_type_svg_tag: class: 'icon icon--full-color' }}</li>{%- endif -%}
+              {%- if section.settings.pay_jcb -%}<li>{{ 'jcb' | payment_type_svg_tag: class: 'icon icon--full-color' }}</li>{%- endif -%}
+              {%- if section.settings.pay_klarna -%}<li>{{ 'klarna' | payment_type_svg_tag: class: 'icon icon--full-color' }}</li>{%- endif -%}
+            </ul>
+          </div>
+        {%- endif -%}
+      {%- endif -%}
+    </div>
+
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Footer con imagen",
+  "tag": "section",
+  "class": "section-custom-image-footer",
+  "blocks": [
+    {
+      "type": "link_list",
+      "name": "Columna de enlaces",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Título de columna",
+          "default": "Políticas"
+        },
+        {
+          "type": "link_list",
+          "id": "menu",
+          "label": "Menú",
+          "info": "Selecciona un menú de navegación"
+        }
+      ]
+    }
+  ],
+  "settings": [
+    {
+      "type": "header",
+      "content": "Imagen de fondo"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Imagen de fondo"
+    },
+    {
+      "type": "color",
+      "id": "overlay_color",
+      "label": "Color del overlay",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "label": "Opacidad del overlay",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 45
+    },
+    {
+      "type": "header",
+      "content": "Logo / Marca"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo_image",
+      "label": "Logo (imagen)",
+      "info": "Si se sube un logo, tiene prioridad sobre el texto de marca"
+    },
+    {
+      "type": "range",
+      "id": "logo_width",
+      "label": "Ancho del logo (desktop)",
+      "min": 40,
+      "max": 400,
+      "step": 10,
+      "unit": "px",
+      "default": 150
+    },
+    {
+      "type": "range",
+      "id": "logo_width_mobile",
+      "label": "Ancho del logo (mobile)",
+      "min": 40,
+      "max": 300,
+      "step": 10,
+      "unit": "px",
+      "default": 120
+    },
+    {
+      "type": "text",
+      "id": "brand_name",
+      "label": "Texto de marca (si no hay logo)",
+      "default": "INFINITE LOVE"
+    },
+    {
+      "type": "header",
+      "content": "Barra inferior"
+    },
+    {
+      "type": "text",
+      "id": "copyright_text",
+      "label": "Texto de copyright",
+      "info": "Si se deja vacío, se usa el nombre de la tienda automáticamente.",
+      "placeholder": "INFINITELOVE BCN"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_payment",
+      "label": "Mostrar métodos de pago",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "pay_visa",
+      "label": "Visa",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "pay_master",
+      "label": "Mastercard",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "pay_amex",
+      "label": "American Express",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "pay_paypal",
+      "label": "PayPal",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "pay_apple",
+      "label": "Apple Pay",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "pay_google",
+      "label": "Google Pay",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "pay_shop",
+      "label": "Shop Pay",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "pay_discover",
+      "label": "Discover",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "pay_diners",
+      "label": "Diners Club",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "pay_maestro",
+      "label": "Maestro",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "pay_jcb",
+      "label": "JCB",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "pay_klarna",
+      "label": "Klarna",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Tipografía (desktop)"
+    },
+    {
+      "type": "range",
+      "id": "brand_size",
+      "label": "Tamaño texto de marca",
+      "min": 14,
+      "max": 60,
+      "step": 1,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "label": "Tamaño título de columna",
+      "min": 12,
+      "max": 40,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "link_size",
+      "label": "Tamaño sub-enlaces",
+      "min": 10,
+      "max": 32,
+      "step": 1,
+      "unit": "px",
+      "default": 13
+    },
+    {
+      "type": "range",
+      "id": "copyright_size",
+      "label": "Tamaño copyright",
+      "min": 10,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "header",
+      "content": "Tipografía (mobile)"
+    },
+    {
+      "type": "range",
+      "id": "brand_size_mobile",
+      "label": "Tamaño texto de marca (mobile)",
+      "min": 12,
+      "max": 48,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "heading_size_mobile",
+      "label": "Tamaño título de columna (mobile)",
+      "min": 12,
+      "max": 36,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "link_size_mobile",
+      "label": "Tamaño sub-enlaces (mobile)",
+      "min": 10,
+      "max": 28,
+      "step": 1,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "copyright_size_mobile",
+      "label": "Tamaño copyright (mobile)",
+      "min": 10,
+      "max": 22,
+      "step": 1,
+      "unit": "px",
+      "default": 11
+    },
+    {
+      "type": "header",
+      "content": "Dimensiones"
+    },
+    {
+      "type": "range",
+      "id": "min_height",
+      "label": "Altura mínima",
+      "min": 300,
+      "max": 900,
+      "step": 20,
+      "unit": "px",
+      "default": 500
+    },
+    {
+      "type": "range",
+      "id": "top_radius",
+      "label": "Radio de borde superior",
+      "min": 0,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "header",
+      "content": "Espaciado (desktop)"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding superior",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding inferior",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_horizontal",
+      "label": "Padding horizontal",
+      "min": 16,
+      "max": 160,
+      "step": 8,
+      "unit": "px",
+      "default": 32
+    },
+    {
+      "type": "header",
+      "content": "Espaciado (mobile)"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "label": "Padding superior (mobile)",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "label": "Padding inferior (mobile)",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "padding_horizontal_mobile",
+      "label": "Padding horizontal (mobile)",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 24
+    }
+  ],
+  "presets": [
+    {
+      "name": "Footer con imagen",
+      "blocks": [
+        {
+          "type": "link_list",
+          "settings": {
+            "heading": "Políticas"
+          }
+        },
+        {
+          "type": "link_list",
+          "settings": {
+            "heading": "Nosotras"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

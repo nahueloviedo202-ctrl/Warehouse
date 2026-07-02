@@ -1,0 +1,609 @@
+{{ 'section-feature-cards.css' | asset_url | stylesheet_tag }}
+{{ 'component-rte.css' | asset_url | stylesheet_tag }}
+<link rel="stylesheet" href="{{ 'component-slider.css' | asset_url }}" media="print" onload="this.media='all'">
+<noscript>{{ 'component-slider.css' | asset_url | stylesheet_tag }}</noscript>
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top_mobile }}px;
+    padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  #shopify-section-{{ section.id }} {
+    --feature-cards-radius: {{ section.settings.card_corner_radius }}px;
+    --feature-cards-image-radius: {{ section.settings.image_corner_radius }}px;
+    --feature-cards-padding: {{ section.settings.card_padding }}px;
+  }
+
+  .section-{{ section.id }}-heading {
+    font-size: {{ section.settings.heading_font_size_mobile }}px;
+  }
+  .section-{{ section.id }}-subheading {
+    font-size: {{ section.settings.subheading_font_size_mobile }}px;
+  }
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-heading {
+      font-size: {{ section.settings.heading_font_size_desktop }}px;
+    }
+    .section-{{ section.id }}-subheading {
+      font-size: {{ section.settings.subheading_font_size_desktop }}px;
+    }
+  }
+{%- endstyle -%}
+
+{%- liquid
+  assign accent_class = 'color-foreground-' | append: section.settings.accent_color_scheme
+  assign columns_mobile_int = section.settings.columns_mobile | plus: 0
+  assign show_mobile_slider = false
+  if section.settings.swipe_on_mobile and section.blocks.size > columns_mobile_int
+    assign show_mobile_slider = true
+  endif
+
+  case section.settings.image_ratio
+    when 'square'
+      assign aspect_ratio = '1 / 1'
+    when 'portrait'
+      assign aspect_ratio = '3 / 4'
+    when 'landscape'
+      assign aspect_ratio = '4 / 3'
+    else
+      assign aspect_ratio = 'auto'
+  endcase
+-%}
+
+<div class="color-{{ section.settings.color_scheme }} gradient"{% if section.settings.background_color != blank %} style="background-color: {{ section.settings.background_color }};"{% endif %}>
+  <div class="feature-cards page-width section-{{ section.id }}-padding">
+    {%- if section.settings.heading != blank -%}
+      <h2
+        class="feature-cards__heading {{ section.settings.heading_size }} {{ accent_class }}{% if section.settings.heading_italic %} feature-cards__heading--italic{% endif %} section-{{ section.id }}-heading"
+        style="{% if section.settings.heading_color != blank %}color: {{ section.settings.heading_color }};{% endif %}{% if section.settings.heading_font_weight != blank %}font-weight: {{ section.settings.heading_font_weight }};{% endif %}"
+      >
+        {{ section.settings.heading | escape }}
+      </h2>
+    {%- endif -%}
+
+    {%- if section.settings.subheading != blank -%}
+      <div class="feature-cards__subheading rte section-{{ section.id }}-subheading" style="{% if section.settings.subheading_color != blank %}color: {{ section.settings.subheading_color }};{% endif %}{% if section.settings.subheading_font_weight != blank %}font-weight: {{ section.settings.subheading_font_weight }};{% endif %}">{{ section.settings.subheading }}</div>
+    {%- endif -%}
+
+    {%- if section.blocks.size > 0 -%}
+      <slider-component class="feature-cards__slider-component{% if show_mobile_slider == false %} page-width{% endif %}">
+        <ul
+          id="Slider-{{ section.id }}"
+          class="feature-cards__grid grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down{% if show_mobile_slider %} slider slider--tablet grid--peek{% endif %}"
+          role="list"
+        >
+          {%- for block in section.blocks -%}
+            {%- style -%}
+              .block-{{ block.id }}-heading { font-size: {{ block.settings.heading_font_size_mobile }}px; }
+              .block-{{ block.id }}-text { font-size: {{ block.settings.text_font_size_mobile }}px; }
+              @media screen and (min-width: 750px) {
+                .block-{{ block.id }}-heading { font-size: {{ block.settings.heading_font_size_desktop }}px; }
+                .block-{{ block.id }}-text { font-size: {{ block.settings.text_font_size_desktop }}px; }
+              }
+            {%- endstyle -%}
+            <li
+              id="Slide-{{ section.id }}-{{ forloop.index }}"
+              class="feature-cards__item grid__item{% if show_mobile_slider %} slider__slide{% endif %}"
+              {{ block.shopify_attributes }}
+            >
+              <div class="feature-cards__card color-{{ section.settings.card_color_scheme }} gradient"{% if block.settings.card_background_color != blank %} style="background-color: {{ block.settings.card_background_color }};"{% endif %}>
+                <div class="feature-cards__media" style="--feature-cards-aspect-ratio: {{ aspect_ratio }};">
+                  {%- if block.settings.image != blank -%}
+                    {{
+                      block.settings.image
+                      | image_url: width: 800
+                      | image_tag:
+                        loading: 'lazy',
+                        sizes: '(min-width: 990px) 360px, (min-width: 750px) 45vw, 80vw',
+                        widths: '220, 320, 440, 560, 760, 800'
+                    }}
+                  {%- else -%}
+                    {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg feature-cards__placeholder' }}
+                  {%- endif -%}
+                </div>
+                {%- if block.settings.heading != blank -%}
+                  <h3
+                    class="feature-cards__card-heading h4 {{ accent_class }}{% if section.settings.heading_italic %} feature-cards__heading--italic{% endif %} block-{{ block.id }}-heading"
+                    style="{% if block.settings.heading_color != blank %}color: {{ block.settings.heading_color }};{% endif %}{% if block.settings.heading_font_weight != blank %}font-weight: {{ block.settings.heading_font_weight }};{% endif %}"
+                  >
+                    {{ block.settings.heading | escape }}
+                  </h3>
+                {%- endif -%}
+                {%- if block.settings.text != blank -%}
+                  <div class="feature-cards__card-text rte block-{{ block.id }}-text" style="{% if block.settings.text_color != blank %}color: {{ block.settings.text_color }};{% endif %}{% if block.settings.text_font_weight != blank %}font-weight: {{ block.settings.text_font_weight }};{% endif %}">{{ block.settings.text }}</div>
+                {%- endif -%}
+              </div>
+            </li>
+          {%- endfor -%}
+        </ul>
+
+        {%- if show_mobile_slider -%}
+          <div class="slider-buttons no-js-hidden">
+            <button
+              type="button"
+              class="slider-button slider-button--prev"
+              name="previous"
+              aria-label="{{ 'general.slider.previous_slide' | t }}"
+              aria-controls="Slider-{{ section.id }}"
+            >
+              {% render 'icon-caret' %}
+            </button>
+            <div class="slider-counter caption">
+              <span class="slider-counter--current">1</span>
+              <span aria-hidden="true"> / </span>
+              <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
+              <span class="slider-counter--total">{{ section.blocks.size }}</span>
+            </div>
+            <button
+              type="button"
+              class="slider-button slider-button--next"
+              name="next"
+              aria-label="{{ 'general.slider.next_slide' | t }}"
+              aria-controls="Slider-{{ section.id }}"
+            >
+              {% render 'icon-caret' %}
+            </button>
+          </div>
+        {%- endif -%}
+      </slider-component>
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Tarjetas de beneficios",
+  "class": "section",
+  "tag": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "default": "Base que trabaja contigo",
+      "label": "Encabezado"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        { "value": "h2", "label": "Pequeño" },
+        { "value": "h1", "label": "Mediano" },
+        { "value": "h0", "label": "Grande" }
+      ],
+      "default": "h1",
+      "label": "Tamaño del encabezado"
+    },
+    {
+      "type": "checkbox",
+      "id": "heading_italic",
+      "default": true,
+      "label": "Usar estilo cursiva en encabezados",
+      "info": "Aplica cursiva al título principal y al título de cada tarjeta."
+    },
+    {
+      "type": "richtext",
+      "id": "subheading",
+      "default": "<p>Una base ligera y transpirable que se adapta a <em>tu</em> tono sin dejar líneas.</p>",
+      "label": "Subtítulo"
+    },
+    {
+      "type": "header",
+      "content": "Tipografía — Encabezado"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Color"
+    },
+    {
+      "type": "range",
+      "id": "heading_font_size_desktop",
+      "min": 10,
+      "max": 64,
+      "step": 1,
+      "unit": "px",
+      "label": "Tamaño escritorio (px)",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "heading_font_size_mobile",
+      "min": 10,
+      "max": 60,
+      "step": 1,
+      "unit": "px",
+      "label": "Tamaño móvil (px)",
+      "default": 26
+    },
+    {
+      "type": "select",
+      "id": "heading_font_weight",
+      "label": "Peso",
+      "options": [
+        { "value": "300", "label": "Light" },
+        { "value": "400", "label": "Regular" },
+        { "value": "500", "label": "Medium" },
+        { "value": "600", "label": "Semibold" },
+        { "value": "700", "label": "Bold" },
+        { "value": "800", "label": "Extrabold" }
+      ],
+      "default": "700"
+    },
+    {
+      "type": "header",
+      "content": "Tipografía — Subtítulo"
+    },
+    {
+      "type": "color",
+      "id": "subheading_color",
+      "label": "Color"
+    },
+    {
+      "type": "range",
+      "id": "subheading_font_size_desktop",
+      "min": 10,
+      "max": 64,
+      "step": 1,
+      "unit": "px",
+      "label": "Tamaño escritorio (px)",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "subheading_font_size_mobile",
+      "min": 10,
+      "max": 60,
+      "step": 1,
+      "unit": "px",
+      "label": "Tamaño móvil (px)",
+      "default": 15
+    },
+    {
+      "type": "select",
+      "id": "subheading_font_weight",
+      "label": "Peso",
+      "options": [
+        { "value": "300", "label": "Light" },
+        { "value": "400", "label": "Regular" },
+        { "value": "500", "label": "Medium" },
+        { "value": "600", "label": "Semibold" },
+        { "value": "700", "label": "Bold" },
+        { "value": "800", "label": "Extrabold" }
+      ],
+      "default": "400"
+    },
+    {
+      "type": "header",
+      "content": "Colores"
+    },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "options": [
+        { "value": "accent-1", "label": "t:sections.all.colors.accent_1.label" },
+        { "value": "accent-2", "label": "t:sections.all.colors.accent_2.label" },
+        { "value": "background-1", "label": "t:sections.all.colors.background_1.label" },
+        { "value": "background-2", "label": "t:sections.all.colors.background_2.label" },
+        { "value": "inverse", "label": "t:sections.all.colors.inverse.label" }
+      ],
+      "default": "background-1",
+      "label": "Esquema de color de la sección"
+    },
+    {
+      "type": "select",
+      "id": "card_color_scheme",
+      "options": [
+        { "value": "accent-1", "label": "t:sections.all.colors.accent_1.label" },
+        { "value": "accent-2", "label": "t:sections.all.colors.accent_2.label" },
+        { "value": "background-1", "label": "t:sections.all.colors.background_1.label" },
+        { "value": "background-2", "label": "t:sections.all.colors.background_2.label" },
+        { "value": "inverse", "label": "t:sections.all.colors.inverse.label" }
+      ],
+      "default": "background-2",
+      "label": "Esquema de color de las tarjetas"
+    },
+    {
+      "type": "select",
+      "id": "accent_color_scheme",
+      "options": [
+        { "value": "accent-1", "label": "t:sections.all.colors.accent_1.label" },
+        { "value": "accent-2", "label": "t:sections.all.colors.accent_2.label" },
+        { "value": "text", "label": "Color de texto" }
+      ],
+      "default": "accent-2",
+      "label": "Color de acento",
+      "info": "Color del encabezado principal y de los títulos de cada tarjeta."
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Color de fondo personalizado",
+      "info": "Sobrescribe el esquema de color de la sección."
+    },
+    {
+      "type": "header",
+      "content": "Diseño de las tarjetas"
+    },
+    {
+      "type": "select",
+      "id": "image_ratio",
+      "options": [
+        { "value": "adapt", "label": "Adaptar a la imagen" },
+        { "value": "square", "label": "Cuadrada" },
+        { "value": "portrait", "label": "Vertical" },
+        { "value": "landscape", "label": "Horizontal" }
+      ],
+      "default": "square",
+      "label": "Proporción de la imagen"
+    },
+    {
+      "type": "range",
+      "id": "card_corner_radius",
+      "min": 0,
+      "max": 30,
+      "step": 1,
+      "unit": "px",
+      "default": 10,
+      "label": "Radio del borde de la tarjeta"
+    },
+    {
+      "type": "range",
+      "id": "image_corner_radius",
+      "min": 0,
+      "max": 30,
+      "step": 1,
+      "default": 14,
+      "unit": "px",
+      "label": "Radio del borde de la imagen"
+    },
+    {
+      "type": "range",
+      "id": "card_padding",
+      "min": 0,
+      "max": 48,
+      "step": 2,
+      "unit": "px",
+      "default": 24,
+      "label": "Espaciado interno de la tarjeta"
+    },
+    {
+      "type": "header",
+      "content": "Columnas"
+    },
+    {
+      "type": "range",
+      "id": "columns_desktop",
+      "min": 2,
+      "max": 4,
+      "step": 1,
+      "default": 3,
+      "label": "Columnas en escritorio"
+    },
+    {
+      "type": "select",
+      "id": "columns_mobile",
+      "default": "1",
+      "label": "Columnas en móvil",
+      "options": [
+        { "value": "1", "label": "1 columna" },
+        { "value": "2", "label": "2 columnas" }
+      ]
+    },
+    {
+      "type": "checkbox",
+      "id": "swipe_on_mobile",
+      "default": true,
+      "label": "Activar deslizamiento (swipe) en móvil y tablet",
+      "info": "Muestra las tarjetas en un carrusel deslizable con una vista previa de la siguiente tarjeta, igual que en el sitio de referencia."
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading_desktop"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 64
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 64
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading_mobile"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top_mobile",
+      "default": 28
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom_mobile",
+      "default": 28
+    }
+  ],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Tarjeta",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Imagen"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Título de la tarjeta",
+          "label": "Título"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "default": "<p>Describe este beneficio del producto.</p>",
+          "label": "Texto"
+        },
+        {
+          "type": "header",
+          "content": "Color de fondo"
+        },
+        {
+          "type": "color",
+          "id": "card_background_color",
+          "label": "Color de fondo de la tarjeta",
+          "info": "Sobrescribe el esquema de color de las tarjetas para esta tarjeta."
+        },
+        {
+          "type": "header",
+          "content": "Tipografía — Título de la tarjeta"
+        },
+        {
+          "type": "color",
+          "id": "heading_color",
+          "label": "Color"
+        },
+        {
+          "type": "range",
+          "id": "heading_font_size_desktop",
+          "min": 10,
+          "max": 64,
+          "step": 1,
+          "unit": "px",
+          "label": "Tamaño escritorio (px)",
+          "default": 20
+        },
+        {
+          "type": "range",
+          "id": "heading_font_size_mobile",
+          "min": 10,
+          "max": 60,
+          "step": 1,
+          "unit": "px",
+          "label": "Tamaño móvil (px)",
+          "default": 17
+        },
+        {
+          "type": "select",
+          "id": "heading_font_weight",
+          "label": "Peso",
+          "options": [
+            { "value": "300", "label": "Light" },
+            { "value": "400", "label": "Regular" },
+            { "value": "500", "label": "Medium" },
+            { "value": "600", "label": "Semibold" },
+            { "value": "700", "label": "Bold" },
+            { "value": "800", "label": "Extrabold" }
+          ],
+          "default": "700"
+        },
+        {
+          "type": "header",
+          "content": "Tipografía — Texto de la tarjeta"
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "label": "Color"
+        },
+        {
+          "type": "range",
+          "id": "text_font_size_desktop",
+          "min": 10,
+          "max": 64,
+          "step": 1,
+          "unit": "px",
+          "label": "Tamaño escritorio (px)",
+          "default": 15
+        },
+        {
+          "type": "range",
+          "id": "text_font_size_mobile",
+          "min": 10,
+          "max": 60,
+          "step": 1,
+          "unit": "px",
+          "label": "Tamaño móvil (px)",
+          "default": 14
+        },
+        {
+          "type": "select",
+          "id": "text_font_weight",
+          "label": "Peso",
+          "options": [
+            { "value": "300", "label": "Light" },
+            { "value": "400", "label": "Regular" },
+            { "value": "500", "label": "Medium" },
+            { "value": "600", "label": "Semibold" },
+            { "value": "700", "label": "Bold" },
+            { "value": "800", "label": "Extrabold" }
+          ],
+          "default": "400"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Tarjetas de beneficios",
+      "blocks": [
+        {
+          "type": "card",
+          "settings": {
+            "heading": "Se desliza sobre la textura y las líneas finas",
+            "text": "<p>Cremoso al contacto, luego se derrite suavemente para un acabado de aspecto más suave.</p>"
+          }
+        },
+        {
+          "type": "card",
+          "settings": {
+            "heading": "Se funde con tu tono exacto",
+            "text": "<p>A medida que difuminas, los pigmentos se adaptan para un acabado perfecto, sin adivinar ni un cajón lleno de tonos.</p>"
+          }
+        },
+        {
+          "type": "card",
+          "settings": {
+            "heading": "Hasta 12 horas de uso cómodo",
+            "text": "<p>Se siente ligero, luce natural, se mantiene en su lugar: cobertura fresca que nunca se asemeja a una mascarilla.</p>"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

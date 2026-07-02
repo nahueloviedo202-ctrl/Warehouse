@@ -1,0 +1,147 @@
+/* ===== Section: ¿Por qué elegir? ===== */
+
+.pqe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.pqe__title {
+  text-align: center;
+  line-height: 1.25;
+  margin: 0 auto;
+  max-width: 80rem;
+}
+
+/* Table wrapper */
+.pqe__table-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.pqe__table {
+  width: 100%;
+  max-width: var(--pqe-table-max-w, 500px);
+}
+
+/* Header row */
+.pqe__header {
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 0.4rem;
+}
+
+.pqe__header-vita {
+  margin-left: auto;
+  width: 6rem;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.4rem;
+}
+
+.pqe__header-otros {
+  width: 6rem;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.4rem;
+}
+
+.pqe__product-img {
+  object-fit: cover;
+  border-radius: 0.5rem;
+  display: block;
+  max-width: 100%;
+}
+
+.pqe__col-label {
+  font-size: 1.3rem;
+  line-height: 1.7;
+  text-align: center;
+  display: block;
+}
+
+/* Data rows */
+.pqe__row {
+  display: flex;
+  align-items: center;
+}
+
+.pqe__row--bordered {
+  border-bottom: 1px solid var(--pqe-divider, #444444);
+}
+
+.pqe__row-feature {
+  flex: 1;
+  min-width: 0;
+  padding-right: 0.8rem;
+}
+
+.pqe__row-feature p {
+  margin: 0;
+  line-height: 1.7;
+}
+
+/* Vita icon cell */
+.pqe__vita-cell {
+  width: 6rem;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem;
+  background-color: var(--pqe-vita-bg, #f1e9e3);
+  color: var(--pqe-icon-color, #1a1a1a);
+}
+
+.pqe__vita-cell--first {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.pqe__vita-cell--last {
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+/* Others icon cell */
+.pqe__otros-cell {
+  width: 6rem;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem;
+  color: var(--pqe-icon-color, #1a1a1a);
+}
+
+/* Icons */
+.pqe__icon {
+  display: block;
+  flex-shrink: 0;
+}
+
+/* Mobile */
+@media screen and (max-width: 479px) {
+  .pqe__vita-cell,
+  .pqe__otros-cell {
+    width: 5rem;
+    padding: 0.6rem 0.4rem;
+  }
+
+  .pqe__header-vita,
+  .pqe__header-otros {
+    width: 5rem;
+  }
+
+  .pqe__row-feature {
+    padding-right: 0.4rem;
+  }
+}

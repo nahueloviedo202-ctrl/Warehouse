@@ -1,0 +1,248 @@
+/* =============================================================================
+   PRC Block — Product Review Card Slider
+   Encapsulated: all rules scoped with .prc-block prefix.
+   Designed to match Figma node 34:699 (desktop) and 34:765 (mobile).
+   ============================================================================= */
+
+/* -----------------------------------------------------------------------------
+   slider-component wrapper
+   Override the theme's  slider-component { display: block }  with a class
+   selector (higher specificity: 0,1,1 vs 0,0,1).
+   ----------------------------------------------------------------------------- */
+slider-component.prc-block__slider {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+/* -----------------------------------------------------------------------------
+   Slider list
+   We intentionally do NOT override overflow-x.
+   slider--everywhere already sets: overflow-x: auto, scroll-snap-type: x mandatory,
+   scroll-behavior: smooth, -webkit-overflow-scrolling: touch.
+   The .slider class already hides the scrollbar (scrollbar-width: none, ::-webkit-scrollbar).
+   ----------------------------------------------------------------------------- */
+.prc-block__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+  min-width: 0;
+  display: flex; /* lays items in a horizontal row for the JS offset calc */
+}
+
+/* Reset the 1rem bottom margin from .slider--everywhere */
+.prc-block__list.slider.slider--everywhere {
+  margin-bottom: 0;
+}
+
+/* -----------------------------------------------------------------------------
+   Slides — 1 card visible at a time (100 % width each)
+   flex-shrink: 0 is already set by .slider__slide
+   ----------------------------------------------------------------------------- */
+.prc-block__item.slider__slide {
+  flex: 0 0 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* -----------------------------------------------------------------------------
+   Card
+   Figma desktop: #fff9f6 bg · 1px solid rgba(133,71,0,0.5) border · 5px radius
+   Avatar is positioned absolute on the left; content fills the right.
+   ----------------------------------------------------------------------------- */
+.prc-block__card {
+  background-color: var(--prc-card-bg, #fff9f6);
+  /* Figma uses rgba(133,71,0,0.5) — replicate via color-mix so the schema color
+     picker (which is always opaque) still produces the right visual output. */
+  border: var(--prc-border-width, 1px) solid color-mix(in srgb, var(--prc-border-color, #854700) 50%, transparent);
+  border-radius: var(--prc-radius, 5px);
+  position: relative;
+  /* Figma desktop card: 523 × 118 px.
+     min-height lets the card grow if text is long without clipping.
+     padding-left = avatar offset (2.1rem) + avatar size + gap (1rem)
+     so content never overlaps the avatar regardless of the avatar_size setting. */
+  min-height: 11.8rem;
+  padding: 1.4rem 2rem 1rem calc(2.1rem + var(--prc-avatar-size, 9rem) + 1rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+/* -----------------------------------------------------------------------------
+   Avatar
+   Figma desktop: 90 × 90 px circle, left = 21 px, top = 14 px
+   ----------------------------------------------------------------------------- */
+.prc-block__avatar {
+  position: absolute;
+  left: 2.1rem;
+  top: 1.4rem;
+  width: var(--prc-avatar-size, 9rem);
+  height: var(--prc-avatar-size, 9rem);
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.prc-block__avatar img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.prc-block__avatar .placeholder-svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: rgba(var(--color-foreground), 0.06);
+}
+
+/* -----------------------------------------------------------------------------
+   Review text
+   Figma desktop: 14 px · #434343 · Poppins Regular
+   ----------------------------------------------------------------------------- */
+.prc-block__text {
+  margin: 0;
+  font-size: var(--prc-text-size, 1.4rem);
+  line-height: 1.5;
+  color: var(--prc-text-color, #434343);
+  flex: 1;
+}
+
+/* -----------------------------------------------------------------------------
+   Footer — author + stars, right-aligned
+   Figma desktop: positioned at the bottom-right of the card
+   ----------------------------------------------------------------------------- */
+.prc-block__footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 0.8rem;
+}
+
+/* -----------------------------------------------------------------------------
+   Author name
+   Figma desktop: 14 px · #1e1e1e
+   ----------------------------------------------------------------------------- */
+.prc-block__author {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--prc-author-color, #1e1e1e);
+  white-space: nowrap;
+}
+
+/* -----------------------------------------------------------------------------
+   Stars
+   Figma desktop: 5 × 16 px · gap 5 px · gold
+   ----------------------------------------------------------------------------- */
+.prc-block__stars {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 1.6rem;
+  line-height: 1;
+  color: rgba(var(--color-foreground), 0.15);
+}
+
+.prc-block__star--filled {
+  color: var(--prc-star-color, #f5a623);
+}
+
+/* -----------------------------------------------------------------------------
+   Arrow buttons
+   Figma: ~26 px circles with brown stroke; arrow SVG inside (icon-caret).
+   Override .slider-button { border: none; background: transparent; width: 44px }
+   Selector specificity: 0,2,1 beats .slider-button 0,1,0
+   ----------------------------------------------------------------------------- */
+.prc-block__btn.slider-button {
+  flex: none;
+  width: 2.6rem;
+  height: 2.6rem;
+  min-width: 2.6rem;
+  padding: 0;
+  border-radius: 50%;
+  border: 0.1rem solid var(--prc-arrow-color, rgba(133, 71, 0, 0.8));
+  background-color: var(--prc-arrow-bg, #fff9f6);
+  color: var(--prc-arrow-color, #854700);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.prc-block__btn.slider-button .icon {
+  height: 0.55rem;
+}
+
+.prc-block__btn.slider-button:hover:not([disabled]) {
+  background-color: var(--prc-arrow-color, #854700);
+  color: #ffffff;
+}
+
+.prc-block__btn.slider-button[disabled] {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+/* Hidden state: arrows invisible when only 1 review or show_arrows is off.
+   Keeps buttons in the DOM so SliderComponent can still find button[name="next"]. */
+.prc-block__btn--hidden {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* =============================================================================
+   MOBILE  (≤ 749 px)
+   Figma mobile card (34:766): avatar 70 × 60 px oval · text 12 px · footer #fbf5f5
+   ============================================================================= */
+@media screen and (max-width: 749px) {
+
+  slider-component.prc-block__slider {
+    gap: 0.4rem;
+  }
+
+  .prc-block__card {
+    min-height: 12.5rem;
+    /* Mobile: padding-left = avatar offset (2rem) + avatar width + gap (0.5rem) */
+    padding: 1.7rem 2rem 0.5rem calc(2rem + var(--prc-avatar-size-mobile, 7rem) + 0.5rem);
+  }
+
+  .prc-block__avatar {
+    left: 2rem;
+    top: 1.7rem;
+    width: var(--prc-avatar-size-mobile, 7rem);
+    height: var(--prc-avatar-size-mobile, 7rem);
+    border-radius: 50%;
+  }
+
+  .prc-block__text {
+    font-size: var(--prc-text-size-mobile, 1.2rem);
+  }
+
+  .prc-block__footer {
+    background-color: #fbf5f5; /* Figma mobile footer bg */
+    padding: 0.3rem 0.6rem;
+    border-radius: 0.3rem;
+    gap: 0.6rem;
+    margin-top: 0.6rem;
+  }
+
+  .prc-block__author {
+    font-size: 1.3rem;
+  }
+
+  .prc-block__stars {
+    font-size: 1.4rem;
+    gap: 0.4rem;
+  }
+
+  .prc-block__btn.slider-button {
+    width: 2.2rem;
+    height: 2.2rem;
+    min-width: 2.2rem;
+  }
+}

@@ -3,8 +3,8 @@
 
 {%- style -%}
   .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    padding-top: {{ section.settings.padding_top_mobile }}px;
+    padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
   }
 
   @media screen and (min-width: 750px) {
@@ -24,12 +24,36 @@
       -%}
         <div class="content-container center">
           {%- unless section.settings.title == blank -%}
-            <h2 class="title {{ section.settings.heading_size }}">
+            {% style %}
+              .section-{{ section.id }}-heading {
+                font-size: {{ section.settings.heading_font_size_mobile }}px;
+                {% if section.settings.heading_color != blank %}color: {{ section.settings.heading_color }};{% endif %}
+                {% if section.settings.heading_font_weight != blank %}font-weight: {{ section.settings.heading_font_weight }};{% endif %}
+              }
+              @media screen and (min-width: 750px) {
+                .section-{{ section.id }}-heading {
+                  font-size: {{ section.settings.heading_font_size_desktop }}px;
+                }
+              }
+            {% endstyle %}
+            <h2 class="title {{ section.settings.heading_size }} section-{{ section.id }}-heading">
               {{ section.settings.title | escape }}
             </h2>
           {%- endunless -%}
           {%- unless section.settings.text == blank -%}
-            {{ section.settings.text }}
+            {% style %}
+              .section-{{ section.id }}-text {
+                font-size: {{ section.settings.text_font_size_mobile }}px;
+                {% if section.settings.text_color != blank %}color: {{ section.settings.text_color }};{% endif %}
+                {% if section.settings.text_font_weight != blank %}font-weight: {{ section.settings.text_font_weight }};{% endif %}
+              }
+              @media screen and (min-width: 750px) {
+                .section-{{ section.id }}-text {
+                  font-size: {{ section.settings.text_font_size_desktop }}px;
+                }
+              }
+            {% endstyle %}
+            <div class="section-{{ section.id }}-text">{{ section.settings.text }}</div>
           {%- endunless -%}
           {%- unless section.settings.image == blank -%}
             <div class="content-and-results__image">
@@ -41,7 +65,19 @@
       <div class="results-container">
         <div class="results">
           {%- unless section.settings.results_headline == blank -%}
-            <h3 class="title {{ section.settings.results_headline_size }} {% if section.settings.results_headline_alignment == 'center' %} center{% endif %}">
+            {% style %}
+              .section-{{ section.id }}-results-headline {
+                font-size: {{ section.settings.results_headline_font_size_mobile }}px;
+                {% if section.settings.results_headline_color != blank %}color: {{ section.settings.results_headline_color }};{% endif %}
+                {% if section.settings.results_headline_font_weight != blank %}font-weight: {{ section.settings.results_headline_font_weight }};{% endif %}
+              }
+              @media screen and (min-width: 750px) {
+                .section-{{ section.id }}-results-headline {
+                  font-size: {{ section.settings.results_headline_font_size_desktop }}px;
+                }
+              }
+            {% endstyle %}
+            <h3 class="title {{ section.settings.results_headline_size }}{% if section.settings.results_headline_alignment == 'center' %} center{% endif %} section-{{ section.id }}-results-headline">
               {{ section.settings.results_headline | escape }}
             </h3>
           {%- endunless -%}
@@ -51,7 +87,19 @@
                 <div class="results__percentage" style="--percentage: {{ row.settings.percentage }}%">
                   <p>{{ row.settings.percentage }}%</p>
                 </div>
-                <div class="results__text">
+                {% style %}
+                  .block-{{ row.id }}-text {
+                    font-size: {{ row.settings.row_text_font_size_mobile }}px;
+                    {% if row.settings.row_text_color != blank %}color: {{ row.settings.row_text_color }};{% endif %}
+                    {% if row.settings.row_text_font_weight != blank %}font-weight: {{ row.settings.row_text_font_weight }};{% endif %}
+                  }
+                  @media screen and (min-width: 750px) {
+                    .block-{{ row.id }}-text {
+                      font-size: {{ row.settings.row_text_font_size_desktop }}px;
+                    }
+                  }
+                {% endstyle %}
+                <div class="results__text block-{{ row.id }}-text">
                   {{ row.settings.row_text }}
                 </div>
               </div>
@@ -109,6 +157,92 @@
           ],
           "default": "h1",
           "label": "t:sections.all.heading_size.label"
+        },
+        {
+          "type": "header",
+          "content": "Tipografía — Encabezado"
+        },
+        {
+          "type": "color",
+          "id": "heading_color",
+          "label": "Color"
+        },
+        {
+          "type": "range",
+          "id": "heading_font_size_desktop",
+          "min": 10,
+          "max": 64,
+          "step": 1,
+          "unit": "px",
+          "label": "Tamaño escritorio (px)",
+          "default": 36
+        },
+        {
+          "type": "range",
+          "id": "heading_font_size_mobile",
+          "min": 10,
+          "max": 60,
+          "step": 1,
+          "unit": "px",
+          "label": "Tamaño móvil (px)",
+          "default": 28
+        },
+        {
+          "type": "select",
+          "id": "heading_font_weight",
+          "label": "Peso",
+          "options": [
+            { "value": "300", "label": "Light" },
+            { "value": "400", "label": "Regular" },
+            { "value": "500", "label": "Medium" },
+            { "value": "600", "label": "Semibold" },
+            { "value": "700", "label": "Bold" },
+            { "value": "800", "label": "Extrabold" }
+          ],
+          "default": "700"
+        },
+        {
+          "type": "header",
+          "content": "Tipografía — Texto"
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "label": "Color"
+        },
+        {
+          "type": "range",
+          "id": "text_font_size_desktop",
+          "min": 10,
+          "max": 64,
+          "step": 1,
+          "unit": "px",
+          "label": "Tamaño escritorio (px)",
+          "default": 16
+        },
+        {
+          "type": "range",
+          "id": "text_font_size_mobile",
+          "min": 10,
+          "max": 60,
+          "step": 1,
+          "unit": "px",
+          "label": "Tamaño móvil (px)",
+          "default": 15
+        },
+        {
+          "type": "select",
+          "id": "text_font_weight",
+          "label": "Peso",
+          "options": [
+            { "value": "300", "label": "Light" },
+            { "value": "400", "label": "Regular" },
+            { "value": "500", "label": "Medium" },
+            { "value": "600", "label": "Semibold" },
+            { "value": "700", "label": "Bold" },
+            { "value": "800", "label": "Extrabold" }
+          ],
+          "default": "400"
         },
         {
             "type": "richtext",
@@ -212,6 +346,49 @@
             "label": "Results heading alignment"
         },
         {
+          "type": "header",
+          "content": "Tipografía — Título de resultados"
+        },
+        {
+          "type": "color",
+          "id": "results_headline_color",
+          "label": "Color"
+        },
+        {
+          "type": "range",
+          "id": "results_headline_font_size_desktop",
+          "min": 10,
+          "max": 64,
+          "step": 1,
+          "unit": "px",
+          "label": "Tamaño escritorio (px)",
+          "default": 28
+        },
+        {
+          "type": "range",
+          "id": "results_headline_font_size_mobile",
+          "min": 10,
+          "max": 60,
+          "step": 1,
+          "unit": "px",
+          "label": "Tamaño móvil (px)",
+          "default": 22
+        },
+        {
+          "type": "select",
+          "id": "results_headline_font_weight",
+          "label": "Peso",
+          "options": [
+            { "value": "300", "label": "Light" },
+            { "value": "400", "label": "Regular" },
+            { "value": "500", "label": "Medium" },
+            { "value": "600", "label": "Semibold" },
+            { "value": "700", "label": "Bold" },
+            { "value": "800", "label": "Extrabold" }
+          ],
+          "default": "700"
+        },
+        {
             "type": "richtext",
             "id": "caption",
             "default": "<p>Caption about the results and/or link for their proof.</p>",
@@ -236,7 +413,7 @@
         },
         {
         "type": "header",
-        "content": "t:sections.all.padding.section_padding_heading"
+        "content": "t:sections.all.padding.section_padding_heading_desktop"
         },
         {
         "type": "range",
@@ -257,6 +434,30 @@
         "unit": "px",
         "label": "t:sections.all.padding.padding_bottom",
         "default": 36
+        },
+        {
+        "type": "header",
+        "content": "t:sections.all.padding.section_padding_heading_mobile"
+        },
+        {
+        "type": "range",
+        "id": "padding_top_mobile",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_top_mobile",
+        "default": 28
+        },
+        {
+        "type": "range",
+        "id": "padding_bottom_mobile",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_bottom_mobile",
+        "default": 28
         }
     ],
     "blocks": [
@@ -278,6 +479,49 @@
                     "id": "row_text",
                     "default": "<p>Noticed that this product has significantly improved their life.</p>",
                     "label": "Result"
+                },
+                {
+                    "type": "header",
+                    "content": "Tipografía — Texto del resultado"
+                },
+                {
+                    "type": "color",
+                    "id": "row_text_color",
+                    "label": "Color"
+                },
+                {
+                    "type": "range",
+                    "id": "row_text_font_size_desktop",
+                    "min": 10,
+                    "max": 64,
+                    "step": 1,
+                    "unit": "px",
+                    "label": "Tamaño escritorio (px)",
+                    "default": 15
+                },
+                {
+                    "type": "range",
+                    "id": "row_text_font_size_mobile",
+                    "min": 10,
+                    "max": 60,
+                    "step": 1,
+                    "unit": "px",
+                    "label": "Tamaño móvil (px)",
+                    "default": 14
+                },
+                {
+                    "type": "select",
+                    "id": "row_text_font_weight",
+                    "label": "Peso",
+                    "options": [
+                        { "value": "300", "label": "Light" },
+                        { "value": "400", "label": "Regular" },
+                        { "value": "500", "label": "Medium" },
+                        { "value": "600", "label": "Semibold" },
+                        { "value": "700", "label": "Bold" },
+                        { "value": "800", "label": "Extrabold" }
+                    ],
+                    "default": "400"
                 }
             ]
         }

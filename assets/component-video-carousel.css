@@ -1,0 +1,134 @@
+.video-carousel {
+  position: relative;
+  margin: 3rem 0;
+}
+
+.video-carousel__heading {
+  margin: 0 0 1.6rem;
+  line-height: 1.2;
+  font-size: var(--vc-heading-font-size-desktop, 2.4rem);
+}
+
+.video-carousel__wrapper {
+  position: relative;
+  display: block;
+}
+
+.video-carousel__track {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--vc-gap, 12px);
+  margin: 0;
+  padding: 0 0 0.5rem;
+  list-style: none;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.video-carousel__track::-webkit-scrollbar {
+  display: none;
+}
+
+.video-carousel__slide {
+  flex: 0 0 calc(100% / var(--vc-items-mobile, 1.15));
+  scroll-snap-align: start;
+}
+
+@media screen and (min-width: 750px) {
+  .video-carousel__slide {
+    flex: 0 0 calc(100% / var(--vc-items-desktop, 3.2));
+  }
+}
+
+.video-carousel__media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: var(--vc-aspect, 9/16);
+  border-radius: var(--vc-radius, 16px);
+  overflow: hidden;
+  background: rgb(var(--color-foreground));
+}
+
+.video-carousel__video {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-carousel__button {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  margin-top: -2rem;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: rgba(var(--color-background), 0.85);
+  color: rgb(var(--color-foreground));
+  cursor: pointer;
+  box-shadow: 0 0.2rem 0.6rem rgba(0, 0, 0, 0.15);
+  transition: background-color 0.2s ease, opacity 0.2s ease;
+}
+
+.video-carousel__button:hover {
+  background: rgb(var(--color-background));
+}
+
+.video-carousel__button[disabled] {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.video-carousel__button .icon {
+  width: 1rem;
+  height: 0.6rem;
+}
+
+.video-carousel__button--prev {
+  left: 1rem;
+}
+
+.video-carousel__button--next {
+  right: 1rem;
+}
+
+.video-carousel__button--prev .icon {
+  transform: rotate(90deg);
+}
+
+.video-carousel__button--next .icon {
+  transform: rotate(-90deg);
+}
+
+@media screen and (max-width: 749px) {
+  .video-carousel {
+    margin: 1.8rem 0;
+    margin-right: -2rem;
+  }
+
+  .video-carousel__heading {
+    font-size: var(--vc-heading-font-size-mobile, 2rem);
+  }
+
+  .video-carousel__slide {
+    flex: 0 0 72% !important;
+  }
+
+  .video-carousel__button {
+    width: 3.2rem;
+    height: 3.2rem;
+    margin-top: -1.6rem;
+  }
+}

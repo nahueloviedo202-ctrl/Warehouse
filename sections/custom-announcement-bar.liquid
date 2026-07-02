@@ -1,0 +1,331 @@
+{{ 'section-custom-announcement-bar.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign scroll_duration = 60 | divided_by: section.settings.speed
+  assign bg_alpha        = section.settings.background_opacity | divided_by: 100.0
+  assign bg_color        = section.settings.background_color | color_modify: 'alpha', bg_alpha
+-%}
+
+{%- style -%}
+  #shopify-section-{{ section.id }} {
+    --custom-ann-bar-font-size-desktop: {{ section.settings.font_size_desktop }}px;
+    --custom-ann-bar-font-size-mobile:  {{ section.settings.font_size_mobile }}px;
+    --custom-ann-bar-padding-v-desktop: {{ section.settings.padding_v_desktop }}px;
+    --custom-ann-bar-padding-v-mobile:  {{ section.settings.padding_v_mobile }}px;
+    padding-top:    {{ section.settings.section_padding_top_mobile }}px;
+    padding-bottom: {{ section.settings.section_padding_bottom_mobile }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    #shopify-section-{{ section.id }} {
+      padding-top:    {{ section.settings.section_padding_top }}px;
+      padding-bottom: {{ section.settings.section_padding_bottom }}px;
+    }
+  }
+
+  #shopify-section-{{ section.id }} .custom-ann-bar__pill {
+    background-color: {{ bg_color }};
+    border: {{ section.settings.border_width }}px solid {{ section.settings.border_color }};
+    border-radius: {{ section.settings.border_radius }}px;
+  }
+
+  #shopify-section-{{ section.id }} .custom-ann-bar__text,
+  #shopify-section-{{ section.id }} .custom-ann-bar__separator {
+    color: {{ section.settings.text_color }};
+  }
+
+  #shopify-section-{{ section.id }} .custom-ann-bar__text {
+    font-weight: {% if section.settings.bold_text %}700{% else %}400{% endif %};
+    font-style:  {% if section.settings.italic_text %}italic{% else %}normal{% endif %};
+    text-transform: {% if section.settings.uppercase_text %}uppercase{% else %}none{% endif %};
+  }
+
+  #shopify-section-{{ section.id }} .custom-ann-bar__track {
+    animation: customAnnBarScroll {{ scroll_duration }}s linear infinite;
+  }
+
+  {% if section.settings.pause_on_hover %}
+  #shopify-section-{{ section.id }} .custom-ann-bar__pill:hover .custom-ann-bar__track {
+    animation-play-state: paused;
+  }
+  {% endif %}
+{%- endstyle -%}
+
+{%- if section.blocks.size > 0 -%}
+<div class="custom-ann-bar-section">
+  <div class="page-width custom-ann-bar__outer">
+    <div
+      class="custom-ann-bar__pill"
+      role="marquee"
+      aria-live="off"
+      aria-label="{{ section.settings.aria_label | escape }}"
+    >
+      <div class="custom-ann-bar__track">
+
+        {%- comment -%} Real blocks (first half of the loop) {%- endcomment -%}
+        {%- for block in section.blocks -%}
+          <span class="custom-ann-bar__item" {{ block.shopify_attributes }}>
+            <span class="custom-ann-bar__text">{{ block.settings.text | escape }}</span>
+            {%- if block.settings.separator != blank -%}
+              <span class="custom-ann-bar__separator" aria-hidden="true">{{ block.settings.separator | escape }}</span>
+            {%- endif -%}
+          </span>
+        {%- endfor -%}
+
+        {%- comment -%}
+          Duplicate blocks 15× so we always have enough content to fill any screen.
+          Combined with the first pass above = 16 total passes.
+          The -50% translateX animation scrolls through 8 passes seamlessly.
+        {%- endcomment -%}
+        {%- for i in (1..15) -%}
+          {%- for block in section.blocks -%}
+            <span class="custom-ann-bar__item" aria-hidden="true">
+              <span class="custom-ann-bar__text">{{ block.settings.text | escape }}</span>
+              {%- if block.settings.separator != blank -%}
+                <span class="custom-ann-bar__separator" aria-hidden="true">{{ block.settings.separator | escape }}</span>
+              {%- endif -%}
+            </span>
+          {%- endfor -%}
+        {%- endfor -%}
+
+      </div>
+    </div>
+  </div>
+</div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Custom Announcement Bar",
+  "tag": "section",
+  "class": "custom-ann-bar-section-wrapper",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Text style"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "font_size_desktop",
+      "label": "Font size — desktop",
+      "min": 8,
+      "max": 32,
+      "step": 1,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "font_size_mobile",
+      "label": "Font size — mobile",
+      "min": 8,
+      "max": 32,
+      "step": 1,
+      "unit": "px",
+      "default": 10
+    },
+    {
+      "type": "checkbox",
+      "id": "uppercase_text",
+      "label": "Uppercase",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "bold_text",
+      "label": "Bold",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "italic_text",
+      "label": "Italic",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Pill container"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "background_opacity",
+      "label": "Background opacity",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 0
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "Border color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "border_width",
+      "label": "Border width",
+      "min": 0,
+      "max": 4,
+      "step": 1,
+      "unit": "px",
+      "default": 1
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "label": "Border radius",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "padding_v_desktop",
+      "label": "Vertical padding — desktop",
+      "min": 2,
+      "max": 40,
+      "step": 1,
+      "unit": "px",
+      "default": 7
+    },
+    {
+      "type": "range",
+      "id": "padding_v_mobile",
+      "label": "Vertical padding — mobile",
+      "min": 2,
+      "max": 40,
+      "step": 1,
+      "unit": "px",
+      "default": 5
+    },
+    {
+      "type": "header",
+      "content": "Scroll animation"
+    },
+    {
+      "type": "range",
+      "id": "speed",
+      "label": "Scroll speed",
+      "min": 1,
+      "max": 10,
+      "step": 0.5,
+      "default": 3
+    },
+    {
+      "type": "checkbox",
+      "id": "pause_on_hover",
+      "label": "Pause on hover",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Accessibility"
+    },
+    {
+      "type": "text",
+      "id": "aria_label",
+      "label": "ARIA label",
+      "default": "Announcement bar"
+    },
+    {
+      "type": "header",
+      "content": "Section padding — desktop"
+    },
+    {
+      "type": "range",
+      "id": "section_padding_top",
+      "label": "Padding top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "section_padding_bottom",
+      "label": "Padding bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Section padding — mobile"
+    },
+    {
+      "type": "range",
+      "id": "section_padding_top_mobile",
+      "label": "Padding top (mobile)",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "section_padding_bottom_mobile",
+      "label": "Padding bottom (mobile)",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "blocks": [
+    {
+      "type": "message",
+      "name": "Message",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Message text",
+          "default": "ENVÍO GRATUITO | © YOUR STORE, 2026"
+        },
+        {
+          "type": "text",
+          "id": "separator",
+          "label": "Separator after this message",
+          "info": "Shown between messages. Use spaces or symbols like  ·  or  |",
+          "default": "   ·   "
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Announcement Bar",
+      "blocks": [
+        {
+          "type": "message",
+          "settings": {
+            "text": "ENVÍO GRATUITO | © INFINITE LOVE BARCELONA, 2026",
+            "separator": "   ·   "
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

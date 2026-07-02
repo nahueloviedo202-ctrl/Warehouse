@@ -1,0 +1,33 @@
+.trust-badges {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.trust-badges__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+  min-width: 80px;
+}
+
+.trust-badges__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.trust-badges__label {
+  display: block;
+  line-height: 1.4;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 749px) {
+  .trust-badges__item {
+    min-width: 60px;
+  }
+}

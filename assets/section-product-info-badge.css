@@ -1,0 +1,37 @@
+.pib {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.pib__item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pib__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.pib__icon svg,
+.pib__icon img {
+  display: block;
+  object-fit: contain;
+}
+
+.pib__text {
+  margin: 0;
+  line-height: 1.4;
+}
+
+.pib__label {
+  font-weight: 600;
+}
+
+.pib__sublabel {
+  font-weight: 400;
+}

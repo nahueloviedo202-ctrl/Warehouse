@@ -397,8 +397,12 @@
     "all": {
       "padding": {
         "section_padding_heading": "分区填充",
+        "section_padding_heading_desktop": "Section padding (desktop)",
+        "section_padding_heading_mobile": "Section padding (mobile)",
         "padding_top": "顶部填充",
-        "padding_bottom": "底部填充"
+        "padding_bottom": "底部填充",
+        "padding_top_mobile": "Top padding (mobile)",
+        "padding_bottom_mobile": "Bottom padding (mobile)"
       },
       "spacing": "间距",
       "colors": {

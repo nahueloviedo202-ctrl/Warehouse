@@ -12,16 +12,56 @@
 @media screen and (max-width: 900px) {
   .content-and-comparison-slider {
     grid-template-columns: repeat(1, 1fr);
+    row-gap: 2rem;
   }
 }
-@media screen and (min-width: 900px) {
-  .content-and-comparison-slider--slider-first .comparison-slider {
-    order: -1;
-  }
-}
-
 .content-and-comparison-slider .content-container .title {
   margin-top: 0;
+}
+.content-and-comparison-slider__content {
+  text-align: center;
+}
+.content-and-comparison-slider__content--mobile-left {
+  text-align: left;
+}
+.content-and-comparison-slider__content--mobile-left .icon-badges__list {
+  justify-content: flex-start;
+}
+@media screen and (min-width: 900px) {
+  .content-and-comparison-slider__content--desktop-left {
+    text-align: left;
+  }
+  .content-and-comparison-slider__content--desktop-center {
+    text-align: center;
+  }
+  .content-and-comparison-slider__content--desktop-left .icon-badges__list {
+    justify-content: flex-start;
+  }
+  .content-and-comparison-slider__content--desktop-center .icon-badges__list {
+    justify-content: center;
+  }
+}
+.comparison-slider__title--italic {
+  font-style: italic;
+}
+.comparison-slider__feature {
+  margin-bottom: 2rem;
+}
+.comparison-slider__feature-heading {
+  margin: 0 0 0.5rem;
+  line-height: 1.3;
+}
+.comparison-slider__feature-text {
+  margin: 0;
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+.comparison-slider__feature-text p {
+  margin: 0;
+}
+.content-and-comparison-slider__content .icon-badges {
+  width: 100%;
+  margin: 1rem 0 2.5rem;
 }
 .comparison-slider {
   position: relative;
@@ -138,4 +178,27 @@
   transform: translate(20px, -50%);
   clip-path: polygon(100% 50%, 0 0, 0 100%);
   display: block !important;
+}
+.comparison-simple-image {
+  width: 100%;
+  max-width: var(--simple-img-width, 450px);
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: var(--simple-img-border-radius, 0px);
+}
+.comparison-simple-image img,
+.comparison-simple-image svg {
+  width: 100%;
+  height: var(--simple-img-height, auto);
+  object-fit: var(--simple-img-fit, cover);
+  display: block;
+}
+@media screen and (max-width: 749px) {
+  .comparison-simple-image {
+    max-width: 100%;
+  }
+  .comparison-simple-image img,
+  .comparison-simple-image svg {
+    height: var(--simple-img-height-mobile, var(--simple-img-height, auto));
+  }
 }

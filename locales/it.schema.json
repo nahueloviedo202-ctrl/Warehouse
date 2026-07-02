@@ -397,8 +397,12 @@
     "all": {
       "padding": {
         "section_padding_heading": "Spaziatura sezione",
+        "section_padding_heading_desktop": "Section padding (desktop)",
+        "section_padding_heading_mobile": "Section padding (mobile)",
         "padding_top": "Spaziatura superiore",
-        "padding_bottom": "Spaziatura inferiore"
+        "padding_bottom": "Spaziatura inferiore",
+        "padding_top_mobile": "Top padding (mobile)",
+        "padding_bottom_mobile": "Bottom padding (mobile)"
       },
       "spacing": "Spaziatura",
       "colors": {

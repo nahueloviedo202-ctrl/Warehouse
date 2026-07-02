@@ -1,0 +1,176 @@
+.why-we-love__heading {
+  text-align: center;
+  margin: 0 0 5rem;
+}
+
+.why-we-love__heading--italic,
+.why-we-love__feature-heading--italic {
+  font-style: italic;
+}
+
+.why-we-love__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  gap: 4rem;
+  margin: 0 auto;
+}
+
+.why-we-love__column {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  text-align: center;
+}
+
+.why-we-love__feature-heading {
+  margin: 0 0 0.5rem;
+  line-height: 1.2;
+}
+
+.why-we-love__feature-text {
+  margin: 0;
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+.why-we-love__feature-text p {
+  margin: 0;
+}
+
+.why-we-love__media {
+  display: flex;
+  justify-content: center;
+  order: -1;
+}
+
+.why-we-love__media-circle {
+  position: relative;
+  width: var(--why-we-love-circle-size-mobile, 22rem);
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 0.5rem solid var(--why-we-love-circle-border-color, rgb(var(--color-foreground)));
+}
+
+.why-we-love__media-circle > img,
+.why-we-love__media-circle > .placeholder-svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.why-we-love__badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 3rem 2.4rem;
+  margin: 5rem 0 0;
+  padding: 0;
+}
+
+.why-we-love__badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 13rem;
+}
+
+.why-we-love__badge-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  background-color: var(--why-we-love-badge-icon-bg, rgba(var(--color-foreground), 0.14));
+  margin-bottom: 1.2rem;
+}
+
+.why-we-love__badge-icon svg {
+  width: 3.4rem;
+  height: 3.4rem;
+  fill: var(--why-we-love-badge-icon-svg, rgb(var(--color-foreground)));
+}
+
+.why-we-love__badge-icon img {
+  width: 3.6rem;
+  height: 3.6rem;
+  object-fit: contain;
+}
+
+.why-we-love__badge-label {
+  margin: 0;
+  font-size: 1.4rem;
+  line-height: 1.4;
+}
+
+@media screen and (min-width: 750px) {
+  .why-we-love__grid {
+    grid-template-columns: 1fr minmax(26rem, var(--why-we-love-circle-size-desktop, 38rem)) 1fr;
+    gap: 2rem;
+  }
+
+  .why-we-love__media {
+    order: 0;
+  }
+
+  .why-we-love__media-circle {
+    width: 100%;
+    max-width: var(--why-we-love-circle-size-desktop, 38rem);
+  }
+
+  .why-we-love__column {
+    gap: 4rem;
+  }
+
+  .why-we-love__column--left {
+    text-align: right;
+    align-items: flex-end;
+  }
+
+  .why-we-love__column--right {
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .why-we-love__grid--center .why-we-love__column--left,
+  .why-we-love__grid--center .why-we-love__column--right {
+    text-align: center;
+    align-items: center;
+  }
+
+  .why-we-love__badges {
+    gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 749px) {
+  .why-we-love__heading {
+    margin: 0 0 3rem;
+  }
+
+  .why-we-love__grid {
+    gap: 2.4rem;
+  }
+
+  .why-we-love__column {
+    gap: 2rem;
+  }
+
+  .why-we-love__badges {
+    gap: 2.4rem 1.6rem;
+    margin: 3rem 0 0;
+  }
+
+  .why-we-love__badge {
+    width: 9.6rem;
+  }
+
+  .why-we-love__badge-icon {
+    width: 6.4rem;
+    height: 6.4rem;
+  }
+}

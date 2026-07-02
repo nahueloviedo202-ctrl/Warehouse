@@ -1,0 +1,362 @@
+{{ 'component-press-ticker.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top_mobile }}px;
+    padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+  }
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  .press-ticker-{{ section.id }} .press-ticker__track {
+    animation-duration: {{ 60 | divided_by: section.settings.speed }}s;
+    {% if section.settings.direction == 'right' %}animation-direction: reverse;{% endif %}
+  }
+
+  .press-ticker-{{ section.id }} .press-ticker__logo {
+    height: {{ section.settings.mobile_logo_height }}px;
+  }
+  @media screen and (min-width: 750px) {
+    .press-ticker-{{ section.id }} .press-ticker__logo {
+      height: {{ section.settings.desktop_logo_height }}px;
+    }
+  }
+
+  .press-ticker-{{ section.id }} .press-ticker__sep {
+    padding: 0 {{ section.settings.separator_spacing }}px;
+    font-size: {{ section.settings.separator_size }}rem;
+    {% if section.settings.custom_text_color != blank %}color: {{ section.settings.custom_text_color }};{% endif %}
+  }
+
+  .press-ticker-{{ section.id }} .press-ticker__text {
+    font-size: {{ section.settings.text_size }}rem;
+    {% if section.settings.text_bold %}font-weight: 700;{% endif %}
+    {% if section.settings.text_italic %}font-style: italic;{% endif %}
+    {% if section.settings.text_uppercase %}text-transform: uppercase;{% endif %}
+    {% if section.settings.custom_text_color != blank %}color: {{ section.settings.custom_text_color }};{% endif %}
+  }
+
+  {% if section.settings.custom_background_color != blank %}
+  .press-ticker-{{ section.id }} {
+    background-color: {{ section.settings.custom_background_color }};
+  }
+  {% endif %}
+{%- endstyle -%}
+
+<div class="press-ticker press-ticker-{{ section.id }} color-{{ section.settings.color_scheme }} section-{{ section.id }}-padding{% if section.settings.pause_on_hover %} press-ticker--pause-hover{% endif %}">
+  <div class="press-ticker__track">
+    {%- assign unique_blocks_total = section.blocks | size -%}
+    {%- if unique_blocks_total > 0 -%}
+      {%- assign reps_per_half = 30 | divided_by: unique_blocks_total -%}
+      {%- if reps_per_half < 3 -%}{%- assign reps_per_half = 3 -%}{%- endif -%}
+
+      {%- for half in (1..2) -%}
+        {%- for rep in (1..reps_per_half) -%}
+          {%- for block in section.blocks -%}
+            <span class="press-ticker__item"
+              {%- if half == 1 and rep == 1 %} {{ block.shopify_attributes }}{% endif -%}
+              {%- unless half == 1 and rep == 1 %} aria-hidden="true"{% endunless -%}
+            >
+              {%- if block.settings.link != blank -%}
+                <a href="{{ block.settings.link }}"
+                  {%- if block.settings.target_blank %} target="_blank" rel="noreferrer"{% endif %}
+                  class="press-ticker__link"
+                  {%- unless half == 1 and rep == 1 %} tabindex="-1"{% endunless -%}
+                >
+              {%- endif -%}
+
+              {%- if block.settings.image != blank -%}
+                <img
+                  class="press-ticker__logo"
+                  src="{{ block.settings.image | image_url: width: 400 }}"
+                  alt="{% if half == 1 and rep == 1 %}{{ block.settings.image.alt | default: block.settings.text | escape }}{% endif %}"
+                  width="{{ block.settings.image.width }}"
+                  height="{{ block.settings.image.height }}"
+                  loading="lazy"
+                >
+              {%- elsif block.settings.text != blank -%}
+                <span class="press-ticker__text">{{ block.settings.text | escape }}</span>
+              {%- endif -%}
+
+              {%- if block.settings.link != blank -%}</a>{%- endif -%}
+            </span>
+            <span class="press-ticker__sep" aria-hidden="true">{{ section.settings.separator_char }}</span>
+          {%- endfor -%}
+        {%- endfor -%}
+      {%- endfor -%}
+    {%- endif -%}
+  </div>
+</div>
+
+<script>
+(function() {
+  var ticker = document.querySelector('.press-ticker-{{ section.id }}');
+  if (!ticker) return;
+  var track = ticker.querySelector('.press-ticker__track');
+  if (!track) return;
+  function setOffset() {
+    var ch = track.children;
+    var half = Math.floor(ch.length / 2);
+    var w = 0;
+    for (var i = 0; i < half; i++) w += ch[i].getBoundingClientRect().width;
+    if (w > 0) track.style.setProperty('--press-ticker-offset', '-' + Math.round(w) + 'px');
+  }
+  if (document.readyState !== 'loading') { setOffset(); }
+  else { document.addEventListener('DOMContentLoaded', setOffset); }
+  window.addEventListener('load', setOffset);
+  window.addEventListener('resize', setOffset);
+})();
+</script>
+
+{% schema %}
+{
+  "name": "Press Ticker",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Animation"
+    },
+    {
+      "type": "range",
+      "id": "speed",
+      "label": "Speed",
+      "min": 1,
+      "max": 10,
+      "step": 1,
+      "default": 4,
+      "info": "Higher = faster"
+    },
+    {
+      "type": "select",
+      "id": "direction",
+      "label": "Direction",
+      "options": [
+        { "value": "left",  "label": "Right to left" },
+        { "value": "right", "label": "Left to right" }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "checkbox",
+      "id": "pause_on_hover",
+      "label": "Pause on hover",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Separator"
+    },
+    {
+      "type": "text",
+      "id": "separator_char",
+      "label": "Separator character",
+      "default": "•"
+    },
+    {
+      "type": "range",
+      "id": "separator_spacing",
+      "label": "Separator spacing",
+      "min": 4,
+      "max": 60,
+      "step": 2,
+      "default": 24,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "separator_size",
+      "label": "Separator size",
+      "min": 0,
+      "max": 3,
+      "step": 0.1,
+      "default": 1.0,
+      "unit": "rem"
+    },
+    {
+      "type": "header",
+      "content": "Logo size"
+    },
+    {
+      "type": "range",
+      "id": "desktop_logo_height",
+      "label": "Desktop logo height",
+      "min": 16,
+      "max": 100,
+      "step": 2,
+      "default": 36,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "mobile_logo_height",
+      "label": "Mobile logo height",
+      "min": 16,
+      "max": 80,
+      "step": 2,
+      "default": 24,
+      "unit": "px"
+    },
+    {
+      "type": "header",
+      "content": "Text style (for text items)"
+    },
+    {
+      "type": "select",
+      "id": "text_size",
+      "label": "Text size",
+      "options": [
+        { "value": "0.875", "label": "Extra small" },
+        { "value": "1",     "label": "Small" },
+        { "value": "1.25",  "label": "Medium" },
+        { "value": "1.5",   "label": "Large" },
+        { "value": "2",     "label": "Extra large" }
+      ],
+      "default": "1.25"
+    },
+    {
+      "type": "checkbox",
+      "id": "text_bold",
+      "label": "Bold",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "text_italic",
+      "label": "Italic",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "text_uppercase",
+      "label": "Uppercase",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "options": [
+        { "value": "accent-1",    "label": "t:sections.all.colors.accent_1.label" },
+        { "value": "accent-2",    "label": "t:sections.all.colors.accent_2.label" },
+        { "value": "background-1","label": "t:sections.all.colors.background_1.label" },
+        { "value": "background-2","label": "t:sections.all.colors.background_2.label" },
+        { "value": "inverse",     "label": "t:sections.all.colors.inverse.label" }
+      ],
+      "default": "background-2"
+    },
+    {
+      "type": "color",
+      "id": "custom_background_color",
+      "label": "Custom background color",
+      "info": "Overrides the color scheme background"
+    },
+    {
+      "type": "color",
+      "id": "custom_text_color",
+      "label": "Custom text / separator color",
+      "info": "Overrides the color scheme text color"
+    },
+    {
+      "type": "header",
+      "content": "Section padding (desktop)"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Top padding",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Bottom padding",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "header",
+      "content": "Section padding (mobile)"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "label": "Top padding (mobile)",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "label": "Bottom padding (mobile)",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 8
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Item",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Logo image"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text label",
+          "info": "Shown when no image is set; also used as the image alt text"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        },
+        {
+          "type": "checkbox",
+          "id": "target_blank",
+          "label": "Open link in new tab",
+          "default": false
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Press Ticker",
+      "blocks": [
+        { "type": "item", "settings": { "text": "VOGUE" } },
+        { "type": "item", "settings": { "text": "RUSSH" } },
+        { "type": "item", "settings": { "text": "marie claire" } },
+        { "type": "item", "settings": { "text": "BAZAAR" } },
+        { "type": "item", "settings": { "text": "InStyle" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

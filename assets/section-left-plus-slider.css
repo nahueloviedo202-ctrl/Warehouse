@@ -1,0 +1,243 @@
+/* ===== Left + Slider Section ===== */
+
+.lps-section {
+  position: relative;
+}
+
+.lps-grid {
+  display: grid;
+  gap: var(--lps-gap, 6rem);
+  align-items: center;
+}
+
+@media screen and (min-width: 990px) {
+  .lps-grid--text-left {
+    grid-template-columns: var(--lps-left-ratio, 45%) 1fr;
+  }
+
+  .lps-grid--text-right {
+    grid-template-columns: 1fr var(--lps-left-ratio, 45%);
+  }
+
+  .lps-grid--text-right .lps-content {
+    order: 2;
+  }
+
+  .lps-grid--text-right .lps-slider-col {
+    order: 1;
+  }
+}
+
+/* ── Eyebrow ── */
+
+.lps-eyebrow {
+  margin: 0 0 1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* ── Heading ── */
+
+.lps-heading {
+  margin: 0 0 1.6rem;
+}
+
+/* ── Description ── */
+
+.lps-description {
+  margin: 0 0 2.4rem;
+  line-height: 1.65;
+}
+
+/* ── Feature list ── */
+
+.lps-features {
+  list-style: none;
+  margin: 0 0 2.4rem;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--lps-features-gap, 1.4rem);
+}
+
+.lps-feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+}
+
+.lps-feature__icon {
+  flex: none;
+  width: var(--lps-icon-size, 2.4rem);
+  height: var(--lps-icon-size, 2.4rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--lps-icon-color, rgb(var(--color-foreground)));
+  margin-top: 0.1rem;
+}
+
+.lps-feature__icon svg {
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+}
+
+.lps-feature__icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.lps-feature__text {
+  flex: 1;
+  min-width: 0;
+}
+
+.lps-feature__title {
+  margin: 0 0 0.3rem;
+  line-height: 1.3;
+}
+
+.lps-feature__desc {
+  margin: 0;
+  line-height: 1.55;
+}
+
+/* ── Button ── */
+
+.lps-button-wrapper {
+  margin-top: 0;
+}
+
+/* ── Slider column ── */
+
+.lps-slider-col {
+  min-width: 0;
+  position: relative;
+}
+
+.lps-slider-component {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+/* ── Slider list ── */
+
+.lps-slider-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: var(--lps-slide-gap, 1.6rem);
+  flex: 1;
+  min-width: 0;
+}
+
+.lps-slide {
+  flex: 0 0 auto;
+  width: calc(
+    (100% - (var(--lps-slides-visible, 1) - 1) * var(--lps-slide-gap, 1.6rem)) /
+      var(--lps-slides-visible, 1)
+  );
+}
+
+/* ── Slide media ── */
+
+.lps-slide__media {
+  border-radius: var(--lps-slide-radius, 1.2rem);
+  overflow: hidden;
+  aspect-ratio: var(--lps-slide-ratio, 4 / 5);
+  position: relative;
+  background: rgba(var(--color-foreground), 0.04);
+}
+
+.lps-slide__media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.lps-slide__media .placeholder-svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.lps-slide__label {
+  margin: 0.8rem 0 0;
+  font-size: var(--lps-slide-label-size, 1.4rem);
+  font-weight: 600;
+  text-align: center;
+}
+
+/* ── Arrows ── */
+
+.lps-slider-component .slider-button {
+  flex: none;
+  color: var(--lps-arrow-color, rgb(var(--color-foreground)));
+  width: 4rem;
+  height: 4rem;
+  background: rgba(var(--color-foreground), 0.06);
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.lps-slider-component .slider-button:not([disabled]):hover {
+  background: rgba(var(--color-foreground), 0.12);
+}
+
+.lps-slider-component .slider-button[disabled] {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.lps-slider-component .slider-button .icon {
+  height: 0.7rem;
+}
+
+/* ── Dots ── */
+
+.lps-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-top: 1.4rem;
+}
+
+.lps-dot {
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  background: rgba(var(--color-foreground), 0.2);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: background 0.25s, transform 0.25s;
+}
+
+.lps-dot--active {
+  background: var(--lps-dot-active-color, rgb(var(--color-foreground)));
+  transform: scale(1.2);
+}
+
+/* ── Responsive ── */
+
+@media screen and (max-width: 749px) {
+  .lps-slider-component .slider-button {
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+
+  .lps-slider-component .slider-button .icon {
+    height: 0.6rem;
+  }
+}

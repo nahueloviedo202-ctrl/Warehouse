@@ -1,0 +1,87 @@
+/* =====================================================
+   Section: Custom Announcement Bar
+   Scrolling marquee bar with pill-shaped border
+   ===================================================== */
+
+.custom-ann-bar-section {
+  width: 100%;
+}
+
+/* Outer page-width wrapper */
+.custom-ann-bar__outer {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+/* Pill container — clipping mask so text scrolls inside */
+.custom-ann-bar__pill {
+  border-radius: 999px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+/* Scrolling track */
+.custom-ann-bar__track {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  white-space: nowrap;
+  /* animation applied via inline style */
+}
+
+/* Pause on hover */
+.custom-ann-bar__pill:hover .custom-ann-bar__track {
+  animation-play-state: paused;
+}
+
+/* Individual item */
+.custom-ann-bar__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  white-space: nowrap;
+}
+
+.custom-ann-bar__text {
+  white-space: nowrap;
+  letter-spacing: 0.05em;
+}
+
+.custom-ann-bar__separator {
+  margin: 0 0.75em;
+  opacity: 0.6;
+}
+
+/* ---- Keyframe ---- */
+@keyframes customAnnBarScroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* ---- Mobile defaults ---- */
+.custom-ann-bar__text {
+  font-size: var(--custom-ann-bar-font-size-mobile, 1.1rem);
+}
+
+.custom-ann-bar__pill {
+  padding-top: var(--custom-ann-bar-padding-v-mobile, 6px);
+  padding-bottom: var(--custom-ann-bar-padding-v-mobile, 6px);
+}
+
+/* ---- Desktop overrides ---- */
+@media screen and (min-width: 750px) {
+  .custom-ann-bar__text {
+    font-size: var(--custom-ann-bar-font-size-desktop, 1.2rem);
+  }
+
+  .custom-ann-bar__pill {
+    padding-top: var(--custom-ann-bar-padding-v-desktop, 7px);
+    padding-bottom: var(--custom-ann-bar-padding-v-desktop, 7px);
+  }
+}

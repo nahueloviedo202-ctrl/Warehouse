@@ -1,0 +1,629 @@
+{{ 'section-why-we-love-it.css' | asset_url | stylesheet_tag }}
+{{ 'component-rte.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top_mobile }}px;
+    padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+  }
+
+  #shopify-section-{{ section.id }} {
+    --why-we-love-circle-size-desktop: {{ section.settings.circle_size_desktop }}px;
+    --why-we-love-circle-size-mobile: {{ section.settings.circle_size_mobile }}px;
+    {%- if section.settings.circle_border_color != blank -%}
+    --why-we-love-circle-border-color: {{ section.settings.circle_border_color }};
+    {%- endif -%}
+    {%- if section.settings.badge_icon_bg_color != blank -%}
+    --why-we-love-badge-icon-bg: {{ section.settings.badge_icon_bg_color }};
+    {%- endif -%}
+    {%- if section.settings.badge_icon_svg_color != blank -%}
+    --why-we-love-badge-icon-svg: {{ section.settings.badge_icon_svg_color }};
+    {%- endif -%}
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  .section-{{ section.id }}-heading {
+    font-size: {{ section.settings.heading_font_size_mobile }}px;
+  }
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-heading {
+      font-size: {{ section.settings.heading_font_size_desktop }}px;
+    }
+  }
+{%- endstyle -%}
+
+{%- liquid
+  assign accent_class = 'color-foreground-' | append: section.settings.accent_color_scheme
+  assign feature_blocks = section.blocks | where: 'type', 'feature'
+  assign badge_blocks = section.blocks | where: 'type', 'badge'
+-%}
+
+<div class="color-{{ section.settings.color_scheme }} gradient"{% if section.settings.background_color != blank %} style="background-color: {{ section.settings.background_color }};"{% endif %}>
+  <div class="why-we-love page-width section-{{ section.id }}-padding">
+    {%- if section.settings.heading != blank -%}
+      <h2
+        class="why-we-love__heading {{ section.settings.heading_size }} {{ accent_class }}{% if section.settings.heading_italic %} why-we-love__heading--italic{% endif %} section-{{ section.id }}-heading"
+        style="{% if section.settings.heading_color != blank %}color: {{ section.settings.heading_color }};{% endif %}{% if section.settings.heading_font_weight != blank %}font-weight: {{ section.settings.heading_font_weight }};{% endif %}"
+      >
+        {{ section.settings.heading | escape }}
+      </h2>
+    {%- endif -%}
+
+    <div class="why-we-love__grid{% if section.settings.text_alignment == 'center' %} why-we-love__grid--center{% endif %}">
+      <div class="why-we-love__column why-we-love__column--left">
+        {%- for block in feature_blocks -%}
+          {%- style -%}
+            .block-{{ block.id }}-heading { font-size: {{ block.settings.heading_font_size_mobile }}px; }
+            .block-{{ block.id }}-text { font-size: {{ block.settings.text_font_size_mobile }}px; }
+            @media screen and (min-width: 750px) {
+              .block-{{ block.id }}-heading { font-size: {{ block.settings.heading_font_size_desktop }}px; }
+              .block-{{ block.id }}-text { font-size: {{ block.settings.text_font_size_desktop }}px; }
+            }
+          {%- endstyle -%}
+          {%- if block.settings.position == 'left' -%}
+            <div class="why-we-love__feature" {{ block.shopify_attributes }}>
+              {%- if block.settings.heading != blank -%}
+                <h3 class="why-we-love__feature-heading h4 {{ accent_class }}{% if section.settings.heading_italic %} why-we-love__feature-heading--italic{% endif %} block-{{ block.id }}-heading" style="{% if block.settings.heading_color != blank %}color: {{ block.settings.heading_color }};{% endif %}{% if block.settings.heading_font_weight != blank %}font-weight: {{ block.settings.heading_font_weight }};{% endif %}">
+                  {{ block.settings.heading | escape }}
+                </h3>
+              {%- endif -%}
+              {%- if block.settings.text != blank -%}
+                <div class="why-we-love__feature-text rte block-{{ block.id }}-text" style="{% if block.settings.text_color != blank %}color: {{ block.settings.text_color }};{% endif %}{% if block.settings.text_font_weight != blank %}font-weight: {{ block.settings.text_font_weight }};{% endif %}">{{ block.settings.text }}</div>
+              {%- endif -%}
+            </div>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+
+      <div class="why-we-love__media">
+        <div class="why-we-love__media-circle {{ accent_class }}">
+          {%- if section.settings.image != blank -%}
+            {{
+              section.settings.image
+              | image_url: width: 800
+              | image_tag: loading: 'lazy', sizes: '(min-width: 750px) 380px, 220px', widths: '220, 320, 440, 560, 760'
+            }}
+          {%- else -%}
+            {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+          {%- endif -%}
+        </div>
+      </div>
+
+      <div class="why-we-love__column why-we-love__column--right">
+        {%- for block in feature_blocks -%}
+          {%- if block.settings.position == 'right' -%}
+            <div class="why-we-love__feature" {{ block.shopify_attributes }}>
+              {%- if block.settings.heading != blank -%}
+                <h3 class="why-we-love__feature-heading h4 {{ accent_class }}{% if section.settings.heading_italic %} why-we-love__feature-heading--italic{% endif %} block-{{ block.id }}-heading" style="{% if block.settings.heading_color != blank %}color: {{ block.settings.heading_color }};{% endif %}{% if block.settings.heading_font_weight != blank %}font-weight: {{ block.settings.heading_font_weight }};{% endif %}">
+                  {{ block.settings.heading | escape }}
+                </h3>
+              {%- endif -%}
+              {%- if block.settings.text != blank -%}
+                <div class="why-we-love__feature-text rte block-{{ block.id }}-text" style="{% if block.settings.text_color != blank %}color: {{ block.settings.text_color }};{% endif %}{% if block.settings.text_font_weight != blank %}font-weight: {{ block.settings.text_font_weight }};{% endif %}">{{ block.settings.text }}</div>
+              {%- endif -%}
+            </div>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+    </div>
+
+    {%- if badge_blocks.size > 0 -%}
+      <ul class="why-we-love__badges list-unstyled" role="list">
+        {%- for block in badge_blocks -%}
+          <li class="why-we-love__badge" {{ block.shopify_attributes }}>
+            <div class="why-we-love__badge-icon {{ accent_class }}">
+              {%- if block.settings.image != blank -%}
+                <img
+                  src="{{ block.settings.image | image_url: width: 160 }}"
+                  {% if block.settings.image.alt != blank %}
+                    alt="{{ block.settings.image.alt | escape }}"
+                  {% else %}
+                    role="presentation"
+                  {% endif %}
+                  loading="lazy"
+                  width="64"
+                  height="64"
+                >
+              {%- else -%}
+                {%- render 'icon-accordion', icon: block.settings.icon -%}
+              {%- endif -%}
+            </div>
+            {%- if block.settings.label != blank -%}
+              <p class="why-we-love__badge-label caption">{{ block.settings.label | escape }}</p>
+            {%- endif -%}
+          </li>
+        {%- endfor -%}
+      </ul>
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Por qué nos encanta",
+  "class": "section",
+  "tag": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "default": "Por qué nos encanta",
+      "label": "Encabezado"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        { "value": "h2", "label": "Pequeño" },
+        { "value": "h1", "label": "Mediano" },
+        { "value": "h0", "label": "Grande" }
+      ],
+      "default": "h1",
+      "label": "Tamaño del encabezado"
+    },
+    {
+      "type": "checkbox",
+      "id": "heading_italic",
+      "default": true,
+      "label": "Usar estilo cursiva en encabezados",
+      "info": "Aplica cursiva al título principal y a los subtítulos de cada beneficio."
+    },
+    {
+      "type": "header",
+      "content": "Tipografía — Encabezado"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Color"
+    },
+    {
+      "type": "range",
+      "id": "heading_font_size_desktop",
+      "min": 10,
+      "max": 64,
+      "step": 1,
+      "unit": "px",
+      "label": "Tamaño escritorio (px)",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "heading_font_size_mobile",
+      "min": 10,
+      "max": 60,
+      "step": 1,
+      "unit": "px",
+      "label": "Tamaño móvil (px)",
+      "default": 26
+    },
+    {
+      "type": "select",
+      "id": "heading_font_weight",
+      "label": "Peso",
+      "options": [
+        { "value": "300", "label": "Light" },
+        { "value": "400", "label": "Regular" },
+        { "value": "500", "label": "Medium" },
+        { "value": "600", "label": "Semibold" },
+        { "value": "700", "label": "Bold" },
+        { "value": "800", "label": "Extrabold" }
+      ],
+      "default": "700"
+    },
+    {
+      "type": "header",
+      "content": "Imagen"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Imagen circular"
+    },
+    {
+      "type": "range",
+      "id": "circle_size_desktop",
+      "min": 240,
+      "max": 480,
+      "step": 10,
+      "unit": "px",
+      "default": 380,
+      "label": "Tamaño del círculo (escritorio)"
+    },
+    {
+      "type": "range",
+      "id": "circle_size_mobile",
+      "min": 160,
+      "max": 320,
+      "step": 10,
+      "unit": "px",
+      "default": 220,
+      "label": "Tamaño del círculo (móvil)"
+    },
+    {
+      "type": "header",
+      "content": "Colores"
+    },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "options": [
+        { "value": "accent-1", "label": "t:sections.all.colors.accent_1.label" },
+        { "value": "accent-2", "label": "t:sections.all.colors.accent_2.label" },
+        { "value": "background-1", "label": "t:sections.all.colors.background_1.label" },
+        { "value": "background-2", "label": "t:sections.all.colors.background_2.label" },
+        { "value": "inverse", "label": "t:sections.all.colors.inverse.label" }
+      ],
+      "default": "background-2",
+      "label": "Esquema de color de la sección"
+    },
+    {
+      "type": "select",
+      "id": "accent_color_scheme",
+      "options": [
+        { "value": "accent-1", "label": "t:sections.all.colors.accent_1.label" },
+        { "value": "accent-2", "label": "t:sections.all.colors.accent_2.label" },
+        { "value": "text", "label": "Color de texto" }
+      ],
+      "default": "accent-2",
+      "label": "Color de acento",
+      "info": "Color de los títulos, el borde del círculo y los iconos."
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Color de fondo personalizado",
+      "info": "Sobrescribe el esquema de color de la sección."
+    },
+    {
+      "type": "color",
+      "id": "circle_border_color",
+      "label": "Color del borde del círculo",
+      "info": "Sobrescribe el color de acento para el borde del círculo central."
+    },
+    {
+      "type": "color",
+      "id": "badge_icon_bg_color",
+      "label": "Color de fondo de los iconos",
+      "info": "Sobrescribe el color de acento para el fondo de los iconos de insignia."
+    },
+    {
+      "type": "color",
+      "id": "badge_icon_svg_color",
+      "label": "Color de los iconos (SVG)",
+      "info": "Sobrescribe el color de acento para el trazo/relleno de los iconos SVG."
+    },
+    {
+      "type": "header",
+      "content": "Diseño"
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "options": [
+        { "value": "facing-center", "label": "Orientado hacia el centro" },
+        { "value": "center", "label": "Centrado" }
+      ],
+      "default": "facing-center",
+      "label": "Alineación del texto (escritorio)"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading_desktop"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 64
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 64
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading_mobile"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top_mobile",
+      "default": 28
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom_mobile",
+      "default": 28
+    }
+  ],
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Beneficio",
+      "settings": [
+        {
+          "type": "select",
+          "id": "position",
+          "options": [
+            { "value": "left", "label": "Columna izquierda" },
+            { "value": "right", "label": "Columna derecha" }
+          ],
+          "default": "left",
+          "label": "Columna"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Beneficio",
+          "label": "Título"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "default": "<p>Describe este beneficio del producto.</p>",
+          "label": "Texto"
+        },
+        {
+          "type": "header",
+          "content": "Tipografía — Título del beneficio"
+        },
+        {
+          "type": "color",
+          "id": "heading_color",
+          "label": "Color"
+        },
+        {
+          "type": "range",
+          "id": "heading_font_size_desktop",
+          "min": 10,
+          "max": 64,
+          "step": 1,
+          "unit": "px",
+          "label": "Tamaño escritorio (px)",
+          "default": 20
+        },
+        {
+          "type": "range",
+          "id": "heading_font_size_mobile",
+          "min": 10,
+          "max": 60,
+          "step": 1,
+          "unit": "px",
+          "label": "Tamaño móvil (px)",
+          "default": 17
+        },
+        {
+          "type": "select",
+          "id": "heading_font_weight",
+          "label": "Peso",
+          "options": [
+            { "value": "300", "label": "Light" },
+            { "value": "400", "label": "Regular" },
+            { "value": "500", "label": "Medium" },
+            { "value": "600", "label": "Semibold" },
+            { "value": "700", "label": "Bold" },
+            { "value": "800", "label": "Extrabold" }
+          ],
+          "default": "700"
+        },
+        {
+          "type": "header",
+          "content": "Tipografía — Texto del beneficio"
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "label": "Color"
+        },
+        {
+          "type": "range",
+          "id": "text_font_size_desktop",
+          "min": 10,
+          "max": 64,
+          "step": 1,
+          "unit": "px",
+          "label": "Tamaño escritorio (px)",
+          "default": 15
+        },
+        {
+          "type": "range",
+          "id": "text_font_size_mobile",
+          "min": 10,
+          "max": 60,
+          "step": 1,
+          "unit": "px",
+          "label": "Tamaño móvil (px)",
+          "default": 14
+        },
+        {
+          "type": "select",
+          "id": "text_font_weight",
+          "label": "Peso",
+          "options": [
+            { "value": "300", "label": "Light" },
+            { "value": "400", "label": "Regular" },
+            { "value": "500", "label": "Medium" },
+            { "value": "600", "label": "Semibold" },
+            { "value": "700", "label": "Bold" },
+            { "value": "800", "label": "Extrabold" }
+          ],
+          "default": "400"
+        }
+      ]
+    },
+    {
+      "type": "badge",
+      "name": "Insignia",
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon",
+          "options": [
+            { "value": "none", "label": "Ninguno" },
+            { "value": "apple", "label": "Manzana" },
+            { "value": "banana", "label": "Plátano" },
+            { "value": "bottle", "label": "Botella" },
+            { "value": "box", "label": "Caja" },
+            { "value": "carrot", "label": "Zanahoria" },
+            { "value": "chat_bubble", "label": "Burbuja de chat" },
+            { "value": "check_mark", "label": "Marca de verificación" },
+            { "value": "clipboard", "label": "Portapapeles" },
+            { "value": "dairy", "label": "Lácteos" },
+            { "value": "dairy_free", "label": "Sin lácteos" },
+            { "value": "dryer", "label": "Secadora" },
+            { "value": "eye", "label": "Ojo" },
+            { "value": "fire", "label": "Fuego" },
+            { "value": "gluten_free", "label": "Sin gluten" },
+            { "value": "heart", "label": "Corazón" },
+            { "value": "iron", "label": "Plancha" },
+            { "value": "leaf", "label": "Hoja" },
+            { "value": "leather", "label": "Cuero" },
+            { "value": "lightning_bolt", "label": "Rayo" },
+            { "value": "lipstick", "label": "Lápiz labial" },
+            { "value": "lock", "label": "Candado" },
+            { "value": "map_pin", "label": "Marcador de mapa" },
+            { "value": "nut_free", "label": "Sin frutos secos" },
+            { "value": "pants", "label": "Pantalones" },
+            { "value": "paw_print", "label": "Huella de pata" },
+            { "value": "pepper", "label": "Pimienta" },
+            { "value": "perfume", "label": "Perfume" },
+            { "value": "plane", "label": "Avión" },
+            { "value": "plant", "label": "Planta" },
+            { "value": "price_tag", "label": "Etiqueta de precio" },
+            { "value": "question_mark", "label": "Signo de pregunta" },
+            { "value": "recycle", "label": "Reciclar" },
+            { "value": "return", "label": "Devolución" },
+            { "value": "ruler", "label": "Regla" },
+            { "value": "serving_dish", "label": "Plato" },
+            { "value": "shirt", "label": "Camisa" },
+            { "value": "shoe", "label": "Zapato" },
+            { "value": "silhouette", "label": "Silueta" },
+            { "value": "snowflake", "label": "Copo de nieve" },
+            { "value": "star", "label": "Estrella" },
+            { "value": "stopwatch", "label": "Cronómetro" },
+            { "value": "truck", "label": "Camión" },
+            { "value": "washing", "label": "Lavado" }
+          ],
+          "default": "check_mark",
+          "label": "Icono"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Icono personalizado",
+          "info": "Sustituye al icono seleccionado arriba si se sube una imagen."
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "default": "Insignia",
+          "label": "Texto"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Por qué nos encanta",
+      "blocks": [
+        {
+          "type": "feature",
+          "settings": {
+            "position": "left",
+            "heading": "Cobertura media modulable",
+            "text": "<p>La textura cremosa se funde perfectamente con la piel.</p>"
+          }
+        },
+        {
+          "type": "feature",
+          "settings": {
+            "position": "left",
+            "heading": "Hasta 12 horas de uso cómodo",
+            "text": "<p>Se siente ingrávido y la piel respirable.</p>"
+          }
+        },
+        {
+          "type": "feature",
+          "settings": {
+            "position": "right",
+            "heading": "Natural, acabado satinado",
+            "text": "<p>No se apelmaza ni se arruga y es resistente al sudor, la humedad y el agua.</p>"
+          }
+        },
+        {
+          "type": "feature",
+          "settings": {
+            "position": "right",
+            "heading": "Hidratante y no comedogénico",
+            "text": "<p>No obstruye los poros, no se asienta en las líneas finas ni se adhiere a las zonas secas.</p>"
+          }
+        },
+        {
+          "type": "badge",
+          "settings": {
+            "icon": "check_mark",
+            "label": "Probado por dermatólogos"
+          }
+        },
+        {
+          "type": "badge",
+          "settings": {
+            "icon": "leaf",
+            "label": "Fórmula transpirable"
+          }
+        },
+        {
+          "type": "badge",
+          "settings": {
+            "icon": "heart",
+            "label": "Seguro para pieles sensibles"
+          }
+        },
+        {
+          "type": "badge",
+          "settings": {
+            "icon": "lock",
+            "label": "No comedogénico"
+          }
+        },
+        {
+          "type": "badge",
+          "settings": {
+            "icon": "paw_print",
+            "label": "Vegano y libre de crueldad animal"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

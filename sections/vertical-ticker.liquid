@@ -2,12 +2,12 @@
 
 {%- style -%}
   .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    padding-top: {{ section.settings.padding_top_mobile }}px;
+    padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
   }
   .vertical-ticker-content-{{ section.id }}-padding {
-    padding-top: {{ section.settings.content_padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.content_padding_bottom | times: 0.75 | round: 0 }}px;
+    padding-top: {{ section.settings.content_padding_top_mobile }}px;
+    padding-bottom: {{ section.settings.content_padding_bottom_mobile }}px;
   }
 
   @media screen and (min-width: 750px) {
@@ -286,6 +286,26 @@
       "default": 40
     },
     {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Ticker top padding (mobile)",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Ticker bottom padding (mobile)",
+      "default": 32
+    },
+    {
         "type": "header",
         "content": "content"
     },
@@ -428,6 +448,26 @@
       "unit": "px",
       "label": "Content bottom padding",
       "default": 24
+    },
+    {
+      "type": "range",
+      "id": "content_padding_top_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Content top padding (mobile)",
+      "default": 28
+    },
+    {
+      "type": "range",
+      "id": "content_padding_bottom_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Content bottom padding (mobile)",
+      "default": 20
     }
   ],
   "blocks": [

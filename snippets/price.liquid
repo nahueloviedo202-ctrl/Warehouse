@@ -7,6 +7,8 @@
   - show_badges: {Boolean} Renders 'Sale' and 'Sold Out' tags if the product matches the condition (optional)
   - price_class: {String} Adds a price class to the price element (optional)
   - hide_currency_code: {Boolean} hide currency code regardless of what setting is chosen
+  - side_text: {String} Optional text displayed beside the price on the same line
+  - show_divider: {Boolean} Show a horizontal divider below the price row
 
   Usage:
   {% render 'price', product: product %}
@@ -59,13 +61,7 @@
         {{ money_price }}
       </span>
     </div>
-    <div class="price__sale {% if price_second %} price__sale--price-second{% endif %}">
-      <span class="visually-hidden visually-hidden--inline regular-price-label">
-        {{- 'products.product.price.sale_price' | t -}}
-      </span>
-      <span class="price-item price-item--sale price-item--last">
-        {{ money_price }}
-      </span>
+    <div class="price__sale">
       {%- unless product.price_varies == false and product.compare_at_price_varies %}
         <span class="visually-hidden visually-hidden--inline compare-price-label">
           {{- 'products.product.price.regular_price' | t -}}
@@ -76,6 +72,12 @@
           </s>
         </span>
       {%- endunless -%}
+      <span class="visually-hidden visually-hidden--inline regular-price-label">
+        {{- 'products.product.price.sale_price' | t -}}
+      </span>
+      <span class="price-item price-item--sale price-item--last">
+        {{ money_price }}
+      </span>
     </div>
     <small class="unit-price caption{% if product.selected_or_first_available_variant.unit_price_measurement == nil %} hidden{% endif %}">
       <span class="visually-hidden">{{ 'products.product.price.unit_price' | t }}</span>
@@ -104,3 +106,9 @@
     </span>
   {%- endif -%}
 </div>
+{%- if side_text != blank -%}
+  <span class="price-beside-text">{{ side_text }}</span>
+{%- endif -%}
+{%- if show_divider -%}
+  <span class="price-divider" role="separator" aria-hidden="true"></span>
+{%- endif -%}

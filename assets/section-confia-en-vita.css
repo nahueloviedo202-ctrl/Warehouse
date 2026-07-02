@@ -1,0 +1,218 @@
+.confia-en-vita {
+  position: relative;
+}
+
+/* ── Header: badge + título ── */
+.confia-en-vita__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  margin: 0 auto 20px;
+  text-align: center;
+}
+
+/* ── Badge ── */
+.confia-en-vita__badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 15px;
+  border-radius: 100px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  line-height: 1.4;
+  text-align: center;
+  max-width: 100%;
+}
+
+/* ── Título ── */
+.confia-en-vita__heading {
+  margin: 0;
+  font-family: 'Playfair Display', Georgia, serif;
+  line-height: 1.25;
+}
+
+/* ── Wrapper con flechas ── */
+.confia-en-vita__wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* ── Lista / slider ── */
+.confia-en-vita__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: var(--cev-gap, 15px);
+  flex: 1;
+  min-width: 0;
+}
+
+/* slider--everywhere añade margin-bottom: 1rem; esta regla lo neutraliza
+   con mayor especificidad para no romper el espaciado de sección. */
+.confia-en-vita__list.slider--everywhere {
+  margin-bottom: 0;
+}
+
+.confia-en-vita__item {
+  flex: 0 0 auto;
+  width: calc(
+    (100% - (var(--cev-cards-mobile, 1) - 1) * var(--cev-gap, 15px)) /
+      var(--cev-cards-mobile, 1)
+  );
+}
+
+@media screen and (min-width: 750px) {
+  .confia-en-vita__item {
+    width: calc(
+      (100% - (var(--cev-cards-tablet, 2) - 1) * var(--cev-gap, 15px)) /
+        var(--cev-cards-tablet, 2)
+    );
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .confia-en-vita__item {
+    width: calc(
+      (100% - (var(--cev-cards-desktop, 3) - 1) * var(--cev-gap, 15px)) /
+        var(--cev-cards-desktop, 3)
+    );
+  }
+}
+
+/* ── Tarjeta (solo imagen) ── */
+.confia-en-vita__card {
+  border-radius: var(--cev-card-radius, 5px);
+  overflow: hidden;
+  box-shadow: 2px 4px 2px rgba(0, 0, 0, 0.25);
+}
+
+/* ── Video wrap ── */
+.confia-en-vita__video-wrap {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  aspect-ratio: var(--cev-aspect-ratio, 9/16);
+}
+
+.confia-en-vita__poster-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.confia-en-vita__image-placeholder {
+  width: 100%;
+  aspect-ratio: var(--cev-aspect-ratio, 9/16);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(112, 82, 57, 0.08);
+}
+
+.confia-en-vita__image-placeholder .placeholder-svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* ── Flechas ── */
+.confia-en-vita__arrow {
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  color: var(--cev-arrow-color, #705239);
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.confia-en-vita__arrow:hover {
+  opacity: 1;
+}
+
+.confia-en-vita__arrow[disabled] {
+  opacity: 0.25;
+  cursor: default;
+}
+
+.confia-en-vita__arrow svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+}
+
+
+/* ── Responsive ── */
+@media screen and (max-width: 749px) {
+  /* Solo el header usa el padding lateral de 10px; el carrusel se expande
+     hasta los bordes de pantalla con márgenes negativos en el wrapper. */
+  .confia-en-vita .page-width {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .confia-en-vita__header {
+    gap: 3px;
+    margin-bottom: 20px;
+  }
+
+  .confia-en-vita__heading {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* El wrapper sangra hasta los bordes de pantalla anulando el padding del
+     page-width. Con width: auto y márgenes negativos en ambos lados, el bloque
+     ocupa 100% + 20px = viewport completo. */
+  .confia-en-vita__wrapper {
+    gap: 0;
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+
+  /* Especificidad doble (0,2,0) para ganar a .slider-button { display: flex }
+     de component-slider.css que se carga después con la misma especificidad. */
+  .confia-en-vita__arrow.slider-button {
+    display: none;
+  }
+
+  /* La lista hereda el ancho completo del wrapper (viewport entero).
+     El padding-left alinea la primera tarjeta con el texto del header (10px).
+     El padding-right añade espacio de respiración tras la última tarjeta. */
+  .confia-en-vita__list {
+    margin-right: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .confia-en-vita__item {
+    width: 200px;
+  }
+
+  /* letter-spacing: 0 evita que el texto uppercase supere el ancho disponible
+     y rompa el badge a 2 líneas. El Figma no usa letter-spacing en el badge. */
+  .confia-en-vita__badge {
+    white-space: normal;
+    padding: 5px 15px;
+    letter-spacing: 0;
+  }
+}
