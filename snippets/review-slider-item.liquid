@@ -1,0 +1,48 @@
+{%- comment -%}
+  Renders a single review card for the review-slider section.
+  Accepts: block (section block)
+{%- endcomment -%}
+{%- liquid
+  if block
+    assign review_text = block.settings.text
+    assign avatar_image = block.settings.avatar
+    assign author_name = block.settings.author
+    assign rating = block.settings.rating
+  else
+    assign review_text = 'Comparte la opinión de tu cliente aquí.'
+    assign author_name = 'Nombre del cliente'
+    assign rating = 5
+  endif
+-%}
+<div class="review-slider__card">
+  {%- if review_text != blank -%}
+    <p class="review-slider__text">{{ review_text }}</p>
+  {%- endif -%}
+  <div class="review-slider__footer">
+    <div class="review-slider__author-row">
+      <div class="review-slider__avatar">
+        {%- if avatar_image != blank -%}
+          {{
+            avatar_image
+            | image_url: width: 160
+            | image_tag: loading: 'lazy', width: 80, height: 80, sizes: '80px'
+          }}
+        {%- else -%}
+          {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg review-slider__avatar-placeholder' }}
+        {%- endif -%}
+      </div>
+      {%- if author_name != blank -%}
+        <p class="review-slider__author">{{ author_name }}</p>
+      {%- endif -%}
+    </div>
+    <div class="review-slider__stars" aria-label="{{ rating }} {{ 'general.slider.of' | t }} 5">
+      {%- for i in (1..5) -%}
+        {%- if i <= rating -%}
+          <span class="review-slider__star review-slider__star--filled">★</span>
+        {%- else -%}
+          <span class="review-slider__star">★</span>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+  </div>
+</div>

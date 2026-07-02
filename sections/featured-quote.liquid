@@ -1,0 +1,381 @@
+{{ 'section-featured-quote.css' | asset_url | stylesheet_tag }}
+
+<link rel="stylesheet" href="{{ 'component-slider.css' | asset_url }}" media="print" onload="this.media='all'">
+<noscript>{{ 'component-slider.css' | asset_url | stylesheet_tag }}</noscript>
+
+{%- liquid
+  assign has_slider = false
+  if section.blocks.size > 1
+    assign has_slider = true
+  endif
+-%}
+
+{%- style -%}
+  #shopify-section-{{ section.id }} {
+    --fq-max-width: {{ section.settings.quote_max_width }}px;
+    --fq-font-size: {{ section.settings.quote_font_size }}px;
+    --fq-font-size-mobile: {{ section.settings.quote_font_size_mobile }}px;
+    --fq-avatar-size: {{ section.settings.avatar_size }}px;
+    --fq-avatar-border-width: {{ section.settings.avatar_border_width }}px;
+    {%- if section.settings.quote_color != blank -%}
+      --fq-quote-color: {{ section.settings.quote_color }};
+    {%- endif -%}
+    {%- if section.settings.quote_font_weight != blank -%}
+      --fq-quote-font-weight: {{ section.settings.quote_font_weight }};
+    {%- endif -%}
+    {%- if section.settings.avatar_border_color != blank -%}
+      --fq-avatar-border-color: {{ section.settings.avatar_border_color }};
+    {%- endif -%}
+    {%- if section.settings.author_color != blank -%}
+      --fq-author-color: {{ section.settings.author_color }};
+    {%- endif -%}
+    {%- if section.settings.author_font_size > 0 -%}
+      --fq-author-font-size: {{ section.settings.author_font_size }}px;
+    {%- endif -%}
+    {%- if section.settings.author_font_weight != blank -%}
+      --fq-author-font-weight: {{ section.settings.author_font_weight }};
+    {%- endif -%}
+  }
+
+  {%- if section.settings.background_color != blank -%}
+  #shopify-section-{{ section.id }} .featured-quote {
+    background-color: {{ section.settings.background_color }};
+  }
+  {%- endif -%}
+
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top_mobile }}px;
+    padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="featured-quote color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding featured-quote--{{ section.settings.text_alignment }}">
+  <div class="featured-quote__inner page-width">
+    {%- if has_slider -%}
+      <slider-component class="featured-quote__slider-wrapper">
+        <ul
+          id="Slider-{{ section.id }}"
+          class="featured-quote__slider slider slider--everywhere slider--mobile"
+          role="list"
+        >
+          {%- for block in section.blocks -%}
+            <li
+              id="Slide-{{ section.id }}-{{ forloop.index }}"
+              class="featured-quote__slide slider__slide"
+              {{ block.shopify_attributes }}
+            >
+              {%- render 'featured-quote-item', block: block -%}
+            </li>
+          {%- endfor -%}
+        </ul>
+        <div class="slider-buttons no-js-hidden">
+          <button
+            type="button"
+            class="slider-button slider-button--prev"
+            name="previous"
+            aria-label="{{ 'general.slider.previous_slide' | t }}"
+          >
+            {% render 'icon-caret' %}
+          </button>
+          <div class="slider-counter caption">
+            <span class="slider-counter--current">1</span>
+            <span aria-hidden="true"> / </span>
+            <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
+            <span class="slider-counter--total">{{ section.blocks.size }}</span>
+          </div>
+          <button
+            type="button"
+            class="slider-button slider-button--next"
+            name="next"
+            aria-label="{{ 'general.slider.next_slide' | t }}"
+          >
+            {% render 'icon-caret' %}
+          </button>
+        </div>
+      </slider-component>
+    {%- else -%}
+      {%- for block in section.blocks -%}
+        <div class="featured-quote__single" {{ block.shopify_attributes }}>
+          {%- render 'featured-quote-item', block: block -%}
+        </div>
+      {%- else -%}
+        <div class="featured-quote__single featured-quote__placeholder">
+          {%- render 'featured-quote-item', block: nil -%}
+        </div>
+      {%- endfor -%}
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Cita destacada",
+  "class": "section",
+  "tag": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "options": [
+        {
+          "value": "accent-1",
+          "label": "t:sections.all.colors.accent_1.label"
+        },
+        {
+          "value": "accent-2",
+          "label": "t:sections.all.colors.accent_2.label"
+        },
+        {
+          "value": "background-1",
+          "label": "t:sections.all.colors.background_1.label"
+        },
+        {
+          "value": "background-2",
+          "label": "t:sections.all.colors.background_2.label"
+        },
+        {
+          "value": "inverse",
+          "label": "t:sections.all.colors.inverse.label"
+        }
+      ],
+      "default": "background-2",
+      "label": "t:sections.all.colors.label"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Color de fondo personalizado",
+      "info": "Sobrescribe el esquema de color de la sección."
+    },
+    {
+      "type": "header",
+      "content": "Texto de la cita"
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "options": [
+        {
+          "value": "center",
+          "label": "Centro"
+        },
+        {
+          "value": "left",
+          "label": "Izquierda"
+        }
+      ],
+      "default": "center",
+      "label": "Alineación"
+    },
+    {
+      "type": "range",
+      "id": "quote_max_width",
+      "min": 480,
+      "max": 1000,
+      "step": 20,
+      "unit": "px",
+      "default": 800,
+      "label": "Ancho máximo del bloque"
+    },
+    {
+      "type": "range",
+      "id": "quote_font_size",
+      "min": 16,
+      "max": 40,
+      "step": 1,
+      "unit": "px",
+      "default": 24,
+      "label": "Tamaño de fuente (escritorio)"
+    },
+    {
+      "type": "range",
+      "id": "quote_font_size_mobile",
+      "min": 14,
+      "max": 28,
+      "step": 1,
+      "unit": "px",
+      "default": 18,
+      "label": "Tamaño de fuente (móvil)"
+    },
+    {
+      "type": "checkbox",
+      "id": "quote_italic",
+      "default": true,
+      "label": "Texto en cursiva"
+    },
+    {
+      "type": "color",
+      "id": "quote_color",
+      "label": "Color del texto de la cita",
+      "default": "#AD7770"
+    },
+    {
+      "type": "select",
+      "id": "quote_font_weight",
+      "label": "Peso del texto de la cita",
+      "options": [
+        { "value": "300", "label": "Light" },
+        { "value": "400", "label": "Regular" },
+        { "value": "500", "label": "Medium" },
+        { "value": "600", "label": "Semibold" },
+        { "value": "700", "label": "Bold" },
+        { "value": "800", "label": "Extrabold" }
+      ],
+      "default": "400"
+    },
+    {
+      "type": "header",
+      "content": "Avatar y autor"
+    },
+    {
+      "type": "range",
+      "id": "avatar_size",
+      "min": 40,
+      "max": 140,
+      "step": 4,
+      "unit": "px",
+      "default": 80,
+      "label": "Tamaño del avatar"
+    },
+    {
+      "type": "range",
+      "id": "avatar_border_width",
+      "min": 0,
+      "max": 10,
+      "step": 1,
+      "unit": "px",
+      "default": 4,
+      "label": "Grosor del borde del avatar"
+    },
+    {
+      "type": "color",
+      "id": "avatar_border_color",
+      "label": "Color del borde del avatar",
+      "default": "#A9746E"
+    },
+    {
+      "type": "color",
+      "id": "author_color",
+      "label": "Color del nombre del autor"
+    },
+    {
+      "type": "range",
+      "id": "author_font_size",
+      "min": 10,
+      "max": 40,
+      "step": 1,
+      "unit": "px",
+      "label": "Tamaño del nombre del autor (px)",
+      "default": 14
+    },
+    {
+      "type": "select",
+      "id": "author_font_weight",
+      "label": "Peso del nombre del autor",
+      "options": [
+        { "value": "300", "label": "Light" },
+        { "value": "400", "label": "Regular" },
+        { "value": "500", "label": "Medium" },
+        { "value": "600", "label": "Semibold" },
+        { "value": "700", "label": "Bold" },
+        { "value": "800", "label": "Extrabold" }
+      ],
+      "default": "400"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading_desktop"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 148,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 148,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 60
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading_mobile"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top_mobile",
+      "default": 28
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom_mobile",
+      "default": 28
+    }
+  ],
+  "blocks": [
+    {
+      "type": "quote",
+      "name": "Cita",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "text",
+          "default": "Comparte la opinión de tu cliente aquí.",
+          "label": "Texto de la cita"
+        },
+        {
+          "type": "image_picker",
+          "id": "avatar",
+          "label": "Imagen del autor"
+        },
+        {
+          "type": "text",
+          "id": "author",
+          "default": "Nombre del cliente",
+          "label": "Nombre del autor"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 8,
+  "presets": [
+    {
+      "name": "Cita destacada",
+      "blocks": [
+        {
+          "type": "quote"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
