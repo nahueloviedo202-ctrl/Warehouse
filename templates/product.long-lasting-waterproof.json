@@ -704,24 +704,24 @@
         "text_content_4pHk8N": {
           "type": "text_content",
           "settings": {
-            "title": "Hecho para pieles maduras y hermosas",
+            "title": " Hecho para una mirada intensa y duradera",
             "heading_size": "h2",
             "heading_italic": true,
             "accent_color_scheme": "accent-2",
             "text": "",
-            "feature_1_heading": "Suaviza la textura sin dejar líneas.",
-            "feature_1_text": "<p>Su fórmula ligera se adapta a la piel sin marcar arrugas ni líneas de expresión, dejando un acabado suave y uniforme.</p>",
-            "feature_2_heading": "Se adapta a tu tono exacto, al instante.",
-            "feature_2_text": "<p>Sus pigmentos inteligentes se adaptan a tu piel para lograr un tono uniforme y natural, sin acabados anaranjados.</p>",
+            "feature_1_heading": "Trazo preciso sin arrastrar.",
+            "feature_1_text": "<p>Su fórmula suave se desliza con facilidad sobre el párpado, logrando un trazo uniforme y preciso sin tirones ni saltos, apto para todo tipo de piel.</p>",
+            "feature_2_heading": "Resistente al agua, todo el día.",
+            "feature_2_text": "<p>Se mantiene intacto durante horas sin correrse ni desvanecerse, incluso con el roce, el calor o la humedad.</p>",
             "circle_background_color": "#CCD1E4",
             "icon_color": "#2b2b2b",
             "label_color": "#000000",
             "circle_size_desktop": 96,
             "circle_size_mobile": 72,
-            "badge_1_icon": "dermatologist",
-            "badge_1_label": "Fórmula hidratante",
-            "badge_2_icon": "skin_layers",
-            "badge_2_label": "Acabado satinado natural",
+            "badge_1_icon": "eye",
+            "badge_1_label": "Aplicación suave",
+            "badge_2_icon": "shield",
+            "badge_2_label": "Resistente al agua",
             "badge_3_icon": "none",
             "badge_3_label": "",
             "badge_4_icon": "none",
@@ -785,28 +785,28 @@
           "type": "stat",
           "settings": {
             "number": "99%",
-            "description": "quedó satisfecho con la calidad del producto"
+            "description": "quedó satisfecho con la duración del delineador."
           }
         },
         "stat_4E34Y3": {
           "type": "stat",
           "settings": {
             "number": "96%",
-            "description": "notó una piel con un tono más uniforme."
+            "description": "notó que no se corría ni se desvanecía en todo el día."
           }
         },
         "stat_zV4CXf": {
           "type": "stat",
           "settings": {
             "number": "97%",
-            "description": "se sintió con mayor confianza al usarla."
+            "description": "logró una aplicación fácil y precisa."
           }
         },
         "stat_3K7ddL": {
           "type": "stat",
           "settings": {
             "number": "95%",
-            "description": "logró cubrir imperfecciones sin efecto pesado."
+            "description": "sintió mayor comodidad al usarlo."
           }
         }
       },
@@ -824,14 +824,14 @@
         "heading_weight": "600",
         "heading_size_desktop": 36,
         "heading_size_mobile": 24,
-        "stat_number_color": "#434343",
+        "stat_number_color": "#2A1F3D",
         "stat_number_size_desktop": 36,
         "stat_number_size_mobile": 28,
         "stat_text_color": "#434343",
         "stat_text_size_desktop": 14,
         "stat_text_size_mobile": 12,
         "show_button": true,
-        "button_label": "QUIERO MI BASE",
+        "button_label": "QUIERO MI SET",
         "button_anchor": "#informacion-producto",
         "button_url": "",
         "button_bg_color": "#2A1F3D",
@@ -908,12 +908,13 @@
       ],
       "name": "¿Por qué elegir?",
       "settings": {
-        "title": "¿POR QUÉ ELEGIR Vita Cosmetics Base Corporal y Facial?",
+        "title": "¿POR QUÉ ELEGIR Long Lasting Waterproof Eyeliner?",
         "title_transform": "uppercase",
         "title_color": "#000000",
         "title_weight": "600",
         "title_size_desktop": 36,
         "title_size_mobile": 24,
+        "product_image": "shopify://shop_images/Captura_de_pantalla_2026-07-02_200102.png",
         "product_img_size_desktop": 56,
         "product_img_size_mobile": 44,
         "vita_label": "",
@@ -1021,8 +1022,8 @@
         "benefit_EPWdb4": {
           "type": "benefit",
           "settings": {
-            "heading": "Complejo antienvejecimiento avanzado de InfiniteLove",
-            "text": "<p>Un potente antioxidante que nutre la piel y la protege del daño ambiental y los signos del envejecimiento.</p>",
+            "heading": "Fórmula resistente al agua",
+            "text": "<p>Diseñada para mantenerse intacta durante todo el día, sin correrse ni desvanecerse, incluso con el roce, el sudor o la humedad.</p>",
             "heading_color": "#d1816e",
             "heading_font_size_desktop": 20,
             "heading_font_size_mobile": 17,
@@ -1036,8 +1037,8 @@
         "benefit_qVhbeE": {
           "type": "benefit",
           "settings": {
-            "heading": "Ácido hialurónico + colágeno",
-            "text": "<p>Este dúo actúa en profundidad para hidratar, mejorar la elasticidad y reducir la apariencia de líneas finas y arrugas.</p>",
+            "heading": "Aplicación suave y precisa",
+            "text": "<p>Su textura permite deslizar el trazo con facilidad, logrando líneas definidas sin tirones, apto para todo tipo de piel.</p>",
             "heading_color": "#d1816e",
             "heading_font_size_desktop": 20,
             "heading_font_size_mobile": 17,
@@ -1051,8 +1052,8 @@
         "benefit_inTkiE": {
           "type": "benefit",
           "settings": {
-            "heading": "Vitamina E",
-            "text": "<p>Una potente mezcla de 4 ingredientes clínicamente probados que hidratan profundamente, mejoran la firmeza y revelan una piel más luminosa y rejuvenecida.</p>",
+            "heading": "Set completo de 3 unidades",
+            "text": "<p>Incluye 3 delineadores para que siempre tengas uno a mano, ya sea para renovar tu look o tener un repuesto listo.</p>",
             "heading_color": "#d1816e",
             "heading_font_size_desktop": 20,
             "heading_font_size_mobile": 17,
@@ -1107,7 +1108,7 @@
       ],
       "name": "Ingredientes destacados",
       "settings": {
-        "heading": "Hasta 12 horas de uso cómodo",
+        "heading": "Hasta 12 horas de uso duradero",
         "heading_size": "h2",
         "heading_italic": true,
         "heading_color": "#000000",
@@ -1171,14 +1172,14 @@
         "subtitle_size_desktop": 20,
         "subtitle_size_mobile": 16,
         "heading": "Cobertura que se siente como tu piel",
-        "heading_color": "#2b1b17",
+        "heading_color": "#000000",
         "heading_size_desktop": 32,
         "heading_size_mobile": 28,
         "text_gap_desktop": 16,
         "text_gap_mobile": 10,
         "button_label": "QUIERO MI BASE",
         "button_url": "",
-        "button_bg_color": "#000000",
+        "button_bg_color": "#2A1F3D",
         "button_text_color": "#ffffff",
         "button_radius": 100,
         "button_font_size_desktop": 16,
