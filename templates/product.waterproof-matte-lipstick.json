@@ -760,8 +760,8 @@
         "color_scheme": "background-1",
         "padding_top": 60,
         "padding_bottom": 40,
-        "padding_top_mobile": 16,
-        "padding_bottom_mobile": 28
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40
       }
     },
     "feature_cards_rC7d6a": {
@@ -856,7 +856,7 @@
         "padding_top": 40,
         "padding_bottom": 40,
         "padding_top_mobile": 0,
-        "padding_bottom_mobile": 32
+        "padding_bottom_mobile": 20
       }
     },
     "por_que_elegir_zrwPHX": {
@@ -946,7 +946,7 @@
         "padding_top": 40,
         "padding_bottom": 40,
         "padding_top_mobile": 20,
-        "padding_bottom_mobile": 20
+        "padding_bottom_mobile": 40
       }
     },
     "tarjetas_beneficios_HDKtgU": {
@@ -1089,7 +1089,7 @@
         "background_color": "#ffffff",
         "padding_top": 40,
         "padding_bottom": 40,
-        "padding_top_mobile": 0,
+        "padding_top_mobile": 40,
         "padding_bottom_mobile": 40
       }
     },
