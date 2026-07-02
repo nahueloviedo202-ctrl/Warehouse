@@ -691,8 +691,8 @@
         "heading_HXCQHp": {
           "type": "heading",
           "settings": {
-            "heading_italic": "Siéntete segura",
-            "heading_normal": "en tu propia piel",
+            "heading_italic": "{{ product.metafields.custom.producto_destacado_encabezado.value }}",
+            "heading_normal": "{{ product.metafields.custom.producto_destacado_titulo_normal.value }}",
             "color": "",
             "font_size_desktop": 32,
             "font_size_mobile": 20
@@ -701,7 +701,7 @@
         "text_9gWXyp": {
           "type": "text",
           "settings": {
-            "text": "<p>\"La Base Vita Cosmetics ofrece alta cobertura para disimular manchas, ojeras, acné, vitíligo, tatuajes y otras imperfecciones, con un acabado mate natural para rostro y cuerpo.\"</p>",
+            "text": "<p>{{ product.metafields.custom.producto_destacado_descripcion | metafield_tag }}</p>",
             "color": "#434343",
             "font_weight": "400",
             "font_size_desktop": 16,
