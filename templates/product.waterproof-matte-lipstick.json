@@ -685,147 +685,58 @@
         "padding_bottom_mobile": 16
       }
     },
-    "why_we_love_it_3t7fT9": {
-      "type": "why-we-love-it",
+    "product_highlight_g8DQyD": {
+      "type": "product-highlight",
       "blocks": {
-        "feature_TKe9aE": {
-          "type": "feature",
+        "heading_z7dphh": {
+          "type": "heading",
           "settings": {
-            "position": "left",
-            "heading": "Cobertura media modulable",
-            "text": "<p>La textura cremosa se funde perfectamente con la piel.</p>",
-            "heading_color": "#d1816e",
-            "heading_font_size_desktop": 16,
-            "heading_font_size_mobile": 16,
-            "heading_font_weight": "700",
-            "text_color": "",
-            "text_font_size_desktop": 14,
-            "text_font_size_mobile": 14,
-            "text_font_weight": "400"
+            "heading_italic": "{{ product.metafields.custom.producto_destacado_encabezado.value }}",
+            "heading_normal": "{{ product.metafields.custom.producto_destacado_titulo_normal.value }}",
+            "color": "",
+            "font_size_desktop": 32,
+            "font_size_mobile": 20
           }
         },
-        "feature_HyNcKQ": {
-          "type": "feature",
+        "text_UfAPkF": {
+          "type": "text",
           "settings": {
-            "position": "left",
-            "heading": "Hasta 12 horas de uso cómodo",
-            "text": "<p>Se siente ingrávido y la piel respirable.</p>",
-            "heading_color": "#d1816e",
-            "heading_font_size_desktop": 16,
-            "heading_font_size_mobile": 14,
-            "heading_font_weight": "700",
-            "text_color": "",
-            "text_font_size_desktop": 14,
-            "text_font_size_mobile": 12,
-            "text_font_weight": "400"
+            "text": "<p>{{ product.metafields.custom.producto_destacado_descripcion | metafield_tag }}</p>",
+            "color": "#434343",
+            "font_weight": "400",
+            "font_size_desktop": 16,
+            "font_size_mobile": 14
           }
         },
-        "feature_BmGDdQ": {
-          "type": "feature",
+        "bullet_AGmB7k": {
+          "type": "bullet",
           "settings": {
-            "position": "right",
-            "heading": "Natural, acabado satinado",
-            "text": "<p>No se apelmaza ni se arruga y es resistente al sudor, la humedad y el agua.</p>",
-            "heading_color": "#d1816e",
-            "heading_font_size_desktop": 16,
-            "heading_font_size_mobile": 14,
-            "heading_font_weight": "700",
-            "text_color": "",
-            "text_font_size_desktop": 15,
-            "text_font_size_mobile": 12,
-            "text_font_weight": "400"
-          }
-        },
-        "feature_GTkzQr": {
-          "type": "feature",
-          "settings": {
-            "position": "right",
-            "heading": "Hidratante y no comedogénico",
-            "text": "<p>No obstruye los poros, no se asienta en las líneas finas ni se adhiere a las zonas secas.</p>",
-            "heading_color": "#d1816e",
-            "heading_font_size_desktop": 16,
-            "heading_font_size_mobile": 14,
-            "heading_font_weight": "700",
-            "text_color": "",
-            "text_font_size_desktop": 14,
-            "text_font_size_mobile": 12,
-            "text_font_weight": "400"
-          }
-        },
-        "badge_PXkJ9W": {
-          "type": "badge",
-          "settings": {
-            "icon": "check_mark",
-            "label": "Probado por dermatólogos"
-          }
-        },
-        "badge_idaLKH": {
-          "type": "badge",
-          "settings": {
-            "icon": "leaf",
-            "label": "Fórmula transpirable"
-          }
-        },
-        "badge_QUwbUH": {
-          "type": "badge",
-          "settings": {
-            "icon": "heart",
-            "label": "Seguro para pieles sensibles"
-          }
-        },
-        "badge_48EGBr": {
-          "type": "badge",
-          "settings": {
-            "icon": "lock",
-            "label": "No comedogénico"
-          }
-        },
-        "badge_pzdxBr": {
-          "type": "badge",
-          "settings": {
-            "icon": "paw_print",
-            "label": "Vegano y libre de crueldad animal"
+            "bullet_icon": "✓",
+            "text": "Alta cobertura profesional.{{ product.metafields.custom.producto_destacado_bullet | metafield_text }}",
+            "color": "#434343",
+            "font_weight": "400",
+            "font_size_desktop": 16,
+            "font_size_mobile": 15
           }
         }
       },
       "block_order": [
-        "feature_TKe9aE",
-        "feature_HyNcKQ",
-        "feature_BmGDdQ",
-        "feature_GTkzQr",
-        "badge_PXkJ9W",
-        "badge_idaLKH",
-        "badge_QUwbUH",
-        "badge_48EGBr",
-        "badge_pzdxBr"
+        "heading_z7dphh",
+        "text_UfAPkF",
+        "bullet_AGmB7k"
       ],
-      "custom_css": [
-        "@media screen and (max-width: 749px) {.h2 {font-size: calc(var(--font-heading-scale) * 1.7rem); }}",
-        "@media screen and (max-width: 749px) {.section-why_we_love_it_3t7fT9-padding {padding-top: 32px !important; padding-bottom: 32px !important; }}"
-      ],
-      "name": "Por qué nos encanta",
+      "name": "Producto destacado",
       "settings": {
-        "heading": "Por qué nos encanta",
-        "heading_size": "h2",
-        "heading_italic": true,
-        "heading_color": "#000000",
-        "heading_font_size_desktop": 32,
-        "heading_font_size_mobile": 24,
-        "heading_font_weight": "600",
-        "image": "shopify://shop_images/seccion.webp",
-        "circle_size_desktop": 380,
-        "circle_size_mobile": 220,
+        "image": "{{ product.metafields.custom.seccion_cambios_reales_imagenes.value }}",
+        "layout": "image_first",
+        "content_bg_color": "#f1e9e3",
+        "border_radius": 30,
+        "border_radius_mobile": 20,
         "color_scheme": "background-1",
-        "accent_color_scheme": "accent-2",
-        "background_color": "#ffffff",
-        "circle_border_color": "#d1816e",
-        "badge_icon_bg_color": "#f6f3f1",
-        "badge_icon_svg_color": "#d1816e",
-        "text_alignment": "facing-center",
-        "padding_top": 60,
-        "padding_bottom": 60,
-        "padding_top_mobile": 40,
-        "padding_bottom_mobile": 40
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "padding_top_mobile": 16,
+        "padding_bottom_mobile": 28
       }
     },
     "review_slider_pmwAwt": {
@@ -1542,7 +1453,7 @@
     "64c96926-2c31-48fe-bd21-30941bc87822",
     "slideshow_HfVNww",
     "press_ticker_gTJiLE",
-    "why_we_love_it_3t7fT9",
+    "product_highlight_g8DQyD",
     "review_slider_pmwAwt",
     "feature_cards_rC7d6a",
     "comparison_slider_NtzU6b",
