@@ -865,7 +865,7 @@
         "padding_top": 40,
         "padding_bottom": 40,
         "padding_top_mobile": 20,
-        "padding_bottom_mobile": 20
+        "padding_bottom_mobile": 40
       }
     },
     "tarjetas_beneficios_nPMNw7": {
@@ -938,8 +938,8 @@
         "bg_color": "#FFFFFF",
         "padding_top": 40,
         "padding_bottom": 40,
-        "padding_top_mobile": 24,
-        "padding_bottom_mobile": 24
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 40
       }
     },
     "ingredient_spotlight_wmhrkr": {
@@ -1105,7 +1105,7 @@
         "background_color": "",
         "padding_top": 40,
         "padding_bottom": 40,
-        "padding_top_mobile": 40,
+        "padding_top_mobile": 20,
         "padding_bottom_mobile": 40
       }
     },
@@ -1173,8 +1173,8 @@
         "bg_color": "#FFFFFF",
         "padding_top": 40,
         "padding_bottom": 40,
-        "padding_top_mobile": 24,
-        "padding_bottom_mobile": 24
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 40
       }
     },
     "review_slider_pmwAwt": {
@@ -1243,7 +1243,7 @@
         "background_color": "#FFFFFF",
         "padding_top": 40,
         "padding_bottom": 40,
-        "padding_top_mobile": 0,
+        "padding_top_mobile": 20,
         "padding_bottom_mobile": 40
       }
     },
@@ -1360,7 +1360,7 @@
         "open_first_question": false,
         "padding_top": 40,
         "padding_bottom": 40,
-        "padding_top_mobile": 40,
+        "padding_top_mobile": 20,
         "padding_bottom_mobile": 40
       }
     },
@@ -1431,7 +1431,7 @@
       ],
       "name": "Comunidad / Feed UGC",
       "settings": {
-        "heading": "Únete a la comunidad @VitaGlow",
+        "heading": "Únete a la comunidad @VitaNuraLab",
         "heading_size": "h2",
         "heading_color": "",
         "heading_font_size_desktop": 32,
