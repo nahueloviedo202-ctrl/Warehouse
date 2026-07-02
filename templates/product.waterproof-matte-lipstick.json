@@ -685,6 +685,84 @@
         "padding_bottom_mobile": 16
       }
     },
+    "product_highlight_ztwPVf": {
+      "type": "product-highlight",
+      "blocks": {
+        "heading_HXCQHp": {
+          "type": "heading",
+          "settings": {
+            "heading_italic": "Siéntete segura",
+            "heading_normal": "en tu propia piel",
+            "color": "",
+            "font_size_desktop": 32,
+            "font_size_mobile": 20
+          }
+        },
+        "text_9gWXyp": {
+          "type": "text",
+          "settings": {
+            "text": "<p>\"La Base Vita Cosmetics ofrece alta cobertura para disimular manchas, ojeras, acné, vitíligo, tatuajes y otras imperfecciones, con un acabado mate natural para rostro y cuerpo.\"</p>",
+            "color": "#434343",
+            "font_weight": "400",
+            "font_size_desktop": 16,
+            "font_size_mobile": 14
+          }
+        },
+        "bullet_jaUzti": {
+          "type": "bullet",
+          "settings": {
+            "bullet_icon": "✓",
+            "text": "Alta cobertura profesional.",
+            "color": "#434343",
+            "font_weight": "400",
+            "font_size_desktop": 16,
+            "font_size_mobile": 15
+          }
+        },
+        "bullet_YpqfEV": {
+          "type": "bullet",
+          "settings": {
+            "bullet_icon": "✓",
+            "text": "Acabado mate de aspecto natural.",
+            "color": "#434343",
+            "font_weight": "400",
+            "font_size_desktop": 16,
+            "font_size_mobile": 15
+          }
+        },
+        "bullet_cmz6bd": {
+          "type": "bullet",
+          "settings": {
+            "bullet_icon": "✓",
+            "text": "Fórmula para rostro y cuerpo.",
+            "color": "#434343",
+            "font_weight": "400",
+            "font_size_desktop": 16,
+            "font_size_mobile": 15
+          }
+        }
+      },
+      "block_order": [
+        "heading_HXCQHp",
+        "text_9gWXyp",
+        "bullet_jaUzti",
+        "bullet_YpqfEV",
+        "bullet_cmz6bd"
+      ],
+      "name": "Producto destacado",
+      "settings": {
+        "image": "{{ product.metafields.custom.seccion_cambios_reales_imagenes.value }}",
+        "layout": "image_first",
+        "content_bg_color": "#f1e9e3",
+        "border_radius": 30,
+        "border_radius_mobile": 20,
+        "color_scheme": "background-1",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "padding_top_mobile": 16,
+        "padding_bottom_mobile": 28
+      }
+    },
     "review_slider_pmwAwt": {
       "type": "review-slider",
       "blocks": {
@@ -1399,6 +1477,7 @@
     "64c96926-2c31-48fe-bd21-30941bc87822",
     "slideshow_HfVNww",
     "press_ticker_gTJiLE",
+    "product_highlight_ztwPVf",
     "review_slider_pmwAwt",
     "feature_cards_rC7d6a",
     "comparison_slider_NtzU6b",
