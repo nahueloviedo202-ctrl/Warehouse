@@ -856,7 +856,7 @@
         "padding_top": 40,
         "padding_bottom": 40,
         "padding_top_mobile": 0,
-        "padding_bottom_mobile": 20
+        "padding_bottom_mobile": 0
       }
     },
     "por_que_elegir_zrwPHX": {
@@ -945,7 +945,7 @@
         "bg_color": "",
         "padding_top": 40,
         "padding_bottom": 40,
-        "padding_top_mobile": 20,
+        "padding_top_mobile": 40,
         "padding_bottom_mobile": 40
       }
     },
@@ -1019,8 +1019,8 @@
         "bg_color": "#eaddd4",
         "padding_top": 40,
         "padding_bottom": 40,
-        "padding_top_mobile": 24,
-        "padding_bottom_mobile": 24
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40
       }
     },
     "review_slider_pmwAwt": {
@@ -1206,7 +1206,7 @@
         "open_first_question": false,
         "padding_top": 40,
         "padding_bottom": 40,
-        "padding_top_mobile": 40,
+        "padding_top_mobile": 0,
         "padding_bottom_mobile": 40
       }
     },
