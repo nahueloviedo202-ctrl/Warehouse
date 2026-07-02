@@ -678,7 +678,7 @@
         "text_italic": true,
         "text_uppercase": true,
         "color_scheme": "background-1",
-        "custom_background_color": "#e3d0c9",
+        "custom_background_color": "#DAE0E8",
         "custom_text_color": "#000000",
         "padding_top": 20,
         "padding_bottom": 20,
@@ -730,9 +730,9 @@
             "link": "#informacion-producto",
             "button_style_secondary": false,
             "button_full_width": false,
-            "button_bg_color": "#2A1F3D",
+            "button_bg_color": "#000000",
             "button_text_color": "#FFFFFF",
-            "button_border_color": "#2A1F3D",
+            "button_border_color": "#000000",
             "button_border_width": 0,
             "button_border_radius": 0,
             "button_font_size": 0,
@@ -773,77 +773,9 @@
         "color_scheme": "background-1",
         "background_color": "#FFFFFF",
         "padding_top": 60,
-        "padding_bottom": 60,
+        "padding_bottom": 0,
         "padding_top_mobile": 40,
         "padding_bottom_mobile": 40
-      }
-    },
-    "en_solo_4_semanas_n9tDXW": {
-      "type": "en-solo-4-semanas",
-      "blocks": {
-        "stat_W8VRBy": {
-          "type": "stat",
-          "settings": {
-            "number": "99%",
-            "description": "quedó satisfecho con la duración del delineador."
-          }
-        },
-        "stat_4E34Y3": {
-          "type": "stat",
-          "settings": {
-            "number": "96%",
-            "description": "notó que no se corría ni se desvanecía en todo el día."
-          }
-        },
-        "stat_zV4CXf": {
-          "type": "stat",
-          "settings": {
-            "number": "97%",
-            "description": "logró una aplicación fácil y precisa."
-          }
-        },
-        "stat_3K7ddL": {
-          "type": "stat",
-          "settings": {
-            "number": "95%",
-            "description": "sintió mayor comodidad al usarlo."
-          }
-        }
-      },
-      "block_order": [
-        "stat_W8VRBy",
-        "stat_4E34Y3",
-        "stat_zV4CXf",
-        "stat_3K7ddL"
-      ],
-      "name": "En solo 4 semanas",
-      "settings": {
-        "heading": "En solo 4 semanas:",
-        "heading_tag": "h2",
-        "heading_color": "#000000",
-        "heading_weight": "600",
-        "heading_size_desktop": 36,
-        "heading_size_mobile": 24,
-        "stat_number_color": "#2A1F3D",
-        "stat_number_size_desktop": 36,
-        "stat_number_size_mobile": 28,
-        "stat_text_color": "#434343",
-        "stat_text_size_desktop": 14,
-        "stat_text_size_mobile": 12,
-        "show_button": true,
-        "button_label": "QUIERO MI SET",
-        "button_anchor": "#informacion-producto",
-        "button_url": "",
-        "button_bg_color": "#2A1F3D",
-        "button_text_color": "#ffffff",
-        "button_text_size_desktop": 16,
-        "button_text_size_mobile": 14,
-        "color_scheme": "background-1",
-        "bg_color": "#DAE0E8",
-        "padding_top": 40,
-        "padding_bottom": 40,
-        "padding_top_mobile": 24,
-        "padding_bottom_mobile": 24
       }
     },
     "por_que_elegir_TgyBPB": {
@@ -930,10 +862,84 @@
         "row_size_mobile": 12,
         "color_scheme": "background-1",
         "bg_color": "",
-        "padding_top": 40,
-        "padding_bottom": 40,
+        "padding_top": 60,
+        "padding_bottom": 0,
         "padding_top_mobile": 20,
         "padding_bottom_mobile": 20
+      }
+    },
+    "tarjetas_beneficios_nPMNw7": {
+      "type": "tarjetas-beneficios",
+      "blocks": {
+        "card_Heg7zY": {
+          "type": "card",
+          "settings": {
+            "icon": "shopify://shop_images/eye-closed.svg",
+            "text": "Aplicación suave y precisa."
+          }
+        },
+        "card_KQKnfF": {
+          "type": "card",
+          "settings": {
+            "icon": "shopify://shop_images/sparkles.svg",
+            "text": "Apto para todo tipo de piel."
+          }
+        },
+        "card_E3TKbP": {
+          "type": "card",
+          "settings": {
+            "icon": "shopify://shop_images/droplets.svg",
+            "text": "Resistente al agua y al roce."
+          }
+        },
+        "card_VXdQ84": {
+          "type": "card",
+          "settings": {
+            "icon": "shopify://shop_images/shield-check.svg",
+            "text": "Larga duración durante todo el día."
+          }
+        }
+      },
+      "block_order": [
+        "card_Heg7zY",
+        "card_KQKnfF",
+        "card_E3TKbP",
+        "card_VXdQ84"
+      ],
+      "name": "Tarjetas de beneficios",
+      "settings": {
+        "subtitle": "Más que un delineador",
+        "subtitle_color": "#34264D",
+        "subtitle_size_desktop": 20,
+        "subtitle_size_mobile": 16,
+        "heading": " Definición que se siente natural en tu mirada",
+        "heading_color": "#000000",
+        "heading_size_desktop": 32,
+        "heading_size_mobile": 28,
+        "text_gap_desktop": 16,
+        "text_gap_mobile": 10,
+        "button_label": "QUIERO MI SET",
+        "button_url": "",
+        "button_bg_color": "#000000",
+        "button_text_color": "#ffffff",
+        "button_radius": 100,
+        "button_font_size_desktop": 16,
+        "button_font_size_mobile": 14,
+        "card_bg_color": "#DAE0E8",
+        "card_radius": 5,
+        "card_gap": 10,
+        "card_text_color": "#2b1b17",
+        "card_text_size_desktop": 14,
+        "card_text_size_mobile": 12,
+        "icon_size_desktop": 40,
+        "icon_size_mobile": 32,
+        "layout_gap_desktop": 60,
+        "layout_gap_mobile": 8,
+        "bg_color": "#FFFFFF",
+        "padding_top": 60,
+        "padding_bottom": 0,
+        "padding_top_mobile": 24,
+        "padding_bottom_mobile": 24
       }
     },
     "ingredient_spotlight_wmhrkr": {
@@ -1024,7 +1030,7 @@
           "settings": {
             "heading": "Fórmula resistente al agua",
             "text": "<p>Diseñada para mantenerse intacta durante todo el día, sin correrse ni desvanecerse, incluso con el roce, el sudor o la humedad.</p>",
-            "heading_color": "#d1816e",
+            "heading_color": "#2A1F3D",
             "heading_font_size_desktop": 20,
             "heading_font_size_mobile": 17,
             "heading_font_weight": "700",
@@ -1039,7 +1045,7 @@
           "settings": {
             "heading": "Aplicación suave y precisa",
             "text": "<p>Su textura permite deslizar el trazo con facilidad, logrando líneas definidas sin tirones, apto para todo tipo de piel.</p>",
-            "heading_color": "#d1816e",
+            "heading_color": "#2A1F3D",
             "heading_font_size_desktop": 20,
             "heading_font_size_mobile": 17,
             "heading_font_weight": "700",
@@ -1054,7 +1060,7 @@
           "settings": {
             "heading": "Set completo de 3 unidades",
             "text": "<p>Incluye 3 delineadores para que siempre tengas uno a mano, ya sea para renovar tu look o tener un repuesto listo.</p>",
-            "heading_color": "#d1816e",
+            "heading_color": "#2A1F3D",
             "heading_font_size_desktop": 20,
             "heading_font_size_mobile": 17,
             "heading_font_weight": "700",
@@ -1062,32 +1068,6 @@
             "text_font_size_desktop": 15,
             "text_font_size_mobile": 14,
             "text_font_weight": "400"
-          }
-        },
-        "badge_V9LQtq": {
-          "type": "badge",
-          "settings": {
-            "icon": "color_adapt",
-            "label": "Tecnología de adaptación de color",
-            "icon_bg_color": "#f6f3f1",
-            "icon_color": "#bc6161",
-            "label_color": "",
-            "label_font_size_desktop": 12,
-            "label_font_size_mobile": 11,
-            "label_font_weight": "400"
-          }
-        },
-        "badge_73xtjy": {
-          "type": "badge",
-          "settings": {
-            "icon": "anti_aging",
-            "label": "Complejo antienvejecimiento",
-            "icon_bg_color": "#f6f3f1",
-            "icon_color": "#bc6161",
-            "label_color": "",
-            "label_font_size_desktop": 12,
-            "label_font_size_mobile": 11,
-            "label_font_weight": "400"
           }
         }
       },
@@ -1098,9 +1078,7 @@
         "ingredient_Rr49Fa",
         "benefit_EPWdb4",
         "benefit_qVhbeE",
-        "benefit_inTkiE",
-        "badge_V9LQtq",
-        "badge_73xtjy"
+        "benefit_inTkiE"
       ],
       "custom_css": [
         "@media screen and (max-width: 749px) {.h2 {font-size: calc(var(--font-heading-scale) * 1.7rem); }}",
@@ -1115,7 +1093,7 @@
         "heading_font_size_desktop": 40,
         "heading_font_size_mobile": 40,
         "heading_font_weight": "600",
-        "backdrop_image": "shopify://shop_images/producto.webp",
+        "backdrop_image": "shopify://shop_images/0ce41c3c451c47ef977bbb40e3d7e316_tplv-fhlh96nyum-resize-webp_800_800.webp",
         "layout": "image_first",
         "show_connector_lines": false,
         "line_color": "",
@@ -1126,77 +1104,75 @@
         "accent_color_scheme": "accent-2",
         "background_color": "",
         "padding_top": 60,
-        "padding_bottom": 60,
+        "padding_bottom": 0,
         "padding_top_mobile": 40,
         "padding_bottom_mobile": 40
       }
     },
-    "tarjetas_beneficios_nPMNw7": {
-      "type": "tarjetas-beneficios",
+    "en_solo_4_semanas_n9tDXW": {
+      "type": "en-solo-4-semanas",
       "blocks": {
-        "card_Heg7zY": {
-          "type": "card",
+        "stat_W8VRBy": {
+          "type": "stat",
           "settings": {
-            "text": "Larga duración para el día a día."
+            "number": "99%",
+            "description": "quedó satisfecho con la duración del delineador."
           }
         },
-        "card_KQKnfF": {
-          "type": "card",
+        "stat_4E34Y3": {
+          "type": "stat",
           "settings": {
-            "text": "Apta para rostro y cuerpo."
+            "number": "96%",
+            "description": "notó que no se corría ni se desvanecía en todo el día."
           }
         },
-        "card_E3TKbP": {
-          "type": "card",
+        "stat_zV4CXf": {
+          "type": "stat",
           "settings": {
-            "text": "Hidratación 12h con Ácido Hialurónico"
+            "number": "97%",
+            "description": "logró una aplicación fácil y precisa."
           }
         },
-        "card_VXdQ84": {
-          "type": "card",
+        "stat_3K7ddL": {
+          "type": "stat",
           "settings": {
-            "text": "Alta cobertura profesional"
+            "number": "95%",
+            "description": "sintió mayor comodidad al usarlo."
           }
         }
       },
       "block_order": [
-        "card_Heg7zY",
-        "card_KQKnfF",
-        "card_E3TKbP",
-        "card_VXdQ84"
+        "stat_W8VRBy",
+        "stat_4E34Y3",
+        "stat_zV4CXf",
+        "stat_3K7ddL"
       ],
-      "name": "Tarjetas de beneficios",
+      "name": "En solo 4 semanas",
       "settings": {
-        "subtitle": "Más que una base",
-        "subtitle_color": "#34264D",
-        "subtitle_size_desktop": 20,
-        "subtitle_size_mobile": 16,
-        "heading": "Cobertura que se siente como tu piel",
+        "heading": "En solo 4 semanas:",
+        "heading_tag": "h2",
         "heading_color": "#000000",
-        "heading_size_desktop": 32,
-        "heading_size_mobile": 28,
-        "text_gap_desktop": 16,
-        "text_gap_mobile": 10,
-        "button_label": "QUIERO MI BASE",
+        "heading_weight": "600",
+        "heading_size_desktop": 36,
+        "heading_size_mobile": 24,
+        "stat_number_color": "#2A1F3D",
+        "stat_number_size_desktop": 36,
+        "stat_number_size_mobile": 28,
+        "stat_text_color": "#434343",
+        "stat_text_size_desktop": 14,
+        "stat_text_size_mobile": 12,
+        "show_button": true,
+        "button_label": "QUIERO MI SET",
+        "button_anchor": "#informacion-producto",
         "button_url": "",
-        "button_bg_color": "#2A1F3D",
+        "button_bg_color": "#000000",
         "button_text_color": "#ffffff",
-        "button_radius": 100,
-        "button_font_size_desktop": 16,
-        "button_font_size_mobile": 14,
-        "card_bg_color": "#ffffff",
-        "card_radius": 5,
-        "card_gap": 10,
-        "card_text_color": "#2b1b17",
-        "card_text_size_desktop": 14,
-        "card_text_size_mobile": 12,
-        "icon_size_desktop": 40,
-        "icon_size_mobile": 32,
-        "layout_gap_desktop": 60,
-        "layout_gap_mobile": 8,
-        "bg_color": "#DAE0E8",
-        "padding_top": 40,
-        "padding_bottom": 40,
+        "button_text_size_desktop": 16,
+        "button_text_size_mobile": 14,
+        "color_scheme": "background-1",
+        "bg_color": "#FFFFFF",
+        "padding_top": 60,
+        "padding_bottom": 0,
         "padding_top_mobile": 24,
         "padding_bottom_mobile": 24
       }
@@ -1266,7 +1242,7 @@
         "color_scheme": "background-1",
         "background_color": "#FFFFFF",
         "padding_top": 60,
-        "padding_bottom": 60,
+        "padding_bottom": 0,
         "padding_top_mobile": 0,
         "padding_bottom_mobile": 40
       }
@@ -1383,7 +1359,7 @@
         "item_spacing": 12,
         "open_first_question": false,
         "padding_top": 60,
-        "padding_bottom": 60,
+        "padding_bottom": 0,
         "padding_top_mobile": 40,
         "padding_bottom_mobile": 40
       }
@@ -1493,10 +1469,10 @@
     "slideshow_HfVNww",
     "press_ticker_gTJiLE",
     "comparison_slider_NtzU6b",
-    "en_solo_4_semanas_n9tDXW",
     "por_que_elegir_TgyBPB",
-    "ingredient_spotlight_wmhrkr",
     "tarjetas_beneficios_nPMNw7",
+    "ingredient_spotlight_wmhrkr",
+    "en_solo_4_semanas_n9tDXW",
     "review_slider_pmwAwt",
     "faq_accordion_m3GjeY",
     "community_feed_dJB7VX"
