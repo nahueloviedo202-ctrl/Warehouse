@@ -742,7 +742,7 @@
         "row_heBUEM": {
           "type": "row",
           "settings": {
-            "feature": "Cobertura extrema desde la primera aplicación",
+            "feature": "Aplicación suave y precisa en un solo trazo",
             "vita_has": true,
             "others_has": false
           }
@@ -750,7 +750,7 @@
         "row_zaVHnp": {
           "type": "row",
           "settings": {
-            "feature": "Unifica el tono de la piel",
+            "feature": "Hidrata y mantiene los labios humectados",
             "vita_has": true,
             "others_has": false
           }
@@ -758,7 +758,7 @@
         "row_QYHt8i": {
           "type": "row",
           "settings": {
-            "feature": "Cubre vitiligo, cicatrices y tatuajes",
+            "feature": "Color vibrante e intenso de larga duración",
             "vita_has": true,
             "others_has": false
           }
@@ -766,7 +766,7 @@
         "row_RgfzDh": {
           "type": "row",
           "settings": {
-            "feature": "No marca líneas de expresión",
+            "feature": "Acabado glossy y brillante profesional",
             "vita_has": true,
             "others_has": false
           }
@@ -774,7 +774,7 @@
         "row_hKjUMV": {
           "type": "row",
           "settings": {
-            "feature": "Resistente al agua y al roce",
+            "feature": "Delineador + gloss en un solo dúo (2 en 1)",
             "vita_has": true,
             "others_has": false
           }
@@ -782,7 +782,7 @@
         "row_tyiWnE": {
           "type": "row",
           "settings": {
-            "feature": "Larga duración durante todo el día",
+            "feature": "Se adapta a cualquier look de maquillaje",
             "vita_has": true,
             "others_has": false
           }
@@ -905,80 +905,6 @@
         "padding_bottom_mobile": 16
       }
     },
-    "cambios_reales_rmpypy": {
-      "type": "cambios-reales",
-      "blocks": {
-        "review_hh4qQ4": {
-          "type": "review",
-          "settings": {
-            "image": "shopify://shop_images/1_web_1_1.png",
-            "text": "La usé para cubrir un tatuaje y quedé sorprendida. Con poca cantidad logré una cobertura excelente y en las fotos se veía completamente natural.",
-            "author": "María D.",
-            "rating": 5
-          }
-        },
-        "review_VTUhLE": {
-          "type": "review",
-          "settings": {
-            "image": "shopify://shop_images/2_web_1_1.png",
-            "text": "Me daba miedo que no encontrara mi tono, pero quedó perfecto. La textura es ligera, se difumina fácil.",
-            "author": "Sofía P.",
-            "rating": 5
-          }
-        },
-        "review_HtdwBY": {
-          "type": "review",
-          "settings": {
-            "image": "shopify://shop_images/3_web_1_1.png",
-            "text": "Tengo marcas de acné muy pronunciadas. Esta base unifica el tono de mi piel sin dejar efecto máscara.",
-            "author": "Camila M.",
-            "rating": 5
-          }
-        }
-      },
-      "block_order": [
-        "review_hh4qQ4",
-        "review_VTUhLE",
-        "review_HtdwBY"
-      ],
-      "name": "Cambios reales",
-      "settings": {
-        "heading": "Cambios reales",
-        "heading_color": "#070809",
-        "heading_font_size_desktop": 36,
-        "heading_font_size_mobile": 26,
-        "subheading": "Más que una base",
-        "subheading_color": "#4a3329",
-        "subheading_font_size_desktop": 20,
-        "subheading_font_size_mobile": 16,
-        "image_height_desktop": 350,
-        "image_height_mobile": 220,
-        "card_background_color": "#ffffff",
-        "card_border_color": "#e36e65",
-        "card_border_width": 1,
-        "card_corner_radius": 5,
-        "text_color": "#000000",
-        "author_color": "#000000",
-        "star_color": "#f5a623",
-        "cards_per_row_desktop": 3,
-        "cards_per_row_tablet": 2,
-        "cards_per_row_mobile": 1,
-        "card_gap": 15,
-        "show_arrows_desktop": true,
-        "show_arrows_mobile": true,
-        "arrows_color_desktop": "#e36e65",
-        "arrows_bg_color_desktop": "#f1e4e3",
-        "arrows_border_color_desktop": "#f1e9e3",
-        "arrows_color_mobile": "#854700",
-        "arrows_bg_color_mobile": "#ffffff",
-        "arrows_border_color_mobile": "#040200",
-        "background_color": "#f1e4e3",
-        "padding_top": 48,
-        "padding_bottom": 48,
-        "padding_top_mobile": 28,
-        "padding_bottom_mobile": 28
-      }
-    },
     "confia_en_vita_NP9b9J": {
       "type": "confia-en-vita",
       "blocks": {
@@ -1023,7 +949,7 @@
       ],
       "name": "Confia en Vita",
       "settings": {
-        "badge_text": "Miles de personas ya confían en Vita Cosmetics",
+        "badge_text": "Miles de personas ya confían en Sam sugar lip",
         "badge_gradient_start": "#f1e4e3",
         "badge_gradient_end": "#e36e65",
         "badge_gradient_angle": 92,
@@ -1057,29 +983,29 @@
         "card_RPUNqA": {
           "type": "card",
           "settings": {
-            "icon": "shopify://shop_images/icon-icons_2.png",
-            "text": "Larga duración para el día a día."
+            "icon": "shopify://shop_images/heart.svg",
+            "text": "Larga duración durante todo el día."
           }
         },
         "card_FwPkPf": {
           "type": "card",
           "settings": {
-            "icon": "shopify://shop_images/icon-icons_1.svg",
-            "text": "Apta para rostro y cuerpo."
+            "icon": "shopify://shop_images/circle-check.svg",
+            "text": "Apto para cualquier look de maquillaje."
           }
         },
         "card_ijAQBq": {
           "type": "card",
           "settings": {
-            "icon": "shopify://shop_images/sparkle_1.png",
-            "text": "Hidratación 12h con Ácido Hialurónico"
+            "icon": "shopify://shop_images/sparkles.svg",
+            "text": "Hidratación profunda y efecto humectante."
           }
         },
         "card_AwdPPR": {
           "type": "card",
           "settings": {
-            "icon": "shopify://shop_images/icon-icons_3.png",
-            "text": "Alta cobertura profesional"
+            "icon": "shopify://shop_images/award.svg",
+            "text": "Color vibrante de alta intensidad."
           }
         }
       },
@@ -1091,17 +1017,17 @@
       ],
       "name": "Tarjetas de beneficios",
       "settings": {
-        "subtitle": "Más que una base",
+        "subtitle": "Más que un gloss",
         "subtitle_color": "#2b1b17",
         "subtitle_size_desktop": 20,
         "subtitle_size_mobile": 16,
-        "heading": "Cobertura que se siente como tu piel",
+        "heading": " Color que se siente como tus labios",
         "heading_color": "#2b1b17",
         "heading_size_desktop": 32,
         "heading_size_mobile": 24,
         "text_gap_desktop": 16,
         "text_gap_mobile": 10,
-        "button_label": "QUIERO MI BASE",
+        "button_label": " QUIERO MI DÚO",
         "button_url": "#informacion-producto",
         "button_bg_color": "#000000",
         "button_text_color": "#ffffff",
@@ -1333,7 +1259,6 @@
     "slideshow_HfVNww",
     "por_que_elegir_dc4rGH",
     "press_ticker_gTJiLE",
-    "cambios_reales_rmpypy",
     "confia_en_vita_NP9b9J",
     "tarjetas_beneficios_QKBXcz",
     "faq_accordion_m3GjeY",
