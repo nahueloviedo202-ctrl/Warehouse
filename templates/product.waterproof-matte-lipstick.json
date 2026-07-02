@@ -758,7 +758,7 @@
         "border_radius": 30,
         "border_radius_mobile": 20,
         "color_scheme": "background-1",
-        "padding_top": 40,
+        "padding_top": 60,
         "padding_bottom": 40,
         "padding_top_mobile": 16,
         "padding_bottom_mobile": 28
