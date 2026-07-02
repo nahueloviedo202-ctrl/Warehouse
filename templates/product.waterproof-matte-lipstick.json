@@ -1099,8 +1099,8 @@
         "question_giLkXQ": {
           "type": "question",
           "settings": {
-            "question": "¿Cuánta cobertura ofrece la Base de Maquillaje?",
-            "answer": "<p>Ofrece una cobertura media modulable que se adapta a tu piel y se puede construir según tus necesidades.</p>",
+            "question": "¿Cuánta cobertura tiene el producto?",
+            "answer": "<p>Alta pigmentación desde la primera pasada. Permite un acabado uniforme que podés intensificar según el look que quieras lograr.</p>",
             "question_color": "",
             "question_font_size_desktop": 16,
             "question_font_size_mobile": 15,
@@ -1114,8 +1114,8 @@
         "question_36wNwy": {
           "type": "question",
           "settings": {
-            "question": "¿El producto es adecuado para pieles sensibles?",
-            "answer": "<p>Sí, está formulada para ser segura y respetuosa con pieles sensibles.</p>",
+            "question": "¿El producto es resistente al agua?",
+            "answer": "<p>Sí, su fórmula waterproof ayuda a mantener el color intacto durante todo el día, sin correrse ni desvanecerse.</p>",
             "question_color": "",
             "question_font_size_desktop": 16,
             "question_font_size_mobile": 15,
@@ -1129,8 +1129,8 @@
         "question_e4hhdC": {
           "type": "question",
           "settings": {
-            "question": "¿La base de maquillaje es adecuada para pieles con arrugas o líneas finas?",
-            "answer": "<p>Sí, su fórmula ligera no se asienta en las líneas finas ni acentúa las arrugas.</p>",
+            "question": "¿Cuánto dura el maquillaje en los labios?",
+            "answer": "<p>Ofrece larga duración con un acabado mate que se mantiene fijo por horas, ideal para uso diario o eventos largos.</p>",
             "question_color": "",
             "question_font_size_desktop": 16,
             "question_font_size_mobile": 15,
@@ -1144,8 +1144,8 @@
         "question_HKe6yp": {
           "type": "question",
           "settings": {
-            "question": "¿Cuál es la mejor manera de aplicar la base?",
-            "answer": "<p>Aplica pequeñas cantidades con los dedos, una esponja o brocha, trabajando desde el centro del rostro hacia afuera.</p>",
+            "question": "¿Qué tipo de acabado deja?",
+            "answer": "<p>Deja un acabado mate suave y elegante, con una textura ligera que se siente cómoda durante el uso.</p>",
             "question_color": "",
             "question_font_size_desktop": 16,
             "question_font_size_mobile": 15,
@@ -1159,8 +1159,8 @@
         "question_V76RRe": {
           "type": "question",
           "settings": {
-            "question": "¿Cómo adapta la base de maquillaje su color?",
-            "answer": "<p>Contiene pigmentos inteligentes que reaccionan con el pH de tu piel para adaptarse a tu tono natural.</p>",
+            "question": "¿Qué tonos incluye?",
+            "answer": "<p>Incluye tonos nude versátiles que se adaptan a distintos estilos, desde looks naturales hasta más definidos.</p>",
             "question_color": "",
             "question_font_size_desktop": 16,
             "question_font_size_mobile": 15,
