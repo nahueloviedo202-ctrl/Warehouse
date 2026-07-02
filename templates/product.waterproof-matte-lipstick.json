@@ -309,6 +309,7 @@
         },
         "video_carousel_gUmwA4": {
           "type": "video_carousel",
+          "disabled": true,
           "settings": {
             "heading": "Verlo en acción",
             "heading_size": "h2",
@@ -769,7 +770,7 @@
         "card_7BU4fG": {
           "type": "card",
           "settings": {
-            "image": "shopify://shop_images/imgi_32_a4c82a4b-ceb4-4d83-a9fa-ca458193fcd7.webp",
+            "image": "shopify://shop_images/Gemini_Generated_Image_sdyhb7sdyhb7sdyh.webp",
             "heading": "Aplicación suave, acabado mate.",
             "text": "<p>Su textura cremosa se desliza con facilidad para un delineado preciso. Se fija con un acabado mate resistente al agua que ayuda a mantener el color por horas.</p>",
             "card_background_color": "#f6f3f1",
@@ -786,7 +787,7 @@
         "card_gpfMnF": {
           "type": "card",
           "settings": {
-            "image": "shopify://shop_images/Gemini_Generated_Image_3t0r723t0r723t0r.webp",
+            "image": "shopify://shop_images/Gemini_Generated_Image_4m9dj44m9dj44m9d.webp",
             "heading": "Tonos nude para cada ocasión",
             "text": "<p>Disponible en una selección de tonos nude versátiles que combinan fácilmente con distintos estilos y maquillajes, logrando un acabado natural o más intenso según la ocasión.</p>",
             "card_background_color": "#f6f3f1",
@@ -803,7 +804,7 @@
         "card_ULpaJD": {
           "type": "card",
           "settings": {
-            "image": "shopify://shop_images/Gemini_Generated_Image_4u29r94u29r94u29.webp",
+            "image": "shopify://shop_images/Gemini_Generated_Image_pnhaq6pnhaq6pnha.jpg",
             "heading": "Larga duración, todo el día.",
             "text": "<p>Su fórmula waterproof ayuda a mantener el color y la definición por horas, con un acabado mate cómodo que no se corre ni se desvanece fácilmente.</p><p></p>",
             "card_background_color": "#f6f3f1",
@@ -954,24 +955,28 @@
         "card_3NXDbL": {
           "type": "card",
           "settings": {
-            "text": "Larga duración para el día a día."
+            "icon": "shopify://shop_images/droplets.svg",
+            "text": "Con fórmula resistente al agua."
           }
         },
         "card_aX9Pft": {
           "type": "card",
           "settings": {
-            "text": "Apta para rostro y cuerpo."
+            "icon": "shopify://shop_images/pencil.svg",
+            "text": "Ideal para delinear y rellenar los labios"
           }
         },
         "card_NjBCfT": {
           "type": "card",
           "settings": {
-            "text": "Hidratación 12h con Ácido Hialurónico"
+            "icon": "shopify://shop_images/shield-check.svg",
+            "text": "Larga duración con acabado mate"
           }
         },
         "card_693kpx": {
           "type": "card",
           "settings": {
+            "icon": "shopify://shop_images/badge-check.svg",
             "text": "Alta cobertura profesional"
           }
         }
@@ -984,17 +989,17 @@
       ],
       "name": "Tarjetas de beneficios",
       "settings": {
-        "subtitle": "Más que una base",
+        "subtitle": "Más que un delineador",
         "subtitle_color": "#2b1b17",
         "subtitle_size_desktop": 20,
         "subtitle_size_mobile": 16,
-        "heading": "Cobertura que se siente como tu piel",
+        "heading": "Acabado mate que se siente ligero",
         "heading_color": "#2b1b17",
         "heading_size_desktop": 32,
         "heading_size_mobile": 28,
         "text_gap_desktop": 16,
         "text_gap_mobile": 10,
-        "button_label": "QUIERO MI BASE",
+        "button_label": "QUIERO MI DELINEADOR",
         "button_url": "",
         "button_bg_color": "#000000",
         "button_text_color": "#ffffff",
@@ -1062,7 +1067,7 @@
         "heading_font_size_desktop": 36,
         "heading_font_size_mobile": 26,
         "heading_font_weight": "600",
-        "subheading": "Opiniones de quienes ya eligieron Vita Glow",
+        "subheading": "Opiniones de quienes ya eligieron Waterproof Matte Lipstick",
         "subheading_color": "#9c796f",
         "subheading_font_size_desktop": 18,
         "subheading_font_size_mobile": 15,
@@ -1272,7 +1277,7 @@
       ],
       "name": "Comunidad / Feed UGC",
       "settings": {
-        "heading": "Únete a la comunidad @VitaGlow",
+        "heading": "Únete a la comunidad @VitanuraLab",
         "heading_size": "h2",
         "heading_color": "",
         "heading_font_size_desktop": 32,
