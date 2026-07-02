@@ -1207,6 +1207,101 @@
         "padding_bottom_mobile": 40
       }
     },
+    "community_feed_eH8Mcw": {
+      "type": "community-feed",
+      "blocks": {
+        "post_7d7Gyr": {
+          "type": "post",
+          "settings": {
+            "image": "shopify://shop_images/Piel_feliz_piel_bonita_Cuando_cuidas_tu_piel_ella_lo_refleja_en_cada_sonrisa._Hidratacion_1.webp",
+            "username": "@laura.m",
+            "show_verified": true,
+            "caption": "Ahora entiendo por qué es tan recomendado",
+            "link": ""
+          }
+        },
+        "post_WLgUxn": {
+          "type": "post",
+          "settings": {
+            "image": "shopify://shop_images/Un_gesto_simple_un_gran_regalo_para_tu_piel.El_cuidado_diario_no_tiene_edad_tiene_amor_prop.webp",
+            "username": "@clara.r",
+            "show_verified": true,
+            "caption": "Piel más suave desde la primera aplicación",
+            "link": ""
+          }
+        },
+        "post_dzxjkf": {
+          "type": "post",
+          "settings": {
+            "image": "shopify://shop_images/La_edad_no_define_tu_belleza_tu_luz_interior_si.Cada_gota_de_cuidado_es_un_regalo_para_tu_pie.webp",
+            "username": "@vane.o",
+            "show_verified": true,
+            "caption": "Lo mejor que he probado en mucho tiempo",
+            "link": ""
+          }
+        },
+        "post_kaXbJK": {
+          "type": "post",
+          "settings": {
+            "image": "shopify://shop_images/Tu_piel_tu_tono_tu_luz_realzada_por_InfiniteGlow.webp",
+            "username": "@miriam.l",
+            "show_verified": true,
+            "caption": "Excelente para ayudar a mantener la hidratación",
+            "link": ""
+          }
+        },
+        "post_tMVXCR": {
+          "type": "post",
+          "settings": {
+            "image": "shopify://shop_images/Tu_piel_tambien_merece_sentir_el_calor_del_sol_sin_perder_su_frescura.Un_toque_de_hidratacion.webp",
+            "username": "@sandra.v",
+            "show_verified": true,
+            "caption": "Por fin un producto que sí cumple lo que promete",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "post_7d7Gyr",
+        "post_WLgUxn",
+        "post_dzxjkf",
+        "post_kaXbJK",
+        "post_tMVXCR"
+      ],
+      "custom_css": [
+        "@media screen and (max-width: 749px) {.h2 {font-size: calc(var(--font-heading-scale) * 1.7rem); }}",
+        "@media screen and (max-width: 749px) {.section-community_feed_dJB7VX-padding {padding-top: 32px !important; padding-bottom: 32px !important; }}"
+      ],
+      "name": "Comunidad / Feed UGC",
+      "settings": {
+        "heading": "Únete a la comunidad @VitaNuraLab",
+        "heading_size": "h2",
+        "heading_color": "",
+        "heading_font_size_desktop": 32,
+        "heading_font_size_mobile": 24,
+        "heading_font_weight": "600",
+        "color_scheme": "background-1",
+        "verified_color": "#bc6161",
+        "background_color": "",
+        "media_radius": 18,
+        "enable_center_mode": true,
+        "enable_loop": true,
+        "autoplay": false,
+        "autoplay_speed": 3,
+        "show_dots": true,
+        "show_arrows": false,
+        "slides_desktop": 3.4,
+        "space_desktop": 20,
+        "slides_tablet": 2,
+        "space_tablet": 16,
+        "slides_mobile": 1.4,
+        "space_mobile": 12,
+        "padding_top": 60,
+        "padding_bottom": 40,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40
+      }
+    },
     "community_feed_dJB7VX": {
       "type": "community-feed",
       "blocks": {
@@ -1317,6 +1412,7 @@
     "por_que_elegir_dc4rGH",
     "tarjetas_beneficios_QKBXcz",
     "faq_accordion_m3GjeY",
+    "community_feed_eH8Mcw",
     "community_feed_dJB7VX"
   ]
 }
