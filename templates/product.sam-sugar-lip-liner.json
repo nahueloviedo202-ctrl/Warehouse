@@ -507,7 +507,7 @@
       ],
       "name": "Producto destacado",
       "settings": {
-        "image": "shopify://shop_images/Gemini_Generated_Image_54pikl54pikl54pi_1.webp",
+        "image": "{{ product.metafields.custom.seccion_cambios_reales_imagenes.value }}",
         "layout": "image_first",
         "content_bg_color": "#f1e4e3",
         "border_radius": 30,
