@@ -863,7 +863,7 @@
         "color_scheme": "background-1",
         "bg_color": "",
         "padding_top": 40,
-        "padding_bottom": 40,
+        "padding_bottom": 60,
         "padding_top_mobile": 12,
         "padding_bottom_mobile": 40
       }
@@ -937,7 +937,7 @@
         "layout_gap_mobile": 8,
         "bg_color": "#FFFFFF",
         "padding_top": 40,
-        "padding_bottom": 40,
+        "padding_bottom": 60,
         "padding_top_mobile": 12,
         "padding_bottom_mobile": 40
       }
@@ -1104,7 +1104,7 @@
         "accent_color_scheme": "accent-2",
         "background_color": "",
         "padding_top": 40,
-        "padding_bottom": 40,
+        "padding_bottom": 60,
         "padding_top_mobile": 12,
         "padding_bottom_mobile": 20
       }
@@ -1172,7 +1172,7 @@
         "color_scheme": "background-1",
         "bg_color": "#FFFFFF",
         "padding_top": 40,
-        "padding_bottom": 40,
+        "padding_bottom": 60,
         "padding_top_mobile": 12,
         "padding_bottom_mobile": 40
       }
@@ -1242,7 +1242,7 @@
         "color_scheme": "background-1",
         "background_color": "#FFFFFF",
         "padding_top": 40,
-        "padding_bottom": 40,
+        "padding_bottom": 60,
         "padding_top_mobile": 12,
         "padding_bottom_mobile": 40
       }
@@ -1359,7 +1359,7 @@
         "item_spacing": 12,
         "open_first_question": false,
         "padding_top": 40,
-        "padding_bottom": 40,
+        "padding_bottom": 60,
         "padding_top_mobile": 12,
         "padding_bottom_mobile": 40
       }
