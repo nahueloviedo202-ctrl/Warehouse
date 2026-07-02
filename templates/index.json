@@ -139,7 +139,7 @@
         "card_title_size_mobile": 16,
         "card_title_weight": "500",
         "button_label": "Comprar ahora",
-        "button_bg_color": "#FFFFFF",
+        "button_bg_color": "#ffffff",
         "button_text_color": "#000000",
         "button_font_size_desktop": 13,
         "button_font_size_mobile": 11,
@@ -304,9 +304,9 @@
             "link": "shopify://collections/mas-vendidos",
             "button_style_secondary": false,
             "button_border_radius": 50,
-            "button_bg_color": "#FFFFFF",
+            "button_bg_color": "#ffffff",
             "button_text_color": "#000000",
-            "button_border_color": "#FFFFFF",
+            "button_border_color": "#ffffff",
             "box_align": "bottom-left",
             "box_align_mobile": "middle-center",
             "show_text_box": false,
@@ -359,10 +359,10 @@
         "bubbles_padding_horizontal_mobile": 16
       }
     },
-    "community_feed_6VJENe": {
+    "community_feed_q9hUkL": {
       "type": "community-feed",
       "blocks": {
-        "post_ti4XdD": {
+        "post_79Jtf9": {
           "type": "post",
           "settings": {
             "image": "shopify://shop_images/Piel_feliz_piel_bonita_Cuando_cuidas_tu_piel_ella_lo_refleja_en_cada_sonrisa._Hidratacion_1.webp",
@@ -372,7 +372,7 @@
             "link": ""
           }
         },
-        "post_VEMQki": {
+        "post_Rfezf7": {
           "type": "post",
           "settings": {
             "image": "shopify://shop_images/Un_gesto_simple_un_gran_regalo_para_tu_piel.El_cuidado_diario_no_tiene_edad_tiene_amor_prop.webp",
@@ -382,7 +382,7 @@
             "link": ""
           }
         },
-        "post_NYJmgq": {
+        "post_VA87RY": {
           "type": "post",
           "settings": {
             "image": "shopify://shop_images/La_edad_no_define_tu_belleza_tu_luz_interior_si.Cada_gota_de_cuidado_es_un_regalo_para_tu_pie.webp",
@@ -392,7 +392,7 @@
             "link": ""
           }
         },
-        "post_mzDitg": {
+        "post_Mz7YB7": {
           "type": "post",
           "settings": {
             "image": "shopify://shop_images/Tu_piel_tu_tono_tu_luz_realzada_por_InfiniteGlow.webp",
@@ -402,7 +402,7 @@
             "link": ""
           }
         },
-        "post_Ea33L9": {
+        "post_43EqXE": {
           "type": "post",
           "settings": {
             "image": "shopify://shop_images/Tu_piel_tambien_merece_sentir_el_calor_del_sol_sin_perder_su_frescura.Un_toque_de_hidratacion.webp",
@@ -414,22 +414,26 @@
         }
       },
       "block_order": [
-        "post_ti4XdD",
-        "post_VEMQki",
-        "post_NYJmgq",
-        "post_mzDitg",
-        "post_Ea33L9"
+        "post_79Jtf9",
+        "post_Rfezf7",
+        "post_VA87RY",
+        "post_Mz7YB7",
+        "post_43EqXE"
+      ],
+      "custom_css": [
+        "@media screen and (max-width: 749px) {.h2 {font-size: calc(var(--font-heading-scale) * 1.7rem); }}",
+        "@media screen and (max-width: 749px) {.section-community_feed_dJB7VX-padding {padding-top: 32px !important; padding-bottom: 32px !important; }}"
       ],
       "name": "Comunidad / Feed UGC",
       "settings": {
-        "heading": "Únete a la comunidad @Vitanura Lab",
-        "heading_size": "h0",
+        "heading": "Únete a la comunidad @VitaGlow",
+        "heading_size": "h2",
         "heading_color": "",
-        "heading_font_size_desktop": 36,
-        "heading_font_size_mobile": 26,
-        "heading_font_weight": "700",
+        "heading_font_size_desktop": 32,
+        "heading_font_size_mobile": 24,
+        "heading_font_weight": "600",
         "color_scheme": "background-1",
-        "verified_color": "",
+        "verified_color": "#bc6161",
         "background_color": "",
         "media_radius": 18,
         "enable_center_mode": true,
@@ -444,10 +448,10 @@
         "space_tablet": 16,
         "slides_mobile": 1.4,
         "space_mobile": 12,
-        "padding_top": 40,
+        "padding_top": 60,
         "padding_bottom": 40,
-        "padding_top_mobile": 28,
-        "padding_bottom_mobile": 28
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40
       }
     }
   },
@@ -458,6 +462,6 @@
     "convertlab_left_plus_slider_dgKyzT",
     "press_ticker_xcW46X",
     "convertlab_hero_t7YDft",
-    "community_feed_6VJENe"
+    "community_feed_q9hUkL"
   ]
 }

@@ -194,9 +194,7 @@
         "card_styles": "product-card-wrapper",
         "color_scheme": "background-1",
         "padding_top": 16,
-        "padding_bottom": 64,
-        "padding_top_mobile": 28,
-        "padding_bottom_mobile": 28
+        "padding_bottom": 64
       }
     },
     "newsletter": {
@@ -232,9 +230,7 @@
         "color_scheme": "background-2",
         "full_width": true,
         "padding_top": 68,
-        "padding_bottom": 52,
-        "padding_top_mobile": 28,
-        "padding_bottom_mobile": 28
+        "padding_bottom": 52
       }
     }
   },
