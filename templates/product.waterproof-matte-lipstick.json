@@ -806,7 +806,7 @@
           "settings": {
             "image": "shopify://shop_images/Gemini_Generated_Image_pnhaq6pnhaq6pnha.jpg",
             "heading": "Larga duración, todo el día.",
-            "text": "<p>Su fórmula waterproof ayuda a mantener el color y la definición por horas, con un acabado mate cómodo que no se corre ni se desvanece fácilmente.</p><p></p>",
+            "text": "<p>Su fórmula waterproof ayuda a mantener el color y la definición por horas, con un acabado mate cómodo que no se corre ni se desvanece fácilmente.</p><p></p><p></p>",
             "card_background_color": "#f6f3f1",
             "heading_color": "#000000",
             "heading_font_size_desktop": 20,
@@ -854,7 +854,7 @@
         "columns_mobile": "1",
         "swipe_on_mobile": true,
         "padding_top": 0,
-        "padding_bottom": 60,
+        "padding_bottom": 0,
         "padding_top_mobile": 0,
         "padding_bottom_mobile": 0
       }
