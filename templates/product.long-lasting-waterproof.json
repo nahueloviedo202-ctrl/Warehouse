@@ -1106,7 +1106,7 @@
         "padding_top": 40,
         "padding_bottom": 40,
         "padding_top_mobile": 12,
-        "padding_bottom_mobile": 32
+        "padding_bottom_mobile": 20
       }
     },
     "en_solo_4_semanas_n9tDXW": {
@@ -1455,7 +1455,7 @@
         "space_mobile": 12,
         "padding_top": 40,
         "padding_bottom": 40,
-        "padding_top_mobile": 40,
+        "padding_top_mobile": 20,
         "padding_bottom_mobile": 40
       }
     }
