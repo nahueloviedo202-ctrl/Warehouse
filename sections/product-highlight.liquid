@@ -122,6 +122,31 @@
                   </ul>
                 {%- endunless -%}
 
+              {%- when 'bullet_metafield' -%}
+                {%- assign metafield_bullets = product.metafields.custom.producto_destacado_bullet.value -%}
+                {%- if metafield_bullets != blank -%}
+                  {%- style -%}
+                    .block-{{ block.id }}-bullet {
+                      font-size: {{ block.settings.font_size_mobile }}px;
+                      {% if block.settings.color != blank %}color: {{ block.settings.color }};{% endif %}
+                      {% if block.settings.font_weight != blank %}font-weight: {{ block.settings.font_weight }};{% endif %}
+                    }
+                    @media screen and (min-width: 750px) {
+                      .block-{{ block.id }}-bullet { font-size: {{ block.settings.font_size_desktop }}px; }
+                    }
+                  {%- endstyle -%}
+                  <ul class="product-highlight__bullets list-unstyled" role="list" {{ block.shopify_attributes }}>
+                    {%- for item in metafield_bullets -%}
+                      <li class="product-highlight__bullet block-{{ block.id }}-bullet">
+                        {%- if block.settings.bullet_icon != blank -%}
+                          <span class="product-highlight__bullet-icon" aria-hidden="true">{{ block.settings.bullet_icon }}</span>
+                        {%- endif -%}
+                        <span>{{ item | escape }}</span>
+                      </li>
+                    {%- endfor -%}
+                  </ul>
+                {%- endif -%}
+
               {%- when 'button' -%}
                 {%- if block.settings.button_label != blank -%}
                   <div class="product-highlight__button-wrap" {{ block.shopify_attributes }}>
@@ -376,6 +401,62 @@
           "id": "text",
           "default": "Beneficio del producto.",
           "label": "Texto"
+        },
+        {
+          "type": "color",
+          "id": "color",
+          "label": "Color",
+          "default": "#434343"
+        },
+        {
+          "type": "select",
+          "id": "font_weight",
+          "label": "Peso de fuente",
+          "options": [
+            { "value": "300", "label": "Light" },
+            { "value": "400", "label": "Regular" },
+            { "value": "500", "label": "Medium" },
+            { "value": "600", "label": "Semibold" },
+            { "value": "700", "label": "Bold" }
+          ],
+          "default": "400"
+        },
+        {
+          "type": "range",
+          "id": "font_size_desktop",
+          "min": 12,
+          "max": 32,
+          "step": 1,
+          "unit": "px",
+          "label": "Tamaño escritorio (px)",
+          "default": 16
+        },
+        {
+          "type": "range",
+          "id": "font_size_mobile",
+          "min": 12,
+          "max": 28,
+          "step": 1,
+          "unit": "px",
+          "label": "Tamaño móvil (px)",
+          "default": 15
+        }
+      ]
+    },
+    {
+      "type": "bullet_metafield",
+      "name": "Bullets (metafield)",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "Muestra automáticamente cada valor del metafield del producto custom.producto_destacado_bullet (lista de texto), con check y salto de línea por ítem."
+        },
+        {
+          "type": "text",
+          "id": "bullet_icon",
+          "default": "✓",
+          "label": "Ícono o prefijo"
         },
         {
           "type": "color",
