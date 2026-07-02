@@ -1253,8 +1253,8 @@
         "question_giLkXQ": {
           "type": "question",
           "settings": {
-            "question": "¿Cuánta cobertura ofrece la Base de Maquillaje?",
-            "answer": "<p>Ofrece una cobertura media modulable que se adapta a tu piel y se puede construir según tus necesidades.</p>",
+            "question": "¿Cuánto dura el delineador puesto?",
+            "answer": "<p>Su fórmula de larga duración se mantiene intacta durante todo el día sin necesidad de retoques.</p>",
             "question_color": "",
             "question_font_size_desktop": 16,
             "question_font_size_mobile": 15,
@@ -1269,7 +1269,7 @@
           "type": "question",
           "settings": {
             "question": "¿El producto es adecuado para pieles sensibles?",
-            "answer": "<p>Sí, está formulada para ser segura y respetuosa con pieles sensibles.</p>",
+            "answer": "<p>Sí, está formulado para ser fácil de aplicar en todo tipo de piel.</p>",
             "question_color": "",
             "question_font_size_desktop": 16,
             "question_font_size_mobile": 15,
@@ -1283,8 +1283,8 @@
         "question_e4hhdC": {
           "type": "question",
           "settings": {
-            "question": "¿La base de maquillaje es adecuada para pieles con arrugas o líneas finas?",
-            "answer": "<p>Sí, su fórmula ligera no se asienta en las líneas finas ni acentúa las arrugas.</p>",
+            "question": "¿Es resistente al agua?",
+            "answer": "<p>Sí, es a prueba de agua (waterproof), por lo que no se corre ni se desvanece con la humedad o el sudor.</p>",
             "question_color": "",
             "question_font_size_desktop": 16,
             "question_font_size_mobile": 15,
@@ -1298,8 +1298,8 @@
         "question_HKe6yp": {
           "type": "question",
           "settings": {
-            "question": "¿Cuál es la mejor manera de aplicar la base?",
-            "answer": "<p>Aplica pequeñas cantidades con los dedos, una esponja o brocha, trabajando desde el centro del rostro hacia afuera.</p>",
+            "question": "¿Cuál es la mejor manera de aplicarlo?",
+            "answer": "<p>Se desliza con suavidad sobre el párpado; para un trazo más preciso, aplícalo con pulso firme desde el lagrimal hacia afuera.</p>",
             "question_color": "",
             "question_font_size_desktop": 16,
             "question_font_size_mobile": 15,
@@ -1313,8 +1313,8 @@
         "question_V76RRe": {
           "type": "question",
           "settings": {
-            "question": "¿Cómo adapta la base de maquillaje su color?",
-            "answer": "<p>Contiene pigmentos inteligentes que reaccionan con el pH de tu piel para adaptarse a tu tono natural.</p>",
+            "question": "¿Cuántas unidades incluye el set?",
+            "answer": "<p>El set incluye 3 delineadores, ideales para tener siempre uno de repuesto o compartir.</p>",
             "question_color": "",
             "question_font_size_desktop": 16,
             "question_font_size_mobile": 15,
