@@ -838,7 +838,7 @@
         "heading_font_size_mobile": 40,
         "heading_font_weight": "600",
         "backdrop_image": "shopify://shop_images/maybelline-lifter-glaze-carousel-3-beauty.webp",
-        "layout": "text_first",
+        "layout": "image_first",
         "show_connector_lines": false,
         "line_color": "",
         "show_sparkle": false,
