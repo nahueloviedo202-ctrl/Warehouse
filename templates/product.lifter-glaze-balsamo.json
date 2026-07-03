@@ -936,11 +936,11 @@
         "row_size_desktop": 13,
         "row_size_mobile": 12,
         "color_scheme": "background-1",
-        "bg_color": "#EEE8E9",
+        "bg_color": "#FFFFFF",
         "padding_top": 40,
-        "padding_bottom": 40,
+        "padding_bottom": 60,
         "padding_top_mobile": 20,
-        "padding_bottom_mobile": 20
+        "padding_bottom_mobile": 40
       }
     },
     "comparison_slider_NtzU6b": {
@@ -1080,7 +1080,7 @@
         "heading_font_size_mobile": 26,
         "heading_font_weight": "600",
         "subheading": "Opiniones de quienes ya eligieron Lifter Glaze",
-        "subheading_color": "#B07C81",
+        "subheading_color": "#933F3F",
         "subheading_font_size_desktop": 18,
         "subheading_font_size_mobile": 15,
         "subheading_font_weight": "500",
@@ -1096,9 +1096,9 @@
         "cards_per_row_mobile": 1,
         "card_gap": 24,
         "show_arrows": false,
-        "arrows_color": "#b5651d",
+        "arrows_color": "#B07C81",
         "color_scheme": "background-1",
-        "background_color": "#ffffff",
+        "background_color": "#FFFFFF",
         "padding_top": 40,
         "padding_bottom": 60,
         "padding_top_mobile": 20,
