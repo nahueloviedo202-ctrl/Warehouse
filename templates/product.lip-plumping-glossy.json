@@ -573,7 +573,7 @@
       ],
       "name": "Por qué nos encanta",
       "settings": {
-        "heading": "Lo que lo hace único",
+        "heading": "Lo que lo hace único a Speak Love",
         "heading_size": "h2",
         "heading_italic": true,
         "heading_color": "#000000",
@@ -850,7 +850,7 @@
         "review_TdEpgg": {
           "type": "review",
           "settings": {
-            "text": "¡Este es el gloss labial más brillante que compré en mi vida! Se ve espectacular, ya volví a comprar otro color.",
+            "text": "¡Este es el balsamo labial más brillante que compré en mi vida! Se ve espectacular, ya volví a comprar otro color.",
             "avatar": "shopify://shop_images/default-ticker-5_1_1.png",
             "author": "María D.",
             "rating": 5
