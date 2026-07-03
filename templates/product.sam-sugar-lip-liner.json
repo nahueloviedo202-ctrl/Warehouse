@@ -108,12 +108,6 @@
             "manual_deal_block_id": ""
           }
         },
-        "releasit_cod_form_form_app_block_JVJXfb": {
-          "type": "shopify://apps/releasit-cod-form/blocks/form-app-block/72faf214-4174-4fec-886b-0d0e8d3af9a2",
-          "settings": {
-            "product": "{{product}}"
-          }
-        },
         "074f248d-8d73-4c8f-a97e-d8e82c5be5fc": {
           "type": "quantity_selector",
           "disabled": true,
@@ -166,7 +160,6 @@
         },
         "buy_buttons": {
           "type": "buy_buttons",
-          "disabled": true,
           "settings": {
             "show_dynamic_checkout": true,
             "skip_cart": false,
@@ -408,7 +401,6 @@
         "de244682-4323-4802-b4ba-b79b08e0c71d",
         "44f9cdc2-f4bf-466e-87d5-fb765ad4864a",
         "kaching_bundles_app_block_i7DHb3",
-        "releasit_cod_form_form_app_block_JVJXfb",
         "074f248d-8d73-4c8f-a97e-d8e82c5be5fc",
         "buy_buttons",
         "pdp_stock_pulse_Y3WqH7",
