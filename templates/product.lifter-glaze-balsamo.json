@@ -309,6 +309,7 @@
         },
         "video_carousel_gUmwA4": {
           "type": "video_carousel",
+          "disabled": true,
           "settings": {
             "heading": "Verlo en acción",
             "heading_size": "h2",
@@ -685,219 +686,6 @@
         "padding_bottom_mobile": 16
       }
     },
-    "why_we_love_it_3t7fT9": {
-      "type": "why-we-love-it",
-      "blocks": {
-        "feature_TKe9aE": {
-          "type": "feature",
-          "settings": {
-            "position": "left",
-            "heading": "Cobertura media modulable",
-            "text": "<p>La textura cremosa se funde perfectamente con la piel.</p>",
-            "heading_color": "#d1816e",
-            "heading_font_size_desktop": 16,
-            "heading_font_size_mobile": 16,
-            "heading_font_weight": "700",
-            "text_color": "",
-            "text_font_size_desktop": 14,
-            "text_font_size_mobile": 14,
-            "text_font_weight": "400"
-          }
-        },
-        "feature_HyNcKQ": {
-          "type": "feature",
-          "settings": {
-            "position": "left",
-            "heading": "Hasta 12 horas de uso cómodo",
-            "text": "<p>Se siente ingrávido y la piel respirable.</p>",
-            "heading_color": "#d1816e",
-            "heading_font_size_desktop": 16,
-            "heading_font_size_mobile": 14,
-            "heading_font_weight": "700",
-            "text_color": "",
-            "text_font_size_desktop": 14,
-            "text_font_size_mobile": 12,
-            "text_font_weight": "400"
-          }
-        },
-        "feature_BmGDdQ": {
-          "type": "feature",
-          "settings": {
-            "position": "right",
-            "heading": "Natural, acabado satinado",
-            "text": "<p>No se apelmaza ni se arruga y es resistente al sudor, la humedad y el agua.</p>",
-            "heading_color": "#d1816e",
-            "heading_font_size_desktop": 16,
-            "heading_font_size_mobile": 14,
-            "heading_font_weight": "700",
-            "text_color": "",
-            "text_font_size_desktop": 15,
-            "text_font_size_mobile": 12,
-            "text_font_weight": "400"
-          }
-        },
-        "feature_GTkzQr": {
-          "type": "feature",
-          "settings": {
-            "position": "right",
-            "heading": "Hidratante y no comedogénico",
-            "text": "<p>No obstruye los poros, no se asienta en las líneas finas ni se adhiere a las zonas secas.</p>",
-            "heading_color": "#d1816e",
-            "heading_font_size_desktop": 16,
-            "heading_font_size_mobile": 14,
-            "heading_font_weight": "700",
-            "text_color": "",
-            "text_font_size_desktop": 14,
-            "text_font_size_mobile": 12,
-            "text_font_weight": "400"
-          }
-        },
-        "badge_PXkJ9W": {
-          "type": "badge",
-          "settings": {
-            "icon": "check_mark",
-            "label": "Probado por dermatólogos"
-          }
-        },
-        "badge_idaLKH": {
-          "type": "badge",
-          "settings": {
-            "icon": "leaf",
-            "label": "Fórmula transpirable"
-          }
-        },
-        "badge_QUwbUH": {
-          "type": "badge",
-          "settings": {
-            "icon": "heart",
-            "label": "Seguro para pieles sensibles"
-          }
-        },
-        "badge_48EGBr": {
-          "type": "badge",
-          "settings": {
-            "icon": "lock",
-            "label": "No comedogénico"
-          }
-        },
-        "badge_pzdxBr": {
-          "type": "badge",
-          "settings": {
-            "icon": "paw_print",
-            "label": "Vegano y libre de crueldad animal"
-          }
-        }
-      },
-      "block_order": [
-        "feature_TKe9aE",
-        "feature_HyNcKQ",
-        "feature_BmGDdQ",
-        "feature_GTkzQr",
-        "badge_PXkJ9W",
-        "badge_idaLKH",
-        "badge_QUwbUH",
-        "badge_48EGBr",
-        "badge_pzdxBr"
-      ],
-      "custom_css": [
-        "@media screen and (max-width: 749px) {.h2 {font-size: calc(var(--font-heading-scale) * 1.7rem); }}",
-        "@media screen and (max-width: 749px) {.section-why_we_love_it_3t7fT9-padding {padding-top: 32px !important; padding-bottom: 32px !important; }}"
-      ],
-      "name": "Por qué nos encanta",
-      "settings": {
-        "heading": "Por qué nos encanta",
-        "heading_size": "h2",
-        "heading_italic": true,
-        "heading_color": "#000000",
-        "heading_font_size_desktop": 32,
-        "heading_font_size_mobile": 24,
-        "heading_font_weight": "600",
-        "image": "shopify://shop_images/seccion.webp",
-        "circle_size_desktop": 380,
-        "circle_size_mobile": 220,
-        "color_scheme": "background-1",
-        "accent_color_scheme": "accent-2",
-        "background_color": "#ffffff",
-        "circle_border_color": "#d1816e",
-        "badge_icon_bg_color": "#f6f3f1",
-        "badge_icon_svg_color": "#d1816e",
-        "text_alignment": "facing-center",
-        "padding_top": 60,
-        "padding_bottom": 60,
-        "padding_top_mobile": 40,
-        "padding_bottom_mobile": 40
-      }
-    },
-    "review_slider_pmwAwt": {
-      "type": "review-slider",
-      "blocks": {
-        "review_TdEpgg": {
-          "type": "review",
-          "settings": {
-            "text": "Lo empecé a usar hace unas semanas y ya noto una gran diferencia. Muy recomendable.",
-            "avatar": "shopify://shop_images/default-ticker-5_1_1.png",
-            "author": "María D.",
-            "rating": 5
-          }
-        },
-        "review_EccX6C": {
-          "type": "review",
-          "settings": {
-            "text": "Excelente calidad. Llegó rápido y cumplió totalmente mis expectativas.",
-            "avatar": "shopify://shop_images/default-ticker-5_1_2.png",
-            "author": "Sofía P.",
-            "rating": 5
-          }
-        },
-        "review_VgTKBY": {
-          "type": "review",
-          "settings": {
-            "text": "Producto de muy buena calidad y atención impecable. Estoy muy conforme.",
-            "avatar": "shopify://shop_images/default-ticker-5_1.png",
-            "author": "Camila M.",
-            "rating": 5
-          }
-        }
-      },
-      "block_order": [
-        "review_TdEpgg",
-        "review_EccX6C",
-        "review_VgTKBY"
-      ],
-      "name": "Slider de reseñas",
-      "settings": {
-        "heading": "Cambios reales",
-        "heading_size": "h2",
-        "heading_color": "#000000",
-        "heading_font_size_desktop": 36,
-        "heading_font_size_mobile": 26,
-        "heading_font_weight": "600",
-        "subheading": "Opiniones de quienes ya eligieron Vita Glow",
-        "subheading_color": "#9c796f",
-        "subheading_font_size_desktop": 18,
-        "subheading_font_size_mobile": 15,
-        "subheading_font_weight": "500",
-        "card_background_color": "#f6f3f1",
-        "card_border_color": "#d1816e",
-        "card_border_width": 1,
-        "card_corner_radius": 16,
-        "text_color": "#2b2b2b",
-        "author_color": "#1a1a1a",
-        "star_color": "#f5a623",
-        "cards_per_row_desktop": 3,
-        "cards_per_row_tablet": 2,
-        "cards_per_row_mobile": 1,
-        "card_gap": 24,
-        "show_arrows": false,
-        "arrows_color": "#b5651d",
-        "color_scheme": "background-1",
-        "background_color": "#ffffff",
-        "padding_top": 0,
-        "padding_bottom": 60,
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 40
-      }
-    },
     "feature_cards_rC7d6a": {
       "type": "feature-cards",
       "blocks": {
@@ -996,16 +784,15 @@
     "comparison_slider_NtzU6b": {
       "type": "comparison-slider",
       "blocks": {
-        "simple_image_QRL6bV": {
-          "type": "simple_image",
+        "image_comparison_JfwmF6": {
+          "type": "image_comparison",
           "settings": {
-            "image": "shopify://shop_images/mobile.webp",
-            "image_alt": "",
-            "image_width": 530,
-            "image_height": 500,
-            "image_height_mobile": 330,
-            "object_fit": "cover",
-            "image_border_radius": 10
+            "before_image": "shopify://shop_images/before-mny-makl-lifterglaze-1320x74.webp",
+            "after_image": "shopify://shop_images/after-mny-makl-lifterglaze-1320x742.webp",
+            "before_label": "Antes",
+            "after_label": "Después",
+            "labels_color_scheme": "accent-1",
+            "line_color": "background-1"
           }
         },
         "text_content_4pHk8N": {
@@ -1025,10 +812,10 @@
             "label_color": "#000000",
             "circle_size_desktop": 96,
             "circle_size_mobile": 72,
-            "badge_1_icon": "dermatologist",
-            "badge_1_label": "Fórmula hidratante",
-            "badge_2_icon": "skin_layers",
-            "badge_2_label": "Acabado satinado natural",
+            "badge_1_icon": "none",
+            "badge_1_label": "",
+            "badge_2_icon": "none",
+            "badge_2_label": "",
             "badge_3_icon": "none",
             "badge_3_label": "",
             "badge_4_icon": "none",
@@ -1068,7 +855,7 @@
         }
       },
       "block_order": [
-        "simple_image_QRL6bV",
+        "image_comparison_JfwmF6",
         "text_content_4pHk8N"
       ],
       "custom_css": [
@@ -1280,44 +1067,73 @@
         "padding_bottom_mobile": 40
       }
     },
-    "featured_quote_Y4GLCm": {
-      "type": "featured-quote",
+    "review_slider_pmwAwt": {
+      "type": "review-slider",
       "blocks": {
-        "quote_yHag9T": {
-          "type": "quote",
+        "review_TdEpgg": {
+          "type": "review",
           "settings": {
-            "text": "Tenía dudas sobre si esto marcaría alguna diferencia en mi cutis. Puedo decir que es muy fácil de usar, no se acumula en las arrugas, sin duda mejora el aspecto de mi piel y, como tiene un FPS 50, es una auténtica revolución para una mujer de 70 años .",
-            "avatar": "shopify://shop_images/Gemini_Generated_Image_h3q9qph3q9qph3q9.webp",
-            "author": "Gisela Rodriguez"
+            "text": "Lo empecé a usar hace unas semanas y ya noto una gran diferencia. Muy recomendable.",
+            "avatar": "shopify://shop_images/default-ticker-5_1_1.png",
+            "author": "María D.",
+            "rating": 5
+          }
+        },
+        "review_EccX6C": {
+          "type": "review",
+          "settings": {
+            "text": "Excelente calidad. Llegó rápido y cumplió totalmente mis expectativas.",
+            "avatar": "shopify://shop_images/default-ticker-5_1_2.png",
+            "author": "Sofía P.",
+            "rating": 5
+          }
+        },
+        "review_VgTKBY": {
+          "type": "review",
+          "settings": {
+            "text": "Producto de muy buena calidad y atención impecable. Estoy muy conforme.",
+            "avatar": "shopify://shop_images/default-ticker-5_1.png",
+            "author": "Camila M.",
+            "rating": 5
           }
         }
       },
       "block_order": [
-        "quote_yHag9T"
+        "review_TdEpgg",
+        "review_EccX6C",
+        "review_VgTKBY"
       ],
-      "custom_css": [
-        "@media screen and (max-width: 749px) {.section-featured_quote_Y4GLCm-padding {padding-top: 32px !important; padding-bottom: 32px !important; }}"
-      ],
-      "name": "Cita destacada",
+      "name": "Slider de reseñas",
       "settings": {
+        "heading": "Cambios reales",
+        "heading_size": "h2",
+        "heading_color": "#000000",
+        "heading_font_size_desktop": 36,
+        "heading_font_size_mobile": 26,
+        "heading_font_weight": "600",
+        "subheading": "Opiniones de quienes ya eligieron Vita Glow",
+        "subheading_color": "#9c796f",
+        "subheading_font_size_desktop": 18,
+        "subheading_font_size_mobile": 15,
+        "subheading_font_weight": "500",
+        "card_background_color": "#f6f3f1",
+        "card_border_color": "#d1816e",
+        "card_border_width": 1,
+        "card_corner_radius": 16,
+        "text_color": "#2b2b2b",
+        "author_color": "#1a1a1a",
+        "star_color": "#f5a623",
+        "cards_per_row_desktop": 3,
+        "cards_per_row_tablet": 2,
+        "cards_per_row_mobile": 1,
+        "card_gap": 24,
+        "show_arrows": false,
+        "arrows_color": "#b5651d",
         "color_scheme": "background-1",
-        "background_color": "#f3f1f0",
-        "text_alignment": "center",
-        "quote_max_width": 800,
-        "quote_font_size": 24,
-        "quote_font_size_mobile": 18,
-        "quote_italic": true,
-        "quote_color": "#d1816e",
-        "quote_font_weight": "500",
-        "avatar_size": 80,
-        "avatar_border_width": 4,
-        "avatar_border_color": "#d1816e",
-        "author_color": "",
-        "author_font_size": 14,
-        "author_font_weight": "500",
-        "padding_top": 60,
+        "background_color": "#ffffff",
+        "padding_top": 0,
         "padding_bottom": 60,
-        "padding_top_mobile": 40,
+        "padding_top_mobile": 0,
         "padding_bottom_mobile": 40
       }
     },
@@ -1542,12 +1358,10 @@
     "64c96926-2c31-48fe-bd21-30941bc87822",
     "slideshow_HfVNww",
     "press_ticker_gTJiLE",
-    "why_we_love_it_3t7fT9",
-    "review_slider_pmwAwt",
     "feature_cards_rC7d6a",
     "comparison_slider_NtzU6b",
     "ingredient_spotlight_wmhrkr",
-    "featured_quote_Y4GLCm",
+    "review_slider_pmwAwt",
     "faq_accordion_m3GjeY",
     "community_feed_dJB7VX"
   ]
