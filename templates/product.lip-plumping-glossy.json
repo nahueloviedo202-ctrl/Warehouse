@@ -484,7 +484,7 @@
         "text_italic": true,
         "text_uppercase": true,
         "color_scheme": "background-1",
-        "custom_background_color": "#B07C81",
+        "custom_background_color": "#E2CDCF",
         "custom_text_color": "#000000",
         "padding_top": 20,
         "padding_bottom": 20,
@@ -558,8 +558,9 @@
       ],
       "name": "Producto destacado",
       "settings": {
+        "image": "{{ product.metafields.custom.seccion_cambios_reales_imagenes.value }}",
         "layout": "image_first",
-        "content_bg_color": "#f1e9e3",
+        "content_bg_color": "#E2CDCF",
         "border_radius": 30,
         "border_radius_mobile": 20,
         "color_scheme": "background-1",
@@ -678,10 +679,10 @@
         "card_7BU4fG": {
           "type": "card",
           "settings": {
-            "image": "shopify://shop_images/imgi_32_a4c82a4b-ceb4-4d83-a9fa-ca458193fcd7.webp",
+            "image": "shopify://shop_images/LYS_JuicyLipBalm_PPage_1.webp",
             "heading": "Se desliza sobre la textura",
             "text": "<p>Cremoso al contacto, luego se derrite suavemente para un acabado de aspecto más suave.</p>",
-            "card_background_color": "#f6f3f1",
+            "card_background_color": "#E2CDCF",
             "heading_color": "#000000",
             "heading_font_size_desktop": 20,
             "heading_font_size_mobile": 17,
@@ -695,10 +696,10 @@
         "card_gpfMnF": {
           "type": "card",
           "settings": {
-            "image": "shopify://shop_images/Gemini_Generated_Image_3t0r723t0r723t0r.webp",
+            "image": "shopify://shop_images/2_CEO.webp",
             "heading": "Se funde con tu tono exacto",
             "text": "<p>A medida que difuminas, los pigmentos se adaptan para un acabado perfecto, sin adivinar ni un cajón lleno de tonos.</p>",
-            "card_background_color": "#f6f3f1",
+            "card_background_color": "#E2CDCF",
             "heading_color": "#000000",
             "heading_font_size_desktop": 20,
             "heading_font_size_mobile": 17,
@@ -712,10 +713,10 @@
         "card_ULpaJD": {
           "type": "card",
           "settings": {
-            "image": "shopify://shop_images/Gemini_Generated_Image_4u29r94u29r94u29.webp",
+            "image": "shopify://shop_images/2_Truthful.webp",
             "heading": "Hasta 12 horas de uso cómodo",
             "text": "<p>Se siente ligero, luce natural, se mantiene en su lugar: cobertura fresca que nunca se asemeja a una mascarilla.</p>",
-            "card_background_color": "#f6f3f1",
+            "card_background_color": "#E2CDCF",
             "heading_color": "#000000",
             "heading_font_size_desktop": 20,
             "heading_font_size_mobile": 17,
@@ -746,7 +747,7 @@
         "heading_font_size_desktop": 32,
         "heading_font_size_mobile": 26,
         "heading_font_weight": "600",
-        "subheading_color": "#9c796f",
+        "subheading_color": "#B07C81",
         "subheading_font_size_desktop": 18,
         "subheading_font_size_mobile": 15,
         "subheading_font_weight": "400",
