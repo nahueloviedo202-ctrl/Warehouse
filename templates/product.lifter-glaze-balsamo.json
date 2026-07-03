@@ -837,8 +837,8 @@
         "heading_font_size_desktop": 40,
         "heading_font_size_mobile": 40,
         "heading_font_weight": "600",
-        "backdrop_image": "shopify://shop_images/Maybelline-Lifter-Glaze-02-PINK-DRIP-US-41554088267-primary-_1_592967fd-cbb2-436f-a8e3-a4803569a92b.webp",
-        "layout": "image_first",
+        "backdrop_image": "shopify://shop_images/maybelline-lifter-glaze-carousel-3-beauty.webp",
+        "layout": "text_first",
         "show_connector_lines": false,
         "line_color": "",
         "show_sparkle": false,
@@ -853,120 +853,94 @@
         "padding_bottom_mobile": 40
       }
     },
-    "left_plus_slider_ABkcXL": {
-      "type": "left-plus-slider",
+    "por_que_elegir_Tffpyr": {
+      "type": "por-que-elegir",
       "blocks": {
-        "feature_ErJNE7": {
-          "type": "feature",
+        "row_NHTKBb": {
+          "type": "row",
           "settings": {
-            "icon": "star",
-            "icon_color": "#B07C81",
-            "heading": "Hidratación profunda",
-            "heading_color": "",
-            "heading_font_size_desktop": 16,
-            "heading_font_size_mobile": 15,
-            "heading_font_weight": "700",
-            "text": "Formulado con ácido hialurónico para una hidratación que dura hasta 24 horas.",
-            "text_color": "",
-            "text_font_weight": "400",
-            "text_font_size_desktop": 14,
-            "text_font_size_mobile": 13
+            "feature": "Cobertura extrema desde la primera aplicación",
+            "vita_has": true,
+            "others_has": false
           }
         },
-        "feature_aPXqFK": {
-          "type": "feature",
+        "row_JCMwCz": {
+          "type": "row",
           "settings": {
-            "icon": "leaf",
-            "icon_color": "#B07C81",
-            "heading": "Ingredientes naturales",
-            "heading_color": "",
-            "heading_font_size_desktop": 16,
-            "heading_font_size_mobile": 15,
-            "heading_font_weight": "700",
-            "text": "94% de ingredientes de origen natural, incluyendo manteca de karité y aceites de jojoba, palma y coco.",
-            "text_color": "",
-            "text_font_weight": "400",
-            "text_font_size_desktop": 14,
-            "text_font_size_mobile": 13
+            "feature": "Unifica el tono de la piel",
+            "vita_has": true,
+            "others_has": false
           }
         },
-        "feature_k9ikyh": {
-          "type": "feature",
+        "row_EiHRzG": {
+          "type": "row",
           "settings": {
-            "icon": "heart",
-            "icon_color": "#B07C81",
-            "heading": "Color acumulable",
-            "heading_color": "",
-            "heading_font_size_desktop": 16,
-            "heading_font_size_mobile": 15,
-            "heading_font_weight": "700",
-            "text": "Tono translúcido Pink Drip que podés intensificar reaplicando capas, para un acabado brillante tipo cristal",
-            "text_color": "",
-            "text_font_weight": "400",
-            "text_font_size_desktop": 14,
-            "text_font_size_mobile": 13
+            "feature": "Cubre vitiligo, cicatrices y tatuajes",
+            "vita_has": true,
+            "others_has": false
           }
         },
-        "slide_NiqkF6": {
-          "type": "slide",
+        "row_D7bLaA": {
+          "type": "row",
           "settings": {
-            "image": "shopify://shop_images/maybelline-lifter-glaze-carousel-3-beauty.webp",
-            "label": "",
-            "label_color": ""
+            "feature": "No marca líneas de expresión",
+            "vita_has": true,
+            "others_has": false
+          }
+        },
+        "row_TpwyEz": {
+          "type": "row",
+          "settings": {
+            "feature": "Resistente al agua y al roce",
+            "vita_has": true,
+            "others_has": false
+          }
+        },
+        "row_RqRzat": {
+          "type": "row",
+          "settings": {
+            "feature": "Larga duración durante todo el día",
+            "vita_has": true,
+            "others_has": false
           }
         }
       },
       "block_order": [
-        "feature_ErJNE7",
-        "feature_aPXqFK",
-        "feature_k9ikyh",
-        "slide_NiqkF6"
+        "row_NHTKBb",
+        "row_JCMwCz",
+        "row_EiHRzG",
+        "row_D7bLaA",
+        "row_TpwyEz",
+        "row_RqRzat"
       ],
-      "name": "Texto + Slider",
+      "name": "¿Por qué elegir?",
       "settings": {
-        "eyebrow": "POR QUÉ ELEGIRLO",
-        "eyebrow_color": "#B07C81",
-        "eyebrow_font_weight": "600",
-        "eyebrow_font_size_desktop": 13,
-        "eyebrow_font_size_mobile": 12,
-        "heading": "Brillo y color que se ven y se sienten",
-        "heading_size": "h1",
-        "heading_color": "",
-        "heading_font_size_desktop": 40,
-        "heading_font_size_mobile": 28,
-        "heading_font_weight": "700",
-        "description": "<p>Una fórmula con aceites que hidrata y realza tus labios, con resultados visibles desde el primer uso.</p>",
-        "description_color": "",
-        "description_font_size_desktop": 16,
-        "description_font_size_mobile": 14,
-        "description_font_weight": "400",
-        "button_label": "QUIERO MI BALSAMO",
-        "button_link": "#informacion-producto",
-        "button_style": "primary",
-        "icon_color": "#B07C81",
-        "icon_size": 24,
-        "features_gap": 16,
-        "show_arrows": false,
-        "arrow_color": "#111111",
-        "show_dots": false,
-        "dot_color": "#111111",
-        "autoplay": false,
-        "autoplay_speed": 4,
-        "slides_desktop": 1,
-        "slides_tablet": 1,
-        "slides_mobile": 1,
-        "slide_gap": 16,
-        "slide_radius": 12,
-        "image_ratio": "square",
-        "layout": "text_left",
-        "left_column_width": 50,
-        "columns_gap": 40,
+        "title": "¿POR QUÉ ELEGIR Vita Cosmetics Base Corporal y Facial?",
+        "title_transform": "uppercase",
+        "title_color": "#000000",
+        "title_weight": "600",
+        "title_size_desktop": 36,
+        "title_size_mobile": 24,
+        "product_image": "shopify://shop_images/Maybelline-Lifter-Glaze-02-PINK-DRIP-US-41554088267-primary-_1.webp",
+        "product_img_size_desktop": 56,
+        "product_img_size_mobile": 44,
+        "vita_label": "",
+        "others_label": "Otros",
+        "table_max_width": 500,
+        "vita_bg_color": "#f1e9e3",
+        "divider_color": "#444444",
+        "icon_color": "#1a1a1a",
+        "icon_size_desktop": 35,
+        "icon_size_mobile": 28,
+        "row_color": "",
+        "row_size_desktop": 13,
+        "row_size_mobile": 12,
         "color_scheme": "background-1",
-        "background_color": "#FFFFFF",
+        "bg_color": "",
         "padding_top": 40,
-        "padding_bottom": 60,
+        "padding_bottom": 40,
         "padding_top_mobile": 20,
-        "padding_bottom_mobile": 40
+        "padding_bottom_mobile": 20
       }
     },
     "comparison_slider_NtzU6b": {
@@ -1353,7 +1327,7 @@
     "slideshow_HfVNww",
     "press_ticker_gTJiLE",
     "ingredient_spotlight_wmhrkr",
-    "left_plus_slider_ABkcXL",
+    "por_que_elegir_Tffpyr",
     "comparison_slider_NtzU6b",
     "review_slider_pmwAwt",
     "faq_accordion_m3GjeY",
