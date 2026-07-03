@@ -290,7 +290,7 @@
         "product_review_card_irp9KC": {
           "type": "product_review_card",
           "settings": {
-            "text": "Me sorprendió la cobertura. Con muy poca cantidad pude cubrir las marcas de acné sin que se sintiera pesada.",
+            "text": "¡Encantada! Me encantó.",
             "avatar": "shopify://shop_images/Gemini_Generated_Image_nvngeznvngeznvng_1.webp",
             "author": "Laura G.",
             "rating": 5,
@@ -313,7 +313,7 @@
         "product_review_card_Jg89ep": {
           "type": "product_review_card",
           "settings": {
-            "text": "Tengo piel grasa y pensé que se iba a notar cargada, pero el acabado mate aguanta todo el día.",
+            "text": "Me encantó, quedé fascinada con el resultado.",
             "avatar": "shopify://shop_images/Gemini_Generated_Image_7w3zuv7w3zuv7w3z.webp",
             "author": "Sofia R .",
             "rating": 5,
@@ -336,7 +336,7 @@
         "product_review_card_hTTX9a": {
           "type": "product_review_card",
           "settings": {
-            "text": "La usé en el cuerpo para tapar unas marcas y quedé sorprendida. Con una capa fina ya se nota la diferencia.",
+            "text": "\"Me gustó la presentación y la textura del producto, es idéntico a lo que ofrecen.",
             "avatar": "shopify://shop_images/default-ticker-5_1_2.png",
             "author": "Maria T.",
             "rating": 5,
@@ -438,7 +438,7 @@
         "padding_top": 24,
         "padding_bottom": 60,
         "padding_top_mobile": 28,
-        "padding_bottom_mobile": 32
+        "padding_bottom_mobile": 0
       }
     },
     "product_highlight_VchPnR": {
@@ -515,7 +515,7 @@
         "color_scheme": "background-1",
         "padding_top": 40,
         "padding_bottom": 40,
-        "padding_top_mobile": 24,
+        "padding_top_mobile": 0,
         "padding_bottom_mobile": 24
       }
     },
