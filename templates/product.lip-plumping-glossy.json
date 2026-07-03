@@ -309,6 +309,7 @@
         },
         "video_carousel_gUmwA4": {
           "type": "video_carousel",
+          "disabled": true,
           "settings": {
             "heading": "Verlo en acción",
             "heading_size": "h2",
