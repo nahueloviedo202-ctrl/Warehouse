@@ -678,7 +678,7 @@
         "text_italic": true,
         "text_uppercase": true,
         "color_scheme": "background-1",
-        "custom_background_color": "#e3d0c9",
+        "custom_background_color": "#E2CDCF",
         "custom_text_color": "#000000",
         "padding_top": 20,
         "padding_bottom": 20,
@@ -686,187 +686,117 @@
         "padding_bottom_mobile": 16
       }
     },
-    "feature_cards_rC7d6a": {
-      "type": "feature-cards",
+    "left_plus_slider_ABkcXL": {
+      "type": "left-plus-slider",
       "blocks": {
-        "card_7BU4fG": {
-          "type": "card",
+        "feature_ErJNE7": {
+          "type": "feature",
           "settings": {
-            "image": "shopify://shop_images/imgi_32_a4c82a4b-ceb4-4d83-a9fa-ca458193fcd7.webp",
-            "heading": "Se desliza sobre la textura",
-            "text": "<p>Cremoso al contacto, luego se derrite suavemente para un acabado de aspecto más suave.</p>",
-            "card_background_color": "#f6f3f1",
-            "heading_color": "#000000",
-            "heading_font_size_desktop": 20,
-            "heading_font_size_mobile": 17,
+            "icon": "star",
+            "icon_color": "#B07C81",
+            "heading": "Hidratación profunda",
+            "heading_color": "",
+            "heading_font_size_desktop": 16,
+            "heading_font_size_mobile": 15,
             "heading_font_weight": "700",
+            "text": "Formulado con ácido hialurónico para una hidratación que dura hasta 24 horas.",
             "text_color": "",
-            "text_font_size_desktop": 15,
-            "text_font_size_mobile": 14,
-            "text_font_weight": "400"
-          }
-        },
-        "card_gpfMnF": {
-          "type": "card",
-          "settings": {
-            "image": "shopify://shop_images/Gemini_Generated_Image_3t0r723t0r723t0r.webp",
-            "heading": "Se funde con tu tono exacto",
-            "text": "<p>A medida que difuminas, los pigmentos se adaptan para un acabado perfecto, sin adivinar ni un cajón lleno de tonos.</p>",
-            "card_background_color": "#f6f3f1",
-            "heading_color": "#000000",
-            "heading_font_size_desktop": 20,
-            "heading_font_size_mobile": 17,
-            "heading_font_weight": "700",
-            "text_color": "",
-            "text_font_size_desktop": 15,
-            "text_font_size_mobile": 14,
-            "text_font_weight": "400"
-          }
-        },
-        "card_ULpaJD": {
-          "type": "card",
-          "settings": {
-            "image": "shopify://shop_images/Gemini_Generated_Image_4u29r94u29r94u29.webp",
-            "heading": "Hasta 12 horas de uso cómodo",
-            "text": "<p>Se siente ligero, luce natural, se mantiene en su lugar: cobertura fresca que nunca se asemeja a una mascarilla.</p>",
-            "card_background_color": "#f6f3f1",
-            "heading_color": "#000000",
-            "heading_font_size_desktop": 20,
-            "heading_font_size_mobile": 17,
-            "heading_font_weight": "700",
-            "text_color": "",
-            "text_font_size_desktop": 15,
-            "text_font_size_mobile": 14,
-            "text_font_weight": "400"
-          }
-        }
-      },
-      "block_order": [
-        "card_7BU4fG",
-        "card_gpfMnF",
-        "card_ULpaJD"
-      ],
-      "custom_css": [
-        "@media screen and (max-width: 749px) {.h2 {font-size: calc(var(--font-heading-scale) * 1.7rem); }}",
-        "@media screen and (max-width: 749px) {.section-feature_cards_rC7d6a-padding {padding-top: 32px !important; padding-bottom: 32px !important; }}"
-      ],
-      "name": "Tarjetas de beneficios",
-      "settings": {
-        "heading": "Base que trabaja contigo",
-        "heading_size": "h2",
-        "heading_italic": true,
-        "subheading": "<p>Una base ligera y transpirable que se adapta a <em>tu</em> tono sin dejar líneas.</p>",
-        "heading_color": "#000000",
-        "heading_font_size_desktop": 32,
-        "heading_font_size_mobile": 26,
-        "heading_font_weight": "600",
-        "subheading_color": "#9c796f",
-        "subheading_font_size_desktop": 18,
-        "subheading_font_size_mobile": 15,
-        "subheading_font_weight": "400",
-        "color_scheme": "background-1",
-        "card_color_scheme": "background-2",
-        "accent_color_scheme": "accent-2",
-        "background_color": "#ffffff",
-        "image_ratio": "square",
-        "card_corner_radius": 10,
-        "image_corner_radius": 14,
-        "card_padding": 24,
-        "columns_desktop": 3,
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "padding_top": 0,
-        "padding_bottom": 60,
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 32
-      }
-    },
-    "comparison_slider_NtzU6b": {
-      "type": "comparison-slider",
-      "blocks": {
-        "image_comparison_JfwmF6": {
-          "type": "image_comparison",
-          "settings": {
-            "before_image": "shopify://shop_images/before-mny-makl-lifterglaze-1320x74.webp",
-            "after_image": "shopify://shop_images/after-mny-makl-lifterglaze-1320x742.webp",
-            "before_label": "Antes",
-            "after_label": "Después",
-            "labels_color_scheme": "accent-1",
-            "line_color": "background-1"
-          }
-        },
-        "text_content_4pHk8N": {
-          "type": "text_content",
-          "settings": {
-            "title": "Hecho para pieles maduras y hermosas",
-            "heading_size": "h2",
-            "heading_italic": true,
-            "accent_color_scheme": "accent-2",
-            "text": "",
-            "feature_1_heading": "Suaviza la textura sin dejar líneas.",
-            "feature_1_text": "<p>Su fórmula ligera se adapta a la piel sin marcar arrugas ni líneas de expresión, dejando un acabado suave y uniforme.</p>",
-            "feature_2_heading": "Se adapta a tu tono exacto, al instante.",
-            "feature_2_text": "<p>Sus pigmentos inteligentes se adaptan a tu piel para lograr un tono uniforme y natural, sin acabados anaranjados.</p>",
-            "circle_background_color": "#e3d0c9",
-            "icon_color": "#2b2b2b",
-            "label_color": "#000000",
-            "circle_size_desktop": 96,
-            "circle_size_mobile": 72,
-            "badge_1_icon": "none",
-            "badge_1_label": "",
-            "badge_2_icon": "none",
-            "badge_2_label": "",
-            "badge_3_icon": "none",
-            "badge_3_label": "",
-            "badge_4_icon": "none",
-            "badge_4_label": "",
-            "button_label": "Comprar ahora",
-            "link": "#informacion-producto",
-            "button_style_secondary": false,
-            "button_full_width": false,
-            "button_bg_color": "#bc6161",
-            "button_text_color": "#ffffff",
-            "button_border_color": "#bc6161",
-            "button_border_width": 0,
-            "button_border_radius": 0,
-            "button_font_size": 0,
-            "button_font_weight": "inherit",
-            "button_padding_v": 0,
-            "button_padding_h": 0,
-            "desktop_content_alignment": "left",
-            "mobile_content_alignment": "left",
-            "heading_color": "#000000",
-            "heading_font_size_desktop": 32,
-            "heading_font_size_mobile": 24,
-            "heading_font_weight": "600",
-            "text_color": "#000000",
-            "text_font_size_desktop": 16,
-            "text_font_size_mobile": 15,
             "text_font_weight": "400",
-            "feature_heading_color": "#d1816e",
-            "feature_heading_font_size_desktop": 20,
-            "feature_heading_font_size_mobile": 16,
-            "feature_heading_font_weight": "700",
-            "feature_text_color": "",
-            "feature_text_font_size_desktop": 15,
-            "feature_text_font_size_mobile": 14,
-            "feature_text_font_weight": "400"
+            "text_font_size_desktop": 14,
+            "text_font_size_mobile": 13
+          }
+        },
+        "feature_aPXqFK": {
+          "type": "feature",
+          "settings": {
+            "icon": "leaf",
+            "icon_color": "#B07C81",
+            "heading": "Ingredientes naturales",
+            "heading_color": "",
+            "heading_font_size_desktop": 16,
+            "heading_font_size_mobile": 15,
+            "heading_font_weight": "700",
+            "text": "94% de ingredientes de origen natural, incluyendo manteca de karité y aceites de jojoba, palma y coco.",
+            "text_color": "",
+            "text_font_weight": "400",
+            "text_font_size_desktop": 14,
+            "text_font_size_mobile": 13
+          }
+        },
+        "feature_k9ikyh": {
+          "type": "feature",
+          "settings": {
+            "icon": "heart",
+            "icon_color": "#B07C81",
+            "heading": "Color acumulable",
+            "heading_color": "",
+            "heading_font_size_desktop": 16,
+            "heading_font_size_mobile": 15,
+            "heading_font_weight": "700",
+            "text": "Tono translúcido Pink Drip que podés intensificar reaplicando capas, para un acabado brillante tipo cristal",
+            "text_color": "",
+            "text_font_weight": "400",
+            "text_font_size_desktop": 14,
+            "text_font_size_mobile": 13
+          }
+        },
+        "slide_NiqkF6": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/maybelline-lifter-glaze-carousel-3-beauty.webp",
+            "label": "",
+            "label_color": ""
           }
         }
       },
       "block_order": [
-        "image_comparison_JfwmF6",
-        "text_content_4pHk8N"
+        "feature_ErJNE7",
+        "feature_aPXqFK",
+        "feature_k9ikyh",
+        "slide_NiqkF6"
       ],
-      "custom_css": [
-        "@media screen and (max-width: 749px) {.h2 {font-size: calc(var(--font-heading-scale) * 1.7rem); }}",
-        "@media screen and (max-width: 749px) {.section-comparison_slider_NtzU6b-padding {padding-top: 32px !important; padding-bottom: 32px !important; }}"
-      ],
-      "name": "Before & After slider",
+      "name": "Texto + Slider",
       "settings": {
+        "eyebrow": "POR QUÉ ELEGIRLO",
+        "eyebrow_color": "#B07C81",
+        "eyebrow_font_weight": "600",
+        "eyebrow_font_size_desktop": 13,
+        "eyebrow_font_size_mobile": 12,
+        "heading": "Brillo y color que se ven y se sienten",
+        "heading_size": "h1",
+        "heading_color": "",
+        "heading_font_size_desktop": 40,
+        "heading_font_size_mobile": 28,
+        "heading_font_weight": "700",
+        "description": "<p>Una fórmula con aceites que hidrata y realza tus labios, con resultados visibles desde el primer uso.</p>",
+        "description_color": "",
+        "description_font_size_desktop": 16,
+        "description_font_size_mobile": 14,
+        "description_font_weight": "400",
+        "button_label": "QUIERO MI BALSAMO",
+        "button_link": "#informacion-producto",
+        "button_style": "primary",
+        "icon_color": "#B07C81",
+        "icon_size": 24,
+        "features_gap": 16,
+        "show_arrows": false,
+        "arrow_color": "#111111",
+        "show_dots": false,
+        "dot_color": "#111111",
+        "autoplay": false,
+        "autoplay_speed": 4,
+        "slides_desktop": 1,
+        "slides_tablet": 1,
+        "slides_mobile": 1,
+        "slide_gap": 16,
+        "slide_radius": 12,
+        "image_ratio": "portrait",
+        "layout": "text_right",
+        "left_column_width": 45,
+        "columns_gap": 64,
         "color_scheme": "background-1",
-        "background_color": "#f3f1f0",
-        "padding_top": 60,
+        "background_color": "#FFFFFF",
+        "padding_top": 40,
         "padding_bottom": 60,
         "padding_top_mobile": 40,
         "padding_bottom_mobile": 40
@@ -958,9 +888,9 @@
         "benefit_EPWdb4": {
           "type": "benefit",
           "settings": {
-            "heading": "Complejo antienvejecimiento avanzado de InfiniteLove",
-            "text": "<p>Un potente antioxidante que nutre la piel y la protege del daño ambiental y los signos del envejecimiento.</p>",
-            "heading_color": "#d1816e",
+            "heading": "Ácido hialurónico",
+            "text": "<p>Hidratación profunda que dura hasta 24 horas, rellenando visiblemente los labios.</p>",
+            "heading_color": "#B07C81",
             "heading_font_size_desktop": 20,
             "heading_font_size_mobile": 17,
             "heading_font_weight": "700",
@@ -973,9 +903,9 @@
         "benefit_qVhbeE": {
           "type": "benefit",
           "settings": {
-            "heading": "Ácido hialurónico + colágeno",
-            "text": "<p>Este dúo actúa en profundidad para hidratar, mejorar la elasticidad y reducir la apariencia de líneas finas y arrugas.</p>",
-            "heading_color": "#d1816e",
+            "heading": "Extracto de cereza acerola",
+            "text": "<p>Rico en vitamina C natural, ayuda a suavizar y aportar luminosidad a los labios.</p>",
+            "heading_color": "#B07C81",
             "heading_font_size_desktop": 20,
             "heading_font_size_mobile": 17,
             "heading_font_weight": "700",
@@ -988,9 +918,9 @@
         "benefit_inTkiE": {
           "type": "benefit",
           "settings": {
-            "heading": "Vitamina E",
-            "text": "<p>Una potente mezcla de 4 ingredientes clínicamente probados que hidratan profundamente, mejoran la firmeza y revelan una piel más luminosa y rejuvenecida.</p>",
-            "heading_color": "#d1816e",
+            "heading": "Manteca de karité + aceites nutritivos",
+            "text": "<p>Mezcla de aceites de jojoba, palma y coco que nutren en profundidad sin dejar sensación grasosa.</p>",
+            "heading_color": "#B07C81",
             "heading_font_size_desktop": 20,
             "heading_font_size_mobile": 17,
             "heading_font_weight": "700",
@@ -998,32 +928,6 @@
             "text_font_size_desktop": 15,
             "text_font_size_mobile": 14,
             "text_font_weight": "400"
-          }
-        },
-        "badge_V9LQtq": {
-          "type": "badge",
-          "settings": {
-            "icon": "color_adapt",
-            "label": "Tecnología de adaptación de color",
-            "icon_bg_color": "#f6f3f1",
-            "icon_color": "#bc6161",
-            "label_color": "",
-            "label_font_size_desktop": 12,
-            "label_font_size_mobile": 11,
-            "label_font_weight": "400"
-          }
-        },
-        "badge_73xtjy": {
-          "type": "badge",
-          "settings": {
-            "icon": "anti_aging",
-            "label": "Complejo antienvejecimiento",
-            "icon_bg_color": "#f6f3f1",
-            "icon_color": "#bc6161",
-            "label_color": "",
-            "label_font_size_desktop": 12,
-            "label_font_size_mobile": 11,
-            "label_font_weight": "400"
           }
         }
       },
@@ -1034,9 +938,7 @@
         "ingredient_Rr49Fa",
         "benefit_EPWdb4",
         "benefit_qVhbeE",
-        "benefit_inTkiE",
-        "badge_V9LQtq",
-        "badge_73xtjy"
+        "benefit_inTkiE"
       ],
       "custom_css": [
         "@media screen and (max-width: 749px) {.h2 {font-size: calc(var(--font-heading-scale) * 1.7rem); }}",
@@ -1044,15 +946,15 @@
       ],
       "name": "Ingredientes destacados",
       "settings": {
-        "heading": "Hasta 12 horas de uso cómodo",
+        "heading": "Hasta 24 horas de hidratación",
         "heading_size": "h2",
         "heading_italic": true,
         "heading_color": "#000000",
         "heading_font_size_desktop": 40,
         "heading_font_size_mobile": 40,
         "heading_font_weight": "600",
-        "backdrop_image": "shopify://shop_images/producto.webp",
-        "layout": "image_first",
+        "backdrop_image": "shopify://shop_images/Maybelline-Lifter-Glaze-02-PINK-DRIP-US-41554088267-primary-_1_592967fd-cbb2-436f-a8e3-a4803569a92b.webp",
+        "layout": "text_first",
         "show_connector_lines": false,
         "line_color": "",
         "show_sparkle": false,
@@ -1060,8 +962,100 @@
         "circle_size_mobile": 65,
         "color_scheme": "background-1",
         "accent_color_scheme": "accent-2",
-        "background_color": "",
-        "padding_top": 60,
+        "background_color": "#FFFFFF",
+        "padding_top": 40,
+        "padding_bottom": 60,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40
+      }
+    },
+    "comparison_slider_NtzU6b": {
+      "type": "comparison-slider",
+      "blocks": {
+        "simple_image_mjFgte": {
+          "type": "simple_image",
+          "settings": {
+            "image": "shopify://shop_images/Gemini_Generated_Image_1nbixs1nbixs1nbi.jpg",
+            "image_alt": "",
+            "image_width": 450,
+            "image_height": 450,
+            "image_height_mobile": 400,
+            "object_fit": "cover",
+            "image_border_radius": 10
+          }
+        },
+        "text_content_4pHk8N": {
+          "type": "text_content",
+          "settings": {
+            "title": "Labios con efecto glaseado, al instante",
+            "heading_size": "h2",
+            "heading_italic": true,
+            "accent_color_scheme": "accent-2",
+            "text": "",
+            "feature_1_heading": "Efecto glaseado en un solo trazo.",
+            "feature_1_text": "<p>Su fórmula con aceites cubre los labios de un brillo intenso, dejando un acabado suave, jugoso y luminoso.</p>",
+            "feature_2_heading": "Se adapta a tu tono, al instante.",
+            "feature_2_text": "<p>El tono translúcido Pink Drip se funde con tus labios para un color natural y acumulable, sin acabados artificiales.</p>",
+            "circle_background_color": "#e3d0c9",
+            "icon_color": "#2b2b2b",
+            "label_color": "#000000",
+            "circle_size_desktop": 96,
+            "circle_size_mobile": 72,
+            "badge_1_icon": "none",
+            "badge_1_label": "",
+            "badge_2_icon": "none",
+            "badge_2_label": "",
+            "badge_3_icon": "none",
+            "badge_3_label": "",
+            "badge_4_icon": "none",
+            "badge_4_label": "",
+            "button_label": "QUIERO MI BALSAMO",
+            "link": "#informacion-producto",
+            "button_style_secondary": false,
+            "button_full_width": false,
+            "button_bg_color": "#000000",
+            "button_text_color": "#ffffff",
+            "button_border_color": "#000000",
+            "button_border_width": 0,
+            "button_border_radius": 0,
+            "button_font_size": 0,
+            "button_font_weight": "inherit",
+            "button_padding_v": 0,
+            "button_padding_h": 0,
+            "desktop_content_alignment": "left",
+            "mobile_content_alignment": "left",
+            "heading_color": "#000000",
+            "heading_font_size_desktop": 32,
+            "heading_font_size_mobile": 24,
+            "heading_font_weight": "600",
+            "text_color": "#000000",
+            "text_font_size_desktop": 16,
+            "text_font_size_mobile": 15,
+            "text_font_weight": "400",
+            "feature_heading_color": "#B07C81",
+            "feature_heading_font_size_desktop": 20,
+            "feature_heading_font_size_mobile": 16,
+            "feature_heading_font_weight": "700",
+            "feature_text_color": "",
+            "feature_text_font_size_desktop": 15,
+            "feature_text_font_size_mobile": 14,
+            "feature_text_font_weight": "400"
+          }
+        }
+      },
+      "block_order": [
+        "simple_image_mjFgte",
+        "text_content_4pHk8N"
+      ],
+      "custom_css": [
+        "@media screen and (max-width: 749px) {.h2 {font-size: calc(var(--font-heading-scale) * 1.7rem); }}",
+        "@media screen and (max-width: 749px) {.section-comparison_slider_NtzU6b-padding {padding-top: 32px !important; padding-bottom: 32px !important; }}"
+      ],
+      "name": "Before & After slider",
+      "settings": {
+        "color_scheme": "background-1",
+        "background_color": "#FFFFFF",
+        "padding_top": 40,
         "padding_bottom": 60,
         "padding_top_mobile": 40,
         "padding_bottom_mobile": 40
@@ -1073,27 +1067,27 @@
         "review_TdEpgg": {
           "type": "review",
           "settings": {
-            "text": "Lo empecé a usar hace unas semanas y ya noto una gran diferencia. Muy recomendable.",
+            "text": "El tono Pink Drip es hermoso, súper natural. Se siente liviano y nada pegajoso, y el brillo dura muchísimas horas.",
             "avatar": "shopify://shop_images/default-ticker-5_1_1.png",
-            "author": "María D.",
+            "author": "Sofia G.",
             "rating": 5
           }
         },
         "review_EccX6C": {
           "type": "review",
           "settings": {
-            "text": "Excelente calidad. Llegó rápido y cumplió totalmente mis expectativas.",
+            "text": "Mis labios se sienten hidratados todo el día. Lo uso solo y también sobre labial para darle un extra de brillo.",
             "avatar": "shopify://shop_images/default-ticker-5_1_2.png",
-            "author": "Sofía P.",
+            "author": "Valentina S.",
             "rating": 5
           }
         },
         "review_VgTKBY": {
           "type": "review",
           "settings": {
-            "text": "Producto de muy buena calidad y atención impecable. Estoy muy conforme.",
+            "text": "Me encanta el acabado tipo cristal. Le doy 4 estrellas porque el color es bien sutil, si buscás algo más intenso hay que aplicar varias capas.",
             "avatar": "shopify://shop_images/default-ticker-5_1.png",
-            "author": "Camila M.",
+            "author": "Camila R.",
             "rating": 5
           }
         }
@@ -1111,13 +1105,13 @@
         "heading_font_size_desktop": 36,
         "heading_font_size_mobile": 26,
         "heading_font_weight": "600",
-        "subheading": "Opiniones de quienes ya eligieron Vita Glow",
-        "subheading_color": "#9c796f",
+        "subheading": "Opiniones de quienes ya eligieron Lifter Glaze",
+        "subheading_color": "#B07C81",
         "subheading_font_size_desktop": 18,
         "subheading_font_size_mobile": 15,
         "subheading_font_weight": "500",
-        "card_background_color": "#f6f3f1",
-        "card_border_color": "#d1816e",
+        "card_background_color": "#EEE8E9",
+        "card_border_color": "#B07C81",
         "card_border_width": 1,
         "card_corner_radius": 16,
         "text_color": "#2b2b2b",
@@ -1131,9 +1125,9 @@
         "arrows_color": "#b5651d",
         "color_scheme": "background-1",
         "background_color": "#ffffff",
-        "padding_top": 0,
+        "padding_top": 40,
         "padding_bottom": 60,
-        "padding_top_mobile": 0,
+        "padding_top_mobile": 20,
         "padding_bottom_mobile": 40
       }
     },
@@ -1143,8 +1137,8 @@
         "question_giLkXQ": {
           "type": "question",
           "settings": {
-            "question": "¿Cuánta cobertura ofrece la Base de Maquillaje?",
-            "answer": "<p>Ofrece una cobertura media modulable que se adapta a tu piel y se puede construir según tus necesidades.</p>",
+            "question": "¿Cuánto brillo y color aporta el Lifter Glaze?",
+            "answer": "<p>Deja un acabado brillante tipo cristal con un tono translúcido y acumulable, que se adapta a tu color natural sin verse artificial.</p>",
             "question_color": "",
             "question_font_size_desktop": 16,
             "question_font_size_mobile": 15,
@@ -1158,8 +1152,8 @@
         "question_36wNwy": {
           "type": "question",
           "settings": {
-            "question": "¿El producto es adecuado para pieles sensibles?",
-            "answer": "<p>Sí, está formulada para ser segura y respetuosa con pieles sensibles.</p>",
+            "question": "¿Es apto para pieles sensibles?",
+            "answer": "<p>Su fórmula está compuesta por 94% de ingredientes de origen natural, pensada para no generar sensación pesada ni pegajosa, incluso en labios sensibles.</p>",
             "question_color": "",
             "question_font_size_desktop": 16,
             "question_font_size_mobile": 15,
@@ -1173,8 +1167,8 @@
         "question_e4hhdC": {
           "type": "question",
           "settings": {
-            "question": "¿La base de maquillaje es adecuada para pieles con arrugas o líneas finas?",
-            "answer": "<p>Sí, su fórmula ligera no se asienta en las líneas finas ni acentúa las arrugas.</p>",
+            "question": "¿Sirve para labios secos o con líneas marcadas?",
+            "answer": "<p>Sí, gracias al ácido hialurónico y la manteca de karité hidrata en profundidad y ayuda a suavizar la apariencia de las líneas de los labios.</p>",
             "question_color": "",
             "question_font_size_desktop": 16,
             "question_font_size_mobile": 15,
@@ -1188,8 +1182,8 @@
         "question_HKe6yp": {
           "type": "question",
           "settings": {
-            "question": "¿Cuál es la mejor manera de aplicar la base?",
-            "answer": "<p>Aplica pequeñas cantidades con los dedos, una esponja o brocha, trabajando desde el centro del rostro hacia afuera.</p>",
+            "question": "¿Cuál es la mejor manera de aplicar el Lifter Glaze?",
+            "answer": "<p>Destapá, girá para sacar el producto y deslizalo sobre los labios. Podés reaplicar para intensificar el color y el brillo.</p>",
             "question_color": "",
             "question_font_size_desktop": 16,
             "question_font_size_mobile": 15,
@@ -1203,8 +1197,8 @@
         "question_V76RRe": {
           "type": "question",
           "settings": {
-            "question": "¿Cómo adapta la base de maquillaje su color?",
-            "answer": "<p>Contiene pigmentos inteligentes que reaccionan con el pH de tu piel para adaptarse a tu tono natural.</p>",
+            "question": "¿Cómo se adapta el color a mi tono?",
+            "answer": "<p>El tono Pink Drip es translúcido y acumulable: mientras más capas apliques, más intenso se ve el color, adaptándose de forma natural a tus labios.</p>",
             "question_color": "",
             "question_font_size_desktop": 16,
             "question_font_size_mobile": 15,
@@ -1248,9 +1242,9 @@
         "item_radius": 12,
         "item_spacing": 12,
         "open_first_question": false,
-        "padding_top": 60,
+        "padding_top": 40,
         "padding_bottom": 60,
-        "padding_top_mobile": 40,
+        "padding_top_mobile": 20,
         "padding_bottom_mobile": 40
       }
     },
@@ -1321,7 +1315,7 @@
       ],
       "name": "Comunidad / Feed UGC",
       "settings": {
-        "heading": "Únete a la comunidad @VitaGlow",
+        "heading": "Únete a la comunidad @VitaNuraLab",
         "heading_size": "h2",
         "heading_color": "",
         "heading_font_size_desktop": 32,
@@ -1343,7 +1337,7 @@
         "space_tablet": 16,
         "slides_mobile": 1.4,
         "space_mobile": 12,
-        "padding_top": 60,
+        "padding_top": 40,
         "padding_bottom": 40,
         "padding_top_mobile": 40,
         "padding_bottom_mobile": 40
@@ -1358,9 +1352,9 @@
     "64c96926-2c31-48fe-bd21-30941bc87822",
     "slideshow_HfVNww",
     "press_ticker_gTJiLE",
-    "feature_cards_rC7d6a",
-    "comparison_slider_NtzU6b",
+    "left_plus_slider_ABkcXL",
     "ingredient_spotlight_wmhrkr",
+    "comparison_slider_NtzU6b",
     "review_slider_pmwAwt",
     "faq_accordion_m3GjeY",
     "community_feed_dJB7VX"
