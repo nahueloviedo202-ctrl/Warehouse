@@ -820,7 +820,7 @@
         "text_gap_desktop": 16,
         "text_gap_mobile": 10,
         "button_label": "QUIERO MI BRILLO LABIAL",
-        "button_url": "",
+        "button_url": "#informacion-producto",
         "button_bg_color": "#000000",
         "button_text_color": "#ffffff",
         "button_radius": 100,
