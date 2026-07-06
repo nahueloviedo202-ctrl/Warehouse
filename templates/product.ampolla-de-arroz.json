@@ -1108,28 +1108,28 @@
           "type": "stat",
           "settings": {
             "number": "99%",
-            "description": "quedó satisfecho con la duración del delineador."
+            "description": "notó una piel más luminosa y uniforme."
           }
         },
         "stat_4E34Y3": {
           "type": "stat",
           "settings": {
             "number": "96%",
-            "description": "notó que no se corría ni se desvanecía en todo el día."
+            "description": "percibió una textura más suave al tacto."
           }
         },
         "stat_zV4CXf": {
           "type": "stat",
           "settings": {
             "number": "97%",
-            "description": "logró una aplicación fácil y precisa."
+            "description": "vio una reducción visible de los poros."
           }
         },
         "stat_3K7ddL": {
           "type": "stat",
           "settings": {
             "number": "95%",
-            "description": "sintió mayor comodidad al usarlo."
+            "description": " sintió su piel más hidratada y renovada."
           }
         }
       },
@@ -1147,14 +1147,14 @@
         "heading_weight": "600",
         "heading_size_desktop": 36,
         "heading_size_mobile": 24,
-        "stat_number_color": "#2a1f3d",
+        "stat_number_color": "#000000",
         "stat_number_size_desktop": 36,
         "stat_number_size_mobile": 28,
         "stat_text_color": "#434343",
         "stat_text_size_desktop": 14,
         "stat_text_size_mobile": 12,
         "show_button": true,
-        "button_label": "QUIERO MI SET",
+        "button_label": "QUIERO MI AMPOLLA",
         "button_anchor": "informacion-producto",
         "button_url": "",
         "button_bg_color": "#000000",
@@ -1162,7 +1162,7 @@
         "button_text_size_desktop": 16,
         "button_text_size_mobile": 14,
         "color_scheme": "background-1",
-        "bg_color": "#ffffff",
+        "bg_color": "#FFFFFF",
         "padding_top": 40,
         "padding_bottom": 60,
         "padding_top_mobile": 12,
@@ -1205,6 +1205,7 @@
         "review_EccX6C",
         "review_VgTKBY"
       ],
+      "disabled": true,
       "name": "Slider de reseñas",
       "settings": {
         "heading": "Cambios reales",
