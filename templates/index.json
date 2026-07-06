@@ -142,7 +142,7 @@
         "button_bg_color": "#ffffff",
         "button_text_color": "#000000",
         "button_font_size_desktop": 13,
-        "button_font_size_mobile": 11,
+        "button_font_size_mobile": 10,
         "columns_desktop": 4,
         "columns_mobile": "2",
         "show_arrows": false,
