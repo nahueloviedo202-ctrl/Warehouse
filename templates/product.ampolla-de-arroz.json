@@ -884,7 +884,7 @@
         "slides_mobile": 1,
         "slide_gap": 16,
         "slide_radius": 12,
-        "image_ratio": "portrait",
+        "image_ratio": "square",
         "layout": "text_right",
         "left_column_width": 50,
         "columns_gap": 64,
