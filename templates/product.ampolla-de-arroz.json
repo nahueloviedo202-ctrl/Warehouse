@@ -869,7 +869,7 @@
         "description_font_weight": "400",
         "button_label": "Descubrir más",
         "button_link": "#informacion-producto",
-        "button_style": "secondary",
+        "button_style": "primary",
         "icon_color": "",
         "icon_size": 24,
         "features_gap": 16,
