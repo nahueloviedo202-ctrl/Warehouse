@@ -509,85 +509,6 @@
         "padding_bottom_mobile": 40
       }
     },
-    "press_ticker_gTJiLE": {
-      "type": "press-ticker",
-      "blocks": {
-        "item_3kkXqc": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/Revista_InStyle_idQQukCzRJ_0.svg",
-            "text": "",
-            "link": "",
-            "target_blank": false
-          }
-        },
-        "item_nDK9AQ": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/vogue-logo.svg",
-            "text": "VOGUE",
-            "link": "",
-            "target_blank": false
-          }
-        },
-        "item_RmqdGV": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/pngkey.com-rolling-stones-logo-png-1512812.png",
-            "text": "RUSSH",
-            "link": "",
-            "target_blank": false
-          }
-        },
-        "item_c3eGAi": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/960px-Marie_Claire_Magazine_logo_svg.png",
-            "text": "marie claire",
-            "link": "",
-            "target_blank": false
-          }
-        },
-        "item_wrJGVn": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/harpers-bazaar-logo.svg",
-            "text": "BAZAAR",
-            "link": "",
-            "target_blank": false
-          }
-        }
-      },
-      "block_order": [
-        "item_3kkXqc",
-        "item_nDK9AQ",
-        "item_RmqdGV",
-        "item_c3eGAi",
-        "item_wrJGVn"
-      ],
-      "name": "Press Ticker",
-      "settings": {
-        "speed": 1,
-        "direction": "left",
-        "pause_on_hover": true,
-        "separator_char": "•",
-        "separator_spacing": 24,
-        "separator_size": 1,
-        "desktop_logo_height": 30,
-        "mobile_logo_height": 24,
-        "text_size": "2",
-        "text_bold": false,
-        "text_italic": true,
-        "text_uppercase": true,
-        "color_scheme": "background-1",
-        "custom_background_color": "#D0B6D0",
-        "custom_text_color": "#000000",
-        "padding_top": 20,
-        "padding_bottom": 20,
-        "padding_top_mobile": 16,
-        "padding_bottom_mobile": 16
-      }
-    },
     "product_highlight_ADGxba": {
       "type": "product-highlight",
       "blocks": {
@@ -664,6 +585,164 @@
         "padding_bottom": 40,
         "padding_top_mobile": 16,
         "padding_bottom_mobile": 28
+      }
+    },
+    "press_ticker_gTJiLE": {
+      "type": "press-ticker",
+      "blocks": {
+        "item_3kkXqc": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Revista_InStyle_idQQukCzRJ_0.svg",
+            "text": "",
+            "link": "",
+            "target_blank": false
+          }
+        },
+        "item_nDK9AQ": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/vogue-logo.svg",
+            "text": "VOGUE",
+            "link": "",
+            "target_blank": false
+          }
+        },
+        "item_RmqdGV": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/pngkey.com-rolling-stones-logo-png-1512812.png",
+            "text": "RUSSH",
+            "link": "",
+            "target_blank": false
+          }
+        },
+        "item_c3eGAi": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/960px-Marie_Claire_Magazine_logo_svg.png",
+            "text": "marie claire",
+            "link": "",
+            "target_blank": false
+          }
+        },
+        "item_wrJGVn": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/harpers-bazaar-logo.svg",
+            "text": "BAZAAR",
+            "link": "",
+            "target_blank": false
+          }
+        }
+      },
+      "block_order": [
+        "item_3kkXqc",
+        "item_nDK9AQ",
+        "item_RmqdGV",
+        "item_c3eGAi",
+        "item_wrJGVn"
+      ],
+      "name": "Press Ticker",
+      "settings": {
+        "speed": 1,
+        "direction": "left",
+        "pause_on_hover": true,
+        "separator_char": "•",
+        "separator_spacing": 24,
+        "separator_size": 1,
+        "desktop_logo_height": 30,
+        "mobile_logo_height": 24,
+        "text_size": "2",
+        "text_bold": false,
+        "text_italic": true,
+        "text_uppercase": true,
+        "color_scheme": "background-1",
+        "custom_background_color": "#d0b6d0",
+        "custom_text_color": "#000000",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "padding_top_mobile": 16,
+        "padding_bottom_mobile": 16
+      }
+    },
+    "press_ticker_EkxQ64": {
+      "type": "press-ticker",
+      "blocks": {
+        "item_MYH3hN": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Revista_InStyle_idQQukCzRJ_0.svg",
+            "text": "",
+            "link": "",
+            "target_blank": false
+          }
+        },
+        "item_iFpF9C": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/vogue-logo.svg",
+            "text": "VOGUE",
+            "link": "",
+            "target_blank": false
+          }
+        },
+        "item_f93HH6": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/pngkey.com-rolling-stones-logo-png-1512812.png",
+            "text": "RUSSH",
+            "link": "",
+            "target_blank": false
+          }
+        },
+        "item_N7GVzJ": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/960px-Marie_Claire_Magazine_logo_svg.png",
+            "text": "marie claire",
+            "link": "",
+            "target_blank": false
+          }
+        },
+        "item_JNdnpK": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/harpers-bazaar-logo.svg",
+            "text": "BAZAAR",
+            "link": "",
+            "target_blank": false
+          }
+        }
+      },
+      "block_order": [
+        "item_MYH3hN",
+        "item_iFpF9C",
+        "item_f93HH6",
+        "item_N7GVzJ",
+        "item_JNdnpK"
+      ],
+      "name": "Press Ticker",
+      "settings": {
+        "speed": 1,
+        "direction": "left",
+        "pause_on_hover": true,
+        "separator_char": "•",
+        "separator_spacing": 24,
+        "separator_size": 1,
+        "desktop_logo_height": 30,
+        "mobile_logo_height": 24,
+        "text_size": "2",
+        "text_bold": false,
+        "text_italic": true,
+        "text_uppercase": true,
+        "color_scheme": "background-1",
+        "custom_background_color": "#d0b6d0",
+        "custom_text_color": "#000000",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "padding_top_mobile": 16,
+        "padding_bottom_mobile": 16
       }
     },
     "product_highlight_kHfNT3": {
@@ -1185,12 +1264,13 @@
   "order": [
     "main",
     "related-products",
+    "press_ticker_EkxQ64",
     "why_we_love_it_3t7fT9",
     "product_highlight_ADGxba",
-    "press_ticker_gTJiLE",
     "product_highlight_kHfNT3",
     "feature_cards_rC7d6a",
     "tarjetas_beneficios_hVc6pQ",
+    "press_ticker_gTJiLE",
     "review_slider_pmwAwt",
     "faq_accordion_m3GjeY",
     "community_feed_dJB7VX"
