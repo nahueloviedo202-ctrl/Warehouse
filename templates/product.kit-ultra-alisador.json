@@ -485,6 +485,109 @@
         "padding_bottom_mobile": 16
       }
     },
+    "why_we_love_it_3t7fT9": {
+      "type": "why-we-love-it",
+      "blocks": {
+        "feature_TKe9aE": {
+          "type": "feature",
+          "settings": {
+            "position": "left",
+            "heading": "Suavidad instantánea",
+            "text": "<p>La tecnología QT Charge alisa la fibra capilar desde la primera aplicación, dejando el cabello suave al tacto.</p>",
+            "heading_color": "#b07caf",
+            "heading_font_size_desktop": 16,
+            "heading_font_size_mobile": 16,
+            "heading_font_weight": "700",
+            "text_color": "",
+            "text_font_size_desktop": 14,
+            "text_font_size_mobile": 14,
+            "text_font_weight": "400"
+          }
+        },
+        "feature_HyNcKQ": {
+          "type": "feature",
+          "settings": {
+            "position": "left",
+            "heading": " Nutre y repara",
+            "text": "<p>El complejo de carbohidratos y la manteca de Karité nutren en profundidad las hebras secas y encrespadas, previniendo la rotura.</p>",
+            "heading_color": "#b07caf",
+            "heading_font_size_desktop": 16,
+            "heading_font_size_mobile": 14,
+            "heading_font_weight": "700",
+            "text_color": "",
+            "text_font_size_desktop": 14,
+            "text_font_size_mobile": 12,
+            "text_font_weight": "400"
+          }
+        },
+        "feature_BmGDdQ": {
+          "type": "feature",
+          "settings": {
+            "position": "right",
+            "heading": "Textura mejorada en un 37%",
+            "text": "<p>La fórmula activa restaura la textura del cabello, mejorándola hasta un 37%.</p>",
+            "heading_color": "#b07caf",
+            "heading_font_size_desktop": 16,
+            "heading_font_size_mobile": 14,
+            "heading_font_weight": "700",
+            "text_color": "",
+            "text_font_size_desktop": 15,
+            "text_font_size_mobile": 12,
+            "text_font_weight": "400"
+          }
+        },
+        "feature_GTkzQr": {
+          "type": "feature",
+          "settings": {
+            "position": "right",
+            "heading": "Hidratación profunda",
+            "text": "<p>El aloe vera y la glicerina retienen la humedad y equilibran el cuero cabelludo durante todo el día.</p>",
+            "heading_color": "#b07caf",
+            "heading_font_size_desktop": 16,
+            "heading_font_size_mobile": 14,
+            "heading_font_weight": "700",
+            "text_color": "",
+            "text_font_size_desktop": 14,
+            "text_font_size_mobile": 12,
+            "text_font_weight": "400"
+          }
+        }
+      },
+      "block_order": [
+        "feature_TKe9aE",
+        "feature_HyNcKQ",
+        "feature_BmGDdQ",
+        "feature_GTkzQr"
+      ],
+      "custom_css": [
+        "@media screen and (max-width: 749px) {.h2 {font-size: calc(var(--font-heading-scale) * 1.7rem); }}",
+        "@media screen and (max-width: 749px) {.section-why_we_love_it_3t7fT9-padding {padding-top: 32px !important; padding-bottom: 32px !important; }}"
+      ],
+      "name": "Por qué nos encanta",
+      "settings": {
+        "heading": " Lo que lo hace único al Kit Ultra Alisador",
+        "heading_size": "h2",
+        "heading_italic": true,
+        "heading_color": "#000000",
+        "heading_font_size_desktop": 32,
+        "heading_font_size_mobile": 24,
+        "heading_font_weight": "600",
+        "image": "shopify://shop_images/UltraSmooth.webp",
+        "circle_size_desktop": 380,
+        "circle_size_mobile": 220,
+        "color_scheme": "background-1",
+        "accent_color_scheme": "accent-2",
+        "background_color": "#ffffff",
+        "circle_border_color": "#b07caf",
+        "badge_icon_bg_color": "#f6f3f1",
+        "badge_icon_svg_color": "#b07caf",
+        "text_alignment": "facing-center",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40
+      }
+    },
     "product_highlight_ADGxba": {
       "type": "product-highlight",
       "blocks": {
@@ -561,109 +664,6 @@
         "padding_bottom": 40,
         "padding_top_mobile": 16,
         "padding_bottom_mobile": 28
-      }
-    },
-    "why_we_love_it_3t7fT9": {
-      "type": "why-we-love-it",
-      "blocks": {
-        "feature_TKe9aE": {
-          "type": "feature",
-          "settings": {
-            "position": "left",
-            "heading": "Brillo intenso y duradero",
-            "text": "<p>Fórmula ultra brillante de acabado glossy que no se siente pegajosa ni pesada sobre los labios.</p>",
-            "heading_color": "#b07caf",
-            "heading_font_size_desktop": 16,
-            "heading_font_size_mobile": 16,
-            "heading_font_weight": "700",
-            "text_color": "",
-            "text_font_size_desktop": 14,
-            "text_font_size_mobile": 14,
-            "text_font_weight": "400"
-          }
-        },
-        "feature_HyNcKQ": {
-          "type": "feature",
-          "settings": {
-            "position": "left",
-            "heading": " Nutre y repara",
-            "text": "<p>Mantecas de Karité y Cupuaçu, junto a extractos de frutas y vegetales, restauran labios secos o agrietados.</p>",
-            "heading_color": "#b07caf",
-            "heading_font_size_desktop": 16,
-            "heading_font_size_mobile": 14,
-            "heading_font_weight": "700",
-            "text_color": "",
-            "text_font_size_desktop": 14,
-            "text_font_size_mobile": 12,
-            "text_font_weight": "400"
-          }
-        },
-        "feature_BmGDdQ": {
-          "type": "feature",
-          "settings": {
-            "position": "right",
-            "heading": "Volumen visible al instante",
-            "text": "<p>El complejo Maxi Lip hincha los labios desde la primera aplicación, sin irritar ni generar sensación de ardor.</p>",
-            "heading_color": "#b07caf",
-            "heading_font_size_desktop": 16,
-            "heading_font_size_mobile": 14,
-            "heading_font_weight": "700",
-            "text_color": "",
-            "text_font_size_desktop": 15,
-            "text_font_size_mobile": 12,
-            "text_font_weight": "400"
-          }
-        },
-        "feature_GTkzQr": {
-          "type": "feature",
-          "settings": {
-            "position": "right",
-            "heading": "Hidratación profunda",
-            "text": "<p>El ácido hialurónico retiene la humedad y mantiene los labios hidratados durante todo el día.</p>",
-            "heading_color": "#b07caf",
-            "heading_font_size_desktop": 16,
-            "heading_font_size_mobile": 14,
-            "heading_font_weight": "700",
-            "text_color": "",
-            "text_font_size_desktop": 14,
-            "text_font_size_mobile": 12,
-            "text_font_weight": "400"
-          }
-        }
-      },
-      "block_order": [
-        "feature_TKe9aE",
-        "feature_HyNcKQ",
-        "feature_BmGDdQ",
-        "feature_GTkzQr"
-      ],
-      "custom_css": [
-        "@media screen and (max-width: 749px) {.h2 {font-size: calc(var(--font-heading-scale) * 1.7rem); }}",
-        "@media screen and (max-width: 749px) {.section-why_we_love_it_3t7fT9-padding {padding-top: 32px !important; padding-bottom: 32px !important; }}"
-      ],
-      "name": "Por qué nos encanta",
-      "settings": {
-        "heading": "Lo que lo hace único a Speak Love",
-        "heading_size": "h2",
-        "heading_italic": true,
-        "heading_color": "#000000",
-        "heading_font_size_desktop": 32,
-        "heading_font_size_mobile": 24,
-        "heading_font_weight": "600",
-        "image": "shopify://shop_images/UltraSmooth.webp",
-        "circle_size_desktop": 380,
-        "circle_size_mobile": 220,
-        "color_scheme": "background-1",
-        "accent_color_scheme": "accent-2",
-        "background_color": "#ffffff",
-        "circle_border_color": "#b07caf",
-        "badge_icon_bg_color": "#f6f3f1",
-        "badge_icon_svg_color": "#b07caf",
-        "text_alignment": "facing-center",
-        "padding_top": 60,
-        "padding_bottom": 60,
-        "padding_top_mobile": 40,
-        "padding_bottom_mobile": 40
       }
     },
     "product_highlight_kHfNT3": {
@@ -743,80 +743,6 @@
         "padding_bottom": 60,
         "padding_top_mobile": 16,
         "padding_bottom_mobile": 28
-      }
-    },
-    "tarjetas_beneficios_hVc6pQ": {
-      "type": "tarjetas-beneficios",
-      "blocks": {
-        "card_GEcUyD": {
-          "type": "card",
-          "settings": {
-            "icon": "shopify://shop_images/sparkles.svg",
-            "text": "Brillo que dura todo el día"
-          }
-        },
-        "card_gHtTwa": {
-          "type": "card",
-          "settings": {
-            "icon": "shopify://shop_images/pencil.svg",
-            "text": "Se usa solo o sobre labial"
-          }
-        },
-        "card_GK8wEG": {
-          "type": "card",
-          "settings": {
-            "icon": "shopify://shop_images/droplets.svg",
-            "text": "Hidratación con Ácido Hialurónico"
-          }
-        },
-        "card_bEK8CV": {
-          "type": "card",
-          "settings": {
-            "icon": "shopify://shop_images/badge-check.svg",
-            "text": "Volumen visible con Maxi Lip"
-          }
-        }
-      },
-      "block_order": [
-        "card_GEcUyD",
-        "card_gHtTwa",
-        "card_GK8wEG",
-        "card_bEK8CV"
-      ],
-      "name": "Tarjetas de beneficios",
-      "settings": {
-        "subtitle": "Más que un brillo",
-        "subtitle_color": "#b07caf",
-        "subtitle_size_desktop": 20,
-        "subtitle_size_mobile": 16,
-        "heading": "Volumen que se siente como tus labios",
-        "heading_color": "#000000",
-        "heading_size_desktop": 32,
-        "heading_size_mobile": 28,
-        "text_gap_desktop": 16,
-        "text_gap_mobile": 10,
-        "button_label": "QUIERO MI BRILLO LABIAL",
-        "button_url": "#informacion-producto",
-        "button_bg_color": "#000000",
-        "button_text_color": "#ffffff",
-        "button_radius": 100,
-        "button_font_size_desktop": 16,
-        "button_font_size_mobile": 14,
-        "card_bg_color": "#d0b6d0",
-        "card_radius": 5,
-        "card_gap": 10,
-        "card_text_color": "#2b1b17",
-        "card_text_size_desktop": 14,
-        "card_text_size_mobile": 12,
-        "icon_size_desktop": 40,
-        "icon_size_mobile": 32,
-        "layout_gap_desktop": 60,
-        "layout_gap_mobile": 8,
-        "bg_color": "#ffffff",
-        "padding_top": 40,
-        "padding_bottom": 60,
-        "padding_top_mobile": 20,
-        "padding_bottom_mobile": 40
       }
     },
     "feature_cards_rC7d6a": {
@@ -912,6 +838,80 @@
         "padding_bottom": 60,
         "padding_top_mobile": 20,
         "padding_bottom_mobile": 20
+      }
+    },
+    "tarjetas_beneficios_hVc6pQ": {
+      "type": "tarjetas-beneficios",
+      "blocks": {
+        "card_GEcUyD": {
+          "type": "card",
+          "settings": {
+            "icon": "shopify://shop_images/sparkles.svg",
+            "text": "Suavidad que dura todo el día"
+          }
+        },
+        "card_gHtTwa": {
+          "type": "card",
+          "settings": {
+            "icon": "shopify://shop_images/pencil.svg",
+            "text": "Se usa en 3 pasos: shampoo, mascarilla y sérum"
+          }
+        },
+        "card_GK8wEG": {
+          "type": "card",
+          "settings": {
+            "icon": "shopify://shop_images/droplets.svg",
+            "text": "Hidratación con Aloe Vera y Glicerina"
+          }
+        },
+        "card_bEK8CV": {
+          "type": "card",
+          "settings": {
+            "icon": "shopify://shop_images/badge-check.svg",
+            "text": "Textura mejorada un 37% con QT Charge"
+          }
+        }
+      },
+      "block_order": [
+        "card_GEcUyD",
+        "card_gHtTwa",
+        "card_GK8wEG",
+        "card_bEK8CV"
+      ],
+      "name": "Tarjetas de beneficios",
+      "settings": {
+        "subtitle": "Más que un shampoo",
+        "subtitle_color": "#b07caf",
+        "subtitle_size_desktop": 20,
+        "subtitle_size_mobile": 16,
+        "heading": "Suavidad que se siente en tu cabello",
+        "heading_color": "#000000",
+        "heading_size_desktop": 32,
+        "heading_size_mobile": 28,
+        "text_gap_desktop": 16,
+        "text_gap_mobile": 10,
+        "button_label": "QUIERO MI KIT ALISADOR",
+        "button_url": "#informacion-producto",
+        "button_bg_color": "#000000",
+        "button_text_color": "#ffffff",
+        "button_radius": 100,
+        "button_font_size_desktop": 16,
+        "button_font_size_mobile": 14,
+        "card_bg_color": "#d0b6d0",
+        "card_radius": 5,
+        "card_gap": 10,
+        "card_text_color": "#2b1b17",
+        "card_text_size_desktop": 14,
+        "card_text_size_mobile": 12,
+        "icon_size_desktop": 40,
+        "icon_size_mobile": 32,
+        "layout_gap_desktop": 60,
+        "layout_gap_mobile": 8,
+        "bg_color": "#ffffff",
+        "padding_top": 40,
+        "padding_bottom": 60,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 40
       }
     },
     "review_slider_pmwAwt": {
@@ -1186,11 +1186,11 @@
     "main",
     "related-products",
     "press_ticker_gTJiLE",
-    "product_highlight_ADGxba",
     "why_we_love_it_3t7fT9",
+    "product_highlight_ADGxba",
     "product_highlight_kHfNT3",
-    "tarjetas_beneficios_hVc6pQ",
     "feature_cards_rC7d6a",
+    "tarjetas_beneficios_hVc6pQ",
     "review_slider_pmwAwt",
     "faq_accordion_m3GjeY",
     "community_feed_dJB7VX"
