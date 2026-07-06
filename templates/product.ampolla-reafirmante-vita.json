@@ -715,14 +715,14 @@
           "type": "card",
           "settings": {
             "icon": "shopify://shop_images/sparkles.svg",
-            "text": "Brillo que dura todo el día"
+            "text": "Efecto tensor desde la primera aplicación"
           }
         },
         "card_gHtTwa": {
           "type": "card",
           "settings": {
             "icon": "shopify://shop_images/pencil.svg",
-            "text": "Se usa solo o sobre labial"
+            "text": "Se usa solo o combinado con tu rutina"
           }
         },
         "card_GK8wEG": {
@@ -736,7 +736,7 @@
           "type": "card",
           "settings": {
             "icon": "shopify://shop_images/badge-check.svg",
-            "text": "Volumen visible con Maxi Lip"
+            "text": "Renovación visible con Retinal"
           }
         }
       },
@@ -748,17 +748,17 @@
       ],
       "name": "Tarjetas de beneficios",
       "settings": {
-        "subtitle": "Más que un brillo",
+        "subtitle": "Más que un booster",
         "subtitle_color": "#CACB55",
         "subtitle_size_desktop": 20,
         "subtitle_size_mobile": 16,
-        "heading": "Volumen que se siente como tus labios",
+        "heading": "Firmeza que se siente en tu piel",
         "heading_color": "#000000",
         "heading_size_desktop": 32,
         "heading_size_mobile": 28,
         "text_gap_desktop": 16,
         "text_gap_mobile": 10,
-        "button_label": "QUIERO MI BRILLO LABIAL",
+        "button_label": " QUIERO MI RETINAL SHOT",
         "button_url": "#informacion-producto",
         "button_bg_color": "#000000",
         "button_text_color": "#ffffff",
@@ -788,7 +788,7 @@
         "review_TdEpgg": {
           "type": "review",
           "settings": {
-            "text": "¡Este es el balsamo labial más brillante que compré en mi vida! Se ve espectacular, ya volví a comprar otro color.",
+            "text": "¡Noté mi piel más firme desde la primera semana! El efecto tensor es real, ya pedí otro.",
             "avatar": "shopify://shop_images/default-ticker-5_1_1.png",
             "author": "María D.",
             "rating": 5
@@ -797,7 +797,7 @@
         "review_EccX6C": {
           "type": "review",
           "settings": {
-            "text": "Súper hidratante y hermoso en color. Se aplica suave y se siente genial todo el día.",
+            "text": "Súper hidratante y se absorbe rápido. Mi piel se siente distinta, más lisa.",
             "avatar": "shopify://shop_images/default-ticker-5_1_2.png",
             "author": "Sofía P.",
             "rating": 5
@@ -826,7 +826,7 @@
         "heading_font_size_desktop": 36,
         "heading_font_size_mobile": 26,
         "heading_font_weight": "600",
-        "subheading": "Opiniones de quienes ya eligieron Speak Love",
+        "subheading": " Opiniones de quienes ya eligieron Vita-A",
         "subheading_color": "#CACB55",
         "subheading_font_size_desktop": 18,
         "subheading_font_size_mobile": 15,
@@ -858,8 +858,8 @@
         "question_giLkXQ": {
           "type": "question",
           "settings": {
-            "question": "¿Cuánto brillo y volumen ofrece Speak Love?",
-            "answer": "<p>Aporta un brillo intenso de acabado glossy junto con un efecto plumping visible gracias al complejo Maxi Lip, que hincha los labios desde la primera aplicación.</p>",
+            "question": "¿Es más fuerte que el retinol?",
+            "answer": "<p>Sí, el Retinal actúa más rápido y en menor concentración que el retinol clásico, logrando resultados visibles con menor irritación.</p>",
             "question_color": "",
             "question_font_size_desktop": 16,
             "question_font_size_mobile": 15,
@@ -873,8 +873,8 @@
         "question_36wNwy": {
           "type": "question",
           "settings": {
-            "question": "¿Es apto para labios sensibles?",
-            "answer": "<p>Sí. Su fórmula vegana, libre de crueldad animal y sin gluten está pensada para no irritar, incluso en labios sensibles.</p>",
+            "question": "¿Puedo usarlo todos los días?",
+            "answer": "<p>Se recomienda empezar con 2-3 veces por semana e ir aumentando la frecuencia según cómo responda tu piel.</p>",
             "question_color": "",
             "question_font_size_desktop": 16,
             "question_font_size_mobile": 15,
@@ -888,8 +888,8 @@
         "question_e4hhdC": {
           "type": "question",
           "settings": {
-            "question": "¿Sirve para labios secos o agrietados?",
-            "answer": "<p>Sí, las mantecas de Karité y Cupuaçu junto al ácido hialurónico nutren en profundidad y ayudan a restaurar labios secos o agrietados.</p>",
+            "question": "¿Es apto para piel sensible?",
+            "answer": "<p>Se recomienda introducirlo de forma gradual y siempre usar protector solar durante el día, ya que aumenta la fotosensibilidad.</p>",
             "question_color": "",
             "question_font_size_desktop": 16,
             "question_font_size_mobile": 15,
@@ -903,8 +903,8 @@
         "question_HKe6yp": {
           "type": "question",
           "settings": {
-            "question": "¿Cuál es la mejor manera de aplicar Speak Love?",
-            "answer": "<p>Aplicalo generosamente de forma directa sobre los labios para un brillo instantáneo y volumen visible. También podés usarlo sobre delineador y labial como potenciador de brillo.</p>",
+            "question": "¿Cuándo empiezo a ver resultados?",
+            "answer": "<p>La mayoría nota mejoras en firmeza y textura a partir de la segunda o tercera semana de uso constante.</p>",
             "question_color": "",
             "question_font_size_desktop": 16,
             "question_font_size_mobile": 15,
