@@ -756,6 +756,7 @@
         "simple_image_QRL6bV",
         "text_content_4pHk8N"
       ],
+      "disabled": true,
       "custom_css": [
         "@media screen and (max-width: 749px) {.h2 {font-size: calc(var(--font-heading-scale) * 1.7rem); }}",
         "@media screen and (max-width: 749px) {.section-comparison_slider_NtzU6b-padding {padding-top: 32px !important; padding-bottom: 32px !important; }}"
@@ -768,6 +769,131 @@
         "padding_bottom": 40,
         "padding_top_mobile": 40,
         "padding_bottom_mobile": 20
+      }
+    },
+    "left_plus_slider_CmJCak": {
+      "type": "left-plus-slider",
+      "blocks": {
+        "feature_zpkD8a": {
+          "type": "feature",
+          "settings": {
+            "icon": "none",
+            "icon_color": "",
+            "heading": "Hidratación profunda",
+            "heading_color": "",
+            "heading_font_size_desktop": 16,
+            "heading_font_size_mobile": 15,
+            "heading_font_weight": "700",
+            "text": "Formulado con extracto de arroz y ácidos suaves para renovar la piel sin irritarla",
+            "text_color": "",
+            "text_font_weight": "400",
+            "text_font_size_desktop": 14,
+            "text_font_size_mobile": 13
+          }
+        },
+        "feature_iQ3mte": {
+          "type": "feature",
+          "settings": {
+            "icon": "none",
+            "icon_color": "",
+            "heading": "Ingredientes naturales",
+            "heading_color": "",
+            "heading_font_size_desktop": 16,
+            "heading_font_size_mobile": 15,
+            "heading_font_weight": "700",
+            "text": "Selección de activos botánicos que cuidan tu piel desde adentro.",
+            "text_color": "",
+            "text_font_weight": "400",
+            "text_font_size_desktop": 14,
+            "text_font_size_mobile": 13
+          }
+        },
+        "feature_Cc7JNt": {
+          "type": "feature",
+          "settings": {
+            "icon": "none",
+            "icon_color": "",
+            "heading": "Dermatológicamente testado",
+            "heading_color": "",
+            "heading_font_size_desktop": 16,
+            "heading_font_size_mobile": 15,
+            "heading_font_weight": "700",
+            "text": "Probado bajo control dermatológico para todo tipo de piel.",
+            "text_color": "",
+            "text_font_weight": "400",
+            "text_font_size_desktop": 14,
+            "text_font_size_mobile": 13
+          }
+        },
+        "slide_EAc3mA": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/PEELSHOT_ampoule2_03_large_ffb8629a-7e1d-47a0-8385-00bd121d371e.gif",
+            "label": "",
+            "label_color": ""
+          }
+        },
+        "slide_ezNqeJ": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/giphy.gif",
+            "label": "",
+            "label_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "feature_zpkD8a",
+        "feature_iQ3mte",
+        "feature_Cc7JNt",
+        "slide_EAc3mA",
+        "slide_ezNqeJ"
+      ],
+      "name": "Texto + Slider",
+      "settings": {
+        "eyebrow": "Por qué elegirnos",
+        "eyebrow_color": "",
+        "eyebrow_font_weight": "600",
+        "eyebrow_font_size_desktop": 13,
+        "eyebrow_font_size_mobile": 12,
+        "heading": "Resultados que se ven y se sienten",
+        "heading_size": "h1",
+        "heading_color": "",
+        "heading_font_size_desktop": 40,
+        "heading_font_size_mobile": 28,
+        "heading_font_weight": "700",
+        "description": "<p>Fórmulas diseñadas para realzar tu piel y aportar resultados visibles día tras día.</p>",
+        "description_color": "",
+        "description_font_size_desktop": 16,
+        "description_font_size_mobile": 14,
+        "description_font_weight": "400",
+        "button_label": "Descubrir más",
+        "button_link": "#informacion-producto",
+        "button_style": "secondary",
+        "icon_color": "",
+        "icon_size": 24,
+        "features_gap": 16,
+        "show_arrows": true,
+        "arrow_color": "#111111",
+        "show_dots": true,
+        "dot_color": "#111111",
+        "autoplay": false,
+        "autoplay_speed": 4,
+        "slides_desktop": 1,
+        "slides_tablet": 1,
+        "slides_mobile": 1,
+        "slide_gap": 16,
+        "slide_radius": 12,
+        "image_ratio": "portrait",
+        "layout": "text_right",
+        "left_column_width": 50,
+        "columns_gap": 64,
+        "color_scheme": "background-1",
+        "background_color": "",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40
       }
     },
     "por_que_elegir_TgyBPB": {
@@ -1072,6 +1198,7 @@
         "benefit_qVhbeE",
         "benefit_inTkiE"
       ],
+      "disabled": true,
       "custom_css": [
         "@media screen and (max-width: 749px) {.h2 {font-size: calc(var(--font-heading-scale) * 1.7rem); }}",
         "@media screen and (max-width: 749px) {.section-ingredient_spotlight_wmhrkr-padding {padding-top: 32px !important; padding-bottom: 32px !important; }}"
@@ -1086,7 +1213,7 @@
         "heading_font_size_mobile": 40,
         "heading_font_weight": "600",
         "backdrop_image": "shopify://shop_images/videoframe_198.png",
-        "layout": "text_first",
+        "layout": "image_first",
         "show_connector_lines": false,
         "line_color": "",
         "show_sparkle": false,
@@ -1446,6 +1573,7 @@
     "slideshow_HfVNww",
     "press_ticker_gTJiLE",
     "comparison_slider_NtzU6b",
+    "left_plus_slider_CmJCak",
     "por_que_elegir_TgyBPB",
     "tarjetas_beneficios_nPMNw7",
     "ingredient_spotlight_wmhrkr",
