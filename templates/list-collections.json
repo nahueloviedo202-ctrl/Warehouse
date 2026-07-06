@@ -16,7 +16,17 @@
         "sort": "alphabetical",
         "image_ratio": "square",
         "columns_desktop": 3,
-        "columns_mobile": "2"
+        "columns_mobile": "2",
+        "title_size_desktop": 40,
+        "title_size_mobile": 28,
+        "card_heading_size_desktop": 22,
+        "card_heading_size_mobile": 18,
+        "card_caption_size_desktop": 16,
+        "card_caption_size_mobile": 14,
+        "padding_top": 36,
+        "padding_bottom": 60,
+        "padding_top_mobile": 28,
+        "padding_bottom_mobile": 28
       }
     },
     "newsletter": {
@@ -45,6 +55,7 @@
         "paragraph",
         "email-form"
       ],
+      "disabled": true,
       "settings": {
         "button_type": "solid",
         "button_label": "Sign up",
