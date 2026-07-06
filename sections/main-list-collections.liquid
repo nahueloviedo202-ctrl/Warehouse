@@ -1,7 +1,45 @@
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'section-collection-list.css' | asset_url | stylesheet_tag }}
 
-<div class="page-width">
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top_mobile }}px;
+    padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+  }
+
+  .section-{{ section.id }}-padding .title {
+    font-size: {{ section.settings.title_size_mobile }}px;
+  }
+
+  .section-{{ section.id }}-padding .card__heading {
+    font-size: {{ section.settings.card_heading_size_mobile }}px;
+  }
+
+  .section-{{ section.id }}-padding .card__caption {
+    font-size: {{ section.settings.card_caption_size_mobile }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+
+    .section-{{ section.id }}-padding .title {
+      font-size: {{ section.settings.title_size_desktop }}px;
+    }
+
+    .section-{{ section.id }}-padding .card__heading {
+      font-size: {{ section.settings.card_heading_size_desktop }}px;
+    }
+
+    .section-{{ section.id }}-padding .card__caption {
+      font-size: {{ section.settings.card_caption_size_desktop }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="page-width section-{{ section.id }}-padding">
   <h1 class="title title--primary">{{ section.settings.title | escape }}</h1>
   {%- liquid
     case section.settings.sort
@@ -131,6 +169,126 @@
       ],
       "default": "2",
       "label": "t:sections.main-list-collections.settings.columns_mobile.label"
+    },
+    {
+      "type": "header",
+      "content": "Tipografía — título de la sección"
+    },
+    {
+      "type": "range",
+      "id": "title_size_desktop",
+      "min": 24,
+      "max": 80,
+      "step": 2,
+      "unit": "px",
+      "label": "Tamaño de fuente — escritorio",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "title_size_mobile",
+      "min": 16,
+      "max": 56,
+      "step": 2,
+      "unit": "px",
+      "label": "Tamaño de fuente — móvil",
+      "default": 28
+    },
+    {
+      "type": "header",
+      "content": "Tipografía — nombre de colección"
+    },
+    {
+      "type": "range",
+      "id": "card_heading_size_desktop",
+      "min": 12,
+      "max": 48,
+      "step": 1,
+      "unit": "px",
+      "label": "Tamaño de fuente — escritorio",
+      "default": 22
+    },
+    {
+      "type": "range",
+      "id": "card_heading_size_mobile",
+      "min": 10,
+      "max": 36,
+      "step": 1,
+      "unit": "px",
+      "label": "Tamaño de fuente — móvil",
+      "default": 18
+    },
+    {
+      "type": "header",
+      "content": "Tipografía — descripción de colección"
+    },
+    {
+      "type": "range",
+      "id": "card_caption_size_desktop",
+      "min": 10,
+      "max": 32,
+      "step": 1,
+      "unit": "px",
+      "label": "Tamaño de fuente — escritorio",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "card_caption_size_mobile",
+      "min": 10,
+      "max": 28,
+      "step": 1,
+      "unit": "px",
+      "label": "Tamaño de fuente — móvil",
+      "default": 14
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading_desktop"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading_mobile"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top_mobile",
+      "default": 28
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom_mobile",
+      "default": 28
     }
   ]
 }
