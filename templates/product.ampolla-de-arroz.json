@@ -809,7 +809,7 @@
             "text_font_size_desktop": 16,
             "text_font_size_mobile": 15,
             "text_font_weight": "400",
-            "feature_heading_color": "#2a1f3d",
+            "feature_heading_color": "#000000",
             "feature_heading_font_size_desktop": 20,
             "feature_heading_font_size_mobile": 16,
             "feature_heading_font_weight": "700",
