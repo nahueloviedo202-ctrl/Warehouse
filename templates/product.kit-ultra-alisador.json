@@ -92,8 +92,8 @@
             "divider_thickness": 1,
             "divider_color": "#000000",
             "divider_opacity": 100,
-            "divider_margin_top_desktop": 12,
-            "divider_margin_bottom_desktop": 12,
+            "divider_margin_top_desktop": 0,
+            "divider_margin_bottom_desktop": 0,
             "divider_margin_top_mobile": 8,
             "divider_margin_bottom_mobile": 8,
             "center_on_mobile": false
@@ -362,6 +362,7 @@
         "video_carousel_gUmwA4",
         "149aabfb-9fd8-4472-a633-6032dbe01ed0"
       ],
+      "custom_css": [],
       "settings": {
         "enable_sticky_info": true,
         "media_size": "medium",
