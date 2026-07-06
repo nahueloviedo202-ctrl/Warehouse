@@ -583,7 +583,7 @@
         "badge_icon_svg_color": "#b07caf",
         "text_alignment": "facing-center",
         "padding_top": 60,
-        "padding_bottom": 60,
+        "padding_bottom": 40,
         "padding_top_mobile": 40,
         "padding_bottom_mobile": 40
       }
@@ -660,7 +660,7 @@
         "border_radius": 30,
         "border_radius_mobile": 20,
         "color_scheme": "background-1",
-        "padding_top": 40,
+        "padding_top": 60,
         "padding_bottom": 40,
         "padding_top_mobile": 16,
         "padding_bottom_mobile": 28
@@ -834,8 +834,8 @@
         "columns_desktop": 3,
         "columns_mobile": "1",
         "swipe_on_mobile": true,
-        "padding_top": 40,
-        "padding_bottom": 60,
+        "padding_top": 60,
+        "padding_bottom": 40,
         "padding_top_mobile": 20,
         "padding_bottom_mobile": 20
       }
@@ -908,8 +908,8 @@
         "layout_gap_desktop": 60,
         "layout_gap_mobile": 8,
         "bg_color": "#ffffff",
-        "padding_top": 40,
-        "padding_bottom": 60,
+        "padding_top": 60,
+        "padding_bottom": 40,
         "padding_top_mobile": 20,
         "padding_bottom_mobile": 40
       }
@@ -1080,8 +1080,8 @@
         "item_radius": 12,
         "item_spacing": 12,
         "open_first_question": false,
-        "padding_top": 40,
-        "padding_bottom": 60,
+        "padding_top": 60,
+        "padding_bottom": 40,
         "padding_top_mobile": 20,
         "padding_bottom_mobile": 40
       }
