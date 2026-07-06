@@ -492,9 +492,9 @@
           "type": "feature",
           "settings": {
             "position": "left",
-            "heading": "Brillo intenso y duradero",
-            "text": "<p>Fórmula ultra brillante de acabado glossy que no se siente pegajosa ni pesada sobre los labios.</p>",
-            "heading_color": "#DEDFA0",
+            "heading": "Efecto tensor visible",
+            "text": "<p>Su fórmula concentrada de Retinal reafirma la piel desde la primera aplicación, sin irritar ni generar sensación de ardor.<br/><br/></p>",
+            "heading_color": "#CACB55",
             "heading_font_size_desktop": 16,
             "heading_font_size_mobile": 16,
             "heading_font_weight": "700",
@@ -508,9 +508,9 @@
           "type": "feature",
           "settings": {
             "position": "left",
-            "heading": " Nutre y repara",
-            "text": "<p>Mantecas de Karité y Cupuaçu, junto a extractos de frutas y vegetales, restauran labios secos o agrietados.</p>",
-            "heading_color": "#DEDFA0",
+            "heading": "Nutre y repara",
+            "text": "<p>Péptidos y Niacinamida trabajan en conjunto para restaurar la firmeza y elasticidad de la piel.</p>",
+            "heading_color": "#CACB55",
             "heading_font_size_desktop": 16,
             "heading_font_size_mobile": 14,
             "heading_font_weight": "700",
@@ -524,9 +524,9 @@
           "type": "feature",
           "settings": {
             "position": "right",
-            "heading": "Volumen visible al instante",
-            "text": "<p>El complejo Maxi Lip hincha los labios desde la primera aplicación, sin irritar ni generar sensación de ardor.</p>",
-            "heading_color": "#DEDFA0",
+            "heading": "Renovación celular acelerada",
+            "text": "<p>El Retinal actúa más rápido que el retinol clásico, mejorando visiblemente la textura de la piel desde las primeras semanas.</p>",
+            "heading_color": "#CACB55",
             "heading_font_size_desktop": 16,
             "heading_font_size_mobile": 14,
             "heading_font_weight": "700",
@@ -541,8 +541,8 @@
           "settings": {
             "position": "right",
             "heading": "Hidratación profunda",
-            "text": "<p>El ácido hialurónico retiene la humedad y mantiene los labios hidratados durante todo el día.</p>",
-            "heading_color": "#DEDFA0",
+            "text": "<p>El ácido hialurónico retiene la humedad y mantiene la piel hidratada durante todo el día.</p>",
+            "heading_color": "#CACB55",
             "heading_font_size_desktop": 16,
             "heading_font_size_mobile": 14,
             "heading_font_weight": "700",
@@ -565,7 +565,7 @@
       ],
       "name": "Por qué nos encanta",
       "settings": {
-        "heading": "Lo que lo hace único a Speak Love",
+        "heading": "Lo que lo hace único a Vita-A",
         "heading_size": "h2",
         "heading_italic": true,
         "heading_color": "#000000",
@@ -583,9 +583,9 @@
         "badge_icon_svg_color": "#d1816e",
         "text_alignment": "facing-center",
         "padding_top": 60,
-        "padding_bottom": 60,
+        "padding_bottom": 40,
         "padding_top_mobile": 40,
-        "padding_bottom_mobile": 40
+        "padding_bottom_mobile": 20
       }
     },
     "collage_6MLj8w": {
@@ -623,10 +623,10 @@
         "mobile_layout": "column",
         "card_styles": "product-card-wrapper",
         "color_scheme": "background-1",
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_top_mobile": 28,
-        "padding_bottom_mobile": 28
+        "padding_top": 60,
+        "padding_bottom": 40,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 20
       }
     },
     "product_highlight_kHfNT3": {
@@ -776,10 +776,10 @@
         "layout_gap_desktop": 60,
         "layout_gap_mobile": 8,
         "bg_color": "#ffffff",
-        "padding_top": 40,
-        "padding_bottom": 60,
-        "padding_top_mobile": 20,
-        "padding_bottom_mobile": 40
+        "padding_top": 60,
+        "padding_bottom": 40,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 20
       }
     },
     "review_slider_pmwAwt": {
@@ -831,7 +831,7 @@
         "subheading_font_size_desktop": 18,
         "subheading_font_size_mobile": 15,
         "subheading_font_weight": "500",
-        "card_background_color": "#DEDFA0",
+        "card_background_color": "#E7E7D7",
         "card_border_color": "#C5C727",
         "card_border_width": 1,
         "card_corner_radius": 16,
@@ -846,10 +846,10 @@
         "arrows_color": "#DEDFA0",
         "color_scheme": "background-1",
         "background_color": "#ffffff",
-        "padding_top": 40,
-        "padding_bottom": 60,
-        "padding_top_mobile": 20,
-        "padding_bottom_mobile": 40
+        "padding_top": 60,
+        "padding_bottom": 40,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 20
       }
     },
     "faq_accordion_m3GjeY": {
@@ -947,10 +947,10 @@
         "item_radius": 12,
         "item_spacing": 12,
         "open_first_question": false,
-        "padding_top": 40,
-        "padding_bottom": 60,
-        "padding_top_mobile": 20,
-        "padding_bottom_mobile": 40
+        "padding_top": 60,
+        "padding_bottom": 40,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 20
       }
     },
     "community_feed_dJB7VX": {
@@ -1044,7 +1044,7 @@
         "space_mobile": 12,
         "padding_top": 60,
         "padding_bottom": 40,
-        "padding_top_mobile": 20,
+        "padding_top_mobile": 40,
         "padding_bottom_mobile": 40
       }
     }
