@@ -16,6 +16,7 @@
       "blocks": {
         "link_list_JM3bmc": {
           "type": "link_list",
+          "disabled": true,
           "settings": {
             "heading": "Políticas",
             "menu": "politicas"
