@@ -991,8 +991,8 @@
         "question_giLkXQ": {
           "type": "question",
           "settings": {
-            "question": "¿Cuánto brillo y volumen ofrece Speak Love?",
-            "answer": "<p>Aporta un brillo intenso de acabado glossy junto con un efecto plumping visible gracias al complejo Maxi Lip, que hincha los labios desde la primera aplicación.</p>",
+            "question": "¿Cuánta suavidad y brillo ofrece el Kit Ultra Alisador?",
+            "answer": "<p>Restaura la suavidad y mejora la textura del cabello hasta un 37%, dejándolo con más brillo y manejable desde el primer uso.</p>",
             "question_color": "",
             "question_font_size_desktop": 16,
             "question_font_size_mobile": 15,
@@ -1006,8 +1006,8 @@
         "question_36wNwy": {
           "type": "question",
           "settings": {
-            "question": "¿Es apto para labios sensibles?",
-            "answer": "<p>Sí. Su fórmula vegana, libre de crueldad animal y sin gluten está pensada para no irritar, incluso en labios sensibles.</p>",
+            "question": "¿Es apto para cuero cabelludo sensible?",
+            "answer": "<p>Sí, su fórmula mejora el balance de hidratación del cuero cabelludo sin irritar.</p>",
             "question_color": "",
             "question_font_size_desktop": 16,
             "question_font_size_mobile": 15,
@@ -1021,8 +1021,8 @@
         "question_e4hhdC": {
           "type": "question",
           "settings": {
-            "question": "¿Sirve para labios secos o agrietados?",
-            "answer": "<p>Sí, las mantecas de Karité y Cupuaçu junto al ácido hialurónico nutren en profundidad y ayudan a restaurar labios secos o agrietados.</p>",
+            "question": "¿Sirve para cabello seco o encrespado?",
+            "answer": "<p>Sí, está formulado especialmente para nutrir e hidratar cabello seco, encrespado y grueso, previniendo la rotura.</p>",
             "question_color": "",
             "question_font_size_desktop": 16,
             "question_font_size_mobile": 15,
@@ -1036,8 +1036,8 @@
         "question_HKe6yp": {
           "type": "question",
           "settings": {
-            "question": "¿Cuál es la mejor manera de aplicar Speak Love?",
-            "answer": "<p>Aplicalo generosamente de forma directa sobre los labios para un brillo instantáneo y volumen visible. También podés usarlo sobre delineador y labial como potenciador de brillo.</p>",
+            "question": "¿Cuál es la mejor manera de aplicar el Kit Ultra Alisador?",
+            "answer": "<p>Usá el shampoo para limpiar, la mascarilla para nutrir en profundidad y el sérum para sellar la hidratación y controlar el frizz.</p>",
             "question_color": "",
             "question_font_size_desktop": 16,
             "question_font_size_mobile": 15,
