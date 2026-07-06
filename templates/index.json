@@ -144,7 +144,7 @@
         "button_font_size_desktop": 13,
         "button_font_size_mobile": 11,
         "columns_desktop": 4,
-        "columns_mobile": "1",
+        "columns_mobile": "2",
         "show_arrows": false,
         "arrows_color": "#111111",
         "show_counter": false,
