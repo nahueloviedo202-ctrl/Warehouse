@@ -343,6 +343,24 @@
         })
       </script>
     {% endif %}
-  
+    
+  <script>
+document.addEventListener('DOMContentLoaded', function () {
+  var priceBlock = document.querySelector('.product-page-price .price');
+  if (!priceBlock) return;
+  var hiddenRegular = priceBlock.querySelector('.price__regular .price-item--regular');
+  var visibleSale = priceBlock.querySelector('.price__sale .price-item--sale');
+  if (!hiddenRegular || !visibleSale) return;
+
+  var sync = function () {
+    if (hiddenRegular.textContent.trim() !== visibleSale.textContent.trim()) {
+      visibleSale.textContent = hiddenRegular.textContent;
+    }
+  };
+
+  new MutationObserver(sync).observe(hiddenRegular, { childList: true, characterData: true, subtree: true });
+  sync();
+});
+</script>
 </body>
 </html>
