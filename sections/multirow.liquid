@@ -46,6 +46,27 @@
 <div class="multirow section-{{ section.id }}-padding gradient color-{{ section.settings.section_color_scheme }}">
   <div class="multirow__inner page-width">
     {%- for block in section.blocks -%}
+      {%- style -%}
+        .block-{{ block.id }}-heading {
+          font-size: {{ block.settings.heading_font_size_mobile }}px;
+        }
+        .block-{{ block.id }}-text {
+          font-size: {{ block.settings.text_font_size_mobile }}px;
+        }
+        @media screen and (min-width: 750px) {
+          .block-{{ block.id }}-heading {
+            font-size: {{ block.settings.heading_font_size_desktop }}px;
+          }
+          .block-{{ block.id }}-text {
+            font-size: {{ block.settings.text_font_size_desktop }}px;
+          }
+        }
+        {%- if block.settings.button_border_color != blank -%}
+          .multirow-btn-{{ block.id }}::after {
+            box-shadow: none;
+          }
+        {%- endif -%}
+      {%- endstyle -%}
       <div
         class="image-with-text isolate{{ borders_class }}{{ corners_class }}{{ padding_class }}"
         {{ block.shopify_attributes }}
@@ -81,12 +102,12 @@
                 </p>
               {%- endif -%}
               {%- if block.settings.heading -%}
-                <h2 class="image-with-text__heading {{ section.settings.heading_size }} rte">
+                <h2 class="image-with-text__heading {{ section.settings.heading_size }} rte block-{{ block.id }}-heading">
                   {{ block.settings.heading }}
                 </h2>
               {%- endif -%}
               {%- if block.settings.text -%}
-                <div class="image-with-text__text rte {{ section.settings.text_style }}">{{ block.settings.text }}</div>
+                <div class="image-with-text__text rte {{ section.settings.text_style }} block-{{ block.id }}-text">{{ block.settings.text }}</div>
               {%- endif -%}
               {%- if block.settings.button_label != blank -%}
                 {%- liquid
@@ -96,12 +117,17 @@
                     assign bg_g = block.settings.button_background_color | color_extract: 'green'
                     assign bg_b = block.settings.button_background_color | color_extract: 'blue'
                     assign button_style_attr = button_style_attr | append: '--color-button: ' | append: bg_r | append: ', ' | append: bg_g | append: ', ' | append: bg_b | append: ';'
+                    assign button_style_attr = button_style_attr | append: 'background-color: ' | append: block.settings.button_background_color | append: ';'
+                  endif
+                  if block.settings.button_text_color != blank
+                    assign button_style_attr = button_style_attr | append: 'color: ' | append: block.settings.button_text_color | append: ';'
                   endif
                   if block.settings.button_border_color != blank
-                    assign border_r = block.settings.button_border_color | color_extract: 'red'
-                    assign border_g = block.settings.button_border_color | color_extract: 'green'
-                    assign border_b = block.settings.button_border_color | color_extract: 'blue'
-                    assign button_style_attr = button_style_attr | append: '--color-button-text: ' | append: border_r | append: ', ' | append: border_g | append: ', ' | append: border_b | append: ';'
+                    assign border_width = settings.buttons_border_thickness
+                    if border_width == blank or border_width == 0
+                      assign border_width = 2
+                    endif
+                    assign button_style_attr = button_style_attr | append: 'border: ' | append: border_width | append: 'px solid ' | append: block.settings.button_border_color | append: '; box-sizing: border-box;'
                   endif
                 -%}
                 <a
@@ -110,7 +136,7 @@
                   {% else %}
                     href="{{ block.settings.button_link }}"
                   {% endif %}
-                  class="button button--{{ section.settings.button_style }}"
+                  class="button button--{{ section.settings.button_style }} multirow-btn-{{ block.id }}"
                   {% if button_style_attr != blank %}
                     style="{{ button_style_attr }}"
                   {% endif %}
@@ -125,6 +151,22 @@
     {%- endfor -%}
   </div>
 </div>
+
+<script>
+  (function () {
+    var links = document.querySelectorAll('#shopify-section-{{ section.id }} a.button[href^="#"]');
+    links.forEach(function (link) {
+      link.addEventListener('click', function (event) {
+        var targetId = link.getAttribute('href').slice(1);
+        if (!targetId) return;
+        var target = document.getElementById(targetId);
+        if (!target) return;
+        event.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  })();
+</script>
 
 {% schema %}
 {
@@ -472,9 +514,61 @@
         },
         {
           "type": "color",
+          "id": "button_text_color",
+          "label": "Color de texto del botón"
+        },
+        {
+          "type": "color",
           "id": "button_border_color",
-          "label": "Color de borde del botón",
-          "info": "En botones de estilo contorno, este color también se aplica al texto."
+          "label": "Color de borde del botón"
+        },
+        {
+          "type": "header",
+          "content": "Tipografía — Título"
+        },
+        {
+          "type": "range",
+          "id": "heading_font_size_desktop",
+          "min": 10,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "label": "Tamaño escritorio (px)",
+          "default": 40
+        },
+        {
+          "type": "range",
+          "id": "heading_font_size_mobile",
+          "min": 10,
+          "max": 80,
+          "step": 1,
+          "unit": "px",
+          "label": "Tamaño móvil (px)",
+          "default": 24
+        },
+        {
+          "type": "header",
+          "content": "Tipografía — Texto"
+        },
+        {
+          "type": "range",
+          "id": "text_font_size_desktop",
+          "min": 10,
+          "max": 60,
+          "step": 1,
+          "unit": "px",
+          "label": "Tamaño escritorio (px)",
+          "default": 16
+        },
+        {
+          "type": "range",
+          "id": "text_font_size_mobile",
+          "min": 10,
+          "max": 50,
+          "step": 1,
+          "unit": "px",
+          "label": "Tamaño móvil (px)",
+          "default": 14
         }
       ]
     }
