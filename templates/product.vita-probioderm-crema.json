@@ -670,104 +670,12 @@
         "text_italic": true,
         "text_uppercase": true,
         "color_scheme": "background-1",
-        "custom_background_color": "#dae0e8",
+        "custom_background_color": "#E3DAE8",
         "custom_text_color": "#000000",
         "padding_top": 20,
         "padding_bottom": 20,
         "padding_top_mobile": 16,
         "padding_bottom_mobile": 16
-      }
-    },
-    "comparison_slider_NtzU6b": {
-      "type": "comparison-slider",
-      "blocks": {
-        "simple_image_QRL6bV": {
-          "type": "simple_image",
-          "settings": {
-            "image": "shopify://shop_images/761d7b430bfd473792f4dd333560dea0_tplv-fhlh96nyum-resize-webp_800_800.webp",
-            "image_alt": "",
-            "image_width": 530,
-            "image_height": 500,
-            "image_height_mobile": 330,
-            "object_fit": "cover",
-            "image_border_radius": 10
-          }
-        },
-        "text_content_4pHk8N": {
-          "type": "text_content",
-          "settings": {
-            "title": " Hecho para una mirada intensa y duradera",
-            "heading_size": "h2",
-            "heading_italic": true,
-            "accent_color_scheme": "accent-2",
-            "text": "",
-            "feature_1_heading": "Trazo preciso sin arrastrar.",
-            "feature_1_text": "<p>Su fórmula suave se desliza con facilidad sobre el párpado, logrando un trazo uniforme y preciso sin tirones ni saltos, apto para todo tipo de piel.</p>",
-            "feature_2_heading": "Resistente al agua, todo el día.",
-            "feature_2_text": "<p>Se mantiene intacto durante horas sin correrse ni desvanecerse, incluso con el roce, el calor o la humedad.</p>",
-            "circle_background_color": "#ccd1e4",
-            "icon_color": "#2b2b2b",
-            "label_color": "#000000",
-            "circle_size_desktop": 96,
-            "circle_size_mobile": 72,
-            "badge_1_icon": "eye",
-            "badge_1_label": "Aplicación suave",
-            "badge_2_icon": "shield",
-            "badge_2_label": "Resistente al agua",
-            "badge_3_icon": "none",
-            "badge_3_label": "",
-            "badge_4_icon": "none",
-            "badge_4_label": "",
-            "button_label": "Comprar ahora",
-            "link": "#informacion-producto",
-            "button_style_secondary": false,
-            "button_full_width": false,
-            "button_bg_color": "#000000",
-            "button_text_color": "#ffffff",
-            "button_border_color": "#000000",
-            "button_border_width": 0,
-            "button_border_radius": 0,
-            "button_font_size": 0,
-            "button_font_weight": "inherit",
-            "button_padding_v": 0,
-            "button_padding_h": 0,
-            "desktop_content_alignment": "left",
-            "mobile_content_alignment": "left",
-            "heading_color": "#000000",
-            "heading_font_size_desktop": 32,
-            "heading_font_size_mobile": 24,
-            "heading_font_weight": "600",
-            "text_color": "#000000",
-            "text_font_size_desktop": 16,
-            "text_font_size_mobile": 15,
-            "text_font_weight": "400",
-            "feature_heading_color": "#2a1f3d",
-            "feature_heading_font_size_desktop": 20,
-            "feature_heading_font_size_mobile": 16,
-            "feature_heading_font_weight": "700",
-            "feature_text_color": "",
-            "feature_text_font_size_desktop": 15,
-            "feature_text_font_size_mobile": 14,
-            "feature_text_font_weight": "400"
-          }
-        }
-      },
-      "block_order": [
-        "simple_image_QRL6bV",
-        "text_content_4pHk8N"
-      ],
-      "custom_css": [
-        "@media screen and (max-width: 749px) {.h2 {font-size: calc(var(--font-heading-scale) * 1.7rem); }}",
-        "@media screen and (max-width: 749px) {.section-comparison_slider_NtzU6b-padding {padding-top: 32px !important; padding-bottom: 32px !important; }}"
-      ],
-      "name": "Before & After slider",
-      "settings": {
-        "color_scheme": "background-1",
-        "background_color": "#ffffff",
-        "padding_top": 60,
-        "padding_bottom": 40,
-        "padding_top_mobile": 40,
-        "padding_bottom_mobile": 20
       }
     },
     "por_que_elegir_TgyBPB": {
@@ -776,7 +684,7 @@
         "row_idzmnH": {
           "type": "row",
           "settings": {
-            "feature": "Cobertura extrema desde la primera aplicación",
+            "feature": "Efecto lifting 3D desde la primera aplicación",
             "vita_has": true,
             "others_has": false
           }
@@ -784,7 +692,7 @@
         "row_gndAWN": {
           "type": "row",
           "settings": {
-            "feature": "Unifica el tono de la piel",
+            "feature": "Aumenta la firmeza y elasticidad de la piel",
             "vita_has": true,
             "others_has": false
           }
@@ -792,7 +700,7 @@
         "row_zh4xRW": {
           "type": "row",
           "settings": {
-            "feature": "Cubre vitiligo, cicatrices y tatuajes",
+            "feature": "Repara fibras elásticas dañadas",
             "vita_has": true,
             "others_has": false
           }
@@ -800,7 +708,7 @@
         "row_WAyUYD": {
           "type": "row",
           "settings": {
-            "feature": "No marca líneas de expresión",
+            "feature": "No deja sensación grasa",
             "vita_has": true,
             "others_has": false
           }
@@ -808,7 +716,7 @@
         "row_Y3nCwN": {
           "type": "row",
           "settings": {
-            "feature": "Resistente al agua y al roce",
+            "feature": "Refuerza la barrera cutánea",
             "vita_has": true,
             "others_has": false
           }
@@ -816,7 +724,7 @@
         "row_bdrTPM": {
           "type": "row",
           "settings": {
-            "feature": "Larga duración durante todo el día",
+            "feature": "Premiada por Olive Young 2024 y 2025",
             "vita_has": true,
             "others_has": false
           }
@@ -832,19 +740,19 @@
       ],
       "name": "¿Por qué elegir?",
       "settings": {
-        "title": "¿POR QUÉ ELEGIR Long Lasting Waterproof Eyeliner?",
+        "title": "¿POR QUÉ ELEGIR VITA PROBIODERM 3D LIFTING CREAM?",
         "title_transform": "uppercase",
         "title_color": "#000000",
         "title_weight": "600",
         "title_size_desktop": 36,
         "title_size_mobile": 24,
-        "product_image": "shopify://shop_images/Captura_de_pantalla_2026-07-02_200102.png",
+        "product_image": "shopify://shop_images/product2_d08a1fca-b2e7-4dfd-a751-5ef2e353adc7.webp",
         "product_img_size_desktop": 56,
         "product_img_size_mobile": 44,
         "vita_label": "",
         "others_label": "Otros",
         "table_max_width": 500,
-        "vita_bg_color": "#dae0e8",
+        "vita_bg_color": "#E3DAE8",
         "divider_color": "#444444",
         "icon_color": "#1a1a1a",
         "icon_size_desktop": 35,
@@ -854,80 +762,6 @@
         "row_size_mobile": 12,
         "color_scheme": "background-1",
         "bg_color": "",
-        "padding_top": 40,
-        "padding_bottom": 60,
-        "padding_top_mobile": 12,
-        "padding_bottom_mobile": 40
-      }
-    },
-    "tarjetas_beneficios_nPMNw7": {
-      "type": "tarjetas-beneficios",
-      "blocks": {
-        "card_Heg7zY": {
-          "type": "card",
-          "settings": {
-            "icon": "shopify://shop_images/eye-closed.svg",
-            "text": "Aplicación suave y precisa."
-          }
-        },
-        "card_KQKnfF": {
-          "type": "card",
-          "settings": {
-            "icon": "shopify://shop_images/sparkles.svg",
-            "text": "Apto para todo tipo de piel."
-          }
-        },
-        "card_E3TKbP": {
-          "type": "card",
-          "settings": {
-            "icon": "shopify://shop_images/droplets.svg",
-            "text": "Resistente al agua y al roce."
-          }
-        },
-        "card_VXdQ84": {
-          "type": "card",
-          "settings": {
-            "icon": "shopify://shop_images/shield-check.svg",
-            "text": "Larga duración durante todo el día."
-          }
-        }
-      },
-      "block_order": [
-        "card_Heg7zY",
-        "card_KQKnfF",
-        "card_E3TKbP",
-        "card_VXdQ84"
-      ],
-      "name": "Tarjetas de beneficios",
-      "settings": {
-        "subtitle": "Más que un delineador",
-        "subtitle_color": "#34264d",
-        "subtitle_size_desktop": 20,
-        "subtitle_size_mobile": 16,
-        "heading": " Definición que se siente natural en tu mirada",
-        "heading_color": "#000000",
-        "heading_size_desktop": 32,
-        "heading_size_mobile": 28,
-        "text_gap_desktop": 16,
-        "text_gap_mobile": 10,
-        "button_label": "QUIERO MI SET",
-        "button_url": "#informacion-producto",
-        "button_bg_color": "#000000",
-        "button_text_color": "#ffffff",
-        "button_radius": 100,
-        "button_font_size_desktop": 16,
-        "button_font_size_mobile": 14,
-        "card_bg_color": "#dae0e8",
-        "card_radius": 5,
-        "card_gap": 10,
-        "card_text_color": "#2b1b17",
-        "card_text_size_desktop": 14,
-        "card_text_size_mobile": 12,
-        "icon_size_desktop": 40,
-        "icon_size_mobile": 32,
-        "layout_gap_desktop": 60,
-        "layout_gap_mobile": 8,
-        "bg_color": "#ffffff",
         "padding_top": 40,
         "padding_bottom": 60,
         "padding_top_mobile": 12,
@@ -1020,8 +854,8 @@
         "benefit_EPWdb4": {
           "type": "benefit",
           "settings": {
-            "heading": "Fórmula resistente al agua",
-            "text": "<p>Diseñada para mantenerse intacta durante todo el día, sin correrse ni desvanecerse, incluso con el roce, el sudor o la humedad.</p>",
+            "heading": "Efecto lifting 3D",
+            "text": "<p>Su fórmula remodela el contorno facial con un masaje tipo \"corsé reafirmante\", ideal para mandíbula, papada y mejillas caídas.</p>",
             "heading_color": "#2a1f3d",
             "heading_font_size_desktop": 20,
             "heading_font_size_mobile": 17,
@@ -1035,8 +869,8 @@
         "benefit_qVhbeE": {
           "type": "benefit",
           "settings": {
-            "heading": "Aplicación suave y precisa",
-            "text": "<p>Su textura permite deslizar el trazo con facilidad, logrando líneas definidas sin tirones, apto para todo tipo de piel.</p>",
+            "heading": "Textura que se funde en la piel",
+            "text": "<p>Su consistencia tipo manteca se absorbe sin dejar sensación grasa, sellando la hidratación y el colágeno.</p>",
             "heading_color": "#2a1f3d",
             "heading_font_size_desktop": 20,
             "heading_font_size_mobile": 17,
@@ -1050,8 +884,8 @@
         "benefit_inTkiE": {
           "type": "benefit",
           "settings": {
-            "heading": "Set completo de 3 unidades",
-            "text": "<p>Incluye 3 delineadores para que siempre tengas uno a mano, ya sea para renovar tu look o tener un repuesto listo.</p>",
+            "heading": "Respaldada por los premios Olive Young",
+            "text": "<p>Ganadora de los Olive Young Awards 2024 y 2025 como la crema anti-edad #1 en Corea.</p>",
             "heading_color": "#2a1f3d",
             "heading_font_size_desktop": 20,
             "heading_font_size_mobile": 17,
@@ -1078,15 +912,15 @@
       ],
       "name": "Ingredientes destacados",
       "settings": {
-        "heading": "Hasta 12 horas de uso duradero",
+        "heading": "Firmeza visible que dura todo el día",
         "heading_size": "h2",
         "heading_italic": true,
         "heading_color": "#000000",
         "heading_font_size_desktop": 40,
         "heading_font_size_mobile": 40,
         "heading_font_weight": "600",
-        "backdrop_image": "shopify://shop_images/0ce41c3c451c47ef977bbb40e3d7e316_tplv-fhlh96nyum-resize-webp_800_800.webp",
-        "layout": "image_first",
+        "backdrop_image": "shopify://shop_images/product7.webp",
+        "layout": "text_first",
         "show_connector_lines": false,
         "line_color": "",
         "show_sparkle": false,
@@ -1108,28 +942,28 @@
           "type": "stat",
           "settings": {
             "number": "99%",
-            "description": "quedó satisfecho con la duración del delineador."
+            "description": "notó su piel más firme y elástica."
           }
         },
         "stat_4E34Y3": {
           "type": "stat",
           "settings": {
             "number": "96%",
-            "description": "notó que no se corría ni se desvanecía en todo el día."
+            "description": "vio reducidas las líneas de expresión."
           }
         },
         "stat_zV4CXf": {
           "type": "stat",
           "settings": {
             "number": "97%",
-            "description": "logró una aplicación fácil y precisa."
+            "description": "logró un contorno facial más definido."
           }
         },
         "stat_3K7ddL": {
           "type": "stat",
           "settings": {
             "number": "95%",
-            "description": "sintió mayor comodidad al usarlo."
+            "description": "sintió su piel más hidratada y renovada."
           }
         }
       },
@@ -1154,7 +988,7 @@
         "stat_text_size_desktop": 14,
         "stat_text_size_mobile": 12,
         "show_button": true,
-        "button_label": "QUIERO MI SET",
+        "button_label": "QUIERO MI CREMA LIFTING",
         "button_anchor": "informacion-producto",
         "button_url": "",
         "button_bg_color": "#000000",
@@ -1175,7 +1009,7 @@
         "review_TdEpgg": {
           "type": "review",
           "settings": {
-            "text": "Lo probé un día de lluvia y no se corrió nada. Se aplica facilísimo y el trazo queda parejo.",
+            "text": "La textura es increíble, se funde en la piel y no queda nada grasosa. Mi piel se siente más densa.",
             "avatar": "shopify://shop_images/default-ticker-5_1_1.png",
             "author": "María D.",
             "rating": 5
@@ -1184,7 +1018,7 @@
         "review_EccX6C": {
           "type": "review",
           "settings": {
-            "text": "Vienen 3 en el set así que siempre tengo uno de repuesto en la cartera. Dura todo el día sin retocar.",
+            "text": "En un mes noté mi rostro más firme, sobre todo en la mandíbula. Se nota el efecto lifting.",
             "avatar": "shopify://shop_images/default-ticker-5_1_2.png",
             "author": "Sofía P.",
             "rating": 5
@@ -1193,7 +1027,7 @@
         "review_VgTKBY": {
           "type": "review",
           "settings": {
-            "text": "Tengo la piel sensible en los párpados y no me irritó. Se desliza suave sin tironear.",
+            "text": "Tengo piel sensible y no me irritó para nada. Se siente hidratada todo el día.",
             "avatar": "shopify://shop_images/default-ticker-5_1.png",
             "author": "Camila M.",
             "rating": 5
@@ -1213,12 +1047,12 @@
         "heading_font_size_desktop": 36,
         "heading_font_size_mobile": 26,
         "heading_font_weight": "600",
-        "subheading": "Opiniones de quienes ya eligieron Vita Glow",
+        "subheading": " Opiniones de quienes ya eligieron VITA PROBIODERM",
         "subheading_color": "#2a1f3d",
         "subheading_font_size_desktop": 18,
         "subheading_font_size_mobile": 15,
         "subheading_font_weight": "500",
-        "card_background_color": "#dae0e8",
+        "card_background_color": "#E3DAE8",
         "card_border_color": "#9885bb",
         "card_border_width": 1,
         "card_corner_radius": 16,
@@ -1245,8 +1079,8 @@
         "question_giLkXQ": {
           "type": "question",
           "settings": {
-            "question": "¿Cuánto dura el delineador puesto?",
-            "answer": "<p>Su fórmula de larga duración se mantiene intacta durante todo el día sin necesidad de retoques.</p>",
+            "question": "¿Cada cuánto la puedo usar?",
+            "answer": "<p>Se recomienda uso diario, mañana y noche, después del sérum.</p>",
             "question_color": "",
             "question_font_size_desktop": 16,
             "question_font_size_mobile": 15,
@@ -1260,8 +1094,8 @@
         "question_36wNwy": {
           "type": "question",
           "settings": {
-            "question": "¿El producto es adecuado para pieles sensibles?",
-            "answer": "<p>Sí, está formulado para ser fácil de aplicar en todo tipo de piel.</p>",
+            "question": "¿Es apta para piel madura o seca-sensible?",
+            "answer": "<p>Sí, está formulada especialmente para este tipo de piel, aportando firmeza e hidratación profunda.</p>",
             "question_color": "",
             "question_font_size_desktop": 16,
             "question_font_size_mobile": 15,
@@ -1275,8 +1109,8 @@
         "question_e4hhdC": {
           "type": "question",
           "settings": {
-            "question": "¿Es resistente al agua?",
-            "answer": "<p>Sí, es a prueba de agua (waterproof), por lo que no se corre ni se desvanece con la humedad o el sudor.</p>",
+            "question": "¿En cuánto tiempo se ven resultados?",
+            "answer": "<p>La mayoría nota mejoras en firmeza y contorno facial a partir de las 4 semanas de uso constante.</p>",
             "question_color": "",
             "question_font_size_desktop": 16,
             "question_font_size_mobile": 15,
@@ -1290,8 +1124,8 @@
         "question_HKe6yp": {
           "type": "question",
           "settings": {
-            "question": "¿Cuál es la mejor manera de aplicarlo?",
-            "answer": "<p>Se desliza con suavidad sobre el párpado; para un trazo más preciso, aplícalo con pulso firme desde el lagrimal hacia afuera.</p>",
+            "question": "¿Cómo se aplica para potenciar el efecto lifting?",
+            "answer": "<p>Con el masaje en forma de V: levantando desde el mentón hacia las orejas, suavizando líneas de expresión y sellando con las palmas tibias.</p>",
             "question_color": "",
             "question_font_size_desktop": 16,
             "question_font_size_mobile": 15,
@@ -1305,8 +1139,8 @@
         "question_V76RRe": {
           "type": "question",
           "settings": {
-            "question": "¿Cuántas unidades incluye el set?",
-            "answer": "<p>El set incluye 3 delineadores, ideales para tener siempre uno de repuesto o compartir.</p>",
+            "question": "¿Puedo usarla junto a otros tratamientos anti-edad como retinol o vitamina C?",
+            "answer": "<p>Sí, se puede combinar sin problema; se recomienda aplicarla como último paso de la rutina para sellar la hidratación y los activos previos.</p>",
             "question_color": "",
             "question_font_size_desktop": 16,
             "question_font_size_mobile": 15,
@@ -1346,7 +1180,7 @@
         "color_scheme": "background-1",
         "accent_color_scheme": "accent-2",
         "background_color": "",
-        "item_background": "#dae0e8",
+        "item_background": "#E3DAE8",
         "item_radius": 12,
         "item_spacing": 12,
         "open_first_question": false,
@@ -1460,9 +1294,7 @@
     "64c96926-2c31-48fe-bd21-30941bc87822",
     "slideshow_HfVNww",
     "press_ticker_gTJiLE",
-    "comparison_slider_NtzU6b",
     "por_que_elegir_TgyBPB",
-    "tarjetas_beneficios_nPMNw7",
     "ingredient_spotlight_wmhrkr",
     "en_solo_4_semanas_n9tDXW",
     "review_slider_pmwAwt",
