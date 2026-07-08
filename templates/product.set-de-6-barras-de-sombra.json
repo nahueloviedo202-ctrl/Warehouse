@@ -302,6 +302,7 @@
         },
         "video_carousel_gUmwA4": {
           "type": "video_carousel",
+          "disabled": true,
           "settings": {
             "heading": "Verlo en acción",
             "heading_size": "h2",
@@ -405,199 +406,6 @@
         "padding_bottom_mobile": 28
       }
     },
-    "image_with_text_PV6B8F": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_exxGxG": {
-          "type": "heading",
-          "settings": {
-            "heading": "Base inteligente que hidrata, protege y perfecciona",
-            "heading_size": "h2",
-            "heading_color": "",
-            "heading_font_size_desktop": 36,
-            "heading_font_size_mobile": 26,
-            "heading_font_weight": "700"
-          }
-        },
-        "text_y3RkmP": {
-          "type": "text",
-          "settings": {
-            "text": "<p>InfiniteGlow es una base que se adapta al tono de tu piel de forma natural, evitando cortes o acabados artificiales. Ofrece hidratación duradera, protección solar y cobertura ligera sin obstruir los poros. Su fórmula vegana y respetuosa cuida incluso las pieles sensibles, manteniéndose intacta todo el día.</p>",
-            "text_style": "body",
-            "text_color": "",
-            "text_font_size_desktop": 16,
-            "text_font_size_mobile": 15,
-            "text_font_weight": "400"
-          }
-        }
-      },
-      "block_order": [
-        "heading_exxGxG",
-        "text_y3RkmP"
-      ],
-      "disabled": true,
-      "name": "t:sections.image-with-text.presets.name",
-      "settings": {
-        "image": "shopify://shop_images/infinte.webp",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "color_scheme": "background-1",
-        "section_color_scheme": "background-1",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_top_mobile": 28,
-        "padding_bottom_mobile": 28
-      }
-    },
-    "1dec15b6-e51f-4064-b412-acf7a98422ef": {
-      "type": "comparison-slider",
-      "disabled": true,
-      "custom_css": [],
-      "settings": {
-        "color_scheme": "background-1",
-        "background_color": "",
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_top_mobile": 28,
-        "padding_bottom_mobile": 28
-      }
-    },
-    "64c96926-2c31-48fe-bd21-30941bc87822": {
-      "type": "results",
-      "blocks": {
-        "template--18472096170313__64c96926-2c31-48fe-bd21-30941bc87822-16798646483bf89b52-0": {
-          "type": "row",
-          "settings": {
-            "percentage": 96,
-            "row_text": "<p>Quedó satisfecho con la calidad del producto</p>",
-            "row_text_color": "",
-            "row_text_font_size_desktop": 15,
-            "row_text_font_size_mobile": 14,
-            "row_text_font_weight": "400"
-          }
-        },
-        "template--18472096170313__64c96926-2c31-48fe-bd21-30941bc87822-16798646483bf89b52-1": {
-          "type": "row",
-          "settings": {
-            "percentage": 95,
-            "row_text": "<p>Sintió mayor confianza al ver resultados diarios</p>",
-            "row_text_color": "",
-            "row_text_font_size_desktop": 15,
-            "row_text_font_size_mobile": 14,
-            "row_text_font_weight": "400"
-          }
-        },
-        "template--18472096170313__64c96926-2c31-48fe-bd21-30941bc87822-16798646483bf89b52-2": {
-          "type": "row",
-          "settings": {
-            "percentage": 94,
-            "row_text": "<p>Notó su piel más suave y uniforme</p>",
-            "row_text_color": "",
-            "row_text_font_size_desktop": 15,
-            "row_text_font_size_mobile": 14,
-            "row_text_font_weight": "400"
-          }
-        }
-      },
-      "block_order": [
-        "template--18472096170313__64c96926-2c31-48fe-bd21-30941bc87822-16798646483bf89b52-0",
-        "template--18472096170313__64c96926-2c31-48fe-bd21-30941bc87822-16798646483bf89b52-1",
-        "template--18472096170313__64c96926-2c31-48fe-bd21-30941bc87822-16798646483bf89b52-2"
-      ],
-      "disabled": true,
-      "custom_css": [
-        "@media screen and (max-width: 749px) {.h2 {font-size: calc(var(--font-heading-scale) * 1.7rem); }}"
-      ],
-      "settings": {
-        "title": "Resultados",
-        "heading_size": "h2",
-        "heading_color": "",
-        "heading_font_size_desktop": 36,
-        "heading_font_size_mobile": 28,
-        "heading_font_weight": "700",
-        "text_color": "",
-        "text_font_size_desktop": 16,
-        "text_font_size_mobile": 15,
-        "text_font_weight": "400",
-        "text": "<p>Basado en los resultados de todos nuestros clientes</p>",
-        "color_scheme": "background-1",
-        "layout": "results_first",
-        "results_headline": "En tan solo 2 semanas..",
-        "results_headline_size": "h2",
-        "results_headline_alignment": "left",
-        "results_headline_color": "",
-        "results_headline_font_size_desktop": 28,
-        "results_headline_font_size_mobile": 22,
-        "results_headline_font_weight": "700",
-        "caption": "<p>Basado en los resultados de <strong>+2.000 clientes satisfechos ⭐️</strong></p>",
-        "button_label": "",
-        "link": "",
-        "button_style_secondary": false,
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_top_mobile": 28,
-        "padding_bottom_mobile": 28
-      }
-    },
-    "slideshow_HfVNww": {
-      "type": "slideshow",
-      "blocks": {
-        "slide_nAjccG": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/Foto_grupal_en_VitanuraLab.png",
-            "heading": "",
-            "heading_size": "h2",
-            "subheading": "Nuestro equipo de expertos velan siempre por tu salud y la de los tuyo.",
-            "button_label": "",
-            "link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": true,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "background-1",
-            "text_alignment_mobile": "center",
-            "heading_color": "",
-            "heading_font_size_desktop": 36,
-            "heading_font_size_mobile": 26,
-            "heading_font_weight": "700",
-            "subheading_color": "",
-            "subheading_font_size_desktop": 18,
-            "subheading_font_size_mobile": 15,
-            "subheading_font_weight": "400"
-          }
-        }
-      },
-      "block_order": [
-        "slide_nAjccG"
-      ],
-      "disabled": true,
-      "custom_css": [
-        "@media screen and (max-width: 749px) {.h2 {font-size: calc(var(--font-heading-scale) * 1.7rem); }}"
-      ],
-      "name": "t:sections.slideshow.presets.name",
-      "settings": {
-        "layout": "full_bleed",
-        "slide_height": "adapt_image",
-        "slider_visual": "counter",
-        "auto_rotate": false,
-        "change_slides_speed": 5,
-        "show_text_below": true,
-        "accessibility_info": "Slideshow about our brand",
-        "image_border_radius_desktop": 0,
-        "image_border_radius_mobile": 0,
-        "padding_top_desktop": 0,
-        "padding_bottom_desktop": 0,
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 0
-      }
-    },
     "press_ticker_gTJiLE": {
       "type": "press-ticker",
       "blocks": {
@@ -677,147 +485,177 @@
         "padding_bottom_mobile": 16
       }
     },
-    "why_we_love_it_3t7fT9": {
-      "type": "why-we-love-it",
+    "confia_en_vita_Lj8AiD": {
+      "type": "confia-en-vita",
       "blocks": {
-        "feature_TKe9aE": {
-          "type": "feature",
+        "slide_4mRCUH": {
+          "type": "slide",
           "settings": {
-            "position": "left",
-            "heading": "Cobertura media modulable",
-            "text": "<p>La textura cremosa se funde perfectamente con la piel.</p>",
-            "heading_color": "#d1816e",
-            "heading_font_size_desktop": 16,
-            "heading_font_size_mobile": 16,
-            "heading_font_weight": "700",
-            "text_color": "",
-            "text_font_size_desktop": 14,
-            "text_font_size_mobile": 14,
-            "text_font_weight": "400"
+            "video": "shopify://files/videos/download.mp4",
+            "autoplay": true,
+            "muted": true,
+            "loop": true,
+            "controls": false,
+            "preload": "metadata"
           }
         },
-        "feature_HyNcKQ": {
-          "type": "feature",
+        "slide_fywxar": {
+          "type": "slide",
           "settings": {
-            "position": "left",
-            "heading": "Hasta 12 horas de uso cómodo",
-            "text": "<p>Se siente ingrávido y la piel respirable.</p>",
-            "heading_color": "#d1816e",
-            "heading_font_size_desktop": 16,
-            "heading_font_size_mobile": 14,
-            "heading_font_weight": "700",
-            "text_color": "",
-            "text_font_size_desktop": 14,
-            "text_font_size_mobile": 12,
-            "text_font_weight": "400"
+            "video": "shopify://files/videos/download (2).mp4",
+            "autoplay": true,
+            "muted": true,
+            "loop": true,
+            "controls": false,
+            "preload": "metadata"
           }
         },
-        "feature_BmGDdQ": {
-          "type": "feature",
+        "slide_CbNBTC": {
+          "type": "slide",
           "settings": {
-            "position": "right",
-            "heading": "Natural, acabado satinado",
-            "text": "<p>No se apelmaza ni se arruga y es resistente al sudor, la humedad y el agua.</p>",
-            "heading_color": "#d1816e",
-            "heading_font_size_desktop": 16,
-            "heading_font_size_mobile": 14,
-            "heading_font_weight": "700",
-            "text_color": "",
-            "text_font_size_desktop": 15,
-            "text_font_size_mobile": 12,
-            "text_font_weight": "400"
+            "video": "shopify://files/videos/download (3).mp4",
+            "autoplay": true,
+            "muted": true,
+            "loop": true,
+            "controls": false,
+            "preload": "metadata"
           }
         },
-        "feature_GTkzQr": {
-          "type": "feature",
+        "slide_Ux94mq": {
+          "type": "slide",
           "settings": {
-            "position": "right",
-            "heading": "Hidratante y no comedogénico",
-            "text": "<p>No obstruye los poros, no se asienta en las líneas finas ni se adhiere a las zonas secas.</p>",
-            "heading_color": "#d1816e",
-            "heading_font_size_desktop": 16,
-            "heading_font_size_mobile": 14,
-            "heading_font_weight": "700",
-            "text_color": "",
-            "text_font_size_desktop": 14,
-            "text_font_size_mobile": 12,
-            "text_font_weight": "400"
-          }
-        },
-        "badge_PXkJ9W": {
-          "type": "badge",
-          "settings": {
-            "icon": "check_mark",
-            "label": "Probado por dermatólogos"
-          }
-        },
-        "badge_idaLKH": {
-          "type": "badge",
-          "settings": {
-            "icon": "leaf",
-            "label": "Fórmula transpirable"
-          }
-        },
-        "badge_QUwbUH": {
-          "type": "badge",
-          "settings": {
-            "icon": "heart",
-            "label": "Seguro para pieles sensibles"
-          }
-        },
-        "badge_48EGBr": {
-          "type": "badge",
-          "settings": {
-            "icon": "lock",
-            "label": "No comedogénico"
-          }
-        },
-        "badge_pzdxBr": {
-          "type": "badge",
-          "settings": {
-            "icon": "paw_print",
-            "label": "Vegano y libre de crueldad animal"
+            "autoplay": true,
+            "muted": true,
+            "loop": true,
+            "controls": false,
+            "preload": "metadata"
           }
         }
       },
       "block_order": [
-        "feature_TKe9aE",
-        "feature_HyNcKQ",
-        "feature_BmGDdQ",
-        "feature_GTkzQr",
-        "badge_PXkJ9W",
-        "badge_idaLKH",
-        "badge_QUwbUH",
-        "badge_48EGBr",
-        "badge_pzdxBr"
+        "slide_4mRCUH",
+        "slide_fywxar",
+        "slide_CbNBTC",
+        "slide_Ux94mq"
       ],
-      "custom_css": [
-        "@media screen and (max-width: 749px) {.h2 {font-size: calc(var(--font-heading-scale) * 1.7rem); }}",
-        "@media screen and (max-width: 749px) {.section-why_we_love_it_3t7fT9-padding {padding-top: 32px !important; padding-bottom: 32px !important; }}"
-      ],
-      "name": "Por qué nos encanta",
+      "name": "Confia en Vita",
       "settings": {
-        "heading": "Por qué nos encanta",
-        "heading_size": "h2",
-        "heading_italic": true,
+        "badge_text": "Miles de personas ya confían en Vita Cosmetics",
+        "badge_gradient_start": "#705239",
+        "badge_gradient_end": "#BC8A60",
+        "badge_gradient_angle": 92,
+        "badge_text_color": "#ffffff",
+        "badge_font_size_desktop": 14,
+        "badge_font_size_mobile": 10,
+        "heading": "Descubre por qué tantas personas la recomiendan",
         "heading_color": "#000000",
-        "heading_font_size_desktop": 32,
-        "heading_font_size_mobile": 24,
-        "heading_font_weight": "600",
-        "image": "shopify://shop_images/seccion.webp",
-        "circle_size_desktop": 380,
-        "circle_size_mobile": 220,
-        "color_scheme": "background-1",
-        "accent_color_scheme": "accent-2",
+        "heading_font_size_desktop": 36,
+        "heading_font_size_mobile": 28,
+        "heading_font_weight": "500",
+        "heading_font_weight_mobile": "600",
+        "aspect_ratio": "9/16",
+        "card_corner_radius": 5,
+        "cards_per_row_desktop": 3,
+        "cards_per_row_tablet": 2,
+        "cards_per_row_mobile": 1,
+        "card_gap": 15,
+        "show_arrows": true,
+        "arrows_color": "#705239",
         "background_color": "#ffffff",
-        "circle_border_color": "#d1816e",
-        "badge_icon_bg_color": "#f6f3f1",
-        "badge_icon_svg_color": "#d1816e",
-        "text_alignment": "facing-center",
         "padding_top": 60,
-        "padding_bottom": 60,
+        "padding_bottom": 40,
         "padding_top_mobile": 40,
-        "padding_bottom_mobile": 40
+        "padding_bottom_mobile": 20
+      }
+    },
+    "por_que_elegir_PKEw9B": {
+      "type": "por-que-elegir",
+      "blocks": {
+        "row_6frNLL": {
+          "type": "row",
+          "settings": {
+            "feature": "Aplicación sin necesidad de brocha",
+            "vita_has": true,
+            "others_has": false
+          }
+        },
+        "row_XTTHKj": {
+          "type": "row",
+          "settings": {
+            "feature": "Acabados perla, glitter y shimmer en una sola barra",
+            "vita_has": true,
+            "others_has": false
+          }
+        },
+        "row_TErWYT": {
+          "type": "row",
+          "settings": {
+            "feature": "Apto para todo tipo de piel",
+            "vita_has": true,
+            "others_has": false
+          }
+        },
+        "row_PfiKqT": {
+          "type": "row",
+          "settings": {
+            "feature": "Resistente al agua y al sudor",
+            "vita_has": true,
+            "others_has": false
+          }
+        },
+        "row_pyHVt7": {
+          "type": "row",
+          "settings": {
+            "feature": "12 tonos en 6 barras bicolor",
+            "vita_has": true,
+            "others_has": false
+          }
+        },
+        "row_EcHgzi": {
+          "type": "row",
+          "settings": {
+            "feature": "Larga duración durante todo el día",
+            "vita_has": true,
+            "others_has": false
+          }
+        }
+      },
+      "block_order": [
+        "row_6frNLL",
+        "row_XTTHKj",
+        "row_TErWYT",
+        "row_PfiKqT",
+        "row_pyHVt7",
+        "row_EcHgzi"
+      ],
+      "name": "¿Por qué elegir?",
+      "settings": {
+        "title": "POR QUÉ ELEGIR EL SET DE SOMBRAS EN BARRA WATERPROOF?",
+        "title_transform": "uppercase",
+        "title_color": "#000000",
+        "title_weight": "600",
+        "title_size_desktop": 36,
+        "title_size_mobile": 24,
+        "product_image": "shopify://shop_images/63aec5f70f6e4ae98db5ab5064888910_tplv-fhlh96nyum-origin-jpeg.jpg",
+        "product_img_size_desktop": 56,
+        "product_img_size_mobile": 44,
+        "vita_label": "",
+        "others_label": "Otros",
+        "table_max_width": 500,
+        "vita_bg_color": "#f1e9e3",
+        "divider_color": "#444444",
+        "icon_color": "#1a1a1a",
+        "icon_size_desktop": 35,
+        "icon_size_mobile": 28,
+        "row_color": "",
+        "row_size_desktop": 13,
+        "row_size_mobile": 12,
+        "color_scheme": "background-1",
+        "bg_color": "",
+        "padding_top": 60,
+        "padding_bottom": 40,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 20
       }
     },
     "review_slider_pmwAwt": {
@@ -856,6 +694,7 @@
         "review_EccX6C",
         "review_VgTKBY"
       ],
+      "disabled": true,
       "name": "Slider de reseñas",
       "settings": {
         "heading": "Cambios reales",
@@ -890,108 +729,13 @@
         "padding_bottom_mobile": 40
       }
     },
-    "feature_cards_rC7d6a": {
-      "type": "feature-cards",
-      "blocks": {
-        "card_7BU4fG": {
-          "type": "card",
-          "settings": {
-            "image": "shopify://shop_images/imgi_32_a4c82a4b-ceb4-4d83-a9fa-ca458193fcd7.webp",
-            "heading": "Se desliza sobre la textura",
-            "text": "<p>Cremoso al contacto, luego se derrite suavemente para un acabado de aspecto más suave.</p>",
-            "card_background_color": "#f6f3f1",
-            "heading_color": "#000000",
-            "heading_font_size_desktop": 20,
-            "heading_font_size_mobile": 17,
-            "heading_font_weight": "700",
-            "text_color": "",
-            "text_font_size_desktop": 15,
-            "text_font_size_mobile": 14,
-            "text_font_weight": "400"
-          }
-        },
-        "card_gpfMnF": {
-          "type": "card",
-          "settings": {
-            "image": "shopify://shop_images/Gemini_Generated_Image_3t0r723t0r723t0r.webp",
-            "heading": "Se funde con tu tono exacto",
-            "text": "<p>A medida que difuminas, los pigmentos se adaptan para un acabado perfecto, sin adivinar ni un cajón lleno de tonos.</p>",
-            "card_background_color": "#f6f3f1",
-            "heading_color": "#000000",
-            "heading_font_size_desktop": 20,
-            "heading_font_size_mobile": 17,
-            "heading_font_weight": "700",
-            "text_color": "",
-            "text_font_size_desktop": 15,
-            "text_font_size_mobile": 14,
-            "text_font_weight": "400"
-          }
-        },
-        "card_ULpaJD": {
-          "type": "card",
-          "settings": {
-            "image": "shopify://shop_images/Gemini_Generated_Image_4u29r94u29r94u29.webp",
-            "heading": "Hasta 12 horas de uso cómodo",
-            "text": "<p>Se siente ligero, luce natural, se mantiene en su lugar: cobertura fresca que nunca se asemeja a una mascarilla.</p>",
-            "card_background_color": "#f6f3f1",
-            "heading_color": "#000000",
-            "heading_font_size_desktop": 20,
-            "heading_font_size_mobile": 17,
-            "heading_font_weight": "700",
-            "text_color": "",
-            "text_font_size_desktop": 15,
-            "text_font_size_mobile": 14,
-            "text_font_weight": "400"
-          }
-        }
-      },
-      "block_order": [
-        "card_7BU4fG",
-        "card_gpfMnF",
-        "card_ULpaJD"
-      ],
-      "custom_css": [
-        "@media screen and (max-width: 749px) {.h2 {font-size: calc(var(--font-heading-scale) * 1.7rem); }}",
-        "@media screen and (max-width: 749px) {.section-feature_cards_rC7d6a-padding {padding-top: 32px !important; padding-bottom: 32px !important; }}"
-      ],
-      "name": "Tarjetas de beneficios",
-      "settings": {
-        "heading": "Base que trabaja contigo",
-        "heading_size": "h2",
-        "heading_italic": true,
-        "subheading": "<p>Una base ligera y transpirable que se adapta a <em>tu</em> tono sin dejar líneas.</p>",
-        "heading_color": "#000000",
-        "heading_font_size_desktop": 32,
-        "heading_font_size_mobile": 26,
-        "heading_font_weight": "600",
-        "subheading_color": "#9c796f",
-        "subheading_font_size_desktop": 18,
-        "subheading_font_size_mobile": 15,
-        "subheading_font_weight": "400",
-        "color_scheme": "background-1",
-        "card_color_scheme": "background-2",
-        "accent_color_scheme": "accent-2",
-        "background_color": "#ffffff",
-        "image_ratio": "square",
-        "card_corner_radius": 10,
-        "image_corner_radius": 14,
-        "card_padding": 24,
-        "columns_desktop": 3,
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "padding_top": 0,
-        "padding_bottom": 60,
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 32
-      }
-    },
     "comparison_slider_NtzU6b": {
       "type": "comparison-slider",
       "blocks": {
         "simple_image_QRL6bV": {
           "type": "simple_image",
           "settings": {
-            "image": "shopify://shop_images/mobile.webp",
+            "image": "shopify://shop_images/aa36033748d74ecab01f144ed1025e07_tplv-fhlh96nyum-origin-jpeg.jpg",
             "image_alt": "",
             "image_width": 530,
             "image_height": 500,
@@ -1003,24 +747,24 @@
         "text_content_4pHk8N": {
           "type": "text_content",
           "settings": {
-            "title": "Hecho para pieles maduras y hermosas",
+            "title": "Hecho para miradas brillantes y duraderas",
             "heading_size": "h2",
             "heading_italic": true,
             "accent_color_scheme": "accent-2",
             "text": "",
-            "feature_1_heading": "Suaviza la textura sin dejar líneas.",
-            "feature_1_text": "<p>Su fórmula ligera se adapta a la piel sin marcar arrugas ni líneas de expresión, dejando un acabado suave y uniforme.</p>",
-            "feature_2_heading": "Se adapta a tu tono exacto, al instante.",
-            "feature_2_text": "<p>Sus pigmentos inteligentes se adaptan a tu piel para lograr un tono uniforme y natural, sin acabados anaranjados.</p>",
+            "feature_1_heading": "Aplicación suave, sin arrastrar.",
+            "feature_1_text": "<p>Su fórmula cremosa se desliza directo sobre el párpado sin necesidad de brocha, logrando un degradé parejo con solo tus dedos.</p>",
+            "feature_2_heading": "Color intenso que resiste el día entero.",
+            "feature_2_text": "<p>Su fórmula waterproof resiste el agua y el sudor, manteniendo el brillo y el color intactos durante todo el día.</p>",
             "circle_background_color": "#e3d0c9",
             "icon_color": "#2b2b2b",
             "label_color": "#000000",
             "circle_size_desktop": 96,
             "circle_size_mobile": 72,
-            "badge_1_icon": "dermatologist",
-            "badge_1_label": "Fórmula hidratante",
-            "badge_2_icon": "skin_layers",
-            "badge_2_label": "Acabado satinado natural",
+            "badge_1_icon": "shield",
+            "badge_1_label": "Fórmula waterproof",
+            "badge_2_icon": "snowflake",
+            "badge_2_label": "Acabado perla, glitter y shimmer",
             "badge_3_icon": "none",
             "badge_3_label": "",
             "badge_4_icon": "none",
@@ -1072,245 +816,9 @@
         "color_scheme": "background-1",
         "background_color": "#f3f1f0",
         "padding_top": 60,
-        "padding_bottom": 60,
+        "padding_bottom": 40,
         "padding_top_mobile": 40,
-        "padding_bottom_mobile": 40
-      }
-    },
-    "ingredient_spotlight_wmhrkr": {
-      "type": "ingredient-spotlight",
-      "blocks": {
-        "ingredient_d8jUmn": {
-          "type": "ingredient",
-          "disabled": true,
-          "settings": {
-            "position": "top_left",
-            "icon": "hyaluronic_acid",
-            "title": "Ácido Hialurónico",
-            "text": "Hidratación profunda y rellena la piel",
-            "circle_bg_color": "",
-            "icon_color": "",
-            "title_color": "",
-            "title_font_size_desktop": 13,
-            "title_font_size_mobile": 12,
-            "title_font_weight": "700",
-            "text_color": "",
-            "text_font_size_desktop": 11,
-            "text_font_size_mobile": 11,
-            "text_font_weight": "400"
-          }
-        },
-        "ingredient_inxJyp": {
-          "type": "ingredient",
-          "disabled": true,
-          "settings": {
-            "position": "top_right",
-            "icon": "vitamin_e",
-            "title": "Vitamina E",
-            "text": "Nutre y protege contra el daño ambiental",
-            "circle_bg_color": "",
-            "icon_color": "",
-            "title_color": "",
-            "title_font_size_desktop": 13,
-            "title_font_size_mobile": 12,
-            "title_font_weight": "700",
-            "text_color": "",
-            "text_font_size_desktop": 11,
-            "text_font_size_mobile": 11,
-            "text_font_weight": "400"
-          }
-        },
-        "ingredient_wDMkfp": {
-          "type": "ingredient",
-          "disabled": true,
-          "settings": {
-            "position": "bottom_left",
-            "icon": "collagen",
-            "title": "Colágeno",
-            "text": "Mejora la elasticidad y firmeza",
-            "circle_bg_color": "",
-            "icon_color": "",
-            "title_color": "",
-            "title_font_size_desktop": 13,
-            "title_font_size_mobile": 12,
-            "title_font_weight": "700",
-            "text_color": "",
-            "text_font_size_desktop": 11,
-            "text_font_size_mobile": 11,
-            "text_font_weight": "400"
-          }
-        },
-        "ingredient_Rr49Fa": {
-          "type": "ingredient",
-          "disabled": true,
-          "settings": {
-            "position": "bottom_right",
-            "icon": "spf",
-            "title": "SPF 50",
-            "text": "Protección solar de amplio espectro contra UVA y UVB",
-            "circle_bg_color": "",
-            "icon_color": "",
-            "title_color": "",
-            "title_font_size_desktop": 13,
-            "title_font_size_mobile": 12,
-            "title_font_weight": "700",
-            "text_color": "",
-            "text_font_size_desktop": 11,
-            "text_font_size_mobile": 11,
-            "text_font_weight": "400"
-          }
-        },
-        "benefit_EPWdb4": {
-          "type": "benefit",
-          "settings": {
-            "heading": "Complejo antienvejecimiento avanzado de InfiniteLove",
-            "text": "<p>Un potente antioxidante que nutre la piel y la protege del daño ambiental y los signos del envejecimiento.</p>",
-            "heading_color": "#d1816e",
-            "heading_font_size_desktop": 20,
-            "heading_font_size_mobile": 17,
-            "heading_font_weight": "700",
-            "text_color": "",
-            "text_font_size_desktop": 15,
-            "text_font_size_mobile": 14,
-            "text_font_weight": "400"
-          }
-        },
-        "benefit_qVhbeE": {
-          "type": "benefit",
-          "settings": {
-            "heading": "Ácido hialurónico + colágeno",
-            "text": "<p>Este dúo actúa en profundidad para hidratar, mejorar la elasticidad y reducir la apariencia de líneas finas y arrugas.</p>",
-            "heading_color": "#d1816e",
-            "heading_font_size_desktop": 20,
-            "heading_font_size_mobile": 17,
-            "heading_font_weight": "700",
-            "text_color": "",
-            "text_font_size_desktop": 15,
-            "text_font_size_mobile": 14,
-            "text_font_weight": "400"
-          }
-        },
-        "benefit_inTkiE": {
-          "type": "benefit",
-          "settings": {
-            "heading": "Vitamina E",
-            "text": "<p>Una potente mezcla de 4 ingredientes clínicamente probados que hidratan profundamente, mejoran la firmeza y revelan una piel más luminosa y rejuvenecida.</p>",
-            "heading_color": "#d1816e",
-            "heading_font_size_desktop": 20,
-            "heading_font_size_mobile": 17,
-            "heading_font_weight": "700",
-            "text_color": "",
-            "text_font_size_desktop": 15,
-            "text_font_size_mobile": 14,
-            "text_font_weight": "400"
-          }
-        },
-        "badge_V9LQtq": {
-          "type": "badge",
-          "settings": {
-            "icon": "color_adapt",
-            "label": "Tecnología de adaptación de color",
-            "icon_bg_color": "#f6f3f1",
-            "icon_color": "#bc6161",
-            "label_color": "",
-            "label_font_size_desktop": 12,
-            "label_font_size_mobile": 11,
-            "label_font_weight": "400"
-          }
-        },
-        "badge_73xtjy": {
-          "type": "badge",
-          "settings": {
-            "icon": "anti_aging",
-            "label": "Complejo antienvejecimiento",
-            "icon_bg_color": "#f6f3f1",
-            "icon_color": "#bc6161",
-            "label_color": "",
-            "label_font_size_desktop": 12,
-            "label_font_size_mobile": 11,
-            "label_font_weight": "400"
-          }
-        }
-      },
-      "block_order": [
-        "ingredient_d8jUmn",
-        "ingredient_inxJyp",
-        "ingredient_wDMkfp",
-        "ingredient_Rr49Fa",
-        "benefit_EPWdb4",
-        "benefit_qVhbeE",
-        "benefit_inTkiE",
-        "badge_V9LQtq",
-        "badge_73xtjy"
-      ],
-      "custom_css": [
-        "@media screen and (max-width: 749px) {.h2 {font-size: calc(var(--font-heading-scale) * 1.7rem); }}",
-        "@media screen and (max-width: 749px) {.section-ingredient_spotlight_wmhrkr-padding {padding-top: 32px !important; padding-bottom: 32px !important; }}"
-      ],
-      "name": "Ingredientes destacados",
-      "settings": {
-        "heading": "Hasta 12 horas de uso cómodo",
-        "heading_size": "h2",
-        "heading_italic": true,
-        "heading_color": "#000000",
-        "heading_font_size_desktop": 40,
-        "heading_font_size_mobile": 40,
-        "heading_font_weight": "600",
-        "backdrop_image": "shopify://shop_images/producto.webp",
-        "layout": "image_first",
-        "show_connector_lines": false,
-        "line_color": "",
-        "show_sparkle": false,
-        "circle_size_desktop": 90,
-        "circle_size_mobile": 65,
-        "color_scheme": "background-1",
-        "accent_color_scheme": "accent-2",
-        "background_color": "",
-        "padding_top": 60,
-        "padding_bottom": 60,
-        "padding_top_mobile": 40,
-        "padding_bottom_mobile": 40
-      }
-    },
-    "featured_quote_Y4GLCm": {
-      "type": "featured-quote",
-      "blocks": {
-        "quote_yHag9T": {
-          "type": "quote",
-          "settings": {
-            "text": "Tenía dudas sobre si esto marcaría alguna diferencia en mi cutis. Puedo decir que es muy fácil de usar, no se acumula en las arrugas, sin duda mejora el aspecto de mi piel y, como tiene un FPS 50, es una auténtica revolución para una mujer de 70 años .",
-            "avatar": "shopify://shop_images/Gemini_Generated_Image_h3q9qph3q9qph3q9.webp",
-            "author": "Gisela Rodriguez"
-          }
-        }
-      },
-      "block_order": [
-        "quote_yHag9T"
-      ],
-      "custom_css": [
-        "@media screen and (max-width: 749px) {.section-featured_quote_Y4GLCm-padding {padding-top: 32px !important; padding-bottom: 32px !important; }}"
-      ],
-      "name": "Cita destacada",
-      "settings": {
-        "color_scheme": "background-1",
-        "background_color": "#f3f1f0",
-        "text_alignment": "center",
-        "quote_max_width": 800,
-        "quote_font_size": 24,
-        "quote_font_size_mobile": 18,
-        "quote_italic": true,
-        "quote_color": "#d1816e",
-        "quote_font_weight": "500",
-        "avatar_size": 80,
-        "avatar_border_width": 4,
-        "avatar_border_color": "#d1816e",
-        "author_color": "",
-        "author_font_size": 14,
-        "author_font_weight": "500",
-        "padding_top": 60,
-        "padding_bottom": 60,
-        "padding_top_mobile": 40,
-        "padding_bottom_mobile": 40
+        "padding_bottom_mobile": 20
       }
     },
     "faq_accordion_m3GjeY": {
@@ -1320,7 +828,7 @@
           "type": "question",
           "settings": {
             "question": "¿Cuánta cobertura ofrece la Base de Maquillaje?",
-            "answer": "<p>Ofrece una cobertura media modulable que se adapta a tu piel y se puede construir según tus necesidades.</p>",
+            "answer": "<p>No, podés aplicarlo directo sobre el párpado con el stick y difuminar con los dedos o una brocha si querés un efecto degradé.</p>",
             "question_color": "",
             "question_font_size_desktop": 16,
             "question_font_size_mobile": 15,
@@ -1334,8 +842,8 @@
         "question_36wNwy": {
           "type": "question",
           "settings": {
-            "question": "¿El producto es adecuado para pieles sensibles?",
-            "answer": "<p>Sí, está formulada para ser segura y respetuosa con pieles sensibles.</p>",
+            "question": "¿Es resistente al agua y al sudor?",
+            "answer": "<p>Sí, su fórmula waterproof está diseñada para durar todo el día sin correrse.</p>",
             "question_color": "",
             "question_font_size_desktop": 16,
             "question_font_size_mobile": 15,
@@ -1349,8 +857,8 @@
         "question_e4hhdC": {
           "type": "question",
           "settings": {
-            "question": "¿La base de maquillaje es adecuada para pieles con arrugas o líneas finas?",
-            "answer": "<p>Sí, su fórmula ligera no se asienta en las líneas finas ni acentúa las arrugas.</p>",
+            "question": "¿Sirve para todo tipo de piel?",
+            "answer": "<p>Sí, es apto para todo tipo de piel y pensado para uso diario.</p>",
             "question_color": "",
             "question_font_size_desktop": 16,
             "question_font_size_mobile": 15,
@@ -1364,8 +872,8 @@
         "question_HKe6yp": {
           "type": "question",
           "settings": {
-            "question": "¿Cuál es la mejor manera de aplicar la base?",
-            "answer": "<p>Aplica pequeñas cantidades con los dedos, una esponja o brocha, trabajando desde el centro del rostro hacia afuera.</p>",
+            "question": "¿Cuántos tonos incluye el set?",
+            "answer": "<p>Incluye 6 barras con 12 tonos en total, en combinaciones bicolor de perla, glitter y shimmer.</p>",
             "question_color": "",
             "question_font_size_desktop": 16,
             "question_font_size_mobile": 15,
@@ -1379,8 +887,8 @@
         "question_V76RRe": {
           "type": "question",
           "settings": {
-            "question": "¿Cómo adapta la base de maquillaje su color?",
-            "answer": "<p>Contiene pigmentos inteligentes que reaccionan con el pH de tu piel para adaptarse a tu tono natural.</p>",
+            "question": "¿Se puede usar en otras zonas además del párpado?",
+            "answer": "<p>Sí, también podés usarlo para iluminar pómulos, puente de la nariz y lagrimal, logrando un efecto 3D.</p>",
             "question_color": "",
             "question_font_size_desktop": 16,
             "question_font_size_mobile": 15,
@@ -1529,17 +1037,11 @@
   "order": [
     "main",
     "related-products",
-    "image_with_text_PV6B8F",
-    "1dec15b6-e51f-4064-b412-acf7a98422ef",
-    "64c96926-2c31-48fe-bd21-30941bc87822",
-    "slideshow_HfVNww",
     "press_ticker_gTJiLE",
-    "why_we_love_it_3t7fT9",
+    "confia_en_vita_Lj8AiD",
+    "por_que_elegir_PKEw9B",
     "review_slider_pmwAwt",
-    "feature_cards_rC7d6a",
     "comparison_slider_NtzU6b",
-    "ingredient_spotlight_wmhrkr",
-    "featured_quote_Y4GLCm",
     "faq_accordion_m3GjeY",
     "community_feed_dJB7VX"
   ]
