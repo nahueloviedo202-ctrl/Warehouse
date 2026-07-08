@@ -687,7 +687,7 @@
             "image": "shopify://shop_images/IMAGEN-LANDING-1.jpg",
             "caption": "COBERTURA Y DURACIÓN",
             "heading": "CORRECTOR DE COBERTURA MOLDEABLE CON ACABADO MATE SUAVE",
-            "text": "<p>¿Lista para un look definido y un acabado mate suave e impecable de larga duración? El corrector Wonder Snatch™ (aquí el tono Mocha) es tu arma secreta para disimular imperfecciones, definir y realzar tu rostro, ¡además de hidratarlo hasta por 24 horas! Su fórmula resistente al agua y a la decoloración garantiza que tu look se mantenga intacto. Y sí, estas son imágenes reales, sin retoques, que demuestran su increíble poder para transformar tu maquillaje.</p>",
+            "text": "<p>¿Lista para un look impecable y duradero? El corrector Wonder Snatch™ disimula imperfecciones, define y realza tu rostro, e hidrata hasta por 24 horas. Su fórmula waterproof y resistente a la decoloración mantiene el look intacto todo el día.<br/><br/></p>",
             "button_label": "QUIERO MI CORRECTOR",
             "button_link": "#informacion-producto",
             "button_background_color": "#000000",
@@ -860,7 +860,7 @@
         "review_TdEpgg": {
           "type": "review",
           "settings": {
-            "text": "El color queda hermoso y se siente súper cremoso, mis labios nunca estuvieron tan hidratados.",
+            "text": "Cubre todo sin sentirse pesado y dura horas sin retocar. Mi piel se ve hidratada todo el día.",
             "avatar": "shopify://shop_images/default-ticker-5_1_1.png",
             "author": "María D.",
             "rating": 5
@@ -878,7 +878,7 @@
         "review_VgTKBY": {
           "type": "review",
           "settings": {
-            "text": "El sabor a mora es adictivo y no queda nada pegajoso. Ya quiero los otros tonos.",
+            "text": "El acabado mate se ve increíble y no marca ninguna línea de expresión. Ya quiero otros tonos.",
             "avatar": "shopify://shop_images/default-ticker-5_1.png",
             "author": "Camila M.",
             "rating": 5
@@ -930,8 +930,8 @@
         "question_giLkXQ": {
           "type": "question",
           "settings": {
-            "question": "¿Es vegano y cruelty-free?",
-            "answer": "<p>Sí, es 100% vegano, cruelty-free y Fair Trade.<br/><br/></p>",
+            "question": "¿Cuánto tiempo dura sin necesidad de retocar?",
+            "answer": "<p>Hasta 24 horas, con fórmula resistente a la transferencia, el desgaste y las marcas de expresión.</p>",
             "question_color": "",
             "question_font_size_desktop": 16,
             "question_font_size_mobile": 15,
@@ -945,8 +945,8 @@
         "question_36wNwy": {
           "type": "question",
           "settings": {
-            "question": "¿Es un bálsamo tintado o un gloss?",
-            "answer": "<p>Es un bálsamo labial tintado: hidrata como un bálsamo pero deja un lavado de color difuminable con acabado brillante, como un gloss.</p>",
+            "question": "¿Es apto para todo tipo de piel?",
+            "answer": "<p>Sí, está disponible en 23 tonos para todos los tipos de piel y subtonos.</p>",
             "question_color": "",
             "question_font_size_desktop": 16,
             "question_font_size_mobile": 15,
@@ -960,8 +960,8 @@
         "question_e4hhdC": {
           "type": "question",
           "settings": {
-            "question": "¿Con qué frecuencia hay que reaplicar?",
-            "answer": "<p>Podés reaplicar cada vez que se te antoje, no tiene un límite de uso.</p>",
+            "question": "¿Reseca la piel con el uso?",
+            "answer": "<p>No, su fórmula hidrata hasta por 24 horas gracias al Guaraná, péptidos y Vitamina E.</p>",
             "question_color": "",
             "question_font_size_desktop": 16,
             "question_font_size_mobile": 15,
@@ -975,8 +975,8 @@
         "question_HKe6yp": {
           "type": "question",
           "settings": {
-            "question": "¿Hidrata efectivamente?",
-            "answer": "<p>Sí, gracias a su mezcla de mantecas y ácido hialurónico, deja los labios notablemente más suaves y nutridos.</p>",
+            "question": "¿Es resistente al agua?",
+            "answer": "<p>Sí, es waterproof y resistente a la decoloración, ideal para looks de larga duración.</p>",
             "question_color": "",
             "question_font_size_desktop": 16,
             "question_font_size_mobile": 15,
@@ -990,8 +990,8 @@
         "question_V76RRe": {
           "type": "question",
           "settings": {
-            "question": "¿Tiene sabor?",
-            "answer": "<p>Sí, viene con aroma y sabor a mora (blackberry).</p>",
+            "question": "¿Cómo lo aplico para un efecto lifting?",
+            "answer": "<p>Usá la punta del aplicador para iluminar ojeras, levantar pómulos y definir la mandíbula, difuminando después con una brocha o las yemas de los dedos.</p>",
             "question_color": "",
             "question_font_size_desktop": 16,
             "question_font_size_mobile": 15,
