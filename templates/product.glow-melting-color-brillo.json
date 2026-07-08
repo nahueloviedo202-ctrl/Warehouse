@@ -846,7 +846,7 @@
         "review_TdEpgg": {
           "type": "review",
           "settings": {
-            "text": "Cubre mis manchas y cicatrices como ningún otro producto que probé. Se ve totalmente natural.",
+            "text": "El color queda hermoso y se siente súper cremoso, mis labios nunca estuvieron tan hidratados.",
             "avatar": "shopify://shop_images/default-ticker-5_1_1.png",
             "author": "María D.",
             "rating": 5
@@ -864,7 +864,7 @@
         "review_VgTKBY": {
           "type": "review",
           "settings": {
-            "text": "Producto de muy buena calidad y atención impecable. Estoy muy conforme.",
+            "text": "El sabor a mora es adictivo y no queda nada pegajoso. Ya quiero los otros tonos.",
             "avatar": "shopify://shop_images/default-ticker-5_1.png",
             "author": "Camila M.",
             "rating": 5
@@ -884,7 +884,7 @@
         "heading_font_size_desktop": 36,
         "heading_font_size_mobile": 26,
         "heading_font_weight": "600",
-        "subheading": "Opiniones de quienes ya eligieron Vita Glow",
+        "subheading": "Opiniones de quienes ya eligieron Glow Melting",
         "subheading_color": "#165A9E",
         "subheading_font_size_desktop": 18,
         "subheading_font_size_mobile": 15,
