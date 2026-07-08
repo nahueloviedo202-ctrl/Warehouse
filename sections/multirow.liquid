@@ -89,6 +89,21 @@
                 <div class="image-with-text__text rte {{ section.settings.text_style }}">{{ block.settings.text }}</div>
               {%- endif -%}
               {%- if block.settings.button_label != blank -%}
+                {%- liquid
+                  assign button_style_attr = ''
+                  if block.settings.button_background_color != blank
+                    assign bg_r = block.settings.button_background_color | color_extract: 'red'
+                    assign bg_g = block.settings.button_background_color | color_extract: 'green'
+                    assign bg_b = block.settings.button_background_color | color_extract: 'blue'
+                    assign button_style_attr = button_style_attr | append: '--color-button: ' | append: bg_r | append: ', ' | append: bg_g | append: ', ' | append: bg_b | append: ';'
+                  endif
+                  if block.settings.button_border_color != blank
+                    assign border_r = block.settings.button_border_color | color_extract: 'red'
+                    assign border_g = block.settings.button_border_color | color_extract: 'green'
+                    assign border_b = block.settings.button_border_color | color_extract: 'blue'
+                    assign button_style_attr = button_style_attr | append: '--color-button-text: ' | append: border_r | append: ', ' | append: border_g | append: ', ' | append: border_b | append: ';'
+                  endif
+                -%}
                 <a
                   {% if block.settings.button_link == blank %}
                     role="link" aria-disabled="true"
@@ -96,6 +111,9 @@
                     href="{{ block.settings.button_link }}"
                   {% endif %}
                   class="button button--{{ section.settings.button_style }}"
+                  {% if button_style_attr != blank %}
+                    style="{{ button_style_attr }}"
+                  {% endif %}
                 >
                   {{ block.settings.button_label | escape }}
                 </a>
@@ -446,6 +464,17 @@
           "type": "url",
           "id": "button_link",
           "label": "t:sections.multirow.blocks.row.settings.button_link.label"
+        },
+        {
+          "type": "color",
+          "id": "button_background_color",
+          "label": "Color de fondo del botón"
+        },
+        {
+          "type": "color",
+          "id": "button_border_color",
+          "label": "Color de borde del botón",
+          "info": "En botones de estilo contorno, este color también se aplica al texto."
         }
       ]
     }
