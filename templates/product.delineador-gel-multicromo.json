@@ -715,28 +715,28 @@
           "type": "card",
           "settings": {
             "icon": "shopify://shop_images/sparkles.svg",
-            "text": "Efecto tensor desde la primera aplicación"
+            "text": "Se usa solo o para crear looks únicos"
           }
         },
         "card_gHtTwa": {
           "type": "card",
           "settings": {
             "icon": "shopify://shop_images/pencil.svg",
-            "text": "Se usa solo o combinado con tu rutina"
+            "text": "Efecto multicromo desde el primer trazo"
           }
         },
         "card_GK8wEG": {
           "type": "card",
           "settings": {
             "icon": "shopify://shop_images/droplets.svg",
-            "text": "Hidratación con Ácido Hialurónico"
+            "text": "Waterproof, resiste todo el día"
           }
         },
         "card_bEK8CV": {
           "type": "card",
           "settings": {
             "icon": "shopify://shop_images/badge-check.svg",
-            "text": "Renovación visible con Retinal"
+            "text": "Dimensión metálica con cada movimiento"
           }
         }
       },
@@ -748,17 +748,17 @@
       ],
       "name": "Tarjetas de beneficios",
       "settings": {
-        "subtitle": "Más que un booster",
+        "subtitle": "Más que un delineador",
         "subtitle_color": "#CE2AC4",
         "subtitle_size_desktop": 20,
         "subtitle_size_mobile": 16,
-        "heading": "Firmeza que se siente en tu piel",
+        "heading": "Color que se transforma en tu mirada",
         "heading_color": "#000000",
         "heading_size_desktop": 32,
         "heading_size_mobile": 28,
         "text_gap_desktop": 16,
         "text_gap_mobile": 10,
-        "button_label": " QUIERO MI RETINAL SHOT",
+        "button_label": "QUIERO MI TOURMALINE",
         "button_url": "#informacion-producto",
         "button_bg_color": "#000000",
         "button_text_color": "#ffffff",
