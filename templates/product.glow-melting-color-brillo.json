@@ -739,10 +739,105 @@
         "section_color_scheme": "background-1",
         "row_color_scheme": "background-1",
         "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36,
+        "padding_top": 60,
+        "padding_bottom": 40,
         "padding_top_mobile": 28,
         "padding_bottom_mobile": 28
+      }
+    },
+    "feature_cards_rC7d6a": {
+      "type": "feature-cards",
+      "blocks": {
+        "card_7BU4fG": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/assets_34401d5a4f21469a9be21fb9dc95e6a4_fe442f70f0df4570b7b45f11ea43512a.webp",
+            "heading": "Aplicá con la esponja o los dedos",
+            "text": "<p>Cremoso al contacto, se difumina suavemente logrando un acabado de aspecto más uniforme.</p>",
+            "card_background_color": "#F0F2F3",
+            "heading_color": "#000000",
+            "heading_font_size_desktop": 20,
+            "heading_font_size_mobile": 17,
+            "heading_font_weight": "700",
+            "text_color": "",
+            "text_font_size_desktop": 15,
+            "text_font_size_mobile": 14,
+            "text_font_weight": "400"
+          }
+        },
+        "card_gpfMnF": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/Gemini_Generated_Image_3t0r723t0r723t0r.webp",
+            "heading": " Difumina hasta fundirse con tu piel",
+            "text": "<p>A medida que masajeás, los pigmentos se adaptan a tu tono exacto, sin manchas ni cajón lleno de tonos que probar.</p>",
+            "card_background_color": "#F0F2F3",
+            "heading_color": "#000000",
+            "heading_font_size_desktop": 20,
+            "heading_font_size_mobile": 17,
+            "heading_font_weight": "700",
+            "text_color": "",
+            "text_font_size_desktop": 15,
+            "text_font_size_mobile": 14,
+            "text_font_weight": "400"
+          }
+        },
+        "card_ULpaJD": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/assets_34401d5a4f21469a9be21fb9dc95e6a4_b14a7504bd9f4122bee445e7a1abcbe1.webp",
+            "heading": "Disfrutá hasta 12 horas de cobertura",
+            "text": "<p>Se siente liviano, luce natural y se mantiene en su lugar: cobertura fresca que nunca se siente como una máscara.</p>",
+            "card_background_color": "#F0F2F3",
+            "heading_color": "#000000",
+            "heading_font_size_desktop": 20,
+            "heading_font_size_mobile": 17,
+            "heading_font_weight": "700",
+            "text_color": "",
+            "text_font_size_desktop": 15,
+            "text_font_size_mobile": 14,
+            "text_font_weight": "400"
+          }
+        }
+      },
+      "block_order": [
+        "card_7BU4fG",
+        "card_gpfMnF",
+        "card_ULpaJD"
+      ],
+      "custom_css": [
+        "@media screen and (max-width: 749px) {.h2 {font-size: calc(var(--font-heading-scale) * 1.7rem); }}",
+        "@media screen and (max-width: 749px) {.section-feature_cards_rC7d6a-padding {padding-top: 32px !important; padding-bottom: 32px !important; }}"
+      ],
+      "name": "Tarjetas de beneficios",
+      "settings": {
+        "heading": " Modo de uso que se adapta a vos",
+        "heading_size": "h2",
+        "heading_italic": true,
+        "subheading": "<p>Una aplicación simple y pareja, en solo 3 pasos.</p>",
+        "heading_color": "#000000",
+        "heading_font_size_desktop": 32,
+        "heading_font_size_mobile": 26,
+        "heading_font_weight": "600",
+        "subheading_color": "#165A9E",
+        "subheading_font_size_desktop": 18,
+        "subheading_font_size_mobile": 15,
+        "subheading_font_weight": "400",
+        "color_scheme": "background-1",
+        "card_color_scheme": "background-2",
+        "accent_color_scheme": "accent-2",
+        "background_color": "#ffffff",
+        "image_ratio": "square",
+        "card_corner_radius": 10,
+        "image_corner_radius": 14,
+        "card_padding": 24,
+        "columns_desktop": 3,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 0,
+        "padding_bottom": 60,
+        "padding_top_mobile": 60,
+        "padding_bottom_mobile": 40
       }
     },
     "review_slider_pmwAwt": {
@@ -790,12 +885,12 @@
         "heading_font_size_mobile": 26,
         "heading_font_weight": "600",
         "subheading": "Opiniones de quienes ya eligieron Vita Glow",
-        "subheading_color": "#9c796f",
+        "subheading_color": "#165A9E",
         "subheading_font_size_desktop": 18,
         "subheading_font_size_mobile": 15,
         "subheading_font_weight": "500",
-        "card_background_color": "#f6f3f1",
-        "card_border_color": "#d1816e",
+        "card_background_color": "#F0F2F3",
+        "card_border_color": "#165A9E",
         "card_border_width": 1,
         "card_corner_radius": 16,
         "text_color": "#2b2b2b",
@@ -813,101 +908,6 @@
         "padding_bottom": 60,
         "padding_top_mobile": 0,
         "padding_bottom_mobile": 40
-      }
-    },
-    "feature_cards_rC7d6a": {
-      "type": "feature-cards",
-      "blocks": {
-        "card_7BU4fG": {
-          "type": "card",
-          "settings": {
-            "image": "shopify://shop_images/imgi_32_a4c82a4b-ceb4-4d83-a9fa-ca458193fcd7.webp",
-            "heading": "Se desliza sobre la textura",
-            "text": "<p>Cremoso al contacto, luego se derrite suavemente para un acabado de aspecto más suave.</p>",
-            "card_background_color": "#f6f3f1",
-            "heading_color": "#000000",
-            "heading_font_size_desktop": 20,
-            "heading_font_size_mobile": 17,
-            "heading_font_weight": "700",
-            "text_color": "",
-            "text_font_size_desktop": 15,
-            "text_font_size_mobile": 14,
-            "text_font_weight": "400"
-          }
-        },
-        "card_gpfMnF": {
-          "type": "card",
-          "settings": {
-            "image": "shopify://shop_images/Gemini_Generated_Image_3t0r723t0r723t0r.webp",
-            "heading": "Se funde con tu tono exacto",
-            "text": "<p>A medida que difuminas, los pigmentos se adaptan para un acabado perfecto, sin adivinar ni un cajón lleno de tonos.</p>",
-            "card_background_color": "#f6f3f1",
-            "heading_color": "#000000",
-            "heading_font_size_desktop": 20,
-            "heading_font_size_mobile": 17,
-            "heading_font_weight": "700",
-            "text_color": "",
-            "text_font_size_desktop": 15,
-            "text_font_size_mobile": 14,
-            "text_font_weight": "400"
-          }
-        },
-        "card_ULpaJD": {
-          "type": "card",
-          "settings": {
-            "image": "shopify://shop_images/Gemini_Generated_Image_4u29r94u29r94u29.webp",
-            "heading": "Hasta 12 horas de uso cómodo",
-            "text": "<p>Se siente ligero, luce natural, se mantiene en su lugar: cobertura fresca que nunca se asemeja a una mascarilla.</p>",
-            "card_background_color": "#f6f3f1",
-            "heading_color": "#000000",
-            "heading_font_size_desktop": 20,
-            "heading_font_size_mobile": 17,
-            "heading_font_weight": "700",
-            "text_color": "",
-            "text_font_size_desktop": 15,
-            "text_font_size_mobile": 14,
-            "text_font_weight": "400"
-          }
-        }
-      },
-      "block_order": [
-        "card_7BU4fG",
-        "card_gpfMnF",
-        "card_ULpaJD"
-      ],
-      "custom_css": [
-        "@media screen and (max-width: 749px) {.h2 {font-size: calc(var(--font-heading-scale) * 1.7rem); }}",
-        "@media screen and (max-width: 749px) {.section-feature_cards_rC7d6a-padding {padding-top: 32px !important; padding-bottom: 32px !important; }}"
-      ],
-      "name": "Tarjetas de beneficios",
-      "settings": {
-        "heading": "Base que trabaja contigo",
-        "heading_size": "h2",
-        "heading_italic": true,
-        "subheading": "<p>Una base ligera y transpirable que se adapta a <em>tu</em> tono sin dejar líneas.</p>",
-        "heading_color": "#000000",
-        "heading_font_size_desktop": 32,
-        "heading_font_size_mobile": 26,
-        "heading_font_weight": "600",
-        "subheading_color": "#9c796f",
-        "subheading_font_size_desktop": 18,
-        "subheading_font_size_mobile": 15,
-        "subheading_font_weight": "400",
-        "color_scheme": "background-1",
-        "card_color_scheme": "background-2",
-        "accent_color_scheme": "accent-2",
-        "background_color": "#ffffff",
-        "image_ratio": "square",
-        "card_corner_radius": 10,
-        "image_corner_radius": 14,
-        "card_padding": 24,
-        "columns_desktop": 3,
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "padding_top": 0,
-        "padding_bottom": 60,
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 32
       }
     },
     "faq_accordion_m3GjeY": {
@@ -1017,7 +1017,7 @@
         "color_scheme": "background-1",
         "accent_color_scheme": "accent-2",
         "background_color": "",
-        "item_background": "#f3f1f0",
+        "item_background": "#F0F2F3",
         "item_radius": 12,
         "item_spacing": 12,
         "open_first_question": false,
@@ -1132,8 +1132,8 @@
     "slideshow_HfVNww",
     "press_ticker_gTJiLE",
     "multirow_Yq8wLK",
-    "review_slider_pmwAwt",
     "feature_cards_rC7d6a",
+    "review_slider_pmwAwt",
     "faq_accordion_m3GjeY",
     "community_feed_dJB7VX"
   ]
