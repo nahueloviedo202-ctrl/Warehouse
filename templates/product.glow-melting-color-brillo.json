@@ -741,8 +741,8 @@
         "mobile_content_alignment": "left",
         "padding_top": 60,
         "padding_bottom": 40,
-        "padding_top_mobile": 28,
-        "padding_bottom_mobile": 28
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 20
       }
     },
     "feature_cards_rC7d6a": {
@@ -768,7 +768,7 @@
         "card_gpfMnF": {
           "type": "card",
           "settings": {
-            "image": "shopify://shop_images/Gemini_Generated_Image_3t0r723t0r723t0r.webp",
+            "image": "shopify://shop_images/persona4.webp",
             "heading": " Difumina hasta fundirse con tu piel",
             "text": "<p>A medida que masajeás, los pigmentos se adaptan a tu tono exacto, sin manchas ni cajón lleno de tonos que probar.</p>",
             "card_background_color": "#F0F2F3",
@@ -834,10 +834,10 @@
         "columns_desktop": 3,
         "columns_mobile": "1",
         "swipe_on_mobile": true,
-        "padding_top": 0,
-        "padding_bottom": 60,
-        "padding_top_mobile": 60,
-        "padding_bottom_mobile": 40
+        "padding_top": 60,
+        "padding_bottom": 40,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 20
       }
     },
     "review_slider_pmwAwt": {
@@ -846,7 +846,7 @@
         "review_TdEpgg": {
           "type": "review",
           "settings": {
-            "text": "Lo empecé a usar hace unas semanas y ya noto una gran diferencia. Muy recomendable.",
+            "text": "Cubre mis manchas y cicatrices como ningún otro producto que probé. Se ve totalmente natural.",
             "avatar": "shopify://shop_images/default-ticker-5_1_1.png",
             "author": "María D.",
             "rating": 5
@@ -904,8 +904,8 @@
         "arrows_color": "#b5651d",
         "color_scheme": "background-1",
         "background_color": "#ffffff",
-        "padding_top": 0,
-        "padding_bottom": 60,
+        "padding_top": 60,
+        "padding_bottom": 40,
         "padding_top_mobile": 0,
         "padding_bottom_mobile": 40
       }
@@ -916,8 +916,8 @@
         "question_giLkXQ": {
           "type": "question",
           "settings": {
-            "question": "¿Cuánta cobertura ofrece la Base de Maquillaje?",
-            "answer": "<p>Ofrece una cobertura media modulable que se adapta a tu piel y se puede construir según tus necesidades.</p>",
+            "question": "¿Es vegano y cruelty-free?",
+            "answer": "<p>Sí, es 100% vegano, cruelty-free y Fair Trade.<br/><br/></p>",
             "question_color": "",
             "question_font_size_desktop": 16,
             "question_font_size_mobile": 15,
@@ -931,8 +931,8 @@
         "question_36wNwy": {
           "type": "question",
           "settings": {
-            "question": "¿El producto es adecuado para pieles sensibles?",
-            "answer": "<p>Sí, está formulada para ser segura y respetuosa con pieles sensibles.</p>",
+            "question": "¿Es un bálsamo tintado o un gloss?",
+            "answer": "<p>Es un bálsamo labial tintado: hidrata como un bálsamo pero deja un lavado de color difuminable con acabado brillante, como un gloss.</p>",
             "question_color": "",
             "question_font_size_desktop": 16,
             "question_font_size_mobile": 15,
@@ -946,8 +946,8 @@
         "question_e4hhdC": {
           "type": "question",
           "settings": {
-            "question": "¿La base de maquillaje es adecuada para pieles con arrugas o líneas finas?",
-            "answer": "<p>Sí, su fórmula ligera no se asienta en las líneas finas ni acentúa las arrugas.</p>",
+            "question": "¿Con qué frecuencia hay que reaplicar?",
+            "answer": "<p>Podés reaplicar cada vez que se te antoje, no tiene un límite de uso.</p>",
             "question_color": "",
             "question_font_size_desktop": 16,
             "question_font_size_mobile": 15,
@@ -961,8 +961,8 @@
         "question_HKe6yp": {
           "type": "question",
           "settings": {
-            "question": "¿Cuál es la mejor manera de aplicar la base?",
-            "answer": "<p>Aplica pequeñas cantidades con los dedos, una esponja o brocha, trabajando desde el centro del rostro hacia afuera.</p>",
+            "question": "¿Hidrata efectivamente?",
+            "answer": "<p>Sí, gracias a su mezcla de mantecas y ácido hialurónico, deja los labios notablemente más suaves y nutridos.</p>",
             "question_color": "",
             "question_font_size_desktop": 16,
             "question_font_size_mobile": 15,
@@ -976,8 +976,8 @@
         "question_V76RRe": {
           "type": "question",
           "settings": {
-            "question": "¿Cómo adapta la base de maquillaje su color?",
-            "answer": "<p>Contiene pigmentos inteligentes que reaccionan con el pH de tu piel para adaptarse a tu tono natural.</p>",
+            "question": "¿Tiene sabor?",
+            "answer": "<p>Sí, viene con aroma y sabor a mora (blackberry).</p>",
             "question_color": "",
             "question_font_size_desktop": 16,
             "question_font_size_mobile": 15,
@@ -1022,7 +1022,7 @@
         "item_spacing": 12,
         "open_first_question": false,
         "padding_top": 60,
-        "padding_bottom": 60,
+        "padding_bottom": 40,
         "padding_top_mobile": 40,
         "padding_bottom_mobile": 40
       }
