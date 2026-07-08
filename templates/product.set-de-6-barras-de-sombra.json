@@ -520,23 +520,12 @@
             "controls": false,
             "preload": "metadata"
           }
-        },
-        "slide_Ux94mq": {
-          "type": "slide",
-          "settings": {
-            "autoplay": true,
-            "muted": true,
-            "loop": true,
-            "controls": false,
-            "preload": "metadata"
-          }
         }
       },
       "block_order": [
         "slide_4mRCUH",
         "slide_fywxar",
-        "slide_CbNBTC",
-        "slide_Ux94mq"
+        "slide_CbNBTC"
       ],
       "name": "Confia en Vita",
       "settings": {
