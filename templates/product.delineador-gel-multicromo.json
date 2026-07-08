@@ -477,7 +477,7 @@
         "text_italic": true,
         "text_uppercase": true,
         "color_scheme": "background-1",
-        "custom_background_color": "#DEDFA0",
+        "custom_background_color": "#DFA0DB",
         "custom_text_color": "#000000",
         "padding_top": 20,
         "padding_bottom": 20,
@@ -492,9 +492,9 @@
           "type": "feature",
           "settings": {
             "position": "left",
-            "heading": "Efecto tensor visible",
-            "text": "<p>Su fórmula concentrada de Retinal reafirma la piel desde la primera aplicación, sin irritar ni generar sensación de ardor.<br/><br/></p>",
-            "heading_color": "#CACB55",
+            "heading": "Aplicación de un solo trazo",
+            "text": "<p>Se desliza sin esfuerzo y entrega un color intenso desde la primera pasada.<br/></p>",
+            "heading_color": "#CE2AC4",
             "heading_font_size_desktop": 16,
             "heading_font_size_mobile": 16,
             "heading_font_weight": "700",
@@ -508,9 +508,9 @@
           "type": "feature",
           "settings": {
             "position": "left",
-            "heading": "Nutre y repara",
-            "text": "<p>Péptidos y Niacinamida trabajan en conjunto para restaurar la firmeza y elasticidad de la piel.</p>",
-            "heading_color": "#CACB55",
+            "heading": "Waterproof y de larga duración",
+            "text": "<p>Se mantiene intacto todo el día, resistente al agua y al sudor.</p>",
+            "heading_color": "#CE2AC4",
             "heading_font_size_desktop": 16,
             "heading_font_size_mobile": 14,
             "heading_font_weight": "700",
@@ -524,9 +524,9 @@
           "type": "feature",
           "settings": {
             "position": "right",
-            "heading": "Renovación celular acelerada",
-            "text": "<p>El Retinal actúa más rápido que el retinol clásico, mejorando visiblemente la textura de la piel desde las primeras semanas.</p>",
-            "heading_color": "#CACB55",
+            "heading": "Efecto multicromo real ",
+            "text": "<p>Su fórmula en gel cambia de color con cada movimiento, de durazno a verde menta, sin necesidad de retoques.</p>",
+            "heading_color": "#CE2AC4",
             "heading_font_size_desktop": 16,
             "heading_font_size_mobile": 14,
             "heading_font_weight": "700",
@@ -540,9 +540,9 @@
           "type": "feature",
           "settings": {
             "position": "right",
-            "heading": "Hidratación profunda",
-            "text": "<p>El ácido hialurónico retiene la humedad y mantiene la piel hidratada durante todo el día.</p>",
-            "heading_color": "#CACB55",
+            "heading": "Dimensión metálica",
+            "text": "<p>Un efecto tridimensional que se transforma según la luz y el ángulo.</p>",
+            "heading_color": "#CE2AC4",
             "heading_font_size_desktop": 16,
             "heading_font_size_mobile": 14,
             "heading_font_weight": "700",
@@ -565,20 +565,20 @@
       ],
       "name": "Por qué nos encanta",
       "settings": {
-        "heading": "Lo que lo hace único a Vita-A",
+        "heading": "Lo que lo hace único al Delineador Tourmaline",
         "heading_size": "h2",
         "heading_italic": true,
         "heading_color": "#000000",
         "heading_font_size_desktop": 32,
         "heading_font_size_mobile": 24,
         "heading_font_weight": "600",
-        "image": "shopify://shop_images/Gemini_Generated_Image_rw7ui2rw7ui2rw7u.webp",
+        "image": "shopify://shop_images/product1_07e8cb57-4f99-4c39-9d58-fe002886c002.webp",
         "circle_size_desktop": 380,
         "circle_size_mobile": 220,
         "color_scheme": "background-1",
         "accent_color_scheme": "accent-2",
         "background_color": "#ffffff",
-        "circle_border_color": "#CACB55",
+        "circle_border_color": "#DFA0DB",
         "badge_icon_bg_color": "#f6f3f1",
         "badge_icon_svg_color": "#d1816e",
         "text_alignment": "facing-center",
@@ -591,28 +591,28 @@
     "collage_6MLj8w": {
       "type": "collage",
       "blocks": {
+        "image_FPAtTW": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/product6_75281b9c-4abc-4215-9c38-901dd4cec414.webp"
+          }
+        },
         "image_8hwREi": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/1749542832953_14fcc76aefa941e3bb1c5689a203e524.webp"
-          }
-        },
-        "image_fg87nw": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/product4_940c922c-563b-4387-be7c-0a25e0ccfc31.webp"
+            "image": "shopify://shop_images/L01-3.2_9b15f89d-397e-4ef0-813d-3fac14d1cbaa.webp"
           }
         },
         "image_ticCNT": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/1749542830781_7cc29feb8d924c19b6eb34af4b2ed530.webp"
+            "image": "shopify://shop_images/L01-3.webp"
           }
         }
       },
       "block_order": [
+        "image_FPAtTW",
         "image_8hwREi",
-        "image_fg87nw",
         "image_ticCNT"
       ],
       "name": "t:sections.collage.presets.name",
@@ -749,7 +749,7 @@
       "name": "Tarjetas de beneficios",
       "settings": {
         "subtitle": "Más que un booster",
-        "subtitle_color": "#CACB55",
+        "subtitle_color": "#CE2AC4",
         "subtitle_size_desktop": 20,
         "subtitle_size_mobile": 16,
         "heading": "Firmeza que se siente en tu piel",
@@ -765,7 +765,7 @@
         "button_radius": 100,
         "button_font_size_desktop": 16,
         "button_font_size_mobile": 14,
-        "card_bg_color": "#DEDFA0",
+        "card_bg_color": "#DFA0DB",
         "card_radius": 5,
         "card_gap": 10,
         "card_text_color": "#2b1b17",
@@ -827,12 +827,12 @@
         "heading_font_size_mobile": 26,
         "heading_font_weight": "600",
         "subheading": " Opiniones de quienes ya eligieron Vita-A",
-        "subheading_color": "#CACB55",
+        "subheading_color": "#CE2AC4",
         "subheading_font_size_desktop": 18,
         "subheading_font_size_mobile": 15,
         "subheading_font_weight": "500",
-        "card_background_color": "#EDEDE6",
-        "card_border_color": "#C5C727",
+        "card_background_color": "#EEE8EE",
+        "card_border_color": "#DFA0DB",
         "card_border_width": 1,
         "card_corner_radius": 16,
         "text_color": "#2b2b2b",
@@ -843,7 +843,7 @@
         "cards_per_row_mobile": 1,
         "card_gap": 24,
         "show_arrows": false,
-        "arrows_color": "#DEDFA0",
+        "arrows_color": "#dedfa0",
         "color_scheme": "background-1",
         "background_color": "#ffffff",
         "padding_top": 60,
@@ -943,7 +943,7 @@
         "color_scheme": "background-1",
         "accent_color_scheme": "accent-2",
         "background_color": "",
-        "item_background": "#DEDFA0",
+        "item_background": "#DFA0DB",
         "item_radius": 12,
         "item_spacing": 12,
         "open_first_question": false,
