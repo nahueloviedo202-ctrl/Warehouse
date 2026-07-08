@@ -724,7 +724,7 @@
       ],
       "name": "t:sections.multirow.presets.name",
       "settings": {
-        "image_height": "large",
+        "image_height": "medium",
         "desktop_image_width": "medium",
         "heading_size": "h1",
         "text_style": "body",
@@ -851,7 +851,7 @@
         "padding_top": 60,
         "padding_bottom": 40,
         "padding_top_mobile": 40,
-        "padding_bottom_mobile": 20
+        "padding_bottom_mobile": 0
       }
     },
     "review_slider_pmwAwt": {
@@ -920,8 +920,8 @@
         "background_color": "#ffffff",
         "padding_top": 60,
         "padding_bottom": 40,
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 40
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 20
       }
     },
     "faq_accordion_m3GjeY": {
