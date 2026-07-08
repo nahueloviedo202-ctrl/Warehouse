@@ -762,10 +762,10 @@
         "row_size_mobile": 12,
         "color_scheme": "background-1",
         "bg_color": "",
-        "padding_top": 40,
-        "padding_bottom": 60,
-        "padding_top_mobile": 12,
-        "padding_bottom_mobile": 40
+        "padding_top": 60,
+        "padding_bottom": 40,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 20
       }
     },
     "ingredient_spotlight_wmhrkr": {
@@ -929,9 +929,9 @@
         "color_scheme": "background-1",
         "accent_color_scheme": "accent-2",
         "background_color": "",
-        "padding_top": 40,
-        "padding_bottom": 60,
-        "padding_top_mobile": 12,
+        "padding_top": 60,
+        "padding_bottom": 40,
+        "padding_top_mobile": 40,
         "padding_bottom_mobile": 20
       }
     },
@@ -997,10 +997,10 @@
         "button_text_size_mobile": 14,
         "color_scheme": "background-1",
         "bg_color": "#ffffff",
-        "padding_top": 40,
-        "padding_bottom": 60,
-        "padding_top_mobile": 12,
-        "padding_bottom_mobile": 40
+        "padding_top": 60,
+        "padding_bottom": 40,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 20
       }
     },
     "review_slider_pmwAwt": {
@@ -1067,10 +1067,10 @@
         "arrows_color": "#2a1f3d",
         "color_scheme": "background-1",
         "background_color": "#ffffff",
-        "padding_top": 40,
-        "padding_bottom": 60,
-        "padding_top_mobile": 12,
-        "padding_bottom_mobile": 40
+        "padding_top": 60,
+        "padding_bottom": 40,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 20
       }
     },
     "faq_accordion_m3GjeY": {
@@ -1184,10 +1184,10 @@
         "item_radius": 12,
         "item_spacing": 12,
         "open_first_question": false,
-        "padding_top": 40,
-        "padding_bottom": 60,
-        "padding_top_mobile": 12,
-        "padding_bottom_mobile": 40
+        "padding_top": 60,
+        "padding_bottom": 40,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 20
       }
     },
     "community_feed_dJB7VX": {
@@ -1279,10 +1279,10 @@
         "space_tablet": 16,
         "slides_mobile": 1.4,
         "space_mobile": 12,
-        "padding_top": 40,
+        "padding_top": 60,
         "padding_bottom": 40,
-        "padding_top_mobile": 20,
-        "padding_bottom_mobile": 40
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 20
       }
     }
   },
