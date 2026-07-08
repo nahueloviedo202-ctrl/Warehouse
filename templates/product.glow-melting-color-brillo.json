@@ -684,7 +684,7 @@
         "row_LJPAUN": {
           "type": "row",
           "settings": {
-            "image": "shopify://shop_images/020326-Yacine_GRLB_BlueRazz-Application-1668_FINAL_IGF.webp",
+            "image": "shopify://shop_images/persona2.webp",
             "caption": " COLOR Y BRILLO",
             "heading": "Un beso de color",
             "text": "<p>Un lavado de color cereza negra difuminable con un acabado ultra brillante, para labios que se ven jugosos todo el día.</p>",
@@ -702,7 +702,7 @@
             "heading": "Se derrite en tus labios",
             "text": "<p>Formulado con 10% de mantecas (karité, mango y cacao) más ácido hialurónico, hidrata en profundidad dejando los labios suaves y flexibles.<br/><br/></p>",
             "button_label": "QUIERO MI BALSAMO",
-            "button_link": "",
+            "button_link": "#informacion-producto",
             "button_background_color": "#F0F2F3",
             "button_border_color": "#165A9E"
           }
@@ -710,7 +710,7 @@
         "row_cmMXAx": {
           "type": "row",
           "settings": {
-            "image": "shopify://shop_images/020326-Yacine_GRLB_BlueRazz-Editorial-1463_FINAL_RGB_IGF.webp",
+            "image": "shopify://shop_images/persona1.webp",
             "caption": "SABOR Y AROMA",
             "heading": "Antojo en cada aplicación",
             "text": "<p>Con aroma a mora irresistible, este bálsamo invita a reaplicar cada vez que se te antoje, sin dejar sensación pegajosa.</p>",
