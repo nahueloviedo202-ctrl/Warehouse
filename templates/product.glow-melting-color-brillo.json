@@ -714,10 +714,10 @@
             "caption": "SABOR Y AROMA",
             "heading": "Antojo en cada aplicación",
             "text": "<p>Con aroma a mora irresistible, este bálsamo invita a reaplicar cada vez que se te antoje, sin dejar sensación pegajosa.</p>",
-            "button_label": "Button label",
+            "button_label": "QUIERO MI BALASMO",
             "button_link": "#informacion-producto",
-            "button_background_color": "#000000",
-            "button_border_color": "#A3C1DF"
+            "button_background_color": "",
+            "button_border_color": "#165A9E"
           }
         }
       },
