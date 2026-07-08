@@ -716,7 +716,7 @@
             "text": "<p>Con aroma a mora irresistible, este bálsamo invita a reaplicar cada vez que se te antoje, sin dejar sensación pegajosa.</p>",
             "button_label": "QUIERO MI BALASMO",
             "button_link": "#informacion-producto",
-            "button_background_color": "",
+            "button_background_color": "#F0F2F3",
             "button_border_color": "#165A9E"
           }
         }
