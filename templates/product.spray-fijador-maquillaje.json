@@ -365,7 +365,7 @@
       "settings": {
         "enable_sticky_info": true,
         "media_size": "medium",
-        "constrain_to_viewport": true,
+        "constrain_to_viewport": false,
         "media_fit": "contain",
         "gallery_layout": "thumbnail",
         "media_position": "left",
@@ -477,115 +477,12 @@
         "text_italic": true,
         "text_uppercase": true,
         "color_scheme": "background-1",
-        "custom_background_color": "#DEDFA0",
+        "custom_background_color": "#E0E0DD",
         "custom_text_color": "#000000",
         "padding_top": 20,
         "padding_bottom": 20,
         "padding_top_mobile": 16,
         "padding_bottom_mobile": 16
-      }
-    },
-    "why_we_love_it_3t7fT9": {
-      "type": "why-we-love-it",
-      "blocks": {
-        "feature_TKe9aE": {
-          "type": "feature",
-          "settings": {
-            "position": "left",
-            "heading": "Efecto tensor visible",
-            "text": "<p>Su fórmula concentrada de Retinal reafirma la piel desde la primera aplicación, sin irritar ni generar sensación de ardor.<br/><br/></p>",
-            "heading_color": "#CACB55",
-            "heading_font_size_desktop": 16,
-            "heading_font_size_mobile": 16,
-            "heading_font_weight": "700",
-            "text_color": "",
-            "text_font_size_desktop": 14,
-            "text_font_size_mobile": 14,
-            "text_font_weight": "400"
-          }
-        },
-        "feature_HyNcKQ": {
-          "type": "feature",
-          "settings": {
-            "position": "left",
-            "heading": "Nutre y repara",
-            "text": "<p>Péptidos y Niacinamida trabajan en conjunto para restaurar la firmeza y elasticidad de la piel.</p>",
-            "heading_color": "#CACB55",
-            "heading_font_size_desktop": 16,
-            "heading_font_size_mobile": 14,
-            "heading_font_weight": "700",
-            "text_color": "",
-            "text_font_size_desktop": 14,
-            "text_font_size_mobile": 12,
-            "text_font_weight": "400"
-          }
-        },
-        "feature_BmGDdQ": {
-          "type": "feature",
-          "settings": {
-            "position": "right",
-            "heading": "Renovación celular acelerada",
-            "text": "<p>El Retinal actúa más rápido que el retinol clásico, mejorando visiblemente la textura de la piel desde las primeras semanas.</p>",
-            "heading_color": "#CACB55",
-            "heading_font_size_desktop": 16,
-            "heading_font_size_mobile": 14,
-            "heading_font_weight": "700",
-            "text_color": "",
-            "text_font_size_desktop": 15,
-            "text_font_size_mobile": 12,
-            "text_font_weight": "400"
-          }
-        },
-        "feature_GTkzQr": {
-          "type": "feature",
-          "settings": {
-            "position": "right",
-            "heading": "Hidratación profunda",
-            "text": "<p>El ácido hialurónico retiene la humedad y mantiene la piel hidratada durante todo el día.</p>",
-            "heading_color": "#CACB55",
-            "heading_font_size_desktop": 16,
-            "heading_font_size_mobile": 14,
-            "heading_font_weight": "700",
-            "text_color": "",
-            "text_font_size_desktop": 14,
-            "text_font_size_mobile": 12,
-            "text_font_weight": "400"
-          }
-        }
-      },
-      "block_order": [
-        "feature_TKe9aE",
-        "feature_HyNcKQ",
-        "feature_BmGDdQ",
-        "feature_GTkzQr"
-      ],
-      "custom_css": [
-        "@media screen and (max-width: 749px) {.h2 {font-size: calc(var(--font-heading-scale) * 1.7rem); }}",
-        "@media screen and (max-width: 749px) {.section-why_we_love_it_3t7fT9-padding {padding-top: 32px !important; padding-bottom: 32px !important; }}"
-      ],
-      "name": "Por qué nos encanta",
-      "settings": {
-        "heading": "Lo que lo hace único a Vita-A",
-        "heading_size": "h2",
-        "heading_italic": true,
-        "heading_color": "#000000",
-        "heading_font_size_desktop": 32,
-        "heading_font_size_mobile": 24,
-        "heading_font_weight": "600",
-        "image": "shopify://shop_images/Gemini_Generated_Image_rw7ui2rw7ui2rw7u.webp",
-        "circle_size_desktop": 380,
-        "circle_size_mobile": 220,
-        "color_scheme": "background-1",
-        "accent_color_scheme": "accent-2",
-        "background_color": "#ffffff",
-        "circle_border_color": "#CACB55",
-        "badge_icon_bg_color": "#f6f3f1",
-        "badge_icon_svg_color": "#d1816e",
-        "text_alignment": "facing-center",
-        "padding_top": 60,
-        "padding_bottom": 40,
-        "padding_top_mobile": 40,
-        "padding_bottom_mobile": 20
       }
     },
     "collage_6MLj8w": {
@@ -594,19 +491,19 @@
         "image_8hwREi": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/1749542832953_14fcc76aefa941e3bb1c5689a203e524.webp"
+            "image": "shopify://shop_images/infallible_fix_spray_reno_acabado_904d7627-c15e-4863-9ce9-3465afe5437f.webp"
           }
         },
         "image_fg87nw": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/product4_940c922c-563b-4387-be7c-0a25e0ccfc31.webp"
+            "image": "shopify://shop_images/inf-fix-spray-aplicacion.webp"
           }
         },
         "image_ticCNT": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/1749542830781_7cc29feb8d924c19b6eb34af4b2ed530.webp"
+            "image": "shopify://shop_images/Gemini_Generated_Image_y881fky881fky881.webp"
           }
         }
       },
@@ -619,7 +516,7 @@
       "settings": {
         "heading": "",
         "heading_size": "h2",
-        "desktop_layout": "left",
+        "desktop_layout": "right",
         "mobile_layout": "column",
         "card_styles": "product-card-wrapper",
         "color_scheme": "background-1",
@@ -627,6 +524,84 @@
         "padding_bottom": 40,
         "padding_top_mobile": 40,
         "padding_bottom_mobile": 20
+      }
+    },
+    "product_highlight_iUAetw": {
+      "type": "product-highlight",
+      "blocks": {
+        "heading_nXpFqj": {
+          "type": "heading",
+          "settings": {
+            "heading_italic": "Siéntete segura",
+            "heading_normal": "en tu propia piel",
+            "color": "",
+            "font_size_desktop": 32,
+            "font_size_mobile": 20
+          }
+        },
+        "text_mdAemH": {
+          "type": "text",
+          "settings": {
+            "text": "<p>\"La Base Vita Cosmetics ofrece alta cobertura para disimular manchas, ojeras, acné, vitíligo, tatuajes y otras imperfecciones, con un acabado mate natural para rostro y cuerpo.\"</p>",
+            "color": "#434343",
+            "font_weight": "400",
+            "font_size_desktop": 16,
+            "font_size_mobile": 14
+          }
+        },
+        "bullet_aMUqG9": {
+          "type": "bullet",
+          "settings": {
+            "bullet_icon": "✓",
+            "text": "Alta cobertura profesional.",
+            "color": "#434343",
+            "font_weight": "400",
+            "font_size_desktop": 16,
+            "font_size_mobile": 15
+          }
+        },
+        "bullet_Qbhi3t": {
+          "type": "bullet",
+          "settings": {
+            "bullet_icon": "✓",
+            "text": "Acabado mate de aspecto natural.",
+            "color": "#434343",
+            "font_weight": "400",
+            "font_size_desktop": 16,
+            "font_size_mobile": 15
+          }
+        },
+        "bullet_cQqMXV": {
+          "type": "bullet",
+          "settings": {
+            "bullet_icon": "✓",
+            "text": "Fórmula para rostro y cuerpo.",
+            "color": "#434343",
+            "font_weight": "400",
+            "font_size_desktop": 16,
+            "font_size_mobile": 15
+          }
+        }
+      },
+      "block_order": [
+        "heading_nXpFqj",
+        "text_mdAemH",
+        "bullet_aMUqG9",
+        "bullet_Qbhi3t",
+        "bullet_cQqMXV"
+      ],
+      "name": "Producto destacado",
+      "settings": {
+        "image": "shopify://shop_images/vignette-usp-03.webp",
+        "layout": "image_first",
+        "content_bg_color": "#DDDEE0",
+        "border_radius": 30,
+        "border_radius_mobile": 20,
+        "color_scheme": "background-1",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "padding_top_mobile": 16,
+        "padding_bottom_mobile": 28
       }
     },
     "product_highlight_kHfNT3": {
@@ -708,78 +683,48 @@
         "padding_bottom_mobile": 28
       }
     },
-    "tarjetas_beneficios_hVc6pQ": {
-      "type": "tarjetas-beneficios",
+    "multirow_XQG7Bh": {
+      "type": "multirow",
       "blocks": {
-        "card_GEcUyD": {
-          "type": "card",
+        "row_fChKeB": {
+          "type": "row",
           "settings": {
-            "icon": "shopify://shop_images/sparkles.svg",
-            "text": "Efecto tensor desde la primera aplicación"
-          }
-        },
-        "card_gHtTwa": {
-          "type": "card",
-          "settings": {
-            "icon": "shopify://shop_images/pencil.svg",
-            "text": "Se usa solo o combinado con tu rutina"
-          }
-        },
-        "card_GK8wEG": {
-          "type": "card",
-          "settings": {
-            "icon": "shopify://shop_images/droplets.svg",
-            "text": "Hidratación con Ácido Hialurónico"
-          }
-        },
-        "card_bEK8CV": {
-          "type": "card",
-          "settings": {
-            "icon": "shopify://shop_images/badge-check.svg",
-            "text": "Renovación visible con Retinal"
+            "image": "shopify://shop_images/vignette-usp-02.webp",
+            "caption": "RESULTADOS COMPROBADOS",
+            "heading": "Sin transferencias",
+            "text": "<p>El 97% de las mujeres confirmó que su maquillaje no se transfirió tras usarlo, con una fórmula que resiste rímel, celular, ropa y lentes.</p>",
+            "button_label": "QUIERO MI SPRAY FIJADOR",
+            "button_link": "#informacion-producto",
+            "button_background_color": "#000000",
+            "button_text_color": "#FFFFFF",
+            "button_border_color": "#000000",
+            "heading_font_size_desktop": 40,
+            "heading_font_size_mobile": 24,
+            "text_font_size_desktop": 16,
+            "text_font_size_mobile": 14
           }
         }
       },
       "block_order": [
-        "card_GEcUyD",
-        "card_gHtTwa",
-        "card_GK8wEG",
-        "card_bEK8CV"
+        "row_fChKeB"
       ],
-      "name": "Tarjetas de beneficios",
+      "name": "t:sections.multirow.presets.name",
       "settings": {
-        "subtitle": "Más que un booster",
-        "subtitle_color": "#CACB55",
-        "subtitle_size_desktop": 20,
-        "subtitle_size_mobile": 16,
-        "heading": "Firmeza que se siente en tu piel",
-        "heading_color": "#000000",
-        "heading_size_desktop": 32,
-        "heading_size_mobile": 28,
-        "text_gap_desktop": 16,
-        "text_gap_mobile": 10,
-        "button_label": " QUIERO MI RETINAL SHOT",
-        "button_url": "#informacion-producto",
-        "button_bg_color": "#000000",
-        "button_text_color": "#ffffff",
-        "button_radius": 100,
-        "button_font_size_desktop": 16,
-        "button_font_size_mobile": 14,
-        "card_bg_color": "#DEDFA0",
-        "card_radius": 5,
-        "card_gap": 10,
-        "card_text_color": "#2b1b17",
-        "card_text_size_desktop": 14,
-        "card_text_size_mobile": 12,
-        "icon_size_desktop": 40,
-        "icon_size_mobile": 32,
-        "layout_gap_desktop": 60,
-        "layout_gap_mobile": 8,
-        "bg_color": "#ffffff",
-        "padding_top": 60,
-        "padding_bottom": 40,
-        "padding_top_mobile": 40,
-        "padding_bottom_mobile": 20
+        "image_height": "medium",
+        "desktop_image_width": "medium",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "primary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "image_layout": "alternate-left",
+        "section_color_scheme": "background-1",
+        "row_color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 28,
+        "padding_bottom_mobile": 28
       }
     },
     "review_slider_pmwAwt": {
@@ -827,12 +772,12 @@
         "heading_font_size_mobile": 26,
         "heading_font_weight": "600",
         "subheading": " Opiniones de quienes ya eligieron Vita-A",
-        "subheading_color": "#CACB55",
+        "subheading_color": "#000000",
         "subheading_font_size_desktop": 18,
         "subheading_font_size_mobile": 15,
         "subheading_font_weight": "500",
-        "card_background_color": "#EDEDE6",
-        "card_border_color": "#C5C727",
+        "card_background_color": "#DDDEE0",
+        "card_border_color": "#A1A1A0",
         "card_border_width": 1,
         "card_corner_radius": 16,
         "text_color": "#2b2b2b",
@@ -843,7 +788,7 @@
         "cards_per_row_mobile": 1,
         "card_gap": 24,
         "show_arrows": false,
-        "arrows_color": "#DEDFA0",
+        "arrows_color": "#dedfa0",
         "color_scheme": "background-1",
         "background_color": "#ffffff",
         "padding_top": 60,
@@ -943,7 +888,7 @@
         "color_scheme": "background-1",
         "accent_color_scheme": "accent-2",
         "background_color": "",
-        "item_background": "#DEDFA0",
+        "item_background": "#DDDEE0",
         "item_radius": 12,
         "item_spacing": 12,
         "open_first_question": false,
@@ -1053,10 +998,10 @@
     "main",
     "related-products",
     "press_ticker_gTJiLE",
-    "why_we_love_it_3t7fT9",
     "collage_6MLj8w",
+    "product_highlight_iUAetw",
     "product_highlight_kHfNT3",
-    "tarjetas_beneficios_hVc6pQ",
+    "multirow_XQG7Bh",
     "review_slider_pmwAwt",
     "faq_accordion_m3GjeY",
     "community_feed_dJB7VX"
