@@ -837,10 +837,10 @@
         "simple_image_QRL6bV": {
           "type": "simple_image",
           "settings": {
-            "image": "shopify://shop_images/product8.webp",
+            "image": "shopify://shop_images/product8.jpg",
             "image_alt": "",
             "image_width": 530,
-            "image_height": 500,
+            "image_height": 550,
             "image_height_mobile": 330,
             "object_fit": "cover",
             "image_border_radius": 10
