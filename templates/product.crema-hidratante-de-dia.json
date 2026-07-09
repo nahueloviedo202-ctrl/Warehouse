@@ -365,7 +365,7 @@
       "settings": {
         "enable_sticky_info": true,
         "media_size": "medium",
-        "constrain_to_viewport": true,
+        "constrain_to_viewport": false,
         "media_fit": "contain",
         "gallery_layout": "thumbnail",
         "media_position": "left",
@@ -670,12 +670,107 @@
         "text_italic": true,
         "text_uppercase": true,
         "color_scheme": "background-1",
-        "custom_background_color": "#e3d0c9",
+        "custom_background_color": "#D3D3E6",
         "custom_text_color": "#000000",
         "padding_top": 20,
         "padding_bottom": 20,
         "padding_top_mobile": 16,
         "padding_bottom_mobile": 16
+      }
+    },
+    "community_feed_WamfE6": {
+      "type": "community-feed",
+      "blocks": {
+        "post_DGU7bE": {
+          "type": "post",
+          "settings": {
+            "image": "shopify://shop_images/product6_bc24b693-177f-4ddc-b80b-917b6a019ca3.webp",
+            "username": "",
+            "show_verified": false,
+            "caption": "",
+            "link": ""
+          }
+        },
+        "post_mAttiA": {
+          "type": "post",
+          "settings": {
+            "image": "shopify://shop_images/product5_9501eeca-1543-4688-a3a4-c99f95ad3fd8.webp",
+            "username": "",
+            "show_verified": false,
+            "caption": "",
+            "link": ""
+          }
+        },
+        "post_wCViYN": {
+          "type": "post",
+          "settings": {
+            "image": "shopify://shop_images/product4_a73e1f76-38a6-46ba-be7a-61e3afb16367.webp",
+            "username": "",
+            "show_verified": false,
+            "caption": "",
+            "link": ""
+          }
+        },
+        "post_QBQ4cn": {
+          "type": "post",
+          "settings": {
+            "image": "shopify://shop_images/product2_e289a1b2-04cd-42ff-bb0c-cdc2bacb5bfa.webp",
+            "username": "",
+            "show_verified": false,
+            "caption": "",
+            "link": ""
+          }
+        },
+        "post_yRGKr3": {
+          "type": "post",
+          "settings": {
+            "image": "shopify://shop_images/Tu_piel_tambien_merece_sentir_el_calor_del_sol_sin_perder_su_frescura.Un_toque_de_hidratacion.webp",
+            "username": "@sandra.v",
+            "show_verified": true,
+            "caption": "Por fin un producto que sí cumple lo que promete",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "post_DGU7bE",
+        "post_mAttiA",
+        "post_wCViYN",
+        "post_QBQ4cn",
+        "post_yRGKr3"
+      ],
+      "custom_css": [
+        "@media screen and (max-width: 749px) {.h2 {font-size: calc(var(--font-heading-scale) * 1.7rem); }}",
+        "@media screen and (max-width: 749px) {.section-community_feed_dJB7VX-padding {padding-top: 32px !important; padding-bottom: 32px !important; }}"
+      ],
+      "name": "Comunidad / Feed UGC",
+      "settings": {
+        "heading": "",
+        "heading_size": "h2",
+        "heading_color": "",
+        "heading_font_size_desktop": 32,
+        "heading_font_size_mobile": 24,
+        "heading_font_weight": "600",
+        "color_scheme": "background-1",
+        "verified_color": "#bc6161",
+        "background_color": "",
+        "media_radius": 18,
+        "enable_center_mode": true,
+        "enable_loop": true,
+        "autoplay": false,
+        "autoplay_speed": 3,
+        "show_dots": false,
+        "show_arrows": false,
+        "slides_desktop": 3.4,
+        "space_desktop": 20,
+        "slides_tablet": 2,
+        "space_tablet": 16,
+        "slides_mobile": 1.4,
+        "space_mobile": 12,
+        "padding_top": 60,
+        "padding_bottom": 40,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40
       }
     },
     "why_we_love_it_3t7fT9": {
@@ -792,6 +887,7 @@
         "badge_48EGBr",
         "badge_pzdxBr"
       ],
+      "disabled": true,
       "custom_css": [
         "@media screen and (max-width: 749px) {.h2 {font-size: calc(var(--font-heading-scale) * 1.7rem); }}",
         "@media screen and (max-width: 749px) {.section-why_we_love_it_3t7fT9-padding {padding-top: 32px !important; padding-bottom: 32px !important; }}"
@@ -844,6 +940,7 @@
         },
         "review_VgTKBY": {
           "type": "review",
+          "disabled": true,
           "settings": {
             "text": "Producto de muy buena calidad y atención impecable. Estoy muy conforme.",
             "avatar": "shopify://shop_images/default-ticker-5_1.png",
@@ -857,6 +954,7 @@
         "review_EccX6C",
         "review_VgTKBY"
       ],
+      "disabled": true,
       "name": "Slider de reseñas",
       "settings": {
         "heading": "Cambios reales",
@@ -984,334 +1082,6 @@
         "padding_bottom": 60,
         "padding_top_mobile": 0,
         "padding_bottom_mobile": 32
-      }
-    },
-    "comparison_slider_NtzU6b": {
-      "type": "comparison-slider",
-      "blocks": {
-        "simple_image_QRL6bV": {
-          "type": "simple_image",
-          "settings": {
-            "image": "shopify://shop_images/mobile.webp",
-            "image_alt": "",
-            "image_width": 530,
-            "image_height": 500,
-            "image_height_mobile": 330,
-            "object_fit": "cover",
-            "image_border_radius": 10
-          }
-        },
-        "text_content_4pHk8N": {
-          "type": "text_content",
-          "settings": {
-            "title": "Hecho para pieles maduras y hermosas",
-            "heading_size": "h2",
-            "heading_italic": true,
-            "accent_color_scheme": "accent-2",
-            "text": "",
-            "feature_1_heading": "Suaviza la textura sin dejar líneas.",
-            "feature_1_text": "<p>Su fórmula ligera se adapta a la piel sin marcar arrugas ni líneas de expresión, dejando un acabado suave y uniforme.</p>",
-            "feature_2_heading": "Se adapta a tu tono exacto, al instante.",
-            "feature_2_text": "<p>Sus pigmentos inteligentes se adaptan a tu piel para lograr un tono uniforme y natural, sin acabados anaranjados.</p>",
-            "circle_background_color": "#e3d0c9",
-            "icon_color": "#2b2b2b",
-            "label_color": "#000000",
-            "circle_size_desktop": 96,
-            "circle_size_mobile": 72,
-            "badge_1_icon": "dermatologist",
-            "badge_1_label": "Fórmula hidratante",
-            "badge_2_icon": "skin_layers",
-            "badge_2_label": "Acabado satinado natural",
-            "badge_3_icon": "none",
-            "badge_3_label": "",
-            "badge_4_icon": "none",
-            "badge_4_label": "",
-            "button_label": "Comprar ahora",
-            "link": "#informacion-producto",
-            "button_style_secondary": false,
-            "button_full_width": false,
-            "button_bg_color": "#bc6161",
-            "button_text_color": "#ffffff",
-            "button_border_color": "#bc6161",
-            "button_border_width": 0,
-            "button_border_radius": 0,
-            "button_font_size": 0,
-            "button_font_weight": "inherit",
-            "button_padding_v": 0,
-            "button_padding_h": 0,
-            "desktop_content_alignment": "left",
-            "mobile_content_alignment": "left",
-            "heading_color": "#000000",
-            "heading_font_size_desktop": 32,
-            "heading_font_size_mobile": 24,
-            "heading_font_weight": "600",
-            "text_color": "#000000",
-            "text_font_size_desktop": 16,
-            "text_font_size_mobile": 15,
-            "text_font_weight": "400",
-            "feature_heading_color": "#d1816e",
-            "feature_heading_font_size_desktop": 20,
-            "feature_heading_font_size_mobile": 16,
-            "feature_heading_font_weight": "700",
-            "feature_text_color": "",
-            "feature_text_font_size_desktop": 15,
-            "feature_text_font_size_mobile": 14,
-            "feature_text_font_weight": "400"
-          }
-        }
-      },
-      "block_order": [
-        "simple_image_QRL6bV",
-        "text_content_4pHk8N"
-      ],
-      "custom_css": [
-        "@media screen and (max-width: 749px) {.h2 {font-size: calc(var(--font-heading-scale) * 1.7rem); }}",
-        "@media screen and (max-width: 749px) {.section-comparison_slider_NtzU6b-padding {padding-top: 32px !important; padding-bottom: 32px !important; }}"
-      ],
-      "name": "Before & After slider",
-      "settings": {
-        "color_scheme": "background-1",
-        "background_color": "#f3f1f0",
-        "padding_top": 60,
-        "padding_bottom": 60,
-        "padding_top_mobile": 40,
-        "padding_bottom_mobile": 40
-      }
-    },
-    "ingredient_spotlight_wmhrkr": {
-      "type": "ingredient-spotlight",
-      "blocks": {
-        "ingredient_d8jUmn": {
-          "type": "ingredient",
-          "disabled": true,
-          "settings": {
-            "position": "top_left",
-            "icon": "hyaluronic_acid",
-            "title": "Ácido Hialurónico",
-            "text": "Hidratación profunda y rellena la piel",
-            "circle_bg_color": "",
-            "icon_color": "",
-            "title_color": "",
-            "title_font_size_desktop": 13,
-            "title_font_size_mobile": 12,
-            "title_font_weight": "700",
-            "text_color": "",
-            "text_font_size_desktop": 11,
-            "text_font_size_mobile": 11,
-            "text_font_weight": "400"
-          }
-        },
-        "ingredient_inxJyp": {
-          "type": "ingredient",
-          "disabled": true,
-          "settings": {
-            "position": "top_right",
-            "icon": "vitamin_e",
-            "title": "Vitamina E",
-            "text": "Nutre y protege contra el daño ambiental",
-            "circle_bg_color": "",
-            "icon_color": "",
-            "title_color": "",
-            "title_font_size_desktop": 13,
-            "title_font_size_mobile": 12,
-            "title_font_weight": "700",
-            "text_color": "",
-            "text_font_size_desktop": 11,
-            "text_font_size_mobile": 11,
-            "text_font_weight": "400"
-          }
-        },
-        "ingredient_wDMkfp": {
-          "type": "ingredient",
-          "disabled": true,
-          "settings": {
-            "position": "bottom_left",
-            "icon": "collagen",
-            "title": "Colágeno",
-            "text": "Mejora la elasticidad y firmeza",
-            "circle_bg_color": "",
-            "icon_color": "",
-            "title_color": "",
-            "title_font_size_desktop": 13,
-            "title_font_size_mobile": 12,
-            "title_font_weight": "700",
-            "text_color": "",
-            "text_font_size_desktop": 11,
-            "text_font_size_mobile": 11,
-            "text_font_weight": "400"
-          }
-        },
-        "ingredient_Rr49Fa": {
-          "type": "ingredient",
-          "disabled": true,
-          "settings": {
-            "position": "bottom_right",
-            "icon": "spf",
-            "title": "SPF 50",
-            "text": "Protección solar de amplio espectro contra UVA y UVB",
-            "circle_bg_color": "",
-            "icon_color": "",
-            "title_color": "",
-            "title_font_size_desktop": 13,
-            "title_font_size_mobile": 12,
-            "title_font_weight": "700",
-            "text_color": "",
-            "text_font_size_desktop": 11,
-            "text_font_size_mobile": 11,
-            "text_font_weight": "400"
-          }
-        },
-        "benefit_EPWdb4": {
-          "type": "benefit",
-          "settings": {
-            "heading": "Complejo antienvejecimiento avanzado de InfiniteLove",
-            "text": "<p>Un potente antioxidante que nutre la piel y la protege del daño ambiental y los signos del envejecimiento.</p>",
-            "heading_color": "#d1816e",
-            "heading_font_size_desktop": 20,
-            "heading_font_size_mobile": 17,
-            "heading_font_weight": "700",
-            "text_color": "",
-            "text_font_size_desktop": 15,
-            "text_font_size_mobile": 14,
-            "text_font_weight": "400"
-          }
-        },
-        "benefit_qVhbeE": {
-          "type": "benefit",
-          "settings": {
-            "heading": "Ácido hialurónico + colágeno",
-            "text": "<p>Este dúo actúa en profundidad para hidratar, mejorar la elasticidad y reducir la apariencia de líneas finas y arrugas.</p>",
-            "heading_color": "#d1816e",
-            "heading_font_size_desktop": 20,
-            "heading_font_size_mobile": 17,
-            "heading_font_weight": "700",
-            "text_color": "",
-            "text_font_size_desktop": 15,
-            "text_font_size_mobile": 14,
-            "text_font_weight": "400"
-          }
-        },
-        "benefit_inTkiE": {
-          "type": "benefit",
-          "settings": {
-            "heading": "Vitamina E",
-            "text": "<p>Una potente mezcla de 4 ingredientes clínicamente probados que hidratan profundamente, mejoran la firmeza y revelan una piel más luminosa y rejuvenecida.</p>",
-            "heading_color": "#d1816e",
-            "heading_font_size_desktop": 20,
-            "heading_font_size_mobile": 17,
-            "heading_font_weight": "700",
-            "text_color": "",
-            "text_font_size_desktop": 15,
-            "text_font_size_mobile": 14,
-            "text_font_weight": "400"
-          }
-        },
-        "badge_V9LQtq": {
-          "type": "badge",
-          "settings": {
-            "icon": "color_adapt",
-            "label": "Tecnología de adaptación de color",
-            "icon_bg_color": "#f6f3f1",
-            "icon_color": "#bc6161",
-            "label_color": "",
-            "label_font_size_desktop": 12,
-            "label_font_size_mobile": 11,
-            "label_font_weight": "400"
-          }
-        },
-        "badge_73xtjy": {
-          "type": "badge",
-          "settings": {
-            "icon": "anti_aging",
-            "label": "Complejo antienvejecimiento",
-            "icon_bg_color": "#f6f3f1",
-            "icon_color": "#bc6161",
-            "label_color": "",
-            "label_font_size_desktop": 12,
-            "label_font_size_mobile": 11,
-            "label_font_weight": "400"
-          }
-        }
-      },
-      "block_order": [
-        "ingredient_d8jUmn",
-        "ingredient_inxJyp",
-        "ingredient_wDMkfp",
-        "ingredient_Rr49Fa",
-        "benefit_EPWdb4",
-        "benefit_qVhbeE",
-        "benefit_inTkiE",
-        "badge_V9LQtq",
-        "badge_73xtjy"
-      ],
-      "custom_css": [
-        "@media screen and (max-width: 749px) {.h2 {font-size: calc(var(--font-heading-scale) * 1.7rem); }}",
-        "@media screen and (max-width: 749px) {.section-ingredient_spotlight_wmhrkr-padding {padding-top: 32px !important; padding-bottom: 32px !important; }}"
-      ],
-      "name": "Ingredientes destacados",
-      "settings": {
-        "heading": "Hasta 12 horas de uso cómodo",
-        "heading_size": "h2",
-        "heading_italic": true,
-        "heading_color": "#000000",
-        "heading_font_size_desktop": 40,
-        "heading_font_size_mobile": 40,
-        "heading_font_weight": "600",
-        "backdrop_image": "shopify://shop_images/producto.webp",
-        "layout": "image_first",
-        "show_connector_lines": false,
-        "line_color": "",
-        "show_sparkle": false,
-        "circle_size_desktop": 90,
-        "circle_size_mobile": 65,
-        "color_scheme": "background-1",
-        "accent_color_scheme": "accent-2",
-        "background_color": "",
-        "padding_top": 60,
-        "padding_bottom": 60,
-        "padding_top_mobile": 40,
-        "padding_bottom_mobile": 40
-      }
-    },
-    "featured_quote_Y4GLCm": {
-      "type": "featured-quote",
-      "blocks": {
-        "quote_yHag9T": {
-          "type": "quote",
-          "settings": {
-            "text": "Tenía dudas sobre si esto marcaría alguna diferencia en mi cutis. Puedo decir que es muy fácil de usar, no se acumula en las arrugas, sin duda mejora el aspecto de mi piel y, como tiene un FPS 50, es una auténtica revolución para una mujer de 70 años .",
-            "avatar": "shopify://shop_images/Gemini_Generated_Image_h3q9qph3q9qph3q9.webp",
-            "author": "Gisela Rodriguez"
-          }
-        }
-      },
-      "block_order": [
-        "quote_yHag9T"
-      ],
-      "custom_css": [
-        "@media screen and (max-width: 749px) {.section-featured_quote_Y4GLCm-padding {padding-top: 32px !important; padding-bottom: 32px !important; }}"
-      ],
-      "name": "Cita destacada",
-      "settings": {
-        "color_scheme": "background-1",
-        "background_color": "#f3f1f0",
-        "text_alignment": "center",
-        "quote_max_width": 800,
-        "quote_font_size": 24,
-        "quote_font_size_mobile": 18,
-        "quote_italic": true,
-        "quote_color": "#d1816e",
-        "quote_font_weight": "500",
-        "avatar_size": 80,
-        "avatar_border_width": 4,
-        "avatar_border_color": "#d1816e",
-        "author_color": "",
-        "author_font_size": 14,
-        "author_font_weight": "500",
-        "padding_top": 60,
-        "padding_bottom": 60,
-        "padding_top_mobile": 40,
-        "padding_bottom_mobile": 40
       }
     },
     "faq_accordion_m3GjeY": {
@@ -1535,12 +1305,10 @@
     "64c96926-2c31-48fe-bd21-30941bc87822",
     "slideshow_HfVNww",
     "press_ticker_gTJiLE",
+    "community_feed_WamfE6",
     "why_we_love_it_3t7fT9",
     "review_slider_pmwAwt",
     "feature_cards_rC7d6a",
-    "comparison_slider_NtzU6b",
-    "ingredient_spotlight_wmhrkr",
-    "featured_quote_Y4GLCm",
     "faq_accordion_m3GjeY",
     "community_feed_dJB7VX"
   ]
