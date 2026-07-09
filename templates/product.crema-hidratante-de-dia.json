@@ -836,6 +836,96 @@
         "padding_bottom_mobile": 28
       }
     },
+    "por_que_elegir_pA8afU": {
+      "type": "por-que-elegir",
+      "blocks": {
+        "row_Hti9tV": {
+          "type": "row",
+          "settings": {
+            "feature": "48 horas de hidratación",
+            "vita_has": true,
+            "others_has": false
+          }
+        },
+        "row_WMVkhk": {
+          "type": "row",
+          "settings": {
+            "feature": "Rellena y suaviza arrugas visiblemente",
+            "vita_has": true,
+            "others_has": false
+          }
+        },
+        "row_dkLky6": {
+          "type": "row",
+          "settings": {
+            "feature": "Apta para piel sensible, sin fragancia",
+            "vita_has": true,
+            "others_has": false
+          }
+        },
+        "row_YXXpA4": {
+          "type": "row",
+          "settings": {
+            "feature": "No comedogénica, ideal bajo el maquillaje",
+            "vita_has": true,
+            "others_has": false
+          }
+        },
+        "row_brVPzx": {
+          "type": "row",
+          "settings": {
+            "feature": "Dermatológicamente probada",
+            "vita_has": true,
+            "others_has": false
+          }
+        },
+        "row_gTXC3a": {
+          "type": "row",
+          "settings": {
+            "feature": "Sin parabenos, tintes ni aceites minerales",
+            "vita_has": true,
+            "others_has": false
+          }
+        }
+      },
+      "block_order": [
+        "row_Hti9tV",
+        "row_WMVkhk",
+        "row_dkLky6",
+        "row_YXXpA4",
+        "row_brVPzx",
+        "row_gTXC3a"
+      ],
+      "name": "¿Por qué elegir?",
+      "settings": {
+        "title": " ¿POR QUÉ ELEGIR COLLAGEN MOISTURE FILLER?",
+        "title_transform": "uppercase",
+        "title_color": "#000000",
+        "title_weight": "600",
+        "title_size_desktop": 36,
+        "title_size_mobile": 24,
+        "product_image": "shopify://shop_images/product6_bc24b693-177f-4ddc-b80b-917b6a019ca3.webp",
+        "product_img_size_desktop": 56,
+        "product_img_size_mobile": 44,
+        "vita_label": "",
+        "others_label": "Otros",
+        "table_max_width": 500,
+        "vita_bg_color": "#D3D3E6",
+        "divider_color": "#444444",
+        "icon_color": "#1a1a1a",
+        "icon_size_desktop": 35,
+        "icon_size_mobile": 28,
+        "row_color": "",
+        "row_size_desktop": 13,
+        "row_size_mobile": 12,
+        "color_scheme": "background-1",
+        "bg_color": "",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20
+      }
+    },
     "faq_accordion_m3GjeY": {
       "type": "faq-accordion",
       "blocks": {
@@ -1059,6 +1149,7 @@
     "press_ticker_gTJiLE",
     "community_feed_WamfE6",
     "multirow_LiJMeJ",
+    "por_que_elegir_pA8afU",
     "faq_accordion_m3GjeY",
     "community_feed_dJB7VX"
   ]
