@@ -861,7 +861,7 @@
         "row_Hti9tV": {
           "type": "row",
           "settings": {
-            "feature": "48 horas de hidratación",
+            "feature": "Color acumulable en un solo paso",
             "vita_has": true,
             "others_has": false
           }
@@ -869,7 +869,7 @@
         "row_WMVkhk": {
           "type": "row",
           "settings": {
-            "feature": "Rellena y suaviza arrugas visiblemente",
+            "feature": "Hidratación con Escualano y Vitamina E",
             "vita_has": true,
             "others_has": false
           }
@@ -877,7 +877,7 @@
         "row_dkLky6": {
           "type": "row",
           "settings": {
-            "feature": "Apta para piel sensible, sin fragancia",
+            "feature": "No se corre ni sangra fuera del contorno",
             "vita_has": true,
             "others_has": false
           }
@@ -885,7 +885,7 @@
         "row_YXXpA4": {
           "type": "row",
           "settings": {
-            "feature": "No comedogénica, ideal bajo el maquillaje",
+            "feature": "Acabado semi-brillo",
             "vita_has": true,
             "others_has": false
           }
@@ -893,7 +893,7 @@
         "row_brVPzx": {
           "type": "row",
           "settings": {
-            "feature": "Dermatológicamente probada",
+            "feature": "Textura acolchada y liviana",
             "vita_has": true,
             "others_has": false
           }
@@ -901,7 +901,7 @@
         "row_gTXC3a": {
           "type": "row",
           "settings": {
-            "feature": "Sin parabenos, tintes ni aceites minerales",
+            "feature": "Vegano y cruelty-free",
             "vita_has": true,
             "others_has": false
           }
@@ -917,7 +917,7 @@
       ],
       "name": "¿Por qué elegir?",
       "settings": {
-        "title": " ¿POR QUÉ ELEGIR COLLAGEN MOISTURE FILLER?",
+        "title": "¿POR QUÉ ELEGIR JELLY BALM HIDRATANTE?",
         "title_transform": "uppercase",
         "title_color": "#000000",
         "title_weight": "600",
@@ -951,8 +951,8 @@
         "question_giLkXQ": {
           "type": "question",
           "settings": {
-            "question": "¿Cuánta hidratación ofrece esta crema?",
-            "answer": "<p>Hasta 48 horas de hidratación, mientras rellena y suaviza visiblemente las arrugas.</p>",
+            "question": "¿Cuánta hidratación ofrece este bálsamo?",
+            "answer": "<p>Está formulado con Escualano y Vitamina E, que hidratan en profundidad dejando los labios suaves y notablemente más sanos con el uso constante.</p>",
             "question_color": "",
             "question_font_size_desktop": 16,
             "question_font_size_mobile": 15,
@@ -966,8 +966,8 @@
         "question_36wNwy": {
           "type": "question",
           "settings": {
-            "question": "¿Es apta para piel sensible?",
-            "answer": "<p>Sí, es sin fragancia, sin parabenos, no comedogénica y dermatológicamente probada.</p>",
+            "question": "¿Es apto para labios sensibles?",
+            "answer": "<p>Sí, su fórmula ultra liviana está pensada para no irritar ni resecar los labios.</p>",
             "question_color": "",
             "question_font_size_desktop": 16,
             "question_font_size_mobile": 15,
@@ -981,8 +981,8 @@
         "question_e4hhdC": {
           "type": "question",
           "settings": {
-            "question": "¿Cuándo se usa en la rutina de skincare?",
-            "answer": "<p>Después de limpiar y aplicar el sérum, mañana y noche. De día, se recomienda aplicar protector solar después.</p>",
+            "question": "¿Se puede acumular el color?",
+            "answer": "<p>Sí, aplicá una capa para un look sheer o varias para un color más intenso tipo labial.</p>",
             "question_color": "",
             "question_font_size_desktop": 16,
             "question_font_size_mobile": 15,
@@ -996,8 +996,8 @@
         "question_HKe6yp": {
           "type": "question",
           "settings": {
-            "question": "¿Cómo combate las líneas de expresión?",
-            "answer": "<p>El colágeno devuelve volumen natural a la piel y suaviza el aspecto de arrugas y líneas de expresión con el uso regular.</p>",
+            "question": "¿Se corre o sangra fuera del contorno?",
+            "answer": "<p>No, su aplicación ultra liviana no se corre ni sangra fuera de los labios.</p>",
             "question_color": "",
             "question_font_size_desktop": 16,
             "question_font_size_mobile": 15,
@@ -1011,8 +1011,8 @@
         "question_V76RRe": {
           "type": "question",
           "settings": {
-            "question": "¿Se puede usar debajo del maquillaje?",
-            "answer": "<p>Sí, su textura ligera y de rápida absorción no deja residuo graso, ideal como base antes de maquillarte.</p>",
+            "question": "¿Se puede usar con brocha para más precisión?",
+            "answer": "<p>Sí, para una aplicación más precisa podés usar una brocha labial.</p>",
             "question_color": "",
             "question_font_size_desktop": 16,
             "question_font_size_mobile": 15,
