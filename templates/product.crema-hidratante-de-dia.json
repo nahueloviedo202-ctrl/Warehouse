@@ -778,6 +778,7 @@
       "blocks": {
         "row_iEBPpV": {
           "type": "row",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/WhatsApp_Image_2026-07-10_at_4.34.10_PM.webp",
             "caption": "RUTINA DE 3 PASOS",
