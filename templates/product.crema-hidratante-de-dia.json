@@ -739,6 +739,7 @@
         "post_QBQ4cn",
         "post_yRGKr3"
       ],
+      "disabled": true,
       "custom_css": [
         "@media screen and (max-width: 749px) {.h2 {font-size: calc(var(--font-heading-scale) * 1.7rem); }}",
         "@media screen and (max-width: 749px) {.section-community_feed_dJB7VX-padding {padding-top: 32px !important; padding-bottom: 32px !important; }}"
@@ -776,6 +777,24 @@
     "multirow_LiJMeJ": {
       "type": "multirow",
       "blocks": {
+        "row_iEBPpV": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/WhatsApp_Image_2026-07-10_at_4.34.10_PM.webp",
+            "caption": "RUTINA DE 3 PASOS",
+            "heading": " Hidratación que se nota",
+            "text": "<p>Con colágeno puro, glicerina y manteca de karité, esta crema refuerza la barrera hídrica de la piel, rellena arrugas visiblemente y aporta hasta 48 horas de hidratación, sin dejar residuo graso.</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_background_color": "",
+            "button_text_color": "",
+            "button_border_color": "",
+            "heading_font_size_desktop": 40,
+            "heading_font_size_mobile": 24,
+            "text_font_size_desktop": 16,
+            "text_font_size_mobile": 14
+          }
+        },
         "row_VqYmJN": {
           "type": "row",
           "settings": {
@@ -814,6 +833,7 @@
         }
       },
       "block_order": [
+        "row_iEBPpV",
         "row_VqYmJN",
         "row_Fq8c9M"
       ],
