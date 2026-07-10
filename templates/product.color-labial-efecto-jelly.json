@@ -851,8 +851,8 @@
         "mobile_content_alignment": "left",
         "padding_top": 60,
         "padding_bottom": 40,
-        "padding_top_mobile": 28,
-        "padding_bottom_mobile": 28
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 20
       }
     },
     "por_que_elegir_pA8afU": {
@@ -1057,9 +1057,9 @@
         "item_spacing": 12,
         "open_first_question": false,
         "padding_top": 60,
-        "padding_bottom": 60,
+        "padding_bottom": 40,
         "padding_top_mobile": 40,
-        "padding_bottom_mobile": 40
+        "padding_bottom_mobile": 20
       }
     },
     "community_feed_dJB7VX": {
