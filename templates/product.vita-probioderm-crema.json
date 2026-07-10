@@ -1303,7 +1303,7 @@
             "heading_font_size_desktop": 40,
             "heading_font_size_mobile": 24,
             "text_font_size_desktop": 16,
-            "text_font_size_mobile": 14
+            "text_font_size_mobile": 20
           }
         }
       },
@@ -1323,10 +1323,10 @@
         "section_color_scheme": "background-1",
         "row_color_scheme": "background-1",
         "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_top_mobile": 28,
-        "padding_bottom_mobile": 28
+        "padding_top": 60,
+        "padding_bottom": 40,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 20
       }
     }
   },
@@ -1338,12 +1338,12 @@
     "64c96926-2c31-48fe-bd21-30941bc87822",
     "slideshow_HfVNww",
     "press_ticker_gTJiLE",
+    "multirow_gAfAc4",
     "por_que_elegir_TgyBPB",
     "ingredient_spotlight_wmhrkr",
     "en_solo_4_semanas_n9tDXW",
     "review_slider_pmwAwt",
     "faq_accordion_m3GjeY",
-    "community_feed_dJB7VX",
-    "multirow_gAfAc4"
+    "community_feed_dJB7VX"
   ]
 }
