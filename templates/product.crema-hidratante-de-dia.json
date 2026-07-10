@@ -739,7 +739,6 @@
         "post_QBQ4cn",
         "post_yRGKr3"
       ],
-      "disabled": true,
       "custom_css": [
         "@media screen and (max-width: 749px) {.h2 {font-size: calc(var(--font-heading-scale) * 1.7rem); }}",
         "@media screen and (max-width: 749px) {.section-community_feed_dJB7VX-padding {padding-top: 32px !important; padding-bottom: 32px !important; }}"
