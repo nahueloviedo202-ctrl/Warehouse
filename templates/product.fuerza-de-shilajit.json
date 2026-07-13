@@ -741,66 +741,6 @@
         "padding_bottom_mobile": 20
       }
     },
-    "icon_bar_awQW7x": {
-      "type": "icon-bar",
-      "blocks": {
-        "column_zq9NLx": {
-          "type": "column",
-          "settings": {
-            "icon": "apple",
-            "title": "Energía",
-            "text": "<p>Recargá tu día con más vitalidad y menos cansancio.</p><p></p>"
-          }
-        },
-        "column_9NaQK6": {
-          "type": "column",
-          "settings": {
-            "icon": "star",
-            "title": "Foco Mental",
-            "text": "<p>Mejorá tu concentración y rendimiento cognitivo.</p>"
-          }
-        },
-        "column_9hjcLi": {
-          "type": "column",
-          "settings": {
-            "icon": "plant",
-            "title": "Bienestar Físico",
-            "text": "<p>Apoyo para músculos, articulaciones y recuperación.</p><p></p>"
-          }
-        },
-        "column_VpfyUi": {
-          "type": "column",
-          "settings": {
-            "icon": "check_mark",
-            "title": "Calidad Certificada",
-            "text": "<p>Fabricado en EE.UU. bajo estándares GMP</p>"
-          }
-        }
-      },
-      "block_order": [
-        "column_zq9NLx",
-        "column_9NaQK6",
-        "column_9hjcLi",
-        "column_VpfyUi"
-      ],
-      "name": "Icon Bar",
-      "settings": {
-        "title": "Beneficios que se sienten",
-        "heading_size": "h2",
-        "text": "",
-        "icon_size": "medium",
-        "columns_desktop": 4,
-        "icon_color": "accent-1",
-        "background_style": "none",
-        "color_scheme": "background-1",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_top_mobile": 28,
-        "padding_bottom_mobile": 28
-      }
-    },
     "por_que_elegir_WXcDJn": {
       "type": "por-que-elegir",
       "blocks": {
@@ -933,10 +873,70 @@
         "color_scheme": "background-1",
         "section_color_scheme": "background-1",
         "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_top_mobile": 28,
-        "padding_bottom_mobile": 28
+        "padding_top": 60,
+        "padding_bottom": 40,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 20
+      }
+    },
+    "icon_bar_awQW7x": {
+      "type": "icon-bar",
+      "blocks": {
+        "column_zq9NLx": {
+          "type": "column",
+          "settings": {
+            "icon": "apple",
+            "title": "Energía",
+            "text": "<p>Recargá tu día con más vitalidad y menos cansancio.</p><p></p>"
+          }
+        },
+        "column_9NaQK6": {
+          "type": "column",
+          "settings": {
+            "icon": "star",
+            "title": "Foco Mental",
+            "text": "<p>Mejorá tu concentración y rendimiento cognitivo.</p>"
+          }
+        },
+        "column_9hjcLi": {
+          "type": "column",
+          "settings": {
+            "icon": "plant",
+            "title": "Bienestar Físico",
+            "text": "<p>Apoyo para músculos, articulaciones y recuperación.</p><p></p>"
+          }
+        },
+        "column_VpfyUi": {
+          "type": "column",
+          "settings": {
+            "icon": "check_mark",
+            "title": "Calidad Certificada",
+            "text": "<p>Fabricado en EE.UU. bajo estándares GMP</p>"
+          }
+        }
+      },
+      "block_order": [
+        "column_zq9NLx",
+        "column_9NaQK6",
+        "column_9hjcLi",
+        "column_VpfyUi"
+      ],
+      "name": "Icon Bar",
+      "settings": {
+        "title": "Beneficios que se sienten",
+        "heading_size": "h2",
+        "text": "",
+        "icon_size": "medium",
+        "columns_desktop": 4,
+        "icon_color": "accent-1",
+        "background_style": "none",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 60,
+        "padding_bottom": 40,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 20
       }
     },
     "faq_accordion_m3GjeY": {
