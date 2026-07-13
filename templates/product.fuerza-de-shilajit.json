@@ -794,7 +794,7 @@
         "background_style": "none",
         "color_scheme": "background-1",
         "columns_mobile": "1",
-        "swipe_on_mobile": false,
+        "swipe_on_mobile": true,
         "padding_top": 60,
         "padding_bottom": 40,
         "padding_top_mobile": 40,
