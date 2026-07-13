@@ -879,6 +879,90 @@
         "padding_bottom_mobile": 20
       }
     },
+    "cambios_reales_gAJgYK": {
+      "type": "cambios-reales",
+      "blocks": {
+        "review_aNFK3K": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/Captura_de_pantalla_2026-07-13_153337.png",
+            "text": "Tengo mucho estrés en el día a día. Con esto noto que estoy más tranquila y con más energía a la vez.",
+            "author": "María D.",
+            "rating": 5
+          }
+        },
+        "review_aMphGA": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/product11_9a860768-ff6e-4f1c-93bc-4a26406ee886.webp",
+            "text": "Empecé a tomarlo hace un mes y noto muchísima más energía para entrenar. Se lo recomendé a todos mis amigos.",
+            "author": "Samuel O.",
+            "rating": 5
+          }
+        },
+        "review_63YCmw": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/Captura_de_pantalla_2026-07-13_152819.png",
+            "text": "Mejoró mi concentración en el trabajo y ya no llego tan cansado al final del día.",
+            "author": " Diego P.",
+            "rating": 5
+          }
+        },
+        "review_kpqkyT": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/Captura_de_pantalla_2026-07-13_152911.png",
+            "text": "Noto mejor recuperación después de entrenar y más energía en general. Vale totalmente la pena.",
+            "author": "Federico M.",
+            "rating": 5
+          }
+        }
+      },
+      "block_order": [
+        "review_aNFK3K",
+        "review_aMphGA",
+        "review_63YCmw",
+        "review_kpqkyT"
+      ],
+      "name": "Cambios reales",
+      "settings": {
+        "heading": "Cambios reales",
+        "heading_color": "#070809",
+        "heading_font_size_desktop": 36,
+        "heading_font_size_mobile": 36,
+        "subheading": "Más que un suplemento",
+        "subheading_color": "#000000",
+        "subheading_font_size_desktop": 20,
+        "subheading_font_size_mobile": 20,
+        "image_height_desktop": 350,
+        "image_height_mobile": 300,
+        "card_background_color": "#EBF0EC",
+        "card_border_color": "#54875C",
+        "card_border_width": 1,
+        "card_corner_radius": 5,
+        "text_color": "#000000",
+        "author_color": "#000000",
+        "star_color": "#f5a623",
+        "cards_per_row_desktop": 3,
+        "cards_per_row_tablet": 2,
+        "cards_per_row_mobile": 1,
+        "card_gap": 10,
+        "show_arrows_desktop": true,
+        "show_arrows_mobile": true,
+        "arrows_color_desktop": "#54875C",
+        "arrows_bg_color_desktop": "#f1e9e3",
+        "arrows_border_color_desktop": "#54875C",
+        "arrows_color_mobile": "#54875C",
+        "arrows_bg_color_mobile": "#ffffff",
+        "arrows_border_color_mobile": "#54875C",
+        "background_color": "#FFFFFF",
+        "padding_top": 30,
+        "padding_bottom": 40,
+        "padding_top_mobile": 30,
+        "padding_bottom_mobile": 30
+      }
+    },
     "icon_bar_awQW7x": {
       "type": "icon-bar",
       "blocks": {
@@ -1163,6 +1247,7 @@
     "multirow_beE3np",
     "por_que_elegir_WXcDJn",
     "image_with_text_bKfE6p",
+    "cambios_reales_gAJgYK",
     "icon_bar_awQW7x",
     "faq_accordion_m3GjeY",
     "community_feed_dJB7VX"
