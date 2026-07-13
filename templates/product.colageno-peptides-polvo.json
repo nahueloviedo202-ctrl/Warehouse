@@ -768,7 +768,7 @@
         "cards_per_row_tablet": 2,
         "cards_per_row_mobile": 1,
         "card_gap": 24,
-        "show_arrows": false,
+        "show_arrows": true,
         "arrows_color": "#aecce0",
         "color_scheme": "background-1",
         "background_color": "#ffffff",
