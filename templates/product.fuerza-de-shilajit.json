@@ -741,6 +741,66 @@
         "padding_bottom_mobile": 20
       }
     },
+    "icon_bar_awQW7x": {
+      "type": "icon-bar",
+      "blocks": {
+        "column_zq9NLx": {
+          "type": "column",
+          "settings": {
+            "icon": "apple",
+            "title": "Energía",
+            "text": "<p>Recargá tu día con más vitalidad y menos cansancio.</p><p></p>"
+          }
+        },
+        "column_9NaQK6": {
+          "type": "column",
+          "settings": {
+            "icon": "star",
+            "title": "Foco Mental",
+            "text": "<p>Mejorá tu concentración y rendimiento cognitivo.</p>"
+          }
+        },
+        "column_9hjcLi": {
+          "type": "column",
+          "settings": {
+            "icon": "plant",
+            "title": "Bienestar Físico",
+            "text": "<p>Apoyo para músculos, articulaciones y recuperación.</p><p></p>"
+          }
+        },
+        "column_VpfyUi": {
+          "type": "column",
+          "settings": {
+            "icon": "check_mark",
+            "title": "Calidad Certificada",
+            "text": "<p>Fabricado en EE.UU. bajo estándares GMP</p>"
+          }
+        }
+      },
+      "block_order": [
+        "column_zq9NLx",
+        "column_9NaQK6",
+        "column_9hjcLi",
+        "column_VpfyUi"
+      ],
+      "name": "Icon Bar",
+      "settings": {
+        "title": "Beneficios que se sienten",
+        "heading_size": "h2",
+        "text": "",
+        "icon_size": "medium",
+        "columns_desktop": 4,
+        "icon_color": "accent-1",
+        "background_style": "none",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 60,
+        "padding_bottom": 40,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 20
+      }
+    },
     "por_que_elegir_WXcDJn": {
       "type": "por-que-elegir",
       "blocks": {
@@ -963,74 +1023,14 @@
         "padding_bottom_mobile": 30
       }
     },
-    "icon_bar_awQW7x": {
-      "type": "icon-bar",
-      "blocks": {
-        "column_zq9NLx": {
-          "type": "column",
-          "settings": {
-            "icon": "apple",
-            "title": "Energía",
-            "text": "<p>Recargá tu día con más vitalidad y menos cansancio.</p><p></p>"
-          }
-        },
-        "column_9NaQK6": {
-          "type": "column",
-          "settings": {
-            "icon": "star",
-            "title": "Foco Mental",
-            "text": "<p>Mejorá tu concentración y rendimiento cognitivo.</p>"
-          }
-        },
-        "column_9hjcLi": {
-          "type": "column",
-          "settings": {
-            "icon": "plant",
-            "title": "Bienestar Físico",
-            "text": "<p>Apoyo para músculos, articulaciones y recuperación.</p><p></p>"
-          }
-        },
-        "column_VpfyUi": {
-          "type": "column",
-          "settings": {
-            "icon": "check_mark",
-            "title": "Calidad Certificada",
-            "text": "<p>Fabricado en EE.UU. bajo estándares GMP</p>"
-          }
-        }
-      },
-      "block_order": [
-        "column_zq9NLx",
-        "column_9NaQK6",
-        "column_9hjcLi",
-        "column_VpfyUi"
-      ],
-      "name": "Icon Bar",
-      "settings": {
-        "title": "Beneficios que se sienten",
-        "heading_size": "h2",
-        "text": "",
-        "icon_size": "medium",
-        "columns_desktop": 4,
-        "icon_color": "accent-1",
-        "background_style": "none",
-        "color_scheme": "background-1",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 60,
-        "padding_bottom": 40,
-        "padding_top_mobile": 40,
-        "padding_bottom_mobile": 20
-      }
-    },
     "faq_accordion_m3GjeY": {
       "type": "faq-accordion",
       "blocks": {
         "question_giLkXQ": {
           "type": "question",
           "settings": {
-            "question": "¿Cuánto dura el efecto del delineador de cejas?",
-            "answer": "<p>Hasta 2 días, con una fórmula resistente al agua.</p>",
+            "question": "¿Cuántas cápsulas debo tomar al día?",
+            "answer": "<p>1 a 2 cápsulas por día, preferentemente con una comida y un vaso de agua.</p>",
             "question_color": "",
             "question_font_size_desktop": 16,
             "question_font_size_mobile": 15,
@@ -1044,8 +1044,8 @@
         "question_36wNwy": {
           "type": "question",
           "settings": {
-            "question": "¿El producto es adecuado para pieles sensibles?",
-            "answer": "<p>Sí, su fórmula está pensada para una aplicación suave y precisa sin irritar la piel.</p>",
+            "question": "¿Es seguro para todos?",
+            "answer": "<p>Se recomienda consultar a un médico antes de usarlo si estás embarazada, en lactancia, sos menor de 18 años o tenés una condición médica preexistente.</p>",
             "question_color": "",
             "question_font_size_desktop": 16,
             "question_font_size_mobile": 15,
@@ -1059,8 +1059,8 @@
         "question_e4hhdC": {
           "type": "question",
           "settings": {
-            "question": "¿Sirve para cejas ralas o con espacios vacíos?",
-            "answer": "<p>Sí, su micro aplicador de doble punta crea trazos finos que imitan el vello real, ideal para rellenar zonas vacías.</p>",
+            "question": "¿Cómo garantizan la calidad del producto?",
+            "answer": "<p>Se fabrica en una planta certificada GMP en EE.UU., inspeccionada por la FDA y testeada por laboratorios externos.</p>",
             "question_color": "",
             "question_font_size_desktop": 16,
             "question_font_size_mobile": 15,
@@ -1074,8 +1074,8 @@
         "question_HKe6yp": {
           "type": "question",
           "settings": {
-            "question": "¿Cuál es la mejor manera de aplicarlo?",
-            "answer": "<p>Con pequeños movimientos hacia arriba usando el micro aplicador, repitiendo hasta lograr el efecto rellenador deseado.</p>",
+            "question": "¿Cuál es la política de devolución?",
+            "answer": "<p>Contás con 30 días desde que recibís el producto para solicitar una devolución, sin usar y en su empaque original.</p>",
             "question_color": "",
             "question_font_size_desktop": 16,
             "question_font_size_mobile": 15,
@@ -1089,8 +1089,8 @@
         "question_V76RRe": {
           "type": "question",
           "settings": {
-            "question": "¿Cómo elijo el tono correcto?",
-            "answer": "<p>Está disponible en 4 tonos (Light Brunette, Brunette, Dark Brunette y Soft Black) que se adaptan a distintos colores de cabello para un resultado natural.</p>",
+            "question": "¿Cuánto tarda en llegar mi pedido?",
+            "answer": "<p>Los pedidos se procesan y despachan dentro de las 24 horas.</p>",
             "question_color": "",
             "question_font_size_desktop": 16,
             "question_font_size_mobile": 15,
@@ -1245,10 +1245,10 @@
     "slideshow_HfVNww",
     "press_ticker_gTJiLE",
     "multirow_beE3np",
+    "icon_bar_awQW7x",
     "por_que_elegir_WXcDJn",
     "image_with_text_bKfE6p",
     "cambios_reales_gAJgYK",
-    "icon_bar_awQW7x",
     "faq_accordion_m3GjeY",
     "community_feed_dJB7VX"
   ]
