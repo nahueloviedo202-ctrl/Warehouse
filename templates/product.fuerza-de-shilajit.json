@@ -670,7 +670,7 @@
         "text_italic": true,
         "text_uppercase": true,
         "color_scheme": "background-1",
-        "custom_background_color": "#F2F3F4",
+        "custom_background_color": "#B4C6B7",
         "custom_text_color": "#000000",
         "padding_top": 20,
         "padding_bottom": 20,
@@ -684,10 +684,10 @@
         "row_cJN9iW": {
           "type": "row",
           "settings": {
-            "image": "shopify://shop_images/product6_e86e4a27-0c5d-4b96-acc8-3e274ce22cdd.webp",
+            "image": "shopify://shop_images/product9_3b782451-3e1c-47bd-a1c8-a9edec78c9e8.webp",
             "caption": " RESULTADO NATURAL",
-            "heading": "Trazos que imitan tu vello real",
-            "text": "<p>Su micro aplicador de doble punta define y da forma con precisión profesional, logrando un efecto 3D relleno y totalmente natural.</p>",
+            "heading": "Fácil de tomar, poderoso por dentro",
+            "text": "<p>Cada cápsula concentra 15.250mg de ingredientes naturales en un tamaño estándar, fácil de tragar, para sumar energía y bienestar a tu rutina diaria sin complicaciones.</p>",
             "button_label": "",
             "button_link": "",
             "button_background_color": "",
@@ -702,14 +702,14 @@
         "row_yHp8Tn": {
           "type": "row",
           "settings": {
-            "image": "shopify://shop_images/product2_0cd4dd8e-435d-48f0-b834-18e5e2d1cf95.webp",
-            "caption": "PINCEL DE DOBLE PUNTA",
-            "heading": " Precisión en cada trazo",
-            "text": "<p>Diseñado para crear líneas finas o rellenar espacios vacíos, con una fórmula resistente al agua que dura hasta 2 días.</p>",
-            "button_label": "QUIERO MI DELINEADOR",
+            "image": "shopify://shop_images/product8_29581f21-8f54-4b30-8ba2-544038a70039.webp",
+            "caption": "ENERGÍA Y VITALIDAD",
+            "heading": "Rendí más, cansate menos",
+            "text": "<p>Con Shilajit, Ashwagandha y Rhodiola Rosea, recargá tu energía diaria y mejorá tu resistencia física, ideal para acompañar tu entrenamiento y tu rutina activa.</p>",
+            "button_label": "QUIERO MI SHILASTRENGTH",
             "button_link": "#informacion-producto",
             "button_background_color": "#000000",
-            "button_text_color": "#FFFFFF",
+            "button_text_color": "#ffffff",
             "button_border_color": "#000000",
             "heading_font_size_desktop": 40,
             "heading_font_size_mobile": 24,
@@ -724,7 +724,7 @@
       ],
       "name": "t:sections.multirow.presets.name",
       "settings": {
-        "image_height": "medium",
+        "image_height": "adapt",
         "desktop_image_width": "medium",
         "heading_size": "h1",
         "text_style": "body",
@@ -741,13 +741,73 @@
         "padding_bottom_mobile": 20
       }
     },
+    "icon_bar_awQW7x": {
+      "type": "icon-bar",
+      "blocks": {
+        "column_zq9NLx": {
+          "type": "column",
+          "settings": {
+            "icon": "apple",
+            "title": "Energía",
+            "text": "<p>Recargá tu día con más vitalidad y menos cansancio.</p><p></p>"
+          }
+        },
+        "column_9NaQK6": {
+          "type": "column",
+          "settings": {
+            "icon": "star",
+            "title": "Foco Mental",
+            "text": "<p>Mejorá tu concentración y rendimiento cognitivo.</p>"
+          }
+        },
+        "column_9hjcLi": {
+          "type": "column",
+          "settings": {
+            "icon": "plant",
+            "title": "Bienestar Físico",
+            "text": "<p>Apoyo para músculos, articulaciones y recuperación.</p><p></p>"
+          }
+        },
+        "column_VpfyUi": {
+          "type": "column",
+          "settings": {
+            "icon": "check_mark",
+            "title": "Calidad Certificada",
+            "text": "<p>Fabricado en EE.UU. bajo estándares GMP</p>"
+          }
+        }
+      },
+      "block_order": [
+        "column_zq9NLx",
+        "column_9NaQK6",
+        "column_9hjcLi",
+        "column_VpfyUi"
+      ],
+      "name": "Icon Bar",
+      "settings": {
+        "title": "Beneficios que se sienten",
+        "heading_size": "h2",
+        "text": "",
+        "icon_size": "medium",
+        "columns_desktop": 4,
+        "icon_color": "accent-1",
+        "background_style": "none",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 28,
+        "padding_bottom_mobile": 28
+      }
+    },
     "por_que_elegir_WXcDJn": {
       "type": "por-que-elegir",
       "blocks": {
         "row_EawppA": {
           "type": "row",
           "settings": {
-            "feature": "Trazos que imitan el vello real",
+            "feature": "15.250mg de ingredientes activos por cápsula",
             "vita_has": true,
             "others_has": false
           }
@@ -755,7 +815,7 @@
         "row_XiwCyj": {
           "type": "row",
           "settings": {
-            "feature": "Efecto 3D relleno y natural",
+            "feature": "8 nutrientes esenciales en una sola fórmula",
             "vita_has": true,
             "others_has": false
           }
@@ -763,7 +823,7 @@
         "row_nJURLY": {
           "type": "row",
           "settings": {
-            "feature": "Micro aplicador de doble punta",
+            "feature": "Energía, foco y libido en un solo producto",
             "vita_has": true,
             "others_has": false
           }
@@ -771,7 +831,7 @@
         "row_pfU8Qh": {
           "type": "row",
           "settings": {
-            "feature": "Resistente al agua",
+            "feature": "Testeado por terceros",
             "vita_has": true,
             "others_has": false
           }
@@ -779,7 +839,7 @@
         "row_Ya3H7G": {
           "type": "row",
           "settings": {
-            "feature": "Fácil aplicación con precisión profesional",
+            "feature": "Fabricado en EE.UU. bajo estándares GMP",
             "vita_has": true,
             "others_has": false
           }
@@ -787,7 +847,7 @@
         "row_W63PQg": {
           "type": "row",
           "settings": {
-            "feature": "Duración hasta 2 días",
+            "feature": "Garantía de devolución de 30 días",
             "vita_has": true,
             "others_has": false
           }
@@ -809,13 +869,13 @@
         "title_weight": "600",
         "title_size_desktop": 36,
         "title_size_mobile": 24,
-        "product_image": "shopify://shop_images/product1_b29129cb-c85d-40b7-bbac-d34512e6c40c.webp",
+        "product_image": "shopify://shop_images/product1_28de8983-b0fb-48e8-8cc1-2275b4d54bf0.webp",
         "product_img_size_desktop": 56,
         "product_img_size_mobile": 44,
         "vita_label": "",
         "others_label": "Otros",
         "table_max_width": 500,
-        "vita_bg_color": "#DDDEE0",
+        "vita_bg_color": "#54875C",
         "divider_color": "#444444",
         "icon_color": "#1a1a1a",
         "icon_size_desktop": 35,
@@ -831,96 +891,52 @@
         "padding_bottom_mobile": 20
       }
     },
-    "comparison_slider_NtzU6b": {
-      "type": "comparison-slider",
+    "image_with_text_bKfE6p": {
+      "type": "image-with-text",
       "blocks": {
-        "simple_image_QRL6bV": {
-          "type": "simple_image",
+        "heading_LMhQWN": {
+          "type": "heading",
           "settings": {
-            "image": "shopify://shop_images/product8.jpg",
-            "image_alt": "",
-            "image_width": 530,
-            "image_height": 550,
-            "image_height_mobile": 330,
-            "object_fit": "cover",
-            "image_border_radius": 10
+            "heading": "Resultados que crecen con el tiempo",
+            "heading_size": "h1",
+            "heading_color": "",
+            "heading_font_size_desktop": 36,
+            "heading_font_size_mobile": 26,
+            "heading_font_weight": "700"
           }
         },
-        "text_content_4pHk8N": {
-          "type": "text_content",
+        "text_DQcCgi": {
+          "type": "text",
           "settings": {
-            "title": "Hecho para cejas visiblemente rellenas",
-            "heading_size": "h2",
-            "heading_italic": true,
-            "accent_color_scheme": "accent-2",
-            "text": "",
-            "feature_1_heading": "Trazos que imitan tu vello real.",
-            "feature_1_text": "<p>Su micro aplicador de doble punta define y da forma con precisión, sin marcas gruesas ni acabado artificial.</p>",
-            "feature_2_heading": "Se adapta a tu tono exacto, al instante.",
-            "feature_2_text": "<p>Disponible en 4 tonos que se funden con tu color natural, logrando un resultado uniforme y sin acabados anaranjados.</p>",
-            "circle_background_color": "#F2F3F4",
-            "icon_color": "#2b2b2b",
-            "label_color": "#000000",
-            "circle_size_desktop": 96,
-            "circle_size_mobile": 72,
-            "badge_1_icon": "shield",
-            "badge_1_label": "Resistente al agua",
-            "badge_2_icon": "star",
-            "badge_2_label": "Efecto 3D natural",
-            "badge_3_icon": "none",
-            "badge_3_label": "",
-            "badge_4_icon": "none",
-            "badge_4_label": "",
-            "button_label": "Comprar ahora",
-            "link": "#informacion-producto",
-            "button_style_secondary": false,
-            "button_full_width": false,
-            "button_bg_color": "#000000",
-            "button_text_color": "#ffffff",
-            "button_border_color": "#000000",
-            "button_border_width": 0,
-            "button_border_radius": 0,
-            "button_font_size": 0,
-            "button_font_weight": "inherit",
-            "button_padding_v": 0,
-            "button_padding_h": 0,
-            "desktop_content_alignment": "left",
-            "mobile_content_alignment": "left",
-            "heading_color": "#000000",
-            "heading_font_size_desktop": 32,
-            "heading_font_size_mobile": 24,
-            "heading_font_weight": "600",
-            "text_color": "#000000",
+            "text": "<p>Con el uso constante de ShilaStrength, la mayoría nota un impulso inicial de energía en la primera semana, beneficios significativos hacia el mes 2, y un bienestar óptimo sostenido a partir del mes 3.</p>",
+            "text_style": "body",
+            "text_color": "",
             "text_font_size_desktop": 16,
             "text_font_size_mobile": 15,
-            "text_font_weight": "400",
-            "feature_heading_color": "#000000",
-            "feature_heading_font_size_desktop": 20,
-            "feature_heading_font_size_mobile": 16,
-            "feature_heading_font_weight": "700",
-            "feature_text_color": "",
-            "feature_text_font_size_desktop": 15,
-            "feature_text_font_size_mobile": 14,
-            "feature_text_font_weight": "400"
+            "text_font_weight": "400"
           }
         }
       },
       "block_order": [
-        "simple_image_QRL6bV",
-        "text_content_4pHk8N"
+        "heading_LMhQWN",
+        "text_DQcCgi"
       ],
-      "custom_css": [
-        "@media screen and (max-width: 749px) {.h2 {font-size: calc(var(--font-heading-scale) * 1.7rem); }}",
-        "@media screen and (max-width: 749px) {.section-comparison_slider_NtzU6b-padding {padding-top: 32px !important; padding-bottom: 32px !important; }}"
-      ],
-      "name": "Before & After slider",
+      "name": "t:sections.image-with-text.presets.name",
       "settings": {
+        "image": "shopify://shop_images/d66288c0-28ce-4a1b-a93f-2fc3d01adc2e.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
         "color_scheme": "background-1",
-        "background_color": "#F2F3F4",
-        "padding_top": 60,
-        "padding_bottom": 40,
-        "padding_top_mobile": 40,
-        "padding_bottom_mobile": 20
+        "section_color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 28,
+        "padding_bottom_mobile": 28
       }
     },
     "faq_accordion_m3GjeY": {
@@ -1030,7 +1046,7 @@
         "color_scheme": "background-1",
         "accent_color_scheme": "accent-2",
         "background_color": "",
-        "item_background": "#F2F3F4",
+        "item_background": "#B4C6B7",
         "item_radius": 12,
         "item_spacing": 12,
         "open_first_question": false,
@@ -1146,7 +1162,8 @@
     "press_ticker_gTJiLE",
     "multirow_beE3np",
     "por_que_elegir_WXcDJn",
-    "comparison_slider_NtzU6b",
+    "image_with_text_bKfE6p",
+    "icon_bar_awQW7x",
     "faq_accordion_m3GjeY",
     "community_feed_dJB7VX"
   ]
