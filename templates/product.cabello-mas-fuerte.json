@@ -1,0 +1,1010 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "trustpilot_bar_W4kVKz": {
+          "type": "trustpilot_bar",
+          "settings": {
+            "rating": "4.8",
+            "max_rating": "5",
+            "pre_text": "Valorado",
+            "separator_text": "de",
+            "customer_count": "+500.000",
+            "suffix_text": "clientes",
+            "star_color": "#00b67a",
+            "empty_star_color": "#dcdce6",
+            "star_size": 24,
+            "star_size_mobile": 14,
+            "text_color": "",
+            "text_size": 14,
+            "text_size_mobile": 12,
+            "alignment": "flex-start",
+            "gap": 8,
+            "gap_mobile": 6
+          }
+        },
+        "press_logos_LWbnV8": {
+          "type": "press_logos",
+          "settings": {
+            "heading": "",
+            "img_height": 50,
+            "text_size": 22,
+            "logos_gap": 40,
+            "logo_opacity": 40,
+            "grayscale": 100,
+            "text_color": "#1c1c1c",
+            "border_color": "#e8e8e8",
+            "logo_1_image": "shopify://shop_images/image.webp",
+            "logo_1_text": "MUJERHOY",
+            "logo_2_image": "shopify://shop_images/ELLE.webp",
+            "logo_2_text": "ELLE",
+            "logo_3_image": "shopify://shop_images/vogue.webp",
+            "logo_3_text": "VOGUE",
+            "logo_4_image": "shopify://shop_images/woma.webp",
+            "logo_4_text": "Women's Health",
+            "logo_5_text": "",
+            "logo_6_text": ""
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "text_size": "h2",
+            "title_alignment": "left",
+            "uppercase_title": false,
+            "title_color": "",
+            "font_weight": "600",
+            "font_size_desktop": 32,
+            "font_size_mobile": 24,
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "padding_top_mobile": 0,
+            "padding_bottom_mobile": 0
+          }
+        },
+        "description_yT64Wm": {
+          "type": "description",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "sale_price_size_desktop": 19,
+            "sale_price_size_mobile": 24,
+            "compare_price_size_desktop": 19,
+            "compare_price_size_mobile": 16,
+            "price_gap": 10,
+            "price_side_text": "0.67FL OZ / 20ml",
+            "side_text_size_desktop": 16,
+            "side_text_size_mobile": 13,
+            "side_text_color": "#808080",
+            "show_price_divider": false,
+            "divider_thickness": 1,
+            "divider_color": "#000000",
+            "divider_opacity": 100,
+            "divider_margin_top_desktop": 12,
+            "divider_margin_bottom_desktop": 12,
+            "divider_margin_top_mobile": 8,
+            "divider_margin_bottom_mobile": 8,
+            "center_on_mobile": false
+          }
+        },
+        "de244682-4323-4802-b4ba-b79b08e0c71d": {
+          "type": "emoji_benefits",
+          "name": "Bullets",
+          "settings": {
+            "benefits": "{{ product.metafields.custom.bullets | metafield_tag }}",
+            "font_size_desktop": 15,
+            "font_size_mobile": 14,
+            "font_weight": "400",
+            "font_color": "",
+            "text_align": "left",
+            "item_spacing_desktop": 12,
+            "item_spacing_mobile": 10
+          }
+        },
+        "44f9cdc2-f4bf-466e-87d5-fb765ad4864a": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "enable_color_swatches": false,
+            "custom_swatch_option_name": "",
+            "enable_swatches_custom_colors": false
+          }
+        },
+        "kaching_bundles_app_block_nKTVda": {
+          "type": "shopify://apps/kaching-bundles/blocks/app-block/6c637362-a106-4a32-94ac-94dcfd68cdb8",
+          "settings": {
+            "product": "{{product}}",
+            "manual_deal_block_id": ""
+          }
+        },
+        "074f248d-8d73-4c8f-a97e-d8e82c5be5fc": {
+          "type": "quantity_selector",
+          "disabled": true,
+          "settings": {
+            "enable_quantity_discounts": true,
+            "headline": "PACKS AHORRO",
+            "preselected": "option_1",
+            "display_badge": "none",
+            "badge_text": "Most Popular",
+            "headline_color": "",
+            "headline_font_size": 14,
+            "headline_weight": "700",
+            "card_bg_color": "#f6f3f1",
+            "card_border_color": "#bc6161",
+            "card_selected_bg_color": "#f6f3f1",
+            "card_selected_border_color": "#bc6161",
+            "card_price_color": "#bc6161",
+            "badge_bg_color": "",
+            "benefit_color": "",
+            "enable_variant_selectors": false,
+            "option_1_quantity": 1,
+            "option_1_label": "Compra 1 Unidad",
+            "option_1_benefit": "",
+            "option_1_caption": "Ahorras 40€",
+            "option_1_discount_type": "none",
+            "option_1_percentage_off": 0,
+            "option_1_fixed_amount_off": "0",
+            "option_2_quantity": 2,
+            "option_2_label": "Compra 2 Unidades",
+            "option_2_benefit": "",
+            "option_2_caption": "Ahorras 100€",
+            "option_2_discount_type": "fixed_amount",
+            "option_2_percentage_off": 0,
+            "option_2_fixed_amount_off": "20",
+            "option_3_quantity": 3,
+            "option_3_label": "Compra 3 Unidades",
+            "option_3_benefit": "",
+            "option_3_caption": "Ahorra 160€",
+            "option_3_discount_type": "fixed_amount",
+            "option_3_percentage_off": 0,
+            "option_3_fixed_amount_off": "40",
+            "option_4_quantity": 0,
+            "option_4_label": "",
+            "option_4_benefit": "",
+            "option_4_caption": "",
+            "option_4_discount_type": "none",
+            "option_4_percentage_off": 0,
+            "option_4_fixed_amount_off": "0"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "skip_cart": false,
+            "uppercase_text": true
+          }
+        },
+        "pdp_stock_pulse_Y3WqH7": {
+          "type": "pdp_stock_pulse",
+          "settings": {
+            "text": "Últimas unidades en stock",
+            "dot_color": "#bc6161",
+            "pulse_color": "#d5adad",
+            "dot_size": 14,
+            "gap": 8,
+            "text_color": "",
+            "font_size_desktop": 14,
+            "font_size_mobile": 13,
+            "font_weight": "600",
+            "alignment": "left"
+          }
+        },
+        "2edbf491-d07c-4718-b71e-18ffe22ab7dc": {
+          "type": "estimated_shipping",
+          "settings": {
+            "display_icon": true,
+            "custom_icon": "shopify://shop_images/big-cargo-truck_icon-icons.com_68588.svg",
+            "icon_size_desktop": 22,
+            "icon_size_mobile": 18,
+            "icon_alignment": "top",
+            "font_size_desktop": 14,
+            "font_size_mobile": 13,
+            "message": "<p><strong>Envío exprés</strong> recíbelo en 24/48h</p>",
+            "min_shipping_days": 1,
+            "max_shipping_days": 2,
+            "date_format": "day_dd_mm_numeric",
+            "days_labels": "Lunes, Martes, Miercoles, Jueves, Viernes, Sabado, Domingo",
+            "months_labels": "Enero, Febrero, Marzo, April, May, June, July, August, September, October, November, December",
+            "padding_top": 10,
+            "padding_bottom": 10,
+            "padding_top_mobile": 8,
+            "padding_bottom_mobile": 8
+          }
+        },
+        "trust_badges_PHQ3UA": {
+          "type": "trust_badges",
+          "settings": {
+            "show_item_1": true,
+            "icon_1": "tablets",
+            "custom_image_1": "shopify://shop_images/icon-tablets_png.png",
+            "label_1": "Devolución de 30 días",
+            "show_item_2": true,
+            "icon_2": "shipping_box",
+            "custom_image_2": "shopify://shop_images/icon-shipping-box_png.png",
+            "label_2": "Envío gratuito",
+            "show_item_3": true,
+            "icon_3": "shipping_box",
+            "custom_image_3": "shopify://shop_images/icon-shipping-box_png.png",
+            "label_3": "Devolución gratuita",
+            "background_color": "#ffffff",
+            "border_color": "#e5e5e5",
+            "border_width": 1,
+            "border_radius": 14,
+            "padding_vertical": 20,
+            "padding_horizontal": 24,
+            "items_gap": 16,
+            "padding_vertical_mobile": 16,
+            "padding_horizontal_mobile": 16,
+            "items_gap_mobile": 8,
+            "icon_color": "#1a1a1a",
+            "icon_size": 32,
+            "text_color": "#6b6b6b",
+            "text_size": 13,
+            "label_gap": 8,
+            "icon_size_mobile": 28,
+            "text_size_mobile": 11,
+            "alignment": "space-around"
+          }
+        },
+        "pdp_acc_wrapper_h7gTnW": {
+          "type": "pdp_acc_wrapper",
+          "settings": {
+            "section_title": "",
+            "section_title_color": "",
+            "section_title_size_desktop": 18,
+            "section_title_size_mobile": 16,
+            "section_title_weight": "600",
+            "background_color": "",
+            "border_color": "#e5e7eb",
+            "border_width": 0,
+            "border_radius": 8,
+            "padding_v": 10,
+            "padding_h": 16,
+            "divider_color": "#e5e7eb",
+            "show_numbers": false,
+            "icon_size": 24,
+            "number_bg_color": "#f3f4f6",
+            "number_color": "#111827",
+            "toggle_color": "#111827",
+            "item_title_color": "",
+            "item_title_size_desktop": 15,
+            "item_title_size_mobile": 14,
+            "item_title_weight": "700",
+            "item_body_color": "",
+            "item_body_size_desktop": 14,
+            "item_body_size_mobile": 13,
+            "item_1_title": "Descripción",
+            "item_1_body": "<p>{{ product.metafields.custom.descripcion | metafield_tag }}</p>",
+            "item_2_title": "Beneficios",
+            "item_2_body": "<p>{{ product.metafields.custom.beneficios | metafield_tag }}</p>",
+            "item_3_title": "Envió y devoluciones",
+            "item_3_body": "<p>{{ product.metafields.custom.envio_y_devoluciones | metafield_tag }}</p>",
+            "item_4_title": "Modo de uso",
+            "item_4_body": "<p>{{ product.metafields.custom.modo_de_uso | metafield_tag }}</p>",
+            "item_5_title": "Ingredientes",
+            "item_5_body": "<p>{{ product.metafields.custom.ingredientes | metafield_tag }}</p>",
+            "item_6_title": "",
+            "item_6_body": ""
+          }
+        },
+        "video_carousel_gUmwA4": {
+          "type": "video_carousel",
+          "disabled": true,
+          "settings": {
+            "heading": "Verlo en acción",
+            "heading_size": "h2",
+            "heading_color": "#000000",
+            "heading_weight": "700",
+            "heading_font_size_desktop": 24,
+            "heading_font_size_mobile": 20,
+            "color_scheme": "background-1",
+            "video_1": "https://cdn.shopify.com/videos/c/o/v/d7c7d181d1fd4fac813b87d92308b8a2.mp4",
+            "video_2": "https://cdn.shopify.com/videos/c/o/v/c2d66c3251294e438216050c213ce6d9.mp4",
+            "video_3": "https://cdn.shopify.com/videos/c/o/v/dc60fabc8fdc4ea3b7b114cb136bf45f.mp4",
+            "video_4": "https://cdn.shopify.com/videos/c/o/v/3eb758fcce1f428a9c6927f0de4c9cc7.mp4",
+            "aspect_ratio": "9/16",
+            "items_desktop": 3.2,
+            "items_mobile": 1.2,
+            "gap": 12,
+            "corner_radius": 16,
+            "show_arrows": true,
+            "show_controls": true
+          }
+        },
+        "149aabfb-9fd8-4472-a633-6032dbe01ed0": {
+          "type": "reviews",
+          "disabled": true,
+          "settings": {
+            "display_stars": true,
+            "avatar_alignment": "top",
+            "author_1": "Emma R.",
+            "text_1": "<p>Estoy encantada con el producto, en solo 2 semanas noté la diferencia</p>",
+            "image_1": "shopify://shop_images/hermosa-mujer-joven-posando_23-2148994740.avif",
+            "author_2": "",
+            "text_2": "",
+            "author_3": "",
+            "text_3": "",
+            "padding_top": 10,
+            "padding_bottom": 10,
+            "padding_top_mobile": 8,
+            "padding_bottom_mobile": 8
+          }
+        }
+      },
+      "block_order": [
+        "trustpilot_bar_W4kVKz",
+        "press_logos_LWbnV8",
+        "title",
+        "description_yT64Wm",
+        "price",
+        "de244682-4323-4802-b4ba-b79b08e0c71d",
+        "44f9cdc2-f4bf-466e-87d5-fb765ad4864a",
+        "kaching_bundles_app_block_nKTVda",
+        "074f248d-8d73-4c8f-a97e-d8e82c5be5fc",
+        "buy_buttons",
+        "pdp_stock_pulse_Y3WqH7",
+        "2edbf491-d07c-4718-b71e-18ffe22ab7dc",
+        "trust_badges_PHQ3UA",
+        "pdp_acc_wrapper_h7gTnW",
+        "video_carousel_gUmwA4",
+        "149aabfb-9fd8-4472-a633-6032dbe01ed0"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "media_size": "medium",
+        "constrain_to_viewport": false,
+        "media_fit": "contain",
+        "gallery_layout": "thumbnail",
+        "media_position": "left",
+        "image_zoom": "none",
+        "mobile_thumbnails": "show",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "trust_badge_position": "top-right",
+        "trust_badge_size": "medium",
+        "background_color": "",
+        "padding_top": 24,
+        "padding_bottom": 60,
+        "padding_top_mobile": 28,
+        "padding_bottom_mobile": 32
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "disabled": true,
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "heading_color": "",
+        "heading_font_size_desktop": 36,
+        "heading_font_size_mobile": 26,
+        "heading_font_weight": "700",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 24,
+        "padding_top_mobile": 28,
+        "padding_bottom_mobile": 28
+      }
+    },
+    "press_ticker_gTJiLE": {
+      "type": "press-ticker",
+      "blocks": {
+        "item_3kkXqc": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Revista_InStyle_idQQukCzRJ_0.svg",
+            "text": "",
+            "link": "",
+            "target_blank": false
+          }
+        },
+        "item_nDK9AQ": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/vogue-logo.svg",
+            "text": "VOGUE",
+            "link": "",
+            "target_blank": false
+          }
+        },
+        "item_RmqdGV": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/pngkey.com-rolling-stones-logo-png-1512812.png",
+            "text": "RUSSH",
+            "link": "",
+            "target_blank": false
+          }
+        },
+        "item_c3eGAi": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/960px-Marie_Claire_Magazine_logo_svg.png",
+            "text": "marie claire",
+            "link": "",
+            "target_blank": false
+          }
+        },
+        "item_wrJGVn": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/harpers-bazaar-logo.svg",
+            "text": "BAZAAR",
+            "link": "",
+            "target_blank": false
+          }
+        }
+      },
+      "block_order": [
+        "item_3kkXqc",
+        "item_nDK9AQ",
+        "item_RmqdGV",
+        "item_c3eGAi",
+        "item_wrJGVn"
+      ],
+      "name": "Press Ticker",
+      "settings": {
+        "speed": 1,
+        "direction": "left",
+        "pause_on_hover": true,
+        "separator_char": "•",
+        "separator_spacing": 24,
+        "separator_size": 1,
+        "desktop_logo_height": 30,
+        "mobile_logo_height": 24,
+        "text_size": "2",
+        "text_bold": false,
+        "text_italic": true,
+        "text_uppercase": true,
+        "color_scheme": "background-1",
+        "custom_background_color": "#f2f3f4",
+        "custom_text_color": "#000000",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "padding_top_mobile": 16,
+        "padding_bottom_mobile": 16
+      }
+    },
+    "collage_6MLj8w": {
+      "type": "collage",
+      "blocks": {
+        "image_8hwREi": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/infallible_fix_spray_reno_acabado_904d7627-c15e-4863-9ce9-3465afe5437f.webp"
+          }
+        },
+        "image_fg87nw": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/inf-fix-spray-aplicacion.webp"
+          }
+        },
+        "image_ticCNT": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Gemini_Generated_Image_y881fky881fky881.webp"
+          }
+        }
+      },
+      "block_order": [
+        "image_8hwREi",
+        "image_fg87nw",
+        "image_ticCNT"
+      ],
+      "name": "t:sections.collage.presets.name",
+      "settings": {
+        "heading": "",
+        "heading_size": "h2",
+        "desktop_layout": "right",
+        "mobile_layout": "column",
+        "card_styles": "product-card-wrapper",
+        "color_scheme": "background-1",
+        "padding_top": 60,
+        "padding_bottom": 40,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 20
+      }
+    },
+    "product_highlight_iUAetw": {
+      "type": "product-highlight",
+      "blocks": {
+        "heading_nXpFqj": {
+          "type": "heading",
+          "settings": {
+            "heading_italic": "Siéntete segura",
+            "heading_normal": "con tu maquillaje intacto",
+            "color": "",
+            "font_size_desktop": 32,
+            "font_size_mobile": 20
+          }
+        },
+        "text_mdAemH": {
+          "type": "text",
+          "settings": {
+            "text": "<p>El Spray Fijador Infallible 36H sella tu maquillaje al instante con una pulverización microfina, resistente a transferencias, sudor y roce, con secado en tan solo 3 segundos.</p>",
+            "color": "#434343",
+            "font_weight": "400",
+            "font_size_desktop": 16,
+            "font_size_mobile": 14
+          }
+        },
+        "bullet_aMUqG9": {
+          "type": "bullet",
+          "settings": {
+            "bullet_icon": "✓",
+            "text": "Fija el maquillaje hasta por 36 horas",
+            "color": "#434343",
+            "font_weight": "400",
+            "font_size_desktop": 16,
+            "font_size_mobile": 15
+          }
+        },
+        "bullet_Qbhi3t": {
+          "type": "bullet",
+          "settings": {
+            "bullet_icon": "✓",
+            "text": "Seca en 3 segundos",
+            "color": "#434343",
+            "font_weight": "400",
+            "font_size_desktop": 16,
+            "font_size_mobile": 15
+          }
+        },
+        "bullet_cQqMXV": {
+          "type": "bullet",
+          "settings": {
+            "bullet_icon": "✓",
+            "text": "Sin marcas de agua ni sensación pegajosa",
+            "color": "#434343",
+            "font_weight": "400",
+            "font_size_desktop": 16,
+            "font_size_mobile": 15
+          }
+        }
+      },
+      "block_order": [
+        "heading_nXpFqj",
+        "text_mdAemH",
+        "bullet_aMUqG9",
+        "bullet_Qbhi3t",
+        "bullet_cQqMXV"
+      ],
+      "name": "Producto destacado",
+      "settings": {
+        "image": "shopify://shop_images/vignette-usp-03.webp",
+        "layout": "image_first",
+        "content_bg_color": "#f2f3f4",
+        "border_radius": 30,
+        "border_radius_mobile": 20,
+        "color_scheme": "background-1",
+        "padding_top": 60,
+        "padding_bottom": 40,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 20
+      }
+    },
+    "product_highlight_kHfNT3": {
+      "type": "product-highlight",
+      "blocks": {
+        "heading_HzDBxC": {
+          "type": "heading",
+          "settings": {
+            "heading_italic": "{{ product.metafields.custom.producto_destacado_encabezado.value }}",
+            "heading_normal": "{{ product.metafields.custom.producto_destacado_titulo_normal.value }}",
+            "color": "",
+            "font_size_desktop": 32,
+            "font_size_mobile": 20
+          }
+        },
+        "text_GKw3gX": {
+          "type": "text",
+          "settings": {
+            "text": "<p>\"La Base Vita Cosmetics ofrece alta cobertura para disimular manchas, ojeras, acné, vitíligo, tatuajes y otras imperfecciones, con un acabado mate natural para rostro y cuerpo.\"</p>",
+            "color": "#434343",
+            "font_weight": "400",
+            "font_size_desktop": 16,
+            "font_size_mobile": 14
+          }
+        },
+        "bullet_mW9XYa": {
+          "type": "bullet",
+          "settings": {
+            "bullet_icon": "✓",
+            "text": " Volumen visible al instante",
+            "color": "#434343",
+            "font_weight": "400",
+            "font_size_desktop": 16,
+            "font_size_mobile": 15
+          }
+        },
+        "bullet_y3Xzak": {
+          "type": "bullet",
+          "settings": {
+            "bullet_icon": "✓",
+            "text": "Brillo intenso de acabado glossy",
+            "color": "#434343",
+            "font_weight": "400",
+            "font_size_desktop": 16,
+            "font_size_mobile": 15
+          }
+        },
+        "bullet_C9AQXK": {
+          "type": "bullet",
+          "settings": {
+            "bullet_icon": "✓",
+            "text": "Fórmula vegana y libre de crueldad animal",
+            "color": "#434343",
+            "font_weight": "400",
+            "font_size_desktop": 16,
+            "font_size_mobile": 15
+          }
+        }
+      },
+      "block_order": [
+        "heading_HzDBxC",
+        "text_GKw3gX",
+        "bullet_mW9XYa",
+        "bullet_y3Xzak",
+        "bullet_C9AQXK"
+      ],
+      "disabled": true,
+      "name": "Producto destacado",
+      "settings": {
+        "image": "{{ product.metafields.custom.seccion_cambios_reales_imagenes.value }}",
+        "layout": "image_first",
+        "content_bg_color": "#e2cdcf",
+        "border_radius": 30,
+        "border_radius_mobile": 20,
+        "color_scheme": "background-1",
+        "padding_top": 40,
+        "padding_bottom": 60,
+        "padding_top_mobile": 16,
+        "padding_bottom_mobile": 28
+      }
+    },
+    "review_slider_pmwAwt": {
+      "type": "review-slider",
+      "blocks": {
+        "review_TdEpgg": {
+          "type": "review",
+          "settings": {
+            "text": "¡Noté mi piel más firme desde la primera semana! El efecto tensor es real, ya pedí otro.",
+            "avatar": "shopify://shop_images/default-ticker-5_1_1.png",
+            "author": "María D.",
+            "rating": 5
+          }
+        },
+        "review_EccX6C": {
+          "type": "review",
+          "settings": {
+            "text": "Súper hidratante y se absorbe rápido. Mi piel se siente distinta, más lisa.",
+            "avatar": "shopify://shop_images/default-ticker-5_1_2.png",
+            "author": "Sofía P.",
+            "rating": 5
+          }
+        },
+        "review_VgTKBY": {
+          "type": "review",
+          "settings": {
+            "text": "Producto de muy buena calidad y atención impecable. Estoy muy conforme.",
+            "avatar": "shopify://shop_images/default-ticker-5_1.png",
+            "author": "Camila M.",
+            "rating": 5
+          }
+        }
+      },
+      "block_order": [
+        "review_TdEpgg",
+        "review_EccX6C",
+        "review_VgTKBY"
+      ],
+      "disabled": true,
+      "name": "Slider de reseñas",
+      "settings": {
+        "heading": "Cambios reales",
+        "heading_size": "h2",
+        "heading_color": "#000000",
+        "heading_font_size_desktop": 36,
+        "heading_font_size_mobile": 26,
+        "heading_font_weight": "600",
+        "subheading": " Opiniones de quienes ya eligieron Vita-A",
+        "subheading_color": "#000000",
+        "subheading_font_size_desktop": 18,
+        "subheading_font_size_mobile": 15,
+        "subheading_font_weight": "500",
+        "card_background_color": "#dddee0",
+        "card_border_color": "#a1a1a0",
+        "card_border_width": 1,
+        "card_corner_radius": 16,
+        "text_color": "#2b2b2b",
+        "author_color": "#1a1a1a",
+        "star_color": "#f5a623",
+        "cards_per_row_desktop": 3,
+        "cards_per_row_tablet": 2,
+        "cards_per_row_mobile": 1,
+        "card_gap": 24,
+        "show_arrows": false,
+        "arrows_color": "#dedfa0",
+        "color_scheme": "background-1",
+        "background_color": "#ffffff",
+        "padding_top": 60,
+        "padding_bottom": 40,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 20
+      }
+    },
+    "multirow_XQG7Bh": {
+      "type": "multirow",
+      "blocks": {
+        "row_fChKeB": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/vignette-usp-02.webp",
+            "caption": "RESULTADOS COMPROBADOS",
+            "heading": "Sin transferencias",
+            "text": "<p>El 97% de las mujeres confirmó que su maquillaje no se transfirió tras usarlo, con una fórmula que resiste rímel, celular, ropa y lentes.</p>",
+            "button_label": "QUIERO MI SPRAY FIJADOR",
+            "button_link": "#informacion-producto",
+            "button_background_color": "#000000",
+            "button_text_color": "#ffffff",
+            "button_border_color": "#000000",
+            "heading_font_size_desktop": 40,
+            "heading_font_size_mobile": 24,
+            "text_font_size_desktop": 16,
+            "text_font_size_mobile": 14
+          }
+        }
+      },
+      "block_order": [
+        "row_fChKeB"
+      ],
+      "name": "t:sections.multirow.presets.name",
+      "settings": {
+        "image_height": "medium",
+        "desktop_image_width": "medium",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "primary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "image_layout": "alternate-right",
+        "section_color_scheme": "background-1",
+        "row_color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 60,
+        "padding_bottom": 40,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 20
+      }
+    },
+    "faq_accordion_m3GjeY": {
+      "type": "faq-accordion",
+      "blocks": {
+        "question_giLkXQ": {
+          "type": "question",
+          "settings": {
+            "question": "¿Cuánto dura la fijación?",
+            "answer": "<p>Hasta 36 horas, resistiendo transferencias con rímel, celular, ropa y lentes.</p>",
+            "question_color": "",
+            "question_font_size_desktop": 16,
+            "question_font_size_mobile": 15,
+            "question_font_weight": "500",
+            "answer_color": "",
+            "answer_font_size_desktop": 15,
+            "answer_font_size_mobile": 14,
+            "answer_font_weight": "400"
+          }
+        },
+        "question_36wNwy": {
+          "type": "question",
+          "settings": {
+            "question": "¿Cuánto tarda en secar?",
+            "answer": "<p>Solo 3 segundos, gracias a su pulverización microfina.</p>",
+            "question_color": "",
+            "question_font_size_desktop": 16,
+            "question_font_size_mobile": 15,
+            "question_font_weight": "500",
+            "answer_color": "",
+            "answer_font_size_desktop": 15,
+            "answer_font_size_mobile": 14,
+            "answer_font_weight": "400"
+          }
+        },
+        "question_e4hhdC": {
+          "type": "question",
+          "settings": {
+            "question": "¿Es apto para todo tipo de piel?",
+            "answer": "<p>Sí, su fórmula es libre de parabenos y cruelty-free.</p>",
+            "question_color": "",
+            "question_font_size_desktop": 16,
+            "question_font_size_mobile": 15,
+            "question_font_weight": "500",
+            "answer_color": "",
+            "answer_font_size_desktop": 15,
+            "answer_font_size_mobile": 14,
+            "answer_font_weight": "400"
+          }
+        },
+        "question_HKe6yp": {
+          "type": "question",
+          "settings": {
+            "question": "¿Cómo se aplica correctamente?",
+            "answer": "<p>Con los ojos cerrados, a 20-30 cm del rostro, en forma de X y luego de T, cubriendo todo el maquillaje.</p>",
+            "question_color": "",
+            "question_font_size_desktop": 16,
+            "question_font_size_mobile": 15,
+            "question_font_weight": "500",
+            "answer_color": "",
+            "answer_font_size_desktop": 15,
+            "answer_font_size_mobile": 14,
+            "answer_font_weight": "400"
+          }
+        }
+      },
+      "block_order": [
+        "question_giLkXQ",
+        "question_36wNwy",
+        "question_e4hhdC",
+        "question_HKe6yp"
+      ],
+      "custom_css": [
+        "@media screen and (max-width: 749px) {.h2 {font-size: calc(var(--font-heading-scale) * 1.7rem); }}",
+        "@media screen and (max-width: 749px) {.section-faq_accordion_m3GjeY-padding {padding-top: 32px !important; padding-bottom: 32px !important; }}"
+      ],
+      "name": "Preguntas frecuentes",
+      "settings": {
+        "caption": "",
+        "heading": "Preguntas frecuentes",
+        "heading_size": "h2",
+        "heading_italic": true,
+        "heading_color": "#000000",
+        "heading_font_size_desktop": 32,
+        "heading_font_size_mobile": 24,
+        "heading_font_weight": "600",
+        "caption_color": "",
+        "caption_font_size_desktop": 24,
+        "caption_font_size_mobile": 24,
+        "caption_font_weight": "500",
+        "color_scheme": "background-1",
+        "accent_color_scheme": "accent-2",
+        "background_color": "",
+        "item_background": "#f2f3f4",
+        "item_radius": 12,
+        "item_spacing": 12,
+        "open_first_question": false,
+        "padding_top": 60,
+        "padding_bottom": 40,
+        "padding_top_mobile": 32,
+        "padding_bottom_mobile": 20
+      }
+    },
+    "community_feed_dJB7VX": {
+      "type": "community-feed",
+      "blocks": {
+        "post_dN4cYi": {
+          "type": "post",
+          "settings": {
+            "image": "shopify://shop_images/Piel_feliz_piel_bonita_Cuando_cuidas_tu_piel_ella_lo_refleja_en_cada_sonrisa._Hidratacion_1.webp",
+            "username": "@laura.m",
+            "show_verified": true,
+            "caption": "Ahora entiendo por qué es tan recomendado",
+            "link": ""
+          }
+        },
+        "post_gLpiiA": {
+          "type": "post",
+          "settings": {
+            "image": "shopify://shop_images/Un_gesto_simple_un_gran_regalo_para_tu_piel.El_cuidado_diario_no_tiene_edad_tiene_amor_prop.webp",
+            "username": "@clara.r",
+            "show_verified": true,
+            "caption": "Piel más suave desde la primera aplicación",
+            "link": ""
+          }
+        },
+        "post_4VzfN3": {
+          "type": "post",
+          "settings": {
+            "image": "shopify://shop_images/La_edad_no_define_tu_belleza_tu_luz_interior_si.Cada_gota_de_cuidado_es_un_regalo_para_tu_pie.webp",
+            "username": "@vane.o",
+            "show_verified": true,
+            "caption": "Lo mejor que he probado en mucho tiempo",
+            "link": ""
+          }
+        },
+        "post_tGcd3j": {
+          "type": "post",
+          "settings": {
+            "image": "shopify://shop_images/Tu_piel_tu_tono_tu_luz_realzada_por_InfiniteGlow.webp",
+            "username": "@miriam.l",
+            "show_verified": true,
+            "caption": "Excelente para ayudar a mantener la hidratación",
+            "link": ""
+          }
+        },
+        "post_WjYnLG": {
+          "type": "post",
+          "settings": {
+            "image": "shopify://shop_images/Tu_piel_tambien_merece_sentir_el_calor_del_sol_sin_perder_su_frescura.Un_toque_de_hidratacion.webp",
+            "username": "@sandra.v",
+            "show_verified": true,
+            "caption": "Por fin un producto que sí cumple lo que promete",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "post_dN4cYi",
+        "post_gLpiiA",
+        "post_4VzfN3",
+        "post_tGcd3j",
+        "post_WjYnLG"
+      ],
+      "custom_css": [
+        "@media screen and (max-width: 749px) {.h2 {font-size: calc(var(--font-heading-scale) * 1.7rem); }}",
+        "@media screen and (max-width: 749px) {.section-community_feed_dJB7VX-padding {padding-top: 32px !important; padding-bottom: 32px !important; }}"
+      ],
+      "name": "Comunidad / Feed UGC",
+      "settings": {
+        "heading": "Únete a la comunidad @VitaNuraLab",
+        "heading_size": "h2",
+        "heading_color": "",
+        "heading_font_size_desktop": 32,
+        "heading_font_size_mobile": 24,
+        "heading_font_weight": "600",
+        "color_scheme": "background-1",
+        "verified_color": "#bc6161",
+        "background_color": "",
+        "media_radius": 18,
+        "enable_center_mode": true,
+        "enable_loop": true,
+        "autoplay": false,
+        "autoplay_speed": 3,
+        "show_dots": true,
+        "show_arrows": false,
+        "slides_desktop": 3.4,
+        "space_desktop": 20,
+        "slides_tablet": 2,
+        "space_tablet": 16,
+        "slides_mobile": 1.4,
+        "space_mobile": 12,
+        "padding_top": 60,
+        "padding_bottom": 40,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40
+      }
+    }
+  },
+  "order": [
+    "main",
+    "related-products",
+    "press_ticker_gTJiLE",
+    "collage_6MLj8w",
+    "product_highlight_iUAetw",
+    "product_highlight_kHfNT3",
+    "review_slider_pmwAwt",
+    "multirow_XQG7Bh",
+    "faq_accordion_m3GjeY",
+    "community_feed_dJB7VX"
+  ]
+}
