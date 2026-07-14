@@ -670,12 +670,179 @@
         "text_italic": true,
         "text_uppercase": true,
         "color_scheme": "background-1",
-        "custom_background_color": "#F4F2F3",
+        "custom_background_color": "#FFFFFF",
         "custom_text_color": "#000000",
         "padding_top": 20,
         "padding_bottom": 20,
         "padding_top_mobile": 16,
         "padding_bottom_mobile": 16
+      }
+    },
+    "why_we_love_it_k8ignU": {
+      "type": "why-we-love-it",
+      "blocks": {
+        "feature_diTFxU": {
+          "type": "feature",
+          "settings": {
+            "position": "left",
+            "heading": "Nutre tu microbioma",
+            "text": "<p>Con probióticos y prebióticos que alimentan las bacterias buenas de tu intestino.</p>",
+            "heading_color": "#FFFFFF",
+            "heading_font_size_desktop": 20,
+            "heading_font_size_mobile": 17,
+            "heading_font_weight": "700",
+            "text_color": "#FFFFFF",
+            "text_font_size_desktop": 15,
+            "text_font_size_mobile": 14,
+            "text_font_weight": "400"
+          }
+        },
+        "feature_rQxXfm": {
+          "type": "feature",
+          "settings": {
+            "position": "left",
+            "heading": "16 enzimas, soporte completo",
+            "text": "<p>Cubre proteínas, grasas, lácteos, carbohidratos y vegetales en una sola fórmula.</p>",
+            "heading_color": "#FFFFFF",
+            "heading_font_size_desktop": 20,
+            "heading_font_size_mobile": 17,
+            "heading_font_weight": "700",
+            "text_color": "#FFFFFF",
+            "text_font_size_desktop": 15,
+            "text_font_size_mobile": 14,
+            "text_font_weight": "400"
+          }
+        },
+        "feature_Jm9AjV": {
+          "type": "feature",
+          "settings": {
+            "position": "right",
+            "heading": "Fácil de tomar, rápido de sentir",
+            "text": "<p>Una cápsula fácil de tragar que empieza a actuar desde la primera comida, sin necesidad de refrigeración ni preparación.</p>",
+            "heading_color": "#FFFFFF",
+            "heading_font_size_desktop": 20,
+            "heading_font_size_mobile": 17,
+            "heading_font_weight": "700",
+            "text_color": "#FFFFFF",
+            "text_font_size_desktop": 15,
+            "text_font_size_mobile": 14,
+            "text_font_weight": "400"
+          }
+        },
+        "feature_7krTCg": {
+          "type": "feature",
+          "settings": {
+            "position": "right",
+            "heading": "Resultados desde la primera semana",
+            "text": "<p>La mayoría nota menos hinchazón y pesadez después de comer en tan solo unos días de uso constante.</p>",
+            "heading_color": "#FFFFFF",
+            "heading_font_size_desktop": 20,
+            "heading_font_size_mobile": 17,
+            "heading_font_weight": "700",
+            "text_color": "#FFFFFF",
+            "text_font_size_desktop": 15,
+            "text_font_size_mobile": 14,
+            "text_font_weight": "400"
+          }
+        }
+      },
+      "block_order": [
+        "feature_diTFxU",
+        "feature_rQxXfm",
+        "feature_Jm9AjV",
+        "feature_7krTCg"
+      ],
+      "name": "Por qué nos encanta",
+      "settings": {
+        "heading": "POR QUÉ NOS ENCANTA",
+        "heading_size": "h1",
+        "heading_italic": false,
+        "heading_color": "#FFFFFF",
+        "heading_font_size_desktop": 36,
+        "heading_font_size_mobile": 26,
+        "heading_font_weight": "700",
+        "image": "shopify://shop_images/product7-clean.webp",
+        "circle_size_desktop": 380,
+        "circle_size_mobile": 220,
+        "color_scheme": "background-2",
+        "accent_color_scheme": "accent-2",
+        "background_color": "#CC2A2A",
+        "circle_border_color": "#CC2A2A",
+        "badge_icon_bg_color": "#FFFFFF",
+        "badge_icon_svg_color": "#CC2A2A",
+        "text_alignment": "facing-center",
+        "padding_top": 64,
+        "padding_bottom": 0,
+        "padding_top_mobile": 28,
+        "padding_bottom_mobile": 28
+      }
+    },
+    "en_solo_4_semanas_yxrizj": {
+      "type": "en-solo-4-semanas",
+      "blocks": {
+        "stat_DL69Bq": {
+          "type": "stat",
+          "settings": {
+            "number": "99%",
+            "description": "notó menos hinchazón después de comer."
+          }
+        },
+        "stat_mJ7eLD": {
+          "type": "stat",
+          "settings": {
+            "number": "96%",
+            "description": "sintió mejor digestión de comidas pesadas."
+          }
+        },
+        "stat_y3qHFk": {
+          "type": "stat",
+          "settings": {
+            "number": "97%",
+            "description": "notó mayor comodidad y menos pesadez."
+          }
+        },
+        "stat_PmbFQT": {
+          "type": "stat",
+          "settings": {
+            "number": "95%",
+            "description": "mejoró su energía después de las comidas."
+          }
+        }
+      },
+      "block_order": [
+        "stat_DL69Bq",
+        "stat_mJ7eLD",
+        "stat_y3qHFk",
+        "stat_PmbFQT"
+      ],
+      "name": "En solo 4 semanas",
+      "settings": {
+        "heading": "",
+        "heading_tag": "h1",
+        "heading_color": "#000000",
+        "heading_weight": "700",
+        "heading_size_desktop": 36,
+        "heading_size_mobile": 24,
+        "stat_number_color": "#FFFFFF",
+        "stat_number_size_desktop": 36,
+        "stat_number_size_mobile": 28,
+        "stat_text_color": "#FFFFFF",
+        "stat_text_size_desktop": 14,
+        "stat_text_size_mobile": 12,
+        "show_button": true,
+        "button_label": "QUIERO MIS ENZIMAS",
+        "button_anchor": "#informacion-producto",
+        "button_url": "",
+        "button_bg_color": "#FFFFFF",
+        "button_text_color": "#CC2A2A",
+        "button_text_size_desktop": 20,
+        "button_text_size_mobile": 14,
+        "color_scheme": "background-1",
+        "bg_color": "#CC2A2A",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "padding_top_mobile": 24,
+        "padding_bottom_mobile": 24
       }
     },
     "multirow_beE3np": {
@@ -684,10 +851,10 @@
         "row_cJN9iW": {
           "type": "row",
           "settings": {
-            "image": "shopify://shop_images/product9.webp",
+            "image": "shopify://shop_images/product9-clean.webp",
             "caption": "RESULTADO NATURAL",
-            "heading": "Belleza que se cuida desde adentro",
-            "text": "<p>Con 2500 mcg de Biotina, Zinc, Folato y Vitamina B12, apoya la salud de tu cabello, piel y uñas con solo 1 gomita al día.</p>",
+            "heading": "Digestión que se siente liviana",
+            "text": "<p>Con 16 enzimas digestivas, probióticos y prebióticos, ayuda a reducir la hinchazón y mejora la absorción de nutrientes en cada comida.</p>",
             "button_label": "",
             "button_link": "",
             "button_background_color": "",
@@ -702,15 +869,15 @@
         "row_yHp8Tn": {
           "type": "row",
           "settings": {
-            "image": "shopify://shop_images/Biotin-2000x1000_2000x_0eda254a-f010-4a94-8acb-df1b3cbbb7ca.webp",
-            "caption": "SABOR GOJI BERRY",
-            "heading": "Constancia que se disfruta",
-            "text": "<p>Diseñadas para que sumar tu vitamina diaria sea fácil y rico, con una fórmula vegana, sin gluten y sin azúcar.</p>",
-            "button_label": "QUIERO MIS GUMMIES",
+            "image": "shopify://shop_images/product10-clean.webp",
+            "caption": "FÁCIL DE TOMAR",
+            "heading": "Constancia sin esfuerzo",
+            "text": "<p>Una cápsula fácil de tragar, sin necesidad de refrigeración, pensada para sumar a tu comida principal del día sin complicaciones.</p>",
+            "button_label": "QUIERO MIS ENZIMAS",
             "button_link": "#informacion-producto",
-            "button_background_color": "#000000",
+            "button_background_color": "#CC2A2A",
             "button_text_color": "#ffffff",
-            "button_border_color": "#000000",
+            "button_border_color": "#CC2A2A",
             "heading_font_size_desktop": 40,
             "heading_font_size_mobile": 24,
             "text_font_size_desktop": 16,
@@ -724,7 +891,7 @@
       ],
       "name": "t:sections.multirow.presets.name",
       "settings": {
-        "image_height": "medium",
+        "image_height": "adapt",
         "desktop_image_width": "medium",
         "heading_size": "h1",
         "text_style": "body",
@@ -747,7 +914,7 @@
         "row_EawppA": {
           "type": "row",
           "settings": {
-            "feature": "2500 mcg de Biotina por porción",
+            "feature": "16 enzimas digestivas en una sola cápsula",
             "vita_has": true,
             "others_has": false
           }
@@ -755,7 +922,7 @@
         "row_XiwCyj": {
           "type": "row",
           "settings": {
-            "feature": "Con Zinc, Folato y Vitamina B12",
+            "feature": "16 enzimas digestivas en una sola cápsula",
             "vita_has": true,
             "others_has": false
           }
@@ -763,7 +930,7 @@
         "row_nJURLY": {
           "type": "row",
           "settings": {
-            "feature": "Vegano, sin gluten ni azúcar",
+            "feature": "Reduce la hinchazón después de comer",
             "vita_has": true,
             "others_has": false
           }
@@ -771,7 +938,7 @@
         "row_pfU8Qh": {
           "type": "row",
           "settings": {
-            "feature": "Sabor Goji Berry, fácil de tomar",
+            "feature": "Fórmula desarrollada por médicos",
             "vita_has": true,
             "others_has": false
           }
@@ -779,7 +946,7 @@
         "row_Ya3H7G": {
           "type": "row",
           "settings": {
-            "feature": "Certificado Non-GMO y B Corp",
+            "feature": "Vegano y sin gluten",
             "vita_has": true,
             "others_has": false
           }
@@ -787,7 +954,7 @@
         "row_W63PQg": {
           "type": "row",
           "settings": {
-            "feature": "Garantía de satisfacción 30 días",
+            "feature": "Garantía de devolución de 60 días",
             "vita_has": true,
             "others_has": false
           }
@@ -803,106 +970,32 @@
       ],
       "name": "¿Por qué elegir?",
       "settings": {
-        "title": "¿POR QUÉ ELEGIR INFAILLIBLE FAUX BROW?",
+        "title": "¿POR QUÉ ELEGIR DIGESTIVE ENZYMES?",
         "title_transform": "uppercase",
-        "title_color": "#000000",
+        "title_color": "#FFFFFF",
         "title_weight": "600",
         "title_size_desktop": 36,
         "title_size_mobile": 24,
-        "product_image": "shopify://shop_images/product1_a8fc43b8-e694-42d5-867b-f0e98fc62faf.webp",
+        "product_image": "shopify://shop_images/product1_66edefd5-681f-489d-8b2d-0bdb4d172553.webp",
         "product_img_size_desktop": 56,
         "product_img_size_mobile": 44,
         "vita_label": "",
         "others_label": "Otros",
         "table_max_width": 500,
-        "vita_bg_color": "#E4CBD7",
-        "divider_color": "#444444",
-        "icon_color": "#1a1a1a",
+        "vita_bg_color": "#FFFFFF",
+        "divider_color": "#FFFFFF",
+        "icon_color": "#000000",
         "icon_size_desktop": 35,
         "icon_size_mobile": 28,
-        "row_color": "",
+        "row_color": "#FFFFFF",
         "row_size_desktop": 13,
         "row_size_mobile": 12,
         "color_scheme": "background-1",
-        "bg_color": "",
+        "bg_color": "#CC2A2A",
         "padding_top": 60,
         "padding_bottom": 40,
         "padding_top_mobile": 32,
         "padding_bottom_mobile": 20
-      }
-    },
-    "tarjetas_beneficios_GWgzfL": {
-      "type": "tarjetas-beneficios",
-      "blocks": {
-        "card_efbFja": {
-          "type": "card",
-          "settings": {
-            "icon": "shopify://shop_images/circle-check.svg",
-            "text": "2500 mcg de Biotina al día"
-          }
-        },
-        "card_pcPLnd": {
-          "type": "card",
-          "settings": {
-            "icon": "shopify://shop_images/heart.svg",
-            "text": "Apto para cabello, piel y uñas"
-          }
-        },
-        "card_Hzt8Pf": {
-          "type": "card",
-          "settings": {
-            "icon": "shopify://shop_images/award.svg",
-            "text": "Con Zinc, Folato y Vitamina B12"
-          }
-        },
-        "card_BNARwF": {
-          "type": "card",
-          "settings": {
-            "icon": "shopify://shop_images/shield-check.svg",
-            "text": "Vegano y sin azúcar"
-          }
-        }
-      },
-      "block_order": [
-        "card_efbFja",
-        "card_pcPLnd",
-        "card_Hzt8Pf",
-        "card_BNARwF"
-      ],
-      "name": "Tarjetas de beneficios",
-      "settings": {
-        "subtitle": "Más que una vitamina",
-        "subtitle_color": "#000000",
-        "subtitle_size_desktop": 20,
-        "subtitle_size_mobile": 16,
-        "heading": " Belleza que se nota desde adentro",
-        "heading_color": "#2b1b17",
-        "heading_size_desktop": 32,
-        "heading_size_mobile": 28,
-        "text_gap_desktop": 16,
-        "text_gap_mobile": 10,
-        "button_label": "QUIERO MIS GUMMIES",
-        "button_url": "#informacion-producto",
-        "button_bg_color": "#000000",
-        "button_text_color": "#ffffff",
-        "button_radius": 100,
-        "button_font_size_desktop": 16,
-        "button_font_size_mobile": 14,
-        "card_bg_color": "#ffffff",
-        "card_radius": 5,
-        "card_gap": 10,
-        "card_text_color": "#2b1b17",
-        "card_text_size_desktop": 14,
-        "card_text_size_mobile": 12,
-        "icon_size_desktop": 40,
-        "icon_size_mobile": 32,
-        "layout_gap_desktop": 60,
-        "layout_gap_mobile": 8,
-        "bg_color": "#E4CBD7",
-        "padding_top": 40,
-        "padding_bottom": 40,
-        "padding_top_mobile": 24,
-        "padding_bottom_mobile": 24
       }
     },
     "faq_accordion_m3GjeY": {
@@ -1012,7 +1105,7 @@
         "color_scheme": "background-1",
         "accent_color_scheme": "accent-2",
         "background_color": "",
-        "item_background": "#E4CBD7",
+        "item_background": "#e4cbd7",
         "item_radius": 12,
         "item_spacing": 12,
         "open_first_question": false,
@@ -1116,6 +1209,97 @@
         "padding_top_mobile": 40,
         "padding_bottom_mobile": 40
       }
+    },
+    "review_slider_98DDpL": {
+      "type": "review-slider",
+      "blocks": {
+        "review_3JbkTe": {
+          "type": "review",
+          "settings": {
+            "text": "Lo tomo con mi comida principal y siento la diferencia enseguida, sin esa pesadez de siempre.",
+            "avatar": "shopify://shop_images/default-ticker-5_1_2.png",
+            "author": "Andrea R",
+            "rating": 5
+          }
+        },
+        "review_qcHUyC": {
+          "type": "review",
+          "settings": {
+            "text": "Buenísimo para cuando como cosas pesadas. Se los recomendé a mis compañeros de trabajo.",
+            "avatar": "shopify://shop_images/Captura_de_pantalla_2026-07-13_152911.png",
+            "author": "Nicolas F.",
+            "rating": 5
+          }
+        },
+        "review_HrGPe9": {
+          "type": "review",
+          "settings": {
+            "text": "Siempre tuve problemas de hinchazón después de comer y esto realmente funciona. Ya lo recomendé a toda mi familia.",
+            "avatar": "shopify://shop_images/default-ticker-5_1.png",
+            "author": "María D.",
+            "rating": 5
+          }
+        },
+        "review_iH7yzg": {
+          "type": "review",
+          "settings": {
+            "text": "Noté la diferencia en menos de una semana. Ya no me siento pesada después de las comidas.",
+            "avatar": "shopify://shop_images/Gemini_Generated_Image_wy9e9gwy9e9gwy9e.webp",
+            "author": "Sofía P.",
+            "rating": 5
+          }
+        },
+        "review_XJYafV": {
+          "type": "review",
+          "settings": {
+            "text": "Es fácil de tomar y no tiene sabor raro. Mi digestión mejoró muchísimo.",
+            "avatar": "shopify://shop_images/Persona.png",
+            "author": "Camila M.",
+            "rating": 5
+          }
+        }
+      },
+      "block_order": [
+        "review_3JbkTe",
+        "review_qcHUyC",
+        "review_HrGPe9",
+        "review_iH7yzg",
+        "review_XJYafV"
+      ],
+      "name": "Slider de reseñas",
+      "settings": {
+        "heading": "CAMBIOS REALES",
+        "heading_size": "h1",
+        "heading_color": "#111111",
+        "heading_font_size_desktop": 36,
+        "heading_font_size_mobile": 26,
+        "heading_font_weight": "700",
+        "subheading": "Opiniones de quienes ya eligieron Nutri Infusión",
+        "subheading_color": "#CC2A2A",
+        "subheading_font_size_desktop": 18,
+        "subheading_font_size_mobile": 15,
+        "subheading_font_weight": "400",
+        "card_background_color": "#FFE7E7",
+        "card_border_color": "#CC2A2A",
+        "card_border_width": 1,
+        "card_corner_radius": 16,
+        "text_color": "#2B2B2B",
+        "author_color": "#1A1A1A",
+        "star_color": "#F5A623",
+        "cards_per_row_desktop": 3,
+        "cards_per_row_tablet": 2,
+        "cards_per_row_mobile": 1,
+        "card_gap": 24,
+        "show_arrows": true,
+        "hide_arrows_mobile": true,
+        "arrows_color": "#B5651D",
+        "color_scheme": "background-1",
+        "background_color": "",
+        "padding_top": 48,
+        "padding_bottom": 48,
+        "padding_top_mobile": 28,
+        "padding_bottom_mobile": 28
+      }
     }
   },
   "order": [
@@ -1126,9 +1310,11 @@
     "64c96926-2c31-48fe-bd21-30941bc87822",
     "slideshow_HfVNww",
     "press_ticker_gTJiLE",
+    "why_we_love_it_k8ignU",
+    "en_solo_4_semanas_yxrizj",
     "multirow_beE3np",
     "por_que_elegir_WXcDJn",
-    "tarjetas_beneficios_GWgzfL",
+    "review_slider_98DDpL",
     "faq_accordion_m3GjeY",
     "community_feed_dJB7VX"
   ]
