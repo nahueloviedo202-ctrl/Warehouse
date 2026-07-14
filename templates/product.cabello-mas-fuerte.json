@@ -485,55 +485,14 @@
         "padding_bottom_mobile": 16
       }
     },
-    "collage_6MLj8w": {
-      "type": "collage",
-      "blocks": {
-        "image_8hwREi": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/infallible_fix_spray_reno_acabado_904d7627-c15e-4863-9ce9-3465afe5437f.webp"
-          }
-        },
-        "image_fg87nw": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/inf-fix-spray-aplicacion.webp"
-          }
-        },
-        "image_ticCNT": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Gemini_Generated_Image_y881fky881fky881.webp"
-          }
-        }
-      },
-      "block_order": [
-        "image_8hwREi",
-        "image_fg87nw",
-        "image_ticCNT"
-      ],
-      "name": "t:sections.collage.presets.name",
-      "settings": {
-        "heading": "",
-        "heading_size": "h2",
-        "desktop_layout": "right",
-        "mobile_layout": "column",
-        "card_styles": "product-card-wrapper",
-        "color_scheme": "background-1",
-        "padding_top": 60,
-        "padding_bottom": 40,
-        "padding_top_mobile": 40,
-        "padding_bottom_mobile": 20
-      }
-    },
     "product_highlight_iUAetw": {
       "type": "product-highlight",
       "blocks": {
         "heading_nXpFqj": {
           "type": "heading",
           "settings": {
-            "heading_italic": "Siéntete segura",
-            "heading_normal": "con tu maquillaje intacto",
+            "heading_italic": "Sentí la fuerza",
+            "heading_normal": "de tu cabello desde adentro",
             "color": "",
             "font_size_desktop": 32,
             "font_size_mobile": 20
@@ -542,7 +501,7 @@
         "text_mdAemH": {
           "type": "text",
           "settings": {
-            "text": "<p>El Spray Fijador Infallible 36H sella tu maquillaje al instante con una pulverización microfina, resistente a transferencias, sudor y roce, con secado en tan solo 3 segundos.</p>",
+            "text": "<p>Hair Growth Advanced nutre los folículos capilares y fortalece cada hebra con Biotina, Colágeno y OptiMSM®, ayudando a recuperar la densidad y el crecimiento natural del cabello.</p>",
             "color": "#434343",
             "font_weight": "400",
             "font_size_desktop": 16,
@@ -553,7 +512,7 @@
           "type": "bullet",
           "settings": {
             "bullet_icon": "✓",
-            "text": "Fija el maquillaje hasta por 36 horas",
+            "text": "Reduce la caída y favorece el crecimiento natural",
             "color": "#434343",
             "font_weight": "400",
             "font_size_desktop": 16,
@@ -564,7 +523,7 @@
           "type": "bullet",
           "settings": {
             "bullet_icon": "✓",
-            "text": "Seca en 3 segundos",
+            "text": "Fortalece el cabello desde la raíz",
             "color": "#434343",
             "font_weight": "400",
             "font_size_desktop": 16,
@@ -575,7 +534,7 @@
           "type": "bullet",
           "settings": {
             "bullet_icon": "✓",
-            "text": "Sin marcas de agua ni sensación pegajosa",
+            "text": "Resultados visibles con uso constante",
             "color": "#434343",
             "font_weight": "400",
             "font_size_desktop": 16,
@@ -592,7 +551,7 @@
       ],
       "name": "Producto destacado",
       "settings": {
-        "image": "shopify://shop_images/vignette-usp-03.webp",
+        "image": "shopify://shop_images/product10-clean_5803f4be-bf77-4d0d-b01b-4f2b180e5ef7.webp",
         "layout": "image_first",
         "content_bg_color": "#f2f3f4",
         "border_radius": 30,
@@ -745,9 +704,44 @@
         "cards_per_row_mobile": 1,
         "card_gap": 24,
         "show_arrows": false,
+        "hide_arrows_mobile": false,
         "arrows_color": "#dedfa0",
         "color_scheme": "background-1",
         "background_color": "#ffffff",
+        "padding_top": 60,
+        "padding_bottom": 40,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 20
+      }
+    },
+    "collage_6MLj8w": {
+      "type": "collage",
+      "blocks": {
+        "image_nXX3Wn": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/product8-clean_e7503fb3-2a6b-4e5e-ba47-642dedd37add.webp"
+          }
+        },
+        "image_ticCNT": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/product11-clean.webp"
+          }
+        }
+      },
+      "block_order": [
+        "image_nXX3Wn",
+        "image_ticCNT"
+      ],
+      "name": "t:sections.collage.presets.name",
+      "settings": {
+        "heading": "",
+        "heading_size": "h2",
+        "desktop_layout": "right",
+        "mobile_layout": "column",
+        "card_styles": "product-card-wrapper",
+        "color_scheme": "background-1",
         "padding_top": 60,
         "padding_bottom": 40,
         "padding_top_mobile": 40,
@@ -760,11 +754,11 @@
         "row_fChKeB": {
           "type": "row",
           "settings": {
-            "image": "shopify://shop_images/vignette-usp-02.webp",
-            "caption": "RESULTADOS COMPROBADOS",
-            "heading": "Sin transferencias",
-            "text": "<p>El 97% de las mujeres confirmó que su maquillaje no se transfirió tras usarlo, con una fórmula que resiste rímel, celular, ropa y lentes.</p>",
-            "button_label": "QUIERO MI SPRAY FIJADOR",
+            "image": "shopify://shop_images/product1-clean.webp",
+            "caption": "LA CAUSA PUEDE ESTAR ADENTRO",
+            "heading": "Tu cabello te está avisando algo",
+            "text": "<p>La caída, la falta de brillo y el debilitamiento capilar suelen empezar por una carencia nutricional. Hair Growth Advanced nutre tus folículos desde adentro con Biotina 10.000mcg, Colágeno y OptiMSM®</p>",
+            "button_label": "QUIERO MI HAIR GROWTH",
             "button_link": "#informacion-producto",
             "button_background_color": "#000000",
             "button_text_color": "#ffffff",
@@ -781,7 +775,7 @@
       ],
       "name": "t:sections.multirow.presets.name",
       "settings": {
-        "image_height": "medium",
+        "image_height": "adapt",
         "desktop_image_width": "medium",
         "heading_size": "h1",
         "text_style": "body",
@@ -796,6 +790,77 @@
         "padding_bottom": 40,
         "padding_top_mobile": 40,
         "padding_bottom_mobile": 20
+      }
+    },
+    "review_slider_nfk6z3": {
+      "type": "review-slider",
+      "blocks": {
+        "review_WTgYCU": {
+          "type": "review",
+          "settings": {
+            "text": "Se me estaba cayendo mucho el pelo y en dos meses noté muchísima diferencia. Ya lo recomendé a mis amigos.",
+            "avatar": "shopify://shop_images/Captura_de_pantalla_2026-07-13_152911.webp",
+            "author": "Mario D.",
+            "rating": 5
+          }
+        },
+        "review_4Kgf4h": {
+          "type": "review",
+          "settings": {
+            "text": "Mi cabello se ve más grueso y con más brillo. Lo tomo todos los días sin falta.",
+            "avatar": "shopify://shop_images/Gemini_Generated_Image_wy9e9gwy9e9gwy9e.webp",
+            "author": "Sofía P.",
+            "rating": 5
+          }
+        },
+        "review_QBGtR8": {
+          "type": "review",
+          "settings": {
+            "text": "Excelente calidad y llegó rápido. Ya se nota menos caída al peinarme.",
+            "avatar": "shopify://shop_images/default-ticker-5_1.png",
+            "author": "Camila M.",
+            "rating": 5
+          }
+        }
+      },
+      "block_order": [
+        "review_WTgYCU",
+        "review_4Kgf4h",
+        "review_QBGtR8"
+      ],
+      "name": "Slider de reseñas",
+      "settings": {
+        "heading": "CAMBIOS REALES",
+        "heading_size": "h1",
+        "heading_color": "#111111",
+        "heading_font_size_desktop": 36,
+        "heading_font_size_mobile": 26,
+        "heading_font_weight": "700",
+        "subheading": "Opiniones de quienes ya eligieron Hair Growth Advanced",
+        "subheading_color": "#000000",
+        "subheading_font_size_desktop": 18,
+        "subheading_font_size_mobile": 15,
+        "subheading_font_weight": "400",
+        "card_background_color": "#F0F0F0",
+        "card_border_color": "#999999",
+        "card_border_width": 1,
+        "card_corner_radius": 16,
+        "text_color": "#2B2B2B",
+        "author_color": "#1A1A1A",
+        "star_color": "#F5A623",
+        "cards_per_row_desktop": 3,
+        "cards_per_row_tablet": 2,
+        "cards_per_row_mobile": 1,
+        "card_gap": 24,
+        "show_arrows": true,
+        "hide_arrows_mobile": true,
+        "arrows_color": "#B5651D",
+        "color_scheme": "background-1",
+        "background_color": "",
+        "padding_top": 48,
+        "padding_bottom": 48,
+        "padding_top_mobile": 28,
+        "padding_bottom_mobile": 28
       }
     },
     "faq_accordion_m3GjeY": {
@@ -999,11 +1064,12 @@
     "main",
     "related-products",
     "press_ticker_gTJiLE",
-    "collage_6MLj8w",
     "product_highlight_iUAetw",
     "product_highlight_kHfNT3",
     "review_slider_pmwAwt",
+    "collage_6MLj8w",
     "multirow_XQG7Bh",
+    "review_slider_nfk6z3",
     "faq_accordion_m3GjeY",
     "community_feed_dJB7VX"
   ]
