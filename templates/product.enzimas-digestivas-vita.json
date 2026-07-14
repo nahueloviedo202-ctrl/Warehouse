@@ -998,6 +998,97 @@
         "padding_bottom_mobile": 20
       }
     },
+    "review_slider_98DDpL": {
+      "type": "review-slider",
+      "blocks": {
+        "review_3JbkTe": {
+          "type": "review",
+          "settings": {
+            "text": "Lo tomo con mi comida principal y siento la diferencia enseguida, sin esa pesadez de siempre.",
+            "avatar": "shopify://shop_images/default-ticker-5_1_2.png",
+            "author": "Andrea R",
+            "rating": 5
+          }
+        },
+        "review_qcHUyC": {
+          "type": "review",
+          "settings": {
+            "text": "Buenísimo para cuando como cosas pesadas. Se los recomendé a mis compañeros de trabajo.",
+            "avatar": "shopify://shop_images/Captura_de_pantalla_2026-07-13_152911.png",
+            "author": "Nicolas F.",
+            "rating": 5
+          }
+        },
+        "review_HrGPe9": {
+          "type": "review",
+          "settings": {
+            "text": "Siempre tuve problemas de hinchazón después de comer y esto realmente funciona. Ya lo recomendé a toda mi familia.",
+            "avatar": "shopify://shop_images/default-ticker-5_1.png",
+            "author": "María D.",
+            "rating": 5
+          }
+        },
+        "review_iH7yzg": {
+          "type": "review",
+          "settings": {
+            "text": "Noté la diferencia en menos de una semana. Ya no me siento pesada después de las comidas.",
+            "avatar": "shopify://shop_images/Gemini_Generated_Image_wy9e9gwy9e9gwy9e.webp",
+            "author": "Sofía P.",
+            "rating": 5
+          }
+        },
+        "review_XJYafV": {
+          "type": "review",
+          "settings": {
+            "text": "Es fácil de tomar y no tiene sabor raro. Mi digestión mejoró muchísimo.",
+            "avatar": "shopify://shop_images/Persona.png",
+            "author": "Camila M.",
+            "rating": 5
+          }
+        }
+      },
+      "block_order": [
+        "review_3JbkTe",
+        "review_qcHUyC",
+        "review_HrGPe9",
+        "review_iH7yzg",
+        "review_XJYafV"
+      ],
+      "name": "Slider de reseñas",
+      "settings": {
+        "heading": "CAMBIOS REALES",
+        "heading_size": "h1",
+        "heading_color": "#111111",
+        "heading_font_size_desktop": 36,
+        "heading_font_size_mobile": 26,
+        "heading_font_weight": "700",
+        "subheading": "Opiniones de quienes ya eligieron Digestive Enzymes",
+        "subheading_color": "#CC2A2A",
+        "subheading_font_size_desktop": 20,
+        "subheading_font_size_mobile": 15,
+        "subheading_font_weight": "500",
+        "card_background_color": "#FFF5F5",
+        "card_border_color": "#CC2A2A",
+        "card_border_width": 1,
+        "card_corner_radius": 16,
+        "text_color": "#2B2B2B",
+        "author_color": "#1A1A1A",
+        "star_color": "#F5A623",
+        "cards_per_row_desktop": 3,
+        "cards_per_row_tablet": 2,
+        "cards_per_row_mobile": 1,
+        "card_gap": 24,
+        "show_arrows": true,
+        "hide_arrows_mobile": true,
+        "arrows_color": "#B5651D",
+        "color_scheme": "background-1",
+        "background_color": "",
+        "padding_top": 48,
+        "padding_bottom": 48,
+        "padding_top_mobile": 28,
+        "padding_bottom_mobile": 28
+      }
+    },
     "faq_accordion_m3GjeY": {
       "type": "faq-accordion",
       "blocks": {
@@ -1208,97 +1299,6 @@
         "padding_bottom": 40,
         "padding_top_mobile": 40,
         "padding_bottom_mobile": 40
-      }
-    },
-    "review_slider_98DDpL": {
-      "type": "review-slider",
-      "blocks": {
-        "review_3JbkTe": {
-          "type": "review",
-          "settings": {
-            "text": "Lo tomo con mi comida principal y siento la diferencia enseguida, sin esa pesadez de siempre.",
-            "avatar": "shopify://shop_images/default-ticker-5_1_2.png",
-            "author": "Andrea R",
-            "rating": 5
-          }
-        },
-        "review_qcHUyC": {
-          "type": "review",
-          "settings": {
-            "text": "Buenísimo para cuando como cosas pesadas. Se los recomendé a mis compañeros de trabajo.",
-            "avatar": "shopify://shop_images/Captura_de_pantalla_2026-07-13_152911.png",
-            "author": "Nicolas F.",
-            "rating": 5
-          }
-        },
-        "review_HrGPe9": {
-          "type": "review",
-          "settings": {
-            "text": "Siempre tuve problemas de hinchazón después de comer y esto realmente funciona. Ya lo recomendé a toda mi familia.",
-            "avatar": "shopify://shop_images/default-ticker-5_1.png",
-            "author": "María D.",
-            "rating": 5
-          }
-        },
-        "review_iH7yzg": {
-          "type": "review",
-          "settings": {
-            "text": "Noté la diferencia en menos de una semana. Ya no me siento pesada después de las comidas.",
-            "avatar": "shopify://shop_images/Gemini_Generated_Image_wy9e9gwy9e9gwy9e.webp",
-            "author": "Sofía P.",
-            "rating": 5
-          }
-        },
-        "review_XJYafV": {
-          "type": "review",
-          "settings": {
-            "text": "Es fácil de tomar y no tiene sabor raro. Mi digestión mejoró muchísimo.",
-            "avatar": "shopify://shop_images/Persona.png",
-            "author": "Camila M.",
-            "rating": 5
-          }
-        }
-      },
-      "block_order": [
-        "review_3JbkTe",
-        "review_qcHUyC",
-        "review_HrGPe9",
-        "review_iH7yzg",
-        "review_XJYafV"
-      ],
-      "name": "Slider de reseñas",
-      "settings": {
-        "heading": "CAMBIOS REALES",
-        "heading_size": "h1",
-        "heading_color": "#111111",
-        "heading_font_size_desktop": 36,
-        "heading_font_size_mobile": 26,
-        "heading_font_weight": "700",
-        "subheading": "Opiniones de quienes ya eligieron Nutri Infusión",
-        "subheading_color": "#CC2A2A",
-        "subheading_font_size_desktop": 18,
-        "subheading_font_size_mobile": 15,
-        "subheading_font_weight": "400",
-        "card_background_color": "#FFE7E7",
-        "card_border_color": "#CC2A2A",
-        "card_border_width": 1,
-        "card_corner_radius": 16,
-        "text_color": "#2B2B2B",
-        "author_color": "#1A1A1A",
-        "star_color": "#F5A623",
-        "cards_per_row_desktop": 3,
-        "cards_per_row_tablet": 2,
-        "cards_per_row_mobile": 1,
-        "card_gap": 24,
-        "show_arrows": true,
-        "hide_arrows_mobile": true,
-        "arrows_color": "#B5651D",
-        "color_scheme": "background-1",
-        "background_color": "",
-        "padding_top": 48,
-        "padding_bottom": 48,
-        "padding_top_mobile": 28,
-        "padding_bottom_mobile": 28
       }
     }
   },
