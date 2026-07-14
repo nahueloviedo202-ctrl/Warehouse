@@ -839,7 +839,7 @@
             "button_label": "QUIERO MI HAIR GROWTH",
             "button_link": "#informacion-producto",
             "button_background_color": "#000000",
-            "button_text_color": "#FFFFFF",
+            "button_text_color": "#ffffff",
             "button_border_color": "#000000",
             "heading_font_size_desktop": 40,
             "heading_font_size_mobile": 24,
@@ -948,8 +948,8 @@
         "question_giLkXQ": {
           "type": "question",
           "settings": {
-            "question": "¿Cuánto dura la fijación?",
-            "answer": "<p>Hasta 36 horas, resistiendo transferencias con rímel, celular, ropa y lentes.</p>",
+            "question": "¿Cuánto tiempo tarda en mostrar resultados?",
+            "answer": "<p>La mayoría nota mejoras en fuerza y brillo a partir de las 8-12 semanas de uso constante.</p>",
             "question_color": "",
             "question_font_size_desktop": 16,
             "question_font_size_mobile": 15,
@@ -963,8 +963,8 @@
         "question_36wNwy": {
           "type": "question",
           "settings": {
-            "question": "¿Cuánto tarda en secar?",
-            "answer": "<p>Solo 3 segundos, gracias a su pulverización microfina.</p>",
+            "question": "¿Cómo se toma?",
+            "answer": "<p>1 cápsula al día, en cualquier momento, con un vaso de agua.</p>",
             "question_color": "",
             "question_font_size_desktop": 16,
             "question_font_size_mobile": 15,
@@ -978,8 +978,8 @@
         "question_e4hhdC": {
           "type": "question",
           "settings": {
-            "question": "¿Es apto para todo tipo de piel?",
-            "answer": "<p>Sí, su fórmula es libre de parabenos y cruelty-free.</p>",
+            "question": "¿Es apto para todo tipo de cabello?",
+            "answer": "<p>Sí, su fórmula está pensada para fortalecer cualquier tipo de cabello desde adentro.</p>",
             "question_color": "",
             "question_font_size_desktop": 16,
             "question_font_size_mobile": 15,
@@ -993,8 +993,8 @@
         "question_HKe6yp": {
           "type": "question",
           "settings": {
-            "question": "¿Cómo se aplica correctamente?",
-            "answer": "<p>Con los ojos cerrados, a 20-30 cm del rostro, en forma de X y luego de T, cubriendo todo el maquillaje.</p>",
+            "question": "¿Cómo se combina con mi rutina diaria?",
+            "answer": "<p>Es fácil de integrar: solo sumá la cápsula a tu desayuno o cualquier comida del día para no olvidarte.</p>",
             "question_color": "",
             "question_font_size_desktop": 16,
             "question_font_size_mobile": 15,
