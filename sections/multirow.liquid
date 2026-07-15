@@ -13,6 +13,42 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+
+  .multirow-icon-list {
+    list-style: none;
+    margin: 1.5rem 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .multirow-icon-list__item {
+    display: flex;
+    align-items: flex-start;
+  }
+  .multirow-icon-list__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    flex-shrink: 0;
+    overflow: hidden;
+  }
+  .multirow-icon-list__icon svg {
+    width: 55%;
+    height: 55%;
+  }
+  .multirow-icon-list__icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+  .multirow-icon-list__text {
+    margin: 0;
+  }
+  .multirow-icon-list__text p {
+    margin: 0;
+  }
 {%- endstyle -%}
 
 {%- liquid
@@ -53,12 +89,34 @@
         .block-{{ block.id }}-text {
           font-size: {{ block.settings.text_font_size_mobile }}px;
         }
+        .block-{{ block.id }}-icon-list-item {
+          gap: {{ block.settings.icon_list_icon_gap_mobile }}px;
+          margin-bottom: {{ block.settings.icon_list_row_gap_mobile }}px;
+        }
+        .block-{{ block.id }}-icon-list-icon {
+          width: {{ block.settings.icon_list_icon_size_mobile }}px;
+          height: {{ block.settings.icon_list_icon_size_mobile }}px;
+        }
+        .block-{{ block.id }}-icon-list-text {
+          font-size: {{ block.settings.icon_list_text_size_mobile }}px;
+        }
         @media screen and (min-width: 750px) {
           .block-{{ block.id }}-heading {
             font-size: {{ block.settings.heading_font_size_desktop }}px;
           }
           .block-{{ block.id }}-text {
             font-size: {{ block.settings.text_font_size_desktop }}px;
+          }
+          .block-{{ block.id }}-icon-list-item {
+            gap: {{ block.settings.icon_list_icon_gap_desktop }}px;
+            margin-bottom: {{ block.settings.icon_list_row_gap_desktop }}px;
+          }
+          .block-{{ block.id }}-icon-list-icon {
+            width: {{ block.settings.icon_list_icon_size_desktop }}px;
+            height: {{ block.settings.icon_list_icon_size_desktop }}px;
+          }
+          .block-{{ block.id }}-icon-list-text {
+            font-size: {{ block.settings.icon_list_text_size_desktop }}px;
           }
         }
         {%- if block.settings.button_border_color != blank -%}
@@ -108,6 +166,51 @@
               {%- endif -%}
               {%- if block.settings.text -%}
                 <div class="image-with-text__text rte {{ section.settings.text_style }} block-{{ block.id }}-text">{{ block.settings.text }}</div>
+              {%- endif -%}
+              {%- liquid
+                assign icon_list_has_items = false
+                for i in (1..8)
+                  assign icon_list_text_key = 'icon_list_item_' | append: i | append: '_text'
+                  if block.settings[icon_list_text_key] != blank
+                    assign icon_list_has_items = true
+                  endif
+                endfor
+              -%}
+              {%- if icon_list_has_items -%}
+                <ul class="multirow-icon-list" role="list">
+                  {%- for i in (1..8) -%}
+                    {%- assign icon_list_text_key = 'icon_list_item_' | append: i | append: '_text' -%}
+                    {%- assign icon_list_icon_key = 'icon_list_item_' | append: i | append: '_icon' -%}
+                    {%- if block.settings[icon_list_text_key] != blank -%}
+                      <li class="multirow-icon-list__item block-{{ block.id }}-icon-list-item">
+                        <span
+                          class="multirow-icon-list__icon block-{{ block.id }}-icon-list-icon"
+                          style="background-color: {{ block.settings.icon_list_bg_color }}; color: {{ block.settings.icon_list_icon_color }};"
+                        >
+                          {%- if block.settings[icon_list_icon_key] != blank -%}
+                            {{
+                              block.settings[icon_list_icon_key]
+                              | image_url: width: 96
+                              | image_tag: loading: 'lazy', widths: '48, 64, 96', alt: ''
+                            }}
+                          {%- else -%}
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                              <polyline points="5,13 10,18 19,7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                          {%- endif -%}
+                        </span>
+                        <div
+                          class="multirow-icon-list__text rte block-{{ block.id }}-icon-list-text"
+                          {% if block.settings.icon_list_text_color != blank %}
+                            style="color: {{ block.settings.icon_list_text_color }};"
+                          {% endif %}
+                        >
+                          {{ block.settings[icon_list_text_key] }}
+                        </div>
+                      </li>
+                    {%- endif -%}
+                  {%- endfor -%}
+                </ul>
               {%- endif -%}
               {%- if block.settings.button_label != blank -%}
                 {%- liquid
@@ -569,6 +672,223 @@
           "unit": "px",
           "label": "Tamaño móvil (px)",
           "default": 14
+        },
+        {
+          "type": "header",
+          "content": "Lista de íconos (checklist)"
+        },
+        {
+          "type": "paragraph",
+          "content": "Agrega hasta 8 filas con ícono y texto. Cada fila se muestra solo si tiene texto. Si no subes un ícono propio, se usa un check por defecto."
+        },
+        {
+          "type": "color",
+          "id": "icon_list_bg_color",
+          "label": "Color de fondo del ícono",
+          "default": "#F5C518"
+        },
+        {
+          "type": "color",
+          "id": "icon_list_icon_color",
+          "label": "Color del check por defecto",
+          "default": "#1A1A1A"
+        },
+        {
+          "type": "color",
+          "id": "icon_list_text_color",
+          "label": "Color del texto"
+        },
+        {
+          "type": "range",
+          "id": "icon_list_icon_size_desktop",
+          "min": 16,
+          "max": 64,
+          "step": 1,
+          "unit": "px",
+          "label": "Tamaño ícono — Escritorio",
+          "default": 28
+        },
+        {
+          "type": "range",
+          "id": "icon_list_icon_size_mobile",
+          "min": 14,
+          "max": 48,
+          "step": 1,
+          "unit": "px",
+          "label": "Tamaño ícono — Móvil",
+          "default": 24
+        },
+        {
+          "type": "range",
+          "id": "icon_list_text_size_desktop",
+          "min": 10,
+          "max": 28,
+          "step": 1,
+          "unit": "px",
+          "label": "Tamaño texto — Escritorio",
+          "default": 16
+        },
+        {
+          "type": "range",
+          "id": "icon_list_text_size_mobile",
+          "min": 10,
+          "max": 22,
+          "step": 1,
+          "unit": "px",
+          "label": "Tamaño texto — Móvil",
+          "default": 14
+        },
+        {
+          "type": "range",
+          "id": "icon_list_icon_gap_desktop",
+          "min": 0,
+          "max": 32,
+          "step": 1,
+          "unit": "px",
+          "label": "Espacio ícono-texto — Escritorio",
+          "default": 12
+        },
+        {
+          "type": "range",
+          "id": "icon_list_icon_gap_mobile",
+          "min": 0,
+          "max": 24,
+          "step": 1,
+          "unit": "px",
+          "label": "Espacio ícono-texto — Móvil",
+          "default": 10
+        },
+        {
+          "type": "range",
+          "id": "icon_list_row_gap_desktop",
+          "min": 0,
+          "max": 40,
+          "step": 1,
+          "unit": "px",
+          "label": "Espacio entre filas — Escritorio",
+          "default": 16
+        },
+        {
+          "type": "range",
+          "id": "icon_list_row_gap_mobile",
+          "min": 0,
+          "max": 32,
+          "step": 1,
+          "unit": "px",
+          "label": "Espacio entre filas — Móvil",
+          "default": 12
+        },
+        {
+          "type": "header",
+          "content": "Ítem 1"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_list_item_1_icon",
+          "label": "Ícono (opcional)"
+        },
+        {
+          "type": "richtext",
+          "id": "icon_list_item_1_text",
+          "label": "Texto"
+        },
+        {
+          "type": "header",
+          "content": "Ítem 2"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_list_item_2_icon",
+          "label": "Ícono (opcional)"
+        },
+        {
+          "type": "richtext",
+          "id": "icon_list_item_2_text",
+          "label": "Texto"
+        },
+        {
+          "type": "header",
+          "content": "Ítem 3"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_list_item_3_icon",
+          "label": "Ícono (opcional)"
+        },
+        {
+          "type": "richtext",
+          "id": "icon_list_item_3_text",
+          "label": "Texto"
+        },
+        {
+          "type": "header",
+          "content": "Ítem 4"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_list_item_4_icon",
+          "label": "Ícono (opcional)"
+        },
+        {
+          "type": "richtext",
+          "id": "icon_list_item_4_text",
+          "label": "Texto"
+        },
+        {
+          "type": "header",
+          "content": "Ítem 5"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_list_item_5_icon",
+          "label": "Ícono (opcional)"
+        },
+        {
+          "type": "richtext",
+          "id": "icon_list_item_5_text",
+          "label": "Texto"
+        },
+        {
+          "type": "header",
+          "content": "Ítem 6"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_list_item_6_icon",
+          "label": "Ícono (opcional)"
+        },
+        {
+          "type": "richtext",
+          "id": "icon_list_item_6_text",
+          "label": "Texto"
+        },
+        {
+          "type": "header",
+          "content": "Ítem 7"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_list_item_7_icon",
+          "label": "Ícono (opcional)"
+        },
+        {
+          "type": "richtext",
+          "id": "icon_list_item_7_text",
+          "label": "Texto"
+        },
+        {
+          "type": "header",
+          "content": "Ítem 8"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_list_item_8_icon",
+          "label": "Ícono (opcional)"
+        },
+        {
+          "type": "richtext",
+          "id": "icon_list_item_8_text",
+          "label": "Texto"
         }
       ]
     }
