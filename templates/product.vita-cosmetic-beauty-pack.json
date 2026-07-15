@@ -485,109 +485,6 @@
         "padding_bottom_mobile": 16
       }
     },
-    "why_we_love_it_3t7fT9": {
-      "type": "why-we-love-it",
-      "blocks": {
-        "feature_TKe9aE": {
-          "type": "feature",
-          "settings": {
-            "position": "left",
-            "heading": "Efecto lifting instantáneo ",
-            "text": "<p>Su fórmula con Silk Peptide reafirma la piel desde la primera aplicación, sin irritar ni generar sensación de ardor.</p>",
-            "heading_color": "#cacb55",
-            "heading_font_size_desktop": 16,
-            "heading_font_size_mobile": 16,
-            "heading_font_weight": "700",
-            "text_color": "",
-            "text_font_size_desktop": 14,
-            "text_font_size_mobile": 14,
-            "text_font_weight": "400"
-          }
-        },
-        "feature_HyNcKQ": {
-          "type": "feature",
-          "settings": {
-            "position": "left",
-            "heading": " Nutre y repara",
-            "text": "<p>Mantecas de Karité y Cupuaçu, junto a extractos de frutas y vegetales, restauran labios secos o agrietados.</p>",
-            "heading_color": "#cacb55",
-            "heading_font_size_desktop": 16,
-            "heading_font_size_mobile": 14,
-            "heading_font_weight": "700",
-            "text_color": "",
-            "text_font_size_desktop": 14,
-            "text_font_size_mobile": 12,
-            "text_font_weight": "400"
-          }
-        },
-        "feature_BmGDdQ": {
-          "type": "feature",
-          "settings": {
-            "position": "right",
-            "heading": "Hidratación profunda por 72 horas",
-            "text": "<p>Los 7 tipos de Ácido Hialurónico retienen la humedad durante todo el día.</p>",
-            "heading_color": "#cacb55",
-            "heading_font_size_desktop": 16,
-            "heading_font_size_mobile": 14,
-            "heading_font_weight": "700",
-            "text_color": "",
-            "text_font_size_desktop": 15,
-            "text_font_size_mobile": 12,
-            "text_font_weight": "400"
-          }
-        },
-        "feature_GTkzQr": {
-          "type": "feature",
-          "settings": {
-            "position": "right",
-            "heading": "Ilumina y unifica el tono",
-            "text": "<p>Niacinamida y Adenosina iluminan la piel y refuerzan su elasticidad.</p>",
-            "heading_color": "#cacb55",
-            "heading_font_size_desktop": 16,
-            "heading_font_size_mobile": 14,
-            "heading_font_weight": "700",
-            "text_color": "",
-            "text_font_size_desktop": 14,
-            "text_font_size_mobile": 12,
-            "text_font_weight": "400"
-          }
-        }
-      },
-      "block_order": [
-        "feature_TKe9aE",
-        "feature_HyNcKQ",
-        "feature_BmGDdQ",
-        "feature_GTkzQr"
-      ],
-      "custom_css": [
-        "@media screen and (max-width: 749px) {.h2 {font-size: calc(var(--font-heading-scale) * 1.7rem); }}",
-        "@media screen and (max-width: 749px) {.section-why_we_love_it_3t7fT9-padding {padding-top: 32px !important; padding-bottom: 32px !important; }}"
-      ],
-      "name": "Por qué nos encanta",
-      "settings": {
-        "heading": "Lo que lo hace único a Silk Peptide",
-        "heading_size": "h2",
-        "heading_italic": true,
-        "heading_color": "#000000",
-        "heading_font_size_desktop": 32,
-        "heading_font_size_mobile": 24,
-        "heading_font_weight": "600",
-        "image": "shopify://shop_images/hermosa-mujer-joven-posando_23-2148994740.avif",
-        "circle_size_desktop": 380,
-        "circle_size_mobile": 220,
-        "color_scheme": "background-1",
-        "accent_color_scheme": "accent-2",
-        "background_color": "#ffffff",
-        "circle_border_color": "#cacb55",
-        "badge_icon_bg_color": "#f6f3f1",
-        "badge_icon_svg_color": "#d1816e",
-        "text_alignment": "facing-center",
-        "padding_top": 60,
-        "padding_bottom": 60,
-        "padding_top_mobile": 40,
-        "padding_bottom_mobile": 40
-      }
-    },
     "product_highlight_kHfNT3": {
       "type": "product-highlight",
       "blocks": {
@@ -654,7 +551,7 @@
       ],
       "name": "Producto destacado",
       "settings": {
-        "image": "shopify://shop_images/7Iuk7YGs7JWw7ZSM3_7cb457dd-19e9-4909-a74b-5a105a7174ea.jpg",
+        "image": "shopify://shop_images/product5-clean_c02ad908-613a-4f06-a9e3-7e6572b9ab32.webp",
         "layout": "image_first",
         "content_bg_color": "#e7e7d7",
         "border_radius": 30,
@@ -1006,17 +903,80 @@
         "padding_top_mobile": 20,
         "padding_bottom_mobile": 40
       }
+    },
+    "multirow_H8x4N6": {
+      "type": "multirow",
+      "blocks": {
+        "row_hWDzkP": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/beauty-pack-product-wellness-journey-01.webp",
+            "caption": "Caption",
+            "heading": "Row",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "button_label": "Button label",
+            "button_link": "",
+            "button_background_color": "",
+            "button_text_color": "",
+            "button_border_color": "",
+            "heading_font_size_desktop": 40,
+            "heading_font_size_mobile": 24,
+            "text_font_size_desktop": 16,
+            "text_font_size_mobile": 14
+          }
+        },
+        "row_pdeyWr": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/beauty-pack-nature-science-02.webp",
+            "caption": "Caption",
+            "heading": "Row",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "button_label": "Button label",
+            "button_link": "",
+            "button_background_color": "",
+            "button_text_color": "",
+            "button_border_color": "",
+            "heading_font_size_desktop": 40,
+            "heading_font_size_mobile": 24,
+            "text_font_size_desktop": 16,
+            "text_font_size_mobile": 14
+          }
+        }
+      },
+      "block_order": [
+        "row_hWDzkP",
+        "row_pdeyWr"
+      ],
+      "name": "t:sections.multirow.presets.name",
+      "settings": {
+        "image_height": "adapt",
+        "desktop_image_width": "medium",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "image_layout": "alternate-left",
+        "section_color_scheme": "background-1",
+        "row_color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 28,
+        "padding_bottom_mobile": 28
+      }
     }
   },
   "order": [
     "main",
     "related-products",
     "press_ticker_gTJiLE",
-    "why_we_love_it_3t7fT9",
     "product_highlight_kHfNT3",
     "tarjetas_beneficios_hVc6pQ",
     "review_slider_pmwAwt",
     "faq_accordion_m3GjeY",
-    "community_feed_dJB7VX"
+    "community_feed_dJB7VX",
+    "multirow_H8x4N6"
   ]
 }
