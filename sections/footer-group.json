@@ -25,7 +25,7 @@
         "col_nosotras": {
           "type": "link_list",
           "settings": {
-            "heading": "Vita Nura Lab ",
+            "heading": "Nosotras",
             "menu": "nosotras"
           }
         }
