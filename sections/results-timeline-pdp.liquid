@@ -75,6 +75,7 @@
         <div class="results-timeline__list">
           {%- for block in timeline_blocks -%}
             {%- assign bullet_lines = block.settings.bullets | newline_to_br | split: '<br />' -%}
+            {%- assign icon_alt = block.settings.period | default: '' -%}
             <div class="results-timeline__item" {{ block.shopify_attributes }}>
               <div class="results-timeline__item-header">
                 <div class="results-timeline__icon">
@@ -82,7 +83,7 @@
                     {{
                       block.settings.custom_icon
                       | image_url: width: 128
-                      | image_tag: loading: 'lazy', width: 64, height: 64, alt: block.settings.period | default: ''
+                      | image_tag: loading: 'lazy', width: 64, height: 64, alt: icon_alt
                     }}
                   {%- else -%}
                     {%- render 'results-timeline-icon', icon: block.settings.icon -%}

@@ -11,6 +11,9 @@
     assign mobile_flex_direction = 'row'
     assign mobile_align_items = 'center'
   endif
+
+  assign avatar_sizes = '(max-width: 749px) ' | append: block.settings.avatar_size_mobile | append: 'px, ' | append: block.settings.avatar_size | append: 'px'
+  assign avatar_alt = block.settings.avatar_alt | default: block.settings.author
 -%}
 
 {%- style -%}
@@ -125,9 +128,9 @@
           loading: 'lazy',
           width: 140,
           height: 140,
-          sizes: '(max-width: 749px) ' | append: block.settings.avatar_size_mobile | append: 'px, ' | append: block.settings.avatar_size | append: 'px',
+          sizes: avatar_sizes,
           class: 'review-alt__avatar',
-          alt: block.settings.avatar_alt | default: block.settings.author | escape
+          alt: avatar_alt
       }}
     {%- else -%}
       {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg review-alt__avatar-placeholder' }}
