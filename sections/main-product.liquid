@@ -182,6 +182,10 @@
           </div>
         </div>
       {%- endfor -%}
+      {%- assign review_alt_blocks = section.blocks | where: 'type', 'review_alt' -%}
+      {%- for block in review_alt_blocks -%}
+        {%- render 'review-alt-block', block: block -%}
+      {%- endfor -%}
     </div>
     <div class="product__info-wrapper grid__item{% if settings.page_width > 1400 and section.settings.media_size == "small" %} product__info-wrapper--extra-padding{% endif %}{% if section.settings.enable_sticky_info %} product__column-sticky{% endif %}">
       <product-info
@@ -1643,7 +1647,7 @@
                 {%- render 'product-review-card-block', blocks: prc_blocks, section: section -%}
               {%- endif -%}
             {%- when 'review_alt' -%}
-              {%- render 'review-alt-block', block: block -%}
+              {%- comment -%} Rendered under the product gallery, see product__media-wrapper above {%- endcomment -%}
           {%- endcase -%}
         {%- endfor -%}
         <a href="{{ product.url }}" class="link product__view-details animate-arrow">
