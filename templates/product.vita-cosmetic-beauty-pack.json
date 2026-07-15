@@ -485,6 +485,69 @@
         "padding_bottom_mobile": 16
       }
     },
+    "multirow_H8x4N6": {
+      "type": "multirow",
+      "blocks": {
+        "row_hWDzkP": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/beauty-pack-product-wellness-journey-01.webp",
+            "caption": "RITUAL DIARIO",
+            "heading": "Un sobre, seis beneficios",
+            "text": "<p>Colágeno, multivitamínicos, calcio y magnesio, aceite de krill, cúrcuma y probióticos en una sola dosis diaria, pensada para acompañar tu rutina de la mañana sin complicaciones.</p>",
+            "button_label": "QUIERO MI BEAUTY PACK",
+            "button_link": "#informacion-producto",
+            "button_background_color": "#000000",
+            "button_text_color": "#FFFFFF",
+            "button_border_color": "#000000",
+            "heading_font_size_desktop": 40,
+            "heading_font_size_mobile": 24,
+            "text_font_size_desktop": 16,
+            "text_font_size_mobile": 14
+          }
+        },
+        "row_pdeyWr": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/beauty-pack-nature-science-02.webp",
+            "caption": "PARA MUJERES 30+",
+            "heading": "Vuelve a sentirte tú misma",
+            "text": "<p>Ideal para quienes atraviesan transiciones hormonales, ritmos de vida intensos o los primeros signos de cansancio y piel apagada, RevitaPlus apoya tu equilibrio desde dentro, un sobre al día.</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_background_color": "",
+            "button_text_color": "",
+            "button_border_color": "",
+            "heading_font_size_desktop": 40,
+            "heading_font_size_mobile": 24,
+            "text_font_size_desktop": 16,
+            "text_font_size_mobile": 14
+          }
+        }
+      },
+      "block_order": [
+        "row_hWDzkP",
+        "row_pdeyWr"
+      ],
+      "name": "t:sections.multirow.presets.name",
+      "settings": {
+        "image_height": "adapt",
+        "desktop_image_width": "medium",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "primary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "image_layout": "alternate-left",
+        "section_color_scheme": "background-1",
+        "row_color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 60,
+        "padding_bottom": 40,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 0
+      }
+    },
     "product_highlight_kHfNT3": {
       "type": "product-highlight",
       "blocks": {
@@ -903,80 +966,17 @@
         "padding_top_mobile": 20,
         "padding_bottom_mobile": 40
       }
-    },
-    "multirow_H8x4N6": {
-      "type": "multirow",
-      "blocks": {
-        "row_hWDzkP": {
-          "type": "row",
-          "settings": {
-            "image": "shopify://shop_images/beauty-pack-product-wellness-journey-01.webp",
-            "caption": "RITUAL DIARIO",
-            "heading": "Un sobre, seis beneficios",
-            "text": "<p>Colágeno, multivitamínicos, calcio y magnesio, aceite de krill, cúrcuma y probióticos en una sola dosis diaria, pensada para acompañar tu rutina de la mañana sin complicaciones.</p>",
-            "button_label": "QUIERO MI BEAUTY PACK",
-            "button_link": "#informacion-producto",
-            "button_background_color": "#000000",
-            "button_text_color": "#FFFFFF",
-            "button_border_color": "#000000",
-            "heading_font_size_desktop": 40,
-            "heading_font_size_mobile": 24,
-            "text_font_size_desktop": 16,
-            "text_font_size_mobile": 14
-          }
-        },
-        "row_pdeyWr": {
-          "type": "row",
-          "settings": {
-            "image": "shopify://shop_images/beauty-pack-nature-science-02.webp",
-            "caption": "PARA MUJERES 30+",
-            "heading": "Vuelve a sentirte tú misma",
-            "text": "<p>Ideal para quienes atraviesan transiciones hormonales, ritmos de vida intensos o los primeros signos de cansancio y piel apagada, RevitaPlus apoya tu equilibrio desde dentro, un sobre al día.</p>",
-            "button_label": "",
-            "button_link": "",
-            "button_background_color": "",
-            "button_text_color": "",
-            "button_border_color": "",
-            "heading_font_size_desktop": 40,
-            "heading_font_size_mobile": 24,
-            "text_font_size_desktop": 16,
-            "text_font_size_mobile": 14
-          }
-        }
-      },
-      "block_order": [
-        "row_hWDzkP",
-        "row_pdeyWr"
-      ],
-      "name": "t:sections.multirow.presets.name",
-      "settings": {
-        "image_height": "adapt",
-        "desktop_image_width": "medium",
-        "heading_size": "h1",
-        "text_style": "body",
-        "button_style": "primary",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "image_layout": "alternate-left",
-        "section_color_scheme": "background-1",
-        "row_color_scheme": "background-1",
-        "mobile_content_alignment": "left",
-        "padding_top": 60,
-        "padding_bottom": 40,
-        "padding_top_mobile": 40,
-        "padding_bottom_mobile": 0
-      }
     }
   },
   "order": [
     "main",
     "related-products",
     "press_ticker_gTJiLE",
+    "multirow_H8x4N6",
     "product_highlight_kHfNT3",
     "tarjetas_beneficios_hVc6pQ",
     "review_slider_pmwAwt",
     "faq_accordion_m3GjeY",
-    "community_feed_dJB7VX",
-    "multirow_H8x4N6"
+    "community_feed_dJB7VX"
   ]
 }
