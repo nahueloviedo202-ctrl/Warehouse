@@ -1,0 +1,159 @@
+{%- comment -%}
+  Renders a single 'review_alt' block inside main-product.liquid.
+  Accepts:
+    - block : a section.blocks entry of type 'review_alt'
+{%- endcomment -%}
+
+{%- liquid
+  assign mobile_flex_direction = 'column'
+  assign mobile_align_items = 'flex-start'
+  if block.settings.mobile_layout == 'row'
+    assign mobile_flex_direction = 'row'
+    assign mobile_align_items = 'center'
+  endif
+-%}
+
+{%- style -%}
+  .review-alt-{{ block.id }} {
+    background-color: {{ block.settings.background_color }};
+    border-radius: {{ block.settings.border_radius }}px;
+    padding: {{ block.settings.padding }}px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: {{ block.settings.gap }}px;
+    margin-top: {{ block.settings.margin_top }}px;
+  }
+  .review-alt-{{ block.id }} .review-alt__avatar-wrap {
+    width: {{ block.settings.avatar_size }}px;
+    height: {{ block.settings.avatar_size }}px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .review-alt-{{ block.id }} .review-alt__avatar,
+  .review-alt-{{ block.id }} .review-alt__avatar-placeholder {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .review-alt-{{ block.id }} .review-alt__content {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .review-alt-{{ block.id }} .review-alt__text {
+    font-size: {{ block.settings.text_font_size }}px;
+    line-height: 1.43;
+    color: {{ block.settings.text_color }};
+    margin: 0;
+  }
+  .review-alt-{{ block.id }} .review-alt__author {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .review-alt-{{ block.id }} .review-alt__name-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .review-alt-{{ block.id }} .review-alt__name {
+    font-weight: 600;
+    font-size: {{ block.settings.name_font_size }}px;
+    line-height: 1.42;
+    color: {{ block.settings.text_color }};
+    margin: 0;
+  }
+  .review-alt-{{ block.id }} .review-alt__credentials {
+    font-size: {{ block.settings.credentials_font_size }}px;
+    line-height: 1.33;
+    color: {{ block.settings.text_color }};
+    margin: 0;
+  }
+  .review-alt-{{ block.id }} .review-alt__verified {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    font-size: 11px;
+    font-weight: 500;
+    font-style: italic;
+    color: {{ block.settings.verified_text_color }};
+  }
+  .review-alt-{{ block.id }} .review-alt__verified svg {
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
+    color: {{ block.settings.verified_icon_color }};
+  }
+
+  @media screen and (max-width: 749px) {
+    .review-alt-{{ block.id }} {
+      flex-direction: {{ mobile_flex_direction }};
+      align-items: {{ mobile_align_items }};
+      padding: {{ block.settings.padding_mobile }}px;
+      gap: {{ block.settings.gap_mobile }}px;
+      margin-top: {{ block.settings.margin_top_mobile }}px;
+    }
+    .review-alt-{{ block.id }} .review-alt__avatar-wrap {
+      width: {{ block.settings.avatar_size_mobile }}px;
+      height: {{ block.settings.avatar_size_mobile }}px;
+    }
+    .review-alt-{{ block.id }} .review-alt__text {
+      font-size: {{ block.settings.text_font_size_mobile }}px;
+    }
+    .review-alt-{{ block.id }} .review-alt__name {
+      font-size: {{ block.settings.name_font_size_mobile }}px;
+    }
+    .review-alt-{{ block.id }} .review-alt__credentials {
+      font-size: {{ block.settings.credentials_font_size_mobile }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="review-alt review-alt-{{ block.id }}" {{ block.shopify_attributes }}>
+  <div class="review-alt__avatar-wrap">
+    {%- if block.settings.avatar != blank -%}
+      {{
+        block.settings.avatar
+        | image_url: width: 280
+        | image_tag:
+          loading: 'lazy',
+          width: 140,
+          height: 140,
+          sizes: '(max-width: 749px) ' | append: block.settings.avatar_size_mobile | append: 'px, ' | append: block.settings.avatar_size | append: 'px',
+          class: 'review-alt__avatar',
+          alt: block.settings.avatar_alt | default: block.settings.author | escape
+      }}
+    {%- else -%}
+      {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg review-alt__avatar-placeholder' }}
+    {%- endif -%}
+  </div>
+  <div class="review-alt__content">
+    {%- if block.settings.text != blank -%}
+      <p class="review-alt__text">{{ block.settings.text | escape }}</p>
+    {%- endif -%}
+    <div class="review-alt__author">
+      <div class="review-alt__name-row">
+        {%- if block.settings.author != blank -%}
+          <p class="review-alt__name">{{ block.settings.author | escape }}</p>
+        {%- endif -%}
+        {%- if block.settings.show_verified -%}
+          <span class="review-alt__verified">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+              <path fill="currentColor" d="M7.875 14.6283C6.64453 14.6107 5.51953 14.3119 4.5 13.7318C3.48047 13.1343 2.65429 12.308 2.02148 11.2533C1.42383 10.181 1.125 9.05604 1.125 7.8783C1.125 6.70056 1.42383 5.57556 2.02148 4.5033C2.65429 3.4486 3.48047 2.62244 4.5 2.02478C5.51953 1.4447 6.64453 1.14587 7.875 1.1283C9.10547 1.14587 10.2305 1.4447 11.25 2.02478C12.2695 2.62244 13.0957 3.4486 13.7285 4.5033C14.3261 5.57556 14.625 6.70056 14.625 7.8783C14.625 9.05604 14.3261 10.181 13.7285 11.2533C13.0957 12.308 12.2695 13.1343 11.25 13.7318C10.2305 14.3119 9.10547 14.6107 7.875 14.6283ZM10.8545 6.63903C11.1006 6.3402 11.1006 6.04139 10.8545 5.74256C10.5557 5.49645 10.2568 5.49645 9.95805 5.74256L7.03125 8.66931L5.79198 7.43005C5.49316 7.18395 5.19434 7.18395 4.89552 7.43005C4.64941 7.72889 4.64941 8.0277 4.89552 8.32653L6.58302 10.0141C6.88184 10.2601 7.18066 10.2601 7.47948 10.0141L10.8545 6.63903Z"></path>
+            </svg>
+            {{ block.settings.verified_label }}
+          </span>
+        {%- endif -%}
+      </div>
+      {%- if block.settings.credentials != blank -%}
+        <p class="review-alt__credentials">{{ block.settings.credentials | escape }}</p>
+      {%- endif -%}
+    </div>
+  </div>
+</div>

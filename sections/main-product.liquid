@@ -1642,6 +1642,8 @@
               {%- if prc_blocks[0].id == block.id -%}
                 {%- render 'product-review-card-block', blocks: prc_blocks, section: section -%}
               {%- endif -%}
+            {%- when 'review_alt' -%}
+              {%- render 'review-alt-block', block: block -%}
           {%- endcase -%}
         {%- endfor -%}
         <a href="{{ product.url }}" class="link product__view-details animate-arrow">
@@ -6498,6 +6500,286 @@
           "id": "arrow_bg",
           "label": "Fondo de las flechas",
           "default": "#fff9f6"
+        }
+      ]
+    },
+    {
+      "type": "review_alt",
+      "name": "Reseña con avatar",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Contenido"
+        },
+        {
+          "type": "image_picker",
+          "id": "avatar",
+          "label": "Foto"
+        },
+        {
+          "type": "text",
+          "id": "avatar_alt",
+          "label": "Texto alternativo de la foto"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Texto de la reseña",
+          "default": "\"For men seeking to enhance energy and drive, I recommend a natural approach. This blend of pure Shilajit and adaptogenic herbs safely boosts stamina and wellness for peak performance.\""
+        },
+        {
+          "type": "text",
+          "id": "author",
+          "label": "Nombre",
+          "default": "Dr. Marcus Thorne, M.D."
+        },
+        {
+          "type": "text",
+          "id": "credentials",
+          "label": "Cargo / credenciales",
+          "default": "Board-Certified Physician & Men's Health Specialist"
+        },
+        {
+          "type": "header",
+          "content": "Insignia de verificado"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_verified",
+          "label": "Mostrar insignia de verificado",
+          "default": true
+        },
+        {
+          "type": "text",
+          "id": "verified_label",
+          "label": "Texto de verificado",
+          "default": "Verified customer"
+        },
+        {
+          "type": "color",
+          "id": "verified_icon_color",
+          "label": "Color del ícono",
+          "default": "#1a8400"
+        },
+        {
+          "type": "color",
+          "id": "verified_text_color",
+          "label": "Color del texto de verificado",
+          "default": "#76af6d"
+        },
+        {
+          "type": "header",
+          "content": "Colores"
+        },
+        {
+          "type": "color",
+          "id": "background_color",
+          "label": "Fondo",
+          "default": "#fcfaf5"
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "label": "Color del texto principal",
+          "default": "#1a1a1a"
+        },
+        {
+          "type": "header",
+          "content": "Bordes"
+        },
+        {
+          "type": "range",
+          "id": "border_radius",
+          "label": "Radio de esquinas",
+          "min": 0,
+          "max": 40,
+          "step": 1,
+          "unit": "px",
+          "default": 12
+        },
+        {
+          "type": "header",
+          "content": "Avatar (desktop)"
+        },
+        {
+          "type": "range",
+          "id": "avatar_size",
+          "label": "Tamaño del avatar",
+          "min": 50,
+          "max": 140,
+          "step": 5,
+          "unit": "px",
+          "default": 100
+        },
+        {
+          "type": "header",
+          "content": "Avatar (mobile)"
+        },
+        {
+          "type": "range",
+          "id": "avatar_size_mobile",
+          "label": "Tamaño del avatar",
+          "min": 40,
+          "max": 120,
+          "step": 5,
+          "unit": "px",
+          "default": 80
+        },
+        {
+          "type": "header",
+          "content": "Tipografía (desktop)"
+        },
+        {
+          "type": "range",
+          "id": "text_font_size",
+          "label": "Tamaño del texto de reseña",
+          "min": 10,
+          "max": 24,
+          "step": 1,
+          "unit": "px",
+          "default": 14
+        },
+        {
+          "type": "range",
+          "id": "name_font_size",
+          "label": "Tamaño del nombre",
+          "min": 10,
+          "max": 22,
+          "step": 1,
+          "unit": "px",
+          "default": 15
+        },
+        {
+          "type": "range",
+          "id": "credentials_font_size",
+          "label": "Tamaño de credenciales",
+          "min": 9,
+          "max": 18,
+          "step": 1,
+          "unit": "px",
+          "default": 12
+        },
+        {
+          "type": "header",
+          "content": "Tipografía (mobile)"
+        },
+        {
+          "type": "range",
+          "id": "text_font_size_mobile",
+          "label": "Tamaño del texto de reseña",
+          "min": 9,
+          "max": 20,
+          "step": 1,
+          "unit": "px",
+          "default": 13
+        },
+        {
+          "type": "range",
+          "id": "name_font_size_mobile",
+          "label": "Tamaño del nombre",
+          "min": 9,
+          "max": 20,
+          "step": 1,
+          "unit": "px",
+          "default": 14
+        },
+        {
+          "type": "range",
+          "id": "credentials_font_size_mobile",
+          "label": "Tamaño de credenciales",
+          "min": 8,
+          "max": 16,
+          "step": 1,
+          "unit": "px",
+          "default": 11
+        },
+        {
+          "type": "header",
+          "content": "Espaciado (desktop)"
+        },
+        {
+          "type": "range",
+          "id": "padding",
+          "label": "Padding interno",
+          "min": 0,
+          "max": 40,
+          "step": 2,
+          "unit": "px",
+          "default": 16
+        },
+        {
+          "type": "range",
+          "id": "gap",
+          "label": "Espacio entre foto y contenido",
+          "min": 0,
+          "max": 40,
+          "step": 2,
+          "unit": "px",
+          "default": 16
+        },
+        {
+          "type": "range",
+          "id": "margin_top",
+          "label": "Margen superior",
+          "min": 0,
+          "max": 60,
+          "step": 2,
+          "unit": "px",
+          "default": 16
+        },
+        {
+          "type": "header",
+          "content": "Espaciado (mobile)"
+        },
+        {
+          "type": "range",
+          "id": "padding_mobile",
+          "label": "Padding interno",
+          "min": 0,
+          "max": 40,
+          "step": 2,
+          "unit": "px",
+          "default": 16
+        },
+        {
+          "type": "range",
+          "id": "gap_mobile",
+          "label": "Espacio entre foto y contenido",
+          "min": 0,
+          "max": 40,
+          "step": 2,
+          "unit": "px",
+          "default": 16
+        },
+        {
+          "type": "range",
+          "id": "margin_top_mobile",
+          "label": "Margen superior",
+          "min": 0,
+          "max": 60,
+          "step": 2,
+          "unit": "px",
+          "default": 0
+        },
+        {
+          "type": "header",
+          "content": "Diseño en mobile"
+        },
+        {
+          "type": "select",
+          "id": "mobile_layout",
+          "label": "Disposición en mobile",
+          "options": [
+            {
+              "value": "stacked",
+              "label": "Apilado (foto arriba)"
+            },
+            {
+              "value": "row",
+              "label": "En línea (igual que desktop)"
+            }
+          ],
+          "default": "stacked"
         }
       ]
     }
