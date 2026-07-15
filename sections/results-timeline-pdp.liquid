@@ -1,0 +1,555 @@
+{%- liquid
+  assign timeline_blocks = section.blocks | where: 'type', 'timeline_item'
+-%}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    background-color: {{ section.settings.background_color }};
+    padding-top: {{ section.settings.padding_top_mobile }}px;
+    padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+  }
+
+  #shopify-section-{{ section.id }} .results-timeline__heading {
+    color: {{ section.settings.heading_color }};
+    font-size: {{ section.settings.heading_font_size_mobile }}px;
+  }
+
+  #shopify-section-{{ section.id }} .results-timeline__period,
+  #shopify-section-{{ section.id }} .results-timeline__subtitle,
+  #shopify-section-{{ section.id }} .results-timeline__bullets {
+    color: {{ section.settings.text_color }};
+  }
+
+  #shopify-section-{{ section.id }} .results-timeline__period {
+    font-size: {{ section.settings.period_font_size_mobile }}px;
+  }
+
+  #shopify-section-{{ section.id }} .results-timeline__bullets {
+    font-size: {{ section.settings.bullets_font_size_mobile }}px;
+  }
+
+  #shopify-section-{{ section.id }} .results-timeline__separator,
+  #shopify-section-{{ section.id }} .results-timeline__separator::before,
+  #shopify-section-{{ section.id }} .results-timeline__separator::after {
+    background-color: {{ section.settings.separator_color }};
+  }
+
+  #shopify-section-{{ section.id }} .results-timeline__icon {
+    width: {{ section.settings.icon_size }}px;
+    height: {{ section.settings.icon_size }}px;
+    color: {{ section.settings.icon_color }};
+    background: linear-gradient(to bottom, {{ section.settings.icon_gradient_start }}, {{ section.settings.icon_gradient_end }});
+  }
+
+  @media screen and (min-width: 990px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+
+    #shopify-section-{{ section.id }} .results-timeline__heading {
+      font-size: {{ section.settings.heading_font_size }}px;
+    }
+
+    #shopify-section-{{ section.id }} .results-timeline__period {
+      font-size: {{ section.settings.period_font_size }}px;
+    }
+
+    #shopify-section-{{ section.id }} .results-timeline__bullets {
+      font-size: {{ section.settings.bullets_font_size }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="results-timeline section-{{ section.id }}-padding">
+  <div class="results-timeline__container">
+    {%- if section.settings.heading != blank -%}
+      <h2 class="results-timeline__heading">{{ section.settings.heading | escape }}</h2>
+    {%- endif -%}
+
+    {%- if timeline_blocks.size > 0 -%}
+      <div class="results-timeline__content">
+        {%- if section.settings.show_separator -%}
+          <div class="results-timeline__separator"></div>
+        {%- endif -%}
+        <div class="results-timeline__list">
+          {%- for block in timeline_blocks -%}
+            {%- assign bullet_lines = block.settings.bullets | newline_to_br | split: '<br />' -%}
+            <div class="results-timeline__item" {{ block.shopify_attributes }}>
+              <div class="results-timeline__item-header">
+                <div class="results-timeline__icon">
+                  {%- if block.settings.custom_icon != blank -%}
+                    {{
+                      block.settings.custom_icon
+                      | image_url: width: 128
+                      | image_tag: loading: 'lazy', width: 64, height: 64, alt: block.settings.period | default: ''
+                    }}
+                  {%- else -%}
+                    {%- render 'results-timeline-icon', icon: block.settings.icon -%}
+                  {%- endif -%}
+                </div>
+                <div class="results-timeline__item-labels">
+                  {%- if block.settings.period != blank -%}
+                    <span class="results-timeline__period"><p>{{ block.settings.period | escape }}</p></span>
+                  {%- endif -%}
+                  {%- if block.settings.subtitle != blank -%}
+                    <span class="results-timeline__subtitle">{{ block.settings.subtitle | escape }}</span>
+                  {%- endif -%}
+                </div>
+              </div>
+              {%- if block.settings.bullets != blank -%}
+                <div class="results-timeline__bullets">
+                  <ul>
+                    {%- for line in bullet_lines -%}
+                      {%- assign trimmed_line = line | strip -%}
+                      {%- if trimmed_line != blank -%}
+                        <li>{{ trimmed_line | escape }}</li>
+                      {%- endif -%}
+                    {%- endfor -%}
+                  </ul>
+                </div>
+              {%- endif -%}
+            </div>
+          {%- endfor -%}
+        </div>
+      </div>
+    {%- endif -%}
+  </div>
+</div>
+
+{%- style -%}
+  .results-timeline {
+    width: 100%;
+  }
+  .results-timeline__container {
+    max-width: 1440px;
+    margin-inline: auto;
+    padding-inline: 16px;
+  }
+  .results-timeline__heading {
+    font-weight: 800;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1.2;
+    margin: 0 0 24px;
+  }
+  .results-timeline__content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .results-timeline__separator {
+    position: relative;
+    height: 1px;
+  }
+  .results-timeline__separator::before,
+  .results-timeline__separator::after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    top: 50%;
+  }
+  .results-timeline__separator::before {
+    left: 0;
+    transform: translate(-50%, -50%);
+  }
+  .results-timeline__separator::after {
+    right: 0;
+    transform: translate(50%, -50%);
+  }
+  .results-timeline__list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .results-timeline__item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .results-timeline__item-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .results-timeline__icon {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    overflow: hidden;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  .results-timeline__icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+  .results-timeline__item-labels {
+    display: flex;
+    flex-direction: column;
+  }
+  .results-timeline__period {
+    display: block;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1.44;
+  }
+  .results-timeline__period p {
+    margin: 0;
+  }
+  .results-timeline__subtitle {
+    display: block;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.44;
+  }
+  .results-timeline__bullets ul {
+    list-style: disc;
+    padding-left: 21px;
+    margin: 0;
+  }
+  .results-timeline__bullets li {
+    margin-bottom: 4px;
+  }
+  .results-timeline__bullets li:last-child {
+    margin-bottom: 0;
+  }
+
+  @media screen and (min-width: 990px) {
+    .results-timeline__container {
+      padding-inline: 120px;
+    }
+    .results-timeline__heading {
+      margin-bottom: 40px;
+      max-width: 94%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .results-timeline__list {
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 0;
+    }
+    .results-timeline__item {
+      flex: 1 0 0;
+      min-width: 0;
+      padding-right: 32px;
+    }
+    .results-timeline__item:last-child {
+      padding-right: 0;
+    }
+    .results-timeline__bullets ul {
+      padding-left: 24px;
+    }
+    .results-timeline__bullets li {
+      margin-bottom: 8px;
+    }
+  }
+
+  @media screen and (max-width: 375px) {
+    .results-timeline__heading {
+      font-size: 20px;
+    }
+  }
+{%- endstyle -%}
+
+{% schema %}
+{
+  "name": "Timeline de resultados",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Encabezado"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Título",
+      "default": "WHAT TO EXPECT: EXAMPLE OF RESULTS TIMELINE"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Color del título",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "header",
+      "content": "Colores"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Fondo de la sección",
+      "default": "#fcfaf5"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Color del texto",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "header",
+      "content": "Separador"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_separator",
+      "label": "Mostrar línea separadora",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "separator_color",
+      "label": "Color del separador",
+      "default": "#e9be47"
+    },
+    {
+      "type": "header",
+      "content": "Ícono"
+    },
+    {
+      "type": "range",
+      "id": "icon_size",
+      "label": "Tamaño del ícono",
+      "min": 32,
+      "max": 96,
+      "step": 4,
+      "unit": "px",
+      "default": 56
+    },
+    {
+      "type": "color",
+      "id": "icon_color",
+      "label": "Color del ícono",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "color",
+      "id": "icon_gradient_start",
+      "label": "Fondo del ícono — color inicial",
+      "default": "#e7b944"
+    },
+    {
+      "type": "color",
+      "id": "icon_gradient_end",
+      "label": "Fondo del ícono — color final",
+      "default": "#ffed68"
+    },
+    {
+      "type": "header",
+      "content": "Tipografía (desktop)"
+    },
+    {
+      "type": "range",
+      "id": "heading_font_size",
+      "label": "Tamaño del título",
+      "min": 18,
+      "max": 48,
+      "step": 1,
+      "unit": "px",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "period_font_size",
+      "label": "Tamaño del período (ej: WEEK 1)",
+      "min": 12,
+      "max": 26,
+      "step": 1,
+      "unit": "px",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "bullets_font_size",
+      "label": "Tamaño del texto de la lista",
+      "min": 10,
+      "max": 22,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "Tipografía (mobile)"
+    },
+    {
+      "type": "range",
+      "id": "heading_font_size_mobile",
+      "label": "Tamaño del título",
+      "min": 16,
+      "max": 36,
+      "step": 1,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "period_font_size_mobile",
+      "label": "Tamaño del período (ej: WEEK 1)",
+      "min": 10,
+      "max": 22,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "bullets_font_size_mobile",
+      "label": "Tamaño del texto de la lista",
+      "min": 9,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "header",
+      "content": "Espaciado (desktop)"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding superior",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 56
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding inferior",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 56
+    },
+    {
+      "type": "header",
+      "content": "Espaciado (mobile)"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "label": "Padding superior",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "label": "Padding inferior",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 40
+    }
+  ],
+  "blocks": [
+    {
+      "type": "timeline_item",
+      "name": "Etapa",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Ícono"
+        },
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Ícono predefinido",
+          "options": [
+            { "value": "bolt", "label": "Rayo" },
+            { "value": "sparkle", "label": "Destello" },
+            { "value": "pulse", "label": "Pulso" }
+          ],
+          "default": "bolt"
+        },
+        {
+          "type": "image_picker",
+          "id": "custom_icon",
+          "label": "Ícono personalizado (opcional)",
+          "info": "Si se sube una imagen, reemplaza al ícono predefinido."
+        },
+        {
+          "type": "header",
+          "content": "Contenido"
+        },
+        {
+          "type": "text",
+          "id": "period",
+          "label": "Período",
+          "default": "WEEK 1"
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Subtítulo",
+          "default": "Stress & Energy Reset"
+        },
+        {
+          "type": "textarea",
+          "id": "bullets",
+          "label": "Lista de resultados",
+          "info": "Un resultado por línea.",
+          "default": "Cortisol begins to ease, mental fog lifts\nSleep improves, mornings feel different\nMood stabilises, stress feels more manageable\nFirst signs of returning energy and focus"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Timeline de resultados",
+      "blocks": [
+        {
+          "type": "timeline_item",
+          "settings": {
+            "icon": "bolt",
+            "period": "WEEK 1",
+            "subtitle": "Stress & Energy Reset",
+            "bullets": "Cortisol begins to ease, mental fog lifts\nSleep improves, mornings feel different\nMood stabilises, stress feels more manageable\nFirst signs of returning energy and focus"
+          }
+        },
+        {
+          "type": "timeline_item",
+          "settings": {
+            "icon": "sparkle",
+            "period": "MONTH 1",
+            "subtitle": "Hormones & Performance Returning",
+            "bullets": "Testosterone support building noticeably\nDesire re-emerging consistently\nBlood flow and circulation improving daily\nDrive and confidence returning naturally"
+          }
+        },
+        {
+          "type": "timeline_item",
+          "settings": {
+            "icon": "pulse",
+            "period": "MONTH 3+",
+            "subtitle": "Peak Performance & Vitality",
+            "bullets": "All 6 ingredients working in full synergy\nHormonal balance restored and sustained\nEnergy, stamina & performance as your new baseline\nPartner notices. You notice. Everyone notices."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
