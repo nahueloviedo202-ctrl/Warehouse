@@ -1,0 +1,796 @@
+<link rel="stylesheet" href="{{ 'component-slider.css' | asset_url }}" media="print" onload="this.media='all'">
+<noscript>{{ 'component-slider.css' | asset_url | stylesheet_tag }}</noscript>
+
+{%- liquid
+  assign columns_mobile_int = section.settings.columns_mobile | plus: 0
+  assign ic_blocks = section.blocks | where: 'type', 'ingredient'
+  assign show_badges_row = false
+  if section.settings.show_badges
+    if section.settings.badge_1_text != blank or section.settings.badge_2_text != blank
+      assign show_badges_row = true
+    endif
+  endif
+-%}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    background-color: {{ section.settings.background_color }};
+    padding-top: {{ section.settings.padding_top_mobile }}px;
+    padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+  }
+
+  #shopify-section-{{ section.id }} .ing-carousel__heading {
+    font-size: {{ section.settings.heading_font_size_mobile }}px;
+  }
+
+  #shopify-section-{{ section.id }} .ing-carousel__heading--accent {
+    color: {{ section.settings.accent_color }};
+  }
+
+  #shopify-section-{{ section.id }} .ing-carousel__heading--normal {
+    color: {{ section.settings.heading_color }};
+  }
+
+  #shopify-section-{{ section.id }} .ing-carousel__card-inner {
+    border-radius: {{ section.settings.card_border_radius }}px;
+    padding: {{ section.settings.card_padding_top_mobile }}px 16px 16px;
+  }
+
+  #shopify-section-{{ section.id }} .ing-carousel__track {
+    gap: {{ section.settings.card_gap }}px;
+  }
+
+  #shopify-section-{{ section.id }} .ing-carousel__image {
+    top: -{{ section.settings.image_height_mobile }}px;
+    height: {{ section.settings.image_height_mobile }}px;
+  }
+
+  #shopify-section-{{ section.id }} .ing-carousel__button {
+    background: linear-gradient(180deg, {{ section.settings.button_gradient_start }}, {{ section.settings.button_gradient_end }});
+    color: {{ section.settings.button_text_color }};
+  }
+
+  #shopify-section-{{ section.id }} .ing-carousel__badge-icon {
+    color: {{ section.settings.badges_icon_color }};
+  }
+
+  #shopify-section-{{ section.id }} .ing-carousel__arrow {
+    color: {{ section.settings.arrows_color }};
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+
+    #shopify-section-{{ section.id }} .ing-carousel__heading {
+      font-size: {{ section.settings.heading_font_size_desktop }}px;
+    }
+
+    #shopify-section-{{ section.id }} .ing-carousel__card-inner {
+      padding: {{ section.settings.card_padding_top }}px 16px 16px;
+    }
+
+    #shopify-section-{{ section.id }} .ing-carousel__image {
+      top: -{{ section.settings.image_height }}px;
+      height: {{ section.settings.image_height }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="ing-carousel section-{{ section.id }}-padding">
+  <div class="ing-carousel__container page-width">
+    {%- if section.settings.heading_accent != blank or section.settings.heading_normal != blank -%}
+      <h2 class="ing-carousel__heading">
+        {%- if section.settings.heading_accent != blank -%}
+          <span class="ing-carousel__heading--accent">{{ section.settings.heading_accent | escape }}</span>
+        {%- endif -%}
+        {%- if section.settings.heading_normal != blank -%}
+          <span class="ing-carousel__heading--normal">{{ section.settings.heading_normal | escape }}</span>
+        {%- endif -%}
+      </h2>
+    {%- endif -%}
+
+    {%- if ic_blocks.size > 0 -%}
+      <slider-component class="ing-carousel__wrapper page-width-desktop">
+        <ul
+          id="Slider-{{ section.id }}"
+          class="ing-carousel__track grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_tablet }}-col-tablet grid--{{ columns_mobile_int }}-col-tablet-down slider slider--desktop slider--tablet grid--peek"
+          role="list"
+          aria-label="{{ 'general.slider.name' | t }}"
+        >
+          {%- for block in ic_blocks -%}
+            <li
+              id="Slide-{{ section.id }}-{{ forloop.index }}"
+              class="ing-carousel__card grid__item slider__slide"
+              {{ block.shopify_attributes }}
+            >
+              <div class="ing-carousel__card-inner" style="background-color: {{ block.settings.card_bg_color }};">
+                <div class="ing-carousel__image">
+                  {%- if block.settings.image != blank -%}
+                    <img
+                      src="{{ block.settings.image | image_url: width: 800 }}"
+                      srcset="
+                        {{ block.settings.image | image_url: width: 400 }} 400w,
+                        {{ block.settings.image | image_url: width: 600 }} 600w,
+                        {{ block.settings.image | image_url: width: 800 }} 800w
+                      "
+                      sizes="(min-width: 990px) {{ 100 | divided_by: section.settings.columns_desktop }}vw, (min-width: 750px) {{ 100 | divided_by: section.settings.columns_tablet }}vw, 60vw"
+                      alt="{{ block.settings.image.alt | default: block.settings.title | escape }}"
+                      width="{{ block.settings.image.width }}"
+                      height="{{ block.settings.image.height }}"
+                      loading="lazy"
+                    >
+                  {%- else -%}
+                    {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                  {%- endif -%}
+                </div>
+                <div class="ing-carousel__content">
+                  {%- if block.settings.title != blank -%}
+                    <h3 class="ing-carousel__title">{{ block.settings.title | escape }}</h3>
+                  {%- endif -%}
+                  {%- if block.settings.description != blank -%}
+                    <p class="ing-carousel__description">{{ block.settings.description | escape }}</p>
+                  {%- endif -%}
+                </div>
+              </div>
+            </li>
+          {%- endfor -%}
+        </ul>
+
+        {%- if section.settings.show_arrows -%}
+          <div class="slider-buttons no-js-hidden">
+            <button
+              type="button"
+              class="slider-button slider-button--prev ing-carousel__arrow"
+              name="previous"
+              aria-label="{{ 'general.slider.previous_slide' | t }}"
+              aria-controls="Slider-{{ section.id }}"
+            >
+              {%- render 'icon-caret' -%}
+            </button>
+            <button
+              type="button"
+              class="slider-button slider-button--next ing-carousel__arrow"
+              name="next"
+              aria-label="{{ 'general.slider.next_slide' | t }}"
+              aria-controls="Slider-{{ section.id }}"
+            >
+              {%- render 'icon-caret' -%}
+            </button>
+          </div>
+        {%- endif -%}
+      </slider-component>
+    {%- endif -%}
+
+    {%- if section.settings.button_label != blank or show_badges_row -%}
+      <div class="ing-carousel__footer">
+        {%- if section.settings.button_label != blank -%}
+          <a href="{{ section.settings.button_link | default: '#' }}" class="ing-carousel__button">
+            {{ section.settings.button_label | escape }}
+          </a>
+        {%- endif -%}
+        {%- if show_badges_row -%}
+          <div class="ing-carousel__badges">
+            {%- if section.settings.badge_1_text != blank -%}
+              <div class="ing-carousel__badge">
+                <span class="ing-carousel__badge-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="17" height="20" viewBox="0 0 17 20" fill="none" aria-hidden="true" focusable="false">
+                    <path fill="currentColor" d="M7.1123 2C7.70431 2.00014 8.18085 2.65105 8.75098 2.80273C9.32127 2.95429 10.0682 2.63619 10.5713 2.92676C11.0744 3.21738 11.1779 4.02832 11.5889 4.44238C11.9999 4.85628 12.8248 4.96121 13.1045 5.45801C13.3839 5.95477 13.081 6.73409 13.2275 7.2793C13.3744 7.82461 14.0312 8.3252 14.0312 8.91895C14.0311 9.51256 13.3792 9.98586 13.2275 10.5576C13.076 11.1295 13.3951 11.8783 13.1045 12.3799C12.8138 12.8814 11.9982 12.9877 11.5889 13.3955C11.1795 13.8033 11.0666 14.6314 10.5713 14.9111C10.076 15.1906 9.2962 14.8873 8.75098 15.0342C8.20578 15.1811 7.70592 15.8377 7.1123 15.8379C6.51855 15.8379 6.04453 15.1857 5.47266 15.0342C4.90092 14.8829 4.15281 15.2015 3.65137 14.9111C3.14988 14.6206 3.04339 13.8034 2.63574 13.3955C2.22793 12.9877 1.39629 12.8732 1.11816 12.3779C0.840264 11.8826 1.14295 11.1028 0.996094 10.5576C0.849086 10.0125 0.193503 9.51251 0.193359 8.91895C0.193359 8.3252 0.846094 7.85117 0.996094 7.2793C1.1459 6.70754 0.826255 5.95949 1.11816 5.45801C1.41035 4.95645 2.22793 4.8502 2.63574 4.44238C3.04355 4.03457 3.15605 3.21074 3.65137 2.9248C4.14661 2.63914 4.92744 2.94941 5.47266 2.80273C6.01797 2.65586 6.52012 2 7.1123 2ZM10.0654 6.29102C9.87896 6.29119 9.70011 6.36511 9.56836 6.49707L6.21875 9.85645L4.43066 8.0625C4.36535 7.99724 4.28745 7.94549 4.20215 7.91016C4.11696 7.87493 4.02578 7.85649 3.93359 7.85645C3.84119 7.85645 3.74943 7.8748 3.66406 7.91016C3.57869 7.94552 3.50089 7.99716 3.43555 8.0625C3.3702 8.12785 3.31857 8.20563 3.2832 8.29102C3.24783 8.3764 3.22949 8.46812 3.22949 8.56055C3.22953 8.65288 3.24787 8.74477 3.2832 8.83008C3.31853 8.9152 3.3704 8.99242 3.43555 9.05762L5.71973 11.3408C5.78506 11.4061 5.86292 11.4578 5.94824 11.4932C6.03376 11.5286 6.12619 11.5469 6.21875 11.5469C6.4049 11.5465 6.58311 11.4723 6.71484 11.3408L10.5635 7.49121C10.6953 7.35922 10.7697 7.17967 10.7695 6.99316C10.7693 6.80672 10.6944 6.62783 10.5625 6.49609C10.4305 6.36451 10.2518 6.29087 10.0654 6.29102Z"/>
+                  </svg>
+                </span>
+                <span class="ing-carousel__badge-text">{{ section.settings.badge_1_text | escape }}</span>
+              </div>
+            {%- endif -%}
+            {%- if section.settings.badge_2_text != blank -%}
+              <div class="ing-carousel__badge">
+                <span class="ing-carousel__badge-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="17" height="20" viewBox="0 0 17 20" fill="none" aria-hidden="true" focusable="false">
+                    <path fill="currentColor" d="M7.1123 2C7.70431 2.00014 8.18085 2.65105 8.75098 2.80273C9.32127 2.95429 10.0682 2.63619 10.5713 2.92676C11.0744 3.21738 11.1779 4.02832 11.5889 4.44238C11.9999 4.85628 12.8248 4.96121 13.1045 5.45801C13.3839 5.95477 13.081 6.73409 13.2275 7.2793C13.3744 7.82461 14.0312 8.3252 14.0312 8.91895C14.0311 9.51256 13.3792 9.98586 13.2275 10.5576C13.076 11.1295 13.3951 11.8783 13.1045 12.3799C12.8138 12.8814 11.9982 12.9877 11.5889 13.3955C11.1795 13.8033 11.0666 14.6314 10.5713 14.9111C10.076 15.1906 9.2962 14.8873 8.75098 15.0342C8.20578 15.1811 7.70592 15.8377 7.1123 15.8379C6.51855 15.8379 6.04453 15.1857 5.47266 15.0342C4.90092 14.8829 4.15281 15.2015 3.65137 14.9111C3.14988 14.6206 3.04339 13.8034 2.63574 13.3955C2.22793 12.9877 1.39629 12.8732 1.11816 12.3779C0.840264 11.8826 1.14295 11.1028 0.996094 10.5576C0.849086 10.0125 0.193503 9.51251 0.193359 8.91895C0.193359 8.3252 0.846094 7.85117 0.996094 7.2793C1.1459 6.70754 0.826255 5.95949 1.11816 5.45801C1.41035 4.95645 2.22793 4.8502 2.63574 4.44238C3.04355 4.03457 3.15605 3.21074 3.65137 2.9248C4.14661 2.63914 4.92744 2.94941 5.47266 2.80273C6.01797 2.65586 6.52012 2 7.1123 2ZM10.0654 6.29102C9.87896 6.29119 9.70011 6.36511 9.56836 6.49707L6.21875 9.85645L4.43066 8.0625C4.36535 7.99724 4.28745 7.94549 4.20215 7.91016C4.11696 7.87493 4.02578 7.85649 3.93359 7.85645C3.84119 7.85645 3.74943 7.8748 3.66406 7.91016C3.57869 7.94552 3.50089 7.99716 3.43555 8.0625C3.3702 8.12785 3.31857 8.20563 3.2832 8.29102C3.24783 8.3764 3.22949 8.46812 3.22949 8.56055C3.22953 8.65288 3.24787 8.74477 3.2832 8.83008C3.31853 8.9152 3.3704 8.99242 3.43555 9.05762L5.71973 11.3408C5.78506 11.4061 5.86292 11.4578 5.94824 11.4932C6.03376 11.5286 6.12619 11.5469 6.21875 11.5469C6.4049 11.5465 6.58311 11.4723 6.71484 11.3408L10.5635 7.49121C10.6953 7.35922 10.7697 7.17967 10.7695 6.99316C10.7693 6.80672 10.6944 6.62783 10.5625 6.49609C10.4305 6.36451 10.2518 6.29087 10.0654 6.29102Z"/>
+                  </svg>
+                </span>
+                <span class="ing-carousel__badge-text">{{ section.settings.badge_2_text | escape }}</span>
+              </div>
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+  </div>
+</div>
+
+{%- style -%}
+  .ing-carousel {
+    width: 100%;
+    overflow: hidden;
+  }
+  .ing-carousel__container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+  }
+  .ing-carousel__heading {
+    font-weight: 800;
+    line-height: 1.2;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0;
+  }
+  .ing-carousel__heading--accent {
+    margin-right: 8px;
+  }
+  .ing-carousel__wrapper {
+    width: 100%;
+  }
+  .ing-carousel__track {
+    margin-bottom: 0;
+  }
+  .ing-carousel__card {
+    padding-top: 96px;
+  }
+  .ing-carousel__card-inner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  .ing-carousel__image {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 32px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+  }
+  .ing-carousel__image img,
+  .ing-carousel__image .placeholder-svg {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+  .ing-carousel__content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .ing-carousel__title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.44;
+    margin: 0;
+  }
+  .ing-carousel__description {
+    font-size: 16px;
+    line-height: 1.25;
+    margin: 0;
+  }
+  .ing-carousel__footer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+  }
+  .ing-carousel__button {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.44;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .ing-carousel__button:hover {
+    transform: translateY(-2px);
+  }
+  .ing-carousel__badges {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 16px;
+  }
+  .ing-carousel__badge {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+  }
+  .ing-carousel__badge-icon {
+    width: 17px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .ing-carousel__badge-icon svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  .ing-carousel__badge-text {
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  @media screen and (max-width: 989px) {
+    .ing-carousel__footer {
+      max-width: 100%;
+    }
+    .ing-carousel__button {
+      max-width: 400px;
+    }
+    .ing-carousel__badges {
+      max-width: 400px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  @media screen and (max-width: 749px) {
+    .ing-carousel__container {
+      gap: 24px;
+    }
+    .ing-carousel__title {
+      font-size: 16px;
+    }
+    .ing-carousel__description {
+      font-size: 14px;
+    }
+    .ing-carousel__button {
+      font-size: 16px;
+      height: 52px;
+    }
+    .ing-carousel__badge-text {
+      font-size: 12px;
+    }
+    .ing-carousel__badges {
+      flex-direction: column;
+      gap: 8px;
+    }
+  }
+{%- endstyle -%}
+
+{%- if section.settings.autoplay -%}
+  <script>
+    (function () {
+      'use strict';
+      var sliderId = 'Slider-{{ section.id }}';
+      var speed = {{ section.settings.autoplay_speed | times: 1000 }};
+      var intervalId;
+
+      function autoSlide(slider, component) {
+        var nextBtn = component.querySelector('button[name="next"]');
+        if (!nextBtn) return;
+        if (nextBtn.hasAttribute('disabled')) {
+          slider.scrollTo({ left: 0, behavior: 'smooth' });
+        } else {
+          nextBtn.click();
+        }
+      }
+
+      function init() {
+        var slider = document.getElementById(sliderId);
+        if (!slider) return;
+        var component = slider.closest('slider-component');
+        if (!component) return;
+
+        function start() {
+          intervalId = setInterval(function () {
+            autoSlide(slider, component);
+          }, speed);
+        }
+
+        function stop() {
+          clearInterval(intervalId);
+        }
+
+        component.addEventListener('mouseover', stop);
+        component.addEventListener('mouseleave', start);
+        component.addEventListener('focusin', stop);
+        component.addEventListener('focusout', start);
+
+        start();
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+      } else {
+        init();
+      }
+    })();
+  </script>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Carrusel de ingredientes",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Encabezado"
+    },
+    {
+      "type": "text",
+      "id": "heading_accent",
+      "label": "Título (color de acento)",
+      "default": "Powerful Ingredients"
+    },
+    {
+      "type": "text",
+      "id": "heading_normal",
+      "label": "Título (color normal)",
+      "default": "for Peak Performance"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Color de acento",
+      "default": "#a45b2c"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Color del título",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "range",
+      "id": "heading_font_size_desktop",
+      "label": "Tamaño de título (desktop)",
+      "min": 18,
+      "max": 48,
+      "step": 1,
+      "unit": "px",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "heading_font_size_mobile",
+      "label": "Tamaño de título (mobile)",
+      "min": 16,
+      "max": 36,
+      "step": 1,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "header",
+      "content": "Colores"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Fondo de la sección",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Espaciado (desktop)"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding superior",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding inferior",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "header",
+      "content": "Espaciado (mobile)"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "label": "Padding superior",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "label": "Padding inferior",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "header",
+      "content": "Carrusel — columnas"
+    },
+    {
+      "type": "range",
+      "id": "columns_desktop",
+      "label": "Tarjetas visibles (desktop)",
+      "min": 2,
+      "max": 5,
+      "step": 1,
+      "default": 4
+    },
+    {
+      "type": "range",
+      "id": "columns_tablet",
+      "label": "Tarjetas visibles (tablet)",
+      "min": 1,
+      "max": 3,
+      "step": 1,
+      "default": 2
+    },
+    {
+      "type": "select",
+      "id": "columns_mobile",
+      "label": "Tarjetas visibles (mobile)",
+      "options": [
+        { "value": "1", "label": "1 tarjeta (con vista previa)" },
+        { "value": "2", "label": "2 tarjetas" }
+      ],
+      "default": "1"
+    },
+    {
+      "type": "header",
+      "content": "Carrusel — comportamiento"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_arrows",
+      "label": "Mostrar flechas de navegación",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "arrows_color",
+      "label": "Color de las flechas",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay",
+      "label": "Reproducción automática",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "autoplay_speed",
+      "label": "Velocidad de reproducción automática",
+      "min": 1,
+      "max": 15,
+      "step": 1,
+      "unit": "s",
+      "default": 5
+    },
+    {
+      "type": "header",
+      "content": "Tarjetas"
+    },
+    {
+      "type": "range",
+      "id": "card_border_radius",
+      "label": "Radio de esquinas",
+      "min": 0,
+      "max": 30,
+      "step": 1,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "card_gap",
+      "label": "Espacio entre tarjetas",
+      "min": 8,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "Imagen de tarjeta (desktop)"
+    },
+    {
+      "type": "range",
+      "id": "image_height",
+      "label": "Alto de imagen",
+      "min": 80,
+      "max": 220,
+      "step": 4,
+      "unit": "px",
+      "default": 152
+    },
+    {
+      "type": "range",
+      "id": "card_padding_top",
+      "label": "Espacio interno superior (debajo de la imagen)",
+      "min": 24,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "default": 56
+    },
+    {
+      "type": "header",
+      "content": "Imagen de tarjeta (mobile)"
+    },
+    {
+      "type": "range",
+      "id": "image_height_mobile",
+      "label": "Alto de imagen",
+      "min": 60,
+      "max": 180,
+      "step": 4,
+      "unit": "px",
+      "default": 120
+    },
+    {
+      "type": "range",
+      "id": "card_padding_top_mobile",
+      "label": "Espacio interno superior (debajo de la imagen)",
+      "min": 24,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "header",
+      "content": "Botón"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Texto del botón",
+      "default": "Shop Now"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Enlace del botón"
+    },
+    {
+      "type": "color",
+      "id": "button_gradient_start",
+      "label": "Degradado — color inicial",
+      "default": "#e7b944"
+    },
+    {
+      "type": "color",
+      "id": "button_gradient_end",
+      "label": "Degradado — color final",
+      "default": "#ffed68"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Color del texto",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "header",
+      "content": "Insignias"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_badges",
+      "label": "Mostrar insignias",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "badge_1_text",
+      "label": "Texto insignia 1",
+      "default": "3rd Party Lab Tested"
+    },
+    {
+      "type": "text",
+      "id": "badge_2_text",
+      "label": "Texto insignia 2",
+      "default": "Pure and Natural Solution"
+    },
+    {
+      "type": "color",
+      "id": "badges_icon_color",
+      "label": "Color de los íconos",
+      "default": "#1a1a1a"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "ingredient",
+      "name": "Ingrediente",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Imagen"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Nombre",
+          "default": "Ingrediente"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Descripción",
+          "default": "Describí el beneficio principal de este ingrediente."
+        },
+        {
+          "type": "color",
+          "id": "card_bg_color",
+          "label": "Fondo de la tarjeta",
+          "default": "#f5f5f5"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Carrusel de ingredientes",
+      "blocks": [
+        {
+          "type": "ingredient",
+          "settings": {
+            "title": "Ashwagandha",
+            "description": "Supports cortisol reduction, boosts free testosterone, helps improve stress resilience."
+          }
+        },
+        {
+          "type": "ingredient",
+          "settings": {
+            "title": "Shilajit",
+            "description": "Supports the increase of total & free testosterone, enhancing mitochondrial ATP."
+          }
+        },
+        {
+          "type": "ingredient",
+          "settings": {
+            "title": "Parax Ginseng",
+            "description": "Helps with LH production, blood flow, anti-inflammatory effect."
+          }
+        },
+        {
+          "type": "ingredient",
+          "settings": {
+            "title": "Saffron",
+            "description": "Sustains PDE5 inhibition and NO increase."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
