@@ -35,6 +35,10 @@
     font-size: {{ section.settings.link_size_mobile }}px;
   }
 
+  .cif-footer--{{ section.id }} .cif-footer__col-text {
+    font-size: {{ section.settings.text_size_mobile }}px;
+  }
+
   .cif-footer--{{ section.id }} .cif-footer__copyright,
   .cif-footer--{{ section.id }} .cif-footer__copyright small {
     font-size: {{ section.settings.copyright_size_mobile }}px;
@@ -67,6 +71,10 @@
 
     .cif-footer--{{ section.id }} .cif-footer__link {
       font-size: {{ section.settings.link_size }}px;
+    }
+
+    .cif-footer--{{ section.id }} .cif-footer__col-text {
+      font-size: {{ section.settings.text_size }}px;
     }
 
     .cif-footer--{{ section.id }} .cif-footer__copyright,
@@ -114,30 +122,65 @@
     </div>
 
     {%- if section.blocks.size > 0 -%}
-      <nav class="cif-footer__nav" aria-label="{{ 'general.footer.footer_menu_label' | t | default: 'Footer' }}">
+      <nav class="cif-footer__nav" aria-label="Footer">
         {%- for block in section.blocks -%}
-          {%- if block.type == 'link_list' -%}
-            <div class="cif-footer__col" {{ block.shopify_attributes }}>
-              {%- if block.settings.heading != blank -%}
-                <h3 class="cif-footer__col-heading">{{ block.settings.heading | escape }}</h3>
-              {%- endif -%}
-              {%- if block.settings.menu != blank -%}
+          {%- case block.type -%}
+
+            {%- when 'link_list' -%}
+              <div class="cif-footer__col" {{ block.shopify_attributes }}>
+                {%- if block.settings.heading != blank -%}
+                  <h3 class="cif-footer__col-heading">{{ block.settings.heading | escape }}</h3>
+                {%- endif -%}
+                {%- if block.settings.menu != blank -%}
+                  <ul class="cif-footer__col-links">
+                    {%- for link in block.settings.menu.links -%}
+                      <li>
+                        <a
+                          href="{{ link.url }}"
+                          class="cif-footer__link{% if link.active %} cif-footer__link--active{% endif %}"
+                          {% if link.active %}aria-current="page"{% endif %}
+                        >
+                          {{ link.title }}
+                        </a>
+                      </li>
+                    {%- endfor -%}
+                  </ul>
+                {%- endif -%}
+              </div>
+
+            {%- when 'custom_links' -%}
+              <div class="cif-footer__col" {{ block.shopify_attributes }}>
+                {%- if block.settings.heading != blank -%}
+                  <h3 class="cif-footer__col-heading">{{ block.settings.heading | escape }}</h3>
+                {%- endif -%}
                 <ul class="cif-footer__col-links">
-                  {%- for link in block.settings.menu.links -%}
-                    <li>
-                      <a
-                        href="{{ link.url }}"
-                        class="cif-footer__link{% if link.active %} cif-footer__link--active{% endif %}"
-                        {% if link.active %}aria-current="page"{% endif %}
-                      >
-                        {{ link.title }}
-                      </a>
-                    </li>
+                  {%- for i in (1..6) -%}
+                    {%- assign label_key = 'link_' | append: i | append: '_label' -%}
+                    {%- assign url_key = 'link_' | append: i | append: '_url' -%}
+                    {%- assign link_label = block.settings[label_key] -%}
+                    {%- assign link_url = block.settings[url_key] -%}
+                    {%- if link_label != blank -%}
+                      <li>
+                        <a href="{{ link_url | default: '#' }}" class="cif-footer__link">
+                          {{ link_label }}
+                        </a>
+                      </li>
+                    {%- endif -%}
                   {%- endfor -%}
                 </ul>
-              {%- endif -%}
-            </div>
-          {%- endif -%}
+              </div>
+
+            {%- when 'text' -%}
+              <div class="cif-footer__col cif-footer__col--text" {{ block.shopify_attributes }}>
+                {%- if block.settings.heading != blank -%}
+                  <h3 class="cif-footer__col-heading">{{ block.settings.heading | escape }}</h3>
+                {%- endif -%}
+                {%- if block.settings.text != blank -%}
+                  <div class="cif-footer__col-text">{{ block.settings.text }}</div>
+                {%- endif -%}
+              </div>
+
+          {%- endcase -%}
         {%- endfor -%}
       </nav>
     {%- else -%}
@@ -190,7 +233,7 @@
   "blocks": [
     {
       "type": "link_list",
-      "name": "Columna de enlaces",
+      "name": "Columna de enlaces (menú)",
       "settings": [
         {
           "type": "text",
@@ -203,6 +246,119 @@
           "id": "menu",
           "label": "Menú",
           "info": "Selecciona un menú de navegación"
+        }
+      ]
+    },
+    {
+      "type": "custom_links",
+      "name": "Columna de enlaces (manual)",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Título de columna",
+          "default": "Enlaces"
+        },
+        {
+          "type": "header",
+          "content": "Enlace 1"
+        },
+        {
+          "type": "text",
+          "id": "link_1_label",
+          "label": "Texto"
+        },
+        {
+          "type": "url",
+          "id": "link_1_url",
+          "label": "Enlace"
+        },
+        {
+          "type": "header",
+          "content": "Enlace 2"
+        },
+        {
+          "type": "text",
+          "id": "link_2_label",
+          "label": "Texto"
+        },
+        {
+          "type": "url",
+          "id": "link_2_url",
+          "label": "Enlace"
+        },
+        {
+          "type": "header",
+          "content": "Enlace 3"
+        },
+        {
+          "type": "text",
+          "id": "link_3_label",
+          "label": "Texto"
+        },
+        {
+          "type": "url",
+          "id": "link_3_url",
+          "label": "Enlace"
+        },
+        {
+          "type": "header",
+          "content": "Enlace 4"
+        },
+        {
+          "type": "text",
+          "id": "link_4_label",
+          "label": "Texto"
+        },
+        {
+          "type": "url",
+          "id": "link_4_url",
+          "label": "Enlace"
+        },
+        {
+          "type": "header",
+          "content": "Enlace 5"
+        },
+        {
+          "type": "text",
+          "id": "link_5_label",
+          "label": "Texto"
+        },
+        {
+          "type": "url",
+          "id": "link_5_url",
+          "label": "Enlace"
+        },
+        {
+          "type": "header",
+          "content": "Enlace 6"
+        },
+        {
+          "type": "text",
+          "id": "link_6_label",
+          "label": "Texto"
+        },
+        {
+          "type": "url",
+          "id": "link_6_url",
+          "label": "Enlace"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "Columna de texto",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Título de columna"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Texto",
+          "default": "<p>Escribe aquí el texto del footer.</p>"
         }
       ]
     }
@@ -403,6 +559,16 @@
       "default": 12
     },
     {
+      "type": "range",
+      "id": "text_size",
+      "label": "Tamaño de texto libre",
+      "min": 10,
+      "max": 32,
+      "step": 1,
+      "unit": "px",
+      "default": 13
+    },
+    {
       "type": "header",
       "content": "Tipografía (mobile)"
     },
@@ -445,6 +611,16 @@
       "step": 1,
       "unit": "px",
       "default": 11
+    },
+    {
+      "type": "range",
+      "id": "text_size_mobile",
+      "label": "Tamaño de texto libre (mobile)",
+      "min": 10,
+      "max": 28,
+      "step": 1,
+      "unit": "px",
+      "default": 12
     },
     {
       "type": "header",

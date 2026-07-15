@@ -120,6 +120,26 @@
   text-underline-offset: 0.3rem;
 }
 
+.cif-footer__col-text {
+  color: #ffffff;
+  opacity: 0.82;
+  line-height: 1.5;
+}
+
+.cif-footer__col-text p {
+  margin: 0 0 0.8rem;
+}
+
+.cif-footer__col-text p:last-child {
+  margin-bottom: 0;
+}
+
+.cif-footer__col-text a {
+  color: #ffffff;
+  text-decoration: underline;
+  text-underline-offset: 0.3rem;
+}
+
 /* ── Bottom bar: copyright left, payment right ── */
 .cif-footer__bottom {
   display: flex;
