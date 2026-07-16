@@ -836,7 +836,7 @@
         "row_color_scheme": "background-1",
         "background_color": "",
         "row_content_padding_top": 96,
-        "row_content_padding_bottom": 112,
+        "row_content_padding_bottom": 100,
         "row_content_padding_top_mobile": 48,
         "row_content_padding_bottom_mobile": 48,
         "stat_disclaimer": "<p>*According to survey responses from 5,000+ customers.</p>",
