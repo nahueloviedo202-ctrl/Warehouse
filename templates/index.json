@@ -15,7 +15,7 @@
         "slide_gpdUTy": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/banner.webp",
+            "image": "shopify://shop_images/banner-clean.webp",
             "image_mobile": "shopify://shop_images/Gemini_Generated_Image_bguqcbguqcbguqcb.webp",
             "heading": "Fórmulas que transforman tu piel",
             "heading_size": "h1",
@@ -288,7 +288,7 @@
         "slide_pPDxgU": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/Gemini_Generated_Image_nwfk87nwfk87nwfk.webp",
+            "image": "shopify://shop_images/mujer.webp",
             "heading": "Tu piel, en su mejor versión",
             "heading_size": "h1",
             "heading_color": "",
