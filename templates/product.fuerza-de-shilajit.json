@@ -1200,10 +1200,10 @@
         "button_gradient_start": "#000000",
         "button_gradient_end": "#000000",
         "button_text_color": "#FFFFFF",
-        "show_badges": false,
-        "badge_1_text": "",
-        "badge_2_text": "",
-        "badges_icon_color": "#1a1a1a"
+        "show_badges": true,
+        "badge_1_text": "Testeado por Laboratorios Externos",
+        "badge_2_text": "Solución Pura y Natural",
+        "badges_icon_color": "#3D6C45"
       }
     },
     "cambios_reales_gAJgYK": {
