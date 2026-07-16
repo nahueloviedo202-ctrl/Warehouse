@@ -946,7 +946,7 @@
         "stat_disclaimer_color": "#ffffff",
         "stat_disclaimer_font_size": 14,
         "mobile_content_alignment": "left",
-        "padding_top": 60,
+        "padding_top": 40,
         "padding_bottom": 40,
         "padding_top_mobile": 40,
         "padding_bottom_mobile": 0
