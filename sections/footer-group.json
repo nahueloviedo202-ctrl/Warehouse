@@ -41,6 +41,24 @@
             "link_6_url": ""
           }
         },
+        "custom_links_3dxr37": {
+          "type": "custom_links",
+          "settings": {
+            "heading": "Productos más vendidos",
+            "link_1_label": "Ampolla Reafirmante Intensiva Con Péptidos De Seda",
+            "link_1_url": "shopify://products/ampolla-de-cascara-de-arroz-de-vita-cosmetic",
+            "link_2_label": "VITA PROBIODERM CREMA LIFTING 3D 50ml",
+            "link_2_url": "shopify://products/vita-probioderm-crema-lifting-3d-50ml",
+            "link_3_label": "Kit Ultra Alisador",
+            "link_3_url": "shopify://products/kit-ultra-alisador",
+            "link_4_label": "ShilaStrength — Fuerza de Shilajit 9000mg",
+            "link_4_url": "shopify://products/shilastrength-fuerza-de-shilajit-9000mg",
+            "link_5_label": "Ampolla De Cáscara De Arroz — VITA COSMETICS®",
+            "link_5_url": "shopify://products/ampolla-de-cascara-de-arroz-de-vita-cosmetic",
+            "link_6_label": "",
+            "link_6_url": ""
+          }
+        },
         "link_list_JM3bmc": {
           "type": "link_list",
           "disabled": true,
@@ -61,6 +79,7 @@
       "block_order": [
         "text_iPVPew",
         "custom_links_nJB7m6",
+        "custom_links_3dxr37",
         "link_list_JM3bmc",
         "col_nosotras"
       ],
