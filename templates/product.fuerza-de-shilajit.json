@@ -12,6 +12,38 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "review_alt_4FyMiY": {
+          "type": "review_alt",
+          "settings": {
+            "avatar": "shopify://shop_images/reviewr_image_beef_png_1c15e2e2-3afc-444d-9dce-6d3e0578e2d5.png",
+            "avatar_alt": "",
+            "text": "Para hombres que buscan recuperar energía y deseo, recomiendo un enfoque natural. Esta combinación de Shilajit puro y hierbas adaptógenas apoya de forma segura la energía y el bienestar para un rendimiento óptimo.",
+            "author": "Dr. Marcos Torres, M.D.",
+            "credentials": "Médico especialista en salud masculina",
+            "show_verified": true,
+            "verified_label": "Cliente verificado",
+            "verified_icon_color": "#1a8400",
+            "verified_text_color": "#76af6d",
+            "background_color": "#fcfaf5",
+            "text_color": "#1a1a1a",
+            "border_radius": 12,
+            "avatar_size": 100,
+            "avatar_size_mobile": 80,
+            "text_font_size": 14,
+            "name_font_size": 15,
+            "credentials_font_size": 12,
+            "text_font_size_mobile": 13,
+            "name_font_size_mobile": 14,
+            "credentials_font_size_mobile": 11,
+            "padding": 16,
+            "gap": 16,
+            "margin_top": 16,
+            "padding_mobile": 16,
+            "gap_mobile": 16,
+            "margin_top_mobile": 0,
+            "mobile_layout": "stacked"
+          }
+        },
         "trustpilot_bar_W4kVKz": {
           "type": "trustpilot_bar",
           "settings": {
@@ -344,6 +376,7 @@
         }
       },
       "block_order": [
+        "review_alt_4FyMiY",
         "trustpilot_bar_W4kVKz",
         "press_logos_LWbnV8",
         "title",
@@ -770,7 +803,7 @@
             "heading_font_size_mobile": 24,
             "text_font_size_desktop": 16,
             "text_font_size_mobile": 14,
-            "icon_list_bg_color": "#f5c518",
+            "icon_list_bg_color": "#B4C6B7",
             "icon_list_icon_color": "#1a1a1a",
             "icon_list_text_color": "",
             "icon_list_icon_size_desktop": 28,
@@ -781,10 +814,10 @@
             "icon_list_icon_gap_mobile": 10,
             "icon_list_row_gap_desktop": 16,
             "icon_list_row_gap_mobile": 12,
-            "icon_list_item_1_text": "",
-            "icon_list_item_2_text": "",
-            "icon_list_item_3_text": "",
-            "icon_list_item_4_text": "",
+            "icon_list_item_1_text": "<p>Eleva tu testosterona de forma natural</p>",
+            "icon_list_item_2_text": "<p>Reduce el cortisol y el estrés diario</p>",
+            "icon_list_item_3_text": "<p>Mejora tu resistencia y rendimiento físico</p>",
+            "icon_list_item_4_text": "<p>Apoya la vitalidad de tu sistema reproductivo</p>",
             "icon_list_item_5_text": "",
             "icon_list_item_6_text": "",
             "icon_list_item_7_text": "",
@@ -1191,7 +1224,7 @@
       "name": "Preguntas frecuentes",
       "settings": {
         "caption": "",
-        "heading": "Preguntas frecuentes",
+        "heading": "PREGUNTAS FRECUENTES",
         "heading_size": "h2",
         "heading_italic": true,
         "heading_color": "#000000",
