@@ -35,10 +35,6 @@
     font-size: {{ section.settings.link_size_mobile }}px;
   }
 
-  .cif-footer--{{ section.id }} .cif-footer__col-text {
-    font-size: {{ section.settings.text_size_mobile }}px;
-  }
-
   .cif-footer--{{ section.id }} .cif-footer__copyright,
   .cif-footer--{{ section.id }} .cif-footer__copyright small {
     font-size: {{ section.settings.copyright_size_mobile }}px;
@@ -71,10 +67,6 @@
 
     .cif-footer--{{ section.id }} .cif-footer__link {
       font-size: {{ section.settings.link_size }}px;
-    }
-
-    .cif-footer--{{ section.id }} .cif-footer__col-text {
-      font-size: {{ section.settings.text_size }}px;
     }
 
     .cif-footer--{{ section.id }} .cif-footer__copyright,
@@ -122,65 +114,30 @@
     </div>
 
     {%- if section.blocks.size > 0 -%}
-      <nav class="cif-footer__nav" aria-label="Footer">
+      <nav class="cif-footer__nav" aria-label="{{ 'general.footer.footer_menu_label' | t | default: 'Footer' }}">
         {%- for block in section.blocks -%}
-          {%- case block.type -%}
-
-            {%- when 'link_list' -%}
-              <div class="cif-footer__col" {{ block.shopify_attributes }}>
-                {%- if block.settings.heading != blank -%}
-                  <h3 class="cif-footer__col-heading">{{ block.settings.heading | escape }}</h3>
-                {%- endif -%}
-                {%- if block.settings.menu != blank -%}
-                  <ul class="cif-footer__col-links">
-                    {%- for link in block.settings.menu.links -%}
-                      <li>
-                        <a
-                          href="{{ link.url }}"
-                          class="cif-footer__link{% if link.active %} cif-footer__link--active{% endif %}"
-                          {% if link.active %}aria-current="page"{% endif %}
-                        >
-                          {{ link.title }}
-                        </a>
-                      </li>
-                    {%- endfor -%}
-                  </ul>
-                {%- endif -%}
-              </div>
-
-            {%- when 'custom_links' -%}
-              <div class="cif-footer__col" {{ block.shopify_attributes }}>
-                {%- if block.settings.heading != blank -%}
-                  <h3 class="cif-footer__col-heading">{{ block.settings.heading | escape }}</h3>
-                {%- endif -%}
+          {%- if block.type == 'link_list' -%}
+            <div class="cif-footer__col" {{ block.shopify_attributes }}>
+              {%- if block.settings.heading != blank -%}
+                <h3 class="cif-footer__col-heading">{{ block.settings.heading | escape }}</h3>
+              {%- endif -%}
+              {%- if block.settings.menu != blank -%}
                 <ul class="cif-footer__col-links">
-                  {%- for i in (1..6) -%}
-                    {%- assign label_key = 'link_' | append: i | append: '_label' -%}
-                    {%- assign url_key = 'link_' | append: i | append: '_url' -%}
-                    {%- assign link_label = block.settings[label_key] -%}
-                    {%- assign link_url = block.settings[url_key] -%}
-                    {%- if link_label != blank -%}
-                      <li>
-                        <a href="{{ link_url | default: '#' }}" class="cif-footer__link">
-                          {{ link_label }}
-                        </a>
-                      </li>
-                    {%- endif -%}
+                  {%- for link in block.settings.menu.links -%}
+                    <li>
+                      <a
+                        href="{{ link.url }}"
+                        class="cif-footer__link{% if link.active %} cif-footer__link--active{% endif %}"
+                        {% if link.active %}aria-current="page"{% endif %}
+                      >
+                        {{ link.title }}
+                      </a>
+                    </li>
                   {%- endfor -%}
                 </ul>
-              </div>
-
-            {%- when 'text' -%}
-              <div class="cif-footer__col cif-footer__col--text" {{ block.shopify_attributes }}>
-                {%- if block.settings.heading != blank -%}
-                  <h3 class="cif-footer__col-heading">{{ block.settings.heading | escape }}</h3>
-                {%- endif -%}
-                {%- if block.settings.text != blank -%}
-                  <div class="cif-footer__col-text">{{ block.settings.text }}</div>
-                {%- endif -%}
-              </div>
-
-          {%- endcase -%}
+              {%- endif -%}
+            </div>
+          {%- endif -%}
         {%- endfor -%}
       </nav>
     {%- else -%}
@@ -251,7 +208,7 @@
     },
     {
       "type": "custom_links",
-      "name": "Columna de enlaces (manual)",
+      "name": "Enlaces (manual)",
       "settings": [
         {
           "type": "text",
@@ -559,16 +516,6 @@
       "default": 12
     },
     {
-      "type": "range",
-      "id": "text_size",
-      "label": "Tamaño de texto libre",
-      "min": 10,
-      "max": 32,
-      "step": 1,
-      "unit": "px",
-      "default": 13
-    },
-    {
       "type": "header",
       "content": "Tipografía (mobile)"
     },
@@ -611,16 +558,6 @@
       "step": 1,
       "unit": "px",
       "default": 11
-    },
-    {
-      "type": "range",
-      "id": "text_size_mobile",
-      "label": "Tamaño de texto libre (mobile)",
-      "min": 10,
-      "max": 28,
-      "step": 1,
-      "unit": "px",
-      "default": 12
     },
     {
       "type": "header",
