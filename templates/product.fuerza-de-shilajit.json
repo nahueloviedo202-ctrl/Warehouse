@@ -27,7 +27,7 @@
             "background_color": "#fcfaf5",
             "text_color": "#1a1a1a",
             "border_radius": 12,
-            "avatar_size": 100,
+            "avatar_size": 80,
             "avatar_size_mobile": 80,
             "text_font_size": 14,
             "name_font_size": 15,
@@ -63,28 +63,6 @@
             "alignment": "flex-start",
             "gap": 8,
             "gap_mobile": 6
-          }
-        },
-        "press_logos_LWbnV8": {
-          "type": "press_logos",
-          "settings": {
-            "heading": "",
-            "img_height": 36,
-            "text_size": 22,
-            "logos_gap": 20,
-            "logo_opacity": 40,
-            "grayscale": 0,
-            "text_color": "#000000",
-            "border_color": "#e8e8e8",
-            "logo_1_image": "shopify://shop_images/el-mundo-seeklogo.png",
-            "logo_1_text": "MUJERHOY",
-            "logo_2_image": "shopify://shop_images/marie-claire-seeklogo.png",
-            "logo_2_text": "ELLE",
-            "logo_3_text": "",
-            "logo_4_image": "shopify://shop_images/el-pais-seeklogo.png",
-            "logo_4_text": "Women's Health",
-            "logo_5_text": "",
-            "logo_6_text": ""
           }
         },
         "title": {
@@ -378,7 +356,6 @@
       "block_order": [
         "review_alt_4FyMiY",
         "trustpilot_bar_W4kVKz",
-        "press_logos_LWbnV8",
         "title",
         "description_yT64Wm",
         "price",
