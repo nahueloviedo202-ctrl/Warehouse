@@ -41,6 +41,40 @@
       font-size: {{ section.settings.heading_font_size_desktop }}px;
     }
   }
+
+  /* Pre-init baseline: approximates the Swiper flex layout before swiper-bundle.min.css
+     (loaded async) and its JS finish, so slides never flash as a full-width stacked
+     list. Swiper's own inline styles simply take over once ready, no visible jump. */
+  #CommunityFeed-{{ section.id }}.swiper .swiper-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: {{ section.settings.space_mobile }}px;
+  }
+
+  #CommunityFeed-{{ section.id }}.swiper .swiper-slide {
+    flex: 0 0 auto;
+    width: calc((100% - {{ section.settings.space_mobile }}px * ({{ section.settings.slides_mobile }} - 1)) / {{ section.settings.slides_mobile }});
+  }
+
+  @media screen and (min-width: 750px) {
+    #CommunityFeed-{{ section.id }}.swiper .swiper-wrapper {
+      gap: {{ section.settings.space_tablet }}px;
+    }
+
+    #CommunityFeed-{{ section.id }}.swiper .swiper-slide {
+      width: calc((100% - {{ section.settings.space_tablet }}px * ({{ section.settings.slides_tablet }} - 1)) / {{ section.settings.slides_tablet }});
+    }
+  }
+
+  @media screen and (min-width: 990px) {
+    #CommunityFeed-{{ section.id }}.swiper .swiper-wrapper {
+      gap: {{ section.settings.space_desktop }}px;
+    }
+
+    #CommunityFeed-{{ section.id }}.swiper .swiper-slide {
+      width: calc((100% - {{ section.settings.space_desktop }}px * ({{ section.settings.slides_desktop }} - 1)) / {{ section.settings.slides_desktop }});
+    }
+  }
 {%- endstyle -%}
 
 <div class="color-{{ section.settings.color_scheme }} gradient"{% if section.settings.background_color != blank %} style="background-color: {{ section.settings.background_color }};"{% endif %}>

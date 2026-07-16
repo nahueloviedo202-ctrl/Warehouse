@@ -105,9 +105,24 @@
     for (var i = 0; i < half; i++) w += ch[i].getBoundingClientRect().width;
     if (w > 0) track.style.setProperty('--press-ticker-offset', '-' + Math.round(w) + 'px');
   }
+  function whenImagesReady(callback) {
+    var images = track.querySelectorAll('img');
+    var pending = images.length;
+    if (!pending) { callback(); return; }
+    function done() {
+      pending--;
+      if (pending <= 0) callback();
+    }
+    images.forEach(function (img) {
+      if (img.complete) { done(); return; }
+      img.addEventListener('load', done, { once: true });
+      img.addEventListener('error', done, { once: true });
+    });
+  }
   if (document.readyState !== 'loading') { setOffset(); }
   else { document.addEventListener('DOMContentLoaded', setOffset); }
   window.addEventListener('load', setOffset);
+  whenImagesReady(setOffset);
   window.addEventListener('resize', setOffset);
 })();
 </script>
