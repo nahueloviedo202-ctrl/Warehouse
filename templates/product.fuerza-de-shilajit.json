@@ -1548,7 +1548,7 @@
         "heading_font_weight": "600",
         "color_scheme": "background-1",
         "verified_color": "#bc6161",
-        "background_color": "",
+        "background_color": "#FCFAF5",
         "media_radius": 18,
         "enable_center_mode": true,
         "enable_loop": true,
