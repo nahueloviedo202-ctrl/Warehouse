@@ -821,10 +821,10 @@
       ],
       "name": "Tarjetas de beneficios",
       "settings": {
-        "heading": "Vuelva a sentirse usted misma",
+        "heading": "Recupera tu mejor versión",
         "heading_size": "h1",
         "heading_italic": false,
-        "subheading": "<p>La base para volver a sentirse usted misma.</p>",
+        "subheading": "<p>La base para volver a sentirte plena cada día.</p>",
         "heading_color": "#000000",
         "heading_font_size_desktop": 36,
         "heading_font_size_mobile": 26,
@@ -853,10 +853,28 @@
     "review_slider_pmwAwt": {
       "type": "review-slider",
       "blocks": {
+        "review_DQ93Un": {
+          "type": "review",
+          "settings": {
+            "text": "Fácil de tomar, no tiene sabor raro y ya es parte de mi rutina.",
+            "avatar": "shopify://shop_images/Captura_de_pantalla_2026-07-16_123050.png",
+            "author": "Priscila M.",
+            "rating": 5
+          }
+        },
+        "review_CiYUQx": {
+          "type": "review",
+          "settings": {
+            "text": "Después de un mes noto mucho menos cansancio en el día a día.",
+            "avatar": "shopify://shop_images/55fede12a595b2ce7846b245a7d870c6_1.jpg",
+            "author": "Marta S.",
+            "rating": 5
+          }
+        },
         "review_TdEpgg": {
           "type": "review",
           "settings": {
-            "text": "Noté mi piel más firme y tersa en solo dos semanas, ¡ya voy por la segunda ampolla!",
+            "text": "Menos hinchazón desde la primera semana, no lo podía creer!",
             "avatar": "shopify://shop_images/default-ticker-5_1_1.png",
             "author": "María D.",
             "rating": 5
@@ -865,7 +883,7 @@
         "review_EccX6C": {
           "type": "review",
           "settings": {
-            "text": "Súper hidratante, se absorbe rápido y mi piel se siente distinta al tacto.",
+            "text": "Duermo mejor y me despierto con otra energía.",
             "avatar": "shopify://shop_images/default-ticker-5_1_2.png",
             "author": "Sofía P.",
             "rating": 5
@@ -874,7 +892,7 @@
         "review_VgTKBY": {
           "type": "review",
           "settings": {
-            "text": "Producto de muy buena calidad y atención impecable. Estoy muy conforme.",
+            "text": "Mi piel se ve más luminosa, se nota que es de adentro hacia afuera.",
             "avatar": "shopify://shop_images/default-ticker-5_1.png",
             "author": "Camila M.",
             "rating": 5
@@ -882,6 +900,8 @@
         }
       },
       "block_order": [
+        "review_DQ93Un",
+        "review_CiYUQx",
         "review_TdEpgg",
         "review_EccX6C",
         "review_VgTKBY"
@@ -891,9 +911,9 @@
         "heading": "CAMBIOS REALES",
         "heading_size": "h2",
         "heading_color": "#000000",
-        "heading_font_size_desktop": 36,
+        "heading_font_size_desktop": 32,
         "heading_font_size_mobile": 26,
-        "heading_font_weight": "600",
+        "heading_font_weight": "700",
         "subheading": "Opiniones de quienes ya eligieron nuestro Beauty Pack",
         "subheading_color": "#000000",
         "subheading_font_size_desktop": 18,
