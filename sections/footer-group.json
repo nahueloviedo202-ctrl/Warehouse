@@ -14,6 +14,31 @@
     "custom-image-footer": {
       "type": "custom-image-footer",
       "blocks": {
+        "text_iPVPew": {
+          "type": "text",
+          "settings": {
+            "heading": "Vita Nura Lab",
+            "text": "<p>cosmética y bienestar con</p><p>resultados reales.</p>"
+          }
+        },
+        "custom_links_nJB7m6": {
+          "type": "custom_links",
+          "settings": {
+            "heading": "Colecciones",
+            "link_1_label": "Mas vendido",
+            "link_1_url": "shopify://collections/mas-vendidos",
+            "link_2_label": "Antiedad",
+            "link_2_url": "shopify://collections/antiedad",
+            "link_3_label": "Cremas corporales",
+            "link_3_url": "shopify://collections/cremas-corporales",
+            "link_4_label": "Cremas faciales",
+            "link_4_url": "shopify://collections/cremas-faciales",
+            "link_5_label": "",
+            "link_5_url": "",
+            "link_6_label": "",
+            "link_6_url": ""
+          }
+        },
         "link_list_JM3bmc": {
           "type": "link_list",
           "disabled": true,
@@ -24,6 +49,7 @@
         },
         "col_nosotras": {
           "type": "link_list",
+          "disabled": true,
           "settings": {
             "heading": "Nosotras",
             "menu": "nosotras"
@@ -31,6 +57,8 @@
         }
       },
       "block_order": [
+        "text_iPVPew",
+        "custom_links_nJB7m6",
         "link_list_JM3bmc",
         "col_nosotras"
       ],
@@ -57,8 +85,8 @@
         "pay_jcb": false,
         "pay_klarna": false,
         "brand_size": 20,
-        "heading_size": 16,
-        "link_size": 13,
+        "heading_size": 19,
+        "link_size": 16,
         "copyright_size": 12,
         "brand_size_mobile": 16,
         "heading_size_mobile": 14,
