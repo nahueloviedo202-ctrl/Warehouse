@@ -744,6 +744,7 @@
         "bullet_y3Xzak",
         "bullet_C9AQXK"
       ],
+      "disabled": true,
       "name": "Producto destacado",
       "settings": {
         "image": "shopify://shop_images/product5-clean_c02ad908-613a-4f06-a9e3-7e6572b9ab32.webp",
