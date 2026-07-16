@@ -836,7 +836,7 @@
         "row_color_scheme": "background-1",
         "background_color": "",
         "row_content_padding_top": 96,
-        "row_content_padding_bottom": 100,
+        "row_content_padding_bottom": 20,
         "row_content_padding_top_mobile": 48,
         "row_content_padding_bottom_mobile": 48,
         "stat_disclaimer": "<p>*According to survey responses from 5,000+ customers.</p>",
@@ -844,7 +844,7 @@
         "stat_disclaimer_font_size": 14,
         "mobile_content_alignment": "left",
         "padding_top": 60,
-        "padding_bottom": 40,
+        "padding_bottom": 20,
         "padding_top_mobile": 40,
         "padding_bottom_mobile": 20
       }
@@ -933,7 +933,7 @@
         "row_size_mobile": 12,
         "color_scheme": "background-1",
         "bg_color": "",
-        "padding_top": 60,
+        "padding_top": 40,
         "padding_bottom": 40,
         "padding_top_mobile": 32,
         "padding_bottom_mobile": 20
