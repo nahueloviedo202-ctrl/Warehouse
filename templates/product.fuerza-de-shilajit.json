@@ -742,8 +742,8 @@
         "heading_font_size_mobile": 24,
         "period_font_size_mobile": 16,
         "bullets_font_size_mobile": 14,
-        "padding_top": 56,
-        "padding_bottom": 56,
+        "padding_top": 60,
+        "padding_bottom": 40,
         "padding_top_mobile": 40,
         "padding_bottom_mobile": 40
       }
@@ -908,9 +908,9 @@
         "stat_disclaimer_color": "#ffffff",
         "stat_disclaimer_font_size": 14,
         "mobile_content_alignment": "left",
-        "padding_top": 60,
-        "padding_bottom": 40,
-        "padding_top_mobile": 40,
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "padding_top_mobile": 20,
         "padding_bottom_mobile": 0
       }
     },
