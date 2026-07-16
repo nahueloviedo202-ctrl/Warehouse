@@ -727,7 +727,7 @@
       "settings": {
         "heading": "QUÉ ESPERAR: EJEMPLO DE LÍNEA DE RESULTADOS",
         "heading_color": "#1a1a1a",
-        "background_color": "#ffffff",
+        "background_color": "#FCFAF5",
         "text_color": "#1a1a1a",
         "show_separator": true,
         "separator_color": "#3d6c45",
