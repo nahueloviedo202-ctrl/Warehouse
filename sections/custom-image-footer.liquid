@@ -137,6 +137,36 @@
                 </ul>
               {%- endif -%}
             </div>
+          {%- elsif block.type == 'custom_links' -%}
+            <div class="cif-footer__col" {{ block.shopify_attributes }}>
+              {%- if block.settings.heading != blank -%}
+                <h3 class="cif-footer__col-heading">{{ block.settings.heading | escape }}</h3>
+              {%- endif -%}
+              <ul class="cif-footer__col-links">
+                {%- for i in (1..6) -%}
+                  {%- assign link_label = 'link_' | append: i | append: '_label' -%}
+                  {%- assign link_url = 'link_' | append: i | append: '_url' -%}
+                  {%- assign link_label_value = block.settings[link_label] -%}
+                  {%- assign link_url_value = block.settings[link_url] -%}
+                  {%- if link_label_value != blank -%}
+                    <li>
+                      <a href="{{ link_url_value | default: '#' }}" class="cif-footer__link">
+                        {{ link_label_value }}
+                      </a>
+                    </li>
+                  {%- endif -%}
+                {%- endfor -%}
+              </ul>
+            </div>
+          {%- elsif block.type == 'text' -%}
+            <div class="cif-footer__col" {{ block.shopify_attributes }}>
+              {%- if block.settings.heading != blank -%}
+                <h3 class="cif-footer__col-heading">{{ block.settings.heading | escape }}</h3>
+              {%- endif -%}
+              {%- if block.settings.text != blank -%}
+                <div class="cif-footer__col-text">{{ block.settings.text }}</div>
+              {%- endif -%}
+            </div>
           {%- endif -%}
         {%- endfor -%}
       </nav>
