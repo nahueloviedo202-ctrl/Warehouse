@@ -349,10 +349,10 @@
     gap: 10px;
     align-items: center;
     width: 100%;
-    max-width: 400px;
   }
   .ing-carousel__button {
     width: 100%;
+    max-width: 400px;
     height: 60px;
     display: flex;
     align-items: center;
@@ -395,14 +395,7 @@
   }
 
   @media screen and (max-width: 989px) {
-    .ing-carousel__footer {
-      max-width: 100%;
-    }
-    .ing-carousel__button {
-      max-width: 400px;
-    }
     .ing-carousel__badges {
-      max-width: 400px;
       flex-wrap: wrap;
       justify-content: center;
     }
@@ -427,6 +420,22 @@
     }
   }
 {%- endstyle -%}
+
+<script>
+  (function () {
+    var links = document.querySelectorAll('#shopify-section-{{ section.id }} a.ing-carousel__button[href^="#"]');
+    links.forEach(function (link) {
+      link.addEventListener('click', function (event) {
+        var targetId = link.getAttribute('href').slice(1);
+        if (!targetId) return;
+        var target = document.getElementById(targetId);
+        if (!target) return;
+        event.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  })();
+</script>
 
 {%- if section.settings.autoplay -%}
   <script>
