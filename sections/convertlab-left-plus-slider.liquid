@@ -263,6 +263,7 @@
     var moved = false;
     var startX = 0;
     var startScrollLeft = 0;
+    var pointerId = null;
 
     slider.classList.add('clps-draggable');
 
@@ -274,26 +275,35 @@
       if (event.pointerType !== 'mouse' || event.button !== 0) return;
       isDown = true;
       moved = false;
+      pointerId = event.pointerId;
       startX = event.clientX;
       startScrollLeft = slider.scrollLeft;
-      slider.classList.add('clps-dragging');
-      slider.setPointerCapture(event.pointerId);
     });
 
     slider.addEventListener('pointermove', function (event) {
-      if (!isDown) return;
+      if (!isDown || event.pointerId !== pointerId) return;
       var delta = event.clientX - startX;
-      if (Math.abs(delta) > 5) moved = true;
+
+      if (!moved) {
+        if (Math.abs(delta) <= 5) return;
+        moved = true;
+        slider.classList.add('clps-dragging');
+        slider.setPointerCapture(pointerId);
+      }
+
       slider.scrollLeft = startScrollLeft - delta;
     });
 
-    function stopDrag(event) {
+    function stopDrag() {
       if (!isDown) return;
       isDown = false;
-      slider.classList.remove('clps-dragging');
-      if (event && event.pointerId !== undefined && slider.hasPointerCapture(event.pointerId)) {
-        slider.releasePointerCapture(event.pointerId);
+      if (moved) {
+        slider.classList.remove('clps-dragging');
+        if (pointerId !== null && slider.hasPointerCapture(pointerId)) {
+          slider.releasePointerCapture(pointerId);
+        }
       }
+      pointerId = null;
     }
 
     slider.addEventListener('pointerup', stopDrag);
