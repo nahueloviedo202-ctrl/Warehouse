@@ -22,16 +22,36 @@
 
   #shopify-section-{{ section.id }} .results-timeline__period {
     font-size: {{ section.settings.period_font_size_mobile }}px;
+    font-weight: {{ section.settings.period_font_weight }};
   }
 
   #shopify-section-{{ section.id }} .results-timeline__bullets {
     font-size: {{ section.settings.bullets_font_size_mobile }}px;
   }
 
-  #shopify-section-{{ section.id }} .results-timeline__separator,
+  #shopify-section-{{ section.id }} .results-timeline__separator {
+    position: relative;
+    width: 100%;
+    height: 1px;
+    background-color: {{ section.settings.separator_color }};
+  }
   #shopify-section-{{ section.id }} .results-timeline__separator::before,
   #shopify-section-{{ section.id }} .results-timeline__separator::after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    top: 50%;
+    border-radius: 50%;
     background-color: {{ section.settings.separator_color }};
+  }
+  #shopify-section-{{ section.id }} .results-timeline__separator::before {
+    left: 0;
+    transform: translate(-50%, -50%);
+  }
+  #shopify-section-{{ section.id }} .results-timeline__separator::after {
+    right: 0;
+    transform: translate(50%, -50%);
   }
 
   #shopify-section-{{ section.id }} .results-timeline__icon {
@@ -139,27 +159,6 @@
     flex-direction: column;
     gap: 20px;
   }
-  .results-timeline__separator {
-    position: relative;
-    height: 1px;
-  }
-  .results-timeline__separator::before,
-  .results-timeline__separator::after {
-    content: "";
-    position: absolute;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    top: 50%;
-  }
-  .results-timeline__separator::before {
-    left: 0;
-    transform: translate(-50%, -50%);
-  }
-  .results-timeline__separator::after {
-    right: 0;
-    transform: translate(50%, -50%);
-  }
   .results-timeline__list {
     display: flex;
     flex-direction: column;
@@ -197,7 +196,6 @@
   }
   .results-timeline__period {
     display: block;
-    font-weight: 700;
     text-transform: uppercase;
     line-height: 1.44;
   }
@@ -216,6 +214,7 @@
     margin: 0;
   }
   .results-timeline__bullets li {
+    line-height: 1.3;
     margin-bottom: 4px;
   }
   .results-timeline__bullets li:last-child {
@@ -372,6 +371,18 @@
       "step": 1,
       "unit": "px",
       "default": 18
+    },
+    {
+      "type": "select",
+      "id": "period_font_weight",
+      "label": "Grosor del período (ej: WEEK 1)",
+      "options": [
+        { "value": "400", "label": "Regular" },
+        { "value": "500", "label": "Medium" },
+        { "value": "600", "label": "Semibold" },
+        { "value": "700", "label": "Bold" }
+      ],
+      "default": "500"
     },
     {
       "type": "range",
