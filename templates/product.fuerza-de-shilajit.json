@@ -742,8 +742,8 @@
         "heading_font_size_mobile": 24,
         "period_font_size_mobile": 16,
         "bullets_font_size_mobile": 14,
-        "padding_top": 56,
-        "padding_bottom": 56,
+        "padding_top": 60,
+        "padding_bottom": 40,
         "padding_top_mobile": 40,
         "padding_bottom_mobile": 40
       }
@@ -908,9 +908,9 @@
         "stat_disclaimer_color": "#ffffff",
         "stat_disclaimer_font_size": 14,
         "mobile_content_alignment": "left",
-        "padding_top": 60,
-        "padding_bottom": 40,
-        "padding_top_mobile": 40,
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "padding_top_mobile": 20,
         "padding_bottom_mobile": 0
       }
     },
@@ -1195,15 +1195,21 @@
         "image_height_mobile": 120,
         "card_padding_top_mobile": 48,
         "button_label": "QUIERO MI SHILASTRENGTH",
-        "button_link": "",
+        "button_link": "#informacion-producto",
         "button_border_radius": 12,
         "button_gradient_start": "#000000",
         "button_gradient_end": "#000000",
-        "button_text_color": "#FFFFFF",
-        "show_badges": true,
+        "button_text_color": "#ffffff",
+        "show_badges": false,
         "badge_1_text": "Testeado por Laboratorios Externos",
         "badge_2_text": "Solución Pura y Natural",
-        "badges_icon_color": "#3D6C45"
+        "badges_icon_color": "#3d6c45",
+        "badges_gap": 32,
+        "badges_gap_mobile": 16,
+        "badges_icon_gap": 8,
+        "badges_icon_gap_mobile": 6,
+        "badges_font_size": 14,
+        "badges_font_size_mobile": 12
       }
     },
     "cambios_reales_gAJgYK": {
