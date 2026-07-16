@@ -857,9 +857,9 @@
           "type": "row",
           "settings": {
             "image": "shopify://shop_images/beauty-pack-product-wellness-journey-01_ca4ad07f-f994-42f9-9755-e6b2e0c24e2a.webp",
-            "caption": "Caption",
-            "heading": "Row",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "caption": "",
+            "heading": "Beneficios que crecen con el tiempo.",
+            "text": "<p>No es un efecto de un día para el otro: con el uso constante, tu cuerpo va recuperando el equilibrio semana a semana, hasta convertirse en tu nueva normalidad.<br/><br/></p>",
             "button_label": "QUIERO MI BEAUTY PACK",
             "button_link": "#informacion-producto",
             "button_background_color": "#000000",
@@ -1049,8 +1049,8 @@
         "question_giLkXQ": {
           "type": "question",
           "settings": {
-            "question": "¿Cada cuánto la puedo usar?",
-            "answer": "<p>Se recomienda uso diario, de noche, sobre piel limpia y seca.</p>",
+            "question": "¿Cuál es el mejor momento para tomarlo?",
+            "answer": "<p>1 sobre al día, preferentemente después de una comida para una absorción óptima.</p>",
             "question_color": "",
             "question_font_size_desktop": 16,
             "question_font_size_mobile": 15,
@@ -1064,8 +1064,8 @@
         "question_36wNwy": {
           "type": "question",
           "settings": {
-            "question": "¿Es apta para piel sensible?",
-            "answer": "<p>Sí, su fórmula está pensada para reafirmar sin irritar, incluso en piel sensible.</p>",
+            "question": "¿Qué nutrientes necesita realmente una mujer?",
+            "answer": "<p>Vitamina A, C, B6, B12, D3, E, Biotina, Selenio, Hierro y Zinc — todos incluidos en dosis clínicas en cada sobre.</p>",
             "question_color": "",
             "question_font_size_desktop": 16,
             "question_font_size_mobile": 15,
@@ -1079,8 +1079,8 @@
         "question_e4hhdC": {
           "type": "question",
           "settings": {
-            "question": "¿En cuánto tiempo se ven resultados?",
-            "answer": "<p>La mayoría nota mejoras en firmeza y textura a partir de las 2-3 semanas de uso constante.</p>",
+            "question": "¿A partir de qué edad se recomienda?",
+            "answer": "<p>Ideal a partir de los 25 años, especialmente si notas signos de envejecimiento, transiciones hormonales o ritmos de vida intensos.</p>",
             "question_color": "",
             "question_font_size_desktop": 16,
             "question_font_size_mobile": 15,
@@ -1094,8 +1094,23 @@
         "question_HKe6yp": {
           "type": "question",
           "settings": {
-            "question": "¿Puedo usarla junto a otros activos como retinol o vitamina C?",
-            "answer": "<p>Sí, se puede combinar sin problema dentro de tu rutina habitual de skincare.</p>",
+            "question": "¿En cuánto tiempo se ven resultados?",
+            "answer": "<p>Piel más radiante en 2-4 semanas. Para una regeneración más profunda, se recomienda un ciclo de al menos 3 meses.</p>",
+            "question_color": "",
+            "question_font_size_desktop": 16,
+            "question_font_size_mobile": 15,
+            "question_font_weight": "500",
+            "answer_color": "",
+            "answer_font_size_desktop": 15,
+            "answer_font_size_mobile": 14,
+            "answer_font_weight": "400"
+          }
+        },
+        "question_tGbVRy": {
+          "type": "question",
+          "settings": {
+            "question": "¿Puedo tomarlo durante la menstruación?",
+            "answer": "<p>Sí, es totalmente seguro y puede ayudar a reducir la fatiga y estabilizar el ánimo.</p>",
             "question_color": "",
             "question_font_size_desktop": 16,
             "question_font_size_mobile": 15,
@@ -1111,7 +1126,8 @@
         "question_giLkXQ",
         "question_36wNwy",
         "question_e4hhdC",
-        "question_HKe6yp"
+        "question_HKe6yp",
+        "question_tGbVRy"
       ],
       "custom_css": [
         "@media screen and (max-width: 749px) {.h2 {font-size: calc(var(--font-heading-scale) * 1.7rem); }}",
