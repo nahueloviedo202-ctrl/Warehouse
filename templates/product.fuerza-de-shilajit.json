@@ -805,7 +805,7 @@
             "stat_bg_color": "#FCFAF5",
             "stat_border_color": "#b4c6b7",
             "stat_number_color_start": "#3d6c45",
-            "stat_number_color_end": "#b4c6b7",
+            "stat_number_color_end": "#3D6C45",
             "stat_text_color": "#000000",
             "stat_border_width": 2,
             "stat_border_radius": 40,
