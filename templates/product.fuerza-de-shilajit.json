@@ -727,10 +727,10 @@
       "settings": {
         "heading": "QUÉ ESPERAR: EJEMPLO DE LÍNEA DE RESULTADOS",
         "heading_color": "#1a1a1a",
-        "background_color": "#FFFFFF",
+        "background_color": "#ffffff",
         "text_color": "#1a1a1a",
         "show_separator": true,
-        "separator_color": "#3D6C45",
+        "separator_color": "#3d6c45",
         "icon_size": 56,
         "icon_color": "#1a1a1a",
         "icon_gradient_start": "#b4c6b7",
@@ -1416,31 +1416,42 @@
           "settings": {
             "image": "shopify://shop_images/Gemini_Generated_Image_c1sqaoc1sqaoc1sq_1.webp",
             "title": "Ashwagandha",
-            "description": "sopor",
+            "description": "Ayuda a reducir el cortisol, potencia la testosterona libre y mejora la resistencia al estrés.",
             "card_bg_color": "#f5f5f5"
           }
         },
         "ingredient_8iYQJ7": {
           "type": "ingredient",
           "settings": {
+            "image": "shopify://shop_images/Gemini_Generated_Image_c1sqaoc1sqaoc1sq_1_1.webp",
             "title": "Shilajit",
-            "description": "Supports the increase of total & free testosterone, enhancing mitochondrial ATP.",
+            "description": "Apoya el aumento de testosterona total y libre, potenciando la energía celular (ATP).",
             "card_bg_color": "#f5f5f5"
           }
         },
         "ingredient_WwP3Yz": {
           "type": "ingredient",
           "settings": {
+            "image": "shopify://shop_images/ginsjen_9c376acb-359a-4149-a743-00cc79cce187.webp",
             "title": "Parax Ginseng",
-            "description": "Helps with LH production, blood flow, anti-inflammatory effect.",
+            "description": "Ayuda a la producción de LH, mejora el flujo sanguíneo y tiene efecto antiinflamatorio.",
             "card_bg_color": "#f5f5f5"
           }
         },
         "ingredient_TFBPnk": {
           "type": "ingredient",
           "settings": {
-            "title": "Saffron",
-            "description": "Sustains PDE5 inhibition and NO increase.",
+            "image": "shopify://shop_images/saffron.webp",
+            "title": "Azafrán",
+            "description": "Favorece la producción de óxido nítrico, mejorando la circulación.",
+            "card_bg_color": "#f5f5f5"
+          }
+        },
+        "ingredient_DdrY9r": {
+          "type": "ingredient",
+          "settings": {
+            "title": "Maca Negra",
+            "description": "Potencia el deseo a través de vías naturales del sistema nervioso central, sin intervenir en las hormonas.",
             "card_bg_color": "#f5f5f5"
           }
         }
@@ -1449,13 +1460,14 @@
         "ingredient_WtngAk",
         "ingredient_8iYQJ7",
         "ingredient_WwP3Yz",
-        "ingredient_TFBPnk"
+        "ingredient_TFBPnk",
+        "ingredient_DdrY9r"
       ],
       "name": "Carrusel de ingredientes",
       "settings": {
-        "heading_accent": "Powerful Ingredients",
-        "heading_normal": "for Peak Performance",
-        "accent_color": "#a45b2c",
+        "heading_accent": "INGREDIENTES PODEROSOS",
+        "heading_normal": "PARA UN RENDIMIENTO MÁXIMO",
+        "accent_color": "#3D6C45",
         "heading_color": "#1a1a1a",
         "heading_font_size_desktop": 32,
         "heading_font_size_mobile": 24,
@@ -1479,6 +1491,7 @@
         "card_padding_top_mobile": 48,
         "button_label": "Shop Now",
         "button_link": "",
+        "button_border_radius": 12,
         "button_gradient_start": "#e7b944",
         "button_gradient_end": "#ffed68",
         "button_text_color": "#1a1a1a",
