@@ -1010,10 +1010,10 @@
       ],
       "name": "Slider de reseñas",
       "settings": {
-        "heading": "CAMBIOS REALES",
+        "heading": "Cambios reales",
         "heading_size": "h2",
         "heading_color": "#000000",
-        "heading_font_size_desktop": 32,
+        "heading_font_size_desktop": 36,
         "heading_font_size_mobile": 26,
         "heading_font_weight": "700",
         "subheading": "Opiniones de quienes ya eligieron nuestro Beauty Pack",
