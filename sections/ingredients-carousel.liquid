@@ -81,6 +81,18 @@
     color: {{ section.settings.badges_icon_color }};
   }
 
+  #shopify-section-{{ section.id }} .ing-carousel__badges {
+    gap: {{ section.settings.badges_gap_mobile }}px;
+  }
+
+  #shopify-section-{{ section.id }} .ing-carousel__badge {
+    gap: {{ section.settings.badges_icon_gap_mobile }}px;
+  }
+
+  #shopify-section-{{ section.id }} .ing-carousel__badge-text {
+    font-size: {{ section.settings.badges_font_size_mobile }}px;
+  }
+
   #shopify-section-{{ section.id }} .ing-carousel__arrow {
     color: {{ section.settings.arrows_color }};
   }
@@ -110,6 +122,18 @@
 
     #shopify-section-{{ section.id }} .ing-carousel__card {
       flex-basis: calc((100% - {{ section.settings.card_gap }}px * {{ columns_tablet_int | minus: 1 }}) / {{ columns_tablet_int }});
+    }
+
+    #shopify-section-{{ section.id }} .ing-carousel__badges {
+      gap: {{ section.settings.badges_gap }}px;
+    }
+
+    #shopify-section-{{ section.id }} .ing-carousel__badge {
+      gap: {{ section.settings.badges_icon_gap }}px;
+    }
+
+    #shopify-section-{{ section.id }} .ing-carousel__badge-text {
+      font-size: {{ section.settings.badges_font_size }}px;
     }
   }
 
@@ -346,14 +370,12 @@
   .ing-carousel__badges {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
-    gap: 16px;
   }
   .ing-carousel__badge {
     display: flex;
     align-items: center;
-    gap: 2px;
   }
   .ing-carousel__badge-icon {
     width: 17px;
@@ -370,7 +392,6 @@
   }
   .ing-carousel__badge-text {
     font-weight: 600;
-    font-size: 14px;
   }
 
   @media screen and (max-width: 989px) {
@@ -401,12 +422,8 @@
       font-size: 16px;
       height: 52px;
     }
-    .ing-carousel__badge-text {
-      font-size: 12px;
-    }
     .ing-carousel__badges {
       flex-direction: column;
-      gap: 8px;
     }
   }
 {%- endstyle -%}
@@ -783,6 +800,66 @@
       "id": "badges_icon_color",
       "label": "Color de los íconos",
       "default": "#1a1a1a"
+    },
+    {
+      "type": "range",
+      "id": "badges_gap",
+      "label": "Espacio entre insignias (desktop)",
+      "min": 8,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "badges_gap_mobile",
+      "label": "Espacio entre insignias (mobile)",
+      "min": 4,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "badges_icon_gap",
+      "label": "Espacio ícono-texto (desktop)",
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "badges_icon_gap_mobile",
+      "label": "Espacio ícono-texto (mobile)",
+      "min": 0,
+      "max": 16,
+      "step": 1,
+      "unit": "px",
+      "default": 6
+    },
+    {
+      "type": "range",
+      "id": "badges_font_size",
+      "label": "Tamaño de texto (desktop)",
+      "min": 9,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "badges_font_size_mobile",
+      "label": "Tamaño de texto (mobile)",
+      "min": 8,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 12
     }
   ],
   "blocks": [
