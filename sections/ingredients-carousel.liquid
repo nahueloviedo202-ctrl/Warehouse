@@ -19,6 +19,9 @@
   if image_protrusion_mobile < 0
     assign image_protrusion_mobile = 0
   endif
+
+  assign columns_desktop_int = section.settings.columns_desktop | plus: 0
+  assign columns_tablet_int = section.settings.columns_tablet | plus: 0
 -%}
 
 {%- style -%}
@@ -48,6 +51,16 @@
   #shopify-section-{{ section.id }} .ing-carousel__track {
     gap: {{ section.settings.card_gap }}px;
   }
+
+  {%- if columns_mobile_int == 1 -%}
+    #shopify-section-{{ section.id }} .ing-carousel__card {
+      flex-basis: 82%;
+    }
+  {%- else -%}
+    #shopify-section-{{ section.id }} .ing-carousel__card {
+      flex-basis: calc((100% - {{ section.settings.card_gap }}px * {{ columns_mobile_int | minus: 1 }}) / {{ columns_mobile_int }});
+    }
+  {%- endif -%}
 
   #shopify-section-{{ section.id }} .ing-carousel__card {
     padding-top: {{ image_protrusion_mobile }}px;
@@ -94,6 +107,16 @@
       top: -{{ image_protrusion }}px;
       height: {{ section.settings.image_height }}px;
     }
+
+    #shopify-section-{{ section.id }} .ing-carousel__card {
+      flex-basis: calc((100% - {{ section.settings.card_gap }}px * {{ columns_tablet_int | minus: 1 }}) / {{ columns_tablet_int }});
+    }
+  }
+
+  @media screen and (min-width: 990px) {
+    #shopify-section-{{ section.id }} .ing-carousel__card {
+      flex-basis: calc((100% - {{ section.settings.card_gap }}px * {{ columns_desktop_int | minus: 1 }}) / {{ columns_desktop_int }});
+    }
   }
 {%- endstyle -%}
 
@@ -111,17 +134,17 @@
     {%- endif -%}
 
     {%- if ic_blocks.size > 0 -%}
-      <slider-component class="ing-carousel__wrapper page-width-desktop">
+      <slider-component class="ing-carousel__wrapper">
         <ul
           id="Slider-{{ section.id }}"
-          class="ing-carousel__track grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_tablet }}-col-tablet grid--{{ columns_mobile_int }}-col-tablet-down slider slider--desktop slider--tablet grid--peek"
+          class="ing-carousel__track slider"
           role="list"
           aria-label="{{ 'general.slider.name' | t }}"
         >
           {%- for block in ic_blocks -%}
             <li
               id="Slide-{{ section.id }}-{{ forloop.index }}"
-              class="ing-carousel__card grid__item slider__slide"
+              class="ing-carousel__card slider__slide"
               {{ block.shopify_attributes }}
             >
               <div class="ing-carousel__card-inner" style="background-color: {{ block.settings.card_bg_color }};">
@@ -241,9 +264,21 @@
   }
   .ing-carousel__wrapper {
     width: 100%;
+    display: block;
   }
   .ing-carousel__track {
-    margin-bottom: 0;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .ing-carousel__card {
+    flex-shrink: 0;
+    scroll-snap-align: start;
   }
   .ing-carousel__card-inner {
     position: relative;
