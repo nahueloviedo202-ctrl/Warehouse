@@ -184,7 +184,7 @@
       {%- endfor -%}
       {%- assign review_alt_blocks = section.blocks | where: 'type', 'review_alt' -%}
       {%- for block in review_alt_blocks -%}
-        {%- render 'review-alt-block', block: block -%}
+        {%- render 'review-alt-block', block: block, visibility: 'desktop' -%}
       {%- endfor -%}
     </div>
     <div class="product__info-wrapper grid__item{% if settings.page_width > 1400 and section.settings.media_size == "small" %} product__info-wrapper--extra-padding{% endif %}{% if section.settings.enable_sticky_info %} product__column-sticky{% endif %}">
@@ -195,8 +195,15 @@
         class="product__info-container"
       >
         {%- assign product_form_id = 'product-form-' | append: section.id -%}
+        {%- assign mobile_review_alt_rendered = false -%}
 
         {%- for block in section.blocks -%}
+          {%- if block.type == 'collapsible_tab' and mobile_review_alt_rendered == false -%}
+            {%- assign mobile_review_alt_rendered = true -%}
+            {%- for review_block in review_alt_blocks -%}
+              {%- render 'review-alt-block', block: review_block, visibility: 'mobile' -%}
+            {%- endfor -%}
+          {%- endif -%}
           {%- case block.type -%}
             {%- when '@app' -%}
               {% render block %}
@@ -1647,9 +1654,15 @@
                 {%- render 'product-review-card-block', blocks: prc_blocks, section: section -%}
               {%- endif -%}
             {%- when 'review_alt' -%}
-              {%- comment -%} Rendered under the product gallery, see product__media-wrapper above {%- endcomment -%}
+              {%- comment -%} Rendered under the product gallery (desktop) and above the accordion (mobile), see above {%- endcomment -%}
           {%- endcase -%}
         {%- endfor -%}
+        {%- comment -%} Fallback: no collapsible_tab block found, so the mobile copy hasn't rendered yet {%- endcomment -%}
+        {%- if mobile_review_alt_rendered == false -%}
+          {%- for review_block in review_alt_blocks -%}
+            {%- render 'review-alt-block', block: review_block, visibility: 'mobile' -%}
+          {%- endfor -%}
+        {%- endif -%}
         <a href="{{ product.url }}" class="link product__view-details animate-arrow">
           {{ 'products.product.view_full_details' | t }}
           {% render 'icon-arrow' %}

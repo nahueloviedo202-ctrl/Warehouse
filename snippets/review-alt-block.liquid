@@ -2,6 +2,9 @@
   Renders a single 'review_alt' block inside main-product.liquid.
   Accepts:
     - block : a section.blocks entry of type 'review_alt'
+    - visibility : optional, 'desktop' or 'mobile'. Renders the block only on that
+      breakpoint, so the same block can be placed twice in the DOM (once under the
+      gallery for desktop, once above the accordion for mobile) without showing twice.
 {%- endcomment -%}
 
 {%- liquid
@@ -14,6 +17,13 @@
 
   assign avatar_sizes = '(max-width: 749px) ' | append: block.settings.avatar_size_mobile | append: 'px, ' | append: block.settings.avatar_size | append: 'px'
   assign avatar_alt = block.settings.avatar_alt | default: block.settings.author
+
+  assign visibility_class = ''
+  if visibility == 'desktop'
+    assign visibility_class = ' review-alt--desktop-only'
+  elsif visibility == 'mobile'
+    assign visibility_class = ' review-alt--mobile-only'
+  endif
 -%}
 
 {%- style -%}
@@ -116,9 +126,24 @@
       font-size: {{ block.settings.credentials_font_size_mobile }}px;
     }
   }
+
+  .review-alt--desktop-only {
+    display: block;
+  }
+  .review-alt--mobile-only {
+    display: none;
+  }
+  @media screen and (max-width: 749px) {
+    .review-alt--desktop-only {
+      display: none;
+    }
+    .review-alt--mobile-only {
+      display: block;
+    }
+  }
 {%- endstyle -%}
 
-<div class="review-alt review-alt-{{ block.id }}" {{ block.shopify_attributes }}>
+<div class="review-alt review-alt-{{ block.id }}{{ visibility_class }}" {{ block.shopify_attributes }}>
   <div class="review-alt__avatar-wrap">
     {%- if block.settings.avatar != blank -%}
       {{
