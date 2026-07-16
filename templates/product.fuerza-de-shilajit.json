@@ -1065,7 +1065,7 @@
         "color_scheme": "background-1",
         "bg_color": "#fcfaf5",
         "padding_top": 60,
-        "padding_bottom": 40,
+        "padding_bottom": 60,
         "padding_top_mobile": 40,
         "padding_bottom_mobile": 20
       }
