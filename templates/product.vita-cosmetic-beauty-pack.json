@@ -930,7 +930,7 @@
         "cards_per_row_tablet": 2,
         "cards_per_row_mobile": 1,
         "card_gap": 24,
-        "show_arrows": false,
+        "show_arrows": true,
         "hide_arrows_mobile": false,
         "arrows_color": "#b5651d",
         "color_scheme": "background-1",
