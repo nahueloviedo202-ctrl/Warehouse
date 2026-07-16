@@ -727,10 +727,10 @@
       "settings": {
         "heading": "QUÉ ESPERAR: EJEMPLO DE LÍNEA DE RESULTADOS",
         "heading_color": "#1a1a1a",
-        "background_color": "#fffdf6",
+        "background_color": "#FFFFFF",
         "text_color": "#1a1a1a",
         "show_separator": true,
-        "separator_color": "#e9be47",
+        "separator_color": "#3D6C45",
         "icon_size": 56,
         "icon_color": "#1a1a1a",
         "icon_gradient_start": "#b4c6b7",
@@ -1407,6 +1407,86 @@
         "padding_top_mobile": 40,
         "padding_bottom_mobile": 40
       }
+    },
+    "ingredients_carousel_f3H84z": {
+      "type": "ingredients-carousel",
+      "blocks": {
+        "ingredient_WtngAk": {
+          "type": "ingredient",
+          "settings": {
+            "image": "shopify://shop_images/Gemini_Generated_Image_c1sqaoc1sqaoc1sq_1.webp",
+            "title": "Ashwagandha",
+            "description": "sopor",
+            "card_bg_color": "#f5f5f5"
+          }
+        },
+        "ingredient_8iYQJ7": {
+          "type": "ingredient",
+          "settings": {
+            "title": "Shilajit",
+            "description": "Supports the increase of total & free testosterone, enhancing mitochondrial ATP.",
+            "card_bg_color": "#f5f5f5"
+          }
+        },
+        "ingredient_WwP3Yz": {
+          "type": "ingredient",
+          "settings": {
+            "title": "Parax Ginseng",
+            "description": "Helps with LH production, blood flow, anti-inflammatory effect.",
+            "card_bg_color": "#f5f5f5"
+          }
+        },
+        "ingredient_TFBPnk": {
+          "type": "ingredient",
+          "settings": {
+            "title": "Saffron",
+            "description": "Sustains PDE5 inhibition and NO increase.",
+            "card_bg_color": "#f5f5f5"
+          }
+        }
+      },
+      "block_order": [
+        "ingredient_WtngAk",
+        "ingredient_8iYQJ7",
+        "ingredient_WwP3Yz",
+        "ingredient_TFBPnk"
+      ],
+      "name": "Carrusel de ingredientes",
+      "settings": {
+        "heading_accent": "Powerful Ingredients",
+        "heading_normal": "for Peak Performance",
+        "accent_color": "#a45b2c",
+        "heading_color": "#1a1a1a",
+        "heading_font_size_desktop": 32,
+        "heading_font_size_mobile": 24,
+        "background_color": "#ffffff",
+        "padding_top": 12,
+        "padding_bottom": 12,
+        "padding_top_mobile": 12,
+        "padding_bottom_mobile": 12,
+        "columns_desktop": 4,
+        "columns_tablet": 2,
+        "columns_mobile": "1",
+        "show_arrows": true,
+        "arrows_color": "#1a1a1a",
+        "autoplay": false,
+        "autoplay_speed": 5,
+        "card_border_radius": 12,
+        "card_gap": 16,
+        "image_height": 152,
+        "card_padding_top": 56,
+        "image_height_mobile": 120,
+        "card_padding_top_mobile": 48,
+        "button_label": "Shop Now",
+        "button_link": "",
+        "button_gradient_start": "#e7b944",
+        "button_gradient_end": "#ffed68",
+        "button_text_color": "#1a1a1a",
+        "show_badges": true,
+        "badge_1_text": "3rd Party Lab Tested",
+        "badge_2_text": "Pure and Natural Solution",
+        "badges_icon_color": "#1a1a1a"
+      }
     }
   },
   "order": [
@@ -1424,6 +1504,7 @@
     "image_with_text_bKfE6p",
     "cambios_reales_gAJgYK",
     "faq_accordion_m3GjeY",
-    "community_feed_dJB7VX"
+    "community_feed_dJB7VX",
+    "ingredients_carousel_f3H84z"
   ]
 }
