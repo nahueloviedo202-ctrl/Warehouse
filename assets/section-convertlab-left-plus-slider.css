@@ -124,6 +124,25 @@
   will-change: width;
 }
 
+/* ── Drag-to-scroll cursor (mouse only) ── */
+
+@media (hover: hover) and (pointer: fine) {
+  .clps-product-list.clps-draggable {
+    cursor: grab;
+  }
+
+  .clps-product-list.clps-draggable.clps-dragging {
+    cursor: grabbing;
+    scroll-snap-type: none;
+  }
+}
+
+.clps-product-list.clps-dragging,
+.clps-product-list.clps-dragging * {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
 /* ── Responsive: mobile ── */
 
 @media screen and (max-width: 749px) {

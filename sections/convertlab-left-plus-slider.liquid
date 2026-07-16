@@ -252,6 +252,66 @@
   </script>
 {%- endif -%}
 
+{%- comment -%} ── Drag-to-scroll (mouse only): shows grab cursor, native touch scroll untouched ── {%- endcomment -%}
+<script>
+  (function () {
+    var slider = document.getElementById('Slider-{{ section.id }}');
+    if (!slider) return;
+    if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+
+    var isDown = false;
+    var moved = false;
+    var startX = 0;
+    var startScrollLeft = 0;
+
+    slider.classList.add('clps-draggable');
+
+    slider.addEventListener('dragstart', function (event) {
+      event.preventDefault();
+    });
+
+    slider.addEventListener('pointerdown', function (event) {
+      if (event.pointerType !== 'mouse' || event.button !== 0) return;
+      isDown = true;
+      moved = false;
+      startX = event.clientX;
+      startScrollLeft = slider.scrollLeft;
+      slider.classList.add('clps-dragging');
+      slider.setPointerCapture(event.pointerId);
+    });
+
+    slider.addEventListener('pointermove', function (event) {
+      if (!isDown) return;
+      var delta = event.clientX - startX;
+      if (Math.abs(delta) > 5) moved = true;
+      slider.scrollLeft = startScrollLeft - delta;
+    });
+
+    function stopDrag(event) {
+      if (!isDown) return;
+      isDown = false;
+      slider.classList.remove('clps-dragging');
+      if (event && event.pointerId !== undefined && slider.hasPointerCapture(event.pointerId)) {
+        slider.releasePointerCapture(event.pointerId);
+      }
+    }
+
+    slider.addEventListener('pointerup', stopDrag);
+    slider.addEventListener('pointercancel', stopDrag);
+
+    slider.addEventListener(
+      'click',
+      function (event) {
+        if (moved) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+      },
+      true
+    );
+  })();
+</script>
+
 {% schema %}
 {
   "name": "Imagen + Slider Productos",
