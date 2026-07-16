@@ -7,10 +7,26 @@
     padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
   }
 
+  {%- if section.settings.background_color != blank -%}
+    #shopify-section-{{ section.id }} .multirow {
+      background-color: {{ section.settings.background_color }};
+    }
+  {%- endif -%}
+
+  #shopify-section-{{ section.id }} .image-with-text__content {
+    padding-top: {{ section.settings.row_content_padding_top_mobile }}px;
+    padding-bottom: {{ section.settings.row_content_padding_bottom_mobile }}px;
+  }
+
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+
+    #shopify-section-{{ section.id }} .image-with-text__content {
+      padding-top: {{ section.settings.row_content_padding_top }}px;
+      padding-bottom: {{ section.settings.row_content_padding_bottom }}px;
     }
   }
 
@@ -609,6 +625,60 @@
       ],
       "default": "background-1",
       "label": "t:sections.multirow.settings.container_color_scheme.label"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Color de fondo de la sección",
+      "info": "Sobrescribe el esquema de color de arriba si se define."
+    },
+    {
+      "type": "header",
+      "content": "Contenido de fila — Espaciado (desktop)"
+    },
+    {
+      "type": "range",
+      "id": "row_content_padding_top",
+      "label": "Padding superior",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 96
+    },
+    {
+      "type": "range",
+      "id": "row_content_padding_bottom",
+      "label": "Padding inferior",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 112
+    },
+    {
+      "type": "header",
+      "content": "Contenido de fila — Espaciado (mobile)"
+    },
+    {
+      "type": "range",
+      "id": "row_content_padding_top_mobile",
+      "label": "Padding superior",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "row_content_padding_bottom_mobile",
+      "label": "Padding inferior",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 48
     },
     {
       "type": "header",
