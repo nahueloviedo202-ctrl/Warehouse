@@ -74,6 +74,20 @@
       font-size: {{ section.settings.copyright_size }}px;
     }
   }
+
+  {%- for block in section.blocks -%}
+    {%- if block.type == 'text' -%}
+      .cif-footer--{{ section.id }} .cif-footer__col-text--{{ block.id }} {
+        font-size: {{ block.settings.text_size_mobile }}px;
+      }
+
+      @media screen and (min-width: 750px) {
+        .cif-footer--{{ section.id }} .cif-footer__col-text--{{ block.id }} {
+          font-size: {{ block.settings.text_size }}px;
+        }
+      }
+    {%- endif -%}
+  {%- endfor -%}
 {%- endstyle -%}
 
 <footer class="cif-footer cif-footer--{{ section.id }}" style="--cif-overlay-color: rgba({{ overlay_r }}, {{ overlay_g }}, {{ overlay_b }}, {{ overlay_a }});">
@@ -164,7 +178,7 @@
                 <h3 class="cif-footer__col-heading">{{ block.settings.heading | escape }}</h3>
               {%- endif -%}
               {%- if block.settings.text != blank -%}
-                <div class="cif-footer__col-text">{{ block.settings.text }}</div>
+                <div class="cif-footer__col-text cif-footer__col-text--{{ block.id }}">{{ block.settings.text }}</div>
               {%- endif -%}
             </div>
           {%- endif -%}
@@ -346,6 +360,30 @@
           "id": "text",
           "label": "Texto",
           "default": "<p>Escribe aquí el texto del footer.</p>"
+        },
+        {
+          "type": "header",
+          "content": "Tipografía"
+        },
+        {
+          "type": "range",
+          "id": "text_size",
+          "label": "Tamaño de texto (desktop)",
+          "min": 10,
+          "max": 32,
+          "step": 1,
+          "unit": "px",
+          "default": 13
+        },
+        {
+          "type": "range",
+          "id": "text_size_mobile",
+          "label": "Tamaño de texto (mobile)",
+          "min": 10,
+          "max": 28,
+          "step": 1,
+          "unit": "px",
+          "default": 12
         }
       ]
     }
