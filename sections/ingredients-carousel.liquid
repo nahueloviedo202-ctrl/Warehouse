@@ -10,6 +10,15 @@
       assign show_badges_row = true
     endif
   endif
+
+  assign image_protrusion = section.settings.image_height | minus: section.settings.card_padding_top
+  if image_protrusion < 0
+    assign image_protrusion = 0
+  endif
+  assign image_protrusion_mobile = section.settings.image_height_mobile | minus: section.settings.card_padding_top_mobile
+  if image_protrusion_mobile < 0
+    assign image_protrusion_mobile = 0
+  endif
 -%}
 
 {%- style -%}
@@ -40,14 +49,19 @@
     gap: {{ section.settings.card_gap }}px;
   }
 
+  #shopify-section-{{ section.id }} .ing-carousel__card {
+    padding-top: {{ image_protrusion_mobile }}px;
+  }
+
   #shopify-section-{{ section.id }} .ing-carousel__image {
-    top: -{{ section.settings.image_height_mobile }}px;
+    top: -{{ image_protrusion_mobile }}px;
     height: {{ section.settings.image_height_mobile }}px;
   }
 
   #shopify-section-{{ section.id }} .ing-carousel__button {
     background: linear-gradient(180deg, {{ section.settings.button_gradient_start }}, {{ section.settings.button_gradient_end }});
     color: {{ section.settings.button_text_color }};
+    border-radius: {{ section.settings.button_border_radius }}px;
   }
 
   #shopify-section-{{ section.id }} .ing-carousel__badge-icon {
@@ -72,8 +86,12 @@
       padding: {{ section.settings.card_padding_top }}px 16px 16px;
     }
 
+    #shopify-section-{{ section.id }} .ing-carousel__card {
+      padding-top: {{ image_protrusion }}px;
+    }
+
     #shopify-section-{{ section.id }} .ing-carousel__image {
-      top: -{{ section.settings.image_height }}px;
+      top: -{{ image_protrusion }}px;
       height: {{ section.settings.image_height }}px;
     }
   }
@@ -227,9 +245,6 @@
   .ing-carousel__track {
     margin-bottom: 0;
   }
-  .ing-carousel__card {
-    padding-top: 96px;
-  }
   .ing-carousel__card-inner {
     position: relative;
     display: flex;
@@ -283,7 +298,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 12px;
     font-weight: 700;
     font-size: 18px;
     line-height: 1.44;
@@ -678,6 +692,16 @@
       "type": "url",
       "id": "button_link",
       "label": "Enlace del botón"
+    },
+    {
+      "type": "range",
+      "id": "button_border_radius",
+      "label": "Radio de esquinas",
+      "min": 0,
+      "max": 30,
+      "step": 1,
+      "unit": "px",
+      "default": 12
     },
     {
       "type": "color",
