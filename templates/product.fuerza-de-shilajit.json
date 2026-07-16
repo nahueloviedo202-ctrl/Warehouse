@@ -608,67 +608,6 @@
         "padding_bottom_mobile": 0
       }
     },
-    "results_timeline_pdp_VXrrhV": {
-      "type": "results-timeline-pdp",
-      "blocks": {
-        "timeline_item_G7r4Xa": {
-          "type": "timeline_item",
-          "settings": {
-            "icon": "bolt",
-            "period": "SEMANA 1",
-            "subtitle": "Reinicio de Estrés y Energía",
-            "bullets": "El cortisol empieza a bajar, se despeja la niebla mental\nMejora el sueño, las mañanas se sienten distintas\nEl ánimo se estabiliza, el estrés se vuelve más manejable"
-          }
-        },
-        "timeline_item_GNTDiG": {
-          "type": "timeline_item",
-          "settings": {
-            "icon": "sparkle",
-            "period": "MES 1",
-            "subtitle": "Hormonas y Rendimiento en Recuperación",
-            "bullets": "El apoyo a la testosterona empieza a notarse\nEl deseo vuelve a aparecer de forma constante\nEl flujo sanguíneo y la circulación mejoran día a día"
-          }
-        },
-        "timeline_item_k9Weya": {
-          "type": "timeline_item",
-          "settings": {
-            "icon": "pulse",
-            "period": "MES 3+",
-            "subtitle": "Rendimiento Máximo y Vitalidad",
-            "bullets": "Los 6 ingredientes trabajando en plena sinergia\nEquilibrio hormonal restaurado y sostenido\nEnergía, resistencia y rendimiento como tu nueva normalidad"
-          }
-        }
-      },
-      "block_order": [
-        "timeline_item_G7r4Xa",
-        "timeline_item_GNTDiG",
-        "timeline_item_k9Weya"
-      ],
-      "name": "Timeline de resultados",
-      "settings": {
-        "heading": "QUÉ ESPERAR: EJEMPLO DE LÍNEA DE RESULTADOS",
-        "heading_color": "#1a1a1a",
-        "background_color": "#fcfaf5",
-        "text_color": "#1a1a1a",
-        "show_separator": true,
-        "separator_color": "#3d6c45",
-        "icon_size": 56,
-        "icon_color": "#1a1a1a",
-        "icon_gradient_start": "#b4c6b7",
-        "icon_gradient_end": "#fff6dd",
-        "heading_font_size": 32,
-        "period_font_size": 18,
-        "period_font_weight": "500",
-        "bullets_font_size": 16,
-        "heading_font_size_mobile": 24,
-        "period_font_size_mobile": 16,
-        "bullets_font_size_mobile": 14,
-        "padding_top": 60,
-        "padding_bottom": 20,
-        "padding_top_mobile": 40,
-        "padding_bottom_mobile": 40
-      }
-    },
     "press_ticker_gTJiLE": {
       "type": "press-ticker",
       "blocks": {
@@ -746,6 +685,67 @@
         "padding_bottom": 20,
         "padding_top_mobile": 16,
         "padding_bottom_mobile": 16
+      }
+    },
+    "results_timeline_pdp_VXrrhV": {
+      "type": "results-timeline-pdp",
+      "blocks": {
+        "timeline_item_G7r4Xa": {
+          "type": "timeline_item",
+          "settings": {
+            "icon": "bolt",
+            "period": "SEMANA 1",
+            "subtitle": "Reinicio de Estrés y Energía",
+            "bullets": "El cortisol empieza a bajar, se despeja la niebla mental\nMejora el sueño, las mañanas se sienten distintas\nEl ánimo se estabiliza, el estrés se vuelve más manejable"
+          }
+        },
+        "timeline_item_GNTDiG": {
+          "type": "timeline_item",
+          "settings": {
+            "icon": "sparkle",
+            "period": "MES 1",
+            "subtitle": "Hormonas y Rendimiento en Recuperación",
+            "bullets": "El apoyo a la testosterona empieza a notarse\nEl deseo vuelve a aparecer de forma constante\nEl flujo sanguíneo y la circulación mejoran día a día"
+          }
+        },
+        "timeline_item_k9Weya": {
+          "type": "timeline_item",
+          "settings": {
+            "icon": "pulse",
+            "period": "MES 3+",
+            "subtitle": "Rendimiento Máximo y Vitalidad",
+            "bullets": "Los 6 ingredientes trabajando en plena sinergia\nEquilibrio hormonal restaurado y sostenido\nEnergía, resistencia y rendimiento como tu nueva normalidad"
+          }
+        }
+      },
+      "block_order": [
+        "timeline_item_G7r4Xa",
+        "timeline_item_GNTDiG",
+        "timeline_item_k9Weya"
+      ],
+      "name": "Timeline de resultados",
+      "settings": {
+        "heading": "QUÉ ESPERAR: EJEMPLO DE LÍNEA DE RESULTADOS",
+        "heading_color": "#1a1a1a",
+        "background_color": "#fcfaf5",
+        "text_color": "#1a1a1a",
+        "show_separator": true,
+        "separator_color": "#3d6c45",
+        "icon_size": 56,
+        "icon_color": "#1a1a1a",
+        "icon_gradient_start": "#b4c6b7",
+        "icon_gradient_end": "#fff6dd",
+        "heading_font_size": 32,
+        "period_font_size": 18,
+        "period_font_weight": "500",
+        "bullets_font_size": 16,
+        "heading_font_size_mobile": 24,
+        "period_font_size_mobile": 16,
+        "bullets_font_size_mobile": 14,
+        "padding_top": 60,
+        "padding_bottom": 20,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40
       }
     },
     "multirow_beE3np": {
@@ -1576,8 +1576,8 @@
     "1dec15b6-e51f-4064-b412-acf7a98422ef",
     "64c96926-2c31-48fe-bd21-30941bc87822",
     "slideshow_HfVNww",
-    "results_timeline_pdp_VXrrhV",
     "press_ticker_gTJiLE",
+    "results_timeline_pdp_VXrrhV",
     "multirow_beE3np",
     "icon_bar_awQW7x",
     "por_que_elegir_WXcDJn",
