@@ -18,7 +18,9 @@
           "type": "text",
           "settings": {
             "heading": "Vita Nura Lab",
-            "text": "<p>cosmética y bienestar con</p><p>resultados reales.</p>"
+            "text": "<p>cosmética y bienestar</p><p>con resultados reales.</p>",
+            "text_size": 14,
+            "text_size_mobile": 14
           }
         },
         "custom_links_nJB7m6": {
