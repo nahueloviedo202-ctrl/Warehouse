@@ -971,7 +971,7 @@
         "padding_top": 0,
         "padding_bottom": 0,
         "padding_top_mobile": 0,
-        "padding_bottom_mobile": 20
+        "padding_bottom_mobile": 0
       }
     },
     "por_que_elegir_WXcDJn": {
@@ -1099,7 +1099,7 @@
         "image": "shopify://shop_images/d66288c0-28ce-4a1b-a93f-2fc3d01adc2e.png",
         "height": "adapt",
         "desktop_image_width": "medium",
-        "layout": "image_first",
+        "layout": "text_first",
         "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
         "content_layout": "no-overlap",
