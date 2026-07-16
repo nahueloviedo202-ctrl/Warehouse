@@ -1154,6 +1154,7 @@
         "ingredient_DdrY9r": {
           "type": "ingredient",
           "settings": {
+            "image": "shopify://shop_images/Gemini_Generated_Image_c1sqaoc1sqaoc1sq_1_7954ca93-780a-4ac0-aa31-a7f690a2b3a6.webp",
             "title": "Maca Negra",
             "description": "Potencia el deseo a través de vías naturales del sistema nervioso central, sin intervenir en las hormonas.",
             "card_bg_color": "#f5f5f5"
