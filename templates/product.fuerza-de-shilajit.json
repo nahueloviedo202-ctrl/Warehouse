@@ -750,7 +750,7 @@
       "settings": {
         "heading": "QUÉ ESPERAR: EJEMPLO DE LÍNEA DE RESULTADOS",
         "heading_color": "#1a1a1a",
-        "background_color": "#FFFFFF",
+        "background_color": "#FFFDF6",
         "text_color": "#1a1a1a",
         "show_separator": true,
         "separator_color": "#e9be47",
@@ -781,7 +781,7 @@
             "heading": "Recuperá tu mejor versión, dentro y fuera del gimnasio",
             "text": "<p>Dificultades para mantener el deseo, bajo rendimiento sexual y pérdida de masa muscular suelen ir de la mano con niveles bajos de testosterona. Shilajit ayuda a apoyar tu testosterona natural, mejorar la circulación y acompañarte a recuperar fuerza, resistencia y confianza en tu día a día.<br/><br/></p>",
             "button_label": "",
-            "button_link": "",
+            "button_link": "#informacion-producto",
             "button_background_color": "",
             "button_text_color": "",
             "button_border_color": "",
