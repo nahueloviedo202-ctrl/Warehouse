@@ -608,7 +608,7 @@
         "text_italic": true,
         "text_uppercase": true,
         "color_scheme": "background-1",
-        "custom_background_color": "#aecce0",
+        "custom_background_color": "#EEEEEE",
         "custom_text_color": "#000000",
         "padding_top": 20,
         "padding_bottom": 20,
@@ -622,10 +622,10 @@
         "row_k7A4an": {
           "type": "row",
           "settings": {
-            "image": "shopify://shop_images/colagenobiopeptides4-clean.webp",
-            "caption": "ABSORCIÓN SUPERIOR",
-            "heading": "Colágeno que tu cuerpo aprovecha",
-            "text": "<p>Nuestra tecnología Bio-Peptides™ descompone el colágeno en péptidos más pequeños, logrando una absorción y biodisponibilidad muy superior a la del colágeno tradicional.</p>",
+            "image": "shopify://shop_images/730ca0c67ec0744dabc755fc5d2cc57e.jpg",
+            "caption": "LA CAÍDA QUE NADIE TE EXPLICÓ",
+            "heading": "Tu cuerpo dejó de producir el NAD+ que necesita",
+            "text": "<p>A partir de los 35, tu NAD+ empieza a caer en picado. Menos energía para el día a día, más tiempo para recuperarte del gimnasio, esa sensación de que ya no rendís como antes. NAD+ Advanced ataca la causa, no el síntoma: con tecnología liposomal, entrega el NAD+ directo a tus células, para que vuelvas a sentir la energía que creías perdida.<br/></p>",
             "button_label": "",
             "button_link": "",
             "button_background_color": "",
@@ -690,11 +690,11 @@
         "row_EBPtQa": {
           "type": "row",
           "settings": {
-            "image": "shopify://shop_images/product8_3c647374-e9e4-4679-91ce-c159b9933fc4.webp",
+            "image": "shopify://shop_images/nad_porduct_9-clean.webp",
             "caption": "20G DE COLÁGENO POR PORCIÓN",
-            "heading": "Fuerza desde adentro",
-            "text": "<p>Con 20g de colágeno y 18g de proteína por medida, ayuda a apoyar la salud de tu cabello, piel, uñas y articulaciones.</p>",
-            "button_label": "QUIERO MI COLÁGENO",
+            "heading": "El NAD+ que sí llega a tus células",
+            "text": "<p>Mientras las píldoras genéricas se pierden en la digestión, nuestra tecnología liposomal entrega 500mg de LipoNAD™ directo donde importa. Más energía, mejor recuperación, resultados que se sienten desde las primeras semanas — fabricado en EE.UU. bajo los estándares más exigentes.</p>",
+            "button_label": "QUIERO MI NAD+",
             "button_link": "#informacion-producto",
             "button_background_color": "#000000",
             "button_text_color": "#ffffff",
@@ -754,25 +754,120 @@
             "stat_padding_mobile": 20,
             "stat_gap_mobile": 16
           }
+        }
+      },
+      "block_order": [
+        "row_k7A4an",
+        "row_EBPtQa"
+      ],
+      "name": "t:sections.multirow.presets.name",
+      "settings": {
+        "image_height": "adapt",
+        "desktop_image_width": "medium",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "primary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "image_layout": "alternate-left",
+        "section_color_scheme": "background-1",
+        "row_color_scheme": "background-1",
+        "background_color": "",
+        "row_content_padding_top": 96,
+        "row_content_padding_bottom": 112,
+        "row_content_padding_top_mobile": 48,
+        "row_content_padding_bottom_mobile": 48,
+        "stat_disclaimer": "<p>*According to survey responses from 5,000+ customers.</p>",
+        "stat_disclaimer_color": "#ffffff",
+        "stat_disclaimer_font_size": 14,
+        "mobile_content_alignment": "left",
+        "padding_top": 60,
+        "padding_bottom": 40,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "icon_bar_YBkPqK": {
+      "type": "icon-bar",
+      "blocks": {
+        "column_k6JQec": {
+          "type": "column",
+          "settings": {
+            "icon": "snowflake",
+            "title": "Energía Celular",
+            "text": "<p>Impulsa tu energía desde el origen, a nivel mitocondrial.</p><p></p>"
+          }
         },
-        "row_AGCfBc": {
+        "column_kGmjFW": {
+          "type": "column",
+          "settings": {
+            "icon": "perfume",
+            "title": " Absorción Real",
+            "text": "<p>Tecnología liposomal para que el NAD+ realmente llegue a tus células.</p><p></p>"
+          }
+        },
+        "column_Tprw6Y": {
+          "type": "column",
+          "settings": {
+            "icon": "plant",
+            "title": "Efecto Anti-Edad",
+            "text": "<p>Apoya la reparación natural del cuerpo y una recuperación más rápida.</p><p></p>"
+          }
+        },
+        "column_L4bc4P": {
+          "type": "column",
+          "settings": {
+            "icon": "star",
+            "title": "Calidad Certificada",
+            "text": "<p>Fabricado en EE.UU., certificado GMP y testeado por terceros.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "column_k6JQec",
+        "column_kGmjFW",
+        "column_Tprw6Y",
+        "column_L4bc4P"
+      ],
+      "name": "Icon Bar",
+      "settings": {
+        "title": "BENEFICIOS QUE SE NOTAN",
+        "heading_size": "h2",
+        "text": "",
+        "icon_size": "medium",
+        "columns_desktop": 4,
+        "icon_color": "text",
+        "background_style": "none",
+        "color_scheme": "background-2",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 28,
+        "padding_bottom_mobile": 28
+      }
+    },
+    "multirow_bJBxcQ": {
+      "type": "multirow",
+      "blocks": {
+        "row_VFPAPc": {
           "type": "row",
           "settings": {
-            "image": "shopify://shop_images/product7.png",
-            "caption": "SIN SABOR, SIN GRUMOS",
-            "heading": "Se mezcla con todo, sin esfuerzo",
-            "text": "<p>Sin sabor añadido y libre de grumos, se disuelve fácilmente en café, avena, yogur o smoothies, sumando colágeno a tu rutina diaria sin complicaciones.</p>",
-            "button_label": "",
-            "button_link": "",
-            "button_background_color": "",
-            "button_text_color": "",
-            "button_border_color": "",
+            "image": "shopify://shop_images/ChatGPT_Image_17_jul_2026_01_05_44_p.m.webp",
+            "caption": "RESPALDO REAL",
+            "heading": "Calidad que no se negocia",
+            "text": "<p>Certificado por NSF, con instalación bajo estándares GMP y fabricado en EE.UU. con ingredientes de origen global. No es una promesa vacía, es un producto que se puede verificar.</p>",
+            "button_label": "QUIERO MI NAD+",
+            "button_link": "#informacion-producto",
+            "button_background_color": "#000000",
+            "button_text_color": "#FFFFFF",
+            "button_border_color": "#000000",
             "heading_font_size_desktop": 40,
             "heading_font_size_mobile": 24,
             "text_font_size_desktop": 16,
             "text_font_size_mobile": 14,
-            "icon_list_bg_color": "#f5c518",
-            "icon_list_icon_color": "#1a1a1a",
+            "icon_list_bg_color": "#F5C518",
+            "icon_list_icon_color": "#1A1A1A",
             "icon_list_text_color": "",
             "icon_list_icon_size_desktop": 28,
             "icon_list_icon_size_mobile": 24,
@@ -825,9 +920,7 @@
         }
       },
       "block_order": [
-        "row_k7A4an",
-        "row_EBPtQa",
-        "row_AGCfBc"
+        "row_VFPAPc"
       ],
       "name": "t:sections.multirow.presets.name",
       "settings": {
@@ -850,10 +943,10 @@
         "stat_disclaimer_color": "#ffffff",
         "stat_disclaimer_font_size": 14,
         "mobile_content_alignment": "left",
-        "padding_top": 60,
-        "padding_bottom": 40,
-        "padding_top_mobile": 40,
-        "padding_bottom_mobile": 0
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 28,
+        "padding_bottom_mobile": 28
       }
     },
     "review_slider_pmwAwt": {
@@ -1157,6 +1250,8 @@
     "slideshow_HfVNww",
     "press_ticker_gTJiLE",
     "multirow_tPhXaV",
+    "icon_bar_YBkPqK",
+    "multirow_bJBxcQ",
     "review_slider_pmwAwt",
     "faq_accordion_m3GjeY",
     "community_feed_dJB7VX"
