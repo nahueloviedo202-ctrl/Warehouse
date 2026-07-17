@@ -690,7 +690,7 @@
         "row_EBPtQa": {
           "type": "row",
           "settings": {
-            "image": "shopify://shop_images/nad_porduct_9-clean.webp",
+            "image": "shopify://shop_images/nad_porduct_9.webp",
             "caption": "20G DE COLÁGENO POR PORCIÓN",
             "heading": "El NAD+ que sí llega a tus células",
             "text": "<p>Mientras las píldoras genéricas se pierden en la digestión, nuestra tecnología liposomal entrega 500mg de LipoNAD™ directo donde importa. Más energía, mejor recuperación, resultados que se sienten desde las primeras semanas — fabricado en EE.UU. bajo los estándares más exigentes.</p>",
@@ -1046,8 +1046,8 @@
         "question_giLkXQ": {
           "type": "question",
           "settings": {
-            "question": "¿Qué son los Bio-Peptides™?",
-            "answer": "<p>Son cadenas pequeñas de aminoácidos obtenidas al descomponer el colágeno en péptidos más pequeños y altamente absorbibles, mediante un proceso de fabricación avanzado.</p>",
+            "question": "¿Cómo se toma?",
+            "answer": "<p>2 cápsulas al día, con o sin alimentos.</p>",
             "question_color": "",
             "question_font_size_desktop": 16,
             "question_font_size_mobile": 15,
@@ -1061,8 +1061,8 @@
         "question_36wNwy": {
           "type": "question",
           "settings": {
-            "question": "¿Debería tomar colágeno a medida que envejezco?",
-            "answer": "<p>Sí, la producción natural de colágeno disminuye con la edad. Estos Bio-Peptides™ aportan lo que tu cuerpo necesita para producir colágeno propio, ayudando a la salud de piel, cabello y uñas.</p>",
+            "question": "¿Cuánto tarda en hacer efecto?",
+            "answer": "<p>La mayoría nota cambios en energía y bienestar general dentro de las primeras semanas de uso diario constante.</p>",
             "question_color": "",
             "question_font_size_desktop": 16,
             "question_font_size_mobile": 15,
@@ -1076,8 +1076,8 @@
         "question_e4hhdC": {
           "type": "question",
           "settings": {
-            "question": "¿Tiene sabor?",
-            "answer": "<p>No, es sin sabor y sin grumos, por lo que se puede agregar a café, yogur, avena o smoothies sin alterar el gusto.</p>",
+            "question": "¿Tiene efectos secundarios?",
+            "answer": "<p>Puede haber dolores de cabeza leves mientras el cuerpo se adapta a niveles más altos de NAD+, normalmente de corta duración. Empezar con una dosis más baja puede ayudar.</p>",
             "question_color": "",
             "question_font_size_desktop": 16,
             "question_font_size_mobile": 15,
@@ -1091,8 +1091,8 @@
         "question_HKe6yp": {
           "type": "question",
           "settings": {
-            "question": "¿Cómo se toma?",
-            "answer": "<p>Una medida (20g) al día, sola o distribuida durante el día, mezclada con tu comida o bebida favorita.</p>",
+            "question": "¿Está fabricado en EE.UU.?",
+            "answer": "<p>Sí, fabricado y testeado en instalaciones certificadas GMP en Estados Unidos, con ingredientes de origen global.</p>",
             "question_color": "",
             "question_font_size_desktop": 16,
             "question_font_size_mobile": 15,
@@ -1106,8 +1106,8 @@
         "question_V76RRe": {
           "type": "question",
           "settings": {
-            "question": "¿De dónde proviene el colágeno?",
-            "answer": "<p>Proviene de ganado bovino de pastoreo (grassfed), de calidad premium y abastecimiento responsable.</p>",
+            "question": "¿Qué pasa si no funciona para mí?",
+            "answer": "<p>Contás con garantía de devolución de por vida. Menos del 1% de los clientes la pide.</p>",
             "question_color": "",
             "question_font_size_desktop": 16,
             "question_font_size_mobile": 15,
