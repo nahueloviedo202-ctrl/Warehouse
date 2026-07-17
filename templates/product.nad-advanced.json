@@ -955,8 +955,8 @@
         "review_TdEpgg": {
           "type": "review",
           "settings": {
-            "text": "Lo empecé a usar hace unas semanas y ya noto mi piel y uñas más fuertes. Muy recomendable.",
-            "avatar": "shopify://shop_images/default-ticker-5_1_1.png",
+            "text": "Mi recuperación después de entrenar cambió por completo. Ya no arranco el día molida.",
+            "avatar": "shopify://shop_images/Captura_de_pantalla_2026-07-16_123050.png",
             "author": "María D.",
             "rating": 5
           }
@@ -964,8 +964,8 @@
         "review_EccX6C": {
           "type": "review",
           "settings": {
-            "text": "No tiene sabor y se disuelve perfecto en el café de la mañana. Excelente calidad.",
-            "avatar": "shopify://shop_images/default-ticker-5_1_2.png",
+            "text": "Sentía que ya no rendía como antes. Un mes después, vuelvo a tener energía para todo el día, sin excusas.",
+            "avatar": "shopify://shop_images/55fede12a595b2ce7846b245a7d870c6_1.jpg",
             "author": "Sofía P.",
             "rating": 5
           }
@@ -973,7 +973,7 @@
         "review_VgTKBY": {
           "type": "review",
           "settings": {
-            "text": "Producto de muy buena calidad y atención impecable. Estoy muy conforme.",
+            "text": "Nunca pensé que un suplemento me iba a cambiar tanto la energía diaria. Ahora no lo dejo por nada.",
             "avatar": "shopify://shop_images/default-ticker-5_1.png",
             "author": "Camila M.",
             "rating": 5
@@ -982,9 +982,18 @@
         "review_tBbcww": {
           "type": "review",
           "settings": {
-            "text": "Lo mezclo todas las mañanas con mi café y ni se nota. Ya veo mis uñas más fuertes y mi piel más hidratada.",
-            "avatar": "shopify://shop_images/Persona.png",
-            "author": "Valeria S.",
+            "text": "Llegaba muerto a la tarde todos los días. Ahora tengo pilas hasta la noche, se nota la diferencia",
+            "avatar": "shopify://shop_images/si.jpg",
+            "author": "Martín R",
+            "rating": 5
+          }
+        },
+        "review_fYXmk6": {
+          "type": "review",
+          "settings": {
+            "text": "Después de los entrenamientos recupero mucho más rápido. Ya lo recomendé a todo el gimnasio.",
+            "avatar": "shopify://shop_images/dd4ab49f3a0459a52b80bb890fb7a790.jpg",
+            "author": "Diego F.",
             "rating": 5
           }
         }
@@ -993,7 +1002,8 @@
         "review_TdEpgg",
         "review_EccX6C",
         "review_VgTKBY",
-        "review_tBbcww"
+        "review_tBbcww",
+        "review_fYXmk6"
       ],
       "name": "Slider de reseñas",
       "settings": {
@@ -1003,13 +1013,13 @@
         "heading_font_size_desktop": 36,
         "heading_font_size_mobile": 26,
         "heading_font_weight": "600",
-        "subheading": "Opiniones de quienes ya eligieron Colágeno Bio-Peptides",
-        "subheading_color": "#1c6ba0",
+        "subheading": "Opiniones de quienes ya eligieron NAD+",
+        "subheading_color": "#000000",
         "subheading_font_size_desktop": 18,
         "subheading_font_size_mobile": 15,
         "subheading_font_weight": "500",
-        "card_background_color": "#eaedef",
-        "card_border_color": "#aecce0",
+        "card_background_color": "#EEEEEE",
+        "card_border_color": "#000000",
         "card_border_width": 1,
         "card_corner_radius": 16,
         "text_color": "#2b2b2b",
@@ -1137,7 +1147,7 @@
         "color_scheme": "background-1",
         "accent_color_scheme": "accent-2",
         "background_color": "",
-        "item_background": "#aecce0",
+        "item_background": "#EEEEEE",
         "item_radius": 12,
         "item_spacing": 12,
         "open_first_question": false,
