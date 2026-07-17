@@ -664,15 +664,6 @@
             "target_blank": false
           }
         },
-        "item_c3eGAi": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/gq-seeklogo.svg",
-            "text": "marie claire",
-            "link": "",
-            "target_blank": false
-          }
-        },
         "item_wrJGVn": {
           "type": "item",
           "settings": {
@@ -687,7 +678,6 @@
         "item_3kkXqc",
         "item_nDK9AQ",
         "item_RmqdGV",
-        "item_c3eGAi",
         "item_wrJGVn"
       ],
       "name": "Press Ticker",
