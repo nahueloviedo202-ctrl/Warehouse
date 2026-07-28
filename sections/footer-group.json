@@ -18,13 +18,14 @@
           "type": "text",
           "settings": {
             "heading": "Vita Nura Lab",
-            "text": "<p>cosmética y bienestar</p><p>con resultados reales.</p>",
+            "text": "<p>Cosmética y bienestar</p><p>Con resultados reales.</p>",
             "text_size": 14,
             "text_size_mobile": 14
           }
         },
         "custom_links_nJB7m6": {
           "type": "custom_links",
+          "disabled": true,
           "settings": {
             "heading": "Colecciones",
             "link_1_label": "Mas vendido",
@@ -43,6 +44,7 @@
         },
         "custom_links_3dxr37": {
           "type": "custom_links",
+          "disabled": true,
           "settings": {
             "heading": "Productos más vendidos",
             "link_1_label": "Ampolla Reafirmante Intensiva Con Péptidos De Seda",
