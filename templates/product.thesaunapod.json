@@ -612,6 +612,15 @@
     "cambios_reales_jtNb4Q": {
       "type": "cambios-reales",
       "blocks": {
+        "review_AJff48": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2025-09-03_at_19.52.54.webp",
+            "text": "\"After training for a half-marathon, contrast therapy has become my secret weapon. The Sauna Pod's consistent 85°C dry heat is perfect, and the instant cold plunge in the FREE Ice Pod is exactly what my muscles need to bounce back. The bundled value is absolutely incredible.\"",
+            "author": "Chloe R. — Montreal, QC[cite: 26]",
+            "rating": 5
+          }
+        },
         "review_c3nXpd": {
           "type": "review",
           "settings": {
@@ -641,6 +650,7 @@
         }
       },
       "block_order": [
+        "review_AJff48",
         "review_c3nXpd",
         "review_BfDVY4",
         "review_7zD7gm"
