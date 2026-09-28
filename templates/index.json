@@ -171,7 +171,7 @@
         "view_all_font_size_mobile": 13,
         "header_mb": 24,
         "header_mb_mobile": 16,
-        "collection": "mas-vendidos",
+        "collection": "frontpage",
         "products_to_show": 8,
         "left_image_link": "",
         "left_image_width_desktop": 260,
