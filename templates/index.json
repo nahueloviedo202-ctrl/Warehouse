@@ -127,7 +127,6 @@
         "header_mb_mobile": 16,
         "collection": "frontpage",
         "products_to_show": 8,
-        "left_image": "shopify://shop_images/mobile.jpg",
         "left_image_link": "",
         "left_image_width_desktop": 260,
         "left_image_width_tablet": 200,
