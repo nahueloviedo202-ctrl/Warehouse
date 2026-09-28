@@ -848,6 +848,87 @@
         "padding_bottom_mobile": 32
       }
     },
+    "review_slider_aCRFCD": {
+      "type": "review-slider",
+      "blocks": {
+        "review_4QyrdN": {
+          "type": "review",
+          "settings": {
+            "text": "\"I used to spend at least $7 every morning at local coffee shops in downtown Toronto. The Ninja Luxe Mini paid for itself in under two months. The espresso pulls have an incredible golden crema layer, and the Barista Assist made dialing in the right extraction effortless.\"",
+            "avatar": "shopify://shop_images/31.jpg",
+            "author": "Liam T. — Toronto, ON",
+            "rating": 5
+          }
+        },
+        "review_LiEdAc": {
+          "type": "review",
+          "settings": {
+            "text": "\"Having smooth cold brew ready in less than 3 minutes without soaking grounds overnight has completely upgraded our afternoons. We go from morning double espressos to iced drinks in seconds with zero mess on the counter.\"",
+            "avatar": "shopify://shop_images/90.jpg",
+            "author": "Marcus K. — Vancouver, BC",
+            "rating": 5
+          }
+        },
+        "review_itcKff": {
+          "type": "review",
+          "settings": {
+            "text": "\"The automated milk frother is genuinely impressive. I strictly use oat milk, and most home steam wands just scorch it. This machine creates silky, microfoam texture that holds up for latte art every single time. It also tucks neatly under low kitchen cabinets.\"",
+            "avatar": "shopify://shop_images/95.jpg",
+            "author": "Sophie B. — Montreal, QC",
+            "rating": 5
+          }
+        },
+        "review_BWnikE": {
+          "type": "review",
+          "settings": {
+            "text": "\"Counter space in our condo is tight, so the compact footprint was the biggest selling point. Setup took five minutes, it plugs right into standard wall outlets, and cleaning the portafilter takes seconds. Essential gear for Canadian winters.\"",
+            "avatar": "shopify://shop_images/18.jpg",
+            "author": "Chloe R. — Calgary, AB",
+            "rating": 5
+          }
+        }
+      },
+      "block_order": [
+        "review_4QyrdN",
+        "review_LiEdAc",
+        "review_itcKff",
+        "review_BWnikE"
+      ],
+      "name": "Slider de reseñas",
+      "settings": {
+        "heading": "REAL KITCHENS, REAL COFFEE",
+        "heading_size": "h1",
+        "heading_color": "#111111",
+        "heading_font_size_desktop": 36,
+        "heading_font_size_mobile": 26,
+        "heading_font_weight": "500",
+        "subheading": "",
+        "subheading_color": "#B5651D",
+        "subheading_font_size_desktop": 18,
+        "subheading_font_size_mobile": 15,
+        "subheading_font_weight": "400",
+        "card_background_color": "#FAF2EA",
+        "card_border_color": "#E8C9A0",
+        "card_border_width": 1,
+        "card_corner_radius": 16,
+        "text_color": "#2B2B2B",
+        "author_color": "#1A1A1A",
+        "star_color": "#F5A623",
+        "cards_per_row_desktop": 3,
+        "cards_per_row_tablet": 2,
+        "cards_per_row_mobile": 1,
+        "card_gap": 24,
+        "show_arrows": true,
+        "hide_arrows_mobile": false,
+        "arrows_color": "#B5651D",
+        "color_scheme": "background-1",
+        "background_color": "",
+        "padding_top": 48,
+        "padding_bottom": 48,
+        "padding_top_mobile": 28,
+        "padding_bottom_mobile": 28
+      }
+    },
     "results_FXmCVN": {
       "type": "results",
       "blocks": {
@@ -855,7 +936,7 @@
           "type": "row",
           "settings": {
             "percentage": 98,
-            "row_text": "<p>Miles of max range with the dual battery setup, eliminating daily charging anxiety.</p>",
+            "row_text": "<p>Of daily users reported significant savings by replacing their specialty coffee shop visits at home.</p><p></p>",
             "row_text_color": "",
             "row_text_font_size_desktop": 15,
             "row_text_font_size_mobile": 14,
@@ -866,7 +947,7 @@
           "type": "row",
           "settings": {
             "percentage": 100,
-            "row_text": "<p>32 Miles per hour top unlocked speed powered by the 1000W peak high-torque motor</p>",
+            "row_text": "<p>Hands-free microfoam consistency across oat, almond, and whole milk using automated frothing presets.</p>",
             "row_text_color": "",
             "row_text_font_size_desktop": 15,
             "row_text_font_size_mobile": 14,
@@ -877,7 +958,7 @@
           "type": "row",
           "settings": {
             "percentage": 96,
-            "row_text": "<p>Positive feedback from riders praising the smooth dual suspension and built-in Bluetooth audio.</p>",
+            "row_text": "<p>Positive feedback praising the space-saving compact footprint and rapid 3-minute cold brew function.</p>",
             "row_text_color": "",
             "row_text_font_size_desktop": 15,
             "row_text_font_size_mobile": 14,
@@ -892,7 +973,7 @@
       ],
       "name": "Results",
       "settings": {
-        "title": "RESULTS",
+        "title": "PROVEN PERFORMANCE",
         "heading_size": "h1",
         "heading_color": "#432818",
         "heading_font_size_desktop": 40,
@@ -902,18 +983,18 @@
         "text_font_size_desktop": 16,
         "text_font_size_mobile": 15,
         "text_font_weight": "400",
-        "text": "<p>Engineered for everyday commutes and off-road weekends, tested by real riders across the country.</p>",
+        "text": "",
         "image": "shopify://shop_images/ES301_Gallery_Component6.avif",
         "color_scheme": "background-1",
         "layout": "results_second",
-        "results_headline": "RIDER SATISFACTION & CAPABILITY",
+        "results_headline": "SATISFACTION & CAPABILITY",
         "results_headline_size": "h2",
         "results_headline_alignment": "left",
         "results_headline_color": "#432818",
         "results_headline_font_size_desktop": 28,
         "results_headline_font_size_mobile": 22,
         "results_headline_font_weight": "500",
-        "caption": "<p>Caption about the results and/or link for their proof.</p>",
+        "caption": "<p>*Based on verified customer feedback and at-home performance testing.</p>",
         "button_label": "",
         "link": "",
         "button_style_secondary": false,
@@ -1039,87 +1120,6 @@
         "padding_top_mobile": 40,
         "padding_bottom_mobile": 40
       }
-    },
-    "review_slider_aCRFCD": {
-      "type": "review-slider",
-      "blocks": {
-        "review_4QyrdN": {
-          "type": "review",
-          "settings": {
-            "text": "\"I used to spend at least $7 every morning at local coffee shops in downtown Toronto. The Ninja Luxe Mini paid for itself in under two months. The espresso pulls have an incredible golden crema layer, and the Barista Assist made dialing in the right extraction effortless.\"",
-            "avatar": "shopify://shop_images/31.jpg",
-            "author": "Liam T. — Toronto, ON",
-            "rating": 5
-          }
-        },
-        "review_LiEdAc": {
-          "type": "review",
-          "settings": {
-            "text": "\"Having smooth cold brew ready in less than 3 minutes without soaking grounds overnight has completely upgraded our afternoons. We go from morning double espressos to iced drinks in seconds with zero mess on the counter.\"",
-            "avatar": "shopify://shop_images/90.jpg",
-            "author": "Marcus K. — Vancouver, BC",
-            "rating": 5
-          }
-        },
-        "review_itcKff": {
-          "type": "review",
-          "settings": {
-            "text": "\"The automated milk frother is genuinely impressive. I strictly use oat milk, and most home steam wands just scorch it. This machine creates silky, microfoam texture that holds up for latte art every single time. It also tucks neatly under low kitchen cabinets.\"",
-            "avatar": "shopify://shop_images/95.jpg",
-            "author": "Sophie B. — Montreal, QC",
-            "rating": 5
-          }
-        },
-        "review_BWnikE": {
-          "type": "review",
-          "settings": {
-            "text": "\"Counter space in our condo is tight, so the compact footprint was the biggest selling point. Setup took five minutes, it plugs right into standard wall outlets, and cleaning the portafilter takes seconds. Essential gear for Canadian winters.\"",
-            "avatar": "shopify://shop_images/18.jpg",
-            "author": "Chloe R. — Calgary, AB",
-            "rating": 5
-          }
-        }
-      },
-      "block_order": [
-        "review_4QyrdN",
-        "review_LiEdAc",
-        "review_itcKff",
-        "review_BWnikE"
-      ],
-      "name": "Slider de reseñas",
-      "settings": {
-        "heading": "REAL KITCHENS, REAL COFFEE",
-        "heading_size": "h1",
-        "heading_color": "#111111",
-        "heading_font_size_desktop": 36,
-        "heading_font_size_mobile": 26,
-        "heading_font_weight": "500",
-        "subheading": "",
-        "subheading_color": "#B5651D",
-        "subheading_font_size_desktop": 18,
-        "subheading_font_size_mobile": 15,
-        "subheading_font_weight": "400",
-        "card_background_color": "#FAF2EA",
-        "card_border_color": "#E8C9A0",
-        "card_border_width": 1,
-        "card_corner_radius": 16,
-        "text_color": "#2B2B2B",
-        "author_color": "#1A1A1A",
-        "star_color": "#F5A623",
-        "cards_per_row_desktop": 3,
-        "cards_per_row_tablet": 2,
-        "cards_per_row_mobile": 1,
-        "card_gap": 24,
-        "show_arrows": true,
-        "hide_arrows_mobile": false,
-        "arrows_color": "#B5651D",
-        "color_scheme": "background-1",
-        "background_color": "",
-        "padding_top": 48,
-        "padding_bottom": 48,
-        "padding_top_mobile": 28,
-        "padding_bottom_mobile": 28
-      }
     }
   },
   "order": [
@@ -1132,8 +1132,8 @@
     "slideshow_HfVNww",
     "why_we_love_it_3t7fT9",
     "feature_cards_rC7d6a",
+    "review_slider_aCRFCD",
     "results_FXmCVN",
-    "faq_accordion_m3GjeY",
-    "review_slider_aCRFCD"
+    "faq_accordion_m3GjeY"
   ]
 }
