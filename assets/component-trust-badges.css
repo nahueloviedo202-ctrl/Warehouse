@@ -30,4 +30,7 @@
   .trust-badges__item {
     min-width: 60px;
   }
+  .product-review-bar{
+    padding-top: 10px;
+  }
 }
