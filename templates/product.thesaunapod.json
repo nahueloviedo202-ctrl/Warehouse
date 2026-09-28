@@ -21,7 +21,7 @@
             "separator_text": "from",
             "customer_count": "+500.000",
             "suffix_text": "riders",
-            "star_color": "#EB5E28",
+            "star_color": "#eb5e28",
             "empty_star_color": "#dcdce6",
             "star_size": 24,
             "star_size_mobile": 14,
@@ -80,7 +80,7 @@
           "type": "emoji_benefits",
           "name": "Bullets",
           "settings": {
-            "benefits": "<p><strong>Top Speed:</strong> Up to 32 MPH with 1000W Peak High-Torque Motor&nbsp;</p><p></p><p><strong>Long Range:</strong> Up to 100+ Miles (Dual Battery) / UL Certified&nbsp;</p><p></p><p><strong>All-Terrain Comfort:</strong> Dual Suspension, Fat Tires & Built-In Bluetooth Speaker&nbsp;</p>",
+            "benefits": "<p><strong>Peak Dry Heat</strong>: Reaches up to 185°F (85°C) in under 20 minutes with high-output 1500W heater</p><p><br/><strong>Contrast Therapy Bundle</strong>: Includes FREE Ice Pod + Insulated Cover ($300+ in free gifts)<br/></p><p><strong>Non-Toxic & Spacious:</strong> 100% natural cotton canvas, red-light ambience, fits up to 6'7\"&nbsp;</p>",
             "font_size_desktop": 15,
             "font_size_mobile": 14,
             "font_weight": "400",
@@ -160,7 +160,7 @@
         "pdp_stock_pulse_Y3WqH7": {
           "type": "pdp_stock_pulse",
           "settings": {
-            "text": "Limited Stock — Selling Fast!",
+            "text": "Limited Free Ice Pods Remaining — Selling Out Fast!",
             "dot_color": "#bc6161",
             "pulse_color": "#d5adad",
             "dot_size": 14,
@@ -181,7 +181,7 @@
             "icon_alignment": "top",
             "font_size_desktop": 14,
             "font_size_mobile": 13,
-            "message": "<p>Fast 2–7 Day US Delivery</p>",
+            "message": "<p>Fast Nationwide Delivery Across Canada — Ships in 24–48 Hours</p>",
             "min_shipping_days": 1,
             "max_shipping_days": 2,
             "date_format": "day_dd_mm_numeric",
@@ -198,15 +198,15 @@
           "settings": {
             "show_item_1": true,
             "icon_1": "tablets",
-            "label_1": "Free US Shipping",
+            "label_1": "30-Day Risk-FreeHome Trial",
             "show_item_2": true,
             "icon_2": "shipping_box",
-            "label_2": "1-Year Worry-Free Warranty",
+            "label_2": "Free Canada-WideShipping (No Duties)",
             "show_item_3": true,
             "icon_3": "shipping_box",
-            "label_3": "30-Day Hassle-Free Returns",
-            "background_color": "#EB5E28",
-            "border_color": "#EB5E28",
+            "label_3": "2-Year FullWarranty",
+            "background_color": "#800E13",
+            "border_color": "#800E13",
             "border_width": 1,
             "border_radius": 14,
             "padding_vertical": 20,
@@ -215,9 +215,9 @@
             "padding_vertical_mobile": 16,
             "padding_horizontal_mobile": 16,
             "items_gap_mobile": 8,
-            "icon_color": "#FFFFFF",
+            "icon_color": "#ffffff",
             "icon_size": 32,
-            "text_color": "#FFFFFF",
+            "text_color": "#ffffff",
             "text_size": 13,
             "label_gap": 8,
             "icon_size_mobile": 28,
@@ -253,15 +253,15 @@
             "item_body_size_desktop": 14,
             "item_body_size_mobile": 13,
             "item_1_title": "Description",
-            "item_1_body": "<p>Built on the V8 Max DNA, the V8 Ultra brings a sportier feel, upgraded comfort, and ride-ready features to every adventure. Engineered for city cruising and off-road trails alike, it delivers powerful performance, smooth dual-suspension handling, and an integrated Bluetooth audio system to keep every ride excitin</p>",
+            "item_1_body": "<p>Experience full-body contrast therapy from the comfort of your home. The Sauna Pod is the world’s first patent-pending portable dry hot-air sauna, engineered to reach up to 85°C (185°F) in minutes without toxic off-gassing. Paired with your included Free Ice Pod, this setup unlocks professional-grade contrast therapy to accelerate athletic recovery, reduce chronic inflammation, flush toxins, and improve restorative sleep. Built with double-layer non-toxic cotton canvas and food-grade TPU windows for safe, comfortable daily sessions across Canadian seasons.</p><p></p><h3></h3>",
             "item_2_title": "Key Features",
-            "item_2_body": "<p>• <strong>Powerful Motor:</strong> 750W sustained / 1000W Peak High-Torque Motor (up to 32 MPH top speed).</p><p>• <strong>All-Terrain Dual Suspension:</strong> Sporty carbon-fiber dual suspension to absorb potholes and rough terrain.</p><p>• <strong>Massive Range:</strong> Up to 100+ miles of pedal assist with the dual waterproof 48V 15Ah battery setup.</p><p>• <strong>Built-In Bluetooth Speaker:</strong> High-output audio integrated directly into the headlight housing.</p><p>• <strong>Advanced Safety:</strong> UL 2849 & UL 2271 certified electrical system, hydraulic brakes, extra-bright LED lighting, and integrated turn signals.</p>",
+            "item_2_body": "<p>• <strong>Extreme Heat Performance:</strong> High-output 1500W dry-heat heater heats up to 85°C (185°F) in under 20 minutes.</p><p>• <strong>100% Non-Toxic Design:</strong> Made with natural unbleached cotton canvas and food-grade components—no toxic chemical smells or plastic vapor.</p><p>• <strong>Complete Contrast Therapy:</strong> Free Ice Pod included for rapid cold water immersion after every sauna session.</p><p>• <strong>Red-Light Ambience:</strong> Built-in ambient light setting promotes deeper relaxation and recovery while you sweat.</p><p>• <strong>Spacious & Comfortable:</strong> Extra-tall interior with an included stainless-steel folding chair, designed to comfortably fit users up to 200 cm (6'7\") and 150 kg (330 lbs).</p>",
             "item_3_title": "Shipping & Returns",
-            "item_3_body": "<p>• <strong>Delivery:</strong> Free 2–7 day standard shipping across the United States.</p><p>• <strong>Returns:</strong> 30-day hassle-free return policy.</p><p>• <strong>Warranty:</strong> 1-Year worry-free warranty covering all core components.</p><p>• <strong>Local Support:</strong> Dedicated U.S.-based customer care and replacement parts readily available.</p>",
+            "item_3_body": "<p>• <strong>Canada-Wide Fast Delivery:</strong> Fast courier dispatch with all provincial taxes handled at checkout—<strong>100% guaranteed no unexpected customs or duty fees</strong>.</p><p>• <strong>Dispatch Time:</strong> Ships directly from regional fulfillment facilities within 24–48 hours.</p><p>• <strong>30-Day Risk-Free Home Trial:</strong> Try the full Sauna Pod + Ice Pod combo at home for 30 days. If you are not completely satisfied, return it for a refund.</p><p>• <strong>Warranty Protection:</strong> Backed by an all-inclusive 2-Year Canadian Manufacturer Warranty.</p>",
             "item_4_title": "What's in the Box?",
-            "item_4_body": "<p>• 1x V8 Ultra E-Bike (85% pre-assembled)</p><p>• 1x Smart Battery Charger (5–6 hr charge time)</p><p>• 1x NFC Card & Key Fob access&nbsp;</p><p>• 1x Passenger Back Seat & Rear Foot Pegs&nbsp;</p><p>• 1x Portable Tire Pump & Multi-Tool Kit&nbsp;</p><p>• 1x Extra Brake Pads set & User Manual&nbsp;</p>",
+            "item_4_body": "<p>• 1x The Sauna Pod (Natural Canvas Shell & Lightweight Frame)</p><p>• 1x 1500W High-Performance Dry Air Heater with Remote & Hose</p><p>• 1x Ergonomic Heavy-Duty Stainless Steel Folding Chair</p><p>• 1x BONUS The Standard Ice Pod Cold Plunge ($199 CAD Value — FREE)</p><p>• 1x BONUS All-Weather Insulated Plunge Cover</p><p>• 1x Floating Water Thermometer & User Manual</p>",
             "item_5_title": "Technical Specs",
-            "item_5_body": "<p>• <strong>Top Speed:</strong> 32 MPH (Unlocked)&nbsp;</p><p>• <strong>Motor:</strong> 750W (1000W Peak)&nbsp;</p><p>• <strong>Battery:</strong> 48V 15Ah Waterproof (Single or Dual Battery option)&nbsp;</p><p>• <strong>Tires:</strong> 20\" x 4.0\" All-Terrain Fat Tires&nbsp;</p><p>• <strong>Gears:</strong> Shimano 7-Speed Transmission&nbsp;</p><p>• <strong>Brakes:</strong> Hydraulic Disc Brakes&nbsp;</p><p>• <strong>Max Payload:</strong> 330 lbs (150 kg)&nbsp;</p><p>• <strong>Bike Weight:</strong> 94 lbs&nbsp;</p><p>• <strong>Recommended Height:</strong> 5'4\" – 6'5\"&nbsp;</p>",
+            "item_5_body": "<p>• <strong>Max Temperature:</strong> Up to 85°C / 185°F</p><p>• <strong>Heat-Up Time:</strong> 15–20 minutes</p><p>• <strong>Heater Power:</strong> 1500W (Standard 110V/120V Canadian Wall Outlet Compatible)</p><p>• <strong>Materials:</strong> Double-layer unbleached natural cotton canvas, food-grade TPU, powder-coated steel frame</p><p>• <strong>User Fit:</strong> Fits heights up to 200 cm (6'7\") and weights up to 150 kg (330 lbs)</p><p>• <strong>Certifications:</strong> North American Electrical & Fire Safety Certified (ETL/UL compliant components)</p>",
             "item_6_title": "",
             "item_6_body": ""
           }
@@ -338,117 +338,11 @@
         "enable_video_looping": false,
         "trust_badge_position": "top-right",
         "trust_badge_size": "medium",
-        "background_color": "#FFFFFF",
+        "background_color": "#ffffff",
         "padding_top": 24,
         "padding_bottom": 60,
         "padding_top_mobile": 28,
         "padding_bottom_mobile": 32
-      }
-    },
-    "community_feed_dJB7VX": {
-      "type": "community-feed",
-      "blocks": {
-        "post_f9bTUm": {
-          "type": "post",
-          "settings": {
-            "image": "shopify://shop_images/5_1200x_3bd296aa-c57e-4279-b5cb-a1b391cf0143.webp",
-            "username": "",
-            "show_verified": false,
-            "caption": "",
-            "link": ""
-          }
-        },
-        "post_RthbYW": {
-          "type": "post",
-          "settings": {
-            "image": "shopify://shop_images/100_0636.webp",
-            "username": "",
-            "show_verified": false,
-            "caption": "",
-            "link": ""
-          }
-        },
-        "post_dN4cYi": {
-          "type": "post",
-          "settings": {
-            "image": "shopify://shop_images/100_0585.webp",
-            "username": "",
-            "show_verified": false,
-            "caption": "",
-            "link": ""
-          }
-        },
-        "post_gLpiiA": {
-          "type": "post",
-          "settings": {
-            "image": "shopify://shop_images/100_0713.webp",
-            "username": "",
-            "show_verified": false,
-            "caption": "",
-            "link": ""
-          }
-        },
-        "post_4VzfN3": {
-          "type": "post",
-          "settings": {
-            "image": "shopify://shop_images/100_0064_800x1067_c71c7b19-db84-4176-9b8f-8b9ce79a5138.webp",
-            "username": "",
-            "show_verified": false,
-            "caption": "",
-            "link": ""
-          }
-        },
-        "post_tGcd3j": {
-          "type": "post",
-          "settings": {
-            "image": "shopify://shop_images/7_800x1067_073a1328-c17b-494c-87e2-bbf5c30e7ebc.webp",
-            "username": "",
-            "show_verified": false,
-            "caption": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "post_f9bTUm",
-        "post_RthbYW",
-        "post_dN4cYi",
-        "post_gLpiiA",
-        "post_4VzfN3",
-        "post_tGcd3j"
-      ],
-      "custom_css": [
-        "@media screen and (max-width: 749px) {.h2 {font-size: calc(var(--font-heading-scale) * 1.7rem); }}",
-        "@media screen and (max-width: 749px) {.section-community_feed_dJB7VX-padding {padding-top: 32px !important; padding-bottom: 32px !important; }}"
-      ],
-      "name": "Comunidad / Feed UGC",
-      "settings": {
-        "heading": "UNLEASH YOUR FREEDOM",
-        "heading_size": "h2",
-        "heading_color": "#EB5E28",
-        "heading_font_size_desktop": 40,
-        "heading_font_size_mobile": 24,
-        "heading_font_weight": "500",
-        "color_scheme": "background-1",
-        "verified_color": "#bc6161",
-        "background_color": "",
-        "media_radius": 18,
-        "enable_center_mode": true,
-        "enable_loop": true,
-        "autoplay": false,
-        "autoplay_speed": 3,
-        "show_dots": true,
-        "show_arrows": false,
-        "slides_desktop": 3.4,
-        "space_desktop": 20,
-        "slides_tablet": 2,
-        "space_tablet": 16,
-        "slides_mobile": 1.4,
-        "space_mobile": 12,
-        "padding_top": 60,
-        "padding_bottom": 40,
-        "padding_top_mobile": 40,
-        "padding_bottom_mobile": 40
       }
     },
     "related-products": {
@@ -475,298 +369,244 @@
         "padding_bottom_mobile": 28
       }
     },
-    "image_with_text_PV6B8F": {
-      "type": "image-with-text",
+    "multirow_KUxMGH": {
+      "type": "multirow",
       "blocks": {
-        "heading_exxGxG": {
-          "type": "heading",
+        "row_DGMiBW": {
+          "type": "row",
           "settings": {
-            "heading": "Base inteligente que hidrata, protege y perfecciona",
-            "heading_size": "h2",
-            "heading_color": "",
-            "heading_font_size_desktop": 36,
-            "heading_font_size_mobile": 26,
-            "heading_font_weight": "700"
+            "image": "shopify://shop_images/1x1_SaunaPod_SKU_Images_6.1_2x_1.webp",
+            "caption": "PATENT-PENDING DRY HEAT",
+            "heading": "True 85°C Heat In Minutes, Right At Home&nbsp;",
+            "text": "<p>Unlike damp steam tents that struggle to stay warm in cold Canadian winters, The Sauna Pod features an ultra-efficient 1500W dry-air heating engine. It surges up to 85°C (185°F) in under 20 minutes, delivering deep cardiovascular sweating and muscle relief without harmful fumes or plastic odors.</p>",
+            "button_label": "DISCOVER THE SAUNA POD",
+            "button_link": "",
+            "button_background_color": "#800E13",
+            "button_text_color": "#FFFFFF",
+            "button_border_color": "#800E13",
+            "heading_font_size_desktop": 40,
+            "heading_font_size_mobile": 24,
+            "text_font_size_desktop": 16,
+            "text_font_size_mobile": 14,
+            "icon_list_bg_color": "#F5C518",
+            "icon_list_icon_color": "#1A1A1A",
+            "icon_list_text_color": "",
+            "icon_list_icon_size_desktop": 28,
+            "icon_list_icon_size_mobile": 24,
+            "icon_list_text_size_desktop": 16,
+            "icon_list_text_size_mobile": 14,
+            "icon_list_icon_gap_desktop": 12,
+            "icon_list_icon_gap_mobile": 10,
+            "icon_list_row_gap_desktop": 16,
+            "icon_list_row_gap_mobile": 12,
+            "icon_list_item_1_text": "",
+            "icon_list_item_2_text": "",
+            "icon_list_item_3_text": "",
+            "icon_list_item_4_text": "",
+            "icon_list_item_5_text": "",
+            "icon_list_item_6_text": "",
+            "icon_list_item_7_text": "",
+            "icon_list_item_8_text": "",
+            "stat_item_1_number": "",
+            "stat_item_1_text": "",
+            "stat_item_2_number": "",
+            "stat_item_2_text": "",
+            "stat_item_3_number": "",
+            "stat_item_3_text": "",
+            "stat_item_4_number": "",
+            "stat_item_4_text": "",
+            "stat_item_5_number": "",
+            "stat_item_5_text": "",
+            "stat_item_6_number": "",
+            "stat_item_6_text": "",
+            "stat_item_7_number": "",
+            "stat_item_7_text": "",
+            "stat_item_8_number": "",
+            "stat_item_8_text": "",
+            "stat_bg_color": "#0d0d0d",
+            "stat_border_color": "#e9be47",
+            "stat_number_color_start": "#e7b944",
+            "stat_number_color_end": "#ffed68",
+            "stat_text_color": "#ffffff",
+            "stat_border_width": 2,
+            "stat_border_radius": 40,
+            "stat_number_font_size": 56,
+            "stat_text_font_size": 18,
+            "stat_number_font_size_mobile": 40,
+            "stat_text_font_size_mobile": 15,
+            "stat_padding_desktop": 32,
+            "stat_gap_desktop": 32,
+            "stat_padding_mobile": 20,
+            "stat_gap_mobile": 16
           }
         },
-        "text_y3RkmP": {
-          "type": "text",
+        "row_WJYCU3": {
+          "type": "row",
           "settings": {
-            "text": "<p>InfiniteGlow es una base que se adapta al tono de tu piel de forma natural, evitando cortes o acabados artificiales. Ofrece hidratación duradera, protección solar y cobertura ligera sin obstruir los poros. Su fórmula vegana y respetuosa cuida incluso las pieles sensibles, manteniéndose intacta todo el día.</p>",
-            "text_style": "body",
-            "text_color": "",
+            "image": "shopify://shop_images/thesaunapodportablefinnishsauna_1.webp",
+            "caption": "EXCLUSIVE CANADIAN BUNDLE",
+            "heading": "Buy The Sauna, Get The Ice Pod Completely Free&nbsp;",
+            "text": "<p>Unlock professional contrast therapy in your backyard, garage, or patio. Pairing extreme heat with cold water immersion flushes cellular toxins, cuts down muscle soreness, and dramatically lowers stress hormones. Order today to claim your complimentary Ice Pod and insulated thermal cover&nbsp;</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_background_color": "",
+            "button_text_color": "",
+            "button_border_color": "",
+            "heading_font_size_desktop": 40,
+            "heading_font_size_mobile": 24,
             "text_font_size_desktop": 16,
-            "text_font_size_mobile": 15,
-            "text_font_weight": "400"
+            "text_font_size_mobile": 14,
+            "icon_list_bg_color": "#F5C518",
+            "icon_list_icon_color": "#1A1A1A",
+            "icon_list_text_color": "",
+            "icon_list_icon_size_desktop": 28,
+            "icon_list_icon_size_mobile": 24,
+            "icon_list_text_size_desktop": 16,
+            "icon_list_text_size_mobile": 14,
+            "icon_list_icon_gap_desktop": 12,
+            "icon_list_icon_gap_mobile": 10,
+            "icon_list_row_gap_desktop": 16,
+            "icon_list_row_gap_mobile": 12,
+            "icon_list_item_1_text": "",
+            "icon_list_item_2_text": "",
+            "icon_list_item_3_text": "",
+            "icon_list_item_4_text": "",
+            "icon_list_item_5_text": "",
+            "icon_list_item_6_text": "",
+            "icon_list_item_7_text": "",
+            "icon_list_item_8_text": "",
+            "stat_item_1_number": "",
+            "stat_item_1_text": "",
+            "stat_item_2_number": "",
+            "stat_item_2_text": "",
+            "stat_item_3_number": "",
+            "stat_item_3_text": "",
+            "stat_item_4_number": "",
+            "stat_item_4_text": "",
+            "stat_item_5_number": "",
+            "stat_item_5_text": "",
+            "stat_item_6_number": "",
+            "stat_item_6_text": "",
+            "stat_item_7_number": "",
+            "stat_item_7_text": "",
+            "stat_item_8_number": "",
+            "stat_item_8_text": "",
+            "stat_bg_color": "#0d0d0d",
+            "stat_border_color": "#e9be47",
+            "stat_number_color_start": "#e7b944",
+            "stat_number_color_end": "#ffed68",
+            "stat_text_color": "#ffffff",
+            "stat_border_width": 2,
+            "stat_border_radius": 40,
+            "stat_number_font_size": 56,
+            "stat_text_font_size": 18,
+            "stat_number_font_size_mobile": 40,
+            "stat_text_font_size_mobile": 15,
+            "stat_padding_desktop": 32,
+            "stat_gap_desktop": 32,
+            "stat_padding_mobile": 20,
+            "stat_gap_mobile": 16
+          }
+        },
+        "row_Gdd3KA": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/1x1_SaunaPod_SKU_Images_5.1_2x_1_1.webp",
+            "caption": "BUILT FOR CANADIAN HOMES",
+            "heading": "100% Non-Toxic Cotton Canvas & Cold-Weather Ready&nbsp;",
+            "text": "<p>Built with dual-layer unbleached natural cotton canvas and a heavy-duty stainless-steel internal frame, The Sauna Pod is engineered to comfortably fit individuals up to 200 cm (6'7\"). It runs safely on standard 110V/120V household outlets and ships fast across all Canadian provinces with zero duty fees.</p>",
+            "button_label": "EXPLORE SPECS & SIZING",
+            "button_link": "",
+            "button_background_color": "#800E13",
+            "button_text_color": "#FFFFFF",
+            "button_border_color": "#800E13",
+            "heading_font_size_desktop": 40,
+            "heading_font_size_mobile": 24,
+            "text_font_size_desktop": 16,
+            "text_font_size_mobile": 14,
+            "icon_list_bg_color": "#F5C518",
+            "icon_list_icon_color": "#1A1A1A",
+            "icon_list_text_color": "",
+            "icon_list_icon_size_desktop": 28,
+            "icon_list_icon_size_mobile": 24,
+            "icon_list_text_size_desktop": 16,
+            "icon_list_text_size_mobile": 14,
+            "icon_list_icon_gap_desktop": 12,
+            "icon_list_icon_gap_mobile": 10,
+            "icon_list_row_gap_desktop": 16,
+            "icon_list_row_gap_mobile": 12,
+            "icon_list_item_1_text": "",
+            "icon_list_item_2_text": "",
+            "icon_list_item_3_text": "",
+            "icon_list_item_4_text": "",
+            "icon_list_item_5_text": "",
+            "icon_list_item_6_text": "",
+            "icon_list_item_7_text": "",
+            "icon_list_item_8_text": "",
+            "stat_item_1_number": "",
+            "stat_item_1_text": "",
+            "stat_item_2_number": "",
+            "stat_item_2_text": "",
+            "stat_item_3_number": "",
+            "stat_item_3_text": "",
+            "stat_item_4_number": "",
+            "stat_item_4_text": "",
+            "stat_item_5_number": "",
+            "stat_item_5_text": "",
+            "stat_item_6_number": "",
+            "stat_item_6_text": "",
+            "stat_item_7_number": "",
+            "stat_item_7_text": "",
+            "stat_item_8_number": "",
+            "stat_item_8_text": "",
+            "stat_bg_color": "#0d0d0d",
+            "stat_border_color": "#e9be47",
+            "stat_number_color_start": "#e7b944",
+            "stat_number_color_end": "#ffed68",
+            "stat_text_color": "#ffffff",
+            "stat_border_width": 2,
+            "stat_border_radius": 40,
+            "stat_number_font_size": 56,
+            "stat_text_font_size": 18,
+            "stat_number_font_size_mobile": 40,
+            "stat_text_font_size_mobile": 15,
+            "stat_padding_desktop": 32,
+            "stat_gap_desktop": 32,
+            "stat_padding_mobile": 20,
+            "stat_gap_mobile": 16
           }
         }
       },
       "block_order": [
-        "heading_exxGxG",
-        "text_y3RkmP"
+        "row_DGMiBW",
+        "row_WJYCU3",
+        "row_Gdd3KA"
       ],
-      "disabled": true,
-      "name": "t:sections.image-with-text.presets.name",
+      "name": "t:sections.multirow.presets.name",
       "settings": {
-        "height": "adapt",
+        "image_height": "adapt",
         "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "top",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "color_scheme": "background-1",
+        "image_layout": "alternate-left",
         "section_color_scheme": "background-1",
+        "row_color_scheme": "background-1",
+        "background_color": "",
+        "row_content_padding_top": 96,
+        "row_content_padding_bottom": 112,
+        "row_content_padding_top_mobile": 48,
+        "row_content_padding_bottom_mobile": 48,
+        "stat_disclaimer": "<p>*According to survey responses from 5,000+ customers.</p>",
+        "stat_disclaimer_color": "#ffffff",
+        "stat_disclaimer_font_size": 14,
         "mobile_content_alignment": "left",
         "padding_top": 36,
         "padding_bottom": 36,
         "padding_top_mobile": 28,
         "padding_bottom_mobile": 28
-      }
-    },
-    "1dec15b6-e51f-4064-b412-acf7a98422ef": {
-      "type": "comparison-slider",
-      "disabled": true,
-      "custom_css": [],
-      "settings": {
-        "color_scheme": "background-1",
-        "background_color": "",
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_top_mobile": 28,
-        "padding_bottom_mobile": 28
-      }
-    },
-    "64c96926-2c31-48fe-bd21-30941bc87822": {
-      "type": "results",
-      "blocks": {
-        "template--18472096170313__64c96926-2c31-48fe-bd21-30941bc87822-16798646483bf89b52-0": {
-          "type": "row",
-          "settings": {
-            "percentage": 96,
-            "row_text": "<p>Quedó satisfecho con la calidad del producto</p>",
-            "row_text_color": "",
-            "row_text_font_size_desktop": 15,
-            "row_text_font_size_mobile": 14,
-            "row_text_font_weight": "400"
-          }
-        },
-        "template--18472096170313__64c96926-2c31-48fe-bd21-30941bc87822-16798646483bf89b52-1": {
-          "type": "row",
-          "settings": {
-            "percentage": 95,
-            "row_text": "<p>Sintió mayor confianza al ver resultados diarios</p>",
-            "row_text_color": "",
-            "row_text_font_size_desktop": 15,
-            "row_text_font_size_mobile": 14,
-            "row_text_font_weight": "400"
-          }
-        },
-        "template--18472096170313__64c96926-2c31-48fe-bd21-30941bc87822-16798646483bf89b52-2": {
-          "type": "row",
-          "settings": {
-            "percentage": 94,
-            "row_text": "<p>Notó su piel más suave y uniforme</p>",
-            "row_text_color": "",
-            "row_text_font_size_desktop": 15,
-            "row_text_font_size_mobile": 14,
-            "row_text_font_weight": "400"
-          }
-        }
-      },
-      "block_order": [
-        "template--18472096170313__64c96926-2c31-48fe-bd21-30941bc87822-16798646483bf89b52-0",
-        "template--18472096170313__64c96926-2c31-48fe-bd21-30941bc87822-16798646483bf89b52-1",
-        "template--18472096170313__64c96926-2c31-48fe-bd21-30941bc87822-16798646483bf89b52-2"
-      ],
-      "disabled": true,
-      "custom_css": [
-        "@media screen and (max-width: 749px) {.h2 {font-size: calc(var(--font-heading-scale) * 1.7rem); }}"
-      ],
-      "settings": {
-        "title": "Resultados",
-        "heading_size": "h2",
-        "heading_color": "",
-        "heading_font_size_desktop": 36,
-        "heading_font_size_mobile": 28,
-        "heading_font_weight": "700",
-        "text_color": "",
-        "text_font_size_desktop": 16,
-        "text_font_size_mobile": 15,
-        "text_font_weight": "400",
-        "text": "<p>Basado en los resultados de todos nuestros clientes</p>",
-        "color_scheme": "background-1",
-        "layout": "results_first",
-        "results_headline": "En tan solo 2 semanas..",
-        "results_headline_size": "h2",
-        "results_headline_alignment": "left",
-        "results_headline_color": "",
-        "results_headline_font_size_desktop": 28,
-        "results_headline_font_size_mobile": 22,
-        "results_headline_font_weight": "700",
-        "caption": "<p>Basado en los resultados de <strong>+2.000 clientes satisfechos ⭐️</strong></p>",
-        "button_label": "",
-        "link": "",
-        "button_style_secondary": false,
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_top_mobile": 28,
-        "padding_bottom_mobile": 28
-      }
-    },
-    "slideshow_HfVNww": {
-      "type": "slideshow",
-      "blocks": {
-        "slide_nAjccG": {
-          "type": "slide",
-          "settings": {
-            "heading": "",
-            "heading_size": "h2",
-            "subheading": "Nuestro equipo de expertos velan siempre por tu salud y la de los tuyo.",
-            "button_label": "",
-            "link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": true,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "background-1",
-            "text_alignment_mobile": "center",
-            "heading_color": "",
-            "heading_font_size_desktop": 36,
-            "heading_font_size_mobile": 26,
-            "heading_font_weight": "700",
-            "subheading_color": "",
-            "subheading_font_size_desktop": 18,
-            "subheading_font_size_mobile": 15,
-            "subheading_font_weight": "400"
-          }
-        }
-      },
-      "block_order": [
-        "slide_nAjccG"
-      ],
-      "disabled": true,
-      "custom_css": [
-        "@media screen and (max-width: 749px) {.h2 {font-size: calc(var(--font-heading-scale) * 1.7rem); }}"
-      ],
-      "name": "t:sections.slideshow.presets.name",
-      "settings": {
-        "layout": "full_bleed",
-        "slide_height": "adapt_image",
-        "slider_visual": "counter",
-        "auto_rotate": false,
-        "change_slides_speed": 5,
-        "show_text_below": true,
-        "accessibility_info": "Slideshow about our brand",
-        "image_border_radius_desktop": 0,
-        "image_border_radius_mobile": 0,
-        "padding_top_desktop": 0,
-        "padding_bottom_desktop": 0,
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 0
-      }
-    },
-    "why_we_love_it_3t7fT9": {
-      "type": "why-we-love-it",
-      "blocks": {
-        "feature_TKe9aE": {
-          "type": "feature",
-          "settings": {
-            "position": "left",
-            "heading": "Carbon-Fiber Dual Suspension",
-            "text": "<p>Soaks up rough trails, potholes, and terrain vibrations for unmatched stability and long-ride comfort.</p>",
-            "heading_color": "#EB5E28",
-            "heading_font_size_desktop": 20,
-            "heading_font_size_mobile": 16,
-            "heading_font_weight": "500",
-            "text_color": "",
-            "text_font_size_desktop": 14,
-            "text_font_size_mobile": 14,
-            "text_font_weight": "400"
-          }
-        },
-        "feature_HyNcKQ": {
-          "type": "feature",
-          "settings": {
-            "position": "left",
-            "heading": "Integrated Bluetooth Audio",
-            "text": "<p>Built-in speaker housed directly in the front headlight to stream your favorite playlists on the go.</p>",
-            "heading_color": "#EB5E28",
-            "heading_font_size_desktop": 20,
-            "heading_font_size_mobile": 14,
-            "heading_font_weight": "500",
-            "text_color": "",
-            "text_font_size_desktop": 14,
-            "text_font_size_mobile": 12,
-            "text_font_weight": "400"
-          }
-        },
-        "feature_BmGDdQ": {
-          "type": "feature",
-          "settings": {
-            "position": "right",
-            "heading": "1000W Peak High-Torque Motor",
-            "text": "<p>Instant acceleration and steep hill climbing with top speeds reaching up to 32 MPH.</p>",
-            "heading_color": "#EB5E28",
-            "heading_font_size_desktop": 20,
-            "heading_font_size_mobile": 14,
-            "heading_font_weight": "500",
-            "text_color": "",
-            "text_font_size_desktop": 15,
-            "text_font_size_mobile": 12,
-            "text_font_weight": "400"
-          }
-        },
-        "feature_GTkzQr": {
-          "type": "feature",
-          "settings": {
-            "position": "right",
-            "heading": "Dual Battery Long-Range Pack",
-            "text": "<p>Dual 48V 15Ah waterproof batteries delivering up to 100+ miles of pedal-assisted freedom.</p>",
-            "heading_color": "#EB5E28",
-            "heading_font_size_desktop": 20,
-            "heading_font_size_mobile": 14,
-            "heading_font_weight": "500",
-            "text_color": "",
-            "text_font_size_desktop": 14,
-            "text_font_size_mobile": 12,
-            "text_font_weight": "400"
-          }
-        }
-      },
-      "block_order": [
-        "feature_TKe9aE",
-        "feature_HyNcKQ",
-        "feature_BmGDdQ",
-        "feature_GTkzQr"
-      ],
-      "custom_css": [
-        "@media screen and (max-width: 749px) {.h2 {font-size: calc(var(--font-heading-scale) * 1.7rem); }}",
-        "@media screen and (max-width: 749px) {.section-why_we_love_it_3t7fT9-padding {padding-top: 32px !important; padding-bottom: 32px !important; }}"
-      ],
-      "name": "Por qué nos encanta",
-      "settings": {
-        "heading": "WHY RIDERS LOVE THE V8 ULTRA",
-        "heading_size": "h2",
-        "heading_italic": false,
-        "heading_color": "#EB5E28",
-        "heading_font_size_desktop": 40,
-        "heading_font_size_mobile": 24,
-        "heading_font_weight": "500",
-        "image": "shopify://shop_images/Transparent_V8_Ultra_1.webp",
-        "circle_size_desktop": 380,
-        "circle_size_mobile": 220,
-        "color_scheme": "background-1",
-        "accent_color_scheme": "accent-2",
-        "background_color": "#FFFFFF",
-        "circle_border_color": "#FFFFFF",
-        "badge_icon_bg_color": "",
-        "badge_icon_svg_color": "#9A031E",
-        "text_alignment": "facing-center",
-        "padding_top": 60,
-        "padding_bottom": 60,
-        "padding_top_mobile": 40,
-        "padding_bottom_mobile": 40
       }
     },
     "feature_cards_rC7d6a": {
@@ -778,12 +618,12 @@
             "image": "shopify://shop_images/IMG_1897.webp",
             "heading": "HIGH-TORQUE 1000W MOTOR",
             "text": "<p>Built for rugged trails and steep inclines. Delivers instant acceleration and reaches an exhilarating top speed of up to 32 MPH.</p>",
-            "card_background_color": "#FB8B24",
-            "heading_color": "#000000",
+            "card_background_color": "#800E13",
+            "heading_color": "#FFFFFF",
             "heading_font_size_desktop": 20,
             "heading_font_size_mobile": 17,
             "heading_font_weight": "500",
-            "text_color": "",
+            "text_color": "#FFFFFF",
             "text_font_size_desktop": 15,
             "text_font_size_mobile": 14,
             "text_font_weight": "400"
@@ -795,12 +635,12 @@
             "image": "shopify://shop_images/IMG_1898.webp",
             "heading": "CARBON-FIBER DUAL SUSPENSION",
             "text": "<p>Smooths out bumps, potholes, and gravel. Paired with 20x4.0\" fat tires for maximum traction and all-day riding comfort.</p>",
-            "card_background_color": "#FB8B24",
-            "heading_color": "#000000",
+            "card_background_color": "#800E13",
+            "heading_color": "#FFFFFF",
             "heading_font_size_desktop": 20,
             "heading_font_size_mobile": 17,
             "heading_font_weight": "500",
-            "text_color": "",
+            "text_color": "#FFFFFF",
             "text_font_size_desktop": 15,
             "text_font_size_mobile": 14,
             "text_font_weight": "400"
@@ -812,12 +652,12 @@
             "image": "shopify://shop_images/IMG_1913.webp",
             "heading": "DUAL BATTERY AND BLUETOOTH SOUND",
             "text": "<p>Ride up to 100+ miles on a single charge while streaming your favorite music through the headlight’s built-in speaker.</p>",
-            "card_background_color": "#FB8B24",
-            "heading_color": "#000000",
+            "card_background_color": "#800E13",
+            "heading_color": "#FFFFFF",
             "heading_font_size_desktop": 20,
             "heading_font_size_mobile": 17,
             "heading_font_weight": "500",
-            "text_color": "",
+            "text_color": "#FFFFFF",
             "text_font_size_desktop": 15,
             "text_font_size_mobile": 14,
             "text_font_weight": "400"
@@ -839,11 +679,11 @@
         "heading_size": "h2",
         "heading_italic": false,
         "subheading": "<p>Engineered with raw power, rugged suspension, and premium tech to elevate every ride.</p>",
-        "heading_color": "#EB5E28",
+        "heading_color": "#800E13",
         "heading_font_size_desktop": 40,
         "heading_font_size_mobile": 26,
         "heading_font_weight": "500",
-        "subheading_color": "#FB8B24",
+        "subheading_color": "#250902",
         "subheading_font_size_desktop": 20,
         "subheading_font_size_mobile": 15,
         "subheading_font_weight": "400",
@@ -862,81 +702,6 @@
         "padding_bottom": 60,
         "padding_top_mobile": 0,
         "padding_bottom_mobile": 32
-      }
-    },
-    "results_FXmCVN": {
-      "type": "results",
-      "blocks": {
-        "row_8cFi3W": {
-          "type": "row",
-          "settings": {
-            "percentage": 98,
-            "row_text": "<p>Miles of max range with the dual battery setup, eliminating daily charging anxiety.</p>",
-            "row_text_color": "",
-            "row_text_font_size_desktop": 15,
-            "row_text_font_size_mobile": 14,
-            "row_text_font_weight": "400"
-          }
-        },
-        "row_ta6Be4": {
-          "type": "row",
-          "settings": {
-            "percentage": 100,
-            "row_text": "<p>32 Miles per hour top unlocked speed powered by the 1000W peak high-torque motor</p>",
-            "row_text_color": "",
-            "row_text_font_size_desktop": 15,
-            "row_text_font_size_mobile": 14,
-            "row_text_font_weight": "400"
-          }
-        },
-        "row_znUNtq": {
-          "type": "row",
-          "settings": {
-            "percentage": 96,
-            "row_text": "<p>Positive feedback from riders praising the smooth dual suspension and built-in Bluetooth audio.</p>",
-            "row_text_color": "",
-            "row_text_font_size_desktop": 15,
-            "row_text_font_size_mobile": 14,
-            "row_text_font_weight": "400"
-          }
-        }
-      },
-      "block_order": [
-        "row_8cFi3W",
-        "row_ta6Be4",
-        "row_znUNtq"
-      ],
-      "name": "Results",
-      "settings": {
-        "title": "RESULTS",
-        "heading_size": "h1",
-        "heading_color": "#EB5E28",
-        "heading_font_size_desktop": 40,
-        "heading_font_size_mobile": 28,
-        "heading_font_weight": "500",
-        "text_color": "#EB5E28",
-        "text_font_size_desktop": 16,
-        "text_font_size_mobile": 15,
-        "text_font_weight": "400",
-        "text": "<p>Engineered for everyday commutes and off-road weekends, tested by real riders across the country.</p>",
-        "image": "shopify://shop_images/IMG_1904.webp",
-        "color_scheme": "background-1",
-        "layout": "results_second",
-        "results_headline": "RIDER SATISFACTION & CAPABILITY",
-        "results_headline_size": "h2",
-        "results_headline_alignment": "left",
-        "results_headline_color": "#EB5E28",
-        "results_headline_font_size_desktop": 28,
-        "results_headline_font_size_mobile": 22,
-        "results_headline_font_weight": "500",
-        "caption": "<p>Caption about the results and/or link for their proof.</p>",
-        "button_label": "",
-        "link": "",
-        "button_style_secondary": false,
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_top_mobile": 28,
-        "padding_bottom_mobile": 28
       }
     },
     "faq_accordion_m3GjeY": {
@@ -1035,7 +800,7 @@
         "heading": "FAQS",
         "heading_size": "h2",
         "heading_italic": true,
-        "heading_color": "#EB5E28",
+        "heading_color": "#800E13",
         "heading_font_size_desktop": 40,
         "heading_font_size_mobile": 24,
         "heading_font_weight": "500",
@@ -1046,7 +811,7 @@
         "color_scheme": "background-1",
         "accent_color_scheme": "accent-2",
         "background_color": "",
-        "item_background": "#C9C6C3",
+        "item_background": "#c9c6c3",
         "item_radius": 12,
         "item_spacing": 12,
         "open_first_question": false,
@@ -1055,19 +820,69 @@
         "padding_top_mobile": 40,
         "padding_bottom_mobile": 40
       }
+    },
+    "comparison_table_P7Rfba": {
+      "type": "comparison-table",
+      "blocks": {
+        "row_RbGVYM": {
+          "type": "row",
+          "settings": {
+            "benefit": "Benefit",
+            "us": true,
+            "others": false
+          }
+        },
+        "row_JDNmkf": {
+          "type": "row",
+          "settings": {
+            "benefit": "Benefit",
+            "us": true,
+            "others": false
+          }
+        },
+        "row_XeKmGC": {
+          "type": "row",
+          "settings": {
+            "benefit": "Benefit",
+            "us": true,
+            "others": false
+          }
+        }
+      },
+      "block_order": [
+        "row_RbGVYM",
+        "row_JDNmkf",
+        "row_XeKmGC"
+      ],
+      "name": "Comparison table",
+      "settings": {
+        "title": "Comparison table",
+        "heading_size": "h1",
+        "text": "<p>Talk about how and why is your brand better than the others.</p>",
+        "button_label": "",
+        "link": "",
+        "button_style_secondary": false,
+        "layout": "table_second",
+        "color_scheme": "accent-1",
+        "logo_width": 75,
+        "us_label": "",
+        "others_label": "OTHERS",
+        "benefit_color_scheme": "background-1",
+        "checkmark_color": "#800E13",
+        "icon_cells_color_scheme": "background-1",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 28,
+        "padding_bottom_mobile": 28
+      }
     }
   },
   "order": [
     "main",
-    "community_feed_dJB7VX",
     "related-products",
-    "image_with_text_PV6B8F",
-    "1dec15b6-e51f-4064-b412-acf7a98422ef",
-    "64c96926-2c31-48fe-bd21-30941bc87822",
-    "slideshow_HfVNww",
-    "why_we_love_it_3t7fT9",
+    "multirow_KUxMGH",
     "feature_cards_rC7d6a",
-    "results_FXmCVN",
-    "faq_accordion_m3GjeY"
+    "faq_accordion_m3GjeY",
+    "comparison_table_P7Rfba"
   ]
 }
