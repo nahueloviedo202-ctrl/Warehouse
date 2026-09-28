@@ -99,7 +99,7 @@
           "type": "emoji_benefits",
           "name": "Bullets",
           "settings": {
-            "benefits": "<p><strong>Top Speed:</strong> Up to 32 MPH with 1000W Peak High-Torque Motor&nbsp;</p><p><strong>Long Range:</strong> Up to 100+ Miles (Dual Battery) / UL Certified&nbsp;</p><p><strong>All-Terrain Comfort:</strong> Dual Suspension, Fat Tires & Built-In Bluetooth Speaker&nbsp;</p>",
+            "benefits": "<p><strong>Top Speed:</strong> Up to 32 MPH with 1000W Peak High-Torque Motor&nbsp;</p><p></p><p><strong>Long Range:</strong> Up to 100+ Miles (Dual Battery) / UL Certified&nbsp;</p><p></p><p><strong>All-Terrain Comfort:</strong> Dual Suspension, Fat Tires & Built-In Bluetooth Speaker&nbsp;</p>",
             "font_size_desktop": 15,
             "font_size_mobile": 14,
             "font_weight": "400",
@@ -179,7 +179,7 @@
         "pdp_stock_pulse_Y3WqH7": {
           "type": "pdp_stock_pulse",
           "settings": {
-            "text": "Últimas unidades en stock",
+            "text": "Limited Stock — Selling Fast!",
             "dot_color": "#bc6161",
             "pulse_color": "#d5adad",
             "dot_size": 14,
@@ -200,7 +200,7 @@
             "icon_alignment": "top",
             "font_size_desktop": 14,
             "font_size_mobile": 13,
-            "message": "<p><strong>Envío exprés</strong> recíbelo en 24/48h</p>",
+            "message": "<p>Fast 2–7 Day US Delivery</p>",
             "min_shipping_days": 1,
             "max_shipping_days": 2,
             "date_format": "day_dd_mm_numeric",
