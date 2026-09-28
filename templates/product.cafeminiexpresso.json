@@ -433,7 +433,7 @@
       "settings": {
         "title": "WHY CHOOSE THE NINJA LUXE™ CAFÉ MINI?",
         "title_transform": "uppercase",
-        "title_color": "#000000",
+        "title_color": "#432818",
         "title_weight": "500",
         "title_size_desktop": 36,
         "title_size_mobile": 24,
@@ -731,7 +731,7 @@
       "name": "Por qué nos encanta",
       "settings": {
         "heading": "WHY COFFEE LOVERS CHOOSE THE LUXE CAFÉ MINI",
-        "heading_size": "h2",
+        "heading_size": "h1",
         "heading_italic": false,
         "heading_color": "#432818",
         "heading_font_size_desktop": 40,
@@ -820,7 +820,7 @@
       "name": "Tarjetas de beneficios",
       "settings": {
         "heading": "BARISTA QUALITY IN EVERY CUP",
-        "heading_size": "h2",
+        "heading_size": "h1",
         "heading_italic": false,
         "subheading": "",
         "heading_color": "#432818",
@@ -844,7 +844,7 @@
         "swipe_on_mobile": true,
         "padding_top": 40,
         "padding_bottom": 60,
-        "padding_top_mobile": 0,
+        "padding_top_mobile": 20,
         "padding_bottom_mobile": 32
       }
     },
@@ -898,7 +898,7 @@
       "settings": {
         "heading": "REAL KITCHENS, REAL COFFEE",
         "heading_size": "h1",
-        "heading_color": "#111111",
+        "heading_color": "#432818",
         "heading_font_size_desktop": 36,
         "heading_font_size_mobile": 26,
         "heading_font_weight": "500",
