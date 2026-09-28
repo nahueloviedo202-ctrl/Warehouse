@@ -56,9 +56,9 @@
         "price": {
           "type": "price",
           "settings": {
-            "sale_price_size_desktop": 19,
+            "sale_price_size_desktop": 32,
             "sale_price_size_mobile": 24,
-            "compare_price_size_desktop": 19,
+            "compare_price_size_desktop": 28,
             "compare_price_size_mobile": 16,
             "price_gap": 10,
             "price_side_text": "",
