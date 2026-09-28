@@ -1,0 +1,1073 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "trustpilot_bar_W4kVKz": {
+          "type": "trustpilot_bar",
+          "settings": {
+            "rating": "4.8",
+            "max_rating": "5",
+            "pre_text": "Rated",
+            "separator_text": "by",
+            "customer_count": "+500.000",
+            "suffix_text": "Riders",
+            "star_color": "#eb5e28",
+            "empty_star_color": "#dcdce6",
+            "star_size": 24,
+            "star_size_mobile": 14,
+            "text_color": "",
+            "text_size": 14,
+            "text_size_mobile": 12,
+            "alignment": "flex-start",
+            "gap": 8,
+            "gap_mobile": 6
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "text_size": "h2",
+            "title_alignment": "left",
+            "uppercase_title": false,
+            "title_color": "",
+            "font_weight": "500",
+            "font_size_desktop": 32,
+            "font_size_mobile": 24,
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "padding_top_mobile": 0,
+            "padding_bottom_mobile": 0
+          }
+        },
+        "description_yT64Wm": {
+          "type": "description",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "sale_price_size_desktop": 32,
+            "sale_price_size_mobile": 24,
+            "compare_price_size_desktop": 28,
+            "compare_price_size_mobile": 16,
+            "price_gap": 10,
+            "price_side_text": "",
+            "side_text_size_desktop": 16,
+            "side_text_size_mobile": 14,
+            "side_text_color": "#808080",
+            "show_price_divider": false,
+            "divider_thickness": 1,
+            "divider_color": "#000000",
+            "divider_opacity": 100,
+            "divider_margin_top_desktop": 12,
+            "divider_margin_bottom_desktop": 12,
+            "divider_margin_top_mobile": 8,
+            "divider_margin_bottom_mobile": 8,
+            "center_on_mobile": false
+          }
+        },
+        "de244682-4323-4802-b4ba-b79b08e0c71d": {
+          "type": "emoji_benefits",
+          "name": "Bullets",
+          "settings": {
+            "benefits": "<p><strong>Top Speed:</strong> Up to 32 MPH with 1000W Peak High-Torque Motor&nbsp;</p><p></p><p><strong>Long Range:</strong> Up to 100+ Miles (Dual Battery) / UL Certified&nbsp;</p><p></p><p><strong>All-Terrain Comfort:</strong> Dual Suspension, Fat Tires & Built-In Bluetooth Speaker&nbsp;</p>",
+            "font_size_desktop": 15,
+            "font_size_mobile": 14,
+            "font_weight": "400",
+            "font_color": "",
+            "text_align": "left",
+            "item_spacing_desktop": 12,
+            "item_spacing_mobile": 10
+          }
+        },
+        "44f9cdc2-f4bf-466e-87d5-fb765ad4864a": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "enable_color_swatches": false,
+            "custom_swatch_option_name": "",
+            "enable_swatches_custom_colors": false
+          }
+        },
+        "074f248d-8d73-4c8f-a97e-d8e82c5be5fc": {
+          "type": "quantity_selector",
+          "disabled": true,
+          "settings": {
+            "enable_quantity_discounts": true,
+            "headline": "PACKS AHORRO",
+            "preselected": "option_1",
+            "display_badge": "none",
+            "badge_text": "Most Popular",
+            "headline_color": "",
+            "headline_font_size": 14,
+            "headline_weight": "700",
+            "card_bg_color": "#f6f3f1",
+            "card_border_color": "#bc6161",
+            "card_selected_bg_color": "#f6f3f1",
+            "card_selected_border_color": "#bc6161",
+            "card_price_color": "#bc6161",
+            "badge_bg_color": "",
+            "benefit_color": "",
+            "enable_variant_selectors": false,
+            "option_1_quantity": 1,
+            "option_1_label": "Compra 1 Unidad",
+            "option_1_benefit": "",
+            "option_1_caption": "Ahorras 40€",
+            "option_1_discount_type": "none",
+            "option_1_percentage_off": 0,
+            "option_1_fixed_amount_off": "0",
+            "option_2_quantity": 2,
+            "option_2_label": "Compra 2 Unidades",
+            "option_2_benefit": "",
+            "option_2_caption": "Ahorras 100€",
+            "option_2_discount_type": "fixed_amount",
+            "option_2_percentage_off": 0,
+            "option_2_fixed_amount_off": "20",
+            "option_3_quantity": 3,
+            "option_3_label": "Compra 3 Unidades",
+            "option_3_benefit": "",
+            "option_3_caption": "Ahorra 160€",
+            "option_3_discount_type": "fixed_amount",
+            "option_3_percentage_off": 0,
+            "option_3_fixed_amount_off": "40",
+            "option_4_quantity": 0,
+            "option_4_label": "",
+            "option_4_benefit": "",
+            "option_4_caption": "",
+            "option_4_discount_type": "none",
+            "option_4_percentage_off": 0,
+            "option_4_fixed_amount_off": "0"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "skip_cart": false,
+            "uppercase_text": true
+          }
+        },
+        "pdp_stock_pulse_Y3WqH7": {
+          "type": "pdp_stock_pulse",
+          "settings": {
+            "text": "Limited Stock — Selling Fast!",
+            "dot_color": "#bc6161",
+            "pulse_color": "#d5adad",
+            "dot_size": 14,
+            "gap": 8,
+            "text_color": "",
+            "font_size_desktop": 14,
+            "font_size_mobile": 13,
+            "font_weight": "600",
+            "alignment": "left"
+          }
+        },
+        "2edbf491-d07c-4718-b71e-18ffe22ab7dc": {
+          "type": "estimated_shipping",
+          "settings": {
+            "display_icon": true,
+            "icon_size_desktop": 22,
+            "icon_size_mobile": 18,
+            "icon_alignment": "top",
+            "font_size_desktop": 14,
+            "font_size_mobile": 13,
+            "message": "<p>Fast 2–7 Day US Delivery</p>",
+            "min_shipping_days": 1,
+            "max_shipping_days": 2,
+            "date_format": "day_dd_mm_numeric",
+            "days_labels": "Lunes, Martes, Miercoles, Jueves, Viernes, Sabado, Domingo",
+            "months_labels": "Enero, Febrero, Marzo, April, May, June, July, August, September, October, November, December",
+            "padding_top": 10,
+            "padding_bottom": 10,
+            "padding_top_mobile": 8,
+            "padding_bottom_mobile": 8
+          }
+        },
+        "trust_badges_PHQ3UA": {
+          "type": "trust_badges",
+          "settings": {
+            "show_item_1": true,
+            "icon_1": "tablets",
+            "label_1": "Free US Shipping",
+            "show_item_2": true,
+            "icon_2": "shipping_box",
+            "label_2": "1-Year Worry-Free Warranty",
+            "show_item_3": true,
+            "icon_3": "shipping_box",
+            "label_3": "30-Day Hassle-Free Returns",
+            "background_color": "#eb5e28",
+            "border_color": "#eb5e28",
+            "border_width": 1,
+            "border_radius": 14,
+            "padding_vertical": 20,
+            "padding_horizontal": 24,
+            "items_gap": 16,
+            "padding_vertical_mobile": 16,
+            "padding_horizontal_mobile": 16,
+            "items_gap_mobile": 8,
+            "icon_color": "#ffffff",
+            "icon_size": 32,
+            "text_color": "#ffffff",
+            "text_size": 13,
+            "label_gap": 8,
+            "icon_size_mobile": 28,
+            "text_size_mobile": 11,
+            "alignment": "space-around"
+          }
+        },
+        "pdp_acc_wrapper_h7gTnW": {
+          "type": "pdp_acc_wrapper",
+          "settings": {
+            "section_title": "",
+            "section_title_color": "",
+            "section_title_size_desktop": 18,
+            "section_title_size_mobile": 16,
+            "section_title_weight": "600",
+            "background_color": "",
+            "border_color": "#e5e7eb",
+            "border_width": 0,
+            "border_radius": 8,
+            "padding_v": 10,
+            "padding_h": 16,
+            "divider_color": "#e5e7eb",
+            "show_numbers": false,
+            "icon_size": 24,
+            "number_bg_color": "#f3f4f6",
+            "number_color": "#111827",
+            "toggle_color": "#111827",
+            "item_title_color": "",
+            "item_title_size_desktop": 15,
+            "item_title_size_mobile": 14,
+            "item_title_weight": "700",
+            "item_body_color": "",
+            "item_body_size_desktop": 14,
+            "item_body_size_mobile": 13,
+            "item_1_title": "Description",
+            "item_1_body": "<p>Built on the V8 Max DNA, the V8 Ultra brings a sportier feel, upgraded comfort, and ride-ready features to every adventure. Engineered for city cruising and off-road trails alike, it delivers powerful performance, smooth dual-suspension handling, and an integrated Bluetooth audio system to keep every ride excitin</p>",
+            "item_2_title": "Key Features",
+            "item_2_body": "<p>• <strong>Powerful Motor:</strong> 750W sustained / 1000W Peak High-Torque Motor (up to 32 MPH top speed).</p><p>• <strong>All-Terrain Dual Suspension:</strong> Sporty carbon-fiber dual suspension to absorb potholes and rough terrain.</p><p>• <strong>Massive Range:</strong> Up to 100+ miles of pedal assist with the dual waterproof 48V 15Ah battery setup.</p><p>• <strong>Built-In Bluetooth Speaker:</strong> High-output audio integrated directly into the headlight housing.</p><p>• <strong>Advanced Safety:</strong> UL 2849 & UL 2271 certified electrical system, hydraulic brakes, extra-bright LED lighting, and integrated turn signals.</p>",
+            "item_3_title": "Shipping & Returns",
+            "item_3_body": "<p>• <strong>Delivery:</strong> Free 2–7 day standard shipping across the United States.</p><p>• <strong>Returns:</strong> 30-day hassle-free return policy.</p><p>• <strong>Warranty:</strong> 1-Year worry-free warranty covering all core components.</p><p>• <strong>Local Support:</strong> Dedicated U.S.-based customer care and replacement parts readily available.</p>",
+            "item_4_title": "What's in the Box?",
+            "item_4_body": "<p>• 1x V8 Ultra E-Bike (85% pre-assembled)</p><p>• 1x Smart Battery Charger (5–6 hr charge time)</p><p>• 1x NFC Card & Key Fob access&nbsp;</p><p>• 1x Passenger Back Seat & Rear Foot Pegs&nbsp;</p><p>• 1x Portable Tire Pump & Multi-Tool Kit&nbsp;</p><p>• 1x Extra Brake Pads set & User Manual&nbsp;</p>",
+            "item_5_title": "Technical Specs",
+            "item_5_body": "<p>• <strong>Top Speed:</strong> 32 MPH (Unlocked)&nbsp;</p><p>• <strong>Motor:</strong> 750W (1000W Peak)&nbsp;</p><p>• <strong>Battery:</strong> 48V 15Ah Waterproof (Single or Dual Battery option)&nbsp;</p><p>• <strong>Tires:</strong> 20\" x 4.0\" All-Terrain Fat Tires&nbsp;</p><p>• <strong>Gears:</strong> Shimano 7-Speed Transmission&nbsp;</p><p>• <strong>Brakes:</strong> Hydraulic Disc Brakes&nbsp;</p><p>• <strong>Max Payload:</strong> 330 lbs (150 kg)&nbsp;</p><p>• <strong>Bike Weight:</strong> 94 lbs&nbsp;</p><p>• <strong>Recommended Height:</strong> 5'4\" – 6'5\"&nbsp;</p>",
+            "item_6_title": "",
+            "item_6_body": ""
+          }
+        },
+        "video_carousel_gUmwA4": {
+          "type": "video_carousel",
+          "disabled": true,
+          "settings": {
+            "heading": "Verlo en acción",
+            "heading_size": "h2",
+            "heading_color": "#000000",
+            "heading_weight": "700",
+            "heading_font_size_desktop": 24,
+            "heading_font_size_mobile": 20,
+            "color_scheme": "background-1",
+            "video_1": "https://cdn.shopify.com/videos/c/o/v/d7c7d181d1fd4fac813b87d92308b8a2.mp4",
+            "video_2": "https://cdn.shopify.com/videos/c/o/v/c2d66c3251294e438216050c213ce6d9.mp4",
+            "video_3": "https://cdn.shopify.com/videos/c/o/v/dc60fabc8fdc4ea3b7b114cb136bf45f.mp4",
+            "video_4": "https://cdn.shopify.com/videos/c/o/v/3eb758fcce1f428a9c6927f0de4c9cc7.mp4",
+            "aspect_ratio": "9/16",
+            "items_desktop": 3.2,
+            "items_mobile": 1.2,
+            "gap": 12,
+            "corner_radius": 16,
+            "show_arrows": true,
+            "show_controls": true
+          }
+        },
+        "149aabfb-9fd8-4472-a633-6032dbe01ed0": {
+          "type": "reviews",
+          "disabled": true,
+          "settings": {
+            "display_stars": true,
+            "avatar_alignment": "top",
+            "author_1": "Emma R.",
+            "text_1": "<p>Estoy encantada con el producto, en solo 2 semanas noté la diferencia</p>",
+            "author_2": "",
+            "text_2": "",
+            "author_3": "",
+            "text_3": "",
+            "padding_top": 10,
+            "padding_bottom": 10,
+            "padding_top_mobile": 8,
+            "padding_bottom_mobile": 8
+          }
+        }
+      },
+      "block_order": [
+        "trustpilot_bar_W4kVKz",
+        "title",
+        "description_yT64Wm",
+        "price",
+        "de244682-4323-4802-b4ba-b79b08e0c71d",
+        "44f9cdc2-f4bf-466e-87d5-fb765ad4864a",
+        "074f248d-8d73-4c8f-a97e-d8e82c5be5fc",
+        "buy_buttons",
+        "pdp_stock_pulse_Y3WqH7",
+        "2edbf491-d07c-4718-b71e-18ffe22ab7dc",
+        "trust_badges_PHQ3UA",
+        "pdp_acc_wrapper_h7gTnW",
+        "video_carousel_gUmwA4",
+        "149aabfb-9fd8-4472-a633-6032dbe01ed0"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "media_size": "large",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "thumbnail_slider",
+        "media_position": "left",
+        "image_zoom": "none",
+        "mobile_thumbnails": "show",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "trust_badge_position": "top-right",
+        "trust_badge_size": "medium",
+        "background_color": "#ffffff",
+        "padding_top": 24,
+        "padding_bottom": 60,
+        "padding_top_mobile": 28,
+        "padding_bottom_mobile": 32
+      }
+    },
+    "community_feed_dJB7VX": {
+      "type": "community-feed",
+      "blocks": {
+        "post_f9bTUm": {
+          "type": "post",
+          "settings": {
+            "image": "shopify://shop_images/5_1200x_3bd296aa-c57e-4279-b5cb-a1b391cf0143.webp",
+            "username": "",
+            "show_verified": false,
+            "caption": "",
+            "link": ""
+          }
+        },
+        "post_RthbYW": {
+          "type": "post",
+          "settings": {
+            "image": "shopify://shop_images/100_0636.webp",
+            "username": "",
+            "show_verified": false,
+            "caption": "",
+            "link": ""
+          }
+        },
+        "post_dN4cYi": {
+          "type": "post",
+          "settings": {
+            "image": "shopify://shop_images/100_0585.webp",
+            "username": "",
+            "show_verified": false,
+            "caption": "",
+            "link": ""
+          }
+        },
+        "post_gLpiiA": {
+          "type": "post",
+          "settings": {
+            "image": "shopify://shop_images/100_0713.webp",
+            "username": "",
+            "show_verified": false,
+            "caption": "",
+            "link": ""
+          }
+        },
+        "post_4VzfN3": {
+          "type": "post",
+          "settings": {
+            "image": "shopify://shop_images/100_0064_800x1067_c71c7b19-db84-4176-9b8f-8b9ce79a5138.webp",
+            "username": "",
+            "show_verified": false,
+            "caption": "",
+            "link": ""
+          }
+        },
+        "post_tGcd3j": {
+          "type": "post",
+          "settings": {
+            "image": "shopify://shop_images/7_800x1067_073a1328-c17b-494c-87e2-bbf5c30e7ebc.webp",
+            "username": "",
+            "show_verified": false,
+            "caption": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "post_f9bTUm",
+        "post_RthbYW",
+        "post_dN4cYi",
+        "post_gLpiiA",
+        "post_4VzfN3",
+        "post_tGcd3j"
+      ],
+      "custom_css": [
+        "@media screen and (max-width: 749px) {.h2 {font-size: calc(var(--font-heading-scale) * 1.7rem); }}",
+        "@media screen and (max-width: 749px) {.section-community_feed_dJB7VX-padding {padding-top: 32px !important; padding-bottom: 32px !important; }}"
+      ],
+      "name": "Comunidad / Feed UGC",
+      "settings": {
+        "heading": "UNLEASH YOUR FREEDOM",
+        "heading_size": "h2",
+        "heading_color": "#eb5e28",
+        "heading_font_size_desktop": 40,
+        "heading_font_size_mobile": 24,
+        "heading_font_weight": "500",
+        "color_scheme": "background-1",
+        "verified_color": "#bc6161",
+        "background_color": "",
+        "media_radius": 18,
+        "enable_center_mode": true,
+        "enable_loop": true,
+        "autoplay": false,
+        "autoplay_speed": 3,
+        "show_dots": true,
+        "show_arrows": false,
+        "slides_desktop": 3.4,
+        "space_desktop": 20,
+        "slides_tablet": 2,
+        "space_tablet": 16,
+        "slides_mobile": 1.4,
+        "space_mobile": 12,
+        "padding_top": 60,
+        "padding_bottom": 40,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "disabled": true,
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "heading_color": "",
+        "heading_font_size_desktop": 36,
+        "heading_font_size_mobile": 26,
+        "heading_font_weight": "700",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 24,
+        "padding_top_mobile": 28,
+        "padding_bottom_mobile": 28
+      }
+    },
+    "image_with_text_PV6B8F": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_exxGxG": {
+          "type": "heading",
+          "settings": {
+            "heading": "Base inteligente que hidrata, protege y perfecciona",
+            "heading_size": "h2",
+            "heading_color": "",
+            "heading_font_size_desktop": 36,
+            "heading_font_size_mobile": 26,
+            "heading_font_weight": "700"
+          }
+        },
+        "text_y3RkmP": {
+          "type": "text",
+          "settings": {
+            "text": "<p>InfiniteGlow es una base que se adapta al tono de tu piel de forma natural, evitando cortes o acabados artificiales. Ofrece hidratación duradera, protección solar y cobertura ligera sin obstruir los poros. Su fórmula vegana y respetuosa cuida incluso las pieles sensibles, manteniéndose intacta todo el día.</p>",
+            "text_style": "body",
+            "text_color": "",
+            "text_font_size_desktop": 16,
+            "text_font_size_mobile": 15,
+            "text_font_weight": "400"
+          }
+        }
+      },
+      "block_order": [
+        "heading_exxGxG",
+        "text_y3RkmP"
+      ],
+      "disabled": true,
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "section_color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 28,
+        "padding_bottom_mobile": 28
+      }
+    },
+    "1dec15b6-e51f-4064-b412-acf7a98422ef": {
+      "type": "comparison-slider",
+      "disabled": true,
+      "custom_css": [],
+      "settings": {
+        "color_scheme": "background-1",
+        "background_color": "",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 28,
+        "padding_bottom_mobile": 28
+      }
+    },
+    "64c96926-2c31-48fe-bd21-30941bc87822": {
+      "type": "results",
+      "blocks": {
+        "template--18472096170313__64c96926-2c31-48fe-bd21-30941bc87822-16798646483bf89b52-0": {
+          "type": "row",
+          "settings": {
+            "percentage": 96,
+            "row_text": "<p>Quedó satisfecho con la calidad del producto</p>",
+            "row_text_color": "",
+            "row_text_font_size_desktop": 15,
+            "row_text_font_size_mobile": 14,
+            "row_text_font_weight": "400"
+          }
+        },
+        "template--18472096170313__64c96926-2c31-48fe-bd21-30941bc87822-16798646483bf89b52-1": {
+          "type": "row",
+          "settings": {
+            "percentage": 95,
+            "row_text": "<p>Sintió mayor confianza al ver resultados diarios</p>",
+            "row_text_color": "",
+            "row_text_font_size_desktop": 15,
+            "row_text_font_size_mobile": 14,
+            "row_text_font_weight": "400"
+          }
+        },
+        "template--18472096170313__64c96926-2c31-48fe-bd21-30941bc87822-16798646483bf89b52-2": {
+          "type": "row",
+          "settings": {
+            "percentage": 94,
+            "row_text": "<p>Notó su piel más suave y uniforme</p>",
+            "row_text_color": "",
+            "row_text_font_size_desktop": 15,
+            "row_text_font_size_mobile": 14,
+            "row_text_font_weight": "400"
+          }
+        }
+      },
+      "block_order": [
+        "template--18472096170313__64c96926-2c31-48fe-bd21-30941bc87822-16798646483bf89b52-0",
+        "template--18472096170313__64c96926-2c31-48fe-bd21-30941bc87822-16798646483bf89b52-1",
+        "template--18472096170313__64c96926-2c31-48fe-bd21-30941bc87822-16798646483bf89b52-2"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "@media screen and (max-width: 749px) {.h2 {font-size: calc(var(--font-heading-scale) * 1.7rem); }}"
+      ],
+      "settings": {
+        "title": "Resultados",
+        "heading_size": "h2",
+        "heading_color": "",
+        "heading_font_size_desktop": 36,
+        "heading_font_size_mobile": 28,
+        "heading_font_weight": "700",
+        "text_color": "",
+        "text_font_size_desktop": 16,
+        "text_font_size_mobile": 15,
+        "text_font_weight": "400",
+        "text": "<p>Basado en los resultados de todos nuestros clientes</p>",
+        "color_scheme": "background-1",
+        "layout": "results_first",
+        "results_headline": "En tan solo 2 semanas..",
+        "results_headline_size": "h2",
+        "results_headline_alignment": "left",
+        "results_headline_color": "",
+        "results_headline_font_size_desktop": 28,
+        "results_headline_font_size_mobile": 22,
+        "results_headline_font_weight": "700",
+        "caption": "<p>Basado en los resultados de <strong>+2.000 clientes satisfechos ⭐️</strong></p>",
+        "button_label": "",
+        "link": "",
+        "button_style_secondary": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 28,
+        "padding_bottom_mobile": 28
+      }
+    },
+    "slideshow_HfVNww": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_nAjccG": {
+          "type": "slide",
+          "settings": {
+            "heading": "",
+            "heading_size": "h2",
+            "subheading": "Nuestro equipo de expertos velan siempre por tu salud y la de los tuyo.",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": true,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "background-1",
+            "text_alignment_mobile": "center",
+            "heading_color": "",
+            "heading_font_size_desktop": 36,
+            "heading_font_size_mobile": 26,
+            "heading_font_weight": "700",
+            "subheading_color": "",
+            "subheading_font_size_desktop": 18,
+            "subheading_font_size_mobile": 15,
+            "subheading_font_weight": "400"
+          }
+        }
+      },
+      "block_order": [
+        "slide_nAjccG"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "@media screen and (max-width: 749px) {.h2 {font-size: calc(var(--font-heading-scale) * 1.7rem); }}"
+      ],
+      "name": "t:sections.slideshow.presets.name",
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "adapt_image",
+        "slider_visual": "counter",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand",
+        "image_border_radius_desktop": 0,
+        "image_border_radius_mobile": 0,
+        "padding_top_desktop": 0,
+        "padding_bottom_desktop": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "why_we_love_it_3t7fT9": {
+      "type": "why-we-love-it",
+      "blocks": {
+        "feature_TKe9aE": {
+          "type": "feature",
+          "settings": {
+            "position": "left",
+            "heading": "Carbon-Fiber Dual Suspension",
+            "text": "<p>Soaks up rough trails, potholes, and terrain vibrations for unmatched stability and long-ride comfort.</p>",
+            "heading_color": "#eb5e28",
+            "heading_font_size_desktop": 20,
+            "heading_font_size_mobile": 16,
+            "heading_font_weight": "500",
+            "text_color": "",
+            "text_font_size_desktop": 14,
+            "text_font_size_mobile": 14,
+            "text_font_weight": "400"
+          }
+        },
+        "feature_HyNcKQ": {
+          "type": "feature",
+          "settings": {
+            "position": "left",
+            "heading": "Integrated Bluetooth Audio",
+            "text": "<p>Built-in speaker housed directly in the front headlight to stream your favorite playlists on the go.</p>",
+            "heading_color": "#eb5e28",
+            "heading_font_size_desktop": 20,
+            "heading_font_size_mobile": 14,
+            "heading_font_weight": "500",
+            "text_color": "",
+            "text_font_size_desktop": 14,
+            "text_font_size_mobile": 12,
+            "text_font_weight": "400"
+          }
+        },
+        "feature_BmGDdQ": {
+          "type": "feature",
+          "settings": {
+            "position": "right",
+            "heading": "1000W Peak High-Torque Motor",
+            "text": "<p>Instant acceleration and steep hill climbing with top speeds reaching up to 32 MPH.</p>",
+            "heading_color": "#eb5e28",
+            "heading_font_size_desktop": 20,
+            "heading_font_size_mobile": 14,
+            "heading_font_weight": "500",
+            "text_color": "",
+            "text_font_size_desktop": 15,
+            "text_font_size_mobile": 12,
+            "text_font_weight": "400"
+          }
+        },
+        "feature_GTkzQr": {
+          "type": "feature",
+          "settings": {
+            "position": "right",
+            "heading": "Dual Battery Long-Range Pack",
+            "text": "<p>Dual 48V 15Ah waterproof batteries delivering up to 100+ miles of pedal-assisted freedom.</p>",
+            "heading_color": "#eb5e28",
+            "heading_font_size_desktop": 20,
+            "heading_font_size_mobile": 14,
+            "heading_font_weight": "500",
+            "text_color": "",
+            "text_font_size_desktop": 14,
+            "text_font_size_mobile": 12,
+            "text_font_weight": "400"
+          }
+        }
+      },
+      "block_order": [
+        "feature_TKe9aE",
+        "feature_HyNcKQ",
+        "feature_BmGDdQ",
+        "feature_GTkzQr"
+      ],
+      "custom_css": [
+        "@media screen and (max-width: 749px) {.h2 {font-size: calc(var(--font-heading-scale) * 1.7rem); }}",
+        "@media screen and (max-width: 749px) {.section-why_we_love_it_3t7fT9-padding {padding-top: 32px !important; padding-bottom: 32px !important; }}"
+      ],
+      "name": "Por qué nos encanta",
+      "settings": {
+        "heading": "WHY RIDERS LOVE THE V8 ULTRA",
+        "heading_size": "h2",
+        "heading_italic": false,
+        "heading_color": "#eb5e28",
+        "heading_font_size_desktop": 40,
+        "heading_font_size_mobile": 24,
+        "heading_font_weight": "500",
+        "image": "shopify://shop_images/Transparent_V8_Ultra_1.webp",
+        "circle_size_desktop": 380,
+        "circle_size_mobile": 220,
+        "color_scheme": "background-1",
+        "accent_color_scheme": "accent-2",
+        "background_color": "#ffffff",
+        "circle_border_color": "#ffffff",
+        "badge_icon_bg_color": "",
+        "badge_icon_svg_color": "#9a031e",
+        "text_alignment": "facing-center",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40
+      }
+    },
+    "feature_cards_rC7d6a": {
+      "type": "feature-cards",
+      "blocks": {
+        "card_7BU4fG": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/IMG_1897.webp",
+            "heading": "HIGH-TORQUE 1000W MOTOR",
+            "text": "<p>Built for rugged trails and steep inclines. Delivers instant acceleration and reaches an exhilarating top speed of up to 32 MPH.</p>",
+            "card_background_color": "#fb8b24",
+            "heading_color": "#000000",
+            "heading_font_size_desktop": 20,
+            "heading_font_size_mobile": 17,
+            "heading_font_weight": "500",
+            "text_color": "",
+            "text_font_size_desktop": 15,
+            "text_font_size_mobile": 14,
+            "text_font_weight": "400"
+          }
+        },
+        "card_gpfMnF": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/IMG_1898.webp",
+            "heading": "CARBON-FIBER DUAL SUSPENSION",
+            "text": "<p>Smooths out bumps, potholes, and gravel. Paired with 20x4.0\" fat tires for maximum traction and all-day riding comfort.</p>",
+            "card_background_color": "#fb8b24",
+            "heading_color": "#000000",
+            "heading_font_size_desktop": 20,
+            "heading_font_size_mobile": 17,
+            "heading_font_weight": "500",
+            "text_color": "",
+            "text_font_size_desktop": 15,
+            "text_font_size_mobile": 14,
+            "text_font_weight": "400"
+          }
+        },
+        "card_ULpaJD": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/IMG_1913.webp",
+            "heading": "DUAL BATTERY AND BLUETOOTH SOUND",
+            "text": "<p>Ride up to 100+ miles on a single charge while streaming your favorite music through the headlight’s built-in speaker.</p>",
+            "card_background_color": "#fb8b24",
+            "heading_color": "#000000",
+            "heading_font_size_desktop": 20,
+            "heading_font_size_mobile": 17,
+            "heading_font_weight": "500",
+            "text_color": "",
+            "text_font_size_desktop": 15,
+            "text_font_size_mobile": 14,
+            "text_font_weight": "400"
+          }
+        }
+      },
+      "block_order": [
+        "card_7BU4fG",
+        "card_gpfMnF",
+        "card_ULpaJD"
+      ],
+      "custom_css": [
+        "@media screen and (max-width: 749px) {.h2 {font-size: calc(var(--font-heading-scale) * 1.7rem); }}",
+        "@media screen and (max-width: 749px) {.section-feature_cards_rC7d6a-padding {padding-top: 32px !important; padding-bottom: 32px !important; }}"
+      ],
+      "name": "Tarjetas de beneficios",
+      "settings": {
+        "heading": "ELITE PERFORMANCE ON EVERY TERRAIN",
+        "heading_size": "h2",
+        "heading_italic": false,
+        "subheading": "<p>Engineered with raw power, rugged suspension, and premium tech to elevate every ride.</p>",
+        "heading_color": "#eb5e28",
+        "heading_font_size_desktop": 40,
+        "heading_font_size_mobile": 26,
+        "heading_font_weight": "500",
+        "subheading_color": "#fb8b24",
+        "subheading_font_size_desktop": 20,
+        "subheading_font_size_mobile": 15,
+        "subheading_font_weight": "400",
+        "color_scheme": "background-1",
+        "card_color_scheme": "background-2",
+        "accent_color_scheme": "accent-2",
+        "background_color": "#ffffff",
+        "image_ratio": "square",
+        "card_corner_radius": 10,
+        "image_corner_radius": 14,
+        "card_padding": 24,
+        "columns_desktop": 3,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 40,
+        "padding_bottom": 60,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 32
+      }
+    },
+    "results_FXmCVN": {
+      "type": "results",
+      "blocks": {
+        "row_8cFi3W": {
+          "type": "row",
+          "settings": {
+            "percentage": 98,
+            "row_text": "<p>Miles of max range with the dual battery setup, eliminating daily charging anxiety.</p>",
+            "row_text_color": "",
+            "row_text_font_size_desktop": 15,
+            "row_text_font_size_mobile": 14,
+            "row_text_font_weight": "400"
+          }
+        },
+        "row_ta6Be4": {
+          "type": "row",
+          "settings": {
+            "percentage": 100,
+            "row_text": "<p>32 Miles per hour top unlocked speed powered by the 1000W peak high-torque motor</p>",
+            "row_text_color": "",
+            "row_text_font_size_desktop": 15,
+            "row_text_font_size_mobile": 14,
+            "row_text_font_weight": "400"
+          }
+        },
+        "row_znUNtq": {
+          "type": "row",
+          "settings": {
+            "percentage": 96,
+            "row_text": "<p>Positive feedback from riders praising the smooth dual suspension and built-in Bluetooth audio.</p>",
+            "row_text_color": "",
+            "row_text_font_size_desktop": 15,
+            "row_text_font_size_mobile": 14,
+            "row_text_font_weight": "400"
+          }
+        }
+      },
+      "block_order": [
+        "row_8cFi3W",
+        "row_ta6Be4",
+        "row_znUNtq"
+      ],
+      "name": "Results",
+      "settings": {
+        "title": "RESULTS",
+        "heading_size": "h1",
+        "heading_color": "#eb5e28",
+        "heading_font_size_desktop": 40,
+        "heading_font_size_mobile": 28,
+        "heading_font_weight": "500",
+        "text_color": "#eb5e28",
+        "text_font_size_desktop": 16,
+        "text_font_size_mobile": 15,
+        "text_font_weight": "400",
+        "text": "<p>Engineered for everyday commutes and off-road weekends, tested by real riders across the country.</p>",
+        "image": "shopify://shop_images/IMG_1904.webp",
+        "color_scheme": "background-1",
+        "layout": "results_second",
+        "results_headline": "RIDER SATISFACTION & CAPABILITY",
+        "results_headline_size": "h2",
+        "results_headline_alignment": "left",
+        "results_headline_color": "#eb5e28",
+        "results_headline_font_size_desktop": 28,
+        "results_headline_font_size_mobile": 22,
+        "results_headline_font_weight": "500",
+        "caption": "<p>Caption about the results and/or link for their proof.</p>",
+        "button_label": "",
+        "link": "",
+        "button_style_secondary": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 28,
+        "padding_bottom_mobile": 28
+      }
+    },
+    "faq_accordion_m3GjeY": {
+      "type": "faq-accordion",
+      "blocks": {
+        "question_giLkXQ": {
+          "type": "question",
+          "settings": {
+            "question": "How tall do I need to be for this bike?",
+            "answer": "<p>The recommended rider height is between 5'4\" and 6'5\". The bike supports a maximum payload capacity of up to 330 lbs.</p>",
+            "question_color": "",
+            "question_font_size_desktop": 16,
+            "question_font_size_mobile": 15,
+            "question_font_weight": "500",
+            "answer_color": "",
+            "answer_font_size_desktop": 15,
+            "answer_font_size_mobile": 14,
+            "answer_font_weight": "400"
+          }
+        },
+        "question_36wNwy": {
+          "type": "question",
+          "settings": {
+            "question": "What does the warranty cover?",
+            "answer": "<p>Our 1-Year warranty covers all core electrical and mechanical components on the bike, excluding damage caused by normal wear and tear, accidents, or misuse.</p>",
+            "question_color": "",
+            "question_font_size_desktop": 16,
+            "question_font_size_mobile": 15,
+            "question_font_weight": "500",
+            "answer_color": "",
+            "answer_font_size_desktop": 15,
+            "answer_font_size_mobile": 14,
+            "answer_font_weight": "400"
+          }
+        },
+        "question_e4hhdC": {
+          "type": "question",
+          "settings": {
+            "question": "Does the bike come fully assembled?",
+            "answer": "<p>The V8 Ultra arrives 85% pre-assembled in the box. Simply attach the front wheel, handlebars, headlight, and pedals (plus the optional passenger seat and foot pegs), inflate the tires, and you are ready to ride.</p>",
+            "question_color": "",
+            "question_font_size_desktop": 16,
+            "question_font_size_mobile": 15,
+            "question_font_weight": "500",
+            "answer_color": "",
+            "answer_font_size_desktop": 15,
+            "answer_font_size_mobile": 14,
+            "answer_font_weight": "400"
+          }
+        },
+        "question_HKe6yp": {
+          "type": "question",
+          "settings": {
+            "question": "What is the difference between Single and Dual Battery?",
+            "answer": "<p>The Single Battery setup offers up to 37+ miles on pure throttle and 60+ miles on pedal assist. The Dual Battery configuration doubles the capacity, delivering up to 74+ miles on throttle and 100+ miles on pedal assist.</p>",
+            "question_color": "",
+            "question_font_size_desktop": 16,
+            "question_font_size_mobile": 15,
+            "question_font_weight": "500",
+            "answer_color": "",
+            "answer_font_size_desktop": 15,
+            "answer_font_size_mobile": 14,
+            "answer_font_weight": "400"
+          }
+        },
+        "question_V76RRe": {
+          "type": "question",
+          "settings": {
+            "question": "How long does shipping take and how is it delivered?",
+            "answer": "<p>Orders are dispatched directly from our US facility with free 2–7 day delivery. Tracking information will be emailed to you within 1–2 business days after placing your order.</p>",
+            "question_color": "",
+            "question_font_size_desktop": 16,
+            "question_font_size_mobile": 15,
+            "question_font_weight": "500",
+            "answer_color": "",
+            "answer_font_size_desktop": 15,
+            "answer_font_size_mobile": 14,
+            "answer_font_weight": "400"
+          }
+        }
+      },
+      "block_order": [
+        "question_giLkXQ",
+        "question_36wNwy",
+        "question_e4hhdC",
+        "question_HKe6yp",
+        "question_V76RRe"
+      ],
+      "custom_css": [
+        "@media screen and (max-width: 749px) {.h2 {font-size: calc(var(--font-heading-scale) * 1.7rem); }}",
+        "@media screen and (max-width: 749px) {.section-faq_accordion_m3GjeY-padding {padding-top: 32px !important; padding-bottom: 32px !important; }}"
+      ],
+      "name": "Preguntas frecuentes",
+      "settings": {
+        "caption": "",
+        "heading": "FAQS",
+        "heading_size": "h2",
+        "heading_italic": true,
+        "heading_color": "#eb5e28",
+        "heading_font_size_desktop": 40,
+        "heading_font_size_mobile": 24,
+        "heading_font_weight": "500",
+        "caption_color": "",
+        "caption_font_size_desktop": 24,
+        "caption_font_size_mobile": 24,
+        "caption_font_weight": "500",
+        "color_scheme": "background-1",
+        "accent_color_scheme": "accent-2",
+        "background_color": "",
+        "item_background": "#c9c6c3",
+        "item_radius": 12,
+        "item_spacing": 12,
+        "open_first_question": false,
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40
+      }
+    }
+  },
+  "order": [
+    "main",
+    "community_feed_dJB7VX",
+    "related-products",
+    "image_with_text_PV6B8F",
+    "1dec15b6-e51f-4064-b412-acf7a98422ef",
+    "64c96926-2c31-48fe-bd21-30941bc87822",
+    "slideshow_HfVNww",
+    "why_we_love_it_3t7fT9",
+    "feature_cards_rC7d6a",
+    "results_FXmCVN",
+    "faq_accordion_m3GjeY"
+  ]
+}
