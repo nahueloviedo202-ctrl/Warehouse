@@ -881,8 +881,8 @@
         "row_ta6Be4": {
           "type": "row",
           "settings": {
-            "percentage": 32,
-            "row_text": "<p>Miles per hour top unlocked speed powered by the 1000W peak high-torque motor</p>",
+            "percentage": 100,
+            "row_text": "<p>32 Miles per hour top unlocked speed powered by the 1000W peak high-torque motor</p>",
             "row_text_color": "",
             "row_text_font_size_desktop": 15,
             "row_text_font_size_mobile": 14,
