@@ -160,7 +160,7 @@
       "type": "convertlab-left-plus-slider",
       "name": "Imagen + Slider Productos",
       "settings": {
-        "title": "Más vendidos",
+        "title": "Best Sellers",
         "heading_size": "h1",
         "heading_font_size_desktop": 34,
         "heading_font_size_mobile": 26,
