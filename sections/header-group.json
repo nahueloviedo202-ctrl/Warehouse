@@ -38,7 +38,7 @@
           "settings": {
             "text": "FREE SHIPPING | © MEGA WAREHOUSE, 2026",
             "separator": "|",
-            "text_color": "#ffffff",
+            "text_color": "#FFFFFF",
             "border_color": "#ffffff",
             "border_width": 1,
             "border_radius": 100,
@@ -58,7 +58,7 @@
       "settings": {
         "sticky_header_type": "on-scroll-up",
         "show_line_separator": true,
-        "color_scheme": "background-1",
+        "color_scheme": "inverse",
         "white_text": true,
         "logo_position": "middle-center",
         "logo_max_height_desktop": 60,
