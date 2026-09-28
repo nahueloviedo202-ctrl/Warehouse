@@ -61,7 +61,7 @@
         "color_scheme": "background-1",
         "white_text": false,
         "logo_position": "middle-center",
-        "logo_max_height_desktop": 50,
+        "logo_max_height_desktop": 60,
         "logo_max_height_mobile": 100,
         "logo_max_width_desktop": 300,
         "logo_max_width_mobile": 110,
