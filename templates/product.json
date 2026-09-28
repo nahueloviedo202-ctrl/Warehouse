@@ -424,7 +424,7 @@
       "name": "Comunidad / Feed UGC",
       "settings": {
         "heading": "UNLEASH YOUR FREEDOM",
-        "heading_size": "h2",
+        "heading_size": "h1",
         "heading_color": "#eb5e28",
         "heading_font_size_desktop": 40,
         "heading_font_size_mobile": 24,
@@ -747,7 +747,7 @@
       "name": "Por qué nos encanta",
       "settings": {
         "heading": "WHY RIDERS LOVE THE V8 ULTRA",
-        "heading_size": "h2",
+        "heading_size": "h1",
         "heading_italic": false,
         "heading_color": "#eb5e28",
         "heading_font_size_desktop": 40,
@@ -836,7 +836,7 @@
       "name": "Tarjetas de beneficios",
       "settings": {
         "heading": "ELITE PERFORMANCE ON EVERY TERRAIN",
-        "heading_size": "h2",
+        "heading_size": "h1",
         "heading_italic": false,
         "subheading": "<p>Engineered with raw power, rugged suspension, and premium tech to elevate every ride.</p>",
         "heading_color": "#eb5e28",
@@ -860,7 +860,7 @@
         "swipe_on_mobile": true,
         "padding_top": 40,
         "padding_bottom": 60,
-        "padding_top_mobile": 0,
+        "padding_top_mobile": 20,
         "padding_bottom_mobile": 32
       }
     },
@@ -1033,7 +1033,7 @@
       "settings": {
         "caption": "",
         "heading": "FAQS",
-        "heading_size": "h2",
+        "heading_size": "h1",
         "heading_italic": true,
         "heading_color": "#eb5e28",
         "heading_font_size_desktop": 40,
