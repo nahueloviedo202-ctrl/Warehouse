@@ -756,22 +756,6 @@
     "feature_cards_rC7d6a": {
       "type": "feature-cards",
       "blocks": {
-        "card_kqzWVh": {
-          "type": "card",
-          "settings": {
-            "heading": "Título de la tarjeta",
-            "text": "<p>Describe este beneficio del producto.</p>",
-            "card_background_color": "",
-            "heading_color": "",
-            "heading_font_size_desktop": 20,
-            "heading_font_size_mobile": 17,
-            "heading_font_weight": "700",
-            "text_color": "",
-            "text_font_size_desktop": 15,
-            "text_font_size_mobile": 14,
-            "text_font_weight": "400"
-          }
-        },
         "card_7BU4fG": {
           "type": "card",
           "settings": {
@@ -825,7 +809,6 @@
         }
       },
       "block_order": [
-        "card_kqzWVh",
         "card_7BU4fG",
         "card_gpfMnF",
         "card_ULpaJD"
@@ -858,7 +841,7 @@
         "card_padding": 24,
         "columns_desktop": 3,
         "columns_mobile": "1",
-        "swipe_on_mobile": true,
+        "swipe_on_mobile": false,
         "padding_top": 40,
         "padding_bottom": 60,
         "padding_top_mobile": 20,
