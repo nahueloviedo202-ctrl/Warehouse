@@ -17,7 +17,7 @@
         "text_iPVPew": {
           "type": "text",
           "settings": {
-            "heading": "Vita Nura Lab",
+            "heading": "Mega Warehouse",
             "text": "<p>Cosmética y bienestar</p><p>Con resultados reales.</p>",
             "text_size": 14,
             "text_size_mobile": 14
@@ -66,7 +66,7 @@
           "disabled": true,
           "settings": {
             "heading": "Políticas",
-            "menu": "politicas"
+            "menu": ""
           }
         },
         "col_nosotras": {
@@ -74,7 +74,7 @@
           "disabled": true,
           "settings": {
             "heading": "Nosotras",
-            "menu": "nosotras"
+            "menu": ""
           }
         }
       },
@@ -86,14 +86,12 @@
         "col_nosotras"
       ],
       "settings": {
-        "background_image": "shopify://shop_images/Foto_grupal_en_VitanuraLab.png",
         "overlay_color": "#000000",
         "overlay_opacity": 50,
-        "logo_image": "shopify://shop_images/logo_84781f12-19ba-433f-b657-489316a46b1d.png",
         "logo_width": 100,
         "logo_width_mobile": 70,
         "brand_name": "",
-        "copyright_text": "VitaNura Lab",
+        "copyright_text": "Mega WareHouse",
         "show_payment": false,
         "pay_visa": false,
         "pay_master": false,
