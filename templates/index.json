@@ -15,8 +15,6 @@
         "slide_gpdUTy": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/banner-clean.webp",
-            "image_mobile": "shopify://shop_images/Gemini_Generated_Image_bguqcbguqcbguqcb.webp",
             "heading": "Fórmulas que transforman tu piel",
             "heading_size": "h1",
             "heading_color": "",
@@ -99,13 +97,9 @@
         "grayscale": 0,
         "text_color": "#000000",
         "border_color": "#ffffff",
-        "logo_1_image": "shopify://shop_images/vogue.webp",
         "logo_1_text": "MUJERHOY",
-        "logo_2_image": "shopify://shop_images/ELLE.webp",
         "logo_2_text": "ELLE",
-        "logo_3_image": "shopify://shop_images/image.webp",
         "logo_3_text": "VOGUE",
-        "logo_4_image": "shopify://shop_images/woma.webp",
         "logo_4_text": "Women's Health",
         "logo_5_text": "",
         "logo_6_text": "",
@@ -178,7 +172,6 @@
         "header_mb_mobile": 16,
         "collection": "mas-vendidos",
         "products_to_show": 8,
-        "left_image": "shopify://shop_images/ww.webp",
         "left_image_link": "",
         "left_image_width_desktop": 260,
         "left_image_width_tablet": 200,
@@ -209,7 +202,6 @@
         "item_DBBp8d": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/vogue-logo.svg",
             "text": "VOGUE",
             "link": "",
             "target_blank": false
@@ -218,7 +210,6 @@
         "item_kHKhwk": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/pngkey.com-rolling-stones-logo-png-1512812.png",
             "text": "RUSSH",
             "link": "",
             "target_blank": false
@@ -227,7 +218,6 @@
         "item_rberk6": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/960px-Marie_Claire_Magazine_logo_svg.png",
             "text": "marie claire",
             "link": "",
             "target_blank": false
@@ -236,7 +226,6 @@
         "item_qncrzD": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/harpers-bazaar-logo.svg",
             "text": "BAZAAR",
             "link": "",
             "target_blank": false
@@ -245,7 +234,6 @@
         "item_k9rGwi": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/Revista_InStyle_idQQukCzRJ_0.svg",
             "text": "InStyle",
             "link": "",
             "target_blank": false
@@ -288,7 +276,6 @@
         "slide_pPDxgU": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/mujer.webp",
             "heading": "Tu piel, en su mejor versión",
             "heading_size": "h1",
             "heading_color": "",
@@ -365,7 +352,6 @@
         "post_79Jtf9": {
           "type": "post",
           "settings": {
-            "image": "shopify://shop_images/Piel_feliz_piel_bonita_Cuando_cuidas_tu_piel_ella_lo_refleja_en_cada_sonrisa._Hidratacion_1.webp",
             "username": "@laura.m",
             "show_verified": true,
             "caption": "Ahora entiendo por qué es tan recomendado",
@@ -375,7 +361,6 @@
         "post_Rfezf7": {
           "type": "post",
           "settings": {
-            "image": "shopify://shop_images/Un_gesto_simple_un_gran_regalo_para_tu_piel.El_cuidado_diario_no_tiene_edad_tiene_amor_prop.webp",
             "username": "@clara.r",
             "show_verified": true,
             "caption": "Piel más suave desde la primera aplicación",
@@ -385,7 +370,6 @@
         "post_VA87RY": {
           "type": "post",
           "settings": {
-            "image": "shopify://shop_images/La_edad_no_define_tu_belleza_tu_luz_interior_si.Cada_gota_de_cuidado_es_un_regalo_para_tu_pie.webp",
             "username": "@vane.o",
             "show_verified": true,
             "caption": "Lo mejor que he probado en mucho tiempo",
@@ -395,7 +379,6 @@
         "post_Mz7YB7": {
           "type": "post",
           "settings": {
-            "image": "shopify://shop_images/Tu_piel_tu_tono_tu_luz_realzada_por_InfiniteGlow.webp",
             "username": "@miriam.l",
             "show_verified": true,
             "caption": "Excelente para ayudar a mantener la hidratación",
@@ -405,7 +388,6 @@
         "post_43EqXE": {
           "type": "post",
           "settings": {
-            "image": "shopify://shop_images/Tu_piel_tambien_merece_sentir_el_calor_del_sol_sin_perder_su_frescura.Un_toque_de_hidratacion.webp",
             "username": "@sandra.v",
             "show_verified": true,
             "caption": "Por fin un producto que sí cumple lo que promete",
@@ -426,7 +408,7 @@
       ],
       "name": "Comunidad / Feed UGC",
       "settings": {
-        "heading": "Únete a la comunidad @VitaNuraLab",
+        "heading": "Únete a la comunidad de Mega Warehouse!",
         "heading_size": "h2",
         "heading_color": "",
         "heading_font_size_desktop": 32,
