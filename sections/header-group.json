@@ -58,7 +58,7 @@
       "settings": {
         "sticky_header_type": "on-scroll-up",
         "show_line_separator": true,
-        "color_scheme": "background-1",
+        "color_scheme": "accent-1",
         "white_text": false,
         "logo_position": "middle-center",
         "logo_max_height_desktop": 60,
