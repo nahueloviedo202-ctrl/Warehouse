@@ -580,80 +580,6 @@
         "padding_bottom_mobile": 0
       }
     },
-    "press_ticker_gTJiLE": {
-      "type": "press-ticker",
-      "blocks": {
-        "item_3kkXqc": {
-          "type": "item",
-          "settings": {
-            "text": "",
-            "link": "",
-            "target_blank": false
-          }
-        },
-        "item_nDK9AQ": {
-          "type": "item",
-          "settings": {
-            "text": "VOGUE",
-            "link": "",
-            "target_blank": false
-          }
-        },
-        "item_RmqdGV": {
-          "type": "item",
-          "settings": {
-            "text": "RUSSH",
-            "link": "",
-            "target_blank": false
-          }
-        },
-        "item_c3eGAi": {
-          "type": "item",
-          "settings": {
-            "text": "marie claire",
-            "link": "",
-            "target_blank": false
-          }
-        },
-        "item_wrJGVn": {
-          "type": "item",
-          "settings": {
-            "text": "BAZAAR",
-            "link": "",
-            "target_blank": false
-          }
-        }
-      },
-      "block_order": [
-        "item_3kkXqc",
-        "item_nDK9AQ",
-        "item_RmqdGV",
-        "item_c3eGAi",
-        "item_wrJGVn"
-      ],
-      "name": "Press Ticker",
-      "settings": {
-        "speed": 1,
-        "direction": "left",
-        "pause_on_hover": true,
-        "separator_char": "•",
-        "separator_spacing": 24,
-        "separator_size": 1,
-        "desktop_logo_height": 30,
-        "mobile_logo_height": 24,
-        "text_size": "2",
-        "text_bold": false,
-        "text_italic": true,
-        "text_uppercase": true,
-        "color_scheme": "background-1",
-        "custom_background_color": "#e3d0c9",
-        "custom_text_color": "#000000",
-        "padding_top": 20,
-        "padding_bottom": 20,
-        "padding_top_mobile": 16,
-        "padding_bottom_mobile": 16
-      }
-    },
     "why_we_love_it_3t7fT9": {
       "type": "why-we-love-it",
       "blocks": {
@@ -666,7 +592,7 @@
             "heading_color": "#9A031E",
             "heading_font_size_desktop": 20,
             "heading_font_size_mobile": 16,
-            "heading_font_weight": "700",
+            "heading_font_weight": "500",
             "text_color": "",
             "text_font_size_desktop": 14,
             "text_font_size_mobile": 14,
@@ -682,7 +608,7 @@
             "heading_color": "#9A031E",
             "heading_font_size_desktop": 20,
             "heading_font_size_mobile": 14,
-            "heading_font_weight": "700",
+            "heading_font_weight": "500",
             "text_color": "",
             "text_font_size_desktop": 14,
             "text_font_size_mobile": 12,
@@ -698,7 +624,7 @@
             "heading_color": "#9A031E",
             "heading_font_size_desktop": 20,
             "heading_font_size_mobile": 14,
-            "heading_font_weight": "700",
+            "heading_font_weight": "500",
             "text_color": "",
             "text_font_size_desktop": 15,
             "text_font_size_mobile": 12,
@@ -714,7 +640,7 @@
             "heading_color": "#9A031E",
             "heading_font_size_desktop": 20,
             "heading_font_size_mobile": 14,
-            "heading_font_weight": "700",
+            "heading_font_weight": "500",
             "text_color": "",
             "text_font_size_desktop": 14,
             "text_font_size_mobile": 12,
@@ -724,7 +650,7 @@
         "badge_PXkJ9W": {
           "type": "badge",
           "settings": {
-            "icon": "check_mark",
+            "icon": "eye",
             "label": "UL 2849 & 2271 Certified"
           }
         },
@@ -752,7 +678,7 @@
         "badge_pzdxBr": {
           "type": "badge",
           "settings": {
-            "icon": "paw_print",
+            "icon": "return",
             "label": "1-Year Full Warranty"
           }
         }
@@ -776,20 +702,20 @@
       "settings": {
         "heading": "Why Riders Love the V8 Ultra",
         "heading_size": "h2",
-        "heading_italic": true,
-        "heading_color": "#000000",
+        "heading_italic": false,
+        "heading_color": "#FB8B24",
         "heading_font_size_desktop": 32,
         "heading_font_size_mobile": 24,
-        "heading_font_weight": "600",
+        "heading_font_weight": "500",
         "image": "shopify://shop_images/IMG_1897.webp",
         "circle_size_desktop": 380,
         "circle_size_mobile": 220,
         "color_scheme": "background-1",
         "accent_color_scheme": "accent-2",
         "background_color": "#ffffff",
-        "circle_border_color": "",
-        "badge_icon_bg_color": "#f6f3f1",
-        "badge_icon_svg_color": "#9A031E",
+        "circle_border_color": "#000000",
+        "badge_icon_bg_color": "",
+        "badge_icon_svg_color": "#FB8B24",
         "text_alignment": "facing-center",
         "padding_top": 60,
         "padding_bottom": 60,
@@ -1497,7 +1423,6 @@
     "1dec15b6-e51f-4064-b412-acf7a98422ef",
     "64c96926-2c31-48fe-bd21-30941bc87822",
     "slideshow_HfVNww",
-    "press_ticker_gTJiLE",
     "why_we_love_it_3t7fT9",
     "review_slider_pmwAwt",
     "feature_cards_rC7d6a",
