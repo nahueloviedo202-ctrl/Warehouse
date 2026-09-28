@@ -42,7 +42,7 @@
             "border_color": "#ffffff",
             "border_width": 1,
             "border_radius": 100,
-            "speed": 3,
+            "speed": 2,
             "font_size_desktop": 12,
             "font_size_mobile": 10,
             "padding_v_desktop": 7,
