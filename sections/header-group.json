@@ -36,7 +36,7 @@
         "announcement_bar_AcyXA9": {
           "type": "announcement_bar",
           "settings": {
-            "text": "FREE SHIPPING | © WAREHOUSE, 2026",
+            "text": "FREE SHIPPING | © MEGA WAREHOUSE, 2026",
             "separator": "|",
             "text_color": "#ffffff",
             "border_color": "#ffffff",
@@ -63,7 +63,7 @@
         "logo_position": "middle-center",
         "logo_max_height_desktop": 50,
         "logo_max_height_mobile": 100,
-        "logo_max_width_desktop": 200,
+        "logo_max_width_desktop": 300,
         "logo_max_width_mobile": 110,
         "menu": "main-menu",
         "highlight_active_link": true,
