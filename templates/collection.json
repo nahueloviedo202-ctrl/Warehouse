@@ -16,7 +16,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/hero.webp",
-            "heading": "Fórmulas que transforman",
+            "heading": "DIRECT FROM MEGA WAREHOUSE",
             "heading_size": "h1",
             "heading_color": "",
             "heading_font_size_desktop": 48,
@@ -39,7 +39,7 @@
             "show_text_box": false,
             "text_alignment": "center",
             "text_alignment_mobile": "center",
-            "image_overlay_opacity": 15,
+            "image_overlay_opacity": 25,
             "color_scheme": "background-1"
           }
         }
