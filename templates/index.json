@@ -278,6 +278,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/Gemini_Generated_Image_4zx6kp4zx6kp4zx6.webp",
+            "image_mobile": "shopify://shop_images/mobile.jpg",
             "heading": "Built for Supply, Ready to Ship",
             "heading_size": "h1",
             "heading_color": "",
