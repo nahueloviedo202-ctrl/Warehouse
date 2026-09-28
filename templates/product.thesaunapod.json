@@ -696,69 +696,14 @@
         "padding_bottom_mobile": 30
       }
     },
-    "comparison_table_P7Rfba": {
-      "type": "comparison-table",
-      "blocks": {
-        "row_RbGVYM": {
-          "type": "row",
-          "settings": {
-            "benefit": "Benefit",
-            "us": true,
-            "others": false
-          }
-        },
-        "row_JDNmkf": {
-          "type": "row",
-          "settings": {
-            "benefit": "Benefit",
-            "us": true,
-            "others": false
-          }
-        },
-        "row_XeKmGC": {
-          "type": "row",
-          "settings": {
-            "benefit": "Benefit",
-            "us": true,
-            "others": false
-          }
-        }
-      },
-      "block_order": [
-        "row_RbGVYM",
-        "row_JDNmkf",
-        "row_XeKmGC"
-      ],
-      "name": "Comparison table",
-      "settings": {
-        "title": "Comparison table",
-        "heading_size": "h1",
-        "text": "<p>Talk about how and why is your brand better than the others.</p>",
-        "button_label": "",
-        "link": "",
-        "button_style_secondary": false,
-        "layout": "table_second",
-        "color_scheme": "accent-2",
-        "logo_width": 125,
-        "us_label": "MEGA WAREHOUSE",
-        "others_label": "OTHERS",
-        "benefit_color_scheme": "background-1",
-        "checkmark_color": "#800E13",
-        "icon_cells_color_scheme": "background-1",
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_top_mobile": 28,
-        "padding_bottom_mobile": 28
-      }
-    },
     "faq_accordion_m3GjeY": {
       "type": "faq-accordion",
       "blocks": {
         "question_giLkXQ": {
           "type": "question",
           "settings": {
-            "question": "How tall do I need to be for this bike?",
-            "answer": "<p>The recommended rider height is between 5'4\" and 6'5\". The bike supports a maximum payload capacity of up to 330 lbs.</p>",
+            "question": "How hot does The Sauna Pod get and how fast does it heat up?",
+            "answer": "<p>The Sauna Pod reaches temperatures up to 85°C (185°F) in about 15 to 20 minutes using its high-output 1500W dry-air heating unit. Unlike steam units, it delivers dry, intense heat that stays consistently hot even when set up in cooler basements or garages during Canadian winters.</p>",
             "question_color": "",
             "question_font_size_desktop": 16,
             "question_font_size_mobile": 15,
@@ -772,8 +717,8 @@
         "question_36wNwy": {
           "type": "question",
           "settings": {
-            "question": "What does the warranty cover?",
-            "answer": "<p>Our 1-Year warranty covers all core electrical and mechanical components on the bike, excluding damage caused by normal wear and tear, accidents, or misuse.</p>",
+            "question": "Does it run on a standard Canadian wall outlet?",
+            "answer": "<p>Yes, absolutely. The 1500W heating unit plugs directly into any standard Canadian 110V/120V household wall outlet. No dedicated 240V wiring or expensive electrician visits are needed.</p>",
             "question_color": "",
             "question_font_size_desktop": 16,
             "question_font_size_mobile": 15,
@@ -787,8 +732,8 @@
         "question_e4hhdC": {
           "type": "question",
           "settings": {
-            "question": "Does the bike come fully assembled?",
-            "answer": "<p>The V8 Ultra arrives 85% pre-assembled in the box. Simply attach the front wheel, handlebars, headlight, and pedals (plus the optional passenger seat and foot pegs), inflate the tires, and you are ready to ride.</p>",
+            "question": "What materials is it made of, and is there any plastic smell?",
+            "answer": "<p>The Sauna Pod is crafted with 100% natural, unbleached double-layer cotton canvas and food-grade TPU windows. Because it uses non-toxic, heat-stable materials, there is zero toxic off-gassing, harsh fumes, or melted plastic smells when running at full heat.</p>",
             "question_color": "",
             "question_font_size_desktop": 16,
             "question_font_size_mobile": 15,
@@ -802,8 +747,8 @@
         "question_HKe6yp": {
           "type": "question",
           "settings": {
-            "question": "What is the difference between Single and Dual Battery?",
-            "answer": "<p>The Single Battery setup offers up to 37+ miles on pure throttle and 60+ miles on pedal assist. The Dual Battery configuration doubles the capacity, delivering up to 74+ miles on throttle and 100+ miles on pedal assist.</p>",
+            "question": "Is the Ice Pod really 100% free with this bundle?",
+            "answer": "<p>Yes! When you order The Sauna Pod, you receive The Standard Ice Pod plus the all-weather insulated thermal cover completely free of charge (over $400 CAD in added retail value), giving you a full at-home contrast therapy station right out of the box.</p>",
             "question_color": "",
             "question_font_size_desktop": 16,
             "question_font_size_mobile": 15,
@@ -817,8 +762,8 @@
         "question_V76RRe": {
           "type": "question",
           "settings": {
-            "question": "How long does shipping take and how is it delivered?",
-            "answer": "<p>Orders are dispatched directly from our US facility with free 2–7 day delivery. Tracking information will be emailed to you within 1–2 business days after placing your order.</p>",
+            "question": "How does shipping and the 30-day home trial work across Canada?",
+            "answer": "<p>We ship nationwide with fast 2–5 business day delivery, and all orders are guaranteed 100% free of surprise customs or duty fees. You also get a 30-day risk-free trial: use both the sauna and the cold plunge at home for a month, and if you are not satisfied, return it for a refund.</p>",
             "question_color": "",
             "question_font_size_desktop": 16,
             "question_font_size_mobile": 15,
@@ -874,7 +819,6 @@
     "related-products",
     "multirow_KUxMGH",
     "cambios_reales_jtNb4Q",
-    "comparison_table_P7Rfba",
     "faq_accordion_m3GjeY"
   ]
 }
