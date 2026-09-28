@@ -984,11 +984,22 @@
     "results_FXmCVN": {
       "type": "results",
       "blocks": {
+        "row_8cFi3W": {
+          "type": "row",
+          "settings": {
+            "percentage": 98,
+            "row_text": "<p>Miles of max range with the dual battery setup, eliminating daily charging anxiety.</p>",
+            "row_text_color": "",
+            "row_text_font_size_desktop": 15,
+            "row_text_font_size_mobile": 14,
+            "row_text_font_weight": "400"
+          }
+        },
         "row_ta6Be4": {
           "type": "row",
           "settings": {
-            "percentage": 90,
-            "row_text": "<p>Noticed that this product has significantly improved their life.</p>",
+            "percentage": 32,
+            "row_text": "<p>Miles per hour top unlocked speed powered by the 1000W peak high-torque motor</p>",
             "row_text_color": "",
             "row_text_font_size_desktop": 15,
             "row_text_font_size_mobile": 14,
@@ -998,8 +1009,8 @@
         "row_znUNtq": {
           "type": "row",
           "settings": {
-            "percentage": 90,
-            "row_text": "<p>Noticed that this product has significantly improved their life.</p>",
+            "percentage": 96,
+            "row_text": "<p>Positive feedback from riders praising the smooth dual suspension and built-in Bluetooth audio.</p>",
             "row_text_color": "",
             "row_text_font_size_desktop": 15,
             "row_text_font_size_mobile": 14,
@@ -1008,6 +1019,7 @@
         }
       },
       "block_order": [
+        "row_8cFi3W",
         "row_ta6Be4",
         "row_znUNtq"
       ],
@@ -1023,11 +1035,11 @@
         "text_font_size_desktop": 16,
         "text_font_size_mobile": 15,
         "text_font_weight": "400",
-        "text": "<p>Talk about results of your customers and how your product improved their life.</p>",
+        "text": "<p>Engineered for everyday commutes and off-road weekends, tested by real riders across the country.</p>",
         "image": "shopify://shop_images/Transparent_V8_Ultra_1.webp",
         "color_scheme": "background-1",
         "layout": "results_second",
-        "results_headline": "RESULTS HEADING",
+        "results_headline": "RIDER SATISFACTION & CAPABILITY",
         "results_headline_size": "h2",
         "results_headline_alignment": "left",
         "results_headline_color": "#EB5E28",
