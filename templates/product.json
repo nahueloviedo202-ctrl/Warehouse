@@ -33,25 +33,6 @@
             "gap_mobile": 6
           }
         },
-        "press_logos_LWbnV8": {
-          "type": "press_logos",
-          "settings": {
-            "heading": "",
-            "img_height": 50,
-            "text_size": 22,
-            "logos_gap": 40,
-            "logo_opacity": 40,
-            "grayscale": 100,
-            "text_color": "#1c1c1c",
-            "border_color": "#e8e8e8",
-            "logo_1_text": "MUJERHOY",
-            "logo_2_text": "ELLE",
-            "logo_3_text": "VOGUE",
-            "logo_4_text": "Women's Health",
-            "logo_5_text": "",
-            "logo_6_text": ""
-          }
-        },
         "title": {
           "type": "title",
           "settings": {
@@ -224,8 +205,8 @@
             "show_item_3": true,
             "icon_3": "shipping_box",
             "label_3": "30-Day Hassle-Free Returns",
-            "background_color": "#ffffff",
-            "border_color": "#e5e5e5",
+            "background_color": "#EB5E28",
+            "border_color": "#EB5E28",
             "border_width": 1,
             "border_radius": 14,
             "padding_vertical": 20,
@@ -234,9 +215,9 @@
             "padding_vertical_mobile": 16,
             "padding_horizontal_mobile": 16,
             "items_gap_mobile": 8,
-            "icon_color": "#1a1a1a",
+            "icon_color": "#FFFFFF",
             "icon_size": 32,
-            "text_color": "#6b6b6b",
+            "text_color": "#FFFFFF",
             "text_size": 13,
             "label_gap": 8,
             "icon_size_mobile": 28,
@@ -330,7 +311,6 @@
       },
       "block_order": [
         "trustpilot_bar_W4kVKz",
-        "press_logos_LWbnV8",
         "title",
         "description_yT64Wm",
         "price",
@@ -358,11 +338,117 @@
         "enable_video_looping": false,
         "trust_badge_position": "top-right",
         "trust_badge_size": "medium",
-        "background_color": "",
+        "background_color": "#FFFFFF",
         "padding_top": 24,
         "padding_bottom": 60,
         "padding_top_mobile": 28,
         "padding_bottom_mobile": 32
+      }
+    },
+    "community_feed_dJB7VX": {
+      "type": "community-feed",
+      "blocks": {
+        "post_f9bTUm": {
+          "type": "post",
+          "settings": {
+            "image": "shopify://shop_images/5_1200x_3bd296aa-c57e-4279-b5cb-a1b391cf0143.webp",
+            "username": "",
+            "show_verified": false,
+            "caption": "",
+            "link": ""
+          }
+        },
+        "post_RthbYW": {
+          "type": "post",
+          "settings": {
+            "image": "shopify://shop_images/100_0636.webp",
+            "username": "",
+            "show_verified": false,
+            "caption": "",
+            "link": ""
+          }
+        },
+        "post_dN4cYi": {
+          "type": "post",
+          "settings": {
+            "image": "shopify://shop_images/100_0585.webp",
+            "username": "",
+            "show_verified": false,
+            "caption": "",
+            "link": ""
+          }
+        },
+        "post_gLpiiA": {
+          "type": "post",
+          "settings": {
+            "image": "shopify://shop_images/100_0713.webp",
+            "username": "",
+            "show_verified": false,
+            "caption": "",
+            "link": ""
+          }
+        },
+        "post_4VzfN3": {
+          "type": "post",
+          "settings": {
+            "image": "shopify://shop_images/100_0064_800x1067_c71c7b19-db84-4176-9b8f-8b9ce79a5138.webp",
+            "username": "",
+            "show_verified": false,
+            "caption": "",
+            "link": ""
+          }
+        },
+        "post_tGcd3j": {
+          "type": "post",
+          "settings": {
+            "image": "shopify://shop_images/7_800x1067_073a1328-c17b-494c-87e2-bbf5c30e7ebc.webp",
+            "username": "",
+            "show_verified": false,
+            "caption": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "post_f9bTUm",
+        "post_RthbYW",
+        "post_dN4cYi",
+        "post_gLpiiA",
+        "post_4VzfN3",
+        "post_tGcd3j"
+      ],
+      "custom_css": [
+        "@media screen and (max-width: 749px) {.h2 {font-size: calc(var(--font-heading-scale) * 1.7rem); }}",
+        "@media screen and (max-width: 749px) {.section-community_feed_dJB7VX-padding {padding-top: 32px !important; padding-bottom: 32px !important; }}"
+      ],
+      "name": "Comunidad / Feed UGC",
+      "settings": {
+        "heading": "UNLEASH YOUR FREEDOM",
+        "heading_size": "h2",
+        "heading_color": "#EB5E28",
+        "heading_font_size_desktop": 32,
+        "heading_font_size_mobile": 24,
+        "heading_font_weight": "500",
+        "color_scheme": "background-1",
+        "verified_color": "#bc6161",
+        "background_color": "",
+        "media_radius": 18,
+        "enable_center_mode": true,
+        "enable_loop": true,
+        "autoplay": false,
+        "autoplay_speed": 3,
+        "show_dots": true,
+        "show_arrows": false,
+        "slides_desktop": 3.4,
+        "space_desktop": 20,
+        "slides_tablet": 2,
+        "space_tablet": 16,
+        "slides_mobile": 1.4,
+        "space_mobile": 12,
+        "padding_top": 60,
+        "padding_bottom": 40,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40
       }
     },
     "related-products": {
@@ -589,7 +675,7 @@
             "position": "left",
             "heading": "Carbon-Fiber Dual Suspension",
             "text": "<p>Soaks up rough trails, potholes, and terrain vibrations for unmatched stability and long-ride comfort.</p>",
-            "heading_color": "#9A031E",
+            "heading_color": "#FB8B24",
             "heading_font_size_desktop": 20,
             "heading_font_size_mobile": 16,
             "heading_font_weight": "500",
@@ -605,7 +691,7 @@
             "position": "left",
             "heading": "Integrated Bluetooth Audio",
             "text": "<p>Built-in speaker housed directly in the front headlight to stream your favorite playlists on the go.</p>",
-            "heading_color": "#9A031E",
+            "heading_color": "#FB8B24",
             "heading_font_size_desktop": 20,
             "heading_font_size_mobile": 14,
             "heading_font_weight": "500",
@@ -621,7 +707,7 @@
             "position": "right",
             "heading": "1000W Peak High-Torque Motor",
             "text": "<p>Instant acceleration and steep hill climbing with top speeds reaching up to 32 MPH.</p>",
-            "heading_color": "#9A031E",
+            "heading_color": "#FB8B24",
             "heading_font_size_desktop": 20,
             "heading_font_size_mobile": 14,
             "heading_font_weight": "500",
@@ -637,7 +723,7 @@
             "position": "right",
             "heading": "Dual Battery Long-Range Pack",
             "text": "<p>Dual 48V 15Ah waterproof batteries delivering up to 100+ miles of pedal-assisted freedom.</p>",
-            "heading_color": "#9A031E",
+            "heading_color": "#FB8B24",
             "heading_font_size_desktop": 20,
             "heading_font_size_mobile": 14,
             "heading_font_weight": "500",
@@ -646,53 +732,13 @@
             "text_font_size_mobile": 12,
             "text_font_weight": "400"
           }
-        },
-        "badge_PXkJ9W": {
-          "type": "badge",
-          "settings": {
-            "icon": "eye",
-            "label": "UL 2849 & 2271 Certified"
-          }
-        },
-        "badge_idaLKH": {
-          "type": "badge",
-          "settings": {
-            "icon": "leaf",
-            "label": "20x4.0\" All-Terrain Tires"
-          }
-        },
-        "badge_QUwbUH": {
-          "type": "badge",
-          "settings": {
-            "icon": "heart",
-            "label": "Shimano 7-Speed Gears"
-          }
-        },
-        "badge_48EGBr": {
-          "type": "badge",
-          "settings": {
-            "icon": "lock",
-            "label": "NFC Keyless Security"
-          }
-        },
-        "badge_pzdxBr": {
-          "type": "badge",
-          "settings": {
-            "icon": "return",
-            "label": "1-Year Full Warranty"
-          }
         }
       },
       "block_order": [
         "feature_TKe9aE",
         "feature_HyNcKQ",
         "feature_BmGDdQ",
-        "feature_GTkzQr",
-        "badge_PXkJ9W",
-        "badge_idaLKH",
-        "badge_QUwbUH",
-        "badge_48EGBr",
-        "badge_pzdxBr"
+        "feature_GTkzQr"
       ],
       "custom_css": [
         "@media screen and (max-width: 749px) {.h2 {font-size: calc(var(--font-heading-scale) * 1.7rem); }}",
@@ -703,7 +749,7 @@
         "heading": "Why Riders Love the V8 Ultra",
         "heading_size": "h2",
         "heading_italic": false,
-        "heading_color": "#FB8B24",
+        "heading_color": "#EB5E28",
         "heading_font_size_desktop": 32,
         "heading_font_size_mobile": 24,
         "heading_font_weight": "500",
@@ -712,10 +758,10 @@
         "circle_size_mobile": 220,
         "color_scheme": "background-1",
         "accent_color_scheme": "accent-2",
-        "background_color": "#ffffff",
+        "background_color": "#FFFFFF",
         "circle_border_color": "#000000",
         "badge_icon_bg_color": "",
-        "badge_icon_svg_color": "#FB8B24",
+        "badge_icon_svg_color": "#9A031E",
         "text_alignment": "facing-center",
         "padding_top": 60,
         "padding_bottom": 60,
@@ -723,72 +769,241 @@
         "padding_bottom_mobile": 40
       }
     },
-    "review_slider_pmwAwt": {
-      "type": "review-slider",
+    "multirow_P7k4qj": {
+      "type": "multirow",
       "blocks": {
-        "review_TdEpgg": {
-          "type": "review",
+        "row_cFNrzY": {
+          "type": "row",
           "settings": {
-            "text": "Lo empecé a usar hace unas semanas y ya noto una gran diferencia. Muy recomendable.",
-            "author": "María D.",
-            "rating": 5
+            "caption": "Caption",
+            "heading": "Row",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "button_label": "Button label",
+            "button_link": "",
+            "button_background_color": "",
+            "button_text_color": "",
+            "button_border_color": "",
+            "heading_font_size_desktop": 40,
+            "heading_font_size_mobile": 24,
+            "text_font_size_desktop": 16,
+            "text_font_size_mobile": 14,
+            "icon_list_bg_color": "#F5C518",
+            "icon_list_icon_color": "#1A1A1A",
+            "icon_list_text_color": "",
+            "icon_list_icon_size_desktop": 28,
+            "icon_list_icon_size_mobile": 24,
+            "icon_list_text_size_desktop": 16,
+            "icon_list_text_size_mobile": 14,
+            "icon_list_icon_gap_desktop": 12,
+            "icon_list_icon_gap_mobile": 10,
+            "icon_list_row_gap_desktop": 16,
+            "icon_list_row_gap_mobile": 12,
+            "icon_list_item_1_text": "",
+            "icon_list_item_2_text": "",
+            "icon_list_item_3_text": "",
+            "icon_list_item_4_text": "",
+            "icon_list_item_5_text": "",
+            "icon_list_item_6_text": "",
+            "icon_list_item_7_text": "",
+            "icon_list_item_8_text": "",
+            "stat_item_1_number": "",
+            "stat_item_1_text": "",
+            "stat_item_2_number": "",
+            "stat_item_2_text": "",
+            "stat_item_3_number": "",
+            "stat_item_3_text": "",
+            "stat_item_4_number": "",
+            "stat_item_4_text": "",
+            "stat_item_5_number": "",
+            "stat_item_5_text": "",
+            "stat_item_6_number": "",
+            "stat_item_6_text": "",
+            "stat_item_7_number": "",
+            "stat_item_7_text": "",
+            "stat_item_8_number": "",
+            "stat_item_8_text": "",
+            "stat_bg_color": "#0d0d0d",
+            "stat_border_color": "#e9be47",
+            "stat_number_color_start": "#e7b944",
+            "stat_number_color_end": "#ffed68",
+            "stat_text_color": "#ffffff",
+            "stat_border_width": 2,
+            "stat_border_radius": 40,
+            "stat_number_font_size": 56,
+            "stat_text_font_size": 18,
+            "stat_number_font_size_mobile": 40,
+            "stat_text_font_size_mobile": 15,
+            "stat_padding_desktop": 32,
+            "stat_gap_desktop": 32,
+            "stat_padding_mobile": 20,
+            "stat_gap_mobile": 16
           }
         },
-        "review_EccX6C": {
-          "type": "review",
+        "row_pPpfpC": {
+          "type": "row",
           "settings": {
-            "text": "Excelente calidad. Llegó rápido y cumplió totalmente mis expectativas.",
-            "author": "Sofía P.",
-            "rating": 5
+            "caption": "Caption",
+            "heading": "Row",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "button_label": "Button label",
+            "button_link": "",
+            "button_background_color": "",
+            "button_text_color": "",
+            "button_border_color": "",
+            "heading_font_size_desktop": 40,
+            "heading_font_size_mobile": 24,
+            "text_font_size_desktop": 16,
+            "text_font_size_mobile": 14,
+            "icon_list_bg_color": "#F5C518",
+            "icon_list_icon_color": "#1A1A1A",
+            "icon_list_text_color": "",
+            "icon_list_icon_size_desktop": 28,
+            "icon_list_icon_size_mobile": 24,
+            "icon_list_text_size_desktop": 16,
+            "icon_list_text_size_mobile": 14,
+            "icon_list_icon_gap_desktop": 12,
+            "icon_list_icon_gap_mobile": 10,
+            "icon_list_row_gap_desktop": 16,
+            "icon_list_row_gap_mobile": 12,
+            "icon_list_item_1_text": "",
+            "icon_list_item_2_text": "",
+            "icon_list_item_3_text": "",
+            "icon_list_item_4_text": "",
+            "icon_list_item_5_text": "",
+            "icon_list_item_6_text": "",
+            "icon_list_item_7_text": "",
+            "icon_list_item_8_text": "",
+            "stat_item_1_number": "",
+            "stat_item_1_text": "",
+            "stat_item_2_number": "",
+            "stat_item_2_text": "",
+            "stat_item_3_number": "",
+            "stat_item_3_text": "",
+            "stat_item_4_number": "",
+            "stat_item_4_text": "",
+            "stat_item_5_number": "",
+            "stat_item_5_text": "",
+            "stat_item_6_number": "",
+            "stat_item_6_text": "",
+            "stat_item_7_number": "",
+            "stat_item_7_text": "",
+            "stat_item_8_number": "",
+            "stat_item_8_text": "",
+            "stat_bg_color": "#0d0d0d",
+            "stat_border_color": "#e9be47",
+            "stat_number_color_start": "#e7b944",
+            "stat_number_color_end": "#ffed68",
+            "stat_text_color": "#ffffff",
+            "stat_border_width": 2,
+            "stat_border_radius": 40,
+            "stat_number_font_size": 56,
+            "stat_text_font_size": 18,
+            "stat_number_font_size_mobile": 40,
+            "stat_text_font_size_mobile": 15,
+            "stat_padding_desktop": 32,
+            "stat_gap_desktop": 32,
+            "stat_padding_mobile": 20,
+            "stat_gap_mobile": 16
           }
         },
-        "review_VgTKBY": {
-          "type": "review",
+        "row_gMxUcY": {
+          "type": "row",
           "settings": {
-            "text": "Producto de muy buena calidad y atención impecable. Estoy muy conforme.",
-            "author": "Camila M.",
-            "rating": 5
+            "caption": "Caption",
+            "heading": "Row",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "button_label": "Button label",
+            "button_link": "",
+            "button_background_color": "",
+            "button_text_color": "",
+            "button_border_color": "",
+            "heading_font_size_desktop": 40,
+            "heading_font_size_mobile": 24,
+            "text_font_size_desktop": 16,
+            "text_font_size_mobile": 14,
+            "icon_list_bg_color": "#F5C518",
+            "icon_list_icon_color": "#1A1A1A",
+            "icon_list_text_color": "",
+            "icon_list_icon_size_desktop": 28,
+            "icon_list_icon_size_mobile": 24,
+            "icon_list_text_size_desktop": 16,
+            "icon_list_text_size_mobile": 14,
+            "icon_list_icon_gap_desktop": 12,
+            "icon_list_icon_gap_mobile": 10,
+            "icon_list_row_gap_desktop": 16,
+            "icon_list_row_gap_mobile": 12,
+            "icon_list_item_1_text": "",
+            "icon_list_item_2_text": "",
+            "icon_list_item_3_text": "",
+            "icon_list_item_4_text": "",
+            "icon_list_item_5_text": "",
+            "icon_list_item_6_text": "",
+            "icon_list_item_7_text": "",
+            "icon_list_item_8_text": "",
+            "stat_item_1_number": "",
+            "stat_item_1_text": "",
+            "stat_item_2_number": "",
+            "stat_item_2_text": "",
+            "stat_item_3_number": "",
+            "stat_item_3_text": "",
+            "stat_item_4_number": "",
+            "stat_item_4_text": "",
+            "stat_item_5_number": "",
+            "stat_item_5_text": "",
+            "stat_item_6_number": "",
+            "stat_item_6_text": "",
+            "stat_item_7_number": "",
+            "stat_item_7_text": "",
+            "stat_item_8_number": "",
+            "stat_item_8_text": "",
+            "stat_bg_color": "#0d0d0d",
+            "stat_border_color": "#e9be47",
+            "stat_number_color_start": "#e7b944",
+            "stat_number_color_end": "#ffed68",
+            "stat_text_color": "#ffffff",
+            "stat_border_width": 2,
+            "stat_border_radius": 40,
+            "stat_number_font_size": 56,
+            "stat_text_font_size": 18,
+            "stat_number_font_size_mobile": 40,
+            "stat_text_font_size_mobile": 15,
+            "stat_padding_desktop": 32,
+            "stat_gap_desktop": 32,
+            "stat_padding_mobile": 20,
+            "stat_gap_mobile": 16
           }
         }
       },
       "block_order": [
-        "review_TdEpgg",
-        "review_EccX6C",
-        "review_VgTKBY"
+        "row_cFNrzY",
+        "row_pPpfpC",
+        "row_gMxUcY"
       ],
-      "name": "Slider de reseñas",
+      "name": "t:sections.multirow.presets.name",
       "settings": {
-        "heading": "Cambios reales",
-        "heading_size": "h2",
-        "heading_color": "#000000",
-        "heading_font_size_desktop": 36,
-        "heading_font_size_mobile": 26,
-        "heading_font_weight": "600",
-        "subheading": "Opiniones de quienes ya eligieron Vita Glow",
-        "subheading_color": "#9c796f",
-        "subheading_font_size_desktop": 18,
-        "subheading_font_size_mobile": 15,
-        "subheading_font_weight": "500",
-        "card_background_color": "#f6f3f1",
-        "card_border_color": "#d1816e",
-        "card_border_width": 1,
-        "card_corner_radius": 16,
-        "text_color": "#2b2b2b",
-        "author_color": "#1a1a1a",
-        "star_color": "#f5a623",
-        "cards_per_row_desktop": 3,
-        "cards_per_row_tablet": 2,
-        "cards_per_row_mobile": 1,
-        "card_gap": 24,
-        "show_arrows": false,
-        "hide_arrows_mobile": false,
-        "arrows_color": "#b5651d",
-        "color_scheme": "background-1",
-        "background_color": "#ffffff",
-        "padding_top": 0,
-        "padding_bottom": 60,
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 40
+        "image_height": "medium",
+        "desktop_image_width": "medium",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "image_layout": "alternate-left",
+        "section_color_scheme": "background-1",
+        "row_color_scheme": "background-1",
+        "background_color": "",
+        "row_content_padding_top": 96,
+        "row_content_padding_bottom": 112,
+        "row_content_padding_top_mobile": 48,
+        "row_content_padding_bottom_mobile": 48,
+        "stat_disclaimer": "<p>*According to survey responses from 5,000+ customers.</p>",
+        "stat_disclaimer_color": "#ffffff",
+        "stat_disclaimer_font_size": 14,
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 28,
+        "padding_bottom_mobile": 28
       }
     },
     "feature_cards_rC7d6a": {
@@ -861,11 +1076,11 @@
         "heading_size": "h2",
         "heading_italic": false,
         "subheading": "<p>Engineered with raw power, rugged suspension, and premium tech to elevate every ride.</p>",
-        "heading_color": "#FB8B24",
+        "heading_color": "#EB5E28",
         "heading_font_size_desktop": 32,
         "heading_font_size_mobile": 26,
         "heading_font_weight": "500",
-        "subheading_color": "#9A031E",
+        "subheading_color": "#FB8B24",
         "subheading_font_size_desktop": 18,
         "subheading_font_size_mobile": 15,
         "subheading_font_weight": "400",
@@ -880,334 +1095,77 @@
         "columns_desktop": 3,
         "columns_mobile": "1",
         "swipe_on_mobile": true,
-        "padding_top": 0,
+        "padding_top": 40,
         "padding_bottom": 60,
         "padding_top_mobile": 0,
         "padding_bottom_mobile": 32
       }
     },
-    "comparison_slider_NtzU6b": {
-      "type": "comparison-slider",
+    "review_slider_pmwAwt": {
+      "type": "review-slider",
       "blocks": {
-        "simple_image_QRL6bV": {
-          "type": "simple_image",
+        "review_TdEpgg": {
+          "type": "review",
           "settings": {
-            "image_alt": "",
-            "image_width": 530,
-            "image_height": 500,
-            "image_height_mobile": 330,
-            "object_fit": "cover",
-            "image_border_radius": 10
+            "text": "Lo empecé a usar hace unas semanas y ya noto una gran diferencia. Muy recomendable.",
+            "author": "María D.",
+            "rating": 5
           }
         },
-        "text_content_4pHk8N": {
-          "type": "text_content",
+        "review_EccX6C": {
+          "type": "review",
           "settings": {
-            "title": "Hecho para pieles maduras y hermosas",
-            "heading_size": "h2",
-            "heading_italic": true,
-            "accent_color_scheme": "accent-2",
-            "text": "",
-            "feature_1_heading": "Suaviza la textura sin dejar líneas.",
-            "feature_1_text": "<p>Su fórmula ligera se adapta a la piel sin marcar arrugas ni líneas de expresión, dejando un acabado suave y uniforme.</p>",
-            "feature_2_heading": "Se adapta a tu tono exacto, al instante.",
-            "feature_2_text": "<p>Sus pigmentos inteligentes se adaptan a tu piel para lograr un tono uniforme y natural, sin acabados anaranjados.</p>",
-            "circle_background_color": "#e3d0c9",
-            "icon_color": "#2b2b2b",
-            "label_color": "#000000",
-            "circle_size_desktop": 96,
-            "circle_size_mobile": 72,
-            "badge_1_icon": "dermatologist",
-            "badge_1_label": "Fórmula hidratante",
-            "badge_2_icon": "skin_layers",
-            "badge_2_label": "Acabado satinado natural",
-            "badge_3_icon": "none",
-            "badge_3_label": "",
-            "badge_4_icon": "none",
-            "badge_4_label": "",
-            "button_label": "Comprar ahora",
-            "link": "#informacion-producto",
-            "button_style_secondary": false,
-            "button_full_width": false,
-            "button_bg_color": "#bc6161",
-            "button_text_color": "#ffffff",
-            "button_border_color": "#bc6161",
-            "button_border_width": 0,
-            "button_border_radius": 0,
-            "button_font_size": 0,
-            "button_font_weight": "inherit",
-            "button_padding_v": 0,
-            "button_padding_h": 0,
-            "desktop_content_alignment": "left",
-            "mobile_content_alignment": "left",
-            "heading_color": "#000000",
-            "heading_font_size_desktop": 32,
-            "heading_font_size_mobile": 24,
-            "heading_font_weight": "600",
-            "text_color": "#000000",
-            "text_font_size_desktop": 16,
-            "text_font_size_mobile": 15,
-            "text_font_weight": "400",
-            "feature_heading_color": "#d1816e",
-            "feature_heading_font_size_desktop": 20,
-            "feature_heading_font_size_mobile": 16,
-            "feature_heading_font_weight": "700",
-            "feature_text_color": "",
-            "feature_text_font_size_desktop": 15,
-            "feature_text_font_size_mobile": 14,
-            "feature_text_font_weight": "400"
+            "text": "Excelente calidad. Llegó rápido y cumplió totalmente mis expectativas.",
+            "author": "Sofía P.",
+            "rating": 5
+          }
+        },
+        "review_VgTKBY": {
+          "type": "review",
+          "settings": {
+            "text": "Producto de muy buena calidad y atención impecable. Estoy muy conforme.",
+            "author": "Camila M.",
+            "rating": 5
           }
         }
       },
       "block_order": [
-        "simple_image_QRL6bV",
-        "text_content_4pHk8N"
+        "review_TdEpgg",
+        "review_EccX6C",
+        "review_VgTKBY"
       ],
-      "custom_css": [
-        "@media screen and (max-width: 749px) {.h2 {font-size: calc(var(--font-heading-scale) * 1.7rem); }}",
-        "@media screen and (max-width: 749px) {.section-comparison_slider_NtzU6b-padding {padding-top: 32px !important; padding-bottom: 32px !important; }}"
-      ],
-      "name": "Before & After slider",
+      "name": "Slider de reseñas",
       "settings": {
-        "color_scheme": "background-1",
-        "background_color": "#f3f1f0",
-        "padding_top": 60,
-        "padding_bottom": 60,
-        "padding_top_mobile": 40,
-        "padding_bottom_mobile": 40
-      }
-    },
-    "ingredient_spotlight_wmhrkr": {
-      "type": "ingredient-spotlight",
-      "blocks": {
-        "ingredient_d8jUmn": {
-          "type": "ingredient",
-          "disabled": true,
-          "settings": {
-            "position": "top_left",
-            "icon": "hyaluronic_acid",
-            "title": "Ácido Hialurónico",
-            "text": "Hidratación profunda y rellena la piel",
-            "circle_bg_color": "",
-            "icon_color": "",
-            "title_color": "",
-            "title_font_size_desktop": 13,
-            "title_font_size_mobile": 12,
-            "title_font_weight": "700",
-            "text_color": "",
-            "text_font_size_desktop": 11,
-            "text_font_size_mobile": 11,
-            "text_font_weight": "400"
-          }
-        },
-        "ingredient_inxJyp": {
-          "type": "ingredient",
-          "disabled": true,
-          "settings": {
-            "position": "top_right",
-            "icon": "vitamin_e",
-            "title": "Vitamina E",
-            "text": "Nutre y protege contra el daño ambiental",
-            "circle_bg_color": "",
-            "icon_color": "",
-            "title_color": "",
-            "title_font_size_desktop": 13,
-            "title_font_size_mobile": 12,
-            "title_font_weight": "700",
-            "text_color": "",
-            "text_font_size_desktop": 11,
-            "text_font_size_mobile": 11,
-            "text_font_weight": "400"
-          }
-        },
-        "ingredient_wDMkfp": {
-          "type": "ingredient",
-          "disabled": true,
-          "settings": {
-            "position": "bottom_left",
-            "icon": "collagen",
-            "title": "Colágeno",
-            "text": "Mejora la elasticidad y firmeza",
-            "circle_bg_color": "",
-            "icon_color": "",
-            "title_color": "",
-            "title_font_size_desktop": 13,
-            "title_font_size_mobile": 12,
-            "title_font_weight": "700",
-            "text_color": "",
-            "text_font_size_desktop": 11,
-            "text_font_size_mobile": 11,
-            "text_font_weight": "400"
-          }
-        },
-        "ingredient_Rr49Fa": {
-          "type": "ingredient",
-          "disabled": true,
-          "settings": {
-            "position": "bottom_right",
-            "icon": "spf",
-            "title": "SPF 50",
-            "text": "Protección solar de amplio espectro contra UVA y UVB",
-            "circle_bg_color": "",
-            "icon_color": "",
-            "title_color": "",
-            "title_font_size_desktop": 13,
-            "title_font_size_mobile": 12,
-            "title_font_weight": "700",
-            "text_color": "",
-            "text_font_size_desktop": 11,
-            "text_font_size_mobile": 11,
-            "text_font_weight": "400"
-          }
-        },
-        "benefit_EPWdb4": {
-          "type": "benefit",
-          "settings": {
-            "heading": "Complejo antienvejecimiento avanzado de InfiniteLove",
-            "text": "<p>Un potente antioxidante que nutre la piel y la protege del daño ambiental y los signos del envejecimiento.</p>",
-            "heading_color": "#d1816e",
-            "heading_font_size_desktop": 20,
-            "heading_font_size_mobile": 17,
-            "heading_font_weight": "700",
-            "text_color": "",
-            "text_font_size_desktop": 15,
-            "text_font_size_mobile": 14,
-            "text_font_weight": "400"
-          }
-        },
-        "benefit_qVhbeE": {
-          "type": "benefit",
-          "settings": {
-            "heading": "Ácido hialurónico + colágeno",
-            "text": "<p>Este dúo actúa en profundidad para hidratar, mejorar la elasticidad y reducir la apariencia de líneas finas y arrugas.</p>",
-            "heading_color": "#d1816e",
-            "heading_font_size_desktop": 20,
-            "heading_font_size_mobile": 17,
-            "heading_font_weight": "700",
-            "text_color": "",
-            "text_font_size_desktop": 15,
-            "text_font_size_mobile": 14,
-            "text_font_weight": "400"
-          }
-        },
-        "benefit_inTkiE": {
-          "type": "benefit",
-          "settings": {
-            "heading": "Vitamina E",
-            "text": "<p>Una potente mezcla de 4 ingredientes clínicamente probados que hidratan profundamente, mejoran la firmeza y revelan una piel más luminosa y rejuvenecida.</p>",
-            "heading_color": "#d1816e",
-            "heading_font_size_desktop": 20,
-            "heading_font_size_mobile": 17,
-            "heading_font_weight": "700",
-            "text_color": "",
-            "text_font_size_desktop": 15,
-            "text_font_size_mobile": 14,
-            "text_font_weight": "400"
-          }
-        },
-        "badge_V9LQtq": {
-          "type": "badge",
-          "settings": {
-            "icon": "color_adapt",
-            "label": "Tecnología de adaptación de color",
-            "icon_bg_color": "#f6f3f1",
-            "icon_color": "#bc6161",
-            "label_color": "",
-            "label_font_size_desktop": 12,
-            "label_font_size_mobile": 11,
-            "label_font_weight": "400"
-          }
-        },
-        "badge_73xtjy": {
-          "type": "badge",
-          "settings": {
-            "icon": "anti_aging",
-            "label": "Complejo antienvejecimiento",
-            "icon_bg_color": "#f6f3f1",
-            "icon_color": "#bc6161",
-            "label_color": "",
-            "label_font_size_desktop": 12,
-            "label_font_size_mobile": 11,
-            "label_font_weight": "400"
-          }
-        }
-      },
-      "block_order": [
-        "ingredient_d8jUmn",
-        "ingredient_inxJyp",
-        "ingredient_wDMkfp",
-        "ingredient_Rr49Fa",
-        "benefit_EPWdb4",
-        "benefit_qVhbeE",
-        "benefit_inTkiE",
-        "badge_V9LQtq",
-        "badge_73xtjy"
-      ],
-      "custom_css": [
-        "@media screen and (max-width: 749px) {.h2 {font-size: calc(var(--font-heading-scale) * 1.7rem); }}",
-        "@media screen and (max-width: 749px) {.section-ingredient_spotlight_wmhrkr-padding {padding-top: 32px !important; padding-bottom: 32px !important; }}"
-      ],
-      "name": "Ingredientes destacados",
-      "settings": {
-        "heading": "Hasta 12 horas de uso cómodo",
+        "heading": "Cambios reales",
         "heading_size": "h2",
-        "heading_italic": true,
         "heading_color": "#000000",
-        "heading_font_size_desktop": 40,
-        "heading_font_size_mobile": 40,
+        "heading_font_size_desktop": 36,
+        "heading_font_size_mobile": 26,
         "heading_font_weight": "600",
-        "layout": "image_first",
-        "show_connector_lines": false,
-        "line_color": "",
-        "show_sparkle": false,
-        "circle_size_desktop": 90,
-        "circle_size_mobile": 65,
+        "subheading": "Opiniones de quienes ya eligieron Vita Glow",
+        "subheading_color": "#9c796f",
+        "subheading_font_size_desktop": 18,
+        "subheading_font_size_mobile": 15,
+        "subheading_font_weight": "500",
+        "card_background_color": "#f6f3f1",
+        "card_border_color": "#d1816e",
+        "card_border_width": 1,
+        "card_corner_radius": 16,
+        "text_color": "#2b2b2b",
+        "author_color": "#1a1a1a",
+        "star_color": "#f5a623",
+        "cards_per_row_desktop": 3,
+        "cards_per_row_tablet": 2,
+        "cards_per_row_mobile": 1,
+        "card_gap": 24,
+        "show_arrows": false,
+        "hide_arrows_mobile": false,
+        "arrows_color": "#b5651d",
         "color_scheme": "background-1",
-        "accent_color_scheme": "accent-2",
-        "background_color": "",
-        "padding_top": 60,
+        "background_color": "#ffffff",
+        "padding_top": 0,
         "padding_bottom": 60,
-        "padding_top_mobile": 40,
-        "padding_bottom_mobile": 40
-      }
-    },
-    "featured_quote_Y4GLCm": {
-      "type": "featured-quote",
-      "blocks": {
-        "quote_yHag9T": {
-          "type": "quote",
-          "settings": {
-            "text": "Tenía dudas sobre si esto marcaría alguna diferencia en mi cutis. Puedo decir que es muy fácil de usar, no se acumula en las arrugas, sin duda mejora el aspecto de mi piel y, como tiene un FPS 50, es una auténtica revolución para una mujer de 70 años .",
-            "author": "Gisela Rodriguez"
-          }
-        }
-      },
-      "block_order": [
-        "quote_yHag9T"
-      ],
-      "custom_css": [
-        "@media screen and (max-width: 749px) {.section-featured_quote_Y4GLCm-padding {padding-top: 32px !important; padding-bottom: 32px !important; }}"
-      ],
-      "name": "Cita destacada",
-      "settings": {
-        "color_scheme": "background-1",
-        "background_color": "#f3f1f0",
-        "text_alignment": "center",
-        "quote_max_width": 800,
-        "quote_font_size": 24,
-        "quote_font_size_mobile": 18,
-        "quote_italic": true,
-        "quote_color": "#d1816e",
-        "quote_font_weight": "500",
-        "avatar_size": 80,
-        "avatar_border_width": 4,
-        "avatar_border_color": "#d1816e",
-        "author_color": "",
-        "author_font_size": 14,
-        "author_font_weight": "500",
-        "padding_top": 60,
-        "padding_bottom": 60,
-        "padding_top_mobile": 40,
+        "padding_top_mobile": 0,
         "padding_bottom_mobile": 40
       }
     },
@@ -1327,112 +1285,20 @@
         "padding_top_mobile": 40,
         "padding_bottom_mobile": 40
       }
-    },
-    "community_feed_dJB7VX": {
-      "type": "community-feed",
-      "blocks": {
-        "post_dN4cYi": {
-          "type": "post",
-          "settings": {
-            "username": "@laura.m",
-            "show_verified": true,
-            "caption": "Ahora entiendo por qué es tan recomendado",
-            "link": ""
-          }
-        },
-        "post_gLpiiA": {
-          "type": "post",
-          "settings": {
-            "username": "@clara.r",
-            "show_verified": true,
-            "caption": "Piel más suave desde la primera aplicación",
-            "link": ""
-          }
-        },
-        "post_4VzfN3": {
-          "type": "post",
-          "settings": {
-            "username": "@vane.o",
-            "show_verified": true,
-            "caption": "Lo mejor que he probado en mucho tiempo",
-            "link": ""
-          }
-        },
-        "post_tGcd3j": {
-          "type": "post",
-          "settings": {
-            "username": "@miriam.l",
-            "show_verified": true,
-            "caption": "Excelente para ayudar a mantener la hidratación",
-            "link": ""
-          }
-        },
-        "post_WjYnLG": {
-          "type": "post",
-          "settings": {
-            "username": "@sandra.v",
-            "show_verified": true,
-            "caption": "Por fin un producto que sí cumple lo que promete",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "post_dN4cYi",
-        "post_gLpiiA",
-        "post_4VzfN3",
-        "post_tGcd3j",
-        "post_WjYnLG"
-      ],
-      "custom_css": [
-        "@media screen and (max-width: 749px) {.h2 {font-size: calc(var(--font-heading-scale) * 1.7rem); }}",
-        "@media screen and (max-width: 749px) {.section-community_feed_dJB7VX-padding {padding-top: 32px !important; padding-bottom: 32px !important; }}"
-      ],
-      "name": "Comunidad / Feed UGC",
-      "settings": {
-        "heading": "Únete a la comunidad @VitaNuraLab",
-        "heading_size": "h2",
-        "heading_color": "",
-        "heading_font_size_desktop": 32,
-        "heading_font_size_mobile": 24,
-        "heading_font_weight": "600",
-        "color_scheme": "background-1",
-        "verified_color": "#bc6161",
-        "background_color": "",
-        "media_radius": 18,
-        "enable_center_mode": true,
-        "enable_loop": true,
-        "autoplay": false,
-        "autoplay_speed": 3,
-        "show_dots": true,
-        "show_arrows": false,
-        "slides_desktop": 3.4,
-        "space_desktop": 20,
-        "slides_tablet": 2,
-        "space_tablet": 16,
-        "slides_mobile": 1.4,
-        "space_mobile": 12,
-        "padding_top": 60,
-        "padding_bottom": 40,
-        "padding_top_mobile": 40,
-        "padding_bottom_mobile": 40
-      }
     }
   },
   "order": [
     "main",
+    "community_feed_dJB7VX",
     "related-products",
     "image_with_text_PV6B8F",
     "1dec15b6-e51f-4064-b412-acf7a98422ef",
     "64c96926-2c31-48fe-bd21-30941bc87822",
     "slideshow_HfVNww",
     "why_we_love_it_3t7fT9",
-    "review_slider_pmwAwt",
+    "multirow_P7k4qj",
     "feature_cards_rC7d6a",
-    "comparison_slider_NtzU6b",
-    "ingredient_spotlight_wmhrkr",
-    "featured_quote_Y4GLCm",
-    "faq_accordion_m3GjeY",
-    "community_feed_dJB7VX"
+    "review_slider_pmwAwt",
+    "faq_accordion_m3GjeY"
   ]
 }
