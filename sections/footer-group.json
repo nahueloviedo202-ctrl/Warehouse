@@ -40,27 +40,11 @@
             "link_6_label": "",
             "link_6_url": ""
           }
-        },
-        "link_list_JM3bmc": {
-          "type": "link_list",
-          "settings": {
-            "heading": "CUSTOMER SUPPORT",
-            "menu": ""
-          }
-        },
-        "col_nosotras": {
-          "type": "link_list",
-          "settings": {
-            "heading": "CONTACT US",
-            "menu": ""
-          }
         }
       },
       "block_order": [
         "text_iPVPew",
-        "custom_links_3dxr37",
-        "link_list_JM3bmc",
-        "col_nosotras"
+        "custom_links_3dxr37"
       ],
       "settings": {
         "background_image": "shopify://shop_images/hero.webp",
