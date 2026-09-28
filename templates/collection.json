@@ -12,57 +12,16 @@
     "convertlab_hero_BVVPtU": {
       "type": "convertlab-hero",
       "blocks": {
-        "bubble_d6qCLG": {
-          "type": "bubble",
-          "settings": {
-            "collection": "cremas-corporales",
-            "image": "shopify://shop_images/Ellipse_155.png",
-            "label": ""
-          }
-        },
-        "bubble_BNK3jD": {
-          "type": "bubble",
-          "settings": {
-            "collection": "cremas-faciales",
-            "image": "shopify://shop_images/Group_55746190.webp",
-            "label": ""
-          }
-        },
-        "bubble_3aPXGD": {
-          "type": "bubble",
-          "settings": {
-            "collection": "mas-vendidos",
-            "image": "shopify://shop_images/Ellipse_154.webp",
-            "label": ""
-          }
-        },
-        "bubble_eXYkf8": {
-          "type": "bubble",
-          "settings": {
-            "collection": "frontpage",
-            "image": "shopify://shop_images/Ellipse_156.webp",
-            "label": ""
-          }
-        },
-        "bubble_VaA6fM": {
-          "type": "bubble",
-          "settings": {
-            "collection": "antiedad",
-            "image": "shopify://shop_images/Group_55746193.png",
-            "label": ""
-          }
-        },
         "slide_8xXmNN": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/banner.webp",
-            "image_mobile": "shopify://shop_images/Gemini_Generated_Image_bguqcbguqcbguqcb.webp",
+            "image": "shopify://shop_images/hero.webp",
             "heading": "Fórmulas que transforman",
             "heading_size": "h1",
             "heading_color": "",
             "heading_font_size_desktop": 48,
             "heading_font_size_mobile": 32,
-            "heading_font_weight": "600",
+            "heading_font_weight": "500",
             "subheading": "Combina tus cuidados favoritos y transforma tu piel con fórmulas efectivas, creando una rutina única cada día.",
             "subheading_color": "#ffffff",
             "subheading_font_size_desktop": 18,
@@ -86,17 +45,12 @@
         }
       },
       "block_order": [
-        "bubble_d6qCLG",
-        "bubble_BNK3jD",
-        "bubble_3aPXGD",
-        "bubble_eXYkf8",
-        "bubble_VaA6fM",
         "slide_8xXmNN"
       ],
       "name": "Hero slideshow",
       "settings": {
         "layout": "full_bleed",
-        "slide_height": "large",
+        "slide_height": "medium",
         "max_height_desktop_vh": 100,
         "max_height_mobile_vh": 100,
         "slider_visual": "dots",
@@ -134,6 +88,7 @@
     },
     "main-collection-banner": {
       "type": "main-collection-banner",
+      "disabled": true,
       "custom_css": [
         "h1 {font-size: 40px; font-weight: 500;}",
         "@media screen and (max-width: 1024px) {h1 {font-size: 36px; }}",
