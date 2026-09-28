@@ -21,7 +21,7 @@
             "separator_text": "from",
             "customer_count": "+500.000",
             "suffix_text": "riders",
-            "star_color": "#00b67a",
+            "star_color": "#EB5E28",
             "empty_star_color": "#dcdce6",
             "star_size": 24,
             "star_size_mobile": 14,
@@ -776,9 +776,9 @@
           "type": "card",
           "settings": {
             "image": "shopify://shop_images/IMG_1897.webp",
-            "heading": "High-Torque 1000W Motor",
+            "heading": "HIGH-TORQUE 1000W MOTOR",
             "text": "<p>Built for rugged trails and steep inclines. Delivers instant acceleration and reaches an exhilarating top speed of up to 32 MPH.</p>",
-            "card_background_color": "#FB8B24",
+            "card_background_color": "#EB5E28",
             "heading_color": "#000000",
             "heading_font_size_desktop": 20,
             "heading_font_size_mobile": 17,
@@ -793,9 +793,9 @@
           "type": "card",
           "settings": {
             "image": "shopify://shop_images/IMG_1898.webp",
-            "heading": "Carbon-Fiber Dual Suspension",
+            "heading": "CARBON-FIBER DUAL SUSPENSION",
             "text": "<p>Smooths out bumps, potholes, and gravel. Paired with 20x4.0\" fat tires for maximum traction and all-day riding comfort.</p>",
-            "card_background_color": "#FB8B24",
+            "card_background_color": "#EB5E28",
             "heading_color": "#000000",
             "heading_font_size_desktop": 20,
             "heading_font_size_mobile": 17,
@@ -810,9 +810,9 @@
           "type": "card",
           "settings": {
             "image": "shopify://shop_images/IMG_1913.webp",
-            "heading": "Dual Battery & Bluetooth Sound",
+            "heading": "DUAL BATTERY AND BLUETOOTH SOUND",
             "text": "<p>Ride up to 100+ miles on a single charge while streaming your favorite music through the headlight’s built-in speaker.</p>",
-            "card_background_color": "#FB8B24",
+            "card_background_color": "#EB5E28",
             "heading_color": "#000000",
             "heading_font_size_desktop": 20,
             "heading_font_size_mobile": 17,
@@ -844,7 +844,7 @@
         "heading_font_size_mobile": 26,
         "heading_font_weight": "500",
         "subheading_color": "#FB8B24",
-        "subheading_font_size_desktop": 18,
+        "subheading_font_size_desktop": 20,
         "subheading_font_size_mobile": 15,
         "subheading_font_weight": "400",
         "color_scheme": "background-1",
@@ -862,74 +862,6 @@
         "padding_bottom": 60,
         "padding_top_mobile": 0,
         "padding_bottom_mobile": 32
-      }
-    },
-    "review_slider_pmwAwt": {
-      "type": "review-slider",
-      "blocks": {
-        "review_TdEpgg": {
-          "type": "review",
-          "settings": {
-            "text": "Lo empecé a usar hace unas semanas y ya noto una gran diferencia. Muy recomendable.",
-            "author": "María D.",
-            "rating": 5
-          }
-        },
-        "review_EccX6C": {
-          "type": "review",
-          "settings": {
-            "text": "Excelente calidad. Llegó rápido y cumplió totalmente mis expectativas.",
-            "author": "Sofía P.",
-            "rating": 5
-          }
-        },
-        "review_VgTKBY": {
-          "type": "review",
-          "settings": {
-            "text": "Producto de muy buena calidad y atención impecable. Estoy muy conforme.",
-            "author": "Camila M.",
-            "rating": 5
-          }
-        }
-      },
-      "block_order": [
-        "review_TdEpgg",
-        "review_EccX6C",
-        "review_VgTKBY"
-      ],
-      "name": "Slider de reseñas",
-      "settings": {
-        "heading": "Cambios reales",
-        "heading_size": "h2",
-        "heading_color": "#000000",
-        "heading_font_size_desktop": 36,
-        "heading_font_size_mobile": 26,
-        "heading_font_weight": "600",
-        "subheading": "Opiniones de quienes ya eligieron Vita Glow",
-        "subheading_color": "#9c796f",
-        "subheading_font_size_desktop": 18,
-        "subheading_font_size_mobile": 15,
-        "subheading_font_weight": "500",
-        "card_background_color": "#f6f3f1",
-        "card_border_color": "#d1816e",
-        "card_border_width": 1,
-        "card_corner_radius": 16,
-        "text_color": "#2b2b2b",
-        "author_color": "#1a1a1a",
-        "star_color": "#f5a623",
-        "cards_per_row_desktop": 3,
-        "cards_per_row_tablet": 2,
-        "cards_per_row_mobile": 1,
-        "card_gap": 24,
-        "show_arrows": false,
-        "hide_arrows_mobile": false,
-        "arrows_color": "#b5651d",
-        "color_scheme": "background-1",
-        "background_color": "#ffffff",
-        "padding_top": 0,
-        "padding_bottom": 60,
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 40
       }
     },
     "faq_accordion_m3GjeY": {
@@ -1025,13 +957,13 @@
       "name": "Preguntas frecuentes",
       "settings": {
         "caption": "",
-        "heading": "Preguntas frecuentes",
+        "heading": "FAQS",
         "heading_size": "h2",
         "heading_italic": true,
         "heading_color": "#000000",
         "heading_font_size_desktop": 32,
         "heading_font_size_mobile": 24,
-        "heading_font_weight": "600",
+        "heading_font_weight": "500",
         "caption_color": "",
         "caption_font_size_desktop": 24,
         "caption_font_size_mobile": 24,
@@ -1060,7 +992,6 @@
     "slideshow_HfVNww",
     "why_we_love_it_3t7fT9",
     "feature_cards_rC7d6a",
-    "review_slider_pmwAwt",
     "faq_accordion_m3GjeY"
   ]
 }
