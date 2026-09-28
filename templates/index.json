@@ -15,18 +15,19 @@
         "slide_gpdUTy": {
           "type": "slide",
           "settings": {
-            "heading": "Fórmulas que transforman tu piel",
+            "image": "shopify://shop_images/hero.webp",
+            "heading": "Direct From Warehouse",
             "heading_size": "h1",
             "heading_color": "",
             "heading_font_size_desktop": 60,
             "heading_font_size_mobile": 32,
             "heading_font_weight": "500",
-            "subheading": "Cremas diseñadas para realzar la piel y aportar resultados visibles día tras día.",
+            "subheading": "Massive inventory, wholesale rates, and fast dispatch straight to your door.",
             "subheading_color": "",
             "subheading_font_size_desktop": 18,
             "subheading_font_size_mobile": 15,
             "subheading_font_weight": "400",
-            "button_label": "COMPRAR AHORA",
+            "button_label": "SHOP NOW",
             "link": "shopify://collections/mas-vendidos",
             "button_style_secondary": false,
             "button_border_radius": 50,
@@ -97,10 +98,10 @@
         "grayscale": 0,
         "text_color": "#000000",
         "border_color": "#ffffff",
-        "logo_1_text": "MUJERHOY",
-        "logo_2_text": "ELLE",
-        "logo_3_text": "VOGUE",
-        "logo_4_text": "Women's Health",
+        "logo_1_text": "FREE-SHIPPING",
+        "logo_2_text": "1 YEAR-WARRANTY",
+        "logo_3_text": "30 DAYS-RETURNS",
+        "logo_4_text": "",
         "logo_5_text": "",
         "logo_6_text": "",
         "padding_top": 12,
@@ -276,18 +277,19 @@
         "slide_pPDxgU": {
           "type": "slide",
           "settings": {
-            "heading": "Tu piel, en su mejor versión",
+            "image": "shopify://shop_images/Gemini_Generated_Image_4zx6kp4zx6kp4zx6.webp",
+            "heading": "Built for Supply, Ready to Ship",
             "heading_size": "h1",
             "heading_color": "",
             "heading_font_size_desktop": 48,
             "heading_font_size_mobile": 32,
             "heading_font_weight": "700",
-            "subheading": "Porque cuando tu piel se ve bien, todo se siente más fácil. Ligera, auténtica y luminosa, como tú.",
+            "subheading": "Everything your daily operations need. From essential warehouse goods to bulk packs, delivered directly to your doorstep.",
             "subheading_color": "",
             "subheading_font_size_desktop": 18,
             "subheading_font_size_mobile": 15,
             "subheading_font_weight": "400",
-            "button_label": "COMPRAR AHORA",
+            "button_label": "SHOP NOW",
             "link": "shopify://collections/mas-vendidos",
             "button_style_secondary": false,
             "button_border_radius": 50,
@@ -345,96 +347,6 @@
         "bubbles_list_width_mobile": 360,
         "bubbles_padding_horizontal_mobile": 16
       }
-    },
-    "community_feed_q9hUkL": {
-      "type": "community-feed",
-      "blocks": {
-        "post_79Jtf9": {
-          "type": "post",
-          "settings": {
-            "username": "@laura.m",
-            "show_verified": true,
-            "caption": "Ahora entiendo por qué es tan recomendado",
-            "link": ""
-          }
-        },
-        "post_Rfezf7": {
-          "type": "post",
-          "settings": {
-            "username": "@clara.r",
-            "show_verified": true,
-            "caption": "Piel más suave desde la primera aplicación",
-            "link": ""
-          }
-        },
-        "post_VA87RY": {
-          "type": "post",
-          "settings": {
-            "username": "@vane.o",
-            "show_verified": true,
-            "caption": "Lo mejor que he probado en mucho tiempo",
-            "link": ""
-          }
-        },
-        "post_Mz7YB7": {
-          "type": "post",
-          "settings": {
-            "username": "@miriam.l",
-            "show_verified": true,
-            "caption": "Excelente para ayudar a mantener la hidratación",
-            "link": ""
-          }
-        },
-        "post_43EqXE": {
-          "type": "post",
-          "settings": {
-            "username": "@sandra.v",
-            "show_verified": true,
-            "caption": "Por fin un producto que sí cumple lo que promete",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "post_79Jtf9",
-        "post_Rfezf7",
-        "post_VA87RY",
-        "post_Mz7YB7",
-        "post_43EqXE"
-      ],
-      "custom_css": [
-        "@media screen and (max-width: 749px) {.h2 {font-size: calc(var(--font-heading-scale) * 1.7rem); }}",
-        "@media screen and (max-width: 749px) {.section-community_feed_dJB7VX-padding {padding-top: 32px !important; padding-bottom: 32px !important; }}"
-      ],
-      "name": "Comunidad / Feed UGC",
-      "settings": {
-        "heading": "Únete a la comunidad de Mega Warehouse!",
-        "heading_size": "h2",
-        "heading_color": "",
-        "heading_font_size_desktop": 32,
-        "heading_font_size_mobile": 24,
-        "heading_font_weight": "600",
-        "color_scheme": "background-1",
-        "verified_color": "#bc6161",
-        "background_color": "",
-        "media_radius": 18,
-        "enable_center_mode": true,
-        "enable_loop": true,
-        "autoplay": false,
-        "autoplay_speed": 3,
-        "show_dots": true,
-        "show_arrows": false,
-        "slides_desktop": 3.4,
-        "space_desktop": 20,
-        "slides_tablet": 2,
-        "space_tablet": 16,
-        "slides_mobile": 1.4,
-        "space_mobile": 12,
-        "padding_top": 60,
-        "padding_bottom": 40,
-        "padding_top_mobile": 40,
-        "padding_bottom_mobile": 40
-      }
     }
   },
   "order": [
@@ -443,7 +355,6 @@
     "collection_slider_QQnXP3",
     "convertlab_left_plus_slider_dgKyzT",
     "press_ticker_xcW46X",
-    "convertlab_hero_t7YDft",
-    "community_feed_q9hUkL"
+    "convertlab_hero_t7YDft"
   ]
 }
