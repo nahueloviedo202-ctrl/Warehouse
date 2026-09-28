@@ -151,8 +151,7 @@
         {%- assign ann_text_color = block.settings.text_color -%}
         {%- assign ann_border_color = block.settings.border_color -%}
         {%- if request.page_type == 'product' -%}
-          {%- assign ann_text_color = '#000000' -%}
-          {%- assign ann_border_color = '#000000' -%}
+        
         {%- endif -%}
         #shopify-section-{{ section.id }} .header-ann-bar-wrapper {
           --custom-ann-bar-font-size-desktop: {{ block.settings.font_size_desktop }}px;
