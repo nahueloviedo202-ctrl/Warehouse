@@ -790,8 +790,8 @@
       "settings": {
         "caption": "",
         "heading": "FAQS",
-        "heading_size": "h2",
-        "heading_italic": true,
+        "heading_size": "h0",
+        "heading_italic": false,
         "heading_color": "#800e13",
         "heading_font_size_desktop": 40,
         "heading_font_size_mobile": 24,
