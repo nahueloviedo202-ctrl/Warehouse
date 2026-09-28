@@ -151,80 +151,6 @@
         "padding_bottom_mobile": 32
       }
     },
-    "press_ticker_xcW46X": {
-      "type": "press-ticker",
-      "blocks": {
-        "item_DBBp8d": {
-          "type": "item",
-          "settings": {
-            "text": "VOGUE",
-            "link": "",
-            "target_blank": false
-          }
-        },
-        "item_kHKhwk": {
-          "type": "item",
-          "settings": {
-            "text": "RUSSH",
-            "link": "",
-            "target_blank": false
-          }
-        },
-        "item_rberk6": {
-          "type": "item",
-          "settings": {
-            "text": "marie claire",
-            "link": "",
-            "target_blank": false
-          }
-        },
-        "item_qncrzD": {
-          "type": "item",
-          "settings": {
-            "text": "BAZAAR",
-            "link": "",
-            "target_blank": false
-          }
-        },
-        "item_k9rGwi": {
-          "type": "item",
-          "settings": {
-            "text": "InStyle",
-            "link": "",
-            "target_blank": false
-          }
-        }
-      },
-      "block_order": [
-        "item_DBBp8d",
-        "item_kHKhwk",
-        "item_rberk6",
-        "item_qncrzD",
-        "item_k9rGwi"
-      ],
-      "name": "Press Ticker",
-      "settings": {
-        "speed": 2,
-        "direction": "left",
-        "pause_on_hover": true,
-        "separator_char": "•",
-        "separator_spacing": 24,
-        "separator_size": 1,
-        "desktop_logo_height": 36,
-        "mobile_logo_height": 24,
-        "text_size": "1.25",
-        "text_bold": false,
-        "text_italic": false,
-        "text_uppercase": false,
-        "color_scheme": "background-2",
-        "custom_background_color": "#ffffff",
-        "custom_text_color": "",
-        "padding_top": 12,
-        "padding_bottom": 12,
-        "padding_top_mobile": 8,
-        "padding_bottom_mobile": 8
-      }
-    },
     "convertlab_hero_t7YDft": {
       "type": "convertlab-hero",
       "blocks": {
@@ -238,7 +164,7 @@
             "heading_color": "",
             "heading_font_size_desktop": 48,
             "heading_font_size_mobile": 32,
-            "heading_font_weight": "700",
+            "heading_font_weight": "500",
             "subheading": "Everything your daily operations need. From essential warehouse goods to bulk packs, delivered directly to your doorstep.",
             "subheading_color": "",
             "subheading_font_size_desktop": 18,
@@ -308,7 +234,6 @@
     "convertlab_hero_enjii9",
     "press_logos_GVXWyA",
     "convertlab_left_plus_slider_dgKyzT",
-    "press_ticker_xcW46X",
     "convertlab_hero_t7YDft"
   ]
 }
