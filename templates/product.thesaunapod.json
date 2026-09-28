@@ -692,7 +692,7 @@
         "background_color": "#ffffff",
         "padding_top": 30,
         "padding_bottom": 40,
-        "padding_top_mobile": 30,
+        "padding_top_mobile": 20,
         "padding_bottom_mobile": 30
       }
     },
