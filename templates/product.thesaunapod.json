@@ -875,6 +875,80 @@
         "padding_top_mobile": 40,
         "padding_bottom_mobile": 40
       }
+    },
+    "cambios_reales_jtNb4Q": {
+      "type": "cambios-reales",
+      "blocks": {
+        "review_c3nXpd": {
+          "type": "review",
+          "settings": {
+            "text": "La usé para cubrir un tatuaje y quedé sorprendida. Con poca cantidad logré una cobertura excelente y en las fotos se veía completamente natural.",
+            "author": "María D.",
+            "rating": 5
+          }
+        },
+        "review_BfDVY4": {
+          "type": "review",
+          "settings": {
+            "text": "Me daba miedo que no encontrara mi tono, pero quedó perfecto. La textura es ligera, se difumina fácil.",
+            "author": "Sofía P.",
+            "rating": 5
+          }
+        },
+        "review_7zD7gm": {
+          "type": "review",
+          "settings": {
+            "text": "Tengo marcas de acné muy pronunciadas. Esta base unifica el tono de mi piel sin dejar efecto máscara.",
+            "author": "Camila M.",
+            "rating": 5
+          }
+        }
+      },
+      "block_order": [
+        "review_c3nXpd",
+        "review_BfDVY4",
+        "review_7zD7gm"
+      ],
+      "custom_css": [
+        "h2 {font-weight: 400; }"
+      ],
+      "name": "Cambios reales",
+      "settings": {
+        "heading": "REAL RESULTS",
+        "heading_color": "#800E13",
+        "heading_font_size_desktop": 40,
+        "heading_font_size_mobile": 36,
+        "subheading": "How daily contrast therapy is transforming recovery, energy, and sleep.",
+        "subheading_color": "#250902",
+        "subheading_font_size_desktop": 20,
+        "subheading_font_size_mobile": 20,
+        "image_height_desktop": 350,
+        "image_height_mobile": 300,
+        "card_background_color": "#ffffff",
+        "card_border_color": "#854700",
+        "card_border_width": 1,
+        "card_corner_radius": 5,
+        "text_color": "#000000",
+        "author_color": "#000000",
+        "star_color": "#f5a623",
+        "cards_per_row_desktop": 3,
+        "cards_per_row_tablet": 2,
+        "cards_per_row_mobile": 1,
+        "card_gap": 10,
+        "show_arrows_desktop": true,
+        "show_arrows_mobile": true,
+        "arrows_color_desktop": "#800E13",
+        "arrows_bg_color_desktop": "#f1e9e3",
+        "arrows_border_color_desktop": "#800E13",
+        "arrows_color_mobile": "#800E13",
+        "arrows_bg_color_mobile": "#ffffff",
+        "arrows_border_color_mobile": "#800E13",
+        "background_color": "#FFFFFF",
+        "padding_top": 30,
+        "padding_bottom": 40,
+        "padding_top_mobile": 30,
+        "padding_bottom_mobile": 30
+      }
     }
   },
   "order": [
@@ -883,6 +957,7 @@
     "multirow_KUxMGH",
     "feature_cards_rC7d6a",
     "comparison_table_P7Rfba",
-    "faq_accordion_m3GjeY"
+    "faq_accordion_m3GjeY",
+    "cambios_reales_jtNb4Q"
   ]
 }
