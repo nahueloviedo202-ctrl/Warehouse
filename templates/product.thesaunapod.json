@@ -609,99 +609,81 @@
         "padding_bottom_mobile": 28
       }
     },
-    "feature_cards_rC7d6a": {
-      "type": "feature-cards",
+    "cambios_reales_jtNb4Q": {
+      "type": "cambios-reales",
       "blocks": {
-        "card_7BU4fG": {
-          "type": "card",
+        "review_c3nXpd": {
+          "type": "review",
           "settings": {
-            "image": "shopify://shop_images/IMG_1897.webp",
-            "heading": "HIGH-TORQUE 1000W MOTOR",
-            "text": "<p>Built for rugged trails and steep inclines. Delivers instant acceleration and reaches an exhilarating top speed of up to 32 MPH.</p>",
-            "card_background_color": "#800E13",
-            "heading_color": "#FFFFFF",
-            "heading_font_size_desktop": 20,
-            "heading_font_size_mobile": 17,
-            "heading_font_weight": "500",
-            "text_color": "#FFFFFF",
-            "text_font_size_desktop": 15,
-            "text_font_size_mobile": 14,
-            "text_font_weight": "400"
+            "image": "shopify://shop_images/bhJT-SAwS_mid.webp",
+            "text": "\"I do intense gym workouts and hockey 4 times a week. The Sauna Pod heats up to a blazing 85°C faster than I expected, and stepping straight into the Ice Pod afterward has completely eliminated my next-day soreness. Best recovery investment I've made.\"",
+            "author": "Marc D. — Calgary, AB",
+            "rating": 5
           }
         },
-        "card_gpfMnF": {
-          "type": "card",
+        "review_BfDVY4": {
+          "type": "review",
           "settings": {
-            "image": "shopify://shop_images/IMG_1898.webp",
-            "heading": "CARBON-FIBER DUAL SUSPENSION",
-            "text": "<p>Smooths out bumps, potholes, and gravel. Paired with 20x4.0\" fat tires for maximum traction and all-day riding comfort.</p>",
-            "card_background_color": "#800E13",
-            "heading_color": "#FFFFFF",
-            "heading_font_size_desktop": 20,
-            "heading_font_size_mobile": 17,
-            "heading_font_weight": "500",
-            "text_color": "#FFFFFF",
-            "text_font_size_desktop": 15,
-            "text_font_size_mobile": 14,
-            "text_font_weight": "400"
+            "image": "shopify://shop_images/2yi32fozr_mid.webp",
+            "text": "\"Was nervous about setting it up in my garage during an Ontario winter, but the 1500W heater holds high heat easily without issues. Zero plastic smells right out of the box thanks to the thick cotton canvas. Getting the Ice Pod for free made this deal unbeatable.\"",
+            "author": "Sarah P. — Toronto, ON",
+            "rating": 5
           }
         },
-        "card_ULpaJD": {
-          "type": "card",
+        "review_7zD7gm": {
+          "type": "review",
           "settings": {
-            "image": "shopify://shop_images/IMG_1913.webp",
-            "heading": "DUAL BATTERY AND BLUETOOTH SOUND",
-            "text": "<p>Ride up to 100+ miles on a single charge while streaming your favorite music through the headlight’s built-in speaker.</p>",
-            "card_background_color": "#800E13",
-            "heading_color": "#FFFFFF",
-            "heading_font_size_desktop": 20,
-            "heading_font_size_mobile": 17,
-            "heading_font_weight": "500",
-            "text_color": "#FFFFFF",
-            "text_font_size_desktop": 15,
-            "text_font_size_mobile": 14,
-            "text_font_weight": "400"
+            "image": "shopify://shop_images/xWHOFZfDx_mid.webp",
+            "text": "\"I'm 6'4\" (193 cm) and fit comfortably on the folding chair with head clearance to spare. Doing 20 minutes in the dry heat with the red light on, followed by a 2-minute plunge, knocked my stress levels down and gave me the best sleep of my life.\"",
+            "author": "David M. — Vancouver, BC",
+            "rating": 5
           }
         }
       },
       "block_order": [
-        "card_7BU4fG",
-        "card_gpfMnF",
-        "card_ULpaJD"
+        "review_c3nXpd",
+        "review_BfDVY4",
+        "review_7zD7gm"
       ],
       "custom_css": [
-        "@media screen and (max-width: 749px) {.h2 {font-size: calc(var(--font-heading-scale) * 1.7rem); }}",
-        "@media screen and (max-width: 749px) {.section-feature_cards_rC7d6a-padding {padding-top: 32px !important; padding-bottom: 32px !important; }}"
+        "h2 {font-weight: 400;}"
       ],
-      "name": "Tarjetas de beneficios",
+      "name": "Cambios reales",
       "settings": {
-        "heading": "ELITE PERFORMANCE ON EVERY TERRAIN",
-        "heading_size": "h2",
-        "heading_italic": false,
-        "subheading": "<p>Engineered with raw power, rugged suspension, and premium tech to elevate every ride.</p>",
+        "heading": "REAL RESULTS",
         "heading_color": "#800E13",
         "heading_font_size_desktop": 40,
-        "heading_font_size_mobile": 26,
-        "heading_font_weight": "500",
+        "heading_font_size_mobile": 36,
+        "subheading": "How daily contrast therapy is transforming recovery, energy, and sleep.",
         "subheading_color": "#250902",
         "subheading_font_size_desktop": 20,
-        "subheading_font_size_mobile": 15,
-        "subheading_font_weight": "400",
-        "color_scheme": "background-1",
-        "card_color_scheme": "background-2",
-        "accent_color_scheme": "accent-2",
-        "background_color": "#ffffff",
-        "image_ratio": "square",
-        "card_corner_radius": 10,
-        "image_corner_radius": 14,
-        "card_padding": 24,
-        "columns_desktop": 3,
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "padding_top": 40,
-        "padding_bottom": 60,
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 32
+        "subheading_font_size_mobile": 20,
+        "image_height_desktop": 350,
+        "image_height_mobile": 300,
+        "card_background_color": "#FFFFFF",
+        "card_border_color": "#800E13",
+        "card_border_width": 2,
+        "card_corner_radius": 5,
+        "text_color": "#000000",
+        "author_color": "#000000",
+        "star_color": "#f5a623",
+        "cards_per_row_desktop": 3,
+        "cards_per_row_tablet": 2,
+        "cards_per_row_mobile": 1,
+        "card_gap": 10,
+        "show_arrows_desktop": true,
+        "show_arrows_mobile": true,
+        "arrows_color_desktop": "#800E13",
+        "arrows_bg_color_desktop": "#f1e9e3",
+        "arrows_border_color_desktop": "#800E13",
+        "arrows_color_mobile": "#800E13",
+        "arrows_bg_color_mobile": "#ffffff",
+        "arrows_border_color_mobile": "#800E13",
+        "background_color": "#FFFFFF",
+        "padding_top": 30,
+        "padding_bottom": 40,
+        "padding_top_mobile": 30,
+        "padding_bottom_mobile": 30
       }
     },
     "comparison_table_P7Rfba": {
@@ -875,89 +857,14 @@
         "padding_top_mobile": 40,
         "padding_bottom_mobile": 40
       }
-    },
-    "cambios_reales_jtNb4Q": {
-      "type": "cambios-reales",
-      "blocks": {
-        "review_c3nXpd": {
-          "type": "review",
-          "settings": {
-            "text": "La usé para cubrir un tatuaje y quedé sorprendida. Con poca cantidad logré una cobertura excelente y en las fotos se veía completamente natural.",
-            "author": "María D.",
-            "rating": 5
-          }
-        },
-        "review_BfDVY4": {
-          "type": "review",
-          "settings": {
-            "text": "Me daba miedo que no encontrara mi tono, pero quedó perfecto. La textura es ligera, se difumina fácil.",
-            "author": "Sofía P.",
-            "rating": 5
-          }
-        },
-        "review_7zD7gm": {
-          "type": "review",
-          "settings": {
-            "text": "Tengo marcas de acné muy pronunciadas. Esta base unifica el tono de mi piel sin dejar efecto máscara.",
-            "author": "Camila M.",
-            "rating": 5
-          }
-        }
-      },
-      "block_order": [
-        "review_c3nXpd",
-        "review_BfDVY4",
-        "review_7zD7gm"
-      ],
-      "custom_css": [
-        "h2 {font-weight: 400; }"
-      ],
-      "name": "Cambios reales",
-      "settings": {
-        "heading": "REAL RESULTS",
-        "heading_color": "#800E13",
-        "heading_font_size_desktop": 40,
-        "heading_font_size_mobile": 36,
-        "subheading": "How daily contrast therapy is transforming recovery, energy, and sleep.",
-        "subheading_color": "#250902",
-        "subheading_font_size_desktop": 20,
-        "subheading_font_size_mobile": 20,
-        "image_height_desktop": 350,
-        "image_height_mobile": 300,
-        "card_background_color": "#ffffff",
-        "card_border_color": "#854700",
-        "card_border_width": 1,
-        "card_corner_radius": 5,
-        "text_color": "#000000",
-        "author_color": "#000000",
-        "star_color": "#f5a623",
-        "cards_per_row_desktop": 3,
-        "cards_per_row_tablet": 2,
-        "cards_per_row_mobile": 1,
-        "card_gap": 10,
-        "show_arrows_desktop": true,
-        "show_arrows_mobile": true,
-        "arrows_color_desktop": "#800E13",
-        "arrows_bg_color_desktop": "#f1e9e3",
-        "arrows_border_color_desktop": "#800E13",
-        "arrows_color_mobile": "#800E13",
-        "arrows_bg_color_mobile": "#ffffff",
-        "arrows_border_color_mobile": "#800E13",
-        "background_color": "#FFFFFF",
-        "padding_top": 30,
-        "padding_bottom": 40,
-        "padding_top_mobile": 30,
-        "padding_bottom_mobile": 30
-      }
     }
   },
   "order": [
     "main",
     "related-products",
     "multirow_KUxMGH",
-    "feature_cards_rC7d6a",
+    "cambios_reales_jtNb4Q",
     "comparison_table_P7Rfba",
-    "faq_accordion_m3GjeY",
-    "cambios_reales_jtNb4Q"
+    "faq_accordion_m3GjeY"
   ]
 }
