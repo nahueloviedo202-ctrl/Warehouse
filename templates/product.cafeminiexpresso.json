@@ -907,12 +907,12 @@
         "subheading_font_size_desktop": 18,
         "subheading_font_size_mobile": 15,
         "subheading_font_weight": "400",
-        "card_background_color": "#FAF2EA",
-        "card_border_color": "#E8C9A0",
+        "card_background_color": "#FFFFFF",
+        "card_border_color": "#432818",
         "card_border_width": 1,
         "card_corner_radius": 16,
-        "text_color": "#2B2B2B",
-        "author_color": "#1A1A1A",
+        "text_color": "#250902",
+        "author_color": "#250902",
         "star_color": "#F5A623",
         "cards_per_row_desktop": 3,
         "cards_per_row_tablet": 2,
@@ -1010,8 +1010,8 @@
         "question_giLkXQ": {
           "type": "question",
           "settings": {
-            "question": "How tall do I need to be for this bike?",
-            "answer": "<p>The recommended rider height is between 5'4\" and 6'5\". The bike supports a maximum payload capacity of up to 330 lbs.</p>",
+            "question": "Does the Ninja Luxe™ Café Mini require special barista training to use?",
+            "answer": "<p>Not at all. It features Barista Assist technology designed specifically to eliminate the steep learning curve of traditional espresso machines. With pre-calibrated buttons, the machine guides your brewing, automatically adjusting water temperature and pressure for single, double, or quadruple shots.</p>",
             "question_color": "",
             "question_font_size_desktop": 16,
             "question_font_size_mobile": 15,
@@ -1025,8 +1025,8 @@
         "question_36wNwy": {
           "type": "question",
           "settings": {
-            "question": "What does the warranty cover?",
-            "answer": "<p>Our 1-Year warranty covers all core electrical and mechanical components on the bike, excluding damage caused by normal wear and tear, accidents, or misuse.</p>",
+            "question": "What types of drinks can I make with this machine?",
+            "answer": "<p>It is a versatile 3-in-1 coffee station. You can extract authentic high-pressure espresso shots, brew classic drip-style coffee, or create smooth rapid cold brew in under three minutes. With the automated hands-free milk frother, you can craft lattes, cappuccinos, macchiatos, and iced drinks using dairy or plant-based milks.</p><h3></h3>",
             "question_color": "",
             "question_font_size_desktop": 16,
             "question_font_size_mobile": 15,
@@ -1040,8 +1040,8 @@
         "question_e4hhdC": {
           "type": "question",
           "settings": {
-            "question": "Does the bike come fully assembled?",
-            "answer": "<p>The V8 Ultra arrives 85% pre-assembled in the box. Simply attach the front wheel, handlebars, headlight, and pedals (plus the optional passenger seat and foot pegs), inflate the tires, and you are ready to ride.</p>",
+            "question": "Can the automated frother handle plant-based milks like oat or almond?",
+            "answer": "<p>Yes. The automated frother has calibrated texture settings for both dairy and plant-based alternatives. It produces consistent, silky microfoam for latte art without scorching oat, almond, or soy milk.</p><h3></h3>",
             "question_color": "",
             "question_font_size_desktop": 16,
             "question_font_size_mobile": 15,
@@ -1055,8 +1055,8 @@
         "question_HKe6yp": {
           "type": "question",
           "settings": {
-            "question": "What is the difference between Single and Dual Battery?",
-            "answer": "<p>The Single Battery setup offers up to 37+ miles on pure throttle and 60+ miles on pedal assist. The Dual Battery configuration doubles the capacity, delivering up to 74+ miles on throttle and 100+ miles on pedal assist.</p>",
+            "question": "Does it plug into a standard Canadian electrical wall outlet?",
+            "answer": "<p>Yes, 100%. The machine is built for standard North American electrical systems and plugs directly into any regular 110V/120V household wall outlet across Canada, without requiring special electrical adapters or custom wiring.</p>",
             "question_color": "",
             "question_font_size_desktop": 16,
             "question_font_size_mobile": 15,
@@ -1070,8 +1070,8 @@
         "question_V76RRe": {
           "type": "question",
           "settings": {
-            "question": "How long does shipping take and how is it delivered?",
-            "answer": "<p>Orders are dispatched directly from our US facility with free 2–7 day delivery. Tracking information will be emailed to you within 1–2 business days after placing your order.</p>",
+            "question": "How long does shipping take and are there any customs duties for Canada?",
+            "answer": "<p>Orders ship fast nationwide across Canada, typically arriving in 2 to 5 business days with full online tracking. All local and provincial taxes are handled at checkout, meaning your order is 100% guaranteed with zero surprise import fees or customs duties upon delivery.</p>",
             "question_color": "",
             "question_font_size_desktop": 16,
             "question_font_size_mobile": 15,
