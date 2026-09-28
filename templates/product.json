@@ -929,7 +929,7 @@
         "results_headline_font_size_desktop": 28,
         "results_headline_font_size_mobile": 22,
         "results_headline_font_weight": "500",
-        "caption": "<p>Caption about the results and/or link for their proof.</p>",
+        "caption": "",
         "button_label": "",
         "link": "",
         "button_style_secondary": false,
