@@ -225,29 +225,6 @@
             "alignment": "space-around"
           }
         },
-        "video_carousel_Cy9Gpj": {
-          "type": "video_carousel",
-          "settings": {
-            "heading": "Verlo en acción",
-            "heading_size": "h2",
-            "heading_color": "",
-            "heading_weight": "700",
-            "heading_font_size_desktop": 24,
-            "heading_font_size_mobile": 20,
-            "color_scheme": "background-1",
-            "video_1": "",
-            "video_2": "",
-            "video_3": "",
-            "video_4": "",
-            "aspect_ratio": "9/16",
-            "items_desktop": 3.2,
-            "items_mobile": 1.2,
-            "gap": 12,
-            "corner_radius": 16,
-            "show_arrows": true,
-            "show_controls": true
-          }
-        },
         "pdp_acc_wrapper_h7gTnW": {
           "type": "pdp_acc_wrapper",
           "settings": {
@@ -344,7 +321,6 @@
         "pdp_stock_pulse_Y3WqH7",
         "2edbf491-d07c-4718-b71e-18ffe22ab7dc",
         "trust_badges_PHQ3UA",
-        "video_carousel_Cy9Gpj",
         "pdp_acc_wrapper_h7gTnW",
         "video_carousel_gUmwA4",
         "149aabfb-9fd8-4472-a633-6032dbe01ed0"
@@ -399,7 +375,7 @@
         "row_GwjbpN": {
           "type": "row",
           "settings": {
-            "feature": "Cobertura extrema desde la primera aplicación",
+            "feature": "3-in-1 Versatility (Espresso, Drip & Cold Brew)",
             "vita_has": true,
             "others_has": false
           }
@@ -407,7 +383,7 @@
         "row_k3Xry3": {
           "type": "row",
           "settings": {
-            "feature": "Unifica el tono de la piel",
+            "feature": "Hands-Free Automated Microfoam Frother",
             "vita_has": true,
             "others_has": false
           }
@@ -415,7 +391,7 @@
         "row_CH3MzJ": {
           "type": "row",
           "settings": {
-            "feature": "Cubre vitiligo, cicatrices y tatuajes",
+            "feature": "Rapid Cold Brew in Minutes (No 24-hr Waiting)",
             "vita_has": true,
             "others_has": false
           }
@@ -423,7 +399,7 @@
         "row_pR6mM3": {
           "type": "row",
           "settings": {
-            "feature": "No marca líneas de expresión",
+            "feature": "Intelligent Barista Assist (Zero Learning Curve)",
             "vita_has": true,
             "others_has": false
           }
@@ -431,7 +407,7 @@
         "row_9TGkHU": {
           "type": "row",
           "settings": {
-            "feature": "Resistente al agua y al roce",
+            "feature": "Ultra-Compact Footprint for Small Countertops",
             "vita_has": true,
             "others_has": false
           }
@@ -439,7 +415,7 @@
         "row_if7AwN": {
           "type": "row",
           "settings": {
-            "feature": "Larga duración durante todo el día",
+            "feature": "Dedicated Dairy & Plant-Based Milk Settings",
             "vita_has": true,
             "others_has": false
           }
@@ -455,20 +431,21 @@
       ],
       "name": "¿Por qué elegir?",
       "settings": {
-        "title": "¿POR QUÉ ELEGIR Vita Cosmetics Base Corporal y Facial?",
+        "title": "WHY CHOOSE THE NINJA LUXE™ CAFÉ MINI?",
         "title_transform": "uppercase",
         "title_color": "#000000",
-        "title_weight": "600",
+        "title_weight": "500",
         "title_size_desktop": 36,
         "title_size_mobile": 24,
+        "product_image": "shopify://shop_images/ES301_Hero_Component.avif",
         "product_img_size_desktop": 56,
         "product_img_size_mobile": 44,
         "vita_label": "",
-        "others_label": "Otros",
+        "others_label": "Other",
         "table_max_width": 500,
-        "vita_bg_color": "#f1e9e3",
+        "vita_bg_color": "#99582A",
         "divider_color": "#444444",
-        "icon_color": "#1a1a1a",
+        "icon_color": "#250902",
         "icon_size_desktop": 35,
         "icon_size_mobile": 28,
         "row_color": "",
@@ -680,9 +657,9 @@
           "type": "feature",
           "settings": {
             "position": "left",
-            "heading": "Carbon-Fiber Dual Suspension",
-            "text": "<p>Soaks up rough trails, potholes, and terrain vibrations for unmatched stability and long-ride comfort.</p>",
-            "heading_color": "#eb5e28",
+            "heading": "Optimal 15-Bar Italian Pressure",
+            "text": "<p>Delivers rich, aromatic espresso shots topped with velvety crema every morning through balanced high-pressure extraction.</p>",
+            "heading_color": "#99582A",
             "heading_font_size_desktop": 20,
             "heading_font_size_mobile": 16,
             "heading_font_weight": "500",
@@ -696,9 +673,9 @@
           "type": "feature",
           "settings": {
             "position": "left",
-            "heading": "Integrated Bluetooth Audio",
-            "text": "<p>Built-in speaker housed directly in the front headlight to stream your favorite playlists on the go.</p>",
-            "heading_color": "#eb5e28",
+            "heading": "Hands-Free Microfoam Frother",
+            "text": "<p>Automated steam wand perfectly textures whole, oat, or almond milk into thick froth or silky microfoam for latte art.</p>",
+            "heading_color": "#99582A",
             "heading_font_size_desktop": 20,
             "heading_font_size_mobile": 14,
             "heading_font_weight": "500",
@@ -712,9 +689,9 @@
           "type": "feature",
           "settings": {
             "position": "right",
-            "heading": "1000W Peak High-Torque Motor",
-            "text": "<p>Instant acceleration and steep hill climbing with top speeds reaching up to 32 MPH.</p>",
-            "heading_color": "#eb5e28",
+            "heading": "3-in-1 Versatile Brewing",
+            "text": "<p>Seamlessly brew authentic espresso shots, smooth classic drip coffee, and rapid cold brew from a single compact station.</p>",
+            "heading_color": "#99582A",
             "heading_font_size_desktop": 20,
             "heading_font_size_mobile": 14,
             "heading_font_weight": "500",
@@ -728,9 +705,9 @@
           "type": "feature",
           "settings": {
             "position": "right",
-            "heading": "Dual Battery Long-Range Pack",
-            "text": "<p>Dual 48V 15Ah waterproof batteries delivering up to 100+ miles of pedal-assisted freedom.</p>",
-            "heading_color": "#eb5e28",
+            "heading": "Rapid Cold Brew in Minutes",
+            "text": "<p>Extracts cold-pressed coffee at low temperatures in under 3 minutes, eliminating the traditional 12-to-24 hour steep time.</p>",
+            "heading_color": "#99582A",
             "heading_font_size_desktop": 20,
             "heading_font_size_mobile": 14,
             "heading_font_weight": "500",
@@ -753,14 +730,14 @@
       ],
       "name": "Por qué nos encanta",
       "settings": {
-        "heading": "WHY RIDERS LOVE THE V8 ULTRA",
+        "heading": "WHY COFFEE LOVERS CHOOSE THE LUXE CAFÉ MINI",
         "heading_size": "h2",
         "heading_italic": false,
         "heading_color": "#432818",
         "heading_font_size_desktop": 40,
         "heading_font_size_mobile": 24,
         "heading_font_weight": "500",
-        "image": "shopify://shop_images/Transparent_V8_Ultra_1.webp",
+        "image": "shopify://shop_images/ES301_Hero_Component.avif",
         "circle_size_desktop": 380,
         "circle_size_mobile": 220,
         "color_scheme": "background-1",
@@ -785,7 +762,7 @@
             "image": "shopify://shop_images/IMG_1897.webp",
             "heading": "HIGH-TORQUE 1000W MOTOR",
             "text": "<p>Built for rugged trails and steep inclines. Delivers instant acceleration and reaches an exhilarating top speed of up to 32 MPH.</p>",
-            "card_background_color": "#fb8b24",
+            "card_background_color": "#99582A",
             "heading_color": "#000000",
             "heading_font_size_desktop": 20,
             "heading_font_size_mobile": 17,
@@ -802,7 +779,7 @@
             "image": "shopify://shop_images/IMG_1898.webp",
             "heading": "CARBON-FIBER DUAL SUSPENSION",
             "text": "<p>Smooths out bumps, potholes, and gravel. Paired with 20x4.0\" fat tires for maximum traction and all-day riding comfort.</p>",
-            "card_background_color": "#fb8b24",
+            "card_background_color": "#99582A",
             "heading_color": "#000000",
             "heading_font_size_desktop": 20,
             "heading_font_size_mobile": 17,
@@ -819,7 +796,7 @@
             "image": "shopify://shop_images/IMG_1913.webp",
             "heading": "DUAL BATTERY AND BLUETOOTH SOUND",
             "text": "<p>Ride up to 100+ miles on a single charge while streaming your favorite music through the headlight’s built-in speaker.</p>",
-            "card_background_color": "#fb8b24",
+            "card_background_color": "#99582A",
             "heading_color": "#000000",
             "heading_font_size_desktop": 20,
             "heading_font_size_mobile": 17,
@@ -846,11 +823,11 @@
         "heading_size": "h2",
         "heading_italic": false,
         "subheading": "<p>Engineered with raw power, rugged suspension, and premium tech to elevate every ride.</p>",
-        "heading_color": "#eb5e28",
+        "heading_color": "#432818",
         "heading_font_size_desktop": 40,
         "heading_font_size_mobile": 26,
         "heading_font_weight": "500",
-        "subheading_color": "#fb8b24",
+        "subheading_color": "#99582A",
         "subheading_font_size_desktop": 20,
         "subheading_font_size_mobile": 15,
         "subheading_font_weight": "400",
@@ -917,22 +894,22 @@
       "settings": {
         "title": "RESULTS",
         "heading_size": "h1",
-        "heading_color": "#eb5e28",
+        "heading_color": "#432818",
         "heading_font_size_desktop": 40,
         "heading_font_size_mobile": 28,
         "heading_font_weight": "500",
-        "text_color": "#eb5e28",
+        "text_color": "#99582A",
         "text_font_size_desktop": 16,
         "text_font_size_mobile": 15,
         "text_font_weight": "400",
         "text": "<p>Engineered for everyday commutes and off-road weekends, tested by real riders across the country.</p>",
-        "image": "shopify://shop_images/IMG_1904.webp",
+        "image": "shopify://shop_images/ES301_Gallery_Component6.avif",
         "color_scheme": "background-1",
         "layout": "results_second",
         "results_headline": "RIDER SATISFACTION & CAPABILITY",
         "results_headline_size": "h2",
         "results_headline_alignment": "left",
-        "results_headline_color": "#eb5e28",
+        "results_headline_color": "#432818",
         "results_headline_font_size_desktop": 28,
         "results_headline_font_size_mobile": 22,
         "results_headline_font_weight": "500",
@@ -1042,7 +1019,7 @@
         "heading": "FAQS",
         "heading_size": "h2",
         "heading_italic": true,
-        "heading_color": "#eb5e28",
+        "heading_color": "#432818",
         "heading_font_size_desktop": 40,
         "heading_font_size_mobile": 24,
         "heading_font_weight": "500",
