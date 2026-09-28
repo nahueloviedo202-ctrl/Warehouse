@@ -704,6 +704,62 @@
         "padding_bottom_mobile": 32
       }
     },
+    "comparison_table_P7Rfba": {
+      "type": "comparison-table",
+      "blocks": {
+        "row_RbGVYM": {
+          "type": "row",
+          "settings": {
+            "benefit": "Benefit",
+            "us": true,
+            "others": false
+          }
+        },
+        "row_JDNmkf": {
+          "type": "row",
+          "settings": {
+            "benefit": "Benefit",
+            "us": true,
+            "others": false
+          }
+        },
+        "row_XeKmGC": {
+          "type": "row",
+          "settings": {
+            "benefit": "Benefit",
+            "us": true,
+            "others": false
+          }
+        }
+      },
+      "block_order": [
+        "row_RbGVYM",
+        "row_JDNmkf",
+        "row_XeKmGC"
+      ],
+      "name": "Comparison table",
+      "settings": {
+        "title": "Comparison table",
+        "heading_size": "h1",
+        "text": "<p>Talk about how and why is your brand better than the others.</p>",
+        "button_label": "",
+        "link": "",
+        "button_style_secondary": false,
+        "layout": "table_second",
+        "color_scheme": "accent-2",
+        "logo": "shopify://shop_images/Gemini_Generated_Image_z02u5oz02u5oz02u-removebg-preview.png",
+        "logo_width": 125,
+        "us_label": "",
+        "others_label": "OTHERS",
+        "benefit_color_scheme": "background-1",
+        "checkmark_color": "#800E13",
+        "icon_cells_color_scheme": "background-1",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 28,
+        "padding_bottom_mobile": 28
+      }
+    },
     "faq_accordion_m3GjeY": {
       "type": "faq-accordion",
       "blocks": {
@@ -820,61 +876,6 @@
         "padding_top_mobile": 40,
         "padding_bottom_mobile": 40
       }
-    },
-    "comparison_table_P7Rfba": {
-      "type": "comparison-table",
-      "blocks": {
-        "row_RbGVYM": {
-          "type": "row",
-          "settings": {
-            "benefit": "Benefit",
-            "us": true,
-            "others": false
-          }
-        },
-        "row_JDNmkf": {
-          "type": "row",
-          "settings": {
-            "benefit": "Benefit",
-            "us": true,
-            "others": false
-          }
-        },
-        "row_XeKmGC": {
-          "type": "row",
-          "settings": {
-            "benefit": "Benefit",
-            "us": true,
-            "others": false
-          }
-        }
-      },
-      "block_order": [
-        "row_RbGVYM",
-        "row_JDNmkf",
-        "row_XeKmGC"
-      ],
-      "name": "Comparison table",
-      "settings": {
-        "title": "Comparison table",
-        "heading_size": "h1",
-        "text": "<p>Talk about how and why is your brand better than the others.</p>",
-        "button_label": "",
-        "link": "",
-        "button_style_secondary": false,
-        "layout": "table_second",
-        "color_scheme": "accent-1",
-        "logo_width": 75,
-        "us_label": "",
-        "others_label": "OTHERS",
-        "benefit_color_scheme": "background-1",
-        "checkmark_color": "#800E13",
-        "icon_cells_color_scheme": "background-1",
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_top_mobile": 28,
-        "padding_bottom_mobile": 28
-      }
     }
   },
   "order": [
@@ -882,7 +883,7 @@
     "related-products",
     "multirow_KUxMGH",
     "feature_cards_rC7d6a",
-    "faq_accordion_m3GjeY",
-    "comparison_table_P7Rfba"
+    "comparison_table_P7Rfba",
+    "faq_accordion_m3GjeY"
   ]
 }
