@@ -17,9 +17,9 @@
           "settings": {
             "rating": "4.8",
             "max_rating": "5",
-            "pre_text": "Rated",
-            "separator_text": "by",
-            "customer_count": "+100,000",
+            "pre_text": "",
+            "separator_text": "Basen in",
+            "customer_count": "+12.500",
             "suffix_text": "verified customers",
             "star_color": "#800e13",
             "empty_star_color": "#dcdce6",
@@ -27,7 +27,7 @@
             "star_size_mobile": 14,
             "text_color": "",
             "text_size": 14,
-            "text_size_mobile": 12,
+            "text_size_mobile": 11,
             "alignment": "flex-start",
             "gap": 8,
             "gap_mobile": 6
