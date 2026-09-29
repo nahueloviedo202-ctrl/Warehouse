@@ -361,7 +361,7 @@ document.addEventListener('DOMContentLoaded', function () {
   new MutationObserver(sync).observe(hiddenRegular, { childList: true, characterData: true, subtree: true });
   sync();
 });
-</script>
+<script>
   window.HurrryConfig = {
     endpoint: "https://app.hurrypayments.com/api/orders",
     fallbackToShopify: false,
@@ -370,5 +370,5 @@ document.addEventListener('DOMContentLoaded', function () {
   };
 </script>
 <script src="https://cdn.hurrypayments.com/v1/hurry.min.js" defer></script>
-</body>
+  </body>
 </html>
