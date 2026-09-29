@@ -14,6 +14,15 @@
     "custom-image-footer": {
       "type": "custom-image-footer",
       "blocks": {
+        "text_968CA3": {
+          "type": "text",
+          "settings": {
+            "heading": "CONTACT US",
+            "text": "<p><strong>📥 info@mega-warehouse.com</strong></p>",
+            "text_size": 13,
+            "text_size_mobile": 14
+          }
+        },
         "text_iPVPew": {
           "type": "text",
           "settings": {
@@ -43,6 +52,7 @@
         }
       },
       "block_order": [
+        "text_968CA3",
         "text_iPVPew",
         "custom_links_3dxr37"
       ],
