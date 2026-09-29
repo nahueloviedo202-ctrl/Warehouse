@@ -12,6 +12,16 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "urgency_7E4Fm9": {
+          "type": "urgency",
+          "settings": {
+            "urgency": "HOT PRODUCT | LOW STOCK",
+            "color_scheme": "accent-1",
+            "urgency_color": "",
+            "urgency_font_size": 14,
+            "urgency_weight": "700"
+          }
+        },
         "trustpilot_bar_W4kVKz": {
           "type": "trustpilot_bar",
           "settings": {
@@ -159,8 +169,8 @@
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
-            "show_dynamic_checkout": true,
-            "skip_cart": false,
+            "show_dynamic_checkout": false,
+            "skip_cart": true,
             "uppercase_text": true
           }
         },
@@ -318,6 +328,7 @@
         }
       },
       "block_order": [
+        "urgency_7E4Fm9",
         "trustpilot_bar_W4kVKz",
         "title",
         "description_yT64Wm",
