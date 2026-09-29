@@ -170,7 +170,7 @@
           "type": "buy_buttons",
           "settings": {
             "show_dynamic_checkout": false,
-            "skip_cart": true,
+            "skip_cart": false,
             "uppercase_text": true
           }
         },
