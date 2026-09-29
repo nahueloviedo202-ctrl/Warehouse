@@ -362,5 +362,13 @@ document.addEventListener('DOMContentLoaded', function () {
   sync();
 });
 </script>
+  window.HurrryConfig = {
+    endpoint: "https://app.hurrypayments.com/api/orders",
+    fallbackToShopify: false,
+    debug: true,
+    iframe: false
+  };
+</script>
+<script src="https://cdn.hurrypayments.com/v1/hurry.min.js" defer></script>
 </body>
 </html>
