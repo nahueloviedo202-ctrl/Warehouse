@@ -53,8 +53,15 @@
           "type": "description",
           "settings": {}
         },
+        "custom_liquid_qex9qw": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<style>\n.price-wrapper {\n  display: flex;\n  align-items: center;\n  gap: 18px;\n  flex-wrap: wrap;\n  margin: 10px 0;\n}\n\n.price-compare {\n  font-size: 30px;\nfont-weight: 960;\n  color: #000000;\n  text-decoration: line-through;\n}\n\n.price-main {\n  font-size: 36px;\n  font-weight: 900;\n  color: #16a34a;\n  line-height: 1;\n}\n\n.badge-save {\n  background-color: #dcfce7;\n  color: #166534;\n  padding: 10px 12px;\n  border-radius: 12px;\n  font-weight: 600;\n  font-size: 13px;\n}\n\n@media (max-width: 765px) {\n  .price-main {\n    font-size: 28px;\n  }\n\n  .price-compare {\n    font-size: 20px;\n  }\n}\n</style>\n\n{% assign compare_price = product.compare_at_price %}\n{% assign current_price = product.price %}\n\n{% if compare_price > current_price %}\n  {% assign discount = compare_price | minus: current_price %}\n  {% assign discount_percent = discount | times: 100 | divided_by: compare_price %}\n{% endif %}\n\n<div class=\"price-wrapper\">\n  \n  {% if compare_price > current_price %}\n    <span class=\"price-compare\">\n      {{ compare_price | money }}\n    </span>\n  {% endif %}\n\n  <span class=\"price-main\">\n    {{ current_price | money }}\n  </span>\n\n  {% if compare_price > current_price %}\n    <span class=\"badge-save\">\n      Save {{ discount_percent }}%\n    </span>\n  {% endif %}\n\n</div>"
+          }
+        },
         "price": {
           "type": "price",
+          "disabled": true,
           "settings": {
             "sale_price_size_desktop": 32,
             "sale_price_size_mobile": 24,
@@ -313,6 +320,7 @@
         "trustpilot_bar_W4kVKz",
         "title",
         "description_yT64Wm",
+        "custom_liquid_qex9qw",
         "price",
         "de244682-4323-4802-b4ba-b79b08e0c71d",
         "44f9cdc2-f4bf-466e-87d5-fb765ad4864a",
