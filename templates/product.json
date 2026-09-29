@@ -12,6 +12,16 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "urgency_6acLnT": {
+          "type": "urgency",
+          "settings": {
+            "urgency": "HOT PRODUCT | LOW STOCK",
+            "color_scheme": "accent-1",
+            "urgency_color": "",
+            "urgency_font_size": 14,
+            "urgency_weight": "700"
+          }
+        },
         "trustpilot_bar_W4kVKz": {
           "type": "trustpilot_bar",
           "settings": {
@@ -179,16 +189,6 @@
             "alignment": "left"
           }
         },
-        "urgency_6acLnT": {
-          "type": "urgency",
-          "settings": {
-            "urgency": "HOT PRODUCT | LOW STOCK",
-            "color_scheme": "accent-1",
-            "urgency_color": "",
-            "urgency_font_size": 14,
-            "urgency_weight": "700"
-          }
-        },
         "2edbf491-d07c-4718-b71e-18ffe22ab7dc": {
           "type": "estimated_shipping",
           "disabled": true,
@@ -328,6 +328,7 @@
         }
       },
       "block_order": [
+        "urgency_6acLnT",
         "trustpilot_bar_W4kVKz",
         "title",
         "description_yT64Wm",
@@ -338,7 +339,6 @@
         "074f248d-8d73-4c8f-a97e-d8e82c5be5fc",
         "buy_buttons",
         "pdp_stock_pulse_Y3WqH7",
-        "urgency_6acLnT",
         "2edbf491-d07c-4718-b71e-18ffe22ab7dc",
         "trust_badges_PHQ3UA",
         "pdp_acc_wrapper_h7gTnW",
